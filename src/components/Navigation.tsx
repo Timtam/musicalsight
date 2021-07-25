@@ -18,35 +18,22 @@ class Navigation extends Component {
                         <Navbar.Collapse>
                             <Nav className="mr-auto">
                                 <Nav.Item>
-                                    <Nav.Link
-                                        as={Link}
-                                        to={process.env.PUBLIC_URL + "/"}
-                                        active
-                                    >
+                                    <Nav.Link as={Link} to="/" active>
                                         Home
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link
-                                        as={Link}
-                                        to={process.env.PUBLIC_URL + "/notes"}
-                                    >
+                                    <Nav.Link as={Link} to="/notes">
                                         Notes
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link
-                                        as={Link}
-                                        to={process.env.PUBLIC_URL + "/scales"}
-                                    >
+                                    <Nav.Link as={Link} to="/scales">
                                         Scales
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link
-                                        as={Link}
-                                        to={process.env.PUBLIC_URL + "/imprint"}
-                                    >
+                                    <Nav.Link as={Link} to="/imprint">
                                         Imprint
                                     </Nav.Link>
                                 </Nav.Item>
@@ -56,46 +43,19 @@ class Navigation extends Component {
                 </Container>
                 <div>
                     <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/imprint" component={Imprint} />
+                        <Route exact path="/notes" component={Notes} />
+                        <Route path="/notes/:note([a-g])" component={Note} />
                         <Route
-                            exact
-                            path={process.env.PUBLIC_URL + "/"}
-                            component={Home}
-                        />
-                        <Route
-                            exact
-                            path={process.env.PUBLIC_URL + "/imprint"}
-                            component={Imprint}
-                        />
-                        <Route
-                            exact
-                            path={process.env.PUBLIC_URL + "/notes"}
-                            component={Notes}
-                        />
-                        <Route
-                            path={
-                                process.env.PUBLIC_URL + "/notes/:note([a-g])"
-                            }
+                            path="/notes/:note([a-g]-sharp)"
                             component={Note}
                         />
                         <Route
-                            path={
-                                process.env.PUBLIC_URL +
-                                "/notes/:note([a-g]-sharp)"
-                            }
+                            path="/notes/:note([a-g]-flat)"
                             component={Note}
                         />
-                        <Route
-                            path={
-                                process.env.PUBLIC_URL +
-                                "/notes/:note([a-g]-flat)"
-                            }
-                            component={Note}
-                        />
-                        <Route
-                            exact
-                            path={process.env.PUBLIC_URL + "/scales"}
-                            component={Scales}
-                        />
+                        <Route exact path="/scales" component={Scales} />
                         <Route
                             render={function () {
                                 return <p>Not found</p>;

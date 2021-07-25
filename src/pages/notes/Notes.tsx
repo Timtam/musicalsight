@@ -11,76 +11,40 @@ class Notes extends Component {
                 </Helmet>
 
                 <ListGroup>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/c"}
-                    >
+                    <ListGroup.Item action href="/notes/c">
                         C
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/c-sharp"}
-                    >
+                    <ListGroup.Item action href="/notes/c-sharp">
                         C sharp
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/d"}
-                    >
+                    <ListGroup.Item action href="/notes/d">
                         D
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/d-sharp"}
-                    >
+                    <ListGroup.Item action href="/notes/d-sharp">
                         D sharp
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/e"}
-                    >
+                    <ListGroup.Item action href="/notes/e">
                         E
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/f"}
-                    >
+                    <ListGroup.Item action href="/notes/f">
                         F
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/f-sharp"}
-                    >
+                    <ListGroup.Item action href="/notes/f-sharp">
                         F sharp
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/g"}
-                    >
+                    <ListGroup.Item action href="/notes/g">
                         G
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/g-sharp"}
-                    >
+                    <ListGroup.Item action href="/notes/g-sharp">
                         G sharp
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/a"}
-                    >
+                    <ListGroup.Item action href="/notes/a">
                         A
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/a-sharp"}
-                    >
+                    <ListGroup.Item action href="/notes/a-sharp">
                         A sharp
                     </ListGroup.Item>
-                    <ListGroup.Item
-                        action
-                        href={process.env.PUBLIC_URL + "/notes/b"}
-                    >
+                    <ListGroup.Item action href="/notes/b">
                         B
                     </ListGroup.Item>
                 </ListGroup>
