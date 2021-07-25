@@ -1,10 +1,10 @@
 import { Component } from "react";
 import * as Tone from "tone";
 
-class Playback<T> extends Component<T, {}> {
+class Playback<T1, T2> extends Component<T1, T2> {
     synth: Tone.PolySynth;
 
-    constructor(props: T) {
+    constructor(props: T1) {
         super(props);
 
         this.synth = new Tone.PolySynth(Tone.Synth);

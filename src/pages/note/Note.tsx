@@ -8,7 +8,7 @@ type PathParamsType = {
 
 type PropsType = RouteComponentProps<PathParamsType> & {};
 
-class Note extends Playback<PropsType> {
+class Note extends Playback<PropsType, {}> {
     note: string;
 
     constructor(props: PropsType) {
