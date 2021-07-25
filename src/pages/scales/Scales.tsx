@@ -25,8 +25,8 @@ class Scales extends Component {
                             different scales, but the most common ones in
                             western music are probably the{" "}
                             <Link to="/scale/major">major</Link> and the{" "}
-                            <Link to="/scale/natural%20minor">
-                                natural minor
+                            <Link to="/scale/aeolian">
+                                natural minor (also known as aeolian)
                             </Link>{" "}
                             scales.
                         </Card.Text>

@@ -1,3 +1,4 @@
+import ScaleType from "@tonaljs/scale-type";
 import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -7,6 +8,7 @@ import Home from "../pages/home/Home";
 import Imprint from "../pages/imprint/Imprint";
 import Note from "../pages/note/Note";
 import Notes from "../pages/notes/Notes";
+import Scale from "../pages/scale/Scale";
 import Scales from "../pages/scales/Scales";
 
 class Navigation extends Component {
@@ -56,6 +58,16 @@ class Navigation extends Component {
                             path="/notes/:note([a-g]-flat)"
                             component={Note}
                         />
+                        {ScaleType.names().map((scale) => (
+                            <Route
+                                path={
+                                    "/scale/:scale(" +
+                                    scale.replace("#", "%23") +
+                                    ")"
+                                }
+                                component={Scale}
+                            />
+                        ))}
                         <Route exact path="/scales" component={Scales} />
                         <Route
                             render={function () {
