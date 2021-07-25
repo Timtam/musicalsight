@@ -12,7 +12,7 @@ class Home extends Component {
 
                 <Card className="text-center">
                     <Card.Body>
-                        <Card.Title>Welcome!</Card.Title>
+                        <Card.Title as="h3">Welcome!</Card.Title>
                         <Card.Text>
                             Musical Sight aims to provide useful information
                             about music theory, notes, scales and alot more.

@@ -14,6 +14,7 @@ class Navigation extends Component {
         return (
             <div>
                 <Container>
+                    <h2>Navigation</h2>
                     <Navbar className="fixed-top" bg="light" variant="light">
                         <Navbar.Collapse>
                             <Nav className="mr-auto">
