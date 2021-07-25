@@ -12,10 +12,16 @@ class Playback<T1, T2> extends Component<T1, T2> {
         this.synth.toDestination();
     }
 
-    async playNote(note: string) {
+    async playNote(
+        note: string,
+        length: string = "8n",
+        when: number | string = ""
+    ) {
         await Tone.start();
 
-        this.synth.triggerAttackRelease(note, "8n");
+        if (when === "") when = Tone.now();
+
+        this.synth.triggerAttackRelease(note, length, when);
     }
 
     async playChord(notes: string[]) {
