@@ -17,7 +17,11 @@ class Scales extends Component {
                         .map((scale) => (
                             <ListGroup.Item
                                 action
-                                href={"/scale/" + escape(scale)}
+                                href={
+                                    process.env.PUBLIC_URL +
+                                    "/scale/" +
+                                    escape(scale)
+                                }
                             >
                                 {scale}
                             </ListGroup.Item>
