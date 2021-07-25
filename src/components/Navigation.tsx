@@ -7,6 +7,7 @@ import Home from "../pages/home/Home";
 import Imprint from "../pages/imprint/Imprint";
 import Note from "../pages/note/Note";
 import Notes from "../pages/notes/Notes";
+import Scales from "../pages/scales/Scales";
 
 class Navigation extends Component {
     render() {
@@ -24,6 +25,11 @@ class Navigation extends Component {
                                 <Nav.Item>
                                     <Nav.Link as={Link} to="/notes">
                                         Notes
+                                    </Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link as={Link} to="/scales">
+                                        Scales
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
@@ -49,6 +55,7 @@ class Navigation extends Component {
                             path="/notes/:note([a-g]-flat)"
                             component={Note}
                         />
+                        <Route exact path="/scales" component={Scales} />
                         <Route
                             render={function () {
                                 return <p>Not found</p>;

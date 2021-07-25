@@ -19,9 +19,9 @@ class Playback<T> extends Component<T, {}> {
     }
 
     async playChord(notes: string[]) {
-        await Tone.start()
-        
-        this.synth.triggerAttackRelease(notes, "8n")
+        await Tone.start();
+
+        this.synth.triggerAttackRelease(notes, "8n");
     }
 }
 

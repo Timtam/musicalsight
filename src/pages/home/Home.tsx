@@ -25,7 +25,10 @@ class Home extends Component {
                             information in a way that is more useful for blind
                             people, including note and scale sound previews.
                             Keep in mind however that this is still a fan
-                            website. Neither do I guarantee the correctness of all the information that is shown here, nor can I be made responsible for any potential damage that is caused to you by using this website.
+                            website. Neither do I guarantee the correctness of
+                            all the information that is shown here, nor can I be
+                            made responsible for any potential damage that is
+                            caused to you by using this website.
                         </Card.Text>
                     </Card.Body>
                 </Card>
