@@ -35,31 +35,33 @@ class Scale extends Playback<PropsType, StateType> {
     }
 
     async playScale() {
-        let when = Tone.now();
+        let notes: string[] = [
+            ...TonalScale.get(
+                this.state.currentNote +
+                    "4 " +
+                    unescape(this.props.match.params.scale)
+            ).notes,
+            this.state.currentNote + "5",
+            ...TonalScale.get(
+                this.state.currentNote +
+                    "4 " +
+                    unescape(this.props.match.params.scale)
+            ).notes.reverse(),
+        ];
+        let lengths: string[] = notes.map((note, i, arr) => {
+            if (i === arr.length - 1) return "2n";
+            return "4n";
+        });
 
-        for (let note of TonalScale.get(
-            this.state.currentNote +
-                "4 " +
-                unescape(this.props.match.params.scale)
-        ).notes) {
-            await this.playNote(TonalNote.simplify(note), "8n", when);
-            when += 0.5;
-        }
+        await this.initialize();
 
-        await this.playNote(
-            TonalNote.simplify(this.state.currentNote + "5"),
-            "8n",
-            when
-        );
-        when += 0.5;
+        let when: number = Tone.now();
 
-        for (let note of TonalScale.get(
-            this.state.currentNote +
-                "4 " +
-                unescape(this.props.match.params.scale)
-        ).notes.reverse()) {
-            await this.playNote(TonalNote.simplify(note), "8n", when);
-            when += 0.5;
+        for (let i = 0; i < notes.length; i++) {
+            let note = TonalNote.simplify(notes[i]);
+            let length = lengths[i];
+            this.playNote(note, length, when);
+            when += Tone.Time(length).toSeconds();
         }
     }
 

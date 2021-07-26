@@ -1,33 +1,38 @@
+import { Piano } from "@tonejs/piano";
 import { Component } from "react";
 import * as Tone from "tone";
 
 class Playback<T1, T2> extends Component<T1, T2> {
-    synth: Tone.PolySynth;
+    initialized: boolean;
+    piano: Piano;
 
     constructor(props: T1) {
         super(props);
 
-        this.synth = new Tone.PolySynth(Tone.Synth);
+        this.initialized = false;
+        this.piano = new Piano();
 
-        this.synth.toDestination();
+        this.piano.toDestination();
     }
 
-    async playNote(
-        note: string,
-        length: string = "8n",
-        when: number | string = ""
-    ) {
+    async initialize() {
+        if (this.initialized) return;
+
         await Tone.start();
-
-        if (when === "") when = Tone.now();
-
-        this.synth.triggerAttackRelease(note, length, when);
+        await this.piano.load();
+        this.initialized = true;
     }
 
-    async playChord(notes: string[]) {
-        await Tone.start();
+    playNote(note: string, length: string = "8n", when: number = Tone.now()) {
+        this.piano.keyDown({
+            note: note,
+            time: when,
+        });
 
-        this.synth.triggerAttackRelease(notes, "8n");
+        this.piano.keyUp({
+            note: note,
+            time: when + Tone.Time(length).toSeconds(),
+        });
     }
 }
 

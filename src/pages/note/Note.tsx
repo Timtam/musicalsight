@@ -38,7 +38,8 @@ class Note extends Playback<PropsType, {}> {
 
                 <button
                     onClick={async () => {
-                        await this.playNote(this.note + "4");
+                        await this.initialize();
+                        this.playNote(this.note + "4");
                     }}
                 >
                     Listen now
