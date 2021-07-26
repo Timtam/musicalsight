@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, Route, Switch } from "react-router-dom";
+import Chords from "../pages/chords/Chords";
 import Home from "../pages/home/Home";
 import Imprint from "../pages/imprint/Imprint";
 import Note from "../pages/note/Note";
@@ -33,6 +34,11 @@ class Navigation extends Component {
                                 <Nav.Item>
                                     <Nav.Link as={Link} to="/scales">
                                         Scales
+                                    </Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link as={Link} to="/chords">
+                                        Chords
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
@@ -69,6 +75,7 @@ class Navigation extends Component {
                             />
                         ))}
                         <Route exact path="/scales" component={Scales} />
+                        <Route exact path="/chords" component={Chords} />
                         <Route
                             render={function () {
                                 return <p>Not found</p>;
