@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { titleCase } from "title-case";
 import * as Tone from "tone";
 import Playback from "../../components/Playback";
+import { mapNoteToLink, mapNoteToName } from "../../utilities";
 
 type PathParamsType = {
     scale: string;
@@ -18,7 +19,6 @@ type PropsType = RouteComponentProps<PathParamsType> & {};
 
 type StateType = {
     currentNote: string;
-    currentNoteName: string;
 };
 
 class Scale extends Playback<PropsType, StateType> {
@@ -27,7 +27,6 @@ class Scale extends Playback<PropsType, StateType> {
 
         this.state = {
             currentNote: "c",
-            currentNoteName: "C",
         };
     }
 
@@ -69,7 +68,7 @@ class Scale extends Playback<PropsType, StateType> {
             <Card className="text-center">
                 <Card.Body>
                     <Card.Title as="h4">
-                        {this.state.currentNoteName}
+                        {mapNoteToName(this.state.currentNote)}
                     </Card.Title>
                     <Card.Text>
                         The following notes are included in this scale:{" "}
@@ -81,10 +80,14 @@ class Scale extends Playback<PropsType, StateType> {
                             <Link
                                 to={
                                     "/notes/" +
-                                    TonalNote.simplify(note.slice(0, -1))
+                                    mapNoteToLink(
+                                        TonalNote.simplify(note.slice(0, -1))
+                                    )
                                 }
                             >
-                                {TonalNote.simplify(note.slice(0, -1))}
+                                {mapNoteToName(
+                                    TonalNote.simplify(note.slice(0, -1))
+                                )}
                             </Link>
                         ))}
                     </Card.Text>
@@ -105,31 +108,33 @@ class Scale extends Playback<PropsType, StateType> {
                 <h3>{this.toString()}</h3>
                 Select the root note to choose the key for:
                 <DropdownButton
-                    title={"Selected note: " + this.state.currentNoteName}
+                    title={
+                        "Selected note: " +
+                        mapNoteToName(this.state.currentNote)
+                    }
                 >
-                    {Object.entries({
-                        C: "c",
-                        "C sharp": "c#",
-                        D: "d",
-                        "D sharp": "d#",
-                        E: "e",
-                        F: "f",
-                        "F sharp": "f#",
-                        G: "g",
-                        "G sharp": "g#",
-                        A: "a",
-                        "A sharp": "a#",
-                        B: "b",
-                    }).map((note) => (
+                    {[
+                        "c",
+                        "c#",
+                        "d",
+                        "d#",
+                        "e",
+                        "f",
+                        "f#",
+                        "g",
+                        "g#",
+                        "a",
+                        "a#",
+                        "b",
+                    ].map((note) => (
                         <Dropdown.Item
                             onClick={() =>
                                 this.setState({
-                                    currentNote: note[1],
-                                    currentNoteName: note[0],
+                                    currentNote: note,
                                 })
                             }
                         >
-                            {note[0]}
+                            {mapNoteToName(note)}
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>

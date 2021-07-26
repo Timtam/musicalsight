@@ -61,7 +61,7 @@ class Navigation extends Component {
                         {ScaleType.names().map((scale) => (
                             <Route
                                 path={
-                                    "/scale/:scale(" +
+                                    "/scales/:scale(" +
                                     scale.replace("#", "%23") +
                                     ")"
                                 }

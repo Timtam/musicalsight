@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Helmet } from "react-helmet";
 import { LinkContainer } from "react-router-bootstrap";
+import { mapNoteToLink, mapNoteToName } from "../../utilities";
 
 class Notes extends Component {
     render() {
@@ -40,22 +41,24 @@ class Notes extends Component {
                 <h3>Notes List</h3>
 
                 <ListGroup>
-                    {Object.entries({
-                        C: "c",
-                        "C sharp": "c-sharp",
-                        D: "d",
-                        "D sharp": "d-sharp",
-                        E: "e",
-                        F: "f",
-                        "F sharp": "f-sharp",
-                        G: "g",
-                        "G sharp": "g-sharp",
-                        A: "a",
-                        "A sharp": "a-sharp",
-                        B: "b",
-                    }).map((note) => (
-                        <LinkContainer to={"/notes/" + note[1]}>
-                            <ListGroup.Item action>{note[0]}</ListGroup.Item>
+                    {[
+                        "c",
+                        "c#",
+                        "d",
+                        "d#",
+                        "e",
+                        "f",
+                        "f#",
+                        "g",
+                        "g#",
+                        "a",
+                        "a#",
+                        "b",
+                    ].map((note) => (
+                        <LinkContainer to={"/notes/" + mapNoteToLink(note)}>
+                            <ListGroup.Item action>
+                                {mapNoteToName(note)}
+                            </ListGroup.Item>
                         </LinkContainer>
                     ))}
                 </ListGroup>

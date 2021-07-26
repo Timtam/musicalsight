@@ -24,8 +24,8 @@ class Scales extends Component {
                             a musically appealing melody. There are alot
                             different scales, but the most common ones in
                             western music are probably the{" "}
-                            <Link to="/scale/major">major</Link> and the{" "}
-                            <Link to="/scale/aeolian">
+                            <Link to="/scales/major">major</Link> and the{" "}
+                            <Link to="/scales/aeolian">
                                 natural minor (also known as aeolian)
                             </Link>{" "}
                             scales.
@@ -45,7 +45,7 @@ class Scales extends Component {
                     {ScaleType.names()
                         .sort()
                         .map((scale) => (
-                            <LinkContainer to={"/scale/" + escape(scale)}>
+                            <LinkContainer to={"/scales/" + escape(scale)}>
                                 <ListGroup.Item action>{scale}</ListGroup.Item>
                             </LinkContainer>
                         ))}
