@@ -1,10 +1,12 @@
 import TonalNote from "@tonaljs/note";
 import TonalScale from "@tonaljs/scale";
+import TonalScaleType from "@tonaljs/scale-type";
 import Card from "react-bootstrap/Card";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { Helmet } from "react-helmet";
 import { RouteComponentProps, withRouter } from "react-router";
+import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import { titleCase } from "title-case";
 import * as Tone from "tone";
@@ -34,7 +36,7 @@ class Scale extends Playback<PropsType, StateType> {
         return titleCase(unescape(this.props.match.params.scale) + " scale");
     }
 
-    async playScale() {
+    async playKey() {
         let notes: string[] = [
             ...TonalScale.get(
                 this.state.currentNote +
@@ -65,15 +67,17 @@ class Scale extends Playback<PropsType, StateType> {
         }
     }
 
-    renderScale() {
+    renderKey() {
         return (
             <Card className="text-center">
                 <Card.Body>
                     <Card.Title as="h4">
-                        {mapNoteToName(this.state.currentNote)}
+                        {mapNoteToName(this.state.currentNote) +
+                            " " +
+                            this.toString()}
                     </Card.Title>
                     <Card.Text>
-                        The following notes are included in this scale:{" "}
+                        The following notes are included in this key:{" "}
                         {TonalScale.get(
                             this.state.currentNote +
                                 "4 " +
@@ -93,8 +97,8 @@ class Scale extends Playback<PropsType, StateType> {
                             </Link>
                         ))}
                     </Card.Text>
-                    <Card.Link onClick={async () => await this.playScale()}>
-                        Listen to the scale
+                    <Card.Link onClick={async () => await this.playKey()}>
+                        Listen to the notes
                     </Card.Link>
                 </Card.Body>
             </Card>
@@ -105,9 +109,31 @@ class Scale extends Playback<PropsType, StateType> {
         return (
             <>
                 <Helmet>
-                    <title>{this.toString()} - Musical Sight</title>
+                    <title>
+                        {mapNoteToName(this.state.currentNote) +
+                            " " +
+                            this.toString()}{" "}
+                        - Musical Sight
+                    </title>
                 </Helmet>
                 <h3>{this.toString()}</h3>
+                Select the current scale:
+                <DropdownButton
+                    title={
+                        "Selected scale: " +
+                        titleCase(unescape(this.props.match.params.scale))
+                    }
+                >
+                    {TonalScaleType.names()
+                        .sort()
+                        .map((scale) => (
+                            <LinkContainer to={"/scales/" + escape(scale)}>
+                                <Dropdown.Item>
+                                    {titleCase(scale)}
+                                </Dropdown.Item>
+                            </LinkContainer>
+                        ))}
+                </DropdownButton>
                 Select the root note to choose the key for:
                 <DropdownButton
                     title={
@@ -140,7 +166,7 @@ class Scale extends Playback<PropsType, StateType> {
                         </Dropdown.Item>
                     ))}
                 </DropdownButton>
-                {this.renderScale()}
+                {this.renderKey()}
             </>
         );
     }
