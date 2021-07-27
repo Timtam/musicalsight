@@ -3,14 +3,15 @@ import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, Redirect, Route, Switch } from "react-router-dom";
 import Chords from "../pages/chords/Chords";
 import Home from "../pages/home/Home";
 import Imprint from "../pages/imprint/Imprint";
-import Note from "../pages/note/Note";
+import { Note, PropsType as NotePropsType } from "../pages/note/Note";
 import Notes from "../pages/notes/Notes";
-import Scale from "../pages/scale/Scale";
+import { PropsType as ScalePropsType, Scale } from "../pages/scale/Scale";
 import Scales from "../pages/scales/Scales";
+import { isNoteLink } from "../utilities";
 
 class Navigation extends Component {
     render() {
@@ -55,25 +56,34 @@ class Navigation extends Component {
                         <Route exact path="/" component={Home} />
                         <Route exact path="/imprint" component={Imprint} />
                         <Route exact path="/notes" component={Notes} />
-                        <Route path="/notes/:note([a-g])" component={Note} />
                         <Route
-                            path="/notes/:note([a-g]-sharp)"
-                            component={Note}
+                            exact
+                            path="/notes/:note"
+                            component={(props: NotePropsType) => {
+                                if (isNoteLink(props.match.params.note))
+                                    return <Note {...props} />;
+                                return <Redirect to="/not-found" />;
+                            }}
                         />
                         <Route
-                            path="/notes/:note([a-g]-flat)"
-                            component={Note}
-                        />
-                        {ScaleType.names().map((scale) => (
-                            <Route
-                                path={
-                                    "/scales/:scale(" +
-                                    scale.replace("#", "%23") +
-                                    ")"
+                            exact
+                            path="/scales/:scale/:note?"
+                            component={(props: ScalePropsType) => {
+                                if (
+                                    ScaleType.names().includes(
+                                        unescape(props.match.params.scale)
+                                    )
+                                ) {
+                                    if (
+                                        props.match.params.note !== undefined &&
+                                        !isNoteLink(props.match.params.note)
+                                    )
+                                        return <Redirect to="/not-found" />;
+                                    return <Scale {...props} />;
                                 }
-                                component={Scale}
-                            />
-                        ))}
+                                return <Redirect to="/not-found" />;
+                            }}
+                        />
                         <Route exact path="/scales" component={Scales} />
                         <Route exact path="/chords" component={Chords} />
                         <Route

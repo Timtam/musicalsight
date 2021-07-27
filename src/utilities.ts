@@ -21,3 +21,15 @@ export const mapNoteToLink = (note: string): string => {
     }
     return note[0];
 };
+
+export const mapLinkToNote = (link: string) => {
+    let note = link.charAt(0).toLowerCase();
+
+    if (link.match(/[a-g]-sharp/i)) note += "#";
+    else if (link.match(/[a-g]#-flat/i)) note += "b";
+    return note;
+};
+
+export const isNoteLink = (link: string) => {
+    return /^[a-g](-(sharp|flat))?$/i.test(link);
+};

@@ -1,26 +1,22 @@
 import { Helmet } from "react-helmet";
 import { RouteComponentProps, withRouter } from "react-router";
 import Playback from "../../components/Playback";
+import { mapLinkToNote } from "../../utilities";
 
 type PathParamsType = {
     note: string;
 };
 
-type PropsType = RouteComponentProps<PathParamsType> & {};
+export type PropsType = RouteComponentProps<PathParamsType> & {};
 
-class Note extends Playback<PropsType, {}> {
+class NoteComponent extends Playback<PropsType, {}> {
     note: string;
 
     constructor(props: PropsType) {
         super(props);
 
         // parsing the note out of the url parameter
-        this.note = this.props.match.params.note.charAt(0);
-
-        if (this.props.match.params.note.match(/[a-g]-sharp/i))
-            this.note += "#";
-        else if (this.props.match.params.note.match(/[a-g]-flat/i))
-            this.note += "b";
+        this.note = mapLinkToNote(this.props.match.params.note);
     }
 
     toString() {
@@ -49,4 +45,4 @@ class Note extends Playback<PropsType, {}> {
     }
 }
 
-export default withRouter(Note);
+export const Note = withRouter(NoteComponent);

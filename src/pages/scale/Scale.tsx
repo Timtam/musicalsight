@@ -11,24 +11,32 @@ import { Link } from "react-router-dom";
 import { titleCase } from "title-case";
 import * as Tone from "tone";
 import Playback from "../../components/Playback";
-import { mapNoteToLink, mapNoteToName } from "../../utilities";
+import { mapLinkToNote, mapNoteToLink, mapNoteToName } from "../../utilities";
 
 type PathParamsType = {
+    note: string;
     scale: string;
 };
 
-type PropsType = RouteComponentProps<PathParamsType> & {};
+export type PropsType = RouteComponentProps<PathParamsType> & {};
 
 type StateType = {
     currentNote: string;
 };
 
-class Scale extends Playback<PropsType, StateType> {
+class ScaleComponent extends Playback<PropsType, StateType> {
     constructor(props: PropsType) {
         super(props);
 
+        let note = "c";
+
+        console.log(this.props.match.params.note);
+
+        if (this.props.match.params.note !== undefined)
+            note = mapLinkToNote(this.props.match.params.note);
+
         this.state = {
-            currentNote: "c",
+            currentNote: note,
         };
     }
 
@@ -72,6 +80,7 @@ class Scale extends Playback<PropsType, StateType> {
             <Card className="text-center">
                 <Card.Body>
                     <Card.Title as="h4">
+                        Key of{" "}
                         {mapNoteToName(this.state.currentNote) +
                             " " +
                             this.toString()}
@@ -127,7 +136,14 @@ class Scale extends Playback<PropsType, StateType> {
                     {TonalScaleType.names()
                         .sort()
                         .map((scale) => (
-                            <LinkContainer to={"/scales/" + escape(scale)}>
+                            <LinkContainer
+                                to={
+                                    "/scales/" +
+                                    escape(scale) +
+                                    "/" +
+                                    mapNoteToLink(this.state.currentNote)
+                                }
+                            >
                                 <Dropdown.Item>
                                     {titleCase(scale)}
                                 </Dropdown.Item>
@@ -155,15 +171,23 @@ class Scale extends Playback<PropsType, StateType> {
                         "a#",
                         "b",
                     ].map((note) => (
-                        <Dropdown.Item
-                            onClick={() =>
-                                this.setState({
-                                    currentNote: note,
-                                })
+                        <LinkContainer
+                            replace
+                            to={
+                                "/scales/" +
+                                escape(this.props.match.params.scale) +
+                                "/" +
+                                mapNoteToLink(note)
                             }
                         >
-                            {mapNoteToName(note)}
-                        </Dropdown.Item>
+                            <Dropdown.Item
+                                onClick={() =>
+                                    this.setState({ currentNote: note })
+                                }
+                            >
+                                {mapNoteToName(note)}
+                            </Dropdown.Item>
+                        </LinkContainer>
                     ))}
                 </DropdownButton>
                 {this.renderKey()}
@@ -172,4 +196,4 @@ class Scale extends Playback<PropsType, StateType> {
     }
 }
 
-export default withRouter(Scale);
+export const Scale = withRouter(ScaleComponent);
