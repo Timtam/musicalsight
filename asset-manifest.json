@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/musicalsight/static/css/main.6db5275d.chunk.css",
-    "main.js": "/musicalsight/static/js/main.4161f309.chunk.js",
-    "main.js.map": "/musicalsight/static/js/main.4161f309.chunk.js.map",
-    "runtime-main.js": "/musicalsight/static/js/runtime-main.43ef08ac.js",
-    "runtime-main.js.map": "/musicalsight/static/js/runtime-main.43ef08ac.js.map",
-    "static/css/2.4be38407.chunk.css": "/musicalsight/static/css/2.4be38407.chunk.css",
-    "static/js/2.619c6b88.chunk.js": "/musicalsight/static/js/2.619c6b88.chunk.js",
-    "static/js/2.619c6b88.chunk.js.map": "/musicalsight/static/js/2.619c6b88.chunk.js.map",
-    "static/js/3.77e29e04.chunk.js": "/musicalsight/static/js/3.77e29e04.chunk.js",
-    "static/js/3.77e29e04.chunk.js.map": "/musicalsight/static/js/3.77e29e04.chunk.js.map",
+    "main.js": "/musicalsight/static/js/main.f87e011c.chunk.js",
+    "main.js.map": "/musicalsight/static/js/main.f87e011c.chunk.js.map",
+    "runtime-main.js": "/musicalsight/static/js/runtime-main.e534fd2a.js",
+    "runtime-main.js.map": "/musicalsight/static/js/runtime-main.e534fd2a.js.map",
+    "static/css/2.9082872e.chunk.css": "/musicalsight/static/css/2.9082872e.chunk.css",
+    "static/js/2.55a87bd8.chunk.js": "/musicalsight/static/js/2.55a87bd8.chunk.js",
+    "static/js/2.55a87bd8.chunk.js.map": "/musicalsight/static/js/2.55a87bd8.chunk.js.map",
+    "static/js/3.ee8c70cb.chunk.js": "/musicalsight/static/js/3.ee8c70cb.chunk.js",
+    "static/js/3.ee8c70cb.chunk.js.map": "/musicalsight/static/js/3.ee8c70cb.chunk.js.map",
     "index.html": "/musicalsight/index.html",
-    "static/css/2.4be38407.chunk.css.map": "/musicalsight/static/css/2.4be38407.chunk.css.map",
+    "static/css/2.9082872e.chunk.css.map": "/musicalsight/static/css/2.9082872e.chunk.css.map",
     "static/css/main.6db5275d.chunk.css.map": "/musicalsight/static/css/main.6db5275d.chunk.css.map",
-    "static/js/2.619c6b88.chunk.js.LICENSE.txt": "/musicalsight/static/js/2.619c6b88.chunk.js.LICENSE.txt"
+    "static/js/2.55a87bd8.chunk.js.LICENSE.txt": "/musicalsight/static/js/2.55a87bd8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.43ef08ac.js",
-    "static/css/2.4be38407.chunk.css",
-    "static/js/2.619c6b88.chunk.js",
+    "static/js/runtime-main.e534fd2a.js",
+    "static/css/2.9082872e.chunk.css",
+    "static/js/2.55a87bd8.chunk.js",
     "static/css/main.6db5275d.chunk.css",
-    "static/js/main.4161f309.chunk.js"
+    "static/js/main.f87e011c.chunk.js"
   ]
 }
