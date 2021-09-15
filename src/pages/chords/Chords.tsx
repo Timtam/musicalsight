@@ -16,7 +16,6 @@ class Chords extends Component {
                 <Card className="text-center">
                     <Card.Body>
                         <Card.Title as="h3">Chords</Card.Title>
-                        <Card.Text></Card.Text>
                         <Card.Text>
                             You will find the alphabetically sorted list of all
                             common chords below. Follow the links to find more

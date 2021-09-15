@@ -1,9 +1,11 @@
+import ChordType from "@tonaljs/chord-type";
 import ScaleType from "@tonaljs/scale-type";
 import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, Redirect, Route, Switch } from "react-router-dom";
+import { Chord, PropsType as ChordPropsType } from "../pages/chord/Chord";
 import Chords from "../pages/chords/Chords";
 import Home from "../pages/home/Home";
 import Imprint from "../pages/imprint/Imprint";
@@ -86,6 +88,25 @@ class Navigation extends Component {
                         />
                         <Route exact path="/scales" component={Scales} />
                         <Route exact path="/chords" component={Chords} />
+                        <Route
+                            exact
+                            path="/chords/:chord/:note?"
+                            component={(props: ChordPropsType) => {
+                                if (
+                                    ChordType.names().includes(
+                                        unescape(props.match.params.chord)
+                                    )
+                                ) {
+                                    if (
+                                        props.match.params.note !== undefined &&
+                                        !isNoteLink(props.match.params.note)
+                                    )
+                                        return <Redirect to="/not-found" />;
+                                    return <Chord {...props} />;
+                                }
+                                return <Redirect to="/not-found" />;
+                            }}
+                        />
                         <Route
                             render={function () {
                                 return <p>Not found</p>;
