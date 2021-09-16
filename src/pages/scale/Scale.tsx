@@ -1,9 +1,12 @@
+import TonalChord from "@tonaljs/chord";
 import TonalNote from "@tonaljs/note";
 import TonalScale from "@tonaljs/scale";
 import TonalScaleType from "@tonaljs/scale-type";
+import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import Table from "react-bootstrap/Table";
 import { Helmet } from "react-helmet";
 import { RouteComponentProps, withRouter } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
@@ -81,7 +84,7 @@ class ScaleComponent extends Playback<PropsType, StateType> {
                         Key of{" "}
                         {mapNoteToName(this.state.currentNote) +
                             " " +
-                            this.toString()}
+                            titleCase(unescape(this.props.match.params.scale))}
                     </Card.Title>
                     <Card.Text>
                         The following notes are included in this key:{" "}
@@ -109,6 +112,118 @@ class ScaleComponent extends Playback<PropsType, StateType> {
                     </Card.Link>
                 </Card.Body>
             </Card>
+        );
+    }
+
+    renderChords() {
+        return (
+            <>
+                <Card className="text-center">
+                    <Card.Body>
+                        <Card.Title as="h4">
+                            Chords within the{" "}
+                            {mapNoteToName(this.state.currentNote) +
+                                " " +
+                                titleCase(
+                                    unescape(this.props.match.params.scale)
+                                ) +
+                                " scale"}
+                        </Card.Title>
+                    </Card.Body>
+                    <Card.Text>
+                        The following chords are part of this scale. You can
+                        follow the links to get more information on the specific
+                        chords or use the preview buttons to preview them from
+                        scratch.
+                    </Card.Text>
+                </Card>
+                <Table responsive striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Preview slowly arpeggiated</th>
+                            <th>Preview quickly arpeggiated</th>
+                            <th>Preview full chord</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {TonalScale.scaleChords(
+                            this.state.currentNote +
+                                " " +
+                                unescape(this.props.match.params.scale)
+                        ).map((chord) => (
+                            <tr>
+                                <td>
+                                    <Link
+                                        to={
+                                            "/chords/" +
+                                            escape(
+                                                TonalChord.getChord(chord).name
+                                            ) +
+                                            "/" +
+                                            this.state.currentNote
+                                        }
+                                    >
+                                        {titleCase(
+                                            TonalChord.getChord(
+                                                chord,
+                                                this.state.currentNote
+                                            ).name
+                                        )}
+                                    </Link>
+                                </td>
+                                <td>
+                                    <Button
+                                        onClick={async () => {
+                                            await this.initialize();
+                                            this.playChord(
+                                                TonalChord.getChord(
+                                                    chord,
+                                                    this.state.currentNote + "4"
+                                                ).notes,
+                                                "4n"
+                                            );
+                                        }}
+                                    >
+                                        Preview
+                                    </Button>
+                                </td>
+                                <td>
+                                    <Button
+                                        onClick={async () => {
+                                            await this.initialize();
+                                            this.playChord(
+                                                TonalChord.getChord(
+                                                    chord,
+                                                    this.state.currentNote + "4"
+                                                ).notes,
+                                                "32n"
+                                            );
+                                        }}
+                                    >
+                                        Preview
+                                    </Button>
+                                </td>
+                                <td>
+                                    <Button
+                                        onClick={async () => {
+                                            await this.initialize();
+                                            this.playChord(
+                                                TonalChord.getChord(
+                                                    chord,
+                                                    this.state.currentNote + "4"
+                                                ).notes
+                                            );
+                                        }}
+                                    >
+                                        Preview
+                                    </Button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
+            </>
         );
     }
 
@@ -189,6 +304,7 @@ class ScaleComponent extends Playback<PropsType, StateType> {
                     ))}
                 </DropdownButton>
                 {this.renderKey()}
+                {this.renderChords()}
             </>
         );
     }
