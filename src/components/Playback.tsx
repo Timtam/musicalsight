@@ -1,3 +1,4 @@
+import Note from "@tonaljs/note";
 import { Piano } from "@tonejs/piano";
 import { Component } from "react";
 import * as Tone from "tone";
@@ -41,6 +42,23 @@ class Playback<T1, T2> extends Component<T1, T2> {
                     ? length
                     : Tone.Time(length).toSeconds()),
         });
+    }
+
+    playChord(notes: string[], offset?: string) {
+        let lengths: number[] = notes.map(
+            (note, i, arr) =>
+                Tone.Time("2n").toSeconds() +
+                (offset === undefined
+                    ? 0
+                    : Tone.Time(offset).toSeconds() * (notes.length - i))
+        );
+
+        let when: number = Tone.now();
+
+        for (let i = 0; i < notes.length; i++) {
+            this.playNote(Note.simplify(notes[i]), lengths[i], when);
+            when += offset === undefined ? 0 : Tone.Time(offset).toSeconds();
+        }
     }
 }
 

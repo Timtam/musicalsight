@@ -9,7 +9,6 @@ import { RouteComponentProps, withRouter } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import { titleCase } from "title-case";
-import * as Tone from "tone";
 import Playback from "../../components/Playback";
 import { mapLinkToNote, mapNoteToLink, mapNoteToName } from "../../utilities";
 
@@ -36,42 +35,6 @@ class ChordComponent extends Playback<PropsType, StateType> {
         this.state = {
             currentNote: note,
         };
-    }
-
-    async playArpeggiatedChord(offset: string) {
-        let notes = TonalChord.getChord(
-            unescape(this.props.match.params.chord),
-            this.state.currentNote + "4"
-        ).notes;
-        let lengths: number[] = notes.map(
-            (note, i, arr) =>
-                Tone.Time("2n").toSeconds() +
-                Tone.Time(offset).toSeconds() * (notes.length - i)
-        );
-
-        await this.initialize();
-
-        let when: number = Tone.now();
-
-        for (let i = 0; i < notes.length; i++) {
-            this.playNote(TonalNote.simplify(notes[i]), lengths[i], when);
-            when += Tone.Time(offset).toSeconds();
-        }
-    }
-
-    async playChord() {
-        let notes = TonalChord.getChord(
-            unescape(this.props.match.params.chord),
-            this.state.currentNote + "4"
-        ).notes;
-
-        await this.initialize();
-
-        let when: number = Tone.now();
-
-        for (let i = 0; i < notes.length; i++) {
-            this.playNote(TonalNote.simplify(notes[i]), "2n", when);
-        }
     }
 
     render() {
@@ -189,20 +152,44 @@ class ChordComponent extends Playback<PropsType, StateType> {
                             ))}
                         </Card.Text>
                         <Card.Link
-                            onClick={async () =>
-                                await this.playArpeggiatedChord("4n")
-                            }
+                            onClick={async () => {
+                                await this.initialize();
+                                await this.playChord(
+                                    TonalChord.getChord(
+                                        unescape(this.props.match.params.chord),
+                                        this.state.currentNote + "4"
+                                    ).notes,
+                                    "4n"
+                                );
+                            }}
                         >
                             Listen to the slowly arpeggiated chord
                         </Card.Link>
                         <Card.Link
-                            onClick={async () =>
-                                await this.playArpeggiatedChord("32n")
-                            }
+                            onClick={async () => {
+                                await this.initialize();
+                                this.playChord(
+                                    TonalChord.getChord(
+                                        unescape(this.props.match.params.chord),
+                                        this.state.currentNote + "4"
+                                    ).notes,
+                                    "32n"
+                                );
+                            }}
                         >
                             Listen to the quickly arpeggiated chord
                         </Card.Link>
-                        <Card.Link onClick={async () => await this.playChord()}>
+                        <Card.Link
+                            onClick={async () => {
+                                await this.initialize();
+                                this.playChord(
+                                    TonalChord.getChord(
+                                        unescape(this.props.match.params.chord),
+                                        this.state.currentNote + "4"
+                                    ).notes
+                                );
+                            }}
+                        >
                             Listen to the full chord
                         </Card.Link>
                     </Card.Body>
