@@ -1,11 +1,15 @@
 import TonalChord from "@tonaljs/chord";
 import TonalChordType from "@tonaljs/chord-type";
+import TonalNote from "@tonaljs/note";
+import Card from "react-bootstrap/Card";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { Helmet } from "react-helmet";
 import { RouteComponentProps, withRouter } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
+import { Link } from "react-router-dom";
 import { titleCase } from "title-case";
+import * as Tone from "tone";
 import Playback from "../../components/Playback";
 import { mapLinkToNote, mapNoteToLink, mapNoteToName } from "../../utilities";
 
@@ -34,22 +38,62 @@ class ChordComponent extends Playback<PropsType, StateType> {
         };
     }
 
-    toString() {
-        return titleCase(
-            TonalChord.getChord(
-                unescape(this.props.match.params.chord),
-                this.state.currentNote
-            ).name
+    async playArpeggiatedChord(offset: string) {
+        let notes = TonalChord.getChord(
+            unescape(this.props.match.params.chord),
+            this.state.currentNote + "4"
+        ).notes;
+        let lengths: number[] = notes.map(
+            (note, i, arr) =>
+                Tone.Time("2n").toSeconds() +
+                Tone.Time(offset).toSeconds() * (notes.length - i)
         );
+
+        await this.initialize();
+
+        let when: number = Tone.now();
+
+        for (let i = 0; i < notes.length; i++) {
+            this.playNote(TonalNote.simplify(notes[i]), lengths[i], when);
+            when += Tone.Time(offset).toSeconds();
+        }
+    }
+
+    async playChord() {
+        let notes = TonalChord.getChord(
+            unescape(this.props.match.params.chord),
+            this.state.currentNote + "4"
+        ).notes;
+
+        await this.initialize();
+
+        let when: number = Tone.now();
+
+        for (let i = 0; i < notes.length; i++) {
+            this.playNote(TonalNote.simplify(notes[i]), "2n", when);
+        }
     }
 
     render() {
         return (
             <>
                 <Helmet>
-                    <title>{this.toString()} - Musical Sight</title>
+                    <title>
+                        {titleCase(
+                            TonalChord.getChord(
+                                unescape(this.props.match.params.chord)
+                            ).name + " chord"
+                        )}{" "}
+                        - Musical Sight
+                    </title>
                 </Helmet>
-                <h3>{this.toString()}</h3>
+                <h3>
+                    {titleCase(
+                        TonalChord.getChord(
+                            unescape(this.props.match.params.chord)
+                        ).name
+                    )}
+                </h3>
                 Select the current chord:
                 <DropdownButton
                     title={
@@ -117,6 +161,51 @@ class ChordComponent extends Playback<PropsType, StateType> {
                         </LinkContainer>
                     ))}
                 </DropdownButton>
+                <Card className="text-center">
+                    <Card.Body>
+                        <Card.Title as="h4">
+                            {titleCase(
+                                TonalChord.getChord(
+                                    unescape(this.props.match.params.chord),
+                                    this.state.currentNote
+                                ).name + " chord"
+                            )}
+                        </Card.Title>
+                        <Card.Text>
+                            The following notes are included in this chord:{" "}
+                            {TonalChord.getChord(
+                                unescape(this.props.match.params.chord),
+                                this.state.currentNote
+                            ).notes.map((note) => (
+                                <Link
+                                    to={
+                                        "/notes/" +
+                                        mapNoteToLink(TonalNote.simplify(note))
+                                    }
+                                >
+                                    {mapNoteToName(TonalNote.simplify(note))}
+                                </Link>
+                            ))}
+                        </Card.Text>
+                        <Card.Link
+                            onClick={async () =>
+                                await this.playArpeggiatedChord("4n")
+                            }
+                        >
+                            Listen to the slowly arpeggiated chord
+                        </Card.Link>
+                        <Card.Link
+                            onClick={async () =>
+                                await this.playArpeggiatedChord("32n")
+                            }
+                        >
+                            Listen to the quickly arpeggiated chord
+                        </Card.Link>
+                        <Card.Link onClick={async () => await this.playChord()}>
+                            Listen to the full chord
+                        </Card.Link>
+                    </Card.Body>
+                </Card>
             </>
         );
     }

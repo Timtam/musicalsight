@@ -23,7 +23,11 @@ class Playback<T1, T2> extends Component<T1, T2> {
         this.initialized = true;
     }
 
-    playNote(note: string, length: string = "8n", when: number = Tone.now()) {
+    playNote(
+        note: string,
+        length: string | number = "8n",
+        when: number = Tone.now()
+    ) {
         this.piano.keyDown({
             note: note,
             time: when,
@@ -31,7 +35,11 @@ class Playback<T1, T2> extends Component<T1, T2> {
 
         this.piano.keyUp({
             note: note,
-            time: when + Tone.Time(length).toSeconds(),
+            time:
+                when +
+                (typeof length === "number"
+                    ? length
+                    : Tone.Time(length).toSeconds()),
         });
     }
 }

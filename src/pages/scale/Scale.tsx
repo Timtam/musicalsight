@@ -30,8 +30,6 @@ class ScaleComponent extends Playback<PropsType, StateType> {
 
         let note = "c";
 
-        console.log(this.props.match.params.note);
-
         if (this.props.match.params.note !== undefined)
             note = mapLinkToNote(this.props.match.params.note);
 
