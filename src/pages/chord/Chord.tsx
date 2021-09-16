@@ -92,7 +92,7 @@ class ChordComponent extends Playback<PropsType, StateType> {
                     {titleCase(
                         TonalChord.getChord(
                             unescape(this.props.match.params.chord)
-                        ).name
+                        ).name + " chord"
                     )}
                 </h3>
                 Select the current chord:
