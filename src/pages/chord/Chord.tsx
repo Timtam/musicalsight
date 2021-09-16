@@ -81,7 +81,8 @@ class ChordComponent extends Playback<PropsType, StateType> {
                     <title>
                         {titleCase(
                             TonalChord.getChord(
-                                unescape(this.props.match.params.chord)
+                                unescape(this.props.match.params.chord),
+                                this.state.currentNote
                             ).name + " chord"
                         )}{" "}
                         - Musical Sight
