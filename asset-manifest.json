@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/musicalsight/static/css/main.e4889cbf.css",
-    "main.js": "/musicalsight/static/js/main.691fea4f.js",
+    "main.css": "/musicalsight/static/css/main.14034d29.css",
+    "main.js": "/musicalsight/static/js/main.677b0ec7.js",
     "static/js/787.92e48a06.chunk.js": "/musicalsight/static/js/787.92e48a06.chunk.js",
     "index.html": "/musicalsight/index.html",
-    "main.e4889cbf.css.map": "/musicalsight/static/css/main.e4889cbf.css.map",
-    "main.691fea4f.js.map": "/musicalsight/static/js/main.691fea4f.js.map",
+    "main.14034d29.css.map": "/musicalsight/static/css/main.14034d29.css.map",
+    "main.677b0ec7.js.map": "/musicalsight/static/js/main.677b0ec7.js.map",
     "787.92e48a06.chunk.js.map": "/musicalsight/static/js/787.92e48a06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4889cbf.css",
-    "static/js/main.691fea4f.js"
+    "static/css/main.14034d29.css",
+    "static/js/main.677b0ec7.js"
   ]
 }
