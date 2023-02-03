@@ -1,54 +1,48 @@
-import { Component } from "react";
+import { useEffect, useMemo } from "react";
 import { Helmet } from "react-helmet";
-import { RouteComponentProps, withRouter } from "react-router";
+import { Redirect, useParams } from "react-router-dom";
 import PlaybackService from "../../services/PlaybackService";
-import { mapLinkToNote } from "../../utilities";
+import { isNoteLink, mapLinkToNote } from "../../utilities";
 
-type PathParamsType = {
-    note: string;
-};
+function NoteComponent() {
+    let playback: PlaybackService = useMemo(() => {
+        return new PlaybackService();
+    }, []);
+    let { note } = useParams<{
+        note: string;
+    }>();
 
-export type PropsType = RouteComponentProps<PathParamsType> & {};
+    useEffect(() => {
+        (async () => {
+            await playback.initialize();
+        })();
+    }, [playback]);
 
-class NoteComponent extends Component<PropsType, {}> {
-    note: string;
-    playback: PlaybackService;
+    if (!isNoteLink(note)) return <Redirect to="/not-found" />;
 
-    constructor(props: PropsType) {
-        super(props);
+    note = mapLinkToNote(note);
 
-        // parsing the note out of the url parameter
-        this.note = mapLinkToNote(this.props.match.params.note);
-        this.playback = new PlaybackService();
-    }
+    let toString = () => {
+        return note[0].toUpperCase() + note.substr(1);
+    };
 
-    async componentDidMount() {
-        await this.playback.initialize();
-    }
+    return (
+        <>
+            <Helmet>
+                <title>{toString()} - Musical Sight</title>
+            </Helmet>
 
-    toString() {
-        return this.note[0].toUpperCase() + this.note.substr(1);
-    }
+            <h3>{toString()}</h3>
 
-    render() {
-        return (
-            <>
-                <Helmet>
-                    <title>{this.toString()} - Musical Sight</title>
-                </Helmet>
-
-                <h3>{this.toString()}</h3>
-
-                <button
-                    onClick={() => {
-                        this.playback.playNote(this.note + "4");
-                    }}
-                >
-                    Listen now
-                </button>
-            </>
-        );
-    }
+            <button
+                onClick={() => {
+                    playback.playNote(note + "4");
+                }}
+            >
+                Listen now
+            </button>
+        </>
+    );
 }
 
-export const Note = withRouter(NoteComponent);
+export const Note = NoteComponent;
