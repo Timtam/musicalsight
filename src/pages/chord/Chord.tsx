@@ -1,6 +1,7 @@
 import TonalChord from "@tonaljs/chord";
 import TonalChordType from "@tonaljs/chord-type";
 import TonalNote from "@tonaljs/note";
+import { Component } from "react";
 import Card from "react-bootstrap/Card";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -9,7 +10,7 @@ import { RouteComponentProps, withRouter } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import { titleCase } from "title-case";
-import Playback from "../../components/Playback";
+import PlaybackService from "../../services/PlaybackService";
 import { mapLinkToNote, mapNoteToLink, mapNoteToName } from "../../utilities";
 
 type PathParamsType = {
@@ -23,11 +24,14 @@ type StateType = {
     currentNote: string;
 };
 
-class ChordComponent extends Playback<PropsType, StateType> {
+class ChordComponent extends Component<PropsType, StateType> {
+    playback: PlaybackService;
+
     constructor(props: PropsType) {
         super(props);
 
         let note = "c";
+        this.playback = new PlaybackService();
 
         if (this.props.match.params.note !== undefined)
             note = mapLinkToNote(this.props.match.params.note);
@@ -35,6 +39,10 @@ class ChordComponent extends Playback<PropsType, StateType> {
         this.state = {
             currentNote: note,
         };
+    }
+
+    async componentDidMount() {
+        await this.playback.initialize();
     }
 
     render() {
@@ -153,8 +161,7 @@ class ChordComponent extends Playback<PropsType, StateType> {
                         </Card.Text>
                         <Card.Link
                             onClick={async () => {
-                                await this.initialize();
-                                await this.playChord(
+                                await this.playback.playChord(
                                     TonalChord.getChord(
                                         unescape(this.props.match.params.chord),
                                         this.state.currentNote + "4"
@@ -167,8 +174,7 @@ class ChordComponent extends Playback<PropsType, StateType> {
                         </Card.Link>
                         <Card.Link
                             onClick={async () => {
-                                await this.initialize();
-                                this.playChord(
+                                this.playback.playChord(
                                     TonalChord.getChord(
                                         unescape(this.props.match.params.chord),
                                         this.state.currentNote + "4"
@@ -181,8 +187,7 @@ class ChordComponent extends Playback<PropsType, StateType> {
                         </Card.Link>
                         <Card.Link
                             onClick={async () => {
-                                await this.initialize();
-                                this.playChord(
+                                this.playback.playChord(
                                     TonalChord.getChord(
                                         unescape(this.props.match.params.chord),
                                         this.state.currentNote + "4"

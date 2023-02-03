@@ -2,6 +2,7 @@ import TonalChord from "@tonaljs/chord";
 import TonalNote from "@tonaljs/note";
 import TonalScale from "@tonaljs/scale";
 import TonalScaleType from "@tonaljs/scale-type";
+import { Component } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -13,8 +14,13 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import { titleCase } from "title-case";
 import * as Tone from "tone";
-import Playback from "../../components/Playback";
-import { mapLinkToNote, mapNoteToLink, mapNoteToName } from "../../utilities";
+import PlaybackService from "../../services/PlaybackService";
+import {
+    mapLinkToNote,
+    mapNoteToLink,
+    mapNoteToName,
+    mapToIntervalName,
+} from "../../utilities";
 
 type PathParamsType = {
     note: string;
@@ -27,11 +33,15 @@ type StateType = {
     currentNote: string;
 };
 
-class ScaleComponent extends Playback<PropsType, StateType> {
+class ScaleComponent extends Component<PropsType, StateType> {
+    playback: PlaybackService;
+
     constructor(props: PropsType) {
         super(props);
 
         let note = "c";
+
+        this.playback = new PlaybackService();
 
         if (this.props.match.params.note !== undefined)
             note = mapLinkToNote(this.props.match.params.note);
@@ -39,6 +49,10 @@ class ScaleComponent extends Playback<PropsType, StateType> {
         this.state = {
             currentNote: note,
         };
+    }
+
+    async componentDidMount() {
+        await this.playback.initialize();
     }
 
     toString() {
@@ -64,19 +78,17 @@ class ScaleComponent extends Playback<PropsType, StateType> {
             return "4n";
         });
 
-        await this.initialize();
-
         let when: number = Tone.now();
 
         for (let i = 0; i < notes.length; i++) {
             let note = TonalNote.simplify(notes[i]);
             let length = lengths[i];
-            this.playNote(note, length, when);
+            this.playback.playNote(note, length, when);
             when += Tone.Time(length).toSeconds();
         }
     }
 
-    renderKey() {
+    renderNotes() {
         return (
             <Card className="text-center">
                 <Card.Body>
@@ -87,7 +99,8 @@ class ScaleComponent extends Playback<PropsType, StateType> {
                             titleCase(unescape(this.props.match.params.scale))}
                     </Card.Title>
                     <Card.Text>
-                        The following notes are included in this key:{" "}
+                        The following notes are included in this scale by
+                        applying the above intervals to the selected root note:{" "}
                         {TonalScale.get(
                             this.state.currentNote +
                                 "4 " +
@@ -121,20 +134,20 @@ class ScaleComponent extends Playback<PropsType, StateType> {
                 <Card className="text-center">
                     <Card.Body>
                         <Card.Title as="h4">
-                            Chords within the{" "}
-                            {mapNoteToName(this.state.currentNote) +
-                                " " +
-                                titleCase(
-                                    unescape(this.props.match.params.scale)
-                                ) +
-                                " scale"}
+                            Chords rooted at{" "}
+                            {mapNoteToName(this.state.currentNote)} within the{" "}
+                            {titleCase(unescape(this.props.match.params.scale))}{" "}
+                            scale{" "}
                         </Card.Title>
                     </Card.Body>
                     <Card.Text>
-                        The following chords are part of this scale. You can
-                        follow the links to get more information on the specific
-                        chords or use the preview buttons to preview them from
-                        scratch.
+                        The following chords can be built by using{" "}
+                        {mapNoteToName(this.state.currentNote)} as your root
+                        note within the{" "}
+                        {titleCase(unescape(this.props.match.params.scale))}{" "}
+                        scale. You can follow the links to get more information
+                        on the specific chords or use the preview buttons to
+                        preview them from scratch.
                     </Card.Text>
                 </Card>
                 <Table responsive striped bordered hover>
@@ -175,8 +188,7 @@ class ScaleComponent extends Playback<PropsType, StateType> {
                                 <td>
                                     <Button
                                         onClick={async () => {
-                                            await this.initialize();
-                                            this.playChord(
+                                            this.playback.playChord(
                                                 TonalChord.getChord(
                                                     chord,
                                                     this.state.currentNote + "4"
@@ -191,8 +203,7 @@ class ScaleComponent extends Playback<PropsType, StateType> {
                                 <td>
                                     <Button
                                         onClick={async () => {
-                                            await this.initialize();
-                                            this.playChord(
+                                            this.playback.playChord(
                                                 TonalChord.getChord(
                                                     chord,
                                                     this.state.currentNote + "4"
@@ -207,8 +218,7 @@ class ScaleComponent extends Playback<PropsType, StateType> {
                                 <td>
                                     <Button
                                         onClick={async () => {
-                                            await this.initialize();
-                                            this.playChord(
+                                            this.playback.playChord(
                                                 TonalChord.getChord(
                                                     chord,
                                                     this.state.currentNote + "4"
@@ -263,7 +273,32 @@ class ScaleComponent extends Playback<PropsType, StateType> {
                             </LinkContainer>
                         ))}
                 </DropdownButton>
-                Select the root note to choose the key for:
+                <h3>
+                    {"General information about the " +
+                        titleCase(unescape(this.props.match.params.scale)) +
+                        " scale"}
+                </h3>
+                <Card className="text-center">
+                    <Card.Body>
+                        <Card.Title>Intervals</Card.Title>
+                        <Card.Text>
+                            A scale consists of a root note and a certain amount
+                            of intervals applied to the root note to find the
+                            next note of the scale.
+                        </Card.Text>
+                        <Card.Text>
+                            The following intervals determine this scale:{" "}
+                            <ul>
+                                {TonalScale.get(
+                                    unescape(this.props.match.params.scale)
+                                ).intervals.map((interval) => (
+                                    <li>{mapToIntervalName(interval)}</li>
+                                ))}
+                            </ul>
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                Select the root note to apply the scale to:
                 <DropdownButton
                     title={
                         "Selected note: " +
@@ -303,7 +338,7 @@ class ScaleComponent extends Playback<PropsType, StateType> {
                         </LinkContainer>
                     ))}
                 </DropdownButton>
-                {this.renderKey()}
+                {this.renderNotes()}
                 {this.renderChords()}
             </>
         );

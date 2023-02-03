@@ -1,15 +1,12 @@
 import Note from "@tonaljs/note";
 import { Piano } from "@tonejs/piano";
-import { Component } from "react";
 import * as Tone from "tone";
 
-class Playback<T1, T2> extends Component<T1, T2> {
+class PlaybackService {
     initialized: boolean;
     piano: Piano;
 
-    constructor(props: T1) {
-        super(props);
-
+    constructor() {
         this.initialized = false;
         this.piano = new Piano();
 
@@ -62,4 +59,4 @@ class Playback<T1, T2> extends Component<T1, T2> {
     }
 }
 
-export default Playback;
+export default PlaybackService;

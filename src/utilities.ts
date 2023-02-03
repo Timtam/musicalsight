@@ -1,3 +1,5 @@
+import ordinal from "ordinal";
+
 export const mapNoteToName = (note: string): string => {
     note = note.toLowerCase();
 
@@ -32,4 +34,26 @@ export const mapLinkToNote = (link: string) => {
 
 export const isNoteLink = (link: string) => {
     return /^[a-g](-(sharp|flat))?$/i.test(link);
+};
+
+export const mapToIntervalName = (interval: string): string => {
+    let result: string = "";
+
+    switch (interval.slice(-1)) {
+        case "P":
+            result += "Perfect ";
+            break;
+        case "m":
+            result += "Minor ";
+            break;
+        case "M":
+            result += "Major ";
+            break;
+        default:
+            break;
+    }
+
+    result += ordinal(parseInt(interval.slice(0, -1), 10));
+
+    return result;
 };
