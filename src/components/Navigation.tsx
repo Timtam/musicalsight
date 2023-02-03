@@ -1,6 +1,6 @@
 import ChordType from "@tonaljs/chord-type";
 import ScaleType from "@tonaljs/scale-type";
-import React, { Component } from "react";
+import { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";

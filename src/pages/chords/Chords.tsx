@@ -1,5 +1,5 @@
 import ChordType from "@tonaljs/chord-type";
-import React, { Component } from "react";
+import { Component } from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Helmet } from "react-helmet";

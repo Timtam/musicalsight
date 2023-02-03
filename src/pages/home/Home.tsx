@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import Card from "react-bootstrap/Card";
 import { Helmet } from "react-helmet";
 
