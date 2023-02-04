@@ -10,7 +10,13 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import { titleCase } from "title-case";
 import PlaybackService from "../../services/PlaybackService";
-import { mapLinkToNote, mapNoteToLink, mapNoteToName } from "../../utilities";
+import {
+    isNoteLink,
+    mapLinkToNote,
+    mapNoteToLink,
+    mapNoteToName,
+} from "../../utilities";
+import NotFound from "../not-found/NotFound";
 
 function ChordComponent() {
     const playback: PlaybackService = useMemo(() => {
@@ -18,12 +24,11 @@ function ChordComponent() {
     }, []);
 
     let { note, chord } = useParams<{
-        note: string | undefined;
+        note: string;
         chord: string;
     }>();
 
     if (note === undefined) note = "c";
-    else note = mapLinkToNote(note);
 
     let [currentNote, setCurrentNote] = useState(note);
     useEffect(() => {
@@ -31,6 +36,15 @@ function ChordComponent() {
             await playback.initialize();
         })();
     }, [playback]);
+
+    if (
+        chord === undefined ||
+        !TonalChordType.names().includes(chord) ||
+        !isNoteLink(note)
+    )
+        return <NotFound />;
+
+    note = mapLinkToNote(note);
 
     return (
         <>
@@ -90,7 +104,7 @@ function ChordComponent() {
                         replace
                         to={
                             "/chords/" +
-                            escape(chord) +
+                            escape(chord!) +
                             "/" +
                             mapNoteToLink(note)
                         }
@@ -129,7 +143,7 @@ function ChordComponent() {
                         onClick={async () => {
                             await playback.playChord(
                                 TonalChord.getChord(
-                                    unescape(chord),
+                                    unescape(chord!),
                                     currentNote + "4"
                                 ).notes,
                                 "4n"
@@ -142,7 +156,7 @@ function ChordComponent() {
                         onClick={async () => {
                             playback.playChord(
                                 TonalChord.getChord(
-                                    unescape(chord),
+                                    unescape(chord!),
                                     currentNote + "4"
                                 ).notes,
                                 "32n"
@@ -155,7 +169,7 @@ function ChordComponent() {
                         onClick={async () => {
                             playback.playChord(
                                 TonalChord.getChord(
-                                    unescape(chord),
+                                    unescape(chord!),
                                     currentNote + "4"
                                 ).notes
                             );

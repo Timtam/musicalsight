@@ -15,18 +15,20 @@ import { titleCase } from "title-case";
 import * as Tone from "tone";
 import PlaybackService from "../../services/PlaybackService";
 import {
+    isNoteLink,
     mapLinkToNote,
     mapNoteToLink,
     mapNoteToName,
     mapToIntervalName,
 } from "../../utilities";
+import NotFound from "../not-found/NotFound";
 
 function ScaleComponent() {
     let playback: PlaybackService = useMemo(() => {
         return new PlaybackService();
     }, []);
     let { note, scale } = useParams<{
-        note: string | undefined;
+        note: string;
         scale: string;
     }>();
 
@@ -38,20 +40,30 @@ function ScaleComponent() {
         })();
     }, [playback]);
 
-    note = mapLinkToNote(note);
+    let found = true;
 
-    let [currentNote, setCurrentNote] = useState(note);
+    if (
+        scale === undefined ||
+        !TonalScaleType.names().includes(scale) ||
+        !isNoteLink(note)
+    )
+        found = false;
+    else note = mapLinkToNote(note);
+
+    let [currentNote, setCurrentNote] = useState(note!);
+
+    if (!found) return <NotFound />;
 
     let toString = () => {
-        return titleCase(unescape(scale) + " scale");
+        return titleCase(unescape(scale!) + " scale");
     };
 
     let playKey = async () => {
         let notes: string[] = [
-            ...TonalScale.get(currentNote + "4 " + unescape(scale)).notes,
+            ...TonalScale.get(currentNote + "4 " + unescape(scale!)).notes,
             currentNote + "5",
             ...TonalScale.get(
-                currentNote + "4 " + unescape(scale)
+                currentNote + "4 " + unescape(scale!)
             ).notes.reverse(),
         ];
         let lengths: string[] = notes.map((note, i, arr) => {
@@ -77,13 +89,13 @@ function ScaleComponent() {
                         Key of{" "}
                         {mapNoteToName(currentNote) +
                             " " +
-                            titleCase(unescape(scale))}
+                            titleCase(unescape(scale!))}
                     </Card.Title>
                     <Card.Text>
                         The following notes are included in this scale by
                         applying the above intervals to the selected root note:{" "}
                         {TonalScale.get(
-                            currentNote + "4 " + unescape(scale)
+                            currentNote + "4 " + unescape(scale!)
                         ).notes.map((note) => (
                             <Link
                                 to={
@@ -112,13 +124,13 @@ function ScaleComponent() {
                     <Card.Body>
                         <Card.Title as="h4">
                             Chords rooted at {mapNoteToName(currentNote)} within
-                            the {titleCase(unescape(scale))} scale{" "}
+                            the {titleCase(unescape(scale!))} scale{" "}
                         </Card.Title>
                     </Card.Body>
                     <Card.Text>
                         The following chords can be built by using{" "}
                         {mapNoteToName(currentNote)} as your root note within
-                        the {titleCase(unescape(scale))} scale. You can follow
+                        the {titleCase(unescape(scale!))} scale. You can follow
                         the links to get more information on the specific chords
                         or use the preview buttons to preview them from scratch.
                     </Card.Text>
@@ -134,7 +146,7 @@ function ScaleComponent() {
                     </thead>
                     <tbody>
                         {TonalScale.scaleChords(
-                            currentNote + " " + unescape(scale)
+                            currentNote + " " + unescape(scale!)
                         ).map((chord) => (
                             <tr>
                                 <td>
@@ -219,7 +231,7 @@ function ScaleComponent() {
             <h3>{toString()}</h3>
             Select the current scale:
             <DropdownButton
-                title={"Selected scale: " + titleCase(unescape(scale))}
+                title={"Selected scale: " + titleCase(unescape(scale!))}
             >
                 {TonalScaleType.names()
                     .sort()
@@ -238,7 +250,7 @@ function ScaleComponent() {
             </DropdownButton>
             <h3>
                 {"General information about the " +
-                    titleCase(unescape(scale)) +
+                    titleCase(unescape(scale!)) +
                     " scale"}
             </h3>
             <Card className="text-center">
@@ -252,7 +264,7 @@ function ScaleComponent() {
                     <Card.Text>
                         The following intervals determine this scale:{" "}
                         <ul>
-                            {TonalScale.get(unescape(scale)).intervals.map(
+                            {TonalScale.get(unescape(scale!)).intervals.map(
                                 (interval) => (
                                     <li>{mapToIntervalName(interval)}</li>
                                 )
@@ -281,12 +293,7 @@ function ScaleComponent() {
                 ].map((note) => (
                     <LinkContainer
                         replace
-                        to={
-                            "/scales/" +
-                            escape(scale) +
-                            "/" +
-                            mapNoteToLink(note)
-                        }
+                        to={"/scales/" + scale! + "/" + mapNoteToLink(note)}
                     >
                         <Dropdown.Item onClick={() => setCurrentNote(note)}>
                             {mapNoteToName(note)}

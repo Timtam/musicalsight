@@ -1,8 +1,9 @@
 import { useEffect, useMemo } from "react";
 import { Helmet } from "react-helmet";
-import { Redirect, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import PlaybackService from "../../services/PlaybackService";
 import { isNoteLink, mapLinkToNote } from "../../utilities";
+import NotFound from "../not-found/NotFound";
 
 function NoteComponent() {
     let playback: PlaybackService = useMemo(() => {
@@ -18,12 +19,12 @@ function NoteComponent() {
         })();
     }, [playback]);
 
-    if (!isNoteLink(note)) return <Redirect to="/not-found" />;
+    if (note === undefined || !isNoteLink(note)) return <NotFound />;
 
     note = mapLinkToNote(note);
 
     let toString = () => {
-        return note[0].toUpperCase() + note.substr(1);
+        return note![0].toUpperCase() + note!.substr(1);
     };
 
     return (

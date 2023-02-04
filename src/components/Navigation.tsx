@@ -1,11 +1,12 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { Chord } from "../pages/chord/Chord";
 import Chords from "../pages/chords/Chords";
 import Home from "../pages/home/Home";
 import Imprint from "../pages/imprint/Imprint";
+import NotFound from "../pages/not-found/NotFound";
 import { Note } from "../pages/note/Note";
 import Notes from "../pages/notes/Notes";
 import { Scale } from "../pages/scale/Scale";
@@ -49,27 +50,17 @@ function Navigation() {
                 </Navbar>
             </Container>
             <div>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/imprint" component={Imprint} />
-                    <Route exact path="/notes" component={Notes} />
-                    <Route exact path="/notes/:note">
-                        <Note />
-                    </Route>
-                    <Route exact path="/scales/:scale/:note?">
-                        <Scale />
-                    </Route>
-                    <Route exact path="/scales" component={Scales} />
-                    <Route exact path="/chords" component={Chords} />
-                    <Route exact path="/chords/:chord/:note?">
-                        <Chord />
-                    </Route>
-                    <Route
-                        render={function () {
-                            return <p>Not found</p>;
-                        }}
-                    />
-                </Switch>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/imprint" element={<Imprint />} />
+                    <Route path="/notes" element={<Notes />} />
+                    <Route path="/notes/:note" element={<Note />} />
+                    <Route path="/scales/:scale/:note?" element={<Scale />} />
+                    <Route path="/scales" element={<Scales />} />
+                    <Route path="/chords" element={<Chords />} />
+                    <Route path="/chords/:chord/:note?" element={<Chord />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
             </div>
         </div>
     );
