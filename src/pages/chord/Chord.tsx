@@ -5,10 +5,10 @@ import { useEffect, useMemo, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import { Helmet } from "react-helmet";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import { titleCase } from "title-case";
+import Head from "../../components/Head";
 import PlaybackService from "../../services/PlaybackService";
 import {
     isNoteLink,
@@ -48,15 +48,12 @@ function ChordComponent() {
 
     return (
         <>
-            <Helmet>
-                <title>
-                    {titleCase(
-                        TonalChord.getChord(unescape(chord), currentNote).name +
-                            " chord"
-                    )}{" "}
-                    - Musical Sight
-                </title>
-            </Helmet>
+            <Head
+                title={titleCase(
+                    TonalChord.getChord(unescape(chord), currentNote).name +
+                        " chord"
+                )}
+            />
             <h3>
                 {titleCase(
                     TonalChord.getChord(unescape(chord)).name + " chord"
@@ -154,7 +151,7 @@ function ChordComponent() {
                     </Card.Link>
                     <Card.Link
                         onClick={async () => {
-                            playback.playChord(
+                            await playback.playChord(
                                 TonalChord.getChord(
                                     unescape(chord!),
                                     currentNote + "4"
@@ -167,7 +164,7 @@ function ChordComponent() {
                     </Card.Link>
                     <Card.Link
                         onClick={async () => {
-                            playback.playChord(
+                            await playback.playChord(
                                 TonalChord.getChord(
                                     unescape(chord!),
                                     currentNote + "4"

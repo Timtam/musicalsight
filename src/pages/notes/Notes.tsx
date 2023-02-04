@@ -1,15 +1,13 @@
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import { Helmet } from "react-helmet";
 import { LinkContainer } from "react-router-bootstrap";
+import Head from "../../components/Head";
 import { mapNoteToLink, mapNoteToName } from "../../utilities";
 
 function Notes() {
     return (
         <>
-            <Helmet>
-                <title>Notes - Musical Sight</title>
-            </Helmet>
+            <Head title="Notes" />
 
             <Card className="text-center">
                 <Card.Body>

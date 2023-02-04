@@ -1,11 +1,9 @@
-import { Helmet } from "react-helmet";
+import Head from "../../components/Head";
 
 function NotFound() {
     return (
         <>
-            <Helmet>
-                <title>Page Not Found - Musical Sight</title>
-            </Helmet>
+            <Head title="Page Not Found" />
             <p>The page you're looking for cannot be found.</p>
         </>
     );

@@ -1,12 +1,10 @@
 import Card from "react-bootstrap/Card";
-import { Helmet } from "react-helmet";
+import Head from "../../components/Head";
 
 function Imprint() {
     return (
         <>
-            <Helmet>
-                <title>Imprint - Musical Sight</title>
-            </Helmet>
+            <Head title="Imprint" />
 
             <Card className="text-center">
                 <Card.Body>

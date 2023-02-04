@@ -1,12 +1,10 @@
 import Card from "react-bootstrap/Card";
-import { Helmet } from "react-helmet";
+import Head from "../../components/Head";
 
 function Home() {
     return (
         <>
-            <Helmet>
-                <title>Home - Musical Sight</title>
-            </Helmet>
+            <Head title="Home" />
 
             <Card className="text-center">
                 <Card.Body>

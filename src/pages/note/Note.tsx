@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from "react";
-import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
+import Head from "../../components/Head";
 import PlaybackService from "../../services/PlaybackService";
 import { isNoteLink, mapLinkToNote } from "../../utilities";
 import NotFound from "../not-found/NotFound";
@@ -29,9 +29,7 @@ function NoteComponent() {
 
     return (
         <>
-            <Helmet>
-                <title>{toString()} - Musical Sight</title>
-            </Helmet>
+            <Head title={toString()} />
 
             <h3>{toString()}</h3>
 

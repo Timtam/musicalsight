@@ -1,16 +1,14 @@
 import ScaleType from "@tonaljs/scale-type";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import { Helmet } from "react-helmet";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
+import Head from "../../components/Head";
 
 function Scales() {
     return (
         <>
-            <Helmet>
-                <title>Scales - Musical Sight</title>
-            </Helmet>
+            <Head title="Scales" />
 
             <Card className="text-center">
                 <Card.Body>

@@ -1,15 +1,13 @@
 import ChordType from "@tonaljs/chord-type";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import { Helmet } from "react-helmet";
 import { LinkContainer } from "react-router-bootstrap";
+import Head from "../../components/Head";
 
 function Chords() {
     return (
         <>
-            <Helmet>
-                <title>Chords - Musical Sight</title>
-            </Helmet>
+            <Head title="Chords" />
 
             <Card className="text-center">
                 <Card.Body>

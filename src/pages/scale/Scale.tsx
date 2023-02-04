@@ -8,11 +8,11 @@ import Card from "react-bootstrap/Card";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Table from "react-bootstrap/Table";
-import { Helmet } from "react-helmet";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import { titleCase } from "title-case";
 import * as Tone from "tone";
+import Head from "../../components/Head";
 import PlaybackService from "../../services/PlaybackService";
 import {
     isNoteLink,
@@ -157,7 +157,7 @@ function ScaleComponent() {
                                                 TonalChord.getChord(chord).name
                                             ) +
                                             "/" +
-                                            currentNote
+                                            mapNoteToLink(currentNote)
                                         }
                                     >
                                         {titleCase(
@@ -222,12 +222,7 @@ function ScaleComponent() {
 
     return (
         <>
-            <Helmet>
-                <title>
-                    {mapNoteToName(currentNote) + " " + toString()} - Musical
-                    Sight
-                </title>
-            </Helmet>
+            <Head title={mapNoteToName(currentNote) + " " + toString()} />
             <h3>{toString()}</h3>
             Select the current scale:
             <DropdownButton
