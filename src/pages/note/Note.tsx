@@ -5,7 +5,7 @@ import PlaybackService from "../../services/PlaybackService";
 import { isNoteLink, mapLinkToNote } from "../../utilities";
 import NotFound from "../not-found/NotFound";
 
-function NoteComponent() {
+function Note() {
     let playback: PlaybackService = useMemo(() => {
         return new PlaybackService();
     }, []);
@@ -44,4 +44,4 @@ function NoteComponent() {
     );
 }
 
-export const Note = NoteComponent;
+export default Note;

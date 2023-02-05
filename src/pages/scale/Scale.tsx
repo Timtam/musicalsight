@@ -23,7 +23,7 @@ import {
 } from "../../utilities";
 import NotFound from "../not-found/NotFound";
 
-function ScaleComponent() {
+function Scale() {
     let playback: PlaybackService = useMemo(() => {
         return new PlaybackService();
     }, []);
@@ -302,4 +302,4 @@ function ScaleComponent() {
     );
 }
 
-export const Scale = ScaleComponent;
+export default Scale;

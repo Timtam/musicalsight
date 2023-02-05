@@ -18,7 +18,7 @@ import {
 } from "../../utilities";
 import NotFound from "../not-found/NotFound";
 
-function ChordComponent() {
+function Chord() {
     const playback: PlaybackService = useMemo(() => {
         return new PlaybackService();
     }, []);
@@ -180,4 +180,4 @@ function ChordComponent() {
     );
 }
 
-export const Chord = ChordComponent;
+export default Chord;
