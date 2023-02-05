@@ -170,7 +170,7 @@ function ScaleComponent() {
                                 </td>
                                 <td>
                                     <Button
-                                        onClick={async () => {
+                                        onClick={() => {
                                             playback.playChord(
                                                 TonalChord.getChord(
                                                     chord,
@@ -185,7 +185,7 @@ function ScaleComponent() {
                                 </td>
                                 <td>
                                     <Button
-                                        onClick={async () => {
+                                        onClick={() => {
                                             playback.playChord(
                                                 TonalChord.getChord(
                                                     chord,
@@ -200,7 +200,7 @@ function ScaleComponent() {
                                 </td>
                                 <td>
                                     <Button
-                                        onClick={async () => {
+                                        onClick={() => {
                                             playback.playChord(
                                                 TonalChord.getChord(
                                                     chord,

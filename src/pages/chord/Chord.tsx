@@ -137,8 +137,8 @@ function ChordComponent() {
                         ))}
                     </Card.Text>
                     <Card.Link
-                        onClick={async () => {
-                            await playback.playChord(
+                        onClick={() => {
+                            playback.playChord(
                                 TonalChord.getChord(
                                     unescape(chord!),
                                     currentNote + "4"
@@ -150,8 +150,8 @@ function ChordComponent() {
                         Listen to the slowly arpeggiated chord
                     </Card.Link>
                     <Card.Link
-                        onClick={async () => {
-                            await playback.playChord(
+                        onClick={() => {
+                            playback.playChord(
                                 TonalChord.getChord(
                                     unescape(chord!),
                                     currentNote + "4"
@@ -163,8 +163,8 @@ function ChordComponent() {
                         Listen to the quickly arpeggiated chord
                     </Card.Link>
                     <Card.Link
-                        onClick={async () => {
-                            await playback.playChord(
+                        onClick={() => {
+                            playback.playChord(
                                 TonalChord.getChord(
                                     unescape(chord!),
                                     currentNote + "4"

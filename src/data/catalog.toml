@@ -1,0 +1,7 @@
+[audio-imperia]
+name = "Audio Imperia"
+url = "https://www.audioimperia.com/"
+
+[audio-imperia.instruments.areia]
+name = "Areia"
+nks = true
