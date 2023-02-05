@@ -1,5 +1,5 @@
 import { Expose, plainToClass, Transform } from "class-transformer";
-import Instrument from "./Instrument";
+import Product from "./Product";
 
 export default class Vendor {
     @Expose()
@@ -15,7 +15,7 @@ export default class Vendor {
             for (const [k, v] of Object.entries(value)) {
                 m.set(
                     k,
-                    plainToClass(Instrument, v, {
+                    plainToClass(Product, v, {
                         excludeExtraneousValues: true,
                         exposeDefaultValues: true,
                     })
@@ -27,5 +27,5 @@ export default class Vendor {
             toClassOnly: true,
         }
     )
-    instruments: Map<string, Instrument>;
+    products: Map<string, Product>;
 }

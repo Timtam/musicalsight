@@ -9,7 +9,7 @@ function Catalog() {
 
     return (
         <>
-            <Head title="Virtual Instrument Catalog" />
+            <Head title="Audio Plugin And Instrument Accessibility Catalog" />
             <p>Catalog is coming soon</p>
         </>
     );

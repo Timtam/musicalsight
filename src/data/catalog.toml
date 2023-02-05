@@ -1,7 +1,9 @@
-[audio-imperia]
-name = "Audio Imperia"
-url = "https://www.audioimperia.com/"
+[8dio]
+name = "8Dio"
+url = "https://8dio.com/"
 
-[audio-imperia.instruments.areia]
-name = "Areia"
-nks = true
+[8dio.products.1990-studio-grand-piano]
+name = "1990 Studio Grand Piano"
+type = "kontakt"
+url = "https://8dio.com/products/1990-studio-grand-piano?variant=41309889265864"
+size = 17300
