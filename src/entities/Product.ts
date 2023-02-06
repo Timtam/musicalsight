@@ -40,5 +40,8 @@ export default class Product {
     size: Number;
 
     @Expose()
-    url: string;
+    url: string = "";
+
+    @Expose()
+    demo: string = "";
 }
