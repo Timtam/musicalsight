@@ -44,4 +44,7 @@ export default class Product {
 
     @Expose()
     demo: string = "";
+
+    @Expose()
+    description: string = "";
 }

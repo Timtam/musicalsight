@@ -1,4 +1,4 @@
-// just a comment
+// comment
 import { plainToClass } from "class-transformer";
 import raw from "raw.macro";
 import toml from "toml";
@@ -53,6 +53,10 @@ class CatalogService {
 
     getProductById(id: string): Product | undefined {
         return this.products.find((p) => p.id === id);
+    }
+
+    getProductsByVendor(id: string): Product[] {
+        return this.products.filter((p) => p.vendor.id === id);
     }
 }
 

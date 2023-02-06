@@ -4,7 +4,214 @@ url = "https://8dio.com/"
 
 [8dio.products.1990-studio-grand-piano]
 name = "1990 Studio Grand Piano"
-type = "kontakt"
+type = "kontakt5"
 url = "https://8dio.com/products/1990-studio-grand-piano?variant=41309889265864"
 size = 17300
 demo = "https://soundcloud.com/8dawn/8dio-1990-studio-grand-piano"
+
+[8dio.products.adagio-violins1]
+name = "Adagio Violins Vol. 1"
+type = "kontakt5"
+url = "https://8dio.com/products/adagio-violins?variant=41309928784072"
+size = 15800
+demo = "https://soundcloud.com/8dawn/adagio-tech-demo-e-t-legato?in=8dawn/sets/adagio-violins-vol-1"
+
+[8dio.products.aura-guitars]
+name = "Aura Guitars"
+type = "kontakt5"
+url = "https://8dio.com/products/aura-guitars-for-kontakt-vst-au-aax?variant=41309882613960"
+size = 8330
+demo = "https://soundcloud.com/8dawn/8dio-aura-guitars-the-nexus-by"
+
+[8dio.products.aura-studio-exotic-percussion1]
+name = "Aura Studio Exotic Percussion Vol. 1"
+type = "kontakt5"
+url = "https://8dio.com/products/aura-tonal-exotic-studio-percussion?variant=41309972988104"
+size = 7530
+demo = "https://www.youtube.com/watch?v=Bth8cgHUOls"
+
+[8dio.products.soul-series-christopher-young]
+name = "Soul Series - Christopher Young"
+type = "kontakt5"
+url = "https://8dio.com/products/young-the-collection?variant=41310017945800"
+size = 20100
+demo = "https://soundcloud.com/8dawn/soul-series-christopher-young-the-collection-6-by-troels-folmann"
+
+[8dio.products.claire-alto-flute-virtuoso]
+name = "Claire - Alto Flute Virtuoso"
+size = 6430
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=XuPmKYOIT7k"
+url = "https://8dio.com/products/alto-flute-virtuoso?variant=41309911122120"
+
+[8dio.products.claire-bassoon-virtuoso]
+name = "Claire - Bassoon Virtuoso"
+size = 5010
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=fh1z7CbP03M"
+url = "https://8dio.com/products/bassoon-virtuoso"
+
+[8dio.products.claire-clarinet-virtuoso]
+name = "Claire - Clarinet Virtuoso"
+size = 5660
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=bmoBSsUQD0M"
+url = "https://8dio.com/products/clarinet-virtouso"
+
+[8dio.products.claire-flute-virtuoso]
+name = "Claire - Flute Virtuoso"
+size = 4890
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=uP37J3YC19M"
+url = "https://8dio.com/products/flute-virtuoso"
+
+[8dio.products.claire-oboe-virtuoso]
+name = "Claire - Oboe Virtuoso"
+size = 4540
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=FaBM25kTbvk"
+url = "https://8dio.com/products/oboe-virtuoso"
+
+[8dio.products.curio]
+name = "Curio"
+size = 1040
+type = "kontakt6"
+demo = "https://www.youtube.com/watch?v=iU9d9uK-4Cg"
+
+[8dio.products.dobro-solo]
+name = "Dobro Solo"
+size = 2100
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=7dCdB4cv9zw"
+
+[8dio.products.edm-drumstep1]
+name = "EDM Drumstep Vol. 1"
+size = 2060
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=evN5MVjl3AU"
+
+[8dio.products.edm-trap]
+name = "EDM Trap"
+size = 3460
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=c6XRMrL9xXA"
+
+[8dio.products.epic-toms-ensemble]
+name = "Epic Toms Ensemble"
+size = 1440
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=CBX2qnSm1Lo"
+
+[8dio.products.forgotten-voices-terrie]
+name = "Forgotten Voices - Terrie"
+size = 2100
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=sx_GaKw7664"
+
+[8dio.products.hybrid-tools-dark-prophecy]
+name = "Hybrid Tools Dark Prophecy"
+size = 16200
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/sets/8dio-hybrid-tools-dark-prophecy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+
+[8dio.products.hybrid-tools-terminus]
+name = "Hybrid Tools Terminus"
+size = 4270
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=ogFCVQNo-MU"
+
+[8dio.products.insolidus-choir]
+name = "Insolidus Choir"
+size = 37300
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=k7P9aN_ujgA"
+
+[8dio.products.intimate-studio-woodwinds]
+name = "Intimate Studio Woodwinds"
+size = 10300
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/8dio-intimate-studio-woodwinds-library-of-dreams-lionel-schmitt"
+
+[8dio.products.lacrimosa-epic-choir]
+name = "Lacrimosa Epic Choir"
+size = 17500
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/8dio-lacrimosa-epic-choir-2?in=8dawn/sets/8dio-lacrimosa-epic-choir-200-singers"
+
+[8dio.products.legion-series-33-drummers-batucada]
+name = "Legion Series 33 Drummers Batucada"
+size = 2690
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/8dio-batucada-lions-den-by-robin-hall"
+
+[8dio.products.liberis-angelic-choir]
+name = "Liberis Angelic Choir"
+size = 11900
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/8dio-liberis-angelic-choir-the-divine-and-the-devilish-by-robin-hall?in=8dawn/sets/8dio-liberis-2-0-angelic-choir"
+
+[8dio.products.majestica]
+name = "Majestica"
+size = 23500
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/sets/majestica"
+
+[8dio.products.ostinato-strings-chapter-2]
+name = "Ostinato Strings Chapter 2"
+size = 7560
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/sets/8dio-ostinato-strings-chapter-2"
+
+[8dio.products.productions-requiem-professional]
+name = "Professionals Requiem Professional"
+size = 16400
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/sets/requiem-pro"
+
+[8dio.products.rhythmic-revolution]
+name = "Rhythmic Revolution"
+size = 6620
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=hN9h-ftfqFY"
+
+[8dio.products.santur]
+name = "Santur"
+size = 4420
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/sets/8dio-santur"
+
+[8dio.products.silka-choir]
+name = "Silka Choir"
+size = 13400
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/8dio-silka-choir-teaser-3-by-troels-folmann"
+
+[8dio.products.solo-studio-violin]
+name = "Solo Studio Violin"
+size = 4230
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/8dio-studio-solo-violin"
+
+[8dio.products.studio-vintage-organ]
+name = "Studio Vintage Organ"
+size = 14200
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/sets/8dio-studio-hammond-vintage-organ"
+
+[8dio.products.symphonic-shadows]
+name = "Symphonic Shadows"
+size = 4210
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/sets/8dio-symphonic-shadows"
+
+[8dio.products.the-new-ambient-guitar]
+name = "The New Ambient Guitar"
+size = 2660
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/sets/ambient-guitar"
+
+[8dio.products.the-new-epic-dhol-ensemble]
+name = "The New Epic Dhol Ensemble"
+size = 1100
+type = "kontakt5"
+demo = "https://soundcloud.com/8dawn/sets/epic-dhol-ensemble"

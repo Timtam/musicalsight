@@ -1,7 +1,9 @@
 enum ProductType {
     VSTI,
     FX,
-    KONTAKT,
+    KONTAKT5,
+    KONTAKT6,
+    KONTAKT7,
     UNKNOWN,
 }
 
