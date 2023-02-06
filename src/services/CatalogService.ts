@@ -1,30 +1,57 @@
 import { plainToClass } from "class-transformer";
 import raw from "raw.macro";
 import toml from "toml";
+import Product from "../entities/Product";
+import ProductFilter from "../entities/ProductFilter";
 import Vendor from "../entities/Vendor";
 
 class CatalogService {
-    catalog: Map<string, Vendor>;
+    vendors: Vendor[];
+    products: Product[];
 
     constructor() {
-        this.catalog = new Map();
+        this.vendors = [];
+        this.products = [];
         let data = toml.parse(raw("../data/catalog.toml"));
 
         for (const [key, value] of Object.entries(data)) {
-            this.catalog.set(
-                key,
-                plainToClass(Vendor, value, {
-                    excludeExtraneousValues: true,
-                    exposeDefaultValues: true,
-                })
-            );
-        }
+            let vendor = plainToClass(Vendor, value, {
+                excludeExtraneousValues: true,
+                exposeDefaultValues: true,
+            });
 
-        console.log(this.catalog);
+            vendor.id = key;
+
+            if (typeof (value as any).products === "object") {
+                for (const [k, v] of Object.entries((value as any).products)) {
+                    let p = plainToClass(Product, v, {
+                        excludeExtraneousValues: true,
+                        exposeDefaultValues: true,
+                    });
+
+                    p.vendor = vendor;
+                    p.id = `${vendor.id}-${k}`;
+
+                    this.products.push(p);
+                }
+            }
+
+            this.vendors.push(vendor);
+        }
     }
 
-    getAllVendors(): string[] {
-        return Array.from(this.catalog.values()).map((v) => v.name);
+    getProducts(filter: ProductFilter): Product[] {
+        return this.products.filter((p) =>
+            this.filterMatchesProduct(p, filter)
+        );
+    }
+
+    filterMatchesProduct(p: Product, f: ProductFilter): boolean {
+        return true;
+    }
+
+    getProductById(id: string): Product | undefined {
+        return this.products.find((p) => p.id === id);
     }
 }
 

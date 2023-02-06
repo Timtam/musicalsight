@@ -1,7 +1,11 @@
 import { Expose, Transform } from "class-transformer";
 import ProductType from "./ProductType";
+import Vendor from "./Vendor";
 
 export default class Product {
+    id: string;
+    vendor: Vendor;
+
     @Expose()
     name: string;
 
@@ -24,6 +28,15 @@ export default class Product {
     type: ProductType;
 
     @Expose()
+    @Transform(
+        ({ value }) => {
+            if (value !== undefined) return value * 1024 * 1024;
+            return value;
+        },
+        {
+            toClassOnly: true,
+        }
+    )
     size: Number;
 
     @Expose()
