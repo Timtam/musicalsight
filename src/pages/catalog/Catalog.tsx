@@ -2,10 +2,11 @@ import { useEffect, useMemo, useState } from "react";
 import Head from "../../components/Head";
 import Product from "../../entities/Product";
 import CatalogService from "../../services/CatalogService";
-import { useAppSelector } from "../../state/hooks";
+import { useAppDispatch, useAppSelector } from "../../state/hooks";
 import DemoPlayer from "./DemoPlayer";
 import Pagination from "./Pagination";
 import ProductCard from "./ProductCard";
+import Search from "./Search";
 
 const RESULTS_PER_PAGE: number = 20;
 
@@ -14,6 +15,7 @@ function Catalog() {
         return new CatalogService();
     }, []);
     let filter = useAppSelector((state) => state.catalogFilter);
+    let dispatch = useAppDispatch();
     let [demoUrl, setDemoUrl] = useState("");
     let [startIndex, setStartIndex] = useState(0);
     let [products, setProducts] = useState([] as Product[]);
@@ -26,14 +28,24 @@ function Catalog() {
         <>
             <Head title="Audio Plugin And Instrument Accessibility Catalog" />
             <h3>Audio Plugin And Instrument Accessibility Catalog</h3>
-            <h3>
-                Results {(startIndex + 1).toString()} to{" "}
-                {Math.min(
-                    startIndex + RESULTS_PER_PAGE,
-                    products.length
-                ).toString()}{" "}
-                out of {products.length.toString()}
-            </h3>
+            <Search
+                filter={filter}
+                setFilter={(filter) =>
+                    dispatch({ type: "filter/update", payload: filter })
+                }
+            />
+            {products.length > 0 ? (
+                <h3>
+                    Results {(startIndex + 1).toString()} to{" "}
+                    {Math.min(
+                        startIndex + RESULTS_PER_PAGE,
+                        products.length
+                    ).toString()}{" "}
+                    out of {products.length.toString()}
+                </h3>
+            ) : (
+                <h3>No results!</h3>
+            )}
             <DemoPlayer url={demoUrl} onClose={() => setDemoUrl("")} />
             {products
                 .filter((p, idx) => {
@@ -57,13 +69,17 @@ function Catalog() {
                         />
                     );
                 })}
-            <Pagination
-                pages={Math.floor(products.length / RESULTS_PER_PAGE) + 1}
-                currentPage={startIndex / RESULTS_PER_PAGE + 1}
-                setPage={(page: number) =>
-                    setStartIndex(page * RESULTS_PER_PAGE)
-                }
-            />
+            {products.length > RESULTS_PER_PAGE ? (
+                <Pagination
+                    pages={Math.floor(products.length / RESULTS_PER_PAGE) + 1}
+                    currentPage={startIndex / RESULTS_PER_PAGE + 1}
+                    setPage={(page: number) =>
+                        setStartIndex(page * RESULTS_PER_PAGE)
+                    }
+                />
+            ) : (
+                ""
+            )}
         </>
     );
 }

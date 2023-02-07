@@ -1,9 +1,9 @@
-// comment
 import { plainToClass } from "class-transformer";
+import Fuse from "fuse.js";
 import raw from "raw.macro";
 import toml from "toml";
 import Product from "../entities/Product";
-import ProductFilter from "../entities/ProductFilter";
+import { ProductFilter } from "../entities/ProductFilter";
 import Vendor from "../entities/Vendor";
 
 class CatalogService {
@@ -42,9 +42,21 @@ class CatalogService {
     }
 
     getProducts(filter: ProductFilter): Product[] {
-        return this.products.filter((p) =>
-            this.filterMatchesProduct(p, filter)
-        );
+        let products: Product[];
+
+        if (filter.searchQuery !== "") {
+            let fs = new Fuse(this.products, {
+                includeScore: true,
+                keys: ["name"],
+            });
+
+            products = fs
+                .search(filter.searchQuery)
+                .filter((r) => r.score! <= 0.5)
+                .map((r) => r.item);
+        } else products = this.products;
+
+        return products.filter((p) => this.filterMatchesProduct(p, filter));
     }
 
     filterMatchesProduct(p: Product, f: ProductFilter): boolean {

@@ -1,13 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import ProductFilter from "../entities/ProductFilter";
+import { createProductFilter } from "../entities/ProductFilter";
 
 let initialState = {
-    catalogFilter: new ProductFilter(),
+    catalogFilter: createProductFilter(),
 };
 
 export const store = configureStore({
     reducer: (state, action) => {
         switch (action.type) {
+            case "filter/update":
+                return { ...state, catalogFilter: action.payload };
             default:
                 return state;
         }
