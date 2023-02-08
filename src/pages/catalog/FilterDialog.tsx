@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import natsort from "natsort"
+import { useEffect, useMemo, useState } from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Modal from "react-bootstrap/Modal"
@@ -16,6 +17,7 @@ function FilterDialog({
     onApply: (filter: ProductFilter) => void
     onClose: () => void
 }) {
+    let sorter = useMemo(() => natsort(), [])
     let [show, setShow] = useState(false)
     let [vendors, setVendors] = useState([] as string[])
 
@@ -39,41 +41,50 @@ function FilterDialog({
             <Modal.Body>
                 {show ? (
                     <Form>
+                        <h4>Vendors</h4>
                         <Form.Group controlId="formVendors">
-                            {catalog.getVendors().map((v) => (
-                                <Form.Check
-                                    id={"form-vendor-" + v.id}
-                                    type="checkbox"
-                                    label={`${v.name} (${
-                                        catalog.getProductsByVendor(v.id).length
-                                    })`}
-                                    checked={
-                                        vendors.find((vs) => vs === v.id) !==
-                                        undefined
-                                    }
-                                    onChange={(evt) => {
-                                        if (evt.target.checked === true) {
-                                            if (
-                                                vendors.find(
-                                                    (vs) => vs === v.id
-                                                ) === undefined
-                                            )
-                                                setVendors([...vendors, v.id])
-                                        } else {
-                                            if (
-                                                vendors.find(
-                                                    (vs) => vs === v.id
-                                                ) !== undefined
-                                            )
-                                                setVendors(
-                                                    vendors.filter(
-                                                        (vs) => vs !== v.id
-                                                    )
-                                                )
+                            {catalog
+                                .getVendors()
+                                .sort((a, b) => sorter(a.name, b.name))
+                                .map((v) => (
+                                    <Form.Check
+                                        id={"form-vendor-" + v.id}
+                                        type="checkbox"
+                                        label={`${v.name} (${
+                                            catalog.getProductsByVendor(v.id)
+                                                .length
+                                        })`}
+                                        checked={
+                                            vendors.find(
+                                                (vs) => vs === v.id
+                                            ) !== undefined
                                         }
-                                    }}
-                                />
-                            ))}
+                                        onChange={(evt) => {
+                                            if (evt.target.checked === true) {
+                                                if (
+                                                    vendors.find(
+                                                        (vs) => vs === v.id
+                                                    ) === undefined
+                                                )
+                                                    setVendors([
+                                                        ...vendors,
+                                                        v.id,
+                                                    ])
+                                            } else {
+                                                if (
+                                                    vendors.find(
+                                                        (vs) => vs === v.id
+                                                    ) !== undefined
+                                                )
+                                                    setVendors(
+                                                        vendors.filter(
+                                                            (vs) => vs !== v.id
+                                                        )
+                                                    )
+                                            }
+                                        }}
+                                    />
+                                ))}
                         </Form.Group>
                     </Form>
                 ) : (

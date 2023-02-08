@@ -80,7 +80,7 @@ class CatalogService {
     }
 
     getVendors(): Vendor[] {
-        return this.vendors
+        return [...this.vendors]
     }
 }
 
