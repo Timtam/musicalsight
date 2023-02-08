@@ -44,7 +44,9 @@ function FilterDialog({
                                 <Form.Check
                                     id={"form-vendor-" + v.id}
                                     type="checkbox"
-                                    label={v.name}
+                                    label={`${v.name} (${
+                                        catalog.getProductsByVendor(v.id).length
+                                    })`}
                                     checked={
                                         vendors.find((vs) => vs === v.id) !==
                                         undefined
