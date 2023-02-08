@@ -1,3 +1,4 @@
+import natsort from "natsort"
 import { useEffect, useMemo, useState } from "react"
 import Head from "../../components/Head"
 import Product from "../../entities/Product"
@@ -14,6 +15,7 @@ function Catalog() {
     let catalog = useMemo(() => {
         return new CatalogService()
     }, [])
+    let sorter = useMemo(() => natsort(), [])
     let filter = useAppSelector((state) => state.catalogFilter)
     let dispatch = useAppDispatch()
     let [demoUrl, setDemoUrl] = useState("")
@@ -48,7 +50,8 @@ function Catalog() {
                 <h3>No results!</h3>
             )}
             <DemoPlayer url={demoUrl} onClose={() => setDemoUrl("")} />
-            {products
+            {[...products]
+                .sort((a, b) => sorter(a.name, b.name))
                 .filter((p, idx) => {
                     return (
                         idx >= startIndex &&

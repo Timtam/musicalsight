@@ -21,6 +21,7 @@
         "class-transformer": "^0.5.1",
         "filesize": "^10.0.6",
         "fuse.js": "^6.6.2",
+        "natsort": "^2.0.3",
         "ordinal": "^1.0.3",
         "prettier": "^2.7.1",
         "prettier-plugin-organize-imports": "^3.1.1",
