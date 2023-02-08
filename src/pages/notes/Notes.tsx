@@ -1,8 +1,8 @@
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import { LinkContainer } from "react-router-bootstrap";
-import Head from "../../components/Head";
-import { mapNoteToLink, mapNoteToName } from "../../utilities";
+import Card from "react-bootstrap/Card"
+import ListGroup from "react-bootstrap/ListGroup"
+import { LinkContainer } from "react-router-bootstrap"
+import Head from "../../components/Head"
+import { mapNoteToLink, mapNoteToName } from "../../utilities"
 
 function Notes() {
     return (
@@ -58,7 +58,7 @@ function Notes() {
                 ))}
             </ListGroup>
         </>
-    );
+    )
 }
 
-export default Notes;
+export default Notes

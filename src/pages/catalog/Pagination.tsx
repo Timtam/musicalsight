@@ -1,13 +1,13 @@
-import Pagination from "react-bootstrap/Pagination";
+import Pagination from "react-bootstrap/Pagination"
 
 function PaginationComponent({
     pages,
     currentPage,
     setPage,
 }: {
-    pages: number;
-    currentPage: number;
-    setPage: (page: number) => void;
+    pages: number
+    currentPage: number
+    setPage: (page: number) => void
 }) {
     return (
         <Pagination>
@@ -20,7 +20,7 @@ function PaginationComponent({
                 </Pagination.Item>
             ))}
         </Pagination>
-    );
+    )
 }
 
-export default PaginationComponent;
+export default PaginationComponent

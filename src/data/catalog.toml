@@ -215,3 +215,13 @@ name = "The New Epic Dhol Ensemble"
 size = 1100
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/epic-dhol-ensemble"
+
+[aaron-venture]
+name = "Aaron Venture"
+url = "https://www.aaronventure.com/"
+
+[aaron-venture.products.infinite-brass]
+name = "Infinite Brass"
+size = 14000
+type = "kontakt5"
+demo = "https://www.youtube.com/watch?v=p-rlPo8hdhM"

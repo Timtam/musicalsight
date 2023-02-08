@@ -1,5 +1,5 @@
-import Card from "react-bootstrap/Card";
-import Head from "../../components/Head";
+import Card from "react-bootstrap/Card"
+import Head from "../../components/Head"
 
 function Home() {
     return (
@@ -28,7 +28,7 @@ function Home() {
                 </Card.Body>
             </Card>
         </>
-    );
+    )
 }
 
-export default Home;
+export default Home

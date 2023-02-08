@@ -1,4 +1,4 @@
-import Navigation from "./components/Navigation";
+import Navigation from "./components/Navigation"
 
 function App() {
     return (
@@ -6,7 +6,7 @@ function App() {
             <h1>Musical Sight</h1>
             <Navigation></Navigation>
         </>
-    );
+    )
 }
 
-export default App;
+export default App

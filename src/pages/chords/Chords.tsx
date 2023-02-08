@@ -1,8 +1,8 @@
-import ChordType from "@tonaljs/chord-type";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import { LinkContainer } from "react-router-bootstrap";
-import Head from "../../components/Head";
+import ChordType from "@tonaljs/chord-type"
+import Card from "react-bootstrap/Card"
+import ListGroup from "react-bootstrap/ListGroup"
+import { LinkContainer } from "react-router-bootstrap"
+import Head from "../../components/Head"
 
 function Chords() {
     return (
@@ -32,7 +32,7 @@ function Chords() {
                     ))}
             </ListGroup>
         </>
-    );
+    )
 }
 
-export default Chords;
+export default Chords

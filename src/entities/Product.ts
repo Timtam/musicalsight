@@ -1,50 +1,49 @@
-import { Expose, Transform } from "class-transformer";
-import ProductType from "./ProductType";
-import Vendor from "./Vendor";
+import { Expose, Transform } from "class-transformer"
+import ProductType from "./ProductType"
+import Vendor from "./Vendor"
 
 export default class Product {
-    id: string;
-    vendor: Vendor;
+    id: string
+    vendor: Vendor
 
     @Expose()
-    name: string;
+    name: string
 
     @Expose()
-    nks: boolean = false;
+    nks: boolean = false
 
     @Expose()
     @Transform(
         ({ value }) => {
-            let e =
-                ProductType[value.toUpperCase() as keyof typeof ProductType];
+            let e = ProductType[value.toUpperCase() as keyof typeof ProductType]
 
-            if (e === undefined) return ProductType.UNKNOWN;
-            return e;
+            if (e === undefined) return ProductType.UNKNOWN
+            return e
         },
         {
             toClassOnly: true,
         }
     )
-    type: ProductType;
+    type: ProductType
 
     @Expose()
     @Transform(
         ({ value }) => {
-            if (value !== undefined) return value * 1024 * 1024;
-            return value;
+            if (value !== undefined) return value * 1024 * 1024
+            return value
         },
         {
             toClassOnly: true,
         }
     )
-    size: Number;
+    size: Number
 
     @Expose()
-    url: string = "";
+    url: string = ""
 
     @Expose()
-    demo: string = "";
+    demo: string = ""
 
     @Expose()
-    description: string = "";
+    description: string = ""
 }

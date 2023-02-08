@@ -7,4 +7,4 @@ enum ProductType {
     UNKNOWN,
 }
 
-export default ProductType;
+export default ProductType

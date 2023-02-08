@@ -1,11 +1,11 @@
-import { Expose } from "class-transformer";
+import { Expose } from "class-transformer"
 
 export default class Vendor {
-    id: string;
+    id: string
 
     @Expose()
-    name: string;
+    name: string
 
     @Expose()
-    url: string;
+    url: string
 }

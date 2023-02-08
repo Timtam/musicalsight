@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
-import Modal from "react-bootstrap/Modal";
-import ReactPlayer from "react-player";
+import { useEffect, useState } from "react"
+import Modal from "react-bootstrap/Modal"
+import ReactPlayer from "react-player"
 
 function DemoPlayer({ url, onClose }: { url: string; onClose: () => void }) {
-    let [show, setShow] = useState(false);
+    let [show, setShow] = useState(false)
 
-    useEffect(() => setShow(url !== ""), [url]);
+    useEffect(() => setShow(url !== ""), [url])
 
     return (
         <Modal
             show={show}
             onHide={() => {
-                url = "";
-                setShow(false);
-                onClose();
+                url = ""
+                setShow(false)
+                onClose()
             }}
         >
             <Modal.Header closeButton>
@@ -31,7 +31,7 @@ function DemoPlayer({ url, onClose }: { url: string; onClose: () => void }) {
                 )}
             </Modal.Body>
         </Modal>
-    );
+    )
 }
 
-export default DemoPlayer;
+export default DemoPlayer

@@ -2,11 +2,15 @@
 // redux can only store objects, classes aren't serializable
 
 export interface ProductFilter {
-    searchQuery: string;
+    searchQuery: string
+    enabled: boolean
+    vendors: string[]
 }
 
 export const createProductFilter = (): ProductFilter => {
     return {
         searchQuery: "",
-    };
-};
+        enabled: false,
+        vendors: [],
+    }
+}

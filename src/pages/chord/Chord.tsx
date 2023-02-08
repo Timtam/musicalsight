@@ -1,50 +1,50 @@
-import TonalChord from "@tonaljs/chord";
-import TonalChordType from "@tonaljs/chord-type";
-import TonalNote from "@tonaljs/note";
-import { useEffect, useMemo, useState } from "react";
-import Card from "react-bootstrap/Card";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import { LinkContainer } from "react-router-bootstrap";
-import { Link, useParams } from "react-router-dom";
-import { titleCase } from "title-case";
-import Head from "../../components/Head";
-import PlaybackService from "../../services/PlaybackService";
+import TonalChord from "@tonaljs/chord"
+import TonalChordType from "@tonaljs/chord-type"
+import TonalNote from "@tonaljs/note"
+import { useEffect, useMemo, useState } from "react"
+import Card from "react-bootstrap/Card"
+import Dropdown from "react-bootstrap/Dropdown"
+import DropdownButton from "react-bootstrap/DropdownButton"
+import { LinkContainer } from "react-router-bootstrap"
+import { Link, useParams } from "react-router-dom"
+import { titleCase } from "title-case"
+import Head from "../../components/Head"
+import PlaybackService from "../../services/PlaybackService"
 import {
     isNoteLink,
     mapLinkToNote,
     mapNoteToLink,
     mapNoteToName,
-} from "../../utilities";
-import NotFound from "../not-found/NotFound";
+} from "../../utilities"
+import NotFound from "../not-found/NotFound"
 
 function Chord() {
     const playback: PlaybackService = useMemo(() => {
-        return new PlaybackService();
-    }, []);
+        return new PlaybackService()
+    }, [])
 
     let { note, chord } = useParams<{
-        note: string;
-        chord: string;
-    }>();
+        note: string
+        chord: string
+    }>()
 
-    if (note === undefined) note = "c";
+    if (note === undefined) note = "c"
 
-    let [currentNote, setCurrentNote] = useState(note);
+    let [currentNote, setCurrentNote] = useState(note)
     useEffect(() => {
-        (async () => {
-            await playback.initialize();
-        })();
-    }, [playback]);
+        ;(async () => {
+            await playback.initialize()
+        })()
+    }, [playback])
 
     if (
         chord === undefined ||
         !TonalChordType.names().includes(chord) ||
         !isNoteLink(note)
     )
-        return <NotFound />;
+        return <NotFound />
 
-    note = mapLinkToNote(note);
+    note = mapLinkToNote(note)
 
     return (
         <>
@@ -144,7 +144,7 @@ function Chord() {
                                     currentNote + "4"
                                 ).notes,
                                 "4n"
-                            );
+                            )
                         }}
                     >
                         Listen to the slowly arpeggiated chord
@@ -157,7 +157,7 @@ function Chord() {
                                     currentNote + "4"
                                 ).notes,
                                 "32n"
-                            );
+                            )
                         }}
                     >
                         Listen to the quickly arpeggiated chord
@@ -169,7 +169,7 @@ function Chord() {
                                     unescape(chord!),
                                     currentNote + "4"
                                 ).notes
-                            );
+                            )
                         }}
                     >
                         Listen to the full chord
@@ -177,7 +177,7 @@ function Chord() {
                 </Card.Body>
             </Card>
         </>
-    );
+    )
 }
 
-export default Chord;
+export default Chord

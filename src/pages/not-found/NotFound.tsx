@@ -1,4 +1,4 @@
-import Head from "../../components/Head";
+import Head from "../../components/Head"
 
 function NotFound() {
     return (
@@ -6,7 +6,7 @@ function NotFound() {
             <Head title="Page Not Found" />
             <p>The page you're looking for cannot be found.</p>
         </>
-    );
+    )
 }
 
-export default NotFound;
+export default NotFound

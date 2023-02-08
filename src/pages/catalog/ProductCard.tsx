@@ -1,22 +1,22 @@
-import { filesize } from "filesize";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import { Link } from "react-router-dom";
-import CatalogService from "../../services/CatalogService";
+import { filesize } from "filesize"
+import Button from "react-bootstrap/Button"
+import Card from "react-bootstrap/Card"
+import ListGroup from "react-bootstrap/ListGroup"
+import { Link } from "react-router-dom"
+import CatalogService from "../../services/CatalogService"
 
 function ProductCard({
     catalog,
     id,
     playDemo,
 }: {
-    catalog: CatalogService;
-    id: string;
-    playDemo: (url: string) => void;
+    catalog: CatalogService
+    id: string
+    playDemo: (url: string) => void
 }) {
-    let product = catalog.getProductById(id);
+    let product = catalog.getProductById(id)
 
-    if (product === undefined) return <p>Product not found!</p>;
+    if (product === undefined) return <p>Product not found!</p>
 
     return (
         <>
@@ -55,7 +55,7 @@ function ProductCard({
                 </ListGroup>
             </Card>
         </>
-    );
+    )
 }
 
-export default ProductCard;
+export default ProductCard

@@ -1,9 +1,9 @@
-import ScaleType from "@tonaljs/scale-type";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import { LinkContainer } from "react-router-bootstrap";
-import { Link } from "react-router-dom";
-import Head from "../../components/Head";
+import ScaleType from "@tonaljs/scale-type"
+import Card from "react-bootstrap/Card"
+import ListGroup from "react-bootstrap/ListGroup"
+import { LinkContainer } from "react-router-bootstrap"
+import { Link } from "react-router-dom"
+import Head from "../../components/Head"
 
 function Scales() {
     return (
@@ -46,7 +46,7 @@ function Scales() {
                     ))}
             </ListGroup>
         </>
-    );
+    )
 }
 
-export default Scales;
+export default Scales

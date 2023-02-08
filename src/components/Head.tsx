@@ -1,7 +1,7 @@
-import Helmet from "react-helmet";
+import Helmet from "react-helmet"
 
 interface HeadProps {
-    title: string;
+    title: string
 }
 
 function Head({ title }: HeadProps) {
@@ -9,7 +9,7 @@ function Head({ title }: HeadProps) {
         <Helmet>
             <title>{title} - Musical Sight</title>
         </Helmet>
-    );
+    )
 }
 
-export default Head;
+export default Head

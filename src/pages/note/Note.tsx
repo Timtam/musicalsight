@@ -1,31 +1,31 @@
-import { useEffect, useMemo } from "react";
-import { useParams } from "react-router-dom";
-import Head from "../../components/Head";
-import PlaybackService from "../../services/PlaybackService";
-import { isNoteLink, mapLinkToNote } from "../../utilities";
-import NotFound from "../not-found/NotFound";
+import { useEffect, useMemo } from "react"
+import { useParams } from "react-router-dom"
+import Head from "../../components/Head"
+import PlaybackService from "../../services/PlaybackService"
+import { isNoteLink, mapLinkToNote } from "../../utilities"
+import NotFound from "../not-found/NotFound"
 
 function Note() {
     let playback: PlaybackService = useMemo(() => {
-        return new PlaybackService();
-    }, []);
+        return new PlaybackService()
+    }, [])
     let { note } = useParams<{
-        note: string;
-    }>();
+        note: string
+    }>()
 
     useEffect(() => {
-        (async () => {
-            await playback.initialize();
-        })();
-    }, [playback]);
+        ;(async () => {
+            await playback.initialize()
+        })()
+    }, [playback])
 
-    if (note === undefined || !isNoteLink(note)) return <NotFound />;
+    if (note === undefined || !isNoteLink(note)) return <NotFound />
 
-    note = mapLinkToNote(note);
+    note = mapLinkToNote(note)
 
     let toString = () => {
-        return note![0].toUpperCase() + note!.substr(1);
-    };
+        return note![0].toUpperCase() + note!.substr(1)
+    }
 
     return (
         <>
@@ -35,13 +35,13 @@ function Note() {
 
             <button
                 onClick={() => {
-                    playback.playNote(note + "4");
+                    playback.playNote(note + "4")
                 }}
             >
                 Listen now
             </button>
         </>
-    );
+    )
 }
 
-export default Note;
+export default Note

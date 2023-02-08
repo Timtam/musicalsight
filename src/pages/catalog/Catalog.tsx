@@ -1,28 +1,28 @@
-import { useEffect, useMemo, useState } from "react";
-import Head from "../../components/Head";
-import Product from "../../entities/Product";
-import CatalogService from "../../services/CatalogService";
-import { useAppDispatch, useAppSelector } from "../../state/hooks";
-import DemoPlayer from "./DemoPlayer";
-import Pagination from "./Pagination";
-import ProductCard from "./ProductCard";
-import Search from "./Search";
+import { useEffect, useMemo, useState } from "react"
+import Head from "../../components/Head"
+import Product from "../../entities/Product"
+import CatalogService from "../../services/CatalogService"
+import { useAppDispatch, useAppSelector } from "../../state/hooks"
+import DemoPlayer from "./DemoPlayer"
+import Pagination from "./Pagination"
+import ProductCard from "./ProductCard"
+import Search from "./Search"
 
-const RESULTS_PER_PAGE: number = 20;
+const RESULTS_PER_PAGE: number = 20
 
 function Catalog() {
     let catalog = useMemo(() => {
-        return new CatalogService();
-    }, []);
-    let filter = useAppSelector((state) => state.catalogFilter);
-    let dispatch = useAppDispatch();
-    let [demoUrl, setDemoUrl] = useState("");
-    let [startIndex, setStartIndex] = useState(0);
-    let [products, setProducts] = useState([] as Product[]);
+        return new CatalogService()
+    }, [])
+    let filter = useAppSelector((state) => state.catalogFilter)
+    let dispatch = useAppDispatch()
+    let [demoUrl, setDemoUrl] = useState("")
+    let [startIndex, setStartIndex] = useState(0)
+    let [products, setProducts] = useState([] as Product[])
 
     useEffect(() => {
-        setProducts(catalog.getProducts(filter));
-    }, [filter, catalog]);
+        setProducts(catalog.getProducts(filter))
+    }, [filter, catalog])
 
     return (
         <>
@@ -33,6 +33,7 @@ function Catalog() {
                 setFilter={(filter) =>
                     dispatch({ type: "filter/update", payload: filter })
                 }
+                catalog={catalog}
             />
             {products.length > 0 ? (
                 <h3>
@@ -56,7 +57,7 @@ function Catalog() {
                                 startIndex + RESULTS_PER_PAGE,
                                 products.length + 1
                             )
-                    );
+                    )
                 })
                 .map((p) => {
                     return (
@@ -64,10 +65,10 @@ function Catalog() {
                             id={p.id}
                             catalog={catalog}
                             playDemo={(url: string) => {
-                                setDemoUrl(url);
+                                setDemoUrl(url)
                             }}
                         />
-                    );
+                    )
                 })}
             {products.length > RESULTS_PER_PAGE ? (
                 <Pagination
@@ -81,7 +82,7 @@ function Catalog() {
                 ""
             )}
         </>
-    );
+    )
 }
 
-export default Catalog;
+export default Catalog

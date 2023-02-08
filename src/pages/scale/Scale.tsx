@@ -1,62 +1,62 @@
-import TonalChord from "@tonaljs/chord";
-import TonalNote from "@tonaljs/note";
-import TonalScale from "@tonaljs/scale";
-import TonalScaleType from "@tonaljs/scale-type";
-import { useEffect, useMemo, useState } from "react";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Table from "react-bootstrap/Table";
-import { LinkContainer } from "react-router-bootstrap";
-import { Link, useParams } from "react-router-dom";
-import { titleCase } from "title-case";
-import * as Tone from "tone";
-import Head from "../../components/Head";
-import PlaybackService from "../../services/PlaybackService";
+import TonalChord from "@tonaljs/chord"
+import TonalNote from "@tonaljs/note"
+import TonalScale from "@tonaljs/scale"
+import TonalScaleType from "@tonaljs/scale-type"
+import { useEffect, useMemo, useState } from "react"
+import Button from "react-bootstrap/Button"
+import Card from "react-bootstrap/Card"
+import Dropdown from "react-bootstrap/Dropdown"
+import DropdownButton from "react-bootstrap/DropdownButton"
+import Table from "react-bootstrap/Table"
+import { LinkContainer } from "react-router-bootstrap"
+import { Link, useParams } from "react-router-dom"
+import { titleCase } from "title-case"
+import * as Tone from "tone"
+import Head from "../../components/Head"
+import PlaybackService from "../../services/PlaybackService"
 import {
     isNoteLink,
     mapLinkToNote,
     mapNoteToLink,
     mapNoteToName,
     mapToIntervalName,
-} from "../../utilities";
-import NotFound from "../not-found/NotFound";
+} from "../../utilities"
+import NotFound from "../not-found/NotFound"
 
 function Scale() {
     let playback: PlaybackService = useMemo(() => {
-        return new PlaybackService();
-    }, []);
+        return new PlaybackService()
+    }, [])
     let { note, scale } = useParams<{
-        note: string;
-        scale: string;
-    }>();
+        note: string
+        scale: string
+    }>()
 
-    if (note === undefined) note = "c";
+    if (note === undefined) note = "c"
 
     useEffect(() => {
-        (async () => {
-            await playback.initialize();
-        })();
-    }, [playback]);
+        ;(async () => {
+            await playback.initialize()
+        })()
+    }, [playback])
 
-    let found = true;
+    let found = true
 
     if (
         scale === undefined ||
         !TonalScaleType.names().includes(scale) ||
         !isNoteLink(note)
     )
-        found = false;
-    else note = mapLinkToNote(note);
+        found = false
+    else note = mapLinkToNote(note)
 
-    let [currentNote, setCurrentNote] = useState(note!);
+    let [currentNote, setCurrentNote] = useState(note!)
 
-    if (!found) return <NotFound />;
+    if (!found) return <NotFound />
 
     let toString = () => {
-        return titleCase(unescape(scale!) + " scale");
-    };
+        return titleCase(unescape(scale!) + " scale")
+    }
 
     let playKey = async () => {
         let notes: string[] = [
@@ -65,21 +65,21 @@ function Scale() {
             ...TonalScale.get(
                 currentNote + "4 " + unescape(scale!)
             ).notes.reverse(),
-        ];
+        ]
         let lengths: string[] = notes.map((note, i, arr) => {
-            if (i === arr.length - 1) return "2n";
-            return "4n";
-        });
+            if (i === arr.length - 1) return "2n"
+            return "4n"
+        })
 
-        let when: number = Tone.now();
+        let when: number = Tone.now()
 
         for (let i = 0; i < notes.length; i++) {
-            let note = TonalNote.simplify(notes[i]);
-            let length = lengths[i];
-            playback.playNote(note, length, when);
-            when += Tone.Time(length).toSeconds();
+            let note = TonalNote.simplify(notes[i])
+            let length = lengths[i]
+            playback.playNote(note, length, when)
+            when += Tone.Time(length).toSeconds()
         }
-    };
+    }
 
     let renderNotes = () => {
         return (
@@ -114,8 +114,8 @@ function Scale() {
                     <Card.Link onClick={playKey}>Listen to the notes</Card.Link>
                 </Card.Body>
             </Card>
-        );
-    };
+        )
+    }
 
     let renderChords = () => {
         return (
@@ -177,7 +177,7 @@ function Scale() {
                                                     currentNote + "4"
                                                 ).notes,
                                                 "4n"
-                                            );
+                                            )
                                         }}
                                     >
                                         Preview
@@ -192,7 +192,7 @@ function Scale() {
                                                     currentNote + "4"
                                                 ).notes,
                                                 "32n"
-                                            );
+                                            )
                                         }}
                                     >
                                         Preview
@@ -206,7 +206,7 @@ function Scale() {
                                                     chord,
                                                     currentNote + "4"
                                                 ).notes
-                                            );
+                                            )
                                         }}
                                     >
                                         Preview
@@ -217,8 +217,8 @@ function Scale() {
                     </tbody>
                 </Table>
             </>
-        );
-    };
+        )
+    }
 
     return (
         <>
@@ -299,7 +299,7 @@ function Scale() {
             {renderNotes()}
             {renderChords()}
         </>
-    );
+    )
 }
 
-export default Scale;
+export default Scale

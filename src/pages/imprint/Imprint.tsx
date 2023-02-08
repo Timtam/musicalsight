@@ -1,5 +1,5 @@
-import Card from "react-bootstrap/Card";
-import Head from "../../components/Head";
+import Card from "react-bootstrap/Card"
+import Head from "../../components/Head"
 
 function Imprint() {
     return (
@@ -15,7 +15,7 @@ function Imprint() {
                 </Card.Body>
             </Card>
         </>
-    );
+    )
 }
 
-export default Imprint;
+export default Imprint
