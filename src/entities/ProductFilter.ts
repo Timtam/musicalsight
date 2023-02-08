@@ -5,6 +5,8 @@ export interface ProductFilter {
     searchQuery: string
     enabled: boolean
     vendors: string[]
+    prizeFrom: number
+    prizeTo: number
 }
 
 export const createProductFilter = (): ProductFilter => {
@@ -12,5 +14,7 @@ export const createProductFilter = (): ProductFilter => {
         searchQuery: "",
         enabled: false,
         vendors: [],
+        prizeFrom: 0,
+        prizeTo: 0,
     }
 }

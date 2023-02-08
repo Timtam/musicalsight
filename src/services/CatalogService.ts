@@ -66,6 +66,13 @@ class CatalogService {
                 f.vendors.find((vs) => vs === p.vendor.id) === undefined
             )
                 return false
+
+            if (
+                p.prize !== undefined &&
+                (f.prizeFrom > 0 || f.prizeTo > 0) &&
+                (p.prize < f.prizeFrom || p.prize > f.prizeTo)
+            )
+                return false
         }
 
         return true

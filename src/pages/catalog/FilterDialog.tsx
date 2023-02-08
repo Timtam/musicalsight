@@ -20,9 +20,13 @@ function FilterDialog({
     let sorter = useMemo(() => natsort(), [])
     let [show, setShow] = useState(false)
     let [vendors, setVendors] = useState([] as string[])
+    let [prizeFrom, setPrizeFrom] = useState(0)
+    let [prizeTo, setPrizeTo] = useState(0)
 
     useEffect(() => {
         setVendors(filter === undefined ? [] : filter.vendors)
+        setPrizeFrom(filter === undefined ? 0 : filter.prizeFrom)
+        setPrizeTo(filter === undefined ? 0 : filter.prizeTo)
         setShow(filter !== undefined)
     }, [filter])
 
@@ -86,6 +90,37 @@ function FilterDialog({
                                     />
                                 ))}
                         </Form.Group>
+                        <h4>Prize</h4>
+                        <Form.Group controlId="formPrize">
+                            <Form.Label>From $</Form.Label>
+                            <Form.Control
+                                type="number"
+                                value={prizeFrom}
+                                onChange={(evt) => {
+                                    let n: number = parseInt(evt.target.value)
+
+                                    if (isNaN(n)) {
+                                        setPrizeFrom(0)
+                                        return
+                                    }
+                                    setPrizeFrom(n)
+                                }}
+                            />
+                            <Form.Label>To $</Form.Label>
+                            <Form.Control
+                                type="number"
+                                value={prizeTo}
+                                onChange={(evt) => {
+                                    let n: number = parseInt(evt.target.value)
+
+                                    if (isNaN(n)) {
+                                        setPrizeTo(0)
+                                        return
+                                    }
+                                    setPrizeTo(n)
+                                }}
+                            />
+                        </Form.Group>
                     </Form>
                 ) : (
                     ""
@@ -109,6 +144,8 @@ function FilterDialog({
                         onApply({
                             ...(filter as unknown as ProductFilter),
                             vendors: vendors,
+                            prizeFrom: prizeFrom,
+                            prizeTo: prizeTo,
                             enabled: true,
                         })
                         filter = undefined

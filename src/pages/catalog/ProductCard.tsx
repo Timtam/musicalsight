@@ -35,12 +35,20 @@ function ProductCard({
                     )}
                     )
                 </Card.Header>
-                <ListGroup variant="flush">
+                <ListGroup>
                     <ListGroup.Item>
                         Vendor:{" "}
                         <Link to={"/catalog/vendor/" + product.vendor.id}>
                             {product.vendor.name}
                         </Link>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                        {"Prize: " +
+                            (product.prize === undefined
+                                ? "unknown"
+                                : product.prize === 0
+                                ? "free"
+                                : `$${product.prize}`)}
                     </ListGroup.Item>
                     <ListGroup.Item>
                         Size:{" "}
