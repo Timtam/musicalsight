@@ -1,3 +1,5 @@
+import { ProductType } from "./ProductType"
+
 // not a class, but only an object
 // redux can only store objects, classes aren't serializable
 
@@ -7,6 +9,8 @@ export interface ProductFilter {
     vendors: string[]
     prizeFrom: number
     prizeTo: number
+    nks: boolean | undefined
+    types: ProductType[]
 }
 
 export const createProductFilter = (): ProductFilter => {
@@ -16,5 +20,7 @@ export const createProductFilter = (): ProductFilter => {
         vendors: [],
         prizeFrom: 0,
         prizeTo: 0,
+        nks: undefined,
+        types: [],
     }
 }

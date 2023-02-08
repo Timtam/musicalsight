@@ -73,6 +73,14 @@ class CatalogService {
                 (p.prize < f.prizeFrom || p.prize > f.prizeTo)
             )
                 return false
+
+            if (f.nks !== undefined && f.nks !== !!p.nks) return false
+
+            if (
+                f.types.length > 0 &&
+                f.types.find((t) => t === p.type) === undefined
+            )
+                return false
         }
 
         return true

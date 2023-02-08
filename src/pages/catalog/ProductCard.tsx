@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
 import ListGroup from "react-bootstrap/ListGroup"
 import { Link } from "react-router-dom"
+import { getProductTypeString } from "../../entities/ProductType"
 import CatalogService from "../../services/CatalogService"
 
 function ProductCard({
@@ -50,15 +51,25 @@ function ProductCard({
                                 ? "free"
                                 : `$${product.prize}`)}
                     </ListGroup.Item>
+                    <ListGroup.Item>{`Type: ${getProductTypeString(
+                        product.type
+                    )}`}</ListGroup.Item>
                     <ListGroup.Item>
                         Size:{" "}
-                        {filesize(product.size, {
-                            base: 2,
-                            standard: "jedec",
-                        }).toString()}
+                        {product.size !== undefined
+                            ? filesize(product.size, {
+                                  base: 2,
+                                  standard: "jedec",
+                              }).toString()
+                            : "unknown"}
                     </ListGroup.Item>
                     <ListGroup.Item>
-                        NKS compatible: {product.nks ? "yes" : "no"}
+                        NKS compatible:{" "}
+                        {product.nks
+                            ? typeof product.nks === "string"
+                                ? `yes (${product.nks})`
+                                : "yes"
+                            : "no"}
                     </ListGroup.Item>
                 </ListGroup>
             </Card>

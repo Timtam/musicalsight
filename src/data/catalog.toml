@@ -288,3 +288,37 @@ size = 14000
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=p-rlPo8hdhM"
 url = "https://www.aaronventure.com/infinite-brass"
+
+[surge-synth-team]
+name = "Surge Synth Team"
+url = "https://surge-synthesizer.github.io/"
+
+[surge-synth-team.products.surge-xt]
+name = "Surge XT"
+url = "https://surge-synthesizer.github.io/"
+prize = 0
+description = """\
+Surge XT is a hybrid subtractive synthesizer which is
+nowadays free and open source synthesizer. It has three oscillators
+with 12 oscillator algorithms: FM2, FM3, Wavetable, Classic, Modrn,
+String, Window, Sine, S&H Noise, Alias, Twist and Audio Input. A patch
+has two scenes which are a separate instances of the synthesizer
+(except effects) that can be split or oalyered patches. Surge XT has
+16 effect units (arranged in the following way: 4 inserts per scene, 4
+master effects and 4 sends). The effects include filters, delay,
+chorus, flanger, phaser, distortion, frequency shifter, spring reverb,
+rotary speaker, multi effects (such as Airwindows containing 56
+effects, Mid-Side Tool and Conditioner) and Ensemble."""
+accessibility_description = """\
+The synthesizer is almost entirely
+accessible,, with very little accessibility issues on it. The user
+interface can be efficiently navigated and controlled using keyboard
+shortcuts on both the plugin and the standalone application, however,
+this reuires putting certain settings to certain values using your
+keyboard and screen reader. The Windows and Mac versions are currently
+accessible, but the Linux version is not yet accessible. However, the
+modulation section would still need a bit of accessibility
+improvements. Currently, the 11-Band Graphic EQ (i.e. picture-based,
+graphical equalizer) is not accessible for screen reader users."""
+nks = "requires a user-defined .nksf set available as freeware and by Native Instruments forum member Christos"
+type = "vsti"

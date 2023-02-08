@@ -1,5 +1,5 @@
 import { Expose, Transform } from "class-transformer"
-import ProductType from "./ProductType"
+import { ProductType } from "./ProductType"
 import Vendor from "./Vendor"
 
 export default class Product {
@@ -10,7 +10,7 @@ export default class Product {
     name: string
 
     @Expose()
-    nks: boolean = false
+    nks: boolean | string = false
 
     @Expose()
     @Transform(

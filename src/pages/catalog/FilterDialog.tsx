@@ -3,7 +3,11 @@ import { useEffect, useMemo, useState } from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Modal from "react-bootstrap/Modal"
-import { ProductFilter } from "../../entities/ProductFilter"
+import {
+    createProductFilter,
+    ProductFilter,
+} from "../../entities/ProductFilter"
+import { getProductTypeString, ProductType } from "../../entities/ProductType"
 import CatalogService from "../../services/CatalogService"
 
 function FilterDialog({
@@ -22,11 +26,15 @@ function FilterDialog({
     let [vendors, setVendors] = useState([] as string[])
     let [prizeFrom, setPrizeFrom] = useState(0)
     let [prizeTo, setPrizeTo] = useState(0)
+    let [nks, setNks] = useState(undefined as boolean | undefined)
+    let [types, setTypes] = useState([] as ProductType[])
 
     useEffect(() => {
         setVendors(filter === undefined ? [] : filter.vendors)
         setPrizeFrom(filter === undefined ? 0 : filter.prizeFrom)
         setPrizeTo(filter === undefined ? 0 : filter.prizeTo)
+        setNks(filter === undefined ? undefined : filter.nks)
+        setTypes(filter === undefined ? [] : filter.types)
         setShow(filter !== undefined)
     }, [filter])
 
@@ -121,6 +129,92 @@ function FilterDialog({
                                 }}
                             />
                         </Form.Group>
+                        <h4>NKS Compatibility</h4>
+                        <Form.Group controlId="formNks">
+                            <Form.Select
+                                value={
+                                    nks === undefined
+                                        ? "disabled"
+                                        : nks === false
+                                        ? "no"
+                                        : "yes"
+                                }
+                                onChange={(evt) => {
+                                    switch (evt.target.value) {
+                                        case "disabled":
+                                            setNks(undefined)
+                                            return
+                                        case "no":
+                                            setNks(false)
+                                            return
+                                        case "yes":
+                                            setNks(true)
+                                            return
+                                    }
+                                }}
+                            >
+                                <option value="disabled">Disabled</option>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </Form.Select>
+                        </Form.Group>
+                        <h4>Product Type</h4>
+                        <Form.Group controlId="formTypes">
+                            {Object.keys(ProductType)
+                                .filter((t) => !isNaN(parseInt(t)))
+                                .map((t) => (
+                                    <Form.Check
+                                        id={`form-type-${t}`}
+                                        type="checkbox"
+                                        label={`${getProductTypeString(
+                                            parseInt(t) as ProductType
+                                        )} (${
+                                            catalog.getProducts({
+                                                ...createProductFilter(),
+                                                enabled: true,
+                                                types: [
+                                                    parseInt(t) as ProductType,
+                                                ],
+                                            }).length
+                                        })`}
+                                        checked={
+                                            types.find(
+                                                (tn) => tn === parseInt(t)
+                                            ) !== undefined
+                                        }
+                                        onChange={(evt) => {
+                                            if (evt.target.checked === true) {
+                                                if (
+                                                    types.find(
+                                                        (tn) =>
+                                                            tn === parseInt(t)
+                                                    ) === undefined
+                                                )
+                                                    setTypes([
+                                                        ...types,
+                                                        parseInt(
+                                                            t
+                                                        ) as ProductType,
+                                                    ])
+                                            } else {
+                                                if (
+                                                    types.find(
+                                                        (tn) =>
+                                                            tn === parseInt(t)
+                                                    ) !== undefined
+                                                )
+                                                    setTypes(
+                                                        types.filter(
+                                                            (tn) =>
+                                                                tn !==
+                                                                parseInt(t)
+                                                        )
+                                                    )
+                                            }
+                                        }}
+                                    />
+                                ))}
+                        </Form.Group>
                     </Form>
                 ) : (
                     ""
@@ -146,6 +240,8 @@ function FilterDialog({
                             vendors: vendors,
                             prizeFrom: prizeFrom,
                             prizeTo: prizeTo,
+                            nks: nks,
+                            types: types,
                             enabled: true,
                         })
                         filter = undefined
