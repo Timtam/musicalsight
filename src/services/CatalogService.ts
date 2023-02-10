@@ -104,8 +104,8 @@ class CatalogService {
         return this.products.find((p) => p.id === id)
     }
 
-    getProductsByVendor(id: string): Product[] {
-        return this.products.filter((p) => p.vendor.id === id)
+    getVendorById(id: string): Vendor | undefined {
+        return this.vendors.find((v) => v.id === id)
     }
 
     getVendors(): Vendor[] {

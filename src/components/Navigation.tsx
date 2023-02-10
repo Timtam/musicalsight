@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
 import { Link, Route, Routes } from "react-router-dom"
+import CatalogSubmit from "../pages/catalog-submit/CatalogSubmit"
 import Catalog from "../pages/catalog/Catalog"
 import Chord from "../pages/chord/Chord"
 import Chords from "../pages/chords/Chords"
@@ -66,6 +67,10 @@ function Navigation() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/catalog" element={<Catalog />} />
+                        <Route
+                            path="/catalog/submit"
+                            element={<CatalogSubmit />}
+                        />
                         <Route path="/imprint" element={<Imprint />} />
                         <Route path="/notes" element={<Notes />} />
                         <Route path="/notes/:note" element={<Note />} />

@@ -69,8 +69,11 @@ function FilterDialog({
                                         id={"form-vendor-" + v.id}
                                         type="checkbox"
                                         label={`${v.name} (${
-                                            catalog.getProductsByVendor(v.id)
-                                                .length
+                                            catalog.getProducts({
+                                                ...createProductFilter(),
+                                                enabled: true,
+                                                vendors: [v.id],
+                                            }).length
                                         })`}
                                         checked={vendors.includes(v.id)}
                                         onChange={(evt) => {

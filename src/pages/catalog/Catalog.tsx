@@ -1,5 +1,6 @@
 import natsort from "natsort"
 import { useEffect, useMemo, useState } from "react"
+import { Link } from "react-router-dom"
 import Head from "../../components/Head"
 import Product from "../../entities/Product"
 import CatalogService from "../../services/CatalogService"
@@ -84,6 +85,10 @@ function Catalog() {
             ) : (
                 ""
             )}
+            <h3>Missing something?</h3>
+            Do you know a product that we're currently missing here? You can
+            help the catalog grow by{" "}
+            <Link to="/catalog/submit">submitting an entry here</Link>.
         </>
     )
 }
