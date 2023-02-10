@@ -323,3 +323,115 @@ graphical equalizer) is not accessible for screen reader users."""
 nks = "requires a user-defined .nksf set available as freeware and by Native Instruments forum member Christos"
 type = "vsti"
 os = ["windows", "linux", "mac_intel", "mac_arm"]
+
+[aria-sounds]
+name = "Aria Sounds"
+url = "https://www.ariasounds.com/"
+
+[aria-sounds.products.aurora-choir]
+name = "Aurora Choir"
+size = 9180
+prize = 399
+url = "https://www.ariasounds.com/aurora-choir.html"
+type = "kontakt4"
+demo = "https://www.youtube.com/watch?v=xmclSI88Odo"
+
+[aria-sounds.products.bansuri-flute]
+name = "Bansuri Flute"
+url = "https://www.ariasounds.com/kontakt_indian_bansuri_instrument_vst.html"
+prize = 35.99
+size = 797
+type = "kontakt4"
+
+[aria-sounds.products.catalyst-percussion]
+name = "Catalyst Cinematic Percussion"
+size = 3040
+type = "kontakt4"
+prize = 99
+demo = "https://soundcloud.com/aria-sounds/sets/catalyst-cinematic-percussion"
+url = "https://www.ariasounds.com/catalyst_kontakt_drums_percussion.html"
+
+[aria-sounds.products.celtic-harp]
+name = "Celtic Harp"
+url = "https://www.ariasounds.com/kontakt_celtic_harp_vst_instrument.html"
+prize = 35.99
+type = "kontakt4"
+size = 860
+demo = "https://soundcloud.com/aria-sounds/kontakt-celtic-harp-by-aria"
+
+[aria-sounds.products.classical-guitarist]
+name = "Classical Guitarist"
+size = 701
+demo = "https://www.youtube.com/watch?v=_9Qa8ebtdyY"
+url = "https://www.ariasounds.com/classical_guitar_virtual_instrument.html"
+prize = 35.99
+type = "kontakt5"
+
+[aria-sounds.products.colossal-toms]
+name = "Colossal Toms"
+size = 5930
+demo = "https://soundcloud.com/aria-sounds/colossal-toms-demo-2"
+type = "kontakt5"
+url = "https://www.ariasounds.com/kontakt_epic_drums_colossal_toms.html"
+prize = 39
+
+[aria-sounds.products.london-solo-french-horn]
+name = "London Solo French Horn"
+size = 349
+demo = "https://www.youtube.com/watch?v=Ym2rRxzpBU4"
+url = "https://www.ariasounds.com/french_horn_kontakt_vst.html"
+prize = 79
+type = "kontakt4"
+
+[aria-sounds.products.hybrichord-1]
+name = "Hybrichord Vol. 1"
+size = 4240
+prize = 39
+type = "kontakt4"
+url = "https://www.ariasounds.com/hybrichord_cinematic_piano_sonic_landscapes.html"
+
+[aria-sounds.products.london-solo-double-bass]
+name = "London Solo Double Bass"
+size = 4280
+demo = "https://www.youtube.com/watch?v=veKm2O0WvBQ"
+url = "https://www.ariasounds.com/lss-solo-double-bass.html"
+prize = 69
+type = "kontakt4"
+
+[aria-sounds.products.london-solo-viola]
+name = "London Solo Viola"
+size = 4130
+demo = "https://soundcloud.com/aria-sounds/lss-solo-strings-demo-beyond?in=aria-sounds/sets/lss-solo-violin-demos"
+type = "kontakt4"
+prize = 69
+url = "https://www.ariasounds.com/lss-solo-viola.html"
+
+[aria-sounds.products.london-solo-violin]
+name = "London Solo Violin"
+size = 4730
+demo = "https://soundcloud.com/aria-sounds/lss-solo-strings-demo-quintet-excerpt"
+type = "kontakt4"
+url = "https://www.ariasounds.com/kontakt_violin_instrument_vst.html"
+prize = 69
+
+[aria-sounds.products.pipe-organ]
+name = "Pipe Organ"
+demo = "https://soundcloud.com/aria-sounds/organ-demo-lament"
+type = "kontakt4"
+url = "https://www.ariasounds.com/church_pipe_organ_vst_kontakt_instrument.html"
+prize = 49
+size = 1860
+
+[aria-sounds.products.surdos-and-snares]
+name = "Surdos And Snares"
+size = 6100
+prize = 39
+url = "https://www.ariasounds.com/aria_sounds_surdos_snares_percussion.html"
+type = "kontakt4"
+
+[aria-sounds.products.xiao]
+name = "Xiao"
+url = "https://www.ariasounds.com/kontakt_chinese_xiao_flute.html"
+prize = 35.99
+size = 537
+type = "kontakt4"
