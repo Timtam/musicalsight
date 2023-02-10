@@ -18,9 +18,9 @@ const createFormData = () => ({
     type: ProductType[0] as string,
     url: "",
     demo: "",
-    size: 0,
+    size: undefined as number | undefined,
     prize: undefined as number | undefined,
-    nks: "",
+    nks: "no",
     nks_additional: "",
     description: "",
     accessibility_description: "",
@@ -127,18 +127,20 @@ function CatalogSubmit() {
                             setData({ ...data, demo: evt.target.value })
                         }
                     />
-                    <Form.Label for="form-details-size">Size in MB</Form.Label>
+                    <Form.Label for="form-details-size">
+                        Size in MB (leave empty if unknown)
+                    </Form.Label>
                     <Form.Control
                         id="form-details-size"
                         type="number"
-                        value={data.size}
+                        value={data.size !== undefined ? data.size : ""}
                         onChange={(evt) =>
                             setData({
                                 ...data,
                                 size:
                                     evt.target.value !== ""
                                         ? parseInt(evt.target.value)
-                                        : 0,
+                                        : undefined,
                             })
                         }
                     />
@@ -168,7 +170,6 @@ function CatalogSubmit() {
                             setData({ ...data, nks: evt.target.value })
                         }
                     >
-                        <option value="">I don't know</option>
                         <option value="no">No</option>
                         <option value="yes">Yes</option>
                     </Form.Select>
@@ -381,21 +382,19 @@ function CatalogSubmit() {
 
                         msg += dedent`[${vendorId}.products.${productId}]
     name = "${data.name}"
-    type = "${data.type.toLowerCase()}"
-    size = ${data.size}`
+    type = "${data.type.toLowerCase()}"`
                         msg += "\n"
 
+                        if (data.size !== undefined)
+                            msg += `size = ${data.size}\n`
                         if (data.url !== "") msg += `url = "${data.url}"\n`
                         if (data.demo !== "") msg += `demo = "${data.demo}"\n`
                         if (data.prize !== undefined)
                             msg += `prize = ${data.prize}"\n`
-                        if (data.nks !== "") {
-                            if (data.nks === "no") msg += "nks = false\n"
-                            else if (data.nks === "yes") {
-                                if (data.nks_additional !== "")
-                                    msg += `nks = "${data.nks_additional}"\n`
-                                else msg += "nks = true\n"
-                            }
+                        if (data.nks === "yes") {
+                            if (data.nks_additional !== "")
+                                msg += `nks = "${data.nks_additional}"\n`
+                            else msg += "nks = true\n"
                         }
                         if (data.description !== "")
                             msg += dedent`description = """\
