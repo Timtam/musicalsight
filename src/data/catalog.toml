@@ -435,3 +435,100 @@ url = "https://www.ariasounds.com/kontakt_chinese_xiao_flute.html"
 prize = 35.99
 size = 537
 type = "kontakt4"
+
+[artistry-audio]
+name = "Artistry Audio"
+url = "https://artistryaudio.com/"
+
+[artistry-audio.products.origin-x]
+name = "Origin X"
+url = "https://artistryaudio.com/origin-x/"
+size = 4140
+type = "kontakt6"
+nks = true
+demo = "https://www.youtube.com/watch?v=j1lyogcfRiU"
+prize = 199
+
+[artistry-audio.products.scorpio]
+name = "Scorpio"
+url = "https://artistryaudio.com/scorpio/"
+size = 2890
+type = "kontakt6"
+demo = "https://www.youtube.com/watch?v=e8V63_71laY"
+prize = 149
+
+[auddict]
+name = "Auddict"
+url = "https://www.auddict.com/"
+
+[auddict.products.celestial-voices-calypso]
+name = "Celestial Voices Calypso"
+type = "kontakt4"
+url = "https://www.auddict.com/celestial-voices-calypso"
+prize = 130
+size = 2460
+demo = "https://soundcloud.com/auddict-77772158/sets/celestial-voices-calypso"
+
+[auddict.products.drums-of-the-deep-ii]
+name = "Drums Of The Deep II Unleashed"
+url = "https://www.auddict.com/drums-of-the-deep-ii-unleashed"
+size = 27000
+demo = "https://soundcloud.com/dorianmarko/im-just-getting-started?in=auddict-77772158/sets/drums-of-the-deep-ii-unleashed"
+type = "kontakt4"
+prize = 250
+
+[auddict.products.master-brass-trombones]
+name = "Master Brass: Trombones"
+url = "https://www.auddict.com/master-brass-trombones"
+prize = 60
+type = "kontakt4"
+size = 6800
+demo = "https://soundcloud.com/auddict-77772158/trombones-demo-24"
+
+[auddict.products.master-brass-tubas]
+name = "Master Brass: Tubas"
+url = "https://www.auddict.com/mb-tubas"
+demo = "https://soundcloud.com/auddict-77772158/auddict-master-brass-expedition"
+prize = 50
+size = 5600
+type = "kontakt4"
+
+[auddict.products.master-solo-woodwinds]
+name = "Master Solo Woodwinds Bundle"
+url = "https://www.auddict.com/master-solo-woodwinds-bundle"
+prize = 550
+type = "kontakt4"
+size = 46200
+demo = "https://soundcloud.com/auddict-77772158/master-solo-woodwinds-robin?in=auddict-77772158/sets/master-solo-woodwinds"
+
+[auddict.products.virtuosic-violin]
+name = "Virtuosic Violin"
+url = "https://www.auddict.com/virtuosic-violin"
+prize = 120
+type = "kontakt4"
+size = 8000
+demo = "https://soundcloud.com/auddict-77772158/virtuosic-violin-nocturne?in=auddict-77772158/sets/auddict-virtuoso-violin"
+
+[auddict.products.octohorn]
+name = "Octohorn"
+url = "https://www.auddict.com/octohorn"
+type = "kontakt4"
+prize = 60
+demo = "https://www.youtube.com/watch?v=M2lXGlGrMwo"
+size = 7000
+
+[auddict.products.angel-strings-1]
+name = "Angel Strings Vol. 1"
+url = "https://www.auddict.com/angelstrings"
+demo = "https://www.youtube.com/watch?v=-SBcXNDK45U"
+prize = 220
+type = "kontakt4"
+size = 60000
+
+[auddict.products.united-strings-of-europe]
+name = "United Strings Of Europe"
+url = "https://www.auddict.com/use"
+prize = 700
+demo = "https://soundcloud.com/auddict-77772158/united-strings-of-europe-first-violins-demo-1?in=auddict-77772158/sets/united-strings-of-europe"
+type = "kontakt4"
+size = 60000
