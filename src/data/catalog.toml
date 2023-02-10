@@ -322,3 +322,4 @@ improvements. Currently, the 11-Band Graphic EQ (i.e. picture-based,
 graphical equalizer) is not accessible for screen reader users."""
 nks = "requires a user-defined .nksf set available as freeware and by Native Instruments forum member Christos"
 type = "vsti"
+os = ["windows", "linux", "mac_intel", "mac_arm"]

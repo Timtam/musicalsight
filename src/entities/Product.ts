@@ -1,4 +1,5 @@
 import { Expose, Transform } from "class-transformer"
+import { OperatingSystem } from "./OperatingSystem"
 import { ProductType } from "./ProductType"
 import Vendor from "./Vendor"
 
@@ -25,6 +26,31 @@ export default class Product {
         }
     )
     type: ProductType
+
+    @Expose()
+    @Transform(
+        ({ value }) => {
+            if (value === undefined) return [OperatingSystem.UNKNOWN]
+
+            return [
+                ...new Set<OperatingSystem>(
+                    value.map((os: string) =>
+                        OperatingSystem[
+                            os.toUpperCase() as keyof typeof OperatingSystem
+                        ] !== undefined
+                            ? OperatingSystem[
+                                  os.toUpperCase() as keyof typeof OperatingSystem
+                              ]
+                            : OperatingSystem.UNKNOWN
+                    )
+                ),
+            ]
+        },
+        {
+            toClassOnly: true,
+        }
+    )
+    os: OperatingSystem[] = [OperatingSystem.UNKNOWN]
 
     @Expose()
     @Transform(

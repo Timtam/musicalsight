@@ -2,8 +2,10 @@ import { plainToClass } from "class-transformer"
 import Fuse from "fuse.js"
 import raw from "raw.macro"
 import toml from "toml"
+import { OperatingSystem } from "../entities/OperatingSystem"
 import Product from "../entities/Product"
 import { ProductFilter } from "../entities/ProductFilter"
+import { ProductType } from "../entities/ProductType"
 import Vendor from "../entities/Vendor"
 
 class CatalogService {
@@ -33,6 +35,19 @@ class CatalogService {
                     p.vendor = vendor
                     p.id = `${vendor.id}-${k}`
 
+                    // special cases for product types and os support
+                    switch (p.type) {
+                        case ProductType.KONTAKT4:
+                        case ProductType.KONTAKT5:
+                        case ProductType.KONTAKT6:
+                        case ProductType.KONTAKT7:
+                            p.os = [
+                                OperatingSystem.WINDOWS,
+                                OperatingSystem.MAC_INTEL,
+                                OperatingSystem.MAC_ARM,
+                            ]
+                    }
+
                     this.products.push(p)
                 }
             }
@@ -61,10 +76,7 @@ class CatalogService {
 
     filterMatchesProduct(p: Product, f: ProductFilter): boolean {
         if (f.enabled === true) {
-            if (
-                f.vendors.length > 0 &&
-                f.vendors.find((vs) => vs === p.vendor.id) === undefined
-            )
+            if (f.vendors.length > 0 && !f.vendors.includes(p.vendor.id))
                 return false
 
             if (
@@ -76,9 +88,11 @@ class CatalogService {
 
             if (f.nks !== undefined && f.nks !== !!p.nks) return false
 
+            if (f.types.length > 0 && !f.types.includes(p.type)) return false
+
             if (
-                f.types.length > 0 &&
-                f.types.find((t) => t === p.type) === undefined
+                f.oss.length > 0 &&
+                p.os.filter((os) => f.oss.includes(os)).length === 0
             )
                 return false
         }

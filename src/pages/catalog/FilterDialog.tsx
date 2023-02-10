@@ -4,6 +4,10 @@ import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Modal from "react-bootstrap/Modal"
 import {
+    getOperatingSystemString,
+    OperatingSystem,
+} from "../../entities/OperatingSystem"
+import {
     createProductFilter,
     ProductFilter,
 } from "../../entities/ProductFilter"
@@ -28,6 +32,7 @@ function FilterDialog({
     let [prizeTo, setPrizeTo] = useState(0)
     let [nks, setNks] = useState(undefined as boolean | undefined)
     let [types, setTypes] = useState([] as ProductType[])
+    let [oss, setOss] = useState([] as OperatingSystem[])
 
     useEffect(() => {
         setVendors(filter === undefined ? [] : filter.vendors)
@@ -35,6 +40,7 @@ function FilterDialog({
         setPrizeTo(filter === undefined ? 0 : filter.prizeTo)
         setNks(filter === undefined ? undefined : filter.nks)
         setTypes(filter === undefined ? [] : filter.types)
+        setOss(filter === undefined ? [] : filter.oss)
         setShow(filter !== undefined)
     }, [filter])
 
@@ -66,28 +72,16 @@ function FilterDialog({
                                             catalog.getProductsByVendor(v.id)
                                                 .length
                                         })`}
-                                        checked={
-                                            vendors.find(
-                                                (vs) => vs === v.id
-                                            ) !== undefined
-                                        }
+                                        checked={vendors.includes(v.id)}
                                         onChange={(evt) => {
                                             if (evt.target.checked === true) {
-                                                if (
-                                                    vendors.find(
-                                                        (vs) => vs === v.id
-                                                    ) === undefined
-                                                )
+                                                if (!vendors.includes(v.id))
                                                     setVendors([
                                                         ...vendors,
                                                         v.id,
                                                     ])
                                             } else {
-                                                if (
-                                                    vendors.find(
-                                                        (vs) => vs === v.id
-                                                    ) !== undefined
-                                                )
+                                                if (vendors.includes(v.id))
                                                     setVendors(
                                                         vendors.filter(
                                                             (vs) => vs !== v.id
@@ -177,18 +171,17 @@ function FilterDialog({
                                                 ],
                                             }).length
                                         })`}
-                                        checked={
-                                            types.find(
-                                                (tn) => tn === parseInt(t)
-                                            ) !== undefined
-                                        }
+                                        checked={types.includes(
+                                            parseInt(t) as ProductType
+                                        )}
                                         onChange={(evt) => {
                                             if (evt.target.checked === true) {
                                                 if (
-                                                    types.find(
-                                                        (tn) =>
-                                                            tn === parseInt(t)
-                                                    ) === undefined
+                                                    !types.includes(
+                                                        parseInt(
+                                                            t
+                                                        ) as ProductType
+                                                    )
                                                 )
                                                     setTypes([
                                                         ...types,
@@ -198,16 +191,76 @@ function FilterDialog({
                                                     ])
                                             } else {
                                                 if (
-                                                    types.find(
-                                                        (tn) =>
-                                                            tn === parseInt(t)
-                                                    ) !== undefined
+                                                    types.includes(
+                                                        parseInt(
+                                                            t
+                                                        ) as ProductType
+                                                    )
                                                 )
                                                     setTypes(
                                                         types.filter(
                                                             (tn) =>
                                                                 tn !==
                                                                 parseInt(t)
+                                                        )
+                                                    )
+                                            }
+                                        }}
+                                    />
+                                ))}
+                        </Form.Group>
+                        <h4>Operating System</h4>
+                        <Form.Group controlId="formOS">
+                            {Object.keys(OperatingSystem)
+                                .filter((os) => !isNaN(parseInt(os)))
+                                .map((os) => (
+                                    <Form.Check
+                                        id={`form-os-${os}`}
+                                        type="checkbox"
+                                        label={`${getOperatingSystemString(
+                                            parseInt(os) as OperatingSystem
+                                        )} (${
+                                            catalog.getProducts({
+                                                ...createProductFilter(),
+                                                enabled: true,
+                                                oss: [
+                                                    parseInt(
+                                                        os
+                                                    ) as OperatingSystem,
+                                                ],
+                                            }).length
+                                        })`}
+                                        checked={oss.includes(
+                                            parseInt(os) as OperatingSystem
+                                        )}
+                                        onChange={(evt) => {
+                                            if (evt.target.checked === true) {
+                                                if (
+                                                    !oss.includes(
+                                                        parseInt(
+                                                            os
+                                                        ) as OperatingSystem
+                                                    )
+                                                )
+                                                    setOss([
+                                                        ...oss,
+                                                        parseInt(
+                                                            os
+                                                        ) as OperatingSystem,
+                                                    ])
+                                            } else {
+                                                if (
+                                                    oss.includes(
+                                                        parseInt(
+                                                            os
+                                                        ) as OperatingSystem
+                                                    )
+                                                )
+                                                    setOss(
+                                                        oss.filter(
+                                                            (osn) =>
+                                                                osn !==
+                                                                parseInt(os)
                                                         )
                                                     )
                                             }
@@ -242,6 +295,7 @@ function FilterDialog({
                             prizeTo: prizeTo,
                             nks: nks,
                             types: types,
+                            oss: oss,
                             enabled: true,
                         })
                         filter = undefined

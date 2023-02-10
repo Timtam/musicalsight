@@ -1,3 +1,4 @@
+import { OperatingSystem } from "./OperatingSystem"
 import { ProductType } from "./ProductType"
 
 // not a class, but only an object
@@ -11,6 +12,7 @@ export interface ProductFilter {
     prizeTo: number
     nks: boolean | undefined
     types: ProductType[]
+    oss: OperatingSystem[]
 }
 
 export const createProductFilter = (): ProductFilter => {
@@ -22,5 +24,6 @@ export const createProductFilter = (): ProductFilter => {
         prizeTo: 0,
         nks: undefined,
         types: [],
+        oss: [],
     }
 }
