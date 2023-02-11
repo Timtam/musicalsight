@@ -696,3 +696,42 @@ type = "kontakt6"
 size = 5577
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/trailer-guitars-2"
+
+[dsk-music]
+name = "DSK Music"
+url = "https://www.dskmusic.com/"
+
+[dsk-music.products.dsk-indian-dreamz]
+name = "DSK Indian Dreamz"
+type = "vsti"
+url = "https://www.dskmusic.com/dsk-indian-dreamz/"
+demo = "https://www.youtube.com/watch?v=D6duQyz27qw"
+prize = 0
+description = """this Free VST has got 6 Nice and very Realistic Indian Instruments."""
+os = ["windows"]
+
+[rdv-audio]
+name = "RDV Audio"
+url = "https://rdgaudio.com/"
+
+[rdv-audio.products.acoustic-indian-dhol]
+name = "Acoustic Indian Dhol"
+type = "vsti"
+url = "https://rdgaudio.com/acoustic-indian-dhol/"
+demo = "https://www.youtube.com/watch?v=C-KVd4yWcWc"
+prize = 0
+description = """this is a fantastic Instrument plugin if you are looking for a real sounding Dhol."""
+os = ["windows","mac_intel","mac_arm"] 
+
+[swar-systems]
+name = "Swar Systems"
+url = "https://www.swarvst.com/"
+
+[swar-systems.products.swar-plug-4]
+name = "Swar Plug 4"
+type = "vsti"
+url = "https://www.swarvst.com/shop/article.php?art=105012"
+demo = "https://www.youtube.com/watch?v=XCc9xl2An4Q"
+prize = 100
+description = """a very high quality VST housing over 70 Indian Instruments."""
+os = ["windows","mac_intel","mac_arm","linux"] 
