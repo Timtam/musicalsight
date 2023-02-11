@@ -390,7 +390,7 @@ function CatalogSubmit() {
                         if (data.url !== "") msg += `url = "${data.url}"\n`
                         if (data.demo !== "") msg += `demo = "${data.demo}"\n`
                         if (data.prize !== undefined)
-                            msg += `prize = ${data.prize}"\n`
+                            msg += `prize = ${data.prize}\n`
                         if (data.nks === "yes") {
                             if (data.nks_additional !== "")
                                 msg += `nks = "${data.nks_additional}"\n`
@@ -414,7 +414,7 @@ ${data.description}"""\n`
                                 name?: string
                                 subject: string
                             } = {
-                                message: msg,
+                                message: msg.replaceAll("\n", "<br />"),
                                 subject: `APIAC Product submission for product ${data.name}`,
                                 accessKey:
                                     "56f0885e-efe6-4378-9bf4-673bc7b3b00d",
