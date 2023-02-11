@@ -532,3 +532,167 @@ prize = 700
 demo = "https://soundcloud.com/auddict-77772158/united-strings-of-europe-first-violins-demo-1?in=auddict-77772158/sets/united-strings-of-europe"
 type = "kontakt4"
 size = 60000
+
+[audio-imperia]
+name = "Audio Imperia"
+url = "https://www.audioimperia.com/"
+
+[audio-imperia.products.areia]
+name = "Areia Cinematic Ensemble Strings"
+url = "https://www.audioimperia.com/collections/all/products/areia"
+prize = 399
+nks = true
+size = 68000
+demo = "https://soundcloud.com/audioimperia/sets/areia"
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+type = "kontakt6"
+
+[audio-imperia.products.areia-lite]
+name = "Areia Lite Edition"
+url = "https://www.audioimperia.com/collections/all/products/areia-lite-edition-made-for-kontakt-player"
+prize = 99
+nks = true
+type = "kontakt6"
+size = 13000
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+demo = "https://soundcloud.com/audioimperia/sets/areia"
+
+[audio-imperia.products.artifact-reanimate]
+name = "Artifact Reanimate"
+url = "https://www.audioimperia.com/collections/all/products/artifact-reanimate-1"
+type = "kontakt6"
+nks = true
+prize = 249
+size = 3630
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+demo = "https://soundcloud.com/audioimperia/sets/artifact-reanimate"
+
+[audio-imperia.products.cerberus]
+name = "Cerberus"
+prize = 299
+url = "https://www.audioimperia.com/collections/all/products/cerberus"
+type = "kontakt6"
+size = 19511
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+nks = true
+demo = "https://soundcloud.com/audioimperia/sets/cerberus"
+
+[audio-imperia.products.chorus]
+name = "Chorus"
+prize = 499
+size = 69298
+url = "https://www.audioimperia.com/collections/all/products/chorus-modern-cinematic-and-symphonic-choir-for-kontakt-player"
+nks = true
+type = "kontakt6"
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+demo = "https://soundcloud.com/audioimperia/sets/chorus"
+
+[audio-imperia.products.chorus-lite]
+name = "Chorus Lite Edition"
+url = "https://www.audioimperia.com/collections/all/products/chorus-lite-edition"
+type = "kontakt6"
+nks = true
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+demo = "https://soundcloud.com/audioimperia/sets/chorus"
+prize = 99
+size = 2700
+
+[audio-imperia.products.constrictor]
+name = "Constrictor"
+url = "https://www.audioimperia.com/collections/all/products/constrictor"
+nks = true
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+prize = 249
+type = "kontakt6"
+size = 30000
+demo = "https://soundcloud.com/audioimperia/sets/constrictor"
+
+[audio-imperia.products.jaeger]
+name = "Jaeger"
+prize = 599
+url = "https://www.audioimperia.com/collections/all/products/jaeger-essential-modern-orchestra"
+nks = true
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+type = "kontakt6"
+demo = "https://soundcloud.com/audioimperia/sets/jaeger"
+size = 52596
+
+[audio-imperia.products.klavier]
+name = "Klavier"
+url = "https://www.audioimperia.com/collections/all/products/klavier"
+type = "kontakt6"
+prize = 199
+nks = true
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+demo = "https://soundcloud.com/audioimperia/sets/klavier"
+size = 24098
+
+[audio-imperia.products.legacy]
+name = "Legacy"
+url = "https://www.audioimperia.com/collections/all/products/legacy-cinematic-sfx-collection-for-kontakt-player"
+type = "kontakt6"
+nks = true
+prize = 199
+size = 4120
+demo = "https://soundcloud.com/audioimperia/sets/legacy"
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+
+[audio-imperia.products.nucleus]
+name = "Nucleus"
+type = "kontakt6"
+nks = true
+url = "https://www.audioimperia.com/collections/all/products/nucleus"
+size = 29627
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+demo = "https://soundcloud.com/audioimperia/sets/nucleus"
+prize = 449
+
+[audio-imperia.products.nucleus-lite]
+name = "Nucleus Lite Edition"
+type = "kontakt6"
+nks = true
+url = "https://www.audioimperia.com/collections/all/products/nucleus-lite-edition"
+size = 5000
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+demo = "https://soundcloud.com/audioimperia/sets/nucleus"
+prize = 99
+
+[audio-imperia.products.photosynthesis]
+name = "Photosynthesis"
+url = "https://www.audioimperia.com/collections/all/products/photosynthesis"
+prize = 199
+type = "kontakt6"
+nks = true
+demo = "https://soundcloud.com/audioimperia/sets/photosynthesis-vol-2-mystic-by"
+size = 6466
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+
+[audio-imperia.products.solo]
+name = "Solo"
+url = "https://www.audioimperia.com/collections/all/products/solo-made-for-kontakt-player"
+nks = true
+type = "kontakt6"
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+size = 89822
+prize = 299
+demo = "https://soundcloud.com/audioimperia/sets/solo"
+
+[audio-imperia.products.talos]
+name = "Talos"
+nks = true
+type = "kontakt6"
+prize = 399
+url = "https://www.audioimperia.com/collections/all/products/talos-epic-brass-ensembles"
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+size = 10724
+demo = "https://soundcloud.com/audioimperia/sets/talos"
+
+[audio-imperia.products.trailer-guitars-2]
+name = "Trailer Guitars 2"
+url = "https://www.audioimperia.com/collections/all/products/trailer-guitars-2"
+prize = 249
+nks = true
+type = "kontakt6"
+size = 5577
+accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+demo = "https://soundcloud.com/audioimperia/sets/trailer-guitars-2"
