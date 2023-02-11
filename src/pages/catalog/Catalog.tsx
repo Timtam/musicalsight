@@ -1,13 +1,13 @@
 import natsort from "natsort"
 import { useEffect, useMemo, useState } from "react"
 import { Link } from "react-router-dom"
+import DemoPlayer from "../../components/DemoPlayer"
 import Head from "../../components/Head"
+import Pagination from "../../components/Pagination"
+import ProductCard from "../../components/ProductCard"
 import Product from "../../entities/Product"
 import CatalogService from "../../services/CatalogService"
 import { useAppDispatch, useAppSelector } from "../../state/hooks"
-import DemoPlayer from "./DemoPlayer"
-import Pagination from "./Pagination"
-import ProductCard from "./ProductCard"
 import Search from "./Search"
 
 const RESULTS_PER_PAGE: number = 20
@@ -77,7 +77,10 @@ function Catalog() {
                 })}
             {products.length > RESULTS_PER_PAGE ? (
                 <Pagination
-                    pages={Math.floor(products.length / RESULTS_PER_PAGE) + 1}
+                    pages={
+                        Math.floor(products.length / RESULTS_PER_PAGE) +
+                        (products.length % RESULTS_PER_PAGE > 0 ? 1 : 0)
+                    }
                     currentPage={startIndex / RESULTS_PER_PAGE + 1}
                     setPage={(page: number) =>
                         setStartIndex(page * RESULTS_PER_PAGE)

@@ -3,9 +3,9 @@ import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
 import ListGroup from "react-bootstrap/ListGroup"
 import { Link } from "react-router-dom"
-import { getOperatingSystemString } from "../../entities/OperatingSystem"
-import { getProductTypeString } from "../../entities/ProductType"
-import CatalogService from "../../services/CatalogService"
+import { getOperatingSystemString } from "../entities/OperatingSystem"
+import { getProductTypeString } from "../entities/ProductType"
+import CatalogService from "../services/CatalogService"
 
 function ProductCard({
     catalog,
