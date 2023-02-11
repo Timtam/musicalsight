@@ -25,6 +25,7 @@ function Catalog() {
 
     useEffect(() => {
         setProducts(catalog.getProducts(filter))
+        setStartIndex(0)
     }, [filter, catalog])
 
     return (
