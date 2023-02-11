@@ -735,3 +735,15 @@ demo = "https://www.youtube.com/watch?v=XCc9xl2An4Q"
 prize = 100
 description = """a very high quality VST housing over 70 Indian Instruments."""
 os = ["windows","mac_intel","mac_arm","linux"] 
+
+[afroplug]
+name = "Afroplug"
+url = "https://www.afroplug.com/"
+
+[afroplug.products.afro-plugin]
+name = "Afro Plugin"
+type = "vsti"
+url = "https://www.afroplug.com/product/afroplugin-drum-vst/"
+prize = 0
+description = """must to have plugin if you are into making African music."""
+os = ["windows","mac_intel","mac_arm"]

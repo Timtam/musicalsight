@@ -375,7 +375,9 @@ function CatalogSubmit() {
 
                             msg += dedent`[${vendorId}]
     name = "${data.vendorName}"
-    url = "${data.vendorUrl}"\n`
+    url = "${data.vendorUrl}"`
+
+msg += '\n'
                         } else {
                             vendorId = data.vendor
                         }
@@ -396,12 +398,16 @@ function CatalogSubmit() {
                                 msg += `nks = "${data.nks_additional}"\n`
                             else msg += "nks = true\n"
                         }
-                        if (data.description !== "")
+                        if (data.description !== "") {
                             msg += dedent`description = """\
-${data.description}"""\n`
-                        if (data.accessibility_description !== "")
+${data.description}"""`
+msg += '\n'
+}
+                        if (data.accessibility_description !== "") {
                             msg += dedent`accessibility_description = """\
-${data.description}"""\n`
+${data.description}"""`
+msg += '\n'
+}
                         if (data.oss.length > 0)
                             msg += `os = ${JSON.stringify(data.oss)}\n`
 
