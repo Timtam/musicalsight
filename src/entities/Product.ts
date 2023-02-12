@@ -74,5 +74,5 @@ export default class Product {
     description: string = ""
 
     @Expose()
-    prize: number | undefined = undefined
+    price: number | undefined = undefined
 }

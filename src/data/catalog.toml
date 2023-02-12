@@ -8,7 +8,7 @@ type = "kontakt5"
 url = "https://8dio.com/products/1990-studio-grand-piano"
 size = 17300
 demo = "https://soundcloud.com/8dawn/8dio-1990-studio-grand-piano"
-prize = 198
+price = 198
 
 [8dio.products.adagio-violins1]
 name = "Adagio Violins Vol. 1"
@@ -16,7 +16,7 @@ type = "kontakt5"
 url = "https://8dio.com/products/adagio-violins"
 size = 15800
 demo = "https://soundcloud.com/8dawn/adagio-tech-demo-e-t-legato?in=8dawn/sets/adagio-violins-vol-1"
-prize = 78
+price = 78
 
 [8dio.products.aura-guitars]
 name = "Aura Guitars"
@@ -24,7 +24,7 @@ type = "kontakt5"
 url = "https://8dio.com/products/aura-guitars-for-kontakt-vst-au-aax"
 size = 8330
 demo = "https://soundcloud.com/8dawn/8dio-aura-guitars-the-nexus-by"
-prize = 238
+price = 238
 
 [8dio.products.aura-studio-exotic-percussion1]
 name = "Aura Studio Exotic Percussion Vol. 1"
@@ -32,7 +32,7 @@ type = "kontakt5"
 url = "https://8dio.com/products/aura-tonal-exotic-studio-percussion"
 size = 7530
 demo = "https://www.youtube.com/watch?v=Bth8cgHUOls"
-prize = 198
+price = 198
 
 [8dio.products.soul-series-christopher-young]
 name = "Soul Series - Christopher Young"
@@ -40,7 +40,7 @@ type = "kontakt5"
 url = "https://8dio.com/products/young-the-collection"
 size = 20100
 demo = "https://soundcloud.com/8dawn/soul-series-christopher-young-the-collection-6-by-troels-folmann"
-prize = 398
+price = 398
 
 [8dio.products.claire-alto-flute-virtuoso]
 name = "Claire - Alto Flute Virtuoso"
@@ -48,7 +48,7 @@ size = 6430
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=XuPmKYOIT7k"
 url = "https://8dio.com/products/alto-flute-virtuoso"
-prize = 98
+price = 98
 
 [8dio.products.claire-bassoon-virtuoso]
 name = "Claire - Bassoon Virtuoso"
@@ -56,7 +56,7 @@ size = 5010
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=fh1z7CbP03M"
 url = "https://8dio.com/products/bassoon-virtuoso"
-prize = 98
+price = 98
 
 [8dio.products.claire-clarinet-virtuoso]
 name = "Claire - Clarinet Virtuoso"
@@ -64,7 +64,7 @@ size = 5660
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=bmoBSsUQD0M"
 url = "https://8dio.com/products/clarinet-virtouso"
-prize = 98
+price = 98
 
 [8dio.products.claire-flute-virtuoso]
 name = "Claire - Flute Virtuoso"
@@ -72,7 +72,7 @@ size = 4890
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=uP37J3YC19M"
 url = "https://8dio.com/products/flute-virtuoso"
-prize = 98
+price = 98
 
 [8dio.products.claire-oboe-virtuoso]
 name = "Claire - Oboe Virtuoso"
@@ -80,7 +80,7 @@ size = 4540
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=FaBM25kTbvk"
 url = "https://8dio.com/products/oboe-virtuoso"
-prize = 98
+price = 98
 
 [impact-soundworks]
 name = "Impact Soundworks"
@@ -92,7 +92,7 @@ size = 1200
 type = "kontakt4"
 demo = "https://www.youtube.com/watch?v=iU9d9uK-4Cg"
 url = "https://impactsoundworks.com/product/curio-cinematic-toy-piano/"
-prize = 59
+price = 59
 
 [8dio.products.dobro-bundle]
 name = "Instant Guitar Series Dobro Guitar Bundle"
@@ -100,7 +100,7 @@ size = 7950
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/instant-guitar-collection"
 url = "https://8dio.com/products/instant-dobro"
-prize = 98
+price = 98
 
 [8dio.products.edm-drumstep1]
 name = "EDM Drumstep Vol. 1"
@@ -108,7 +108,7 @@ size = 2060
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=evN5MVjl3AU"
 url = "https://8dio.com/products/edm-drumstep-1"
-prize = 20
+price = 20
 
 [8dio.products.edm-trap]
 name = "EDM Trap"
@@ -116,7 +116,7 @@ size = 3460
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=c6XRMrL9xXA"
 url = "https://8dio.com/products/edm-trap"
-prize = 20
+price = 20
 
 [8dio.products.epic-toms-ensemble]
 name = "Epic Toms Ensemble"
@@ -124,7 +124,7 @@ size = 1440
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=CBX2qnSm1Lo"
 url = "https://8dio.com/products/epic-toms-ensemble"
-prize = 78
+price = 78
 
 [8dio.products.forgotten-voices-terrie]
 name = "Forgotten Voices - Terrie"
@@ -132,7 +132,7 @@ size = 2100
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=sx_GaKw7664"
 url = "https://8dio.com/products/new-terrie-solo-vocal-instrument-kontakt-vst-au-aax"
-prize = 48
+price = 48
 
 [8dio.products.hybrid-tools-dark-prophecy]
 name = "Hybrid Tools Dark Prophecy"
@@ -140,7 +140,7 @@ size = 16200
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/8dio-hybrid-tools-dark-prophecy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
 url = "https://8dio.com/products/hybrid-tools-dark-prophecy"
-prize = 198
+price = 198
 
 [8dio.products.hybrid-tools-terminus]
 name = "Hybrid Tools Terminus"
@@ -148,7 +148,7 @@ size = 4270
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=ogFCVQNo-MU"
 url = "https://8dio.com/products/terminus"
-prize = 348
+price = 348
 
 [8dio.products.insolidus-choir]
 name = "Insolidus Choir"
@@ -156,7 +156,7 @@ size = 37300
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=k7P9aN_ujgA"
 url = "https://8dio.com/products/insolidus-choir-for-kontakt-vst-au-aax-samples"
-prize = 495
+price = 495
 
 [8dio.products.intimate-studio-woodwinds]
 name = "Intimate Studio Woodwinds"
@@ -164,7 +164,7 @@ size = 10300
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/8dio-intimate-studio-woodwinds-library-of-dreams-lionel-schmitt"
 url = "https://8dio.com/products/intimate-studio-woodwinds"
-prize = 248
+price = 248
 
 [8dio.products.lacrimosa-epic-choir]
 name = "Lacrimosa Epic Choir"
@@ -172,7 +172,7 @@ size = 17500
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/8dio-lacrimosa-epic-choir-2?in=8dawn/sets/8dio-lacrimosa-epic-choir-200-singers"
 url = "https://8dio.com/products/lacrimosa-epic-choir-for-kontakt-vst-au-aax"
-prize = 498
+price = 498
 
 [8dio.products.legion-series-33-drummers-batucada]
 name = "Legion Series 33 Drummers Batucada"
@@ -180,7 +180,7 @@ size = 2690
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/8dio-batucada-lions-den-by-robin-hall"
 url = "https://8dio.com/products/batucada"
-prize = 248
+price = 248
 
 [8dio.products.liberis-angelic-choir]
 name = "Liberis Angelic Choir"
@@ -188,7 +188,7 @@ size = 11900
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/8dio-liberis-angelic-choir-the-divine-and-the-devilish-by-robin-hall?in=8dawn/sets/8dio-liberis-2-0-angelic-choir"
 url = "https://8dio.com/products/liberis-epic-childrens-choir"
-prize = 400
+price = 400
 
 [8dio.products.majestica]
 name = "Majestica"
@@ -196,7 +196,7 @@ size = 23500
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/majestica"
 url = "https://8dio.com/products/majestica-2-0"
-prize = 80
+price = 80
 
 [8dio.products.ostinato-strings-chapter-2]
 name = "Ostinato Strings Chapter 2"
@@ -204,7 +204,7 @@ size = 7560
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/8dio-ostinato-strings-chapter-2"
 url = "https://8dio.com/products/century-advanced-ostinato-strings-ii-2"
-prize = 238
+price = 238
 
 [8dio.products.productions-requiem-professional]
 name = "Professionals Requiem Professional"
@@ -212,7 +212,7 @@ size = 16400
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/requiem-pro"
 url = "https://8dio.com/products/requiem-professional"
-prize = 50
+price = 50
 
 [8dio.products.rhythmic-revolution]
 name = "Rhythmic Revolution"
@@ -220,7 +220,7 @@ size = 6620
 type = "kontakt5"
 demo = "https://www.youtube.com/watch?v=hN9h-ftfqFY"
 url = "https://8dio.com/products/rhythmic-revolution"
-prize = 198
+price = 198
 
 [8dio.products.santur]
 name = "Santur"
@@ -228,7 +228,7 @@ size = 4420
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/8dio-santur"
 url = "https://8dio.com/products/santur-vst-au-aax-kontakt-instrument"
-prize = 58
+price = 58
 
 [8dio.products.silka-choir]
 name = "Silka Choir"
@@ -236,7 +236,7 @@ size = 13400
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/8dio-silka-choir-teaser-3-by-troels-folmann"
 url = "https://8dio.com/products/silka"
-prize = 495
+price = 495
 
 [8dio.products.solo-studio-violin]
 name = "Studio Series - Deep Solo Violin"
@@ -244,7 +244,7 @@ size = 11610
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/8dio-studio-series-deep-solo-violin"
 url = "https://8dio.com/products/solo-studio-strings-violin"
-prize = 98
+price = 98
 
 [8dio.products.studio-vintage-hammond-organ]
 name = "Studio Vintage Hammond Organ"
@@ -252,7 +252,7 @@ size = 14200
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/8dio-studio-hammond-vintage-organ"
 url = "https://8dio.com/products/studio-vintage-series-studio-hammond-for-kontakt-vst-au-aax"
-prize = 98
+price = 98
 
 [8dio.products.symphonic-shadows]
 name = "Symphonic Shadows"
@@ -260,7 +260,7 @@ size = 4210
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/8dio-symphonic-shadows"
 url = "https://8dio.com/products/symphonic-shadows"
-prize = 198
+price = 198
 
 [8dio.products.ambient-guitar]
 name = "Ambient Guitar"
@@ -268,7 +268,7 @@ size = 2660
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/ambient-guitar"
 url = "https://8dio.com/products/the-new-ambient-guitar-vst-au-aax-kontakt-instruments-samples"
-prize = 98
+price = 98
 
 [8dio.products.epic-dhol-ensemble]
 name = "Epic Dhol Ensemble"
@@ -276,7 +276,7 @@ size = 1100
 type = "kontakt5"
 demo = "https://soundcloud.com/8dawn/sets/epic-dhol-ensemble"
 url = "https://8dio.com/products/epic-dhol-ensemble"
-prize = 78
+price = 78
 
 [aaron-venture]
 name = "Aaron Venture"
@@ -296,7 +296,7 @@ url = "https://surge-synthesizer.github.io/"
 [surge-synth-team.products.surge-xt]
 name = "Surge XT"
 url = "https://surge-synthesizer.github.io/"
-prize = 0
+price = 0
 description = """\
 Surge XT is a hybrid subtractive synthesizer which is
 nowadays free and open source synthesizer. It has three oscillators
@@ -331,7 +331,7 @@ url = "https://www.ariasounds.com/"
 [aria-sounds.products.aurora-choir]
 name = "Aurora Choir"
 size = 9180
-prize = 399
+price = 399
 url = "https://www.ariasounds.com/aurora-choir.html"
 type = "kontakt4"
 demo = "https://www.youtube.com/watch?v=xmclSI88Odo"
@@ -339,7 +339,7 @@ demo = "https://www.youtube.com/watch?v=xmclSI88Odo"
 [aria-sounds.products.bansuri-flute]
 name = "Bansuri Flute"
 url = "https://www.ariasounds.com/kontakt_indian_bansuri_instrument_vst.html"
-prize = 35.99
+price = 35.99
 size = 797
 type = "kontakt4"
 
@@ -347,14 +347,14 @@ type = "kontakt4"
 name = "Catalyst Cinematic Percussion"
 size = 3040
 type = "kontakt4"
-prize = 99
+price = 99
 demo = "https://soundcloud.com/aria-sounds/sets/catalyst-cinematic-percussion"
 url = "https://www.ariasounds.com/catalyst_kontakt_drums_percussion.html"
 
 [aria-sounds.products.celtic-harp]
 name = "Celtic Harp"
 url = "https://www.ariasounds.com/kontakt_celtic_harp_vst_instrument.html"
-prize = 35.99
+price = 35.99
 type = "kontakt4"
 size = 860
 demo = "https://soundcloud.com/aria-sounds/kontakt-celtic-harp-by-aria"
@@ -364,7 +364,7 @@ name = "Classical Guitarist"
 size = 701
 demo = "https://www.youtube.com/watch?v=_9Qa8ebtdyY"
 url = "https://www.ariasounds.com/classical_guitar_virtual_instrument.html"
-prize = 35.99
+price = 35.99
 type = "kontakt5"
 
 [aria-sounds.products.colossal-toms]
@@ -373,20 +373,20 @@ size = 5930
 demo = "https://soundcloud.com/aria-sounds/colossal-toms-demo-2"
 type = "kontakt5"
 url = "https://www.ariasounds.com/kontakt_epic_drums_colossal_toms.html"
-prize = 39
+price = 39
 
 [aria-sounds.products.london-solo-french-horn]
 name = "London Solo French Horn"
 size = 349
 demo = "https://www.youtube.com/watch?v=Ym2rRxzpBU4"
 url = "https://www.ariasounds.com/french_horn_kontakt_vst.html"
-prize = 79
+price = 79
 type = "kontakt4"
 
 [aria-sounds.products.hybrichord-1]
 name = "Hybrichord Vol. 1"
 size = 4240
-prize = 39
+price = 39
 type = "kontakt4"
 url = "https://www.ariasounds.com/hybrichord_cinematic_piano_sonic_landscapes.html"
 
@@ -395,7 +395,7 @@ name = "London Solo Double Bass"
 size = 4280
 demo = "https://www.youtube.com/watch?v=veKm2O0WvBQ"
 url = "https://www.ariasounds.com/lss-solo-double-bass.html"
-prize = 69
+price = 69
 type = "kontakt4"
 
 [aria-sounds.products.london-solo-viola]
@@ -403,7 +403,7 @@ name = "London Solo Viola"
 size = 4130
 demo = "https://soundcloud.com/aria-sounds/lss-solo-strings-demo-beyond?in=aria-sounds/sets/lss-solo-violin-demos"
 type = "kontakt4"
-prize = 69
+price = 69
 url = "https://www.ariasounds.com/lss-solo-viola.html"
 
 [aria-sounds.products.london-solo-violin]
@@ -412,27 +412,27 @@ size = 4730
 demo = "https://soundcloud.com/aria-sounds/lss-solo-strings-demo-quintet-excerpt"
 type = "kontakt4"
 url = "https://www.ariasounds.com/kontakt_violin_instrument_vst.html"
-prize = 69
+price = 69
 
 [aria-sounds.products.pipe-organ]
 name = "Pipe Organ"
 demo = "https://soundcloud.com/aria-sounds/organ-demo-lament"
 type = "kontakt4"
 url = "https://www.ariasounds.com/church_pipe_organ_vst_kontakt_instrument.html"
-prize = 49
+price = 49
 size = 1860
 
 [aria-sounds.products.surdos-and-snares]
 name = "Surdos And Snares"
 size = 6100
-prize = 39
+price = 39
 url = "https://www.ariasounds.com/aria_sounds_surdos_snares_percussion.html"
 type = "kontakt4"
 
 [aria-sounds.products.xiao]
 name = "Xiao"
 url = "https://www.ariasounds.com/kontakt_chinese_xiao_flute.html"
-prize = 35.99
+price = 35.99
 size = 537
 type = "kontakt4"
 
@@ -447,7 +447,7 @@ size = 4140
 type = "kontakt6"
 nks = true
 demo = "https://www.youtube.com/watch?v=j1lyogcfRiU"
-prize = 199
+price = 199
 
 [artistry-audio.products.scorpio]
 name = "Scorpio"
@@ -455,7 +455,7 @@ url = "https://artistryaudio.com/scorpio/"
 size = 2890
 type = "kontakt6"
 demo = "https://www.youtube.com/watch?v=e8V63_71laY"
-prize = 149
+price = 149
 
 [auddict]
 name = "Auddict"
@@ -465,7 +465,7 @@ url = "https://www.auddict.com/"
 name = "Celestial Voices Calypso"
 type = "kontakt4"
 url = "https://www.auddict.com/celestial-voices-calypso"
-prize = 130
+price = 130
 size = 2460
 demo = "https://soundcloud.com/auddict-77772158/sets/celestial-voices-calypso"
 
@@ -475,12 +475,12 @@ url = "https://www.auddict.com/drums-of-the-deep-ii-unleashed"
 size = 27000
 demo = "https://soundcloud.com/dorianmarko/im-just-getting-started?in=auddict-77772158/sets/drums-of-the-deep-ii-unleashed"
 type = "kontakt4"
-prize = 250
+price = 250
 
 [auddict.products.master-brass-trombones]
 name = "Master Brass: Trombones"
 url = "https://www.auddict.com/master-brass-trombones"
-prize = 60
+price = 60
 type = "kontakt4"
 size = 6800
 demo = "https://soundcloud.com/auddict-77772158/trombones-demo-24"
@@ -489,14 +489,14 @@ demo = "https://soundcloud.com/auddict-77772158/trombones-demo-24"
 name = "Master Brass: Tubas"
 url = "https://www.auddict.com/mb-tubas"
 demo = "https://soundcloud.com/auddict-77772158/auddict-master-brass-expedition"
-prize = 50
+price = 50
 size = 5600
 type = "kontakt4"
 
 [auddict.products.master-solo-woodwinds]
 name = "Master Solo Woodwinds Bundle"
 url = "https://www.auddict.com/master-solo-woodwinds-bundle"
-prize = 550
+price = 550
 type = "kontakt4"
 size = 46200
 demo = "https://soundcloud.com/auddict-77772158/master-solo-woodwinds-robin?in=auddict-77772158/sets/master-solo-woodwinds"
@@ -504,7 +504,7 @@ demo = "https://soundcloud.com/auddict-77772158/master-solo-woodwinds-robin?in=a
 [auddict.products.virtuosic-violin]
 name = "Virtuosic Violin"
 url = "https://www.auddict.com/virtuosic-violin"
-prize = 120
+price = 120
 type = "kontakt4"
 size = 8000
 demo = "https://soundcloud.com/auddict-77772158/virtuosic-violin-nocturne?in=auddict-77772158/sets/auddict-virtuoso-violin"
@@ -513,7 +513,7 @@ demo = "https://soundcloud.com/auddict-77772158/virtuosic-violin-nocturne?in=aud
 name = "Octohorn"
 url = "https://www.auddict.com/octohorn"
 type = "kontakt4"
-prize = 60
+price = 60
 demo = "https://www.youtube.com/watch?v=M2lXGlGrMwo"
 size = 7000
 
@@ -521,14 +521,14 @@ size = 7000
 name = "Angel Strings Vol. 1"
 url = "https://www.auddict.com/angelstrings"
 demo = "https://www.youtube.com/watch?v=-SBcXNDK45U"
-prize = 220
+price = 220
 type = "kontakt4"
 size = 60000
 
 [auddict.products.united-strings-of-europe]
 name = "United Strings Of Europe"
 url = "https://www.auddict.com/use"
-prize = 700
+price = 700
 demo = "https://soundcloud.com/auddict-77772158/united-strings-of-europe-first-violins-demo-1?in=auddict-77772158/sets/united-strings-of-europe"
 type = "kontakt4"
 size = 60000
@@ -540,7 +540,7 @@ url = "https://www.audioimperia.com/"
 [audio-imperia.products.areia]
 name = "Areia Cinematic Ensemble Strings"
 url = "https://www.audioimperia.com/collections/all/products/areia"
-prize = 399
+price = 399
 nks = true
 size = 68000
 demo = "https://soundcloud.com/audioimperia/sets/areia"
@@ -550,7 +550,7 @@ type = "kontakt6"
 [audio-imperia.products.areia-lite]
 name = "Areia Lite Edition"
 url = "https://www.audioimperia.com/collections/all/products/areia-lite-edition-made-for-kontakt-player"
-prize = 99
+price = 99
 nks = true
 type = "kontakt6"
 size = 13000
@@ -562,14 +562,14 @@ name = "Artifact Reanimate"
 url = "https://www.audioimperia.com/collections/all/products/artifact-reanimate-1"
 type = "kontakt6"
 nks = true
-prize = 249
+price = 249
 size = 3630
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/artifact-reanimate"
 
 [audio-imperia.products.cerberus]
 name = "Cerberus"
-prize = 299
+price = 299
 url = "https://www.audioimperia.com/collections/all/products/cerberus"
 type = "kontakt6"
 size = 19511
@@ -579,7 +579,7 @@ demo = "https://soundcloud.com/audioimperia/sets/cerberus"
 
 [audio-imperia.products.chorus]
 name = "Chorus"
-prize = 499
+price = 499
 size = 69298
 url = "https://www.audioimperia.com/collections/all/products/chorus-modern-cinematic-and-symphonic-choir-for-kontakt-player"
 nks = true
@@ -594,7 +594,7 @@ type = "kontakt6"
 nks = true
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/chorus"
-prize = 99
+price = 99
 size = 2700
 
 [audio-imperia.products.constrictor]
@@ -602,14 +602,14 @@ name = "Constrictor"
 url = "https://www.audioimperia.com/collections/all/products/constrictor"
 nks = true
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
-prize = 249
+price = 249
 type = "kontakt6"
 size = 30000
 demo = "https://soundcloud.com/audioimperia/sets/constrictor"
 
 [audio-imperia.products.jaeger]
 name = "Jaeger"
-prize = 599
+price = 599
 url = "https://www.audioimperia.com/collections/all/products/jaeger-essential-modern-orchestra"
 nks = true
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
@@ -621,7 +621,7 @@ size = 52596
 name = "Klavier"
 url = "https://www.audioimperia.com/collections/all/products/klavier"
 type = "kontakt6"
-prize = 199
+price = 199
 nks = true
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/klavier"
@@ -632,7 +632,7 @@ name = "Legacy"
 url = "https://www.audioimperia.com/collections/all/products/legacy-cinematic-sfx-collection-for-kontakt-player"
 type = "kontakt6"
 nks = true
-prize = 199
+price = 199
 size = 4120
 demo = "https://soundcloud.com/audioimperia/sets/legacy"
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
@@ -645,7 +645,7 @@ url = "https://www.audioimperia.com/collections/all/products/nucleus"
 size = 29627
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/nucleus"
-prize = 449
+price = 449
 
 [audio-imperia.products.nucleus-lite]
 name = "Nucleus Lite Edition"
@@ -655,12 +655,12 @@ url = "https://www.audioimperia.com/collections/all/products/nucleus-lite-editio
 size = 5000
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/nucleus"
-prize = 99
+price = 99
 
 [audio-imperia.products.photosynthesis]
 name = "Photosynthesis"
 url = "https://www.audioimperia.com/collections/all/products/photosynthesis"
-prize = 199
+price = 199
 type = "kontakt6"
 nks = true
 demo = "https://soundcloud.com/audioimperia/sets/photosynthesis-vol-2-mystic-by"
@@ -674,14 +674,14 @@ nks = true
 type = "kontakt6"
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 size = 89822
-prize = 299
+price = 299
 demo = "https://soundcloud.com/audioimperia/sets/solo"
 
 [audio-imperia.products.talos]
 name = "Talos"
 nks = true
 type = "kontakt6"
-prize = 399
+price = 399
 url = "https://www.audioimperia.com/collections/all/products/talos-epic-brass-ensembles"
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 size = 10724
@@ -690,7 +690,7 @@ demo = "https://soundcloud.com/audioimperia/sets/talos"
 [audio-imperia.products.trailer-guitars-2]
 name = "Trailer Guitars 2"
 url = "https://www.audioimperia.com/collections/all/products/trailer-guitars-2"
-prize = 249
+price = 249
 nks = true
 type = "kontakt6"
 size = 5577
@@ -706,7 +706,7 @@ name = "DSK Indian Dreamz"
 type = "vsti"
 url = "https://www.dskmusic.com/dsk-indian-dreamz/"
 demo = "https://www.youtube.com/watch?v=D6duQyz27qw"
-prize = 0
+price = 0
 description = """this Free VST has got 6 Nice and very Realistic Indian Instruments."""
 os = ["windows"]
 
@@ -719,7 +719,7 @@ name = "Acoustic Indian Dhol"
 type = "vsti"
 url = "https://rdgaudio.com/acoustic-indian-dhol/"
 demo = "https://www.youtube.com/watch?v=C-KVd4yWcWc"
-prize = 0
+price = 0
 description = """this is a fantastic Instrument plugin if you are looking for a real sounding Dhol."""
 os = ["windows","mac_intel","mac_arm"] 
 
@@ -732,7 +732,7 @@ name = "Swar Plug 4"
 type = "vsti"
 url = "https://www.swarvst.com/shop/article.php?art=105012"
 demo = "https://www.youtube.com/watch?v=XCc9xl2An4Q"
-prize = 100
+price = 100
 description = """a very high quality VST housing over 70 Indian Instruments."""
 os = ["windows","mac_intel","mac_arm","linux"] 
 
@@ -744,6 +744,6 @@ url = "https://www.afroplug.com/"
 name = "Afro Plugin"
 type = "vsti"
 url = "https://www.afroplug.com/product/afroplugin-drum-vst/"
-prize = 0
+price = 0
 description = """must to have plugin if you are into making African music."""
 os = ["windows","mac_intel","mac_arm"]

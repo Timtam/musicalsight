@@ -80,9 +80,9 @@ class CatalogService {
                 return false
 
             if (
-                p.prize !== undefined &&
-                (f.prizeFrom > 0 || f.prizeTo > 0) &&
-                (p.prize < f.prizeFrom || p.prize > f.prizeTo)
+                p.price !== undefined &&
+                (f.priceFrom > 0 || f.priceTo > 0) &&
+                (p.price < f.priceFrom || p.price > f.priceTo)
             )
                 return false
 

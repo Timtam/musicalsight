@@ -45,12 +45,12 @@ function ProductCard({
                         </Link>
                     </ListGroup.Item>
                     <ListGroup.Item>
-                        {"Prize: " +
-                            (product.prize === undefined
+                        {"Price: " +
+                            (product.price === undefined
                                 ? "unknown"
-                                : product.prize === 0
+                                : product.price === 0
                                 ? "free"
-                                : `$${product.prize}`)}
+                                : `$${product.price}`)}
                     </ListGroup.Item>
                     <ListGroup.Item>{`Type: ${getProductTypeString(
                         product.type

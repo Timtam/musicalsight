@@ -19,7 +19,7 @@ const createFormData = () => ({
     url: "",
     demo: "",
     size: undefined as number | undefined,
-    prize: undefined as number | undefined,
+    price: undefined as number | undefined,
     nks: "no",
     nks_additional: "",
     description: "",
@@ -144,18 +144,18 @@ function CatalogSubmit() {
                             })
                         }
                     />
-                    <Form.Label for="form-details-prize">
-                        Prize in USD (enter 0 if the product is free, leave
+                    <Form.Label for="form-details-price">
+                        Price in USD (enter 0 if the product is free, leave
                         empty if unknown)
                     </Form.Label>
                     <Form.Control
                         type="number"
-                        id="form-details-prize"
-                        value={data.prize !== undefined ? data.prize : ""}
+                        id="form-details-price"
+                        value={data.price !== undefined ? data.price : ""}
                         onChange={(evt) =>
                             setData({
                                 ...data,
-                                prize:
+                                price:
                                     evt.target.value !== ""
                                         ? parseInt(evt.target.value)
                                         : undefined,
@@ -377,7 +377,7 @@ function CatalogSubmit() {
     name = "${data.vendorName}"
     url = "${data.vendorUrl}"`
 
-msg += '\n'
+                            msg += "\n"
                         } else {
                             vendorId = data.vendor
                         }
@@ -391,8 +391,8 @@ msg += '\n'
                             msg += `size = ${data.size}\n`
                         if (data.url !== "") msg += `url = "${data.url}"\n`
                         if (data.demo !== "") msg += `demo = "${data.demo}"\n`
-                        if (data.prize !== undefined)
-                            msg += `prize = ${data.prize}\n`
+                        if (data.price !== undefined)
+                            msg += `price = ${data.price}\n`
                         if (data.nks === "yes") {
                             if (data.nks_additional !== "")
                                 msg += `nks = "${data.nks_additional}"\n`
@@ -401,13 +401,13 @@ msg += '\n'
                         if (data.description !== "") {
                             msg += dedent`description = """\
 ${data.description}"""`
-msg += '\n'
-}
+                            msg += "\n"
+                        }
                         if (data.accessibility_description !== "") {
                             msg += dedent`accessibility_description = """\
 ${data.description}"""`
-msg += '\n'
-}
+                            msg += "\n"
+                        }
                         if (data.oss.length > 0)
                             msg += `os = ${JSON.stringify(data.oss)}\n`
 

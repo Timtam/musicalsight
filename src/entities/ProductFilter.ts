@@ -8,8 +8,8 @@ export interface ProductFilter {
     searchQuery: string
     enabled: boolean
     vendors: string[]
-    prizeFrom: number
-    prizeTo: number
+    priceFrom: number
+    priceTo: number
     nks: boolean | undefined
     types: ProductType[]
     oss: OperatingSystem[]
@@ -20,8 +20,8 @@ export const createProductFilter = (): ProductFilter => {
         searchQuery: "",
         enabled: false,
         vendors: [],
-        prizeFrom: 0,
-        prizeTo: 0,
+        priceFrom: 0,
+        priceTo: 0,
         nks: undefined,
         types: [],
         oss: [],

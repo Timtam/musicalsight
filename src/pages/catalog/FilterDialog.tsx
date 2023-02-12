@@ -28,16 +28,16 @@ function FilterDialog({
     let sorter = useMemo(() => natsort(), [])
     let [show, setShow] = useState(false)
     let [vendors, setVendors] = useState([] as string[])
-    let [prizeFrom, setPrizeFrom] = useState(0)
-    let [prizeTo, setPrizeTo] = useState(0)
+    let [priceFrom, setPriceFrom] = useState(0)
+    let [priceTo, setPriceTo] = useState(0)
     let [nks, setNks] = useState(undefined as boolean | undefined)
     let [types, setTypes] = useState([] as ProductType[])
     let [oss, setOss] = useState([] as OperatingSystem[])
 
     useEffect(() => {
         setVendors(filter === undefined ? [] : filter.vendors)
-        setPrizeFrom(filter === undefined ? 0 : filter.prizeFrom)
-        setPrizeTo(filter === undefined ? 0 : filter.prizeTo)
+        setPriceFrom(filter === undefined ? 0 : filter.priceFrom)
+        setPriceTo(filter === undefined ? 0 : filter.priceTo)
         setNks(filter === undefined ? undefined : filter.nks)
         setTypes(filter === undefined ? [] : filter.types)
         setOss(filter === undefined ? [] : filter.oss)
@@ -95,34 +95,34 @@ function FilterDialog({
                                     />
                                 ))}
                         </Form.Group>
-                        <h4>Prize</h4>
-                        <Form.Group controlId="formPrize">
+                        <h4>Price</h4>
+                        <Form.Group controlId="formPrice">
                             <Form.Label>From $</Form.Label>
                             <Form.Control
                                 type="number"
-                                value={prizeFrom}
+                                value={priceFrom}
                                 onChange={(evt) => {
                                     let n: number = parseInt(evt.target.value)
 
                                     if (isNaN(n)) {
-                                        setPrizeFrom(0)
+                                        setPriceFrom(0)
                                         return
                                     }
-                                    setPrizeFrom(n)
+                                    setPriceFrom(n)
                                 }}
                             />
                             <Form.Label>To $</Form.Label>
                             <Form.Control
                                 type="number"
-                                value={prizeTo}
+                                value={priceTo}
                                 onChange={(evt) => {
                                     let n: number = parseInt(evt.target.value)
 
                                     if (isNaN(n)) {
-                                        setPrizeTo(0)
+                                        setPriceTo(0)
                                         return
                                     }
-                                    setPrizeTo(n)
+                                    setPriceTo(n)
                                 }}
                             />
                         </Form.Group>
@@ -294,8 +294,8 @@ function FilterDialog({
                         onApply({
                             ...(filter as unknown as ProductFilter),
                             vendors: vendors,
-                            prizeFrom: prizeFrom,
-                            prizeTo: prizeTo,
+                            priceFrom: priceFrom,
+                            priceTo: priceTo,
                             nks: nks,
                             types: types,
                             oss: oss,
