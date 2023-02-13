@@ -747,3 +747,42 @@ url = "https://www.afroplug.com/product/afroplugin-drum-vst/"
 price = 0
 description = """must to have plugin if you are into making African music."""
 os = ["windows","mac_intel","mac_arm"]
+
+[99sounds]
+name = "99Sounds"
+url = "http://rudifiasco.altervista.org/"
+
+[99sounds.products.upright-piano]
+name = "Upright Piano"
+type = "vsti"
+url = "http://rudifiasco.altervista.org/"
+demo = "https://www.youtube.com/watch?v=lTm-jfhEOcg"
+price = 0
+description = """a nice upright Piano which sounds real and its all free to use."""
+os = ["windows","mac_intel"]
+
+[electronik-sound-lab]
+name = "Electronik Sound Lab"
+url = "https://electroniksoundlab.com/"
+
+[electronik-sound-lab.products.atmos-3]
+name = "Atmos 3"
+type = "vsti"
+url = "https://electroniksoundlab.com/atmos-3-lite/"
+demo = "https://www.youtube.com/watch?v=liJgnBOhqos"
+price = 0
+description = """this is a nice grand piano if you are into atmos stile music production"""
+os = ["windows"]
+
+[xoxos]
+name = "Xoxos"
+url = "https://xoxos.net/vst/"
+
+[xoxos.products.boin-2]
+name = "Boin 2"
+type = "vsti"
+url = "https://freevstplugins.net/wp-content/uploads/get-it/boing2.zip"
+demo = "https://www.youtube.com/watch?v=O5eCRSFX8m4"
+price = 0
+description = """this is a large collection of bowed string Instruments"""
+os = ["windows"]

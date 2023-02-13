@@ -52,7 +52,7 @@ function CatalogProduct() {
                 </li>
                 <li>
                     Vendor:{" "}
-                    <Link to={`/vendor/${product!.vendor.id}`}>
+                    <Link to={`/catalog/vendor/${product!.vendor.id}`}>
                         {product!.vendor.name}
                     </Link>
                 </li>
