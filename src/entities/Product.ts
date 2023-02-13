@@ -62,7 +62,7 @@ export default class Product {
             toClassOnly: true,
         }
     )
-    size: Number
+    size: number
 
     @Expose()
     url: string = ""

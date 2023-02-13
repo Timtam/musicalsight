@@ -104,6 +104,16 @@ function CatalogProduct() {
             ) : (
                 <h4>No accessibility description available</h4>
             )}
+            <h3>Seeing something unexpected?</h3>
+            <p>
+                In the case that you expected something else to show up here, or
+                you know that the information displayed on this page is wrong,
+                why not take a minute and update this product?{" "}
+                <Link to={`/catalog/submit?p=${product.id}`}>
+                    Just follow this link
+                </Link>
+                , I promise it won't take to long.
+            </p>
         </>
     )
 }

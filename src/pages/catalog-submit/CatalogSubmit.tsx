@@ -1,7 +1,8 @@
 import natsort from "natsort"
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
+import { useSearchParams } from "react-router-dom"
 import slugify from "slugify"
 import dedent from "ts-dedent"
 import Head from "../../components/Head"
@@ -9,23 +10,26 @@ import {
     getOperatingSystemString,
     OperatingSystem,
 } from "../../entities/OperatingSystem"
+import Product from "../../entities/Product"
 import { getProductTypeString, ProductType } from "../../entities/ProductType"
 import CatalogService from "../../services/CatalogService"
 import ResponseModal from "./ResponseModal"
 
-const createFormData = () => ({
-    name: "",
-    type: ProductType[0] as string,
-    url: "",
-    demo: "",
-    size: undefined as number | undefined,
-    price: undefined as number | undefined,
-    nks: "no",
-    nks_additional: "",
-    description: "",
-    accessibility_description: "",
-    oss: [] as string[],
-    vendor: "",
+const createFormData = (p?: Product) => ({
+    name: p?.name || "",
+    type: p?.type
+        ? ProductType[p.type].toLowerCase()
+        : (ProductType[0].toLowerCase() as string),
+    url: p?.url || "",
+    demo: p?.demo || "",
+    size: p?.size ? p.size / 1024 / 1024 : (undefined as number | undefined),
+    price: p?.price || (undefined as number | undefined),
+    nks: p?.nks || (false as boolean | string),
+    description: p?.description || "",
+    accessibility_description: p?.accessibility_description || "",
+    oss: (p?.os.map((os) => OperatingSystem[os].toLowerCase()) ||
+        []) as string[],
+    vendor: p?.vendor.id || "",
     vendorName: "",
     vendorUrl: "",
     userName: "",
@@ -40,18 +44,50 @@ function CatalogSubmit() {
         type: "" as "error" | "success" | "",
         message: "",
     })
+    let [searchParams] = useSearchParams()
+    let [update, setUpdate] = useState(false)
+
+    useEffect(() => {
+        let productId = searchParams.get("p")
+
+        if (productId && productId !== "") {
+            let product = catalog.getProductById(productId)
+            if (product) {
+                setData(createFormData(product))
+                setUpdate(true)
+            }
+        }
+    }, [searchParams, catalog])
 
     return (
         <>
-            <Head title="Submit a catalog entry" />
-            <h3>Submit a product to the catalog</h3>
-            <p>
-                In the case that you know a product which doesn't yet exist in
-                this catalog, you can enter all relevant data below and send it
-                to us. Please note however that the entry will not be inserted
-                automatically and it'll most likely take some time for the
-                catalog to update. Thank you for helping this catalog grow!
-            </p>
+            <Head
+                title={
+                    update ? "Update a catalog entry" : "Submit a catalog entry"
+                }
+            />
+            <h3>
+                {update
+                    ? "Update a product within the catalog"
+                    : "Submit a product to the catalog"}
+            </h3>
+            {update ? (
+                <p>
+                    All the product's data was autofilled into the form below.
+                    Feel free to update whatever information you want to correct
+                    and submit the changed entry by clicking the button on the
+                    bottom of the page. Thanks for your help!
+                </p>
+            ) : (
+                <p>
+                    In the case that you know a product which doesn't yet exist
+                    in this catalog, you can enter all relevant data below and
+                    send it to us. Please note however that the entry will not
+                    be inserted automatically and it'll most likely take some
+                    time for the catalog to update. Thank you for helping this
+                    catalog grow!
+                </p>
+            )}
             <ResponseModal
                 response={response}
                 onClose={(clean) => {
@@ -164,10 +200,17 @@ function CatalogSubmit() {
                     />
                     <Form.Label for="form-details-nks">NKS Support</Form.Label>
                     <Form.Select
-                        value={data.nks}
+                        value={
+                            data.nks === true || typeof data.nks === "string"
+                                ? "yes"
+                                : "no"
+                        }
                         id="form-details-nks"
                         onChange={(evt) =>
-                            setData({ ...data, nks: evt.target.value })
+                            setData({
+                                ...data,
+                                nks: evt.target.value === "yes" ? true : false,
+                            })
                         }
                     >
                         <option value="no">No</option>
@@ -177,15 +220,18 @@ function CatalogSubmit() {
                         Additional NKS information?
                     </Form.Label>
                     <Form.Control
-                        disabled={data.nks !== "yes"}
+                        disabled={data.nks !== true}
                         as="textarea"
                         id="form-details-nks-details"
                         placeholder="Enter additional information when necessary"
-                        value={data.nks_additional}
+                        value={typeof data.nks === "string" ? data.nks : ""}
                         onChange={(evt) =>
                             setData({
                                 ...data,
-                                nks_additional: evt.target.value,
+                                nks:
+                                    evt.target.value !== ""
+                                        ? evt.target.value
+                                        : true,
                             })
                         }
                     />
@@ -393,11 +439,9 @@ function CatalogSubmit() {
                         if (data.demo !== "") msg += `demo = "${data.demo}"\n`
                         if (data.price !== undefined)
                             msg += `price = ${data.price}\n`
-                        if (data.nks === "yes") {
-                            if (data.nks_additional !== "")
-                                msg += `nks = "${data.nks_additional}"\n`
-                            else msg += "nks = true\n"
-                        }
+                        if (typeof data.nks === "string")
+                            msg += `nks = "${data.nks}"\n`
+                        else msg += `nks = ${data.nks}\n`
                         if (data.description !== "") {
                             msg += dedent`description = """\
 ${data.description}"""`
@@ -421,7 +465,9 @@ ${data.description}"""`
                                 subject: string
                             } = {
                                 message: msg.replaceAll("\n", "<br />"),
-                                subject: `APIAC Product submission for product ${data.name}`,
+                                subject: update
+                                    ? `APIAC Product update for product ${data.name}`
+                                    : `APIAC Product submission for product ${data.name}`,
                                 accessKey:
                                     "56f0885e-efe6-4378-9bf4-673bc7b3b00d",
                             }
@@ -467,7 +513,7 @@ ${data.description}"""`
                     }}
                     variant="primary"
                 >
-                    Submit product
+                    {update ? "Submit update" : "Submit product"}
                 </Button>
             </Form>
         </>
