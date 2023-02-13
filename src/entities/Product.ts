@@ -74,5 +74,8 @@ export default class Product {
     description: string = ""
 
     @Expose()
+    accessibility_description: string = ""
+
+    @Expose()
     price: number | undefined = undefined
 }

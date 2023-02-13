@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
 import { Link, Route, Routes } from "react-router-dom"
+import CatalogProduct from "../pages/catalog-product/CatalogProduct"
 import CatalogSubmit from "../pages/catalog-submit/CatalogSubmit"
 import CatalogVendor from "../pages/catalog-vendor/CatalogVendor"
 import Catalog from "../pages/catalog/Catalog"
@@ -68,6 +69,10 @@ function Navigation() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/catalog" element={<Catalog />} />
+                        <Route
+                            path="/catalog/product/:productId"
+                            element={<CatalogProduct />}
+                        />
                         <Route
                             path="/catalog/vendor/:vendorId"
                             element={<CatalogVendor />}
