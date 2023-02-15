@@ -449,7 +449,7 @@ ${data.description}"""`
                         }
                         if (data.accessibility_description !== "") {
                             msg += dedent`accessibility_description = """\
-${data.description}"""`
+${data.accessibility_description}"""`
                             msg += "\n"
                         }
                         if (data.oss.length > 0)
