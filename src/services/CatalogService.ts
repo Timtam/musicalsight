@@ -9,15 +9,15 @@ import { ProductType } from "../entities/ProductType"
 import Vendor from "../entities/Vendor"
 
 class CatalogService {
-    vendors: Vendor[]
+    vendors: Map<string, Vendor>
     products: Product[]
 
     constructor() {
-        this.vendors = []
+        this.vendors = new Map()
         this.products = []
-        let data = toml.parse(raw("../data/catalog.toml"))
+        let vendors = toml.parse(raw("../data/vendors.toml"))
 
-        for (const [key, value] of Object.entries(data)) {
+        for (const [key, value] of Object.entries(vendors)) {
             let vendor = plainToClass(Vendor, value, {
                 excludeExtraneousValues: true,
                 exposeDefaultValues: true,
@@ -25,34 +25,43 @@ class CatalogService {
 
             vendor.id = key
 
-            if (typeof (value as any).products === "object") {
-                for (const [k, v] of Object.entries((value as any).products)) {
-                    let p = plainToClass(Product, v, {
-                        excludeExtraneousValues: true,
-                        exposeDefaultValues: true,
-                    })
+            this.vendors.set(key, vendor)
+        }
 
-                    p.vendor = vendor
-                    p.id = `${vendor.id}-${k}`
+        let products = toml.parse(raw("../data/products.toml"))
 
-                    // special cases for product types and os support
-                    switch (p.type) {
-                        case ProductType.KONTAKT4:
-                        case ProductType.KONTAKT5:
-                        case ProductType.KONTAKT6:
-                        case ProductType.KONTAKT7:
-                            p.os = [
-                                OperatingSystem.WINDOWS,
-                                OperatingSystem.MAC_INTEL,
-                                OperatingSystem.MAC_ARM,
-                            ]
-                    }
+        for (const [key, value] of Object.entries(products)) {
+            let p = plainToClass(Product, value, {
+                excludeExtraneousValues: true,
+                exposeDefaultValues: true,
+            })
 
-                    this.products.push(p)
-                }
+            if (this.vendors.has((value as any).vendor)) {
+                p.vendor = this.vendors.get((value as any).vendor)!
+                p.id = `${p.vendor.id}-${key}`
+            } else {
+                console.log(
+                    `invalid product: ${key}, vendor not found: ${
+                        (value as any).vendor
+                    }`
+                )
+                continue
             }
 
-            this.vendors.push(vendor)
+            // special cases for product types and os support
+            switch (p.type) {
+                case ProductType.KONTAKT4:
+                case ProductType.KONTAKT5:
+                case ProductType.KONTAKT6:
+                case ProductType.KONTAKT7:
+                    p.os = [
+                        OperatingSystem.WINDOWS,
+                        OperatingSystem.MAC_INTEL,
+                        OperatingSystem.MAC_ARM,
+                    ]
+            }
+
+            this.products.push(p)
         }
     }
 
@@ -62,7 +71,7 @@ class CatalogService {
         if (filter.searchQuery !== "") {
             let fs = new Fuse(this.products, {
                 includeScore: true,
-                keys: ["name"],
+                keys: ["name", "description"],
             })
 
             products = fs
@@ -105,11 +114,11 @@ class CatalogService {
     }
 
     getVendorById(id: string): Vendor | undefined {
-        return this.vendors.find((v) => v.id === id)
+        return this.vendors.get(id)
     }
 
     getVendors(): Vendor[] {
-        return [...this.vendors]
+        return Array.from(this.vendors.values())
     }
 }
 

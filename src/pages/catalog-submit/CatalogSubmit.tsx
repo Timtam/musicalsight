@@ -428,7 +428,8 @@ function CatalogSubmit() {
                             vendorId = data.vendor
                         }
 
-                        msg += dedent`[${vendorId}.products.${productId}]
+                        msg += dedent`[${productId}]
+    vendor = "${vendorId}"
     name = "${data.name}"
     type = "${data.type.toLowerCase()}"`
                         msg += "\n"
