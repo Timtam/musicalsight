@@ -1,10 +1,11 @@
 import { filesize } from "filesize"
+import natsort from "natsort"
+import { useMemo } from "react"
 import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
 import ListGroup from "react-bootstrap/ListGroup"
 import { Link } from "react-router-dom"
 import { getOperatingSystemString } from "../entities/OperatingSystem"
-//import { getProductTypeString } from "../entities/ProductType"
 import CatalogService from "../services/CatalogService"
 
 function ProductCard({
@@ -16,6 +17,7 @@ function ProductCard({
     id: string
     playDemo: (url: string) => void
 }) {
+    let sorter = useMemo(() => natsort(), [])
     let product = catalog.getProductById(id)
 
     if (product === undefined) return <p>Product not found!</p>
@@ -52,10 +54,10 @@ function ProductCard({
                                 ? "free"
                                 : `$${product.price}`)}
                     </ListGroup.Item>
-{/*
-                    <ListGroup.Item>{`Type: ${getProductTypeString(
-                        product.type
-                    )}`}</ListGroup.Item>*/}
+                    <ListGroup.Item>{`Categories: ${product.categories
+                        .map((c) => c.getName())
+                        .sort(sorter)
+                        .join(", ")}`}</ListGroup.Item>
                     <ListGroup.Item>{`OS: ${product.os
                         .map((os) => getOperatingSystemString(os))
                         .join(", ")}`}</ListGroup.Item>

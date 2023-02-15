@@ -155,7 +155,7 @@ function FilterDialog({
                                 <option value="yes">Yes</option>
                             </Form.Select>
                         </Form.Group>
-{/*                        <h4>Product Type</h4>
+                        {/*                        <h4>Product Type</h4>
                         <Form.Group controlId="formTypes">
                             {Object.keys(ProductType)
                                 .filter((t) => !isNaN(parseInt(t)))

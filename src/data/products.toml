@@ -92,7 +92,7 @@ price = 98
 vendor = "impact-soundworks"
 name = "Curio"
 size = 1200
-categories = ["kontakt4", "vsti.piano"]
+categories = ["kontakt4", "vsti.keys.piano"]
 demo = "https://www.youtube.com/watch?v=iU9d9uK-4Cg"
 url = "https://impactsoundworks.com/product/curio-cinematic-toy-piano/"
 price = 59

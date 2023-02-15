@@ -115,7 +115,7 @@ function CatalogSubmit() {
                             setData({ ...data, name: evt.target.value })
                         }
                     />
-{/*
+                    {/*
                     <Form.Label for="form-details-type">
                         Product type *
                     </Form.Label>

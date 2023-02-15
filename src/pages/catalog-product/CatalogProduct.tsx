@@ -1,4 +1,5 @@
 import { filesize } from "filesize"
+import natsort from "natsort"
 import { useEffect, useMemo, useState } from "react"
 import Button from "react-bootstrap/Button"
 import ReactMarkdown from "react-markdown"
@@ -7,11 +8,11 @@ import DemoPlayer from "../../components/DemoPlayer"
 import Head from "../../components/Head"
 import { getOperatingSystemString } from "../../entities/OperatingSystem"
 import Product from "../../entities/Product"
-//import { getProductTypeString } from "../../entities/ProductType"
 import CatalogService from "../../services/CatalogService"
 import NotFound from "../not-found/NotFound"
 
 function CatalogProduct() {
+    let sorter = useMemo(() => natsort(), [])
     let catalog = useMemo(() => new CatalogService(), [])
     let [demoUrl, setDemoUrl] = useState("")
     let { productId } = useParams<{
@@ -64,7 +65,10 @@ function CatalogProduct() {
                             ? "free"
                             : `$${product.price}`)}
                 </li>
-                {/*<li>{`Type: ${getProductTypeString(product.type)}`}</li>*/}
+                <li>{`Categories: ${product.categories
+                    .map((c) => c.getName())
+                    .sort(sorter)
+                    .join(", ")}`}</li>
                 <li>{`OS: ${product.os
                     .map((os) => getOperatingSystemString(os))
                     .join(", ")}`}</li>
