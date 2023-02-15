@@ -1,0 +1,140 @@
+[vsti]
+name = "Virtual Instrument"
+
+[vsti.piano]
+name = "Piano"
+
+[vsti.brass]
+name = "Brass"
+
+[vsti.brass.french-horn]
+name = "French Horn"
+
+[vsti.brass.trumpet]
+name = "Trumpet"
+
+[vsti.brass.trombone]
+name = "Trombone"
+
+[vsti.brass.tuba]
+name = "Tuba"
+
+[vsti.woodwinds]
+name = "Woodwinds"
+
+[vsti.woodwinds.flute]
+name = "Flute"
+
+[vsti.woodwinds.oboe]
+name = "Oboe"
+
+[vsti.woodwinds.clarinet]
+name = "Clarinet"
+
+[vsti.woodwinds.bassoon]
+name = "Bassoon"
+
+[vsti.strings]
+name = "Strings"
+
+[vsti.strings.violin]
+name = "Violin"
+
+[vsti.strings.viola]
+name = "Viola"
+
+[vsti.strings.cello]
+name = "Cello"
+
+[vsti.strings.bass]
+name = "Bass"
+
+[vsti.guitar]
+name = "Guitar"
+
+[vsti.synthesizer]
+name = "Synthesizer"
+
+[vsti.synthesizer.subtractive]
+name = "Subtractive Synthesizer"
+
+[vsti.synthesizer.fm]
+name = "FM Synthesizer"
+
+[vsti.sampler]
+name = "Sampler"
+
+[vsti.drums]
+name = "Drums"
+
+[vsti.percussion]
+name = "Percussion"
+
+[fx]
+name = "FX"
+
+[fx.analysis]
+name = "Analysis"
+
+[fx.delay]
+name = "Delay"
+
+[fx.distortion]
+name = "Distortion"
+
+[fx.dynamics]
+name = "Dynamics"
+
+[fx.eq]
+name = "Equalizer"
+
+[fx.filter]
+name = "Filter"
+
+[fx.gate]
+name = "Gate"
+
+[fx.glitch]
+name = "Glitch"
+
+[fx.mastering]
+name = "Mastering"
+
+[fx.midi]
+name = "MIDI"
+
+[fx.modulation]
+name = "Modulation"
+
+[fx.pitch]
+name = "Pitch Correction, Pitch Shifting, Auto-tuning"
+
+[fx.restoration]
+name = "Restoration"
+
+[fx.reverb]
+name = "Reverb"
+
+[fx.pan]
+name = "Panning, Spatial"
+
+[fx.time]
+name = "Time"
+
+[fx.generator]
+name = "Tone Generators"
+
+[kontakt4]
+name = "Kontakt 4+ library"
+
+[kontakt5]
+name = "Kontakt 5+ library"
+
+[kontakt6]
+name = "Kontakt 6+ library"
+
+[kontakt7]
+name = "Kontakt 7+ library"
+
+[unclassified]
+name = "Unclassified"

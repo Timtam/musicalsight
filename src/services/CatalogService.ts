@@ -2,6 +2,7 @@ import { plainToClass } from "class-transformer"
 import Fuse from "fuse.js"
 import raw from "raw.macro"
 import toml from "toml"
+import Category from "../entities/Category"
 import { OperatingSystem } from "../entities/OperatingSystem"
 import Product from "../entities/Product"
 import { ProductFilter } from "../entities/ProductFilter"
@@ -9,12 +10,15 @@ import { ProductType } from "../entities/ProductType"
 import Vendor from "../entities/Vendor"
 
 class CatalogService {
+    categories: Map<string, Category>
     vendors: Map<string, Vendor>
     products: Product[]
 
     constructor() {
+        this.categories = new Map()
         this.vendors = new Map()
         this.products = []
+
         let vendors = toml.parse(raw("../data/vendors.toml"))
 
         for (const [key, value] of Object.entries(vendors)) {
@@ -26,6 +30,12 @@ class CatalogService {
             vendor.id = key
 
             this.vendors.set(key, vendor)
+        }
+
+        let categories = toml.parse(raw("../data/categories.toml"))
+
+        for (const [key, value] of Object.entries(categories)) {
+            this.parseCategory(key, value as object)
         }
 
         let products = toml.parse(raw("../data/products.toml"))
@@ -119,6 +129,28 @@ class CatalogService {
 
     getVendors(): Vendor[] {
         return Array.from(this.vendors.values())
+    }
+
+    parseCategory(id: string, cat: object): Category {
+        let ocat = plainToClass(Category, cat, {
+            excludeExtraneousValues: true,
+        })
+
+        ocat.id = id
+        ocat.subcategories = []
+
+        for (const [key, value] of Object.entries(cat)) {
+            if (!Object.keys(ocat).includes(key)) {
+                let subcat = this.parseCategory(`${id}.${key}`, value as object)
+                subcat.parent = ocat
+                ocat.subcategories.push(subcat)
+                this.categories.set(`${subcat.id}`, subcat)
+            }
+        }
+
+        this.categories.set(id, ocat)
+
+        return ocat
     }
 }
 
