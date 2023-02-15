@@ -1,8 +1,14 @@
 [vsti]
 name = "Virtual Instrument"
 
-[vsti.piano]
+[vsti.keys]
+name = "Keys"
+
+[vsti.keys.piano]
 name = "Piano"
+
+[vsti.keys.organ]
+name = "Organ"
 
 [vsti.brass]
 name = "Brass"
@@ -69,6 +75,18 @@ name = "Drums"
 
 [vsti.percussion]
 name = "Percussion"
+
+[vsti.percussion.tuned]
+name = "Tuned Percussion"
+
+[vsti.percussion.melodic]
+name = "Melodic Percussion"
+
+[vsti.ethnic]
+name = "Ethnic"
+
+[vsti.vocal]
+name = "Vocal"
 
 [fx]
 name = "FX"
@@ -138,3 +156,6 @@ name = "Kontakt 7+ library"
 
 [unclassified]
 name = "Unclassified"
+
+[vsti.strings.harp]
+name = "Harp"

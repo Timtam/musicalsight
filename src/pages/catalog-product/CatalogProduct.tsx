@@ -7,7 +7,7 @@ import DemoPlayer from "../../components/DemoPlayer"
 import Head from "../../components/Head"
 import { getOperatingSystemString } from "../../entities/OperatingSystem"
 import Product from "../../entities/Product"
-import { getProductTypeString } from "../../entities/ProductType"
+//import { getProductTypeString } from "../../entities/ProductType"
 import CatalogService from "../../services/CatalogService"
 import NotFound from "../not-found/NotFound"
 
@@ -64,7 +64,7 @@ function CatalogProduct() {
                             ? "free"
                             : `$${product.price}`)}
                 </li>
-                <li>{`Type: ${getProductTypeString(product.type)}`}</li>
+                {/*<li>{`Type: ${getProductTypeString(product.type)}`}</li>*/}
                 <li>{`OS: ${product.os
                     .map((os) => getOperatingSystemString(os))
                     .join(", ")}`}</li>

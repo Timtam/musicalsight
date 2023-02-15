@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card"
 import ListGroup from "react-bootstrap/ListGroup"
 import { Link } from "react-router-dom"
 import { getOperatingSystemString } from "../entities/OperatingSystem"
-import { getProductTypeString } from "../entities/ProductType"
+//import { getProductTypeString } from "../entities/ProductType"
 import CatalogService from "../services/CatalogService"
 
 function ProductCard({
@@ -52,9 +52,10 @@ function ProductCard({
                                 ? "free"
                                 : `$${product.price}`)}
                     </ListGroup.Item>
+{/*
                     <ListGroup.Item>{`Type: ${getProductTypeString(
                         product.type
-                    )}`}</ListGroup.Item>
+                    )}`}</ListGroup.Item>*/}
                     <ListGroup.Item>{`OS: ${product.os
                         .map((os) => getOperatingSystemString(os))
                         .join(", ")}`}</ListGroup.Item>

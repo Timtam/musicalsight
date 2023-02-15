@@ -6,7 +6,6 @@ import Category from "../entities/Category"
 import { OperatingSystem } from "../entities/OperatingSystem"
 import Product from "../entities/Product"
 import { ProductFilter } from "../entities/ProductFilter"
-import { ProductType } from "../entities/ProductType"
 import Vendor from "../entities/Vendor"
 
 class CatalogService {
@@ -58,18 +57,33 @@ class CatalogService {
                 continue
             }
 
-            // special cases for product types and os support
-            switch (p.type) {
-                case ProductType.KONTAKT4:
-                case ProductType.KONTAKT5:
-                case ProductType.KONTAKT6:
-                case ProductType.KONTAKT7:
-                    p.os = [
-                        OperatingSystem.WINDOWS,
-                        OperatingSystem.MAC_INTEL,
-                        OperatingSystem.MAC_ARM,
-                    ]
+            if (!(value as any).categories)
+                p.categories = [this.categories.get("unclassified")!]
+            else {
+                p.categories = (value as any).categories.map((c: string) => {
+                    let cat = this.categories.get(c)
+
+                    if (!cat) {
+                        console.log(`invalid category ${c} for product ${p.id}`)
+                        return null
+                    }
+                    return cat
+                })
             }
+
+            // special cases for product types and os support
+            if (
+                ["kontakt4", "kontakt5", "kontakt6", "kontakt7"].filter(
+                    (k) =>
+                        (value as any).categories &&
+                        (value as any).categories.includes(k)
+                ).length > 0
+            )
+                p.os = [
+                    OperatingSystem.WINDOWS,
+                    OperatingSystem.MAC_INTEL,
+                    OperatingSystem.MAC_ARM,
+                ]
 
             this.products.push(p)
         }
@@ -107,7 +121,7 @@ class CatalogService {
 
             if (f.nks !== undefined && f.nks !== !!p.nks) return false
 
-            if (f.types.length > 0 && !f.types.includes(p.type)) return false
+            //if (f.types.length > 0 && !f.types.includes(p.type)) return false
 
             if (
                 f.oss.length > 0 &&

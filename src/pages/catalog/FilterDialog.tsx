@@ -11,7 +11,7 @@ import {
     createProductFilter,
     ProductFilter,
 } from "../../entities/ProductFilter"
-import { getProductTypeString, ProductType } from "../../entities/ProductType"
+//import { getProductTypeString, ProductType } from "../../entities/ProductType"
 import CatalogService from "../../services/CatalogService"
 
 function FilterDialog({
@@ -31,7 +31,7 @@ function FilterDialog({
     let [priceFrom, setPriceFrom] = useState(0)
     let [priceTo, setPriceTo] = useState(0)
     let [nks, setNks] = useState(undefined as boolean | undefined)
-    let [types, setTypes] = useState([] as ProductType[])
+    //let [types, setTypes] = useState([] as ProductType[])
     let [oss, setOss] = useState([] as OperatingSystem[])
 
     useEffect(() => {
@@ -39,7 +39,7 @@ function FilterDialog({
         setPriceFrom(filter === undefined ? 0 : filter.priceFrom)
         setPriceTo(filter === undefined ? 0 : filter.priceTo)
         setNks(filter === undefined ? undefined : filter.nks)
-        setTypes(filter === undefined ? [] : filter.types)
+        //setTypes(filter === undefined ? [] : filter.types)
         setOss(filter === undefined ? [] : filter.oss)
         setShow(filter !== undefined)
     }, [filter])
@@ -155,7 +155,7 @@ function FilterDialog({
                                 <option value="yes">Yes</option>
                             </Form.Select>
                         </Form.Group>
-                        <h4>Product Type</h4>
+{/*                        <h4>Product Type</h4>
                         <Form.Group controlId="formTypes">
                             {Object.keys(ProductType)
                                 .filter((t) => !isNaN(parseInt(t)))
@@ -211,7 +211,7 @@ function FilterDialog({
                                         }}
                                     />
                                 ))}
-                        </Form.Group>
+                        </Form.Group>*/}
                         <h4>Operating System</h4>
                         <Form.Group controlId="formOS">
                             {Object.keys(OperatingSystem)
@@ -297,7 +297,7 @@ function FilterDialog({
                             priceFrom: priceFrom,
                             priceTo: priceTo,
                             nks: nks,
-                            types: types,
+                            //types: types,
                             oss: oss,
                             enabled: true,
                         })

@@ -1,6 +1,6 @@
 import { Expose, Transform } from "class-transformer"
+import Category from "./Category"
 import { OperatingSystem } from "./OperatingSystem"
-import { ProductType } from "./ProductType"
 import Vendor from "./Vendor"
 
 export default class Product {
@@ -13,19 +13,7 @@ export default class Product {
     @Expose()
     nks: boolean | string = false
 
-    @Expose()
-    @Transform(
-        ({ value }) => {
-            let e = ProductType[value.toUpperCase() as keyof typeof ProductType]
-
-            if (e === undefined) return ProductType.UNKNOWN
-            return e
-        },
-        {
-            toClassOnly: true,
-        }
-    )
-    type: ProductType
+    categories: Category[]
 
     @Expose()
     @Transform(

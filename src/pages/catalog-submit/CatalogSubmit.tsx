@@ -11,15 +11,15 @@ import {
     OperatingSystem,
 } from "../../entities/OperatingSystem"
 import Product from "../../entities/Product"
-import { getProductTypeString, ProductType } from "../../entities/ProductType"
+//import { getProductTypeString, ProductType } from "../../entities/ProductType"
 import CatalogService from "../../services/CatalogService"
 import ResponseModal from "./ResponseModal"
 
 const createFormData = (p?: Product) => ({
     name: p?.name || "",
-    type: p?.type
+    /*type: p?.type
         ? ProductType[p.type].toLowerCase()
-        : (ProductType[0].toLowerCase() as string),
+        : (ProductType[0].toLowerCase() as string),*/
     url: p?.url || "",
     demo: p?.demo || "",
     size: p?.size ? p.size / 1024 / 1024 : (undefined as number | undefined),
@@ -115,6 +115,7 @@ function CatalogSubmit() {
                             setData({ ...data, name: evt.target.value })
                         }
                     />
+{/*
                     <Form.Label for="form-details-type">
                         Product type *
                     </Form.Label>
@@ -140,6 +141,7 @@ function CatalogSubmit() {
                                 </option>
                             ))}
                     </Form.Select>
+*/}
                     <Form.Label for="form-details-url">Product URL</Form.Label>
                     <Form.Control
                         id="form-details-url"
@@ -430,8 +432,7 @@ function CatalogSubmit() {
 
                         msg += dedent`[${productId}]
     vendor = "${vendorId}"
-    name = "${data.name}"
-    type = "${data.type.toLowerCase()}"`
+    name = "${data.name}"`
                         msg += "\n"
 
                         if (data.size !== undefined)
