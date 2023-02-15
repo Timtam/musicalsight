@@ -810,3 +810,25 @@ demo = "https://www.youtube.com/watch?v=O5eCRSFX8m4"
 price = 0
 description = """this is a large collection of bowed string Instruments"""
 os = ["windows"]
+
+[reaeq]
+vendor = "cockos"
+name = "ReaEQ"
+type = "fx"
+url = "https://www.reaper.fm/"
+demo = "https://www.dropbox.com/s/7x2xvwjcs26d5mv/Scott%20makes%20a%20phone%20line%20filter%20preset%20with%20ReaEQ.m4a?dl=1"
+price = 0
+nks = false
+description = """The Reaper stock-FX for EQ supporting high shelf, low shelf, band gain, low pass, high pass, band pass, notch and a few other filters along with gain and resonance. Ability to have any number of filters in series."""
+os = ["windows","linux","mac_intel","mac_arm"]
+
+[bertom-denoiser-classic]
+vendor = "bertom-audio"
+name = "Bertom Denoiser Classic"
+type = "fx"
+url = "https://www.bertomaudio.com/denoiser-classic.html"
+demo = "https://www.dropbox.com/s/zavbivlgkriqvjl/Scott%20demos%20Bertom%20Audio%20Denoiser%20for%20Chris%2C%20a%20pay-what-you-want%20noise%20reduction%20plug-in.mp3?dl=1"
+price = 0
+nks = false
+description = """A pay-what-you-want noise reduction plug-in for removing constant noise like air conditioning fan noise that doesn't vary over time. Divides the frequency range to be filtered into 5 bands each with their own gain control."""
+os = ["windows","linux","mac_intel","mac_arm"]

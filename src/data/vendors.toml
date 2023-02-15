@@ -57,3 +57,11 @@ url = "https://electroniksoundlab.com/"
 [xoxos]
 name = "Xoxos"
 url = "https://xoxos.net/vst/"
+
+[cockos]
+name = "Cockus"
+url = "https://www.reaper.fm"
+
+[bertom-audio]
+name = "Bertom Audio"
+url = "https://www.bertomaudio.com/"
