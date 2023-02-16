@@ -5,21 +5,21 @@ import Form from "react-bootstrap/Form"
 import { useSearchParams } from "react-router-dom"
 import slugify from "slugify"
 import dedent from "ts-dedent"
+import CategoryChecker from "../../components/CategoryChecker"
 import Head from "../../components/Head"
 import {
     getOperatingSystemString,
     OperatingSystem,
 } from "../../entities/OperatingSystem"
 import Product from "../../entities/Product"
-//import { getProductTypeString, ProductType } from "../../entities/ProductType"
 import CatalogService from "../../services/CatalogService"
 import ResponseModal from "./ResponseModal"
 
 const createFormData = (p?: Product) => ({
     name: p?.name || "",
-    /*type: p?.type
-        ? ProductType[p.type].toLowerCase()
-        : (ProductType[0].toLowerCase() as string),*/
+    categories: p?.categories
+        ? p.categories.map((c) => c.id)
+        : ([] as string[]),
     url: p?.url || "",
     demo: p?.demo || "",
     size: p?.size ? p.size / 1024 / 1024 : (undefined as number | undefined),
@@ -115,33 +115,6 @@ function CatalogSubmit() {
                             setData({ ...data, name: evt.target.value })
                         }
                     />
-                    {/*
-                    <Form.Label for="form-details-type">
-                        Product type *
-                    </Form.Label>
-                    <Form.Select
-                        id="form-details-type"
-                        required
-                        value={data.type}
-                        onChange={(evt) =>
-                            setData({ ...data, type: evt.target.value })
-                        }
-                    >
-                        {Object.keys(ProductType)
-                            .filter((t) => !isNaN(parseInt(t)))
-                            .map((t) => (
-                                <option
-                                    value={ProductType[
-                                        parseInt(t)
-                                    ].toLowerCase()}
-                                >
-                                    {getProductTypeString(
-                                        parseInt(t) as ProductType
-                                    )}
-                                </option>
-                            ))}
-                    </Form.Select>
-*/}
                     <Form.Label for="form-details-url">Product URL</Form.Label>
                     <Form.Control
                         id="form-details-url"
@@ -264,6 +237,52 @@ function CatalogSubmit() {
                             })
                         }
                     />
+                </Form.Group>
+                <h5>Product Categories</h5>
+                <Form.Group controlId="formCategories">
+                    {catalog
+                        .getCategories()
+                        .filter((c) => !c.parent)
+                        .sort((a, b) => sorter(a.name, b.name))
+                        .map((c) => (
+                            <CategoryChecker
+                                category={c}
+                                catalog={catalog}
+                                checked={(category) =>
+                                    data.categories.includes(category.id)
+                                }
+                                onChange={(category, checked) => {
+                                    if (checked) {
+                                        if (
+                                            !data.categories.includes(
+                                                category.id
+                                            )
+                                        )
+                                            setData({
+                                                ...data,
+                                                categories: [
+                                                    ...data.categories,
+                                                    category.id,
+                                                ],
+                                            })
+                                    } else {
+                                        if (
+                                            data.categories.includes(
+                                                category.id
+                                            )
+                                        )
+                                            setData({
+                                                ...data,
+                                                categories:
+                                                    data.categories.filter(
+                                                        (cs) =>
+                                                            cs !== category.id
+                                                    ),
+                                            })
+                                    }
+                                }}
+                            />
+                        ))}
                 </Form.Group>
                 <h5>Supported operating systems</h5>
                 <Form.Group>
@@ -435,6 +454,10 @@ function CatalogSubmit() {
     name = "${data.name}"`
                         msg += "\n"
 
+                        if (data.categories.length > 0)
+                            msg += `categories = ${JSON.stringify(
+                                data.categories
+                            )}\n`
                         if (data.size !== undefined)
                             msg += `size = ${data.size}\n`
                         if (data.url !== "") msg += `url = "${data.url}"\n`
@@ -443,7 +466,7 @@ function CatalogSubmit() {
                             msg += `price = ${data.price}\n`
                         if (typeof data.nks === "string")
                             msg += `nks = "${data.nks}"\n`
-                        else msg += `nks = ${data.nks}\n`
+                        else if (data.nks === true) msg += `nks = ${data.nks}\n`
                         if (data.description !== "") {
                             msg += dedent`description = """\
 ${data.description}"""`

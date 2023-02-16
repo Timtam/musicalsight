@@ -159,3 +159,12 @@ name = "Unclassified"
 
 [vsti.strings.harp]
 name = "Harp"
+
+[software]
+name = "Software"
+
+[software.sample-player]
+name = "Sample Player"
+
+[software.daw]
+name = "Digital Audio Workstation"
