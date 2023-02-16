@@ -45,17 +45,21 @@ function CategoryChecker({
                     <Accordion.Item eventKey={category.id}>
                         <Accordion.Header as="p">{`Subcategories for ${category.name}`}</Accordion.Header>
                         <Accordion.Body>
-                            {[...category.subcategories]
-                                .sort((a, b) => sorter(a.name, b.name))
-                                .map((c) => (
-                                    <CategoryChecker
-                                        onChange={onChange}
-                                        showCounter={showCounter}
-                                        catalog={catalog}
-                                        checked={checked}
-                                        category={c}
-                                    />
-                                ))}
+                            <div role="list" aria-label={category.getName()}>
+                                {[...category.subcategories]
+                                    .sort((a, b) => sorter(a.name, b.name))
+                                    .map((c) => (
+                                        <div role="listitem">
+                                            <CategoryChecker
+                                                onChange={onChange}
+                                                showCounter={showCounter}
+                                                catalog={catalog}
+                                                checked={checked}
+                                                category={c}
+                                            />
+                                        </div>
+                                    ))}
+                            </div>
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
