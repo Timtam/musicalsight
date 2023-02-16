@@ -72,6 +72,20 @@ function CatalogProduct() {
                 <li>{`OS: ${product.os
                     .map((os) => getOperatingSystemString(os))
                     .join(", ")}`}</li>
+                {product.requires.length > 0 ? (
+                    <li>
+                        Requirements:{" "}
+                        {product.requires.map((r) => (
+                            <Link to={`/catalog/product/${r.product.id}`}>
+                                {r.version
+                                    ? `${r.product.name} (minimum version ${r.version}`
+                                    : r.product.name}
+                            </Link>
+                        ))}
+                    </li>
+                ) : (
+                    ""
+                )}
                 <li>
                     Size:{" "}
                     {product.size !== undefined

@@ -11,12 +11,12 @@ import Vendor from "../entities/Vendor"
 class CatalogService {
     categories: Map<string, Category>
     vendors: Map<string, Vendor>
-    products: Product[]
+    products: Map<string, Product>
 
     constructor() {
         this.categories = new Map()
         this.vendors = new Map()
-        this.products = []
+        this.products = new Map()
 
         let vendors = toml.parse(raw("../data/vendors.toml"))
 
@@ -71,21 +71,46 @@ class CatalogService {
                 })
             }
 
-            // special cases for product types and os support
-            if (
-                ["kontakt4", "kontakt5", "kontakt6", "kontakt7"].filter(
-                    (k) =>
-                        (value as any).categories &&
-                        (value as any).categories.includes(k)
-                ).length > 0
-            )
-                p.os = [
-                    OperatingSystem.WINDOWS,
-                    OperatingSystem.MAC_INTEL,
-                    OperatingSystem.MAC_ARM,
-                ]
+            p.requires = []
 
-            this.products.push(p)
+            this.products.set(p.id, p)
+        }
+
+        // we need to do a second run through products to properly resolve product references
+        for (const [key, value] of Object.entries(products)) {
+            if (Array.isArray((value as any).requires)) {
+                let p = this.products.get(`${(value as any).vendor}-${key}`)
+                p!.requires = (value as any).requires.map(
+                    (r: string | string[]) => {
+                        let or: Product | undefined
+
+                        if (typeof r === "string") or = this.products.get(r)
+                        else or = this.products.get(r[0])
+                        if (!or) {
+                            console.log(
+                                `invalid product requirement ${r} for product ${
+                                    p!.id
+                                }`
+                            )
+                            return null
+                        }
+                        return {
+                            product: or,
+                            version: Array.isArray(r) ? r[1] : undefined,
+                        }
+                    }
+                )
+
+                // special cases for product types and os support
+                if (
+                    p!.os.length === 1 &&
+                    p!.os[0] === OperatingSystem.UNKNOWN &&
+                    p!.requires.length > 0
+                )
+                    p!.os = p!.requires
+                        .map((r) => r.product.os)
+                        .reduce((p, c) => p.filter((e) => c.includes(e)))
+            }
         }
     }
 
@@ -93,7 +118,7 @@ class CatalogService {
         let products: Product[]
 
         if (filter.searchQuery !== "") {
-            let fs = new Fuse(this.products, {
+            let fs = new Fuse(Array.from(this.products.values()), {
                 includeScore: true,
                 keys: ["name", "description"],
             })
@@ -102,7 +127,7 @@ class CatalogService {
                 .search(filter.searchQuery)
                 .filter((r) => r.score! <= 0.5)
                 .map((r) => r.item)
-        } else products = this.products
+        } else products = Array.from(this.products.values())
 
         return products.filter((p) => this.filterMatchesProduct(p, filter))
     }
@@ -139,7 +164,7 @@ class CatalogService {
     }
 
     getProductById(id: string): Product | undefined {
-        return this.products.find((p) => p.id === id)
+        return this.products.get(id)
     }
 
     getVendorById(id: string): Vendor | undefined {

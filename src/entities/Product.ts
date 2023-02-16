@@ -15,6 +15,11 @@ export default class Product {
 
     categories: Category[]
 
+    requires: {
+        product: Product
+        version?: string
+    }[]
+
     @Expose()
     @Transform(
         ({ value }) => {

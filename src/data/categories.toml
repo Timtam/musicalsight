@@ -142,18 +142,6 @@ name = "Time"
 [fx.generator]
 name = "Tone Generators"
 
-[kontakt4]
-name = "Kontakt 4+ library"
-
-[kontakt5]
-name = "Kontakt 5+ library"
-
-[kontakt6]
-name = "Kontakt 6+ library"
-
-[kontakt7]
-name = "Kontakt 7+ library"
-
 [unclassified]
 name = "Unclassified"
 

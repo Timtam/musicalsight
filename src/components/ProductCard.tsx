@@ -61,6 +61,20 @@ function ProductCard({
                     <ListGroup.Item>{`OS: ${product.os
                         .map((os) => getOperatingSystemString(os))
                         .join(", ")}`}</ListGroup.Item>
+                    {product.requires.length > 0 ? (
+                        <ListGroup.Item>
+                            Requirements:{" "}
+                            {product.requires.map((r) => (
+                                <Link to={`/catalog/product/${r.product.id}`}>
+                                    {r.version
+                                        ? `${r.product.name} (minimum version ${r.version})`
+                                        : r.product.name}
+                                </Link>
+                            ))}
+                        </ListGroup.Item>
+                    ) : (
+                        ""
+                    )}
                     <ListGroup.Item>
                         Size:{" "}
                         {product.size !== undefined
