@@ -329,17 +329,11 @@ master effects and 4 sends). The effects include filters, delay,
 chorus, flanger, phaser, distortion, frequency shifter, spring reverb,
 rotary speaker, multi effects (such as Airwindows containing 56
 effects, Mid-Side Tool and Conditioner) and Ensemble."""
-accessibility_description = """\
-The synthesizer is almost entirely
-accessible,, with very little accessibility issues on it. The user
-interface can be efficiently navigated and controlled using keyboard
-shortcuts on both the plugin and the standalone application, however,
-this reuires putting certain settings to certain values using your
-keyboard and screen reader. The Windows and Mac versions are currently
-accessible, but the Linux version is not yet accessible. However, the
-modulation section would still need a bit of accessibility
-improvements. Currently, the 11-Band Graphic EQ (i.e. picture-based,
-graphical equalizer) is not accessible for screen reader users."""
+accessibility_description = """This synthesizer is ground breaking in its level of accessibility. Very nearly every feature is available to the screen reader user via keyboard through the user interface. The parameter list is also an option but not necessary. The 2800 patches that come as standard can be both browsed and also searched for by name, category or author. 
+This level of accessibility along with the rich feature set makes this synth a must try for any screen reader user 
+There are plug-in and standalone versions for Windows and Mac but no accessible version for Linux. Installation is straightforward.
+The UI is large and there is scope for improving ease of use to reduce the amount of key bashing and the graphical equaliser remains out of reach.
+"""
 nks = "requires a user-defined .nksf set available as freeware and by Native Instruments forum member Christos"
 categories = ["vsti.synthesizer.subtractive"]
 os = ["windows", "linux", "mac_intel", "mac_arm"]
@@ -820,6 +814,7 @@ demo = "https://www.dropbox.com/s/7x2xvwjcs26d5mv/Scott%20makes%20a%20phone%20li
 price = 0
 nks = false
 description = """The Reaper stock-FX for EQ supporting high shelf, low shelf, band gain, low pass, high pass, band pass, notch and a few other filters along with gain and resonance. Ability to have any number of filters in series."""
+accessibility_description = """Features can be accessed through the UI or from the parameter list. A few features aren't accessible but they in no way prevent this being the go-to EQ plug-in for Reaper. Parameters can be automated to do sweeps and there are a good number of presets to get you going."""
 os = ["windows","linux","mac_intel","mac_arm"]
 
 [bertom-denoiser-classic]
@@ -831,4 +826,64 @@ demo = "https://www.dropbox.com/s/zavbivlgkriqvjl/Scott%20demos%20Bertom%20Audio
 price = 0
 nks = false
 description = """A pay-what-you-want noise reduction plug-in for removing constant noise like air conditioning fan noise that doesn't vary over time. Divides the frequency range to be filtered into 5 bands each with their own gain control."""
+accessibility_description = """Use the parameter list to access all the features of this plugin."""
 os = ["windows","linux","mac_intel","mac_arm"]
+
+[reaper]
+vendor = "cockos"
+name = "REAPER"
+categories = ["software.daw"]
+description = """\
+REAPER is a complete digital audio production application for computers, offering a full multitrack audio and MIDI recording, editing, processing, mixing and mastering toolset.
+REAPER supports a vast range of hardware, digital formats and plugins, and can be comprehensively extended, scripted and modified.
+Do Anything
+REAPER's full, flexible feature set and renowned stability have found a home wherever digital audio is used: commercial and home studios, broadcast, location recording, education, science and research, sound design, game development, and more.
+From mission-critical professional environments to students' laptops, there is a single version of REAPER, fully featured with no artificial limitations. You can evaluate REAPER in full for 60 days. A REAPER license is affordably priced and DRM-free.
+"""
+accessibility_description = """\
+Although not being 100% accessible by default, REAPER's developers are aware of accessibility and do their best to improve it in every minor version upgrade. In addition to that, there are useful extensions like [OSARA](https://osara.reaperaccessibility.com/), which further enhances the accessibility, making REAPER the most accessible and affordable DAW under Windows and a considerable competitor to Logic under Mac.
+"""
+os = ["windows","linux","mac_intel","mac_arm"]
+price = 0
+url = "https://www.reaper.fm/"
+demo = "https://theglobalvoice.info/reaper_files/Core%20Concepts%20with%20Justin%20and%20Scott.mp3"
+
+[kontakt]
+vendor = "native-instruments"
+name = "Kontakt"
+url = "https://www.native-instruments.com/en/products/komplete/samplers/kontakt-7/"
+categories = ["software.sampler", "vsti.sampler"]
+description = """\
+KONTAKT is everything from instant inspiration for music makers to the industry’s leading instrument-building tool. More than a sampler, this shapeshifting platform has powered two decades of blockbuster film scores and chart-topping hits, plus thousands of incredible instruments.\
+"""
+accessibility_description = """\
+While Kontakt itself isn't accessible on its own, the community developed several scripts and tools to help access some of its functionalities, like loading instruments, change channel routings or batch resave instruments. The instrument's parameters are accessible within a DAW like [REAPER](/catalog/product/cockos-reaper) or Logic. The following tools/scripts are recommended when working with Kontakt:
+
+* [LBL NVDA Add-On under Windows (free)](https://reaperaccessible.fr/archives/LBL%20Add-On%20For%20NVDA.zip)
+* [Kontakt Access script for Windows (one-time payment of $35)](https://access4music.com/en/script/purchase/kontakt)
+"""
+os = ["windows","mac_intel","mac_arm"]
+price = 299
+
+[kontakt-player]
+vendor = "native-instruments"
+name = "Kontakt Player"
+categories = ["software.sampler","vsti.sampler"]
+url = "https://www.native-instruments.com/en/products/komplete/samplers/kontakt-7-player/"
+price = 0
+description = """\
+KONTAKT is the foundation of our huge range of sampled instruments.
+
+Whether it’s the dramatic sound of ACTION STRINGS 2, the unmistakable twang of SESSION GUITARIST – ELECTRIC VINTAGE, or the inspiring, randomized sound design of PLAYBOX, our instruments provide creative inspiration for musicians and composers around the world.
+
+All KONTAKT instruments from NI run in the free KONTAKT PLAYER.
+
+THE WIDE WORLD OF KONTAKT
+KONTAKT is also a host for hundreds of highly realistic and detailed sampled instruments from other manufacturers. This diverse ecosystem means that KONTAKT is your access point to the industry’s biggest collection of playable sampled sound.
+
+Many of these instruments run in the KONTAKT PLAYER – you don't need the full version of KONTAKT to use them:
+"""
+accessibility_description = """\
+Kontakt Player sadly isn't compatible with LBL or Kontakt Access which can be used to access various features of the paid Kontakt software. The only accessible way of running Kontakt Player seems to be through Komplete Kontrol.
+"""
+os = ["windows","mac_intel","mac_arm"]

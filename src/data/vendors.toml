@@ -59,9 +59,13 @@ name = "Xoxos"
 url = "https://xoxos.net/vst/"
 
 [cockos]
-name = "Cockus"
+name = "Cockos"
 url = "https://www.reaper.fm"
 
 [bertom-audio]
 name = "Bertom Audio"
 url = "https://www.bertomaudio.com/"
+
+[native-instruments]
+name = "Native Instruments"
+url = "https://www.native-instruments.com/"

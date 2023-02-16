@@ -163,7 +163,7 @@ name = "Harp"
 [software]
 name = "Software"
 
-[software.sample-player]
+[software.sampler]
 name = "Sample Player"
 
 [software.daw]
