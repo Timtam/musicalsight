@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Modal from "react-bootstrap/Modal"
+import CategoryChecker from "../../components/CategoryChecker"
 import {
     getOperatingSystemString,
     OperatingSystem,
@@ -11,7 +12,6 @@ import {
     createProductFilter,
     ProductFilter,
 } from "../../entities/ProductFilter"
-//import { getProductTypeString, ProductType } from "../../entities/ProductType"
 import CatalogService from "../../services/CatalogService"
 
 function FilterDialog({
@@ -31,7 +31,7 @@ function FilterDialog({
     let [priceFrom, setPriceFrom] = useState(0)
     let [priceTo, setPriceTo] = useState(0)
     let [nks, setNks] = useState(undefined as boolean | undefined)
-    //let [types, setTypes] = useState([] as ProductType[])
+    let [categories, setCategories] = useState([] as string[])
     let [oss, setOss] = useState([] as OperatingSystem[])
 
     useEffect(() => {
@@ -39,7 +39,7 @@ function FilterDialog({
         setPriceFrom(filter === undefined ? 0 : filter.priceFrom)
         setPriceTo(filter === undefined ? 0 : filter.priceTo)
         setNks(filter === undefined ? undefined : filter.nks)
-        //setTypes(filter === undefined ? [] : filter.types)
+        setCategories(filter === undefined ? [] : filter.categories)
         setOss(filter === undefined ? [] : filter.oss)
         setShow(filter !== undefined)
     }, [filter])
@@ -155,63 +155,49 @@ function FilterDialog({
                                 <option value="yes">Yes</option>
                             </Form.Select>
                         </Form.Group>
-                        {/*                        <h4>Product Type</h4>
-                        <Form.Group controlId="formTypes">
-                            {Object.keys(ProductType)
-                                .filter((t) => !isNaN(parseInt(t)))
-                                .map((t) => (
-                                    <Form.Check
-                                        id={`form-type-${t}`}
-                                        type="checkbox"
-                                        label={`${getProductTypeString(
-                                            parseInt(t) as ProductType
-                                        )} (${
-                                            catalog.getProducts({
-                                                ...createProductFilter(),
-                                                enabled: true,
-                                                types: [
-                                                    parseInt(t) as ProductType,
-                                                ],
-                                            }).length
-                                        })`}
-                                        checked={types.includes(
-                                            parseInt(t) as ProductType
-                                        )}
-                                        onChange={(evt) => {
-                                            if (evt.target.checked === true) {
+                        <h4>Product Categories</h4>
+                        <Form.Group controlId="formCategories">
+                            {catalog
+                                .getCategories()
+                                .filter((c) => !c.parent)
+                                .sort((a, b) => sorter(a.name, b.name))
+                                .map((c) => (
+                                    <CategoryChecker
+                                        category={c}
+                                        showCounter
+                                        catalog={catalog}
+                                        checked={(category) =>
+                                            categories.includes(category.id)
+                                        }
+                                        onChange={(category, checked) => {
+                                            if (checked) {
                                                 if (
-                                                    !types.includes(
-                                                        parseInt(
-                                                            t
-                                                        ) as ProductType
+                                                    !categories.includes(
+                                                        category.id
                                                     )
                                                 )
-                                                    setTypes([
-                                                        ...types,
-                                                        parseInt(
-                                                            t
-                                                        ) as ProductType,
+                                                    setCategories([
+                                                        ...categories,
+                                                        category.id,
                                                     ])
                                             } else {
                                                 if (
-                                                    types.includes(
-                                                        parseInt(
-                                                            t
-                                                        ) as ProductType
+                                                    categories.includes(
+                                                        category.id
                                                     )
                                                 )
-                                                    setTypes(
-                                                        types.filter(
-                                                            (tn) =>
-                                                                tn !==
-                                                                parseInt(t)
+                                                    setCategories(
+                                                        categories.filter(
+                                                            (cs) =>
+                                                                cs !==
+                                                                category.id
                                                         )
                                                     )
                                             }
                                         }}
                                     />
                                 ))}
-                        </Form.Group>*/}
+                        </Form.Group>
                         <h4>Operating System</h4>
                         <Form.Group controlId="formOS">
                             {Object.keys(OperatingSystem)
@@ -297,7 +283,7 @@ function FilterDialog({
                             priceFrom: priceFrom,
                             priceTo: priceTo,
                             nks: nks,
-                            //types: types,
+                            categories: categories,
                             oss: oss,
                             enabled: true,
                         })

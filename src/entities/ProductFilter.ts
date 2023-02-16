@@ -9,6 +9,7 @@ export interface ProductFilter {
     vendors: string[]
     priceFrom: number
     priceTo: number
+    categories: string[]
     nks: boolean | undefined
     oss: OperatingSystem[]
 }
@@ -20,6 +21,7 @@ export const createProductFilter = (): ProductFilter => {
         vendors: [],
         priceFrom: 0,
         priceTo: 0,
+        categories: [],
         nks: undefined,
         oss: [],
     }

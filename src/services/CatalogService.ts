@@ -121,7 +121,12 @@ class CatalogService {
 
             if (f.nks !== undefined && f.nks !== !!p.nks) return false
 
-            //if (f.types.length > 0 && !f.types.includes(p.type)) return false
+            if (
+                f.categories.length > 0 &&
+                p.categories.filter((c) => f.categories.includes(c.id))
+                    .length === 0
+            )
+                return false
 
             if (
                 f.oss.length > 0 &&
@@ -165,6 +170,10 @@ class CatalogService {
         this.categories.set(id, ocat)
 
         return ocat
+    }
+
+    getCategories(): Category[] {
+        return Array.from(this.categories.values())
     }
 }
 
