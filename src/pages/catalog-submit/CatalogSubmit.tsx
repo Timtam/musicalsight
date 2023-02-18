@@ -12,6 +12,7 @@ import {
     OperatingSystem,
 } from "../../entities/OperatingSystem"
 import Product from "../../entities/Product"
+import { createProductFilter } from "../../entities/ProductFilter"
 import CatalogService from "../../services/CatalogService"
 import ResponseModal from "./ResponseModal"
 
@@ -29,6 +30,12 @@ const createFormData = (p?: Product) => ({
     accessibility_description: p?.accessibility_description || "",
     oss: (p?.os.map((os) => OperatingSystem[os].toLowerCase()) ||
         []) as string[],
+    requires: p?.requires
+        ? p.requires
+        : ([] as {
+              product: Product
+              version?: string
+          }[]),
     vendor: p?.vendor.id || "",
     vendorName: "",
     vendorUrl: "",
@@ -46,6 +53,10 @@ function CatalogSubmit() {
     })
     let [searchParams] = useSearchParams()
     let [update, setUpdate] = useState(false)
+    let [selectedRequirement, setSelectedRequirement] = useState({
+        product: "none" as string,
+        version: "" as string,
+    })
 
     useEffect(() => {
         let productId = searchParams.get("p")
@@ -343,6 +354,112 @@ function CatalogSubmit() {
                             />
                         ))}
                 </Form.Group>
+                <h5>Product requirements</h5>
+                <Form.Group>
+                    {data.requires.length > 0 ? (
+                        <div role="list" aria-label="Required products">
+                            {data.requires.map((r) => (
+                                <div role="listitem">
+                                    <p>
+                                        {r.version
+                                            ? `${r.product.name} (minimum version ${r.version}) by ${r.product.vendor.name}`
+                                            : `${r.product.name} by ${r.product.vendor.name}`}
+                                    </p>
+                                    <Button
+                                        onClick={(evt) => {
+                                            if (data.requires.includes(r))
+                                                setData({
+                                                    ...data,
+                                                    requires:
+                                                        data.requires.filter(
+                                                            (re) => re !== r
+                                                        ),
+                                                })
+                                        }}
+                                    >
+                                        Remove this requirement
+                                    </Button>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p>No requirements added so far.</p>
+                    )}
+                    <Form.Label for="form-requirements-selector">
+                        Select the required product
+                    </Form.Label>
+                    <Form.Select
+                        id="form-requirements-selector"
+                        value={selectedRequirement.product}
+                        onChange={(evt) =>
+                            setSelectedRequirement({
+                                product: evt.target.value,
+                                version: selectedRequirement.version,
+                            })
+                        }
+                    >
+                        <option value="none">
+                            (select a product this product should require)
+                        </option>
+                        {catalog
+                            .getProducts(createProductFilter())
+                            .sort((a, b) =>
+                                sorter(
+                                    `${a.name} ${a.vendor.name}`,
+                                    `${b.name} ${b.vendor.name}`
+                                )
+                            )
+                            .map((p) => (
+                                <option
+                                    value={p.id}
+                                >{`${p.name} by ${p.vendor.name}`}</option>
+                            ))}
+                    </Form.Select>
+                    <Form.Label for="form-requirements-version">
+                        Required minimum version (optional)
+                    </Form.Label>
+                    <Form.Control
+                        id="form-requirements-version"
+                        type="input"
+                        disabled={selectedRequirement.product === "none"}
+                        value={selectedRequirement.version}
+                        onChange={(evt) => {
+                            setSelectedRequirement({
+                                product: selectedRequirement.product,
+                                version: evt.target.value,
+                            })
+                        }}
+                    />
+                    <Form.Label for="form-requirements-submit">
+                        Add new requirement
+                    </Form.Label>
+                    <Form.Control
+                        id="form-requirements-submit"
+                        type="button"
+                        disabled={selectedRequirement.product === "none"}
+                        onClick={(evt) => {
+                            setData({
+                                ...data,
+                                requires: [
+                                    ...data.requires,
+                                    {
+                                        product: catalog.getProductById(
+                                            selectedRequirement.product
+                                        )!,
+                                        version:
+                                            selectedRequirement.version !== ""
+                                                ? selectedRequirement.version
+                                                : undefined,
+                                    },
+                                ],
+                            })
+                            setSelectedRequirement({
+                                product: "none",
+                                version: "",
+                            })
+                        }}
+                    />
+                </Form.Group>
                 <h5>Vendor</h5>
                 <Form.Group>
                     <Form.Label for="form-vendor-select">
@@ -427,6 +544,20 @@ function CatalogSubmit() {
                             (data.vendorName === "" || data.vendorUrl === ""))
                     }
                     onClick={async (evt) => {
+                        let formatRequirements = (
+                            reqs: {
+                                product: Product
+                                version?: string
+                            }[]
+                        ): string => {
+                            return JSON.stringify(
+                                reqs.map((r) => {
+                                    if (r.version)
+                                        return [r.product.id, r.version]
+                                    else return r.product.id
+                                }) as (string | string[])[]
+                            )
+                        }
                         let msg = ""
                         let vendorId = ""
                         let productId = slugify(data.name, {
@@ -457,6 +588,10 @@ function CatalogSubmit() {
                         if (data.categories.length > 0)
                             msg += `categories = ${JSON.stringify(
                                 data.categories
+                            )}\n`
+                        if (data.requires.length > 0)
+                            msg += `requires = ${formatRequirements(
+                                data.requires
                             )}\n`
                         if (data.size !== undefined)
                             msg += `size = ${data.size}\n`
