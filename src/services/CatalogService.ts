@@ -148,8 +148,9 @@ class CatalogService {
 
             if (
                 f.categories.length > 0 &&
-                p.categories.filter((c) => f.categories.includes(c.id))
-                    .length === 0
+                f.categories.filter((f) =>
+                    p.categories.some((c) => c.id.startsWith(f))
+                ).length === 0
             )
                 return false
 
