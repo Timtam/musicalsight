@@ -69,3 +69,11 @@ url = "https://www.bertomaudio.com/"
 [native-instruments]
 name = "Native Instruments"
 url = "https://www.native-instruments.com/"
+
+[agus-hardiman]
+name = "Agus Hardiman"
+url = "https://agushardiman.tv/"
+
+[auburn-sounds]
+name = "Auburn Sounds"
+url = "https://www.auburnsounds.com/"

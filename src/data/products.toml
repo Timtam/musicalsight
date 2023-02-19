@@ -964,3 +964,58 @@ accessibility_description = """\
 Kontakt Player sadly isn't compatible with LBL or Kontakt Access which can be used to access various features of the paid Kontakt software. The only accessible way of running Kontakt Player seems to be through Komplete Kontrol.
 """
 os = ["windows","mac_intel","mac_arm"]
+
+[monster-drum]
+vendor = "agus-hardiman"
+name = "Monster Drum"
+categories = ["vsti.drums"]
+url = "https://agushardiman.tv/monster-drum-the-best-free-drum-vst-plugin-with-multi-kit-genre/"
+demo = "https://www.youtube.com/watch?v=CmZxVFZw8RU"
+price = 0
+description = """\
+Monster Drum is a music producer’s friend for making music with many music genres.
+Whether you are a rock or metal musician, R’nB or Hip Hop producer, singer/songwriter who composes jazz or acoustic music, or any other musicians, you’ll find that Monster Drum is becoming your Go-To virtual instrument for your drum track.
+The great things about this VST are it’s never complete. This VST gets new kit expansion continuously every month!\
+"""
+accessibility_description = """All drum kits are accessible through presets."""
+os = ["windows","mac_intel"]
+
+[monster-piano]
+vendor = "agus-hardiman"
+name = "Monster Piano"
+categories = ["vsti.keys.piano"]
+url = "https://agushardiman.tv/monster-piano-a-lightweight-free-acoustic-piano-vst-with-multi-character/#:~:text=%23MonsterPianoVST%20is%20a%20Free%20Piano,making%20(I%20hope%20so)."
+demo = "https://www.youtube.com/watch?v=2ba175HTang"
+price = 0
+description = """\
+#MonsterPianoVST is a Free Piano VST with various Presets, including Grand Piano, Baby Grand, and Upright Piano.
+It covers multi-tone characters, suitable for Pop to Rock, Jazz, Classical, and everything in between.
+The size of the sampling is small but still fun to play with and useful in music-making (I hope so).
+The great thing about this VST is that this is never complete. This VST gets a new expansion (preset) sound continuously every now and then so stay tuned for more!\
+"""
+accessibility_description = """Instruments can be accessed through presets."""
+os = ["windows","mac_intel"]
+
+[panagement]
+vendor = "auburn-sounds"
+name = "Panagement Free"
+categories = ["fx.pan"]
+url = "https://www.auburnsounds.com/products/Panagement.html"
+demo = "https://www.youtube.com/watch?v=sfi2HPBGwzo"
+price = 0
+description = """\
+Panagement is the spatialization laboratory that has found its way to thousands of studios around the world. Panagement gives you raw power over your stereo tracks.
+
+* The Binaural Distance Panner lets you position a track anywhere in the sound field,
+* The Reverb increases realism of distance modeling with automatic early and late reflections,
+* Width and Tilt open your mix to unforeseen decisions,
+* The LFO dramatically extends the possibilities (eg: reverb ducking),
+* The Binaural Delay revisit the product, allowing more spatial complexity,
+* Comes with the sought-after PGMT-400 chip mod.
+
+With uniquely integrated Delay, Reverb, and Binaural processing, Panagement push the limits of practical teleportation.
+
+Panagement FREE gets everything except the Delay and PGMT-400 chip.\
+"""
+accessibility_description = """all effects are accessible through presets."""
+os = ["windows","linux","mac_intel","mac_arm"]
