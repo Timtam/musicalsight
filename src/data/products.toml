@@ -885,12 +885,12 @@ os = ["windows"]
 vendor = "cockos"
 name = "ReaEQ"
 categories = ["fx.eq"]
-requires = ["cockos-reaper"]
-url = "https://www.reaper.fm/"
+url = "https://www.reaper.fm/reaplugs/"
 demo = "https://www.dropbox.com/s/7x2xvwjcs26d5mv/Scott%20makes%20a%20phone%20line%20filter%20preset%20with%20ReaEQ.m4a?dl=1"
 price = 0
 nks = false
-description = """The Reaper stock-FX for EQ supporting high shelf, low shelf, band gain, low pass, high pass, band pass, notch and a few other filters along with gain and resonance. Ability to have any number of filters in series."""
+description = """The Reaper stock-FX for EQ supporting high shelf, low shelf, band gain, low pass, high pass, band pass, notch and a few other filters along with gain and resonance. Ability to have any number of filters in series.
+You don't even need Reaper to use it as it can be downloaded as part of the reaPlugins download and used in any DAW that supports VST's."""
 accessibility_description = """Features can be accessed through the UI or from the parameter list. A few features aren't accessible but they in no way prevent this being the go-to EQ plug-in for Reaper. Parameters can be automated to do sweeps and there are a good number of presets to get you going."""
 os = ["windows","linux","mac_intel","mac_arm"]
 
