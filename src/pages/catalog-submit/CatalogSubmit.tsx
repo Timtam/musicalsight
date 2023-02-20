@@ -6,6 +6,7 @@ import { useSearchParams } from "react-router-dom"
 import slugify from "slugify"
 import dedent from "ts-dedent"
 import CategoryChecker from "../../components/CategoryChecker"
+import FA from "../../components/FocusAnchor"
 import Head from "../../components/Head"
 import {
     getOperatingSystemString,
@@ -77,11 +78,13 @@ function CatalogSubmit() {
                     update ? "Update a catalog entry" : "Submit a catalog entry"
                 }
             />
-            <h3>
-                {update
-                    ? "Update a product within the catalog"
-                    : "Submit a product to the catalog"}
-            </h3>
+            <FA
+                title={
+                    update
+                        ? "Update a product within the catalog"
+                        : "Submit a product to the catalog"
+                }
+            />
             {update ? (
                 <p>
                     All the product's data was autofilled into the form below.

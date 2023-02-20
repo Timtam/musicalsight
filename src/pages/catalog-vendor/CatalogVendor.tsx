@@ -2,6 +2,7 @@ import natsort from "natsort"
 import { useEffect, useMemo, useState } from "react"
 import { useParams } from "react-router-dom"
 import DemoPlayer from "../../components/DemoPlayer"
+import FA from "../../components/FocusAnchor"
 import Head from "../../components/Head"
 import Pagination from "../../components/Pagination"
 import ProductCard from "../../components/ProductCard"
@@ -44,7 +45,7 @@ function CatalogVendor() {
     return (
         <>
             <Head title={`${vendor.name} - vendor`} />
-            <h3>Vendor details for {vendor.name}</h3>
+            <FA title={`Vendor details for ${vendor.name}`} />
             <p>
                 Website: <a href={vendor.url}>{vendor.url}</a>
             </p>

@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button"
 import ReactMarkdown from "react-markdown"
 import { Link, useParams } from "react-router-dom"
 import DemoPlayer from "../../components/DemoPlayer"
+import FA from "../../components/FocusAnchor"
 import Head from "../../components/Head"
 import { getOperatingSystemString } from "../../entities/OperatingSystem"
 import Product from "../../entities/Product"
@@ -32,9 +33,9 @@ function CatalogProduct() {
     return (
         <>
             <Head title={`${product.name} - ${product.vendor.name}`} />
-            <h3>
-                Product details for {product.name} by {product.vendor.name}
-            </h3>
+            <FA
+                title={`Product details for ${product.name} by ${product.vendor.name}`}
+            />
             <DemoPlayer url={demoUrl} onClose={() => setDemoUrl("")} />
             <ul>
                 <li>

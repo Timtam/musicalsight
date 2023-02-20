@@ -2,6 +2,7 @@ import natsort from "natsort"
 import { useEffect, useMemo, useState } from "react"
 import { Link } from "react-router-dom"
 import DemoPlayer from "../../components/DemoPlayer"
+import FA from "../../components/FocusAnchor"
 import Head from "../../components/Head"
 import Pagination from "../../components/Pagination"
 import ProductCard from "../../components/ProductCard"
@@ -31,7 +32,7 @@ function Catalog() {
     return (
         <>
             <Head title="Audio Plugin And Instrument Accessibility Catalog" />
-            <h3>Audio Plugin And Instrument Accessibility Catalog</h3>
+            <FA title="Audio Plugin And Instrument Accessibility Catalog" />
             <Search
                 filter={filter}
                 setFilter={(filter) =>
