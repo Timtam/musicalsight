@@ -57,6 +57,13 @@ function CatalogProduct() {
                         {product!.vendor.name}
                     </Link>
                 </li>
+                {product!.url !== "" ? (
+                    <li>
+                        Website: <a href={product.url}>{product!.url}</a>
+                    </li>
+                ) : (
+                    ""
+                )}
                 <li>
                     {"Price: " +
                         (product.price === undefined

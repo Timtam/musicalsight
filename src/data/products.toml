@@ -1027,7 +1027,7 @@ categories = ["fx.reverb"]
 size = 44
 price = 49
 url = "https://www.native-instruments.com/en/products/komplete/effects/raum/"
-demo = "https://www.native-instruments.com/en/products/komplete/effects/raum/download-demo/"
+demo = "https://www.native-instruments.com/fileadmin/ni_media/producer/RAUM/Audio/Skull_Nodda.mp3"
 nks = true
 description = """\
 Meet RAUM, your do-it-all creative reverb. Made to sculpt any space, RAUM can do everything from abstract echoes to spacetime-bending ambience in one swift move. It’s your space laboratory, your mix fixer, and your utility tool. It’s simple, flexible – and most importantly, it sounds out of this world.
