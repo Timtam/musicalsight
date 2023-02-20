@@ -1019,3 +1019,26 @@ Panagement FREE gets everything except the Delay and PGMT-400 chip.\
 """
 accessibility_description = """all effects are accessible through presets."""
 os = ["windows","linux","mac_intel","mac_arm"]
+
+[raum]
+vendor = "native-instruments"
+name = "Raum"
+categories = ["fx.reverb"]
+size = 44
+price = 49
+url = "https://www.native-instruments.com/en/products/komplete/effects/raum/"
+demo = "https://www.native-instruments.com/en/products/komplete/effects/raum/download-demo/"
+nks = true
+description = """\
+Meet RAUM, your do-it-all creative reverb. Made to sculpt any space, RAUM can do everything from abstract echoes to spacetime-bending ambience in one swift move. It’s your space laboratory, your mix fixer, and your utility tool. It’s simple, flexible – and most importantly, it sounds out of this world.
+
+* THREE DIMENSIONS: RAUM’s three modes cover everything from realistic rooms to experimental reflections and sonic space-travel sound design. Whether you’re adding depth to your pads, or want to extract high-fidelity textures from a one-shot sample, it has you covered.
+* GROUNDED: This room-style reverb covers everything from tiny ambiences to large chambers, and delivers bucketloads of in-your-face reflections with a dense reverb tail. It’s perfect for adding weight and polish to percussive sounds, but can really take sounds to their limits with a little experimentation.
+* AIRY: A hall-style reverb with natural early reflections that will elevate vocals, smooth-out synths, and swell pianos. The modulation control adds extra movement to the reverb, turning sounds from lush to freaky at the twist of a knob.
+* COSMIC: Your zero-gravity sonic laboratory. Get busy with the pre-delay section to craft everything from complex resonances to granular textures, and metallic sounds, and take things further with the modulation knob for even wilder soundscapes. Cosmic is reverb reinvented.
+* RAUM TO EXPERIMENT: RAUM’s pre-delay and modulation sections are where it makes the leap from the utilitarian to sound-sculpting experimentalism.
+* PRE-DELAY: RAUM’s pre-delay section is packed with potential, with an enormous spectrum of potential uses. Increase the feedback using a short delay for metallic, comb-filter sounds, and sync it for echo or looping style effects
+* MODULATION: Add a shifting, detuned feel to RAUM’s reverb tails, or go all-out in the Cosmic mode for wonky atmospheric soundscapes and unique granular textures.\
+"""
+accessibility_description = """User interface isn't accessible but parameters fully usable when used within Komplete Kontrol or via the parameter dialogue. """
+os = ["windows","mac_intel","mac_arm"]
