@@ -1,13 +1,20 @@
+import { useState } from "react"
+
 interface FocusAnchorProps {
     title: string
 }
 
 function FocusAnchor({ title }: FocusAnchorProps) {
+    let [opened, setOpened] = useState(false)
+
     return (
         <h3
             tabIndex={-1}
             ref={(e) => {
-                if (e) e.focus()
+                if (e && !opened) {
+                    e.focus()
+                    setOpened(true)
+                }
             }}
         >
             {title}
