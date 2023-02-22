@@ -81,3 +81,7 @@ url = "https://www.auburnsounds.com/"
 [voxengo]
 name = "Voxengo"
 url = "https://www.voxengo.com/"
+
+[audio-ollie]
+name = "Audio Ollie"
+url = "https://www.audioollie.com/"

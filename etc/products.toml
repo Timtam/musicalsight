@@ -2145,3 +2145,157 @@ OldSkoolVerb offers you a comprehensive set of parameters permitting you to achi
 """
 accessibility_description = """All parameters are accessible via the parameter list and there are around 20 presets to get you going."""
 os = ["windows","mac_intel","mac_arm"]
+
+[la-modern-percussion]
+demo = "https://www.youtube.com/watch?v=tDXTurIew_0"
+vendor = "audio-ollie"
+url = "https://www.audioollie.com/la-modern-percussion"
+name = "La Modern Percussion"
+price = 299
+requires = [["native-instruments-kontakt","5"]]
+categories = ["vsti.percussion"]
+size = 26500
+description = """\
+LA Modern Percussion is the definitive blockbuster percussion collection. Recorded & mixed by mixing legend Alan Meyerson at Warner Bros Eastwood Stage, the drums were produced exactly the way they are on the high budget film score projects he works on.
+
+LA Modern Percussion was designed to be sculpted, processed, & layered into larger than life, fully produced drum ensembles. Included in the library are over 100 presets (multis) which take the original drum recordings to the next level. 
+
+Drums
+
+We recorded a wide range of drums typically used in large cinematic contexts. Including toms, bass drums, tupans, surdos, taikos, daikos, djuns djuns, dumbeks, gran casa, piatti, rotos, all with a variety of sticks, brushes, and mallets. Each drum type was recorded in a 4 player ensemble, as well as solo.
+
+Studio
+
+Recorded at the iconic Warner Bros Eastwood Stage in Los Angles. This room is particularly well suited for percussion because of it’s large yet controlled ambiance. Venue to scores such as Man of Steel, Mad Max Fury Road, & Transformers, all of which are particularly known for their massive percussion.
+
+Mics
+
+Among a premium selection of dynamic, condenser and ribbon mics, Alan Meyerson also brought his collection of priceless vintage mics. Each player in the ensemble had a matched set of close mics and the room ambiance was captured with a mid room, decca tree, wide, and ambient set up. 
+
+Percussion in motion.
+
+LA Modern Percussion’s first groove pack featuring 30 unique drum grooves. 
+LA Modern Percussion features an advanced groove engine allowing users to craft detailed percussion beds entirely within Kontakt. With powerful features such as dynamic step modulation, you can fully control and ‘play’ the rhythms like a real, expressive instrument. 
+The user interface was designed specifically around Meyerson’s mixing workflow and includes multiple mix types, creative presets, transient align controls, dual band AHDSR, bus FX routing and a drum specific FX chain.\
+"""
+
+[nashville-scoring-strings]
+vendor = "audio-ollie"
+name = "Nashville Scoring Strings"
+price = 299
+url = "https://www.audioollie.com/nashville-scoring-strings"
+size = 3960
+demo = "https://soundcloud.com/michal-cielecki/audio-ollie-nashville-scoring-strings-demo"
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt","5"]]
+description = """\
+Nashville Scoring Strings is a new benchmark in orchestral strings libraries. Conceptualized around musically sourced sampling techniques, the performative aspects are life like, expressive and dramatic in ways that are unparalleled.
+
+Nashville Scoring Strings was recorded at Oceanway Studio A, one of the World’s finest acoustic environments and home to Nashville’s top orchestral musicians. Together, the sound is both large and dramatic, making an ideal pairing for film score & TV. 
+
+Musicians
+
+Nashville is home to some of the finest musicians in the world.  Top players from all over the country have come to be a part of Nashville’s music scene, including the orchestras. Nashville Scoring Strings features half section sized of 8 violins, 6 violas, 5 celli, 4 basses.
+
+Studio
+
+Ocean Way Studio A has become lauded for its unique sound.  Established in an old church, the room has a well defined early reflection and highly controlled ambiance.  Its flexible, yet large 3-D sound makes it an ideal venue for string sampling.
+
+Performance
+
+We approached sampling Nashville Strings through actual performance-based phrases.  All of the short articulations were sourced from real repetitions, and the legatos were captured from actual melodies.  The result is a stellar level of fluidity and musical expressiveness.
+
+All of the major articulations are included in Nashville Scoring Strings and were painstakingly recorded. Featuring legato, spiccato, pizzicato, marcato, trills, tremolo, col legno, all with an extreme level of detail and precision. 
+Every articulation was sampled from a musical performance. The spiccato, pizzicato, and col legnos were sourced from true repetitions and have an unmatched fluidity. 
+
+“The performative quality of this library shines through the polished surface, at times making it feel as though you are actually in the studio working with the musicians.”
+Ramin Djawadi
+
+The user interface features a 4 mic mixer and dynamic adjustment controls allowing you to exaggerate or compress the natural dynamic range of the instrument. Additionally, you can change the offset time for use in live performance.\
+"""
+
+[rcd-uke]
+vendor = "audio-ollie"
+name = "Rhythmic Cinema Devices: Uke"
+url = "https://www.audioollie.com/rcd-uke"
+demo = "https://soundcloud.com/ryanstrong/magdala-ft-audio-ollie-uke"
+requires = [["native-instruments-kontakt","5"]]
+price = 99
+size = 5310
+categories = ["vsti.guitar"]
+description = """\
+The Uke is a cinematic ukulele instrument with a focus on rhythmic performances and unique playing styles. While primarily conceptualized for use in under score, you’ll discover highly energetic, organic sequences which can be crafted to fit any production.
+
+Sourced from actual repetition based performances, Uke has an unparalleled level of realism and fluidity. Capturing the sonic detail between notes, and before the peak of the transients results in an unmatched connectivity and life like energy. 
+
+Performance
+
+Uke features a wide range of riffs, tremolos and playable repetition patches - samples that have been edited out of real performances, and programmed to play back with hyper-realistic connectivity. We captured both tonal and atonal playing styles. 
+
+Tone
+
+We captured an extensive set of playing styles from plucks, picks, and taps to brushes, harmonics and sticks. Most unique styles were sampled both tonally and atonally, all with an emphasis on rhythmic performance. The resulting sounds are unique and well suited to film score.
+
+Interface
+
+The UI features dual band AHDSR controls for sound shaping, advanced controls for flexibility in performance and a powerful 32 step sequencer designed to craft energetic rhythms and grooves. Riffs patches have unique speed controls to either double or half the tempo of a given performance.
+
+Texture in motion.
+
+Uke is not a traditional ukulele virtual instrument. We captured entirely unique playing styles including plucks, picks, finger hammers, brushes, taps, tremolos and harmonics. In addition, we sampled atonal and percussive techniques. 
+
+A ukulele instrument like you’ve never heard before.
+
+“Uke is an incredible secret weapon for media composers. ”
+Jacob Shea
+
+The user interface features a powerful sequencer designed to make rhythmic creation easy and inspiring. Also included are modulation controls and advanced settings to customize playback performance.\
+"""
+
+[scoring-synths]
+vendor = "audio-ollie"
+name = "Scoring Synths"
+url = "https://www.audioollie.com/scoring-synths"
+price = 149
+size = 65900
+requires = [["native-instruments-kontakt","5"]]
+categories = ["vsti.synthesizer"]
+demo = "https://soundcloud.com/user-887852232/sets/scoring-synths-tech-demos"
+description = """\
+Scoring Synths is an extensive collection of ‘worldized’ analogue synths. Recorded at Oceanway studios with a wide array of room mics, the intention was to create a core set of synth tones designed to blend perfectly with the modern orchestra.
+
+Scoring Synths features rich, warm tones crafted from iconic vintage Moogs. Intentionally minimal, the sounds are primarily suited to compliment orchestral arrangements but also to be used as basic source material for further sound creation. 
+
+Synths
+
+Featuring tones captured from a collection of vintage Moogs, the sound has that unmistakable low end punch and classic warmth that has become iconic in the music world. The Moog sound still remains champion of tone and has been used on countless film score productions 
+
+Studio
+
+Oceanway Studio A in quickly becoming one of the World’s premier recording venues for orchestral music. Built inside of a 100 year old church, the acoustic is large yet controlled. There’s a signature depth in this room which makes it ideal for film score and TV based productions. 
+
+Mics
+
+Scoring Synths was recorded with a series of priceless microphones, including a set of M50’s used by Shawn Murphy to record E.T. With a standard orchestral setup, we captured close, mid room, decca tree, wide, surround and rear surround perspectives in addition to the DI signal. 
+
+A new addition to the modern orchestra.
+
+With 8 available mic perspectives, Scoring Synths offers a sonic depth that can’t be found in any other synth instrument. Recording synths in a real room acoustic adds an organic character and 3D depth that can’t be replicated with a reverb unit.\
+"""
+
+[taste]
+vendor = "audio-ollie"
+name = "Taste"
+requires = [["native-instruments-kontakt","5"]]
+categories = ["vsti.guitar", "vsti.percussion", "vsti.strings"]
+url = "https://www.audioollie.com/taste"
+demo = "https://www.youtube.com/watch?v=2fR2kcy-h8Y"
+price = 9
+size = 14900
+description = """\
+TASTE is a curated collection of virtual instruments carefully selected from our catalogue, designed to be layered, processed, and effected to create entirely new and inspiring sounds in the form of "multis." Including instruments from our renowned LA Modern Percussion, Nashville Scoring Strings, Scoring Synths, RCD Uke, and a large collection of never released content from our upcoming RCD Guitars modules, Taste serves both as an introduction to Audio Ollie’s premium product line, and as an expansion of content to our seasoned customers. As a special bonus, we’ve also included a preview version of the Postcard Piano from our good friends at Teletone Audio. Whether you’re a bedroom producer or an A-list composer, a sound designer or a songwriter, there’s something in this collection for you. Feast on your new sonic palette, and taste the difference!
+
+“The best deal out there. Such quality of content…”
+
+“Easily the most inspiring instrument for the price. No brainer.”
+"""
