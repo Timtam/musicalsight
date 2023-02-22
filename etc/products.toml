@@ -2299,3 +2299,151 @@ TASTE is a curated collection of virtual instruments carefully selected from our
 
 “Easily the most inspiring instrument for the price. No brainer.”
 """
+
+[genesis-childrens-choir]
+vendor = "audiobro"
+name = "Genesis Children's Choir"
+url = "https://audiobro.com/genesis/"
+demo = "https://soundcloud.com/mucusman/audiobro-genesis-childrens-choir-examples"
+categories = ["vsti.vocal"]
+nks = true
+size = 20000
+price = 399
+requires = [["native-instruments-kontakt-player","5"]]
+description = """\
+We are very happy to present you a new reference in the field of children's choirs. Built on our new orchestral engine, the Genesis Choir is an elite 64-piece (4 divisi part) children's choir that's like having 4 choirs in 1:
+
+* 16 Soprano Girls
+* 16 Viola Girls
+* 16 Soprano Boys
+* 16 Viola Boys
+
+Here is a partial list of Genesis features:
+
+* Polyphonic Real Legato and melisma
+* New Audiobro engine supports Kontakt and NKS
+* New Auto Divisi engine with all-in-1 patches
+* Programmable phrases based on Latin
+* 3D scene panel for all divisions/sets in one patch
+* New "Look Ahead" function reduces tedious MIDI editing
+* 4 microphone mixes: Close, Stage, Far and Full Mix
+
+The Ensemble page is where Audiobro's stage and coveted Auto-Split and Delay and Humanize (DNH) functions are located. Here you can choose and place your sets on our virtual stage and our Auto Divisi will intelligently respond to your choices.
+
+Here are some of the main features of the Pages Set:
+
+* Auto Divisi automatically adapts to your choice of sets
+* 52 ambient presets using exclusive Audiobro IR
+* X/Y buffer to facilitate the installation of sets
+* Independent volume, width and pan per set
+* Adjustable stage quantities for each microphone
+* Automatic purge of samples from sets that are not used on stage
+
+Easily create Latin-inspired phrases using our Phrase section and save your phrases to 20 presets that can be switched in real time with smooth playback.
+Phrases can be played with our Auto Divisi polyphonic engine like:
+
+* Melisma - multiple legato notes per syllable
+* Legato - all 5 vowels and hum have true Legato
+* Staccato - there are short and long staccato
+* Supports - melisma, legato, or just supports
+* The Phrase Editor has features:
+* Over 56 articulations (30 syllables, 6 vowels, 20 without pitch)
+* Articulations without prefix and suffix pitch
+* Word Speed ​​- definable syllable reading speed.
+* Control the volume of vowels, syllables, pitchless, etc.\
+"""
+
+[la-scoring-strings-3]
+vendor = "audiobro"
+name = "LA Scoring Strings"
+url = "https://audiobro.com/la-scoring-strings-3/"
+demo = "https://soundcloud.com/besknee/sets/la-scoring-strings"
+categories = ["vsti.strings"]
+size = 21500
+price = 499
+requires = [["native-instruments-kontakt-player","5"]]
+description = """\
+LA Scoring Strings 3 reinvents our renowned classic string library, integrating it seamlessly into our new orchestral engine with a host of new features.
+
+LASS 3’s instrumentation:
+
+* 16 Violins recorded in 3 divisis (¼ + ¼ + ½ sections)
+* 16 Violins II recorded in 3 divisis (¼ + ¼ + ½ sections)*
+* 12 Violas recorded in 3 divisis (¼ + ¼ + ½ sections)
+* 10 Cellos recorded in 3 divisis (¼ + ¼ + ½ sections)
+* 8 Basses recorded in 3 divisis (¼ + ¼ + ½ sections)
+* First Chair violin, viola, cello, and bass
+
+*Violins II samples are borrowed from the Violins I but shifted so as to not cause any phasing when layering.
+
+Here is a partial list of new features to LASS 3:
+
+* Now has “Look Ahead” – saving you from tedious MIDI nudging
+* Newly remapped and integrated into our new orchestral engine
+* Now includes Legato Sordino (previously an optional addition)
+* Greater Legato range and flexibility (more exposed transitions for cleaner Legatos)
+* Independent real-time control of Legato, Portamento, and Glissando speeds
+* All section divisis integrated on the same patch (no more need for multis)
+* Integrated polyphonic Legato (no more need for multis)
+* Integrated Stage and Color profiles (no more need for multis)
+* Same note rebow – integrated into new patches and auto divisi aware
+
+LASS is our famous original 60-piece multi-instrument divisi string library, painstakingly developed by recording three different divisi sections (¼ + ¼ + ½ section at a time) on a trusted scoring stage, for unprecedented individual control of each section. We have also recorded First Chair players so you can layer them with the sections or use them as soloists. From the delicate tones of a divisi section playing Sustains and beautiful Legatos, to the power of Staccatos and Spiccatos and everything in between, LA Scoring Strings 3 captures the broad expressive range and diversity of the orchestral string family while providing the flexibility to create smaller intimate section sounds. Pristine recordings and meticulous editing ensure every note of your music will shine.
+"""
+
+[modern-scoring-strings]
+vendor = "audiobro"
+name = "Modern Scoring Strings"
+price = 699
+url = "https://audiobro.com/modern-scoring-strings/"
+demo = "https://www.youtube.com/watch?v=kqbW6GDd5MU"
+categories = ["vsti.strings"]
+size = 122000
+nks = true
+requires = [["native-instruments-kontakt-player","6"]]
+description = """\
+MSS Modern Scoring Strings is our newest and most recently recorded 60 piece “a2” divisi (2 parts divisi per section) flagship string library. This is a new library separate from LASS. It features:
+
+* 16 Violins – recorded in 2 divisis (8 Vns) separately
+* 14 Violins II – recorded in 2 divisis (7 Vns) separately
+* 12 Violas – recorded in 2 divisis (6 Vas) separately
+* 10 Cellos – recorded in 2 divisis (5 Cls) separately
+* 8 Basses – recorded in 2 divisis (4 Cbs) separately
+* Solo violin and Cello for soloists or perfect layering
+
+Here is a partial list of Modern Scoring Strings’ Features:
+
+* A gorgeous and lush divisi sound that’s easy to use
+* A huge range of articulations – easy to play
+* A new Legato Engine with unprecedented control
+* Real Recorded Ostinatos that sync to your project
+* Our new Scales Engine – real recordings stitched together
+* Real Aleatoric multi-sampled phrases per divisi
+* Shorts & ART – Martelé, staccato, staccatissimo, spiccato
+* Sordino, Sul Tasto, and Sul Pont sustains
+* Look Ahead – minimize tedious MIDI editing
+* Advanced Key Switching and patch control
+* NKS integration
+"""
+
+[modern-scoring-strings-expanded-legato]
+vendor = "audiobro"
+name = "Modern Scoring Strings Expanded Legato"
+url = "https://audiobro.com/modern-scoring-strings-expanded-legato/"
+demo = "https://www.youtube.com/watch?v=8xRSCH7Gcgc"
+size = 56100
+nks = true
+requires = [["native-instruments-kontakt-player","6"]]
+categories = ["vsti.strings"]
+price = 399
+description = """\
+MSS EL Expanded Legato is an add-on library to the main MSS library with an additional 60GB worth of Sordino, Sul Tasto, Sul Pont, and… legato, portamento, and glissando articulations (not available in the main MSS library). Mixed down to four different microphone mixes, the breadth of articulations and bowing techniques were chosen to offer an enormous range of colors and emotions for your productions. Enjoy these new delicate and inspiring string sonorities with extra legato features like “Bloom,” “Crescendo,” and “Attack.“
+
+The Divisis:
+
+* 16 Violins – recorded in 2 divisis (8 Vns) separately
+* 14 Violins II – recorded in 2 divisis (7 Vns) separately
+* 12 Violas – recorded in 2 divisis (6 Vas) separately
+* 10 Cellos – recorded in 2 divisis (5 Cls) separately
+* 8 Basses – recorded in 2 divisis (4 Cbs) separately
+"""
