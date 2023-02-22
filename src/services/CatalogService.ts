@@ -1,7 +1,6 @@
 import { plainToClass } from "class-transformer"
 import Fuse from "fuse.js"
-import raw from "raw.macro"
-import toml from "toml"
+import catalog from "../catalog.json"
 import Category from "../entities/Category"
 import { OperatingSystem } from "../entities/OperatingSystem"
 import Product from "../entities/Product"
@@ -18,9 +17,7 @@ class CatalogService {
         this.vendors = new Map()
         this.products = new Map()
 
-        let vendors = toml.parse(raw("../data/vendors.toml"))
-
-        for (const [key, value] of Object.entries(vendors)) {
+        for (const [key, value] of Object.entries(catalog.vendors)) {
             let vendor = plainToClass(Vendor, value, {
                 excludeExtraneousValues: true,
                 exposeDefaultValues: true,
@@ -31,15 +28,11 @@ class CatalogService {
             this.vendors.set(key, vendor)
         }
 
-        let categories = toml.parse(raw("../data/categories.toml"))
-
-        for (const [key, value] of Object.entries(categories)) {
+        for (const [key, value] of Object.entries(catalog.categories)) {
             this.parseCategory(key, value as object)
         }
 
-        let products = toml.parse(raw("../data/products.toml"))
-
-        for (const [key, value] of Object.entries(products)) {
+        for (const [key, value] of Object.entries(catalog.products)) {
             let p = plainToClass(Product, value, {
                 excludeExtraneousValues: true,
                 exposeDefaultValues: true,
@@ -77,7 +70,7 @@ class CatalogService {
         }
 
         // we need to do a second run through products to properly resolve product references
-        for (const [key, value] of Object.entries(products)) {
+        for (const [key, value] of Object.entries(catalog.products)) {
             if (Array.isArray((value as any).requires)) {
                 let p = this.products.get(`${(value as any).vendor}-${key}`)
                 p!.requires = (value as any).requires.map(
