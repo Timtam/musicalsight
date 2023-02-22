@@ -68,6 +68,7 @@
         ]
     },
     "devDependencies": {
-        "toml": "^3.0.0"
+        "toml": "^3.0.0",
+        "ts-node": "^10.9.1"
     }
 }
