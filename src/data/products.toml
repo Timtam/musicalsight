@@ -7,6 +7,11 @@ url = "https://8dio.com/products/1990-studio-grand-piano"
 size = 17300
 demo = "https://soundcloud.com/8dawn/8dio-1990-studio-grand-piano"
 price = 198
+description = """\
+The 1990 Studio Grand Piano is amongst one of our favorite virtual instruments ever done. This extraordinary library contains over 48.000 samples and unique microphones/positions, including Neumann 87’s, Coles, Neve SE Ribbon’s, AKG 414’s and Neumann KM 184’s. Everything was lovingly recorded & processed at a famous hi-tech British Studio through one of the greatest custom NEVE desks in existence. 
+
+We wanted to create a hyper-realistic virtual instrument that pays an homage to its counter-part in reality – the incredibly versatile and studio defacto, Yamaha C7. The piano is best described as incredibly versatile and fantastic for pop, rock, classical, fusion and all in-between. The sustain samples were carefully crafted at both pedal up and pedal down positions. We also have bonus sampled staccato and staccatissimo notes (w/round robin each), so you have the correct attack for faster runs. In addition, the library gives you full control over the dynamic response as well as mechanics and tone, so you can dial in the perfect sound & dynamic match for your workflow – all simply done with a click of the mouse. We also included full control over resonance, room tone and signal chain noise, non-tonal key control, unique release triggers for hammer action, string damping, and release triggers for our room and ambient microphones. In essence you have everything right at your fingertips and most importantly – it just works effortlessly.\
+"""
 
 [adagio-violins1]
 vendor = "8dio"
@@ -17,6 +22,17 @@ url = "https://8dio.com/products/adagio-violins"
 size = 15800
 demo = "https://soundcloud.com/8dawn/adagio-tech-demo-e-t-legato?in=8dawn/sets/adagio-violins-vol-1"
 price = 78
+description = """\
+Starting with the Violins, this newly reworked volume brings you the latest improvements in programming and workflow previously found only in our critically acclaimed Century Series. The update includes the familiar and easy to use Century interface, remastered articulations, a powerful articulation matrix, integrated mixing capabilities, and for advanced real-time processing, our Chaos Effects.
+
+With the new advanced Articulation browser, you can create your very own matrix of custom playing styles to suit your compositional needs. You can easily balance each articulation and assign each style its own dedicated Key-switch or Midi CC. Whether you are building a template and need to separate the long and short articulations; building performance-based patches out of the dozens of playing styles; or creating a custom set of patches needed for your specific arrangement, Adagio gives you the power to shape this iconic sound to your workflow.
+
+Say goodbye to Multis. With the update to Adagio, you will find various remastered layered Legato articulations made from 11 independent styles of lyrical Legato.
+
+These Legatos have been completely reworked and redesigned to make expressive string writing completely effortless. The new legatos now adapt to the way you play, a softer velocity will trigger a more passionate set of Legato transitions, whereas playing more intensely triggers Legatos with a stronger transition.
+
+The Adagio series was recorded in a beautiful church environment and contains three main groups of master violinists: Full Ensemble Violins (11 Players), Small Ensemble or Chamber Violins (3 Players) and a Solo Virtuoso Violinist (1 Player). Each section was sampled to capture the raw emotions and true expression within each string ensemble. Every articulation has been extensively sampled, including a total of 11 individual legato techniques, each with up to three times round robin, and a wealth of dynamic short notes including multiple styles of Spiccato. Each articulation is sampled with movement and character; the natural expression in each sample makes for a truly authentic playing experience that will be instantly noticeable in your next production.\
+"""
 
 [aura-guitars]
 vendor = "8dio"
@@ -27,6 +43,13 @@ url = "https://8dio.com/products/aura-guitars-for-kontakt-vst-au-aax"
 size = 8330
 demo = "https://soundcloud.com/8dawn/8dio-aura-guitars-the-nexus-by"
 price = 238
+description = """\
+8Dio Aura Guitars is the ultimate collection of deep-sampled motion picture guitars.  Aura Guitars contains 12 different guitars, including Martin, 12 String, Dobro, Mandolin, Ukulele, 8 String Schecter, Silent Guitar, Stratocaster, Telecaster, Les Paul and assortment of Bass Guitars. It contains both multi-sampled single notes and multi-sampled chords. All the chords were sampled in perfect fifth, so you can essentially generate any chord and rhythm you want. All 12 guitars were sampled symmetrically – meaning that you can freely blend anything you want and it will work together. So you literally have billions of patch combinations.
+
+Aura Guitars contains 3 modules, so you can freely mix and blend up to three different guitars together. The collection spans over 9GB of content (lossless compressed from 17GB) and several thousand auras. Aura Guitars also contains an advanced grid-sequencer, which allows you to completely create your own signature rhythms by using velocity, pan, pitch and on/off functions for each step in the Aura. All the guitars were also multi-sampled, so when you play chords you can freely mix between muted/non-tonal strums and glide into rich, open chords by using the modwheel. In addition we also multi-sampled the single notes, so you can create more realistic sounding guitar rhythms.
+
+Aura Guitars is designed for instant gratification. It is insanely easy to use and get inspired – and it also allows you to go incredibly deep and even into the realm of chaos. We created chaos features both both patches, grid-sequencing and FX. So with one click the library can generate a completely new patch – with one click it can generate a completely new grid-sequence and with one click it can randomize all the FX. In essence you have an infinite amount of combinations and it just makes the library a true inspiration to work with.\
+"""
 
 [aura-studio-exotic-percussion1]
 vendor = "8dio"
@@ -37,6 +60,15 @@ url = "https://8dio.com/products/aura-tonal-exotic-studio-percussion"
 size = 7530
 demo = "https://www.youtube.com/watch?v=Bth8cgHUOls"
 price = 198
+description = """\
+Aura Tonal Exotic Studio Percussion contains 5 different instruments and 3 microphone positions that are all easy-accessed from our built-in browser. The instruments cover a wide range of auxiliary percussion (ex. Aluphone, Caisa, Scaffaphone, Sixxen & Tubaphone)
+
+The majority of instruments in Aura Tonal Exotic Studio Percussion were also recorded with two different types of mallets, sticks and brushes. So imagine playing a unique Caisa with brushes or sticks. The ability to choose mallets widens the usability of the library, especially in regards to cinematic scoring.
+
+Aura Tonal Exotic Studio Percussion contains 3 microphone positions (Close, Mid, Room) that each have a very distinct sound. We’ve also included a new dual layered FX system. The first part is our front-face FX system that gives you control over dynamics, filters, pitch and micro-pitch, delay, bit-resolution and our new textural convolution delay. The new textural delay allows you to take and use them as delay components, so the instrument will delay other sounds than just itself. We’ve also included our new Chaos FX engine, which gives you a large control over things such as EQ, Distortion, Stereo-Delay and an additional convolution reverb.
+
+It has always been our mantra to push sampling forward in regards to realism and playability. Aura Studio Exotic Percussion is the first of several to utilize our proprietary Groove Sampling™ method and we really think it is going to make compositions richer and easier to create.\
+"""
 
 [soul-series-christopher-young]
 vendor = "8dio"
@@ -47,6 +79,15 @@ url = "https://8dio.com/products/young-the-collection"
 size = 20100
 demo = "https://soundcloud.com/8dawn/soul-series-christopher-young-the-collection-6-by-troels-folmann"
 price = 398
+description = """\
+8Dio Soul Series is a new product line representing the musical spirit of highly acclaimed artists.  We are privileged and excited to begin the journey with acclaimed composer, Christopher Young (Hellraiser, Spider-Man 3, Sinister, Swordfish, Ghost Rider, The Rum Diary etc). 
+
+Christopher Young has a beautifully unique way of approaching scores – both by working with orchestras and performers, but also by weaving musical sound design and textures into his music.  We’ve worked with Christopher Young curating over 35 years of recordings and sonic experiments.  The result is an incredible collection of organic textures and pro-grade scoring tools. 
+
+8Dio Soul Series – Christopher Young – contains two different libraries. Textural Worlds and Orchestral Touches.  Textural Worlds contains thousands of unique soundscapes and organic effects.  The sound sources vary from traditional instruments like strings, pianos, flute to more exotic instruments like whistles, modified toy instruments to a large assortment of vocal and otherworldly textures.  Orchestral Touches is a large collection of orchestral effects specifically composed and designed by Christopher Young. 
+
+8Dio designed a new, advanced user-interface for the Christopher Young libraries – offering a wealth of novel features.  Perhaps the most prominent is our new IR-engine (impulse response engine).  The IR-engine offers you the ability to make any sample in the library into a convolution impulse.  The impulse can then be superimposed on any other sample in the library.  In addition, user-interface also includes instant stack, reverse, stretch, off-set and chaos functions. The library is also first to feature our new Chaos 4.0 system, which allows you to create any FX chains of your own choice. \
+"""
 
 [claire-alto-flute-virtuoso]
 vendor = "8dio"
@@ -57,6 +98,11 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=XuPmKYOIT7k"
 url = "https://8dio.com/products/alto-flute-virtuoso"
 price = 98
+description = """\
+The Claire Woodwind Series is a deep-sampled collection of the finest virtuoso woodwind soloists ever sampled. These are highly playable instruments sampled with genuine emotion, effortless and equilibristic behavior. 
+
+Our Alto Flute Virtuoso is the most expressive, playable, and lifelike Alto-Flute ever sampled. It was recorded in a symphonic hall and contains three microphone positions (Close, Decca, Wide). The core of the instrument is its highly advanced legato system, which includes both lyrical and strong legato. The legato system allows you to play legato with passionate arcs and sustains. We recorded arcs with both light, medium, and strong vibrato, so you can freely sculpt your performance from the subtle to vibrant. Also, we also added trills, runs, staccatissimo, marcato and even non-tonal effects like breaths, valve sounds, and natural click noises.\
+"""
 
 [claire-bassoon-virtuoso]
 vendor = "8dio"
@@ -67,6 +113,9 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=fh1z7CbP03M"
 url = "https://8dio.com/products/bassoon-virtuoso"
 price = 98
+description = """\
+The Claire Woodwind Series is a deep-sampled collection of the finest virtuoso woodwind soloists ever sampled. These are highly playable instruments soared with true emotion, effortless and equilibristic behavior. Our Bassoon Virtuoso is the most expressive, playable, and lifelike Bassoon ever sampled. The Bassoon Virtuoso was recorded in a symphonic hall and contains three microphone positions (Close, Decca, Far). The core of the Bassoon is its highly advanced legato system, which contains both slow and fast legato. The legato system allows you to play legato with passionate arcs, sustains, staccatissimo, expressive marcato, and more. We recorded arcs with both non-vibrato, medium and strong vibrato, so you can freely sculpt your performance from the subtle to vibrant. In addition, we also added trills, runs, staccatissimo and even non-tonal effects like breaths, valve sounds, and natural click noises.\
+"""
 
 [claire-clarinet-virtuoso]
 vendor = "8dio"
@@ -77,6 +126,9 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=bmoBSsUQD0M"
 url = "https://8dio.com/products/clarinet-virtouso"
 price = 98
+description = """\
+The Claire Woodwind Series is a deep-sampled collection of the finest virtuoso woodwind soloists ever sampled. These are highly playable instruments soared with true emotion, effortless and equilibristic behavior. Our Clarinet Virtuoso is the most expressive, playable, and lifelike Clarinet ever sampled. The Clarinet Virtuoso was recorded in a symphonic hall and contains three microphone positions (Close, Decca, Far). The core of the Clarinet is its highly advanced legato system, which contains both slow and fast legato. The legato system allows you to play legato with passionate arcs, sustains, staccatissimo, expressive marcato, and more. We recorded arcs with both non-vibrato, medium and strong vibrato, so you can freely sculpt your performance from the subtle to vibrant. In addition, we also added trills, runs, staccatissimo and even non-tonal effects like breaths, valve sounds, and natural click noises.\
+"""
 
 [claire-flute-virtuoso]
 vendor = "8dio"
@@ -87,6 +139,9 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=uP37J3YC19M"
 url = "https://8dio.com/products/flute-virtuoso"
 price = 98
+description = """\
+The Claire Woodwind Series is a deep-sampled collection of the finest virtuoso woodwind soloists ever sampled. These are highly playable instruments soared with true emotion, effortless and equilibristic behavior. Our Flute Virtuoso is the most expressive, playable, and lifelike Flute ever sampled. The Flute Virtuoso was recorded in a symphonic hall and contains three microphone positions (Close, Decca, Far). The core of the Flute is its highly advanced legato system, which contains both slow and fast legato. The legato system allows you to play legato with passionate arcs, sustains, staccatissimo, expressive marcato, and more. We recorded arcs with both non-vibrato, medium and strong vibrato, so you can freely sculpt your performance from the subtle to vibrant. In addition, we also added trills, runs, staccatissimo and even non-tonal effects like breaths, valve sounds, and natural click noises.\
+"""
 
 [claire-oboe-virtuoso]
 vendor = "8dio"
@@ -97,6 +152,9 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=FaBM25kTbvk"
 url = "https://8dio.com/products/oboe-virtuoso"
 price = 98
+description = """\
+The Claire Woodwind Series is a deep-sampled collection of the finest virtuoso woodwind soloists ever sampled. These are highly playable instruments soared with true emotion, effortless and equilibristic behavior. Our Oboe Virtuoso is the most expressive, playable, and lifelike Bassoon ever sampled. The Oboe Virtuoso was recorded in a symphonic hall and contains three microphone positions (Close, Decca, Far). The core of the Bassoon is its highly advanced legato system, which contains both slow and fast legato. The legato system allows you to play legato with passionate arcs, sustains, staccatissimo, expressive marcato, and more. We recorded arcs with both non-vibrato, medium and strong vibrato, so you can freely sculpt your performance from the subtle to vibrant. In addition, we also added trills, runs, staccatissimo and even non-tonal effects like breaths, valve sounds, and natural click noises.\
+"""
 
 [curio]
 vendor = "impact-soundworks"
@@ -107,6 +165,15 @@ requires = [["native-instruments-kontakt", "4"]]
 demo = "https://www.youtube.com/watch?v=iU9d9uK-4Cg"
 url = "https://impactsoundworks.com/product/curio-cinematic-toy-piano/"
 price = 59
+description = """\
+Welcome to CURIO: Cinematic Toy Piano, a rare collection of custom-designed tonal and atonal material for Kontakt 4+. Designed by Ali Lacey, Curio features a miniature grand piano recorded naturally, then prepared, deconstructed, and mangled beyond recognition using acoustic and electronic sound design techniques.
+In addition to atmospheric plucks, haunting and subtle mallet hits, and other traditional chromatic sounds, Curio contains a huge variety of percussive hits. These sounds, which range from light taps to earth-shaking subs, are ideal for epic cues and subtle underscore alike. The beautiful UI provides further editing controls, allowing for instant customization and shaping of any sound with just a few clicks.
+With over +1400 samples provided in both NCW and WAV format (for further editing and mangling), Curio is a treasure trove of inspirational material.
+
+Interface & Engine
+
+The Curio interface includes a wide range of toggled effects along with an ADSR envelope. These features in tandem provide a powerful way to shape and create sounds out of the pre-existing patches in Curio.\
+"""
 
 [dobro-bundle]
 vendor = "8dio"
@@ -117,6 +184,13 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/instant-guitar-collection"
 url = "https://8dio.com/products/instant-dobro"
 price = 98
+description = """\
+Welcome to the 8DIO Instant Guitar Series: a collection of high-end, deep-sampled electric instruments. This library contains both the Dobro Solo and Dobro Strummer, recorded with the same instrument and amplifier, so they are 100% compatible and designed to be used together. We also integrated our Chaos FX 3.2 (ex. Stereo Delay, Verb, Screamer, Lofi, Dual-Convolution) into the patches, so you can trigger live FX on top of the patches by using key-switches. 
+
+The Dobro Guitar Solo is a passionate, deep-sampled, pristine-sounding, true Americana Dobro. In addition to sustains and muted strings, we included hundreds of natural fret and release noises, as well as natural strum samples, so you can play everything in a strummed fashion. The 8Dio Dobro Solo comes with 18 core patches divided into natural, morphed, and synthesized categories. The morphed category blends with Dobro Guitar with other instruments, such as Grand Piano, Steel String Guitar, Analog Synths, and more exotic instruments. 
+
+The Dobro Strummer contains over 8,500 samples spread across 13 different chord types and 18 common rhythms. All the chords and rhythms can seamlessly be blended using our x-legato technology, giving you an infinite number of combinations. Electric Guitar Strummer is also a round-robin based strum library, so even if you trigger the same chord/rhythm multiple times, you will get natural, subtle variation.\
+"""
 
 [edm-drumstep1]
 vendor = "8dio"
@@ -127,6 +201,13 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=evN5MVjl3AU"
 url = "https://8dio.com/products/edm-drumstep-1"
 price = 20
+description = """\
+8DIO EDM Drumstep is one of the most comprehensive production tools on the market for high-end Drumstep and Dubstep production. This punchy instrument is created for producers, composers, and DJs. The style is mainly focused on Drumstep, which is a mixture of Dubstep and modern Drum n’ Bass. 
+
+We created 20 different core kits, which covers all corners of the current Drumstep realm. We have hundreds of basses, leads, glitched vocal FX, and punching drums, mixed from both digital and acoustic content. It also includes the ultimate randomizer feature that allows you to create brand new, super sounding grooves with one click. The tool uses a consistent layout, so drums, synths and vocals are always in the same place, which means you can use the randomizer over any existing groove to find new sources of inspiration. 
+
+Everything is perfectly tempo-synced to your host, and everything is controllable directly from your keys. The bottom of the keyboard controls the pitch, the middle of the keyboard controls the sounds themselves, and the top of the keyboard gives you real-time control over all the effects, including distortion, phaser, flanger, lofi, convolution reverb, delay, lowpass, hipass and several other effects. In addition, we also added a Talk-Talk FX to the modwheel – giving you an extreme amount of control right at your fingertips. The entire library comes in open 44.1/24 Bit Format.\
+"""
 
 [edm-trap]
 vendor = "8dio"
@@ -137,6 +218,13 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=c6XRMrL9xXA"
 url = "https://8dio.com/products/edm-trap"
 price = 20
+description = """\
+8DIO EDM Trap is a hyper flexible production tool designed for music producers, composers and DJs. Trap is one of the fastest emerging styles on the EDM scene. The style is HipHop oriented, but borrows elements from other electronica styles like Dubstep, Moombahton, Drum N’ Bass, and others. 
+
+The 8DIO EDM Trap library contains 3.5 GB of Trap Material and covers every aspect of Trap in great depth. The library contains hundreds of basses, leads, glitched vocal FX, drums, and the ultimate randomizer feature that allows you to create brand new, super sounding grooves with one click. The tool uses a consistent layout, so drums, synths and vocals are always in the same place, which means you can use the randomizer over any existing groove to find new source of inspiration.  
+
+Everything is perfectly tempo-synced to your host, and everything is controllable directly from your keys. The bottom of the keyboard controls the pitch, the middle of the keyboard controls the sounds themselves, and the top of the keyboard gives you real-time control over all the effects, including distortion, phaser, flanger, lofi, convolution reverb, delay, lowpass, hipass and several other effects. In addition we also added a Talk-Talk FX to the modwheel – giving you an extreme amount of control right at your fingertips. The entire library comes in open 44.1/24 bit .wav format, so the source material can be used in any program desired.\
+"""
 
 [epic-toms-ensemble]
 vendor = "8dio"
@@ -147,6 +235,13 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=CBX2qnSm1Lo"
 url = "https://8dio.com/products/epic-toms-ensemble"
 price = 78
+description = """\
+The Epic Toms Ensemble is the most comprehensive and deep-sampled collection of large-scale, epic Toms on the market. The library is a completely remastered, redesigned, and reprogrammed edition of our original Epic Toms Ensemble. The Epic Toms Ensemble contains over 2,400 samples, a built-in articulation browser, internal step-sequencer, front-face effects, textural convolutions, and our newest 3.4 Chaos Engine. 
+
+We captured a variety of powerful articulations, using a combination of high-tuned 10″ – 14″ toms, roto-toms, octabans, floor toms, bass drums, and custom-designed mega-toms. They are perfect for raging battle scenes or when you just need a loud boom. We highly recommend trying it with our Epic Dhol Ensemble, Epic Frame Drums, and Small Epic Percussion, all extensively recorded by some of the very best percussionists in the world, in a high-ceiling glass, stone, and tile hall specifically designed for sample recording. 
+
+Even though these instruments were all recorded naturally wet for realism and maximum audio quality in our epic recording hall, we have also incorporated advanced programming into every instrument patch that allows you to shape the decay of the room reverberation precisely and realistically with the mod-wheel. This allows for custom room shaping, all the way from a massive hall down to a small drum room.\
+"""
 
 [forgotten-voices-terrie]
 vendor = "8dio"
@@ -157,6 +252,13 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=sx_GaKw7664"
 url = "https://8dio.com/products/new-terrie-solo-vocal-instrument-kontakt-vst-au-aax"
 price = 48
+description = """\
+Welcome to Forgotten Voices: Terrie. Terrie Odabi is a classically trained singer who studied under Gwen Brown, Bill Bell, and the late John Patton. While travelling, Terrie started to gain interest in other cultures and languages, including Latin, Spanish, and a variety of African and even Middle Eastern dialects. Her incredible depth and understanding of musical cultures were the premise of this library, which covers several African dialects as well as Gospel, Soul, RnB, and further experimental styles of singing. 
+
+Forgotten Voices: Terrie contains an all-new yet familiar user interface, allowing you to access the wealth of phrases in the library quickly and easily. The new user interface also contains a range of effects and processing options allowing you to easily sculpt and adjust the phrases to fit your composition. The library also has a four XY-PAD system in which you can load any effect you want and assign the controls to any MIDI CC you desire, making it extremely flexible. The library also contains our custom Chaos FX system, which allows you to virtually do anything you desire. 
+
+Most phrases were sung multiple times, meaning they can be stacked for a larger sound. Forgotten Voices: Terrie contains a unique set of custom vocal ambiences designed from her voice. These patches work perfectly in combination with the original phrases or can be used separately to enrich your score.\
+"""
 
 [hybrid-tools-dark-prophecy]
 vendor = "8dio"
@@ -164,9 +266,18 @@ name = "Hybrid Tools Dark Prophecy"
 size = 16200
 categories = ["vsti.synthesizer"]
 requires = [["native-instruments-kontakt", "5"]]
-demo = "https://soundcloud.com/8dawn/sets/8dio-hybrid-tools-dark-prophecy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+demo = "https://soundcloud.com/8dawn/sets/8dio-hybrid-tools-dark-prophecy"
 url = "https://8dio.com/products/hybrid-tools-dark-prophecy"
 price = 198
+description = """\
+Hybrid Tools Dark Prophecy is a new, dark chapter in the saga of our evolving Hybrid Tools, designed with purely analog hardware synthesizers and expanding upon the latest trends in professional scores. 
+
+Dark Prophecy contains a wealth of new synth-based signature instruments, including massive and evolving analog drone-beds, cinematic sub-booms, a wide selection of warm and soothing synth basses, myriads of musical sound designs, evolving epic textures, dark pads, and the flexibility to create your own pro-grade cinematic sound designs in a matter of seconds. 
+
+The sound is major-motion picture-big, dark and beautiful. You will find light in this library, but a “dark light.” 
+
+Hybrid Tools Dark Prophecy contains a fully rendered 3D User Interface with a variety of new controls, including Tempo-Synced Gate, Reverse, Randomise, Speed Control, Pitch Envelope, Glide, and Offset, all accessible from the front-interface. You can also go deeper into our Chaos FX and control Filters, Step-Based Filtering, EQ, Stereo Delay, Bit Crusher, Distortion, and Dual-Convolution reverb with host synced Textural Convolution FX.\
+"""
 
 [hybrid-tools-terminus]
 vendor = "8dio"
@@ -177,6 +288,17 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=ogFCVQNo-MU"
 url = "https://8dio.com/products/terminus"
 price = 348
+description = """\
+The sound of Terminus is big, modern, and studio-clean, with everything mastered to perfection. 
+
+Terminus is the result of over 18 months of deep production and contains four different types of core instrument groups: Percussive/Drums, Epic/Hybrid, Neo-Orchestral and Synth.  All four core groups each contain seven banks: Hits, Slams, Sub Hits, Short and Long Falls, and Short and Long Risers.  
+
+In addition, Terminus contains an array of new instrument categories, including 4 banks of Ear Candy.  Ear Candy is designed to enhance your existing compositions with big, beautiful, ethereal and angelic textural elements.  We also created two additional banks of Strums, which are tonal and a-tonal transitional elements, creating a transparent, colorful movement of cinematic textures. 
+
+Terminus also includes a deep and exclusive 4K Master Class with Troels Folmann. Troels goes through his demo, “The Captain,” track by track.  We also include the project midi file and audio stems. The 4K Master Class is exclusive to Terminus and is not available online. 
+
+Terminus also comes fully ready for integration into the sound file management system of your choice with industry-standard embedded Meta-Data.\
+"""
 
 [insolidus-choir]
 vendor = "8dio"
@@ -187,6 +309,15 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=k7P9aN_ujgA"
 url = "https://8dio.com/products/insolidus-choir-for-kontakt-vst-au-aax-samples"
 price = 495
+description = """\
+Insolidus is a new-generation choral library dedicated to effortless, lyrical, and expressive choral writing. It is the first to feature expressive polyphonic legato, so you can play advanced chord and syllable progressions with a single patch. 
+
+Insolidus can be the soft, distant light on a silent, snowy night; a contemporary scoring choir for epic and emotional pieces; your gentle and sleepy sonic texture; or the spark of any classical music composition. 
+
+The heart of Insolidus is 40 males and 25 females hand-picked by master conductor Petr Polonanik. The same ensemble is featured in the follow-up library, Silka 
+
+A variety of new recording and sampling techniques were used in Insolidus, making it the most realistic, instantly playable, and lyrical symphonic choir in existence. Our new Syllable arcs offer a naturally swelling motion of the choir, and the ability to control the number of syllables (2, 3, or 4) you want in the arc. Insolidus contains an advanced phrase-builder offering you the ability to create up to 64 strings of syllables. Along with short notes and sustains, it includes a deep assortment of new multi-vowels that were sampled dynamically, with different rhythmic accentuation. You have velocity based True Legato for Ah, Eh, Oh, and Uh.\
+"""
 
 [intimate-studio-woodwinds]
 vendor = "8dio"
@@ -197,6 +328,13 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/8dio-intimate-studio-woodwinds-library-of-dreams-lionel-schmitt"
 url = "https://8dio.com/products/intimate-studio-woodwinds"
 price = 248
+description = """\
+Intimate Studio Woodwinds is the latest creation in our series of contemporary studio ensembles. With over 160 hours of session material recorded at Scotland’s Premiere Recording Studio, Gorbals Sound, Intimate Studio Woodwinds continues our concept of a completely modular ensemble. The library features five highly expressive solo woodwind players, a Flute, Oboe, Cor Anglais, Clarinet, and Bass Clarinet. Each player was recorded in isolation, but all at the same time, so you can fluidly switch between any instrument and any articulation without compromising the sound or timing of your music. 
+
+The sound of the ensemble is easily customizable with the wealth of options in the advanced user-interface. Each instrument also allows for extreme control over the stereo image with individual volume, panning, output routing, and the new distance control, which enables you to freely blend between a direct signal and a more spacious and ambient microphone position. 
+
+Intimate Studio Woodwinds contains a vast collection of 26 articulations covering everything you need to create authentic-sounding woodwind melodies. Each articulation is sorted into four main categories (Traditional, Arcs, Performance, and Effects), making them all quickly and easily accessible from the built-in browser. The advanced user interface allows you to load and unload the articulations of your choosing, so you only have to load the sounds you need for your project. The Legatos are incredibly agile and can play almost anything you throw at them.\
+"""
 
 [lacrimosa-epic-choir]
 vendor = "8dio"
@@ -207,6 +345,15 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/8dio-lacrimosa-epic-choir-2?in=8dawn/sets/8dio-lacrimosa-epic-choir-200-singers"
 url = "https://8dio.com/products/lacrimosa-epic-choir-for-kontakt-vst-au-aax"
 price = 498
+description = """\
+The Lacrimosa Choir consists of 70 Basses, 60 Tenors, 40 Altos, and 30 Sopranos, creating a pyramid structure with a rich, heavy bottom and shining, bright top. It generates a perfect balance where the deep range of the choir matches the high range. 
+
+The Lacrimosa Choir was recorded in the same large orchestral hall used for exclusive V8P series and 8Dio instruments such as CAGE, AGE, and Majestica, and contains three microphone positions (Mixed, DECCA & Far). The Choir contains a wealth of deep-sampled articulations and a variety of new and advanced articulations never used in any existing choir libraries. 
+
+The True Layered Legato contains velocity-based legatos, meaning you get a completely smooth legato experience depending on how hard you play the keys. The multi-vowels were recorded in different dynamics, so you can have the choir go from soft to larger-than-life. We also created a new advanced word/phrase sequencer that allows you to sequence advanced strings of words and phrases. 
+
+Lacrimosa contains wealth of deep-sampled core articulations, including 24 different staccatos, 8 sustain types, 11 power marcatos, 10 expressive arcs, and a large section of non-tonal vowels that allows you to create new words. Lacrimosa also includes Choral FX and our new Chaos FX system.\
+"""
 
 [legion-series-33-drummers-batucada]
 vendor = "8dio"
@@ -217,6 +364,13 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/8dio-batucada-lions-den-by-robin-hall"
 url = "https://8dio.com/products/batucada"
 price = 248
+description = """\
+In our efforts to push the limit of ensemble percussion sampling, we have traveled to Latin America to sample an outstanding Batucada ensemble. Legion Series: 33 Drummers is not only comprised of a massive ensemble of 33 drummers playing in unison, but also the ensemble split into sections, summing up to 88 drums. 5 Timbas, 9 Tamborims, 6 Guaches, 11 Chocalhos, 12 Caixas (snares), 12 Repiniques, 12 Surdos (4 Bass Players, 4 mid Players, and 4 high Players), 11 Dobras, and 10 Cowbells were sampled in independent sections along with two solos, making this library the most in-depth dedicated Batucada library you will ever find. 
+
+The Batucada is a Brazilian band composed exclusively of percussion instruments, traditionally accompanied by marching in a parade of costumed dancers and floats in the Brazilian Carnivals. The sound of a Batucada is incredibly powerful and could give even the loudest rock bands a run for their money. The discipline required to organize and maintain this style of tight, seamless drumming is astounding and it was an absolute joy to work with these percussive experts. 
+
+The Batucada utilizes our familiar Legion UI and features a range of front-facing options, giving easy access to control the instruments. These options include Attack, Release, Pitch, Glide, Sample Offset, Reverse, Chaos, and Stack. The Batucada also includes our custom Chaos FX system as well as our highly intuitive 4-part XY Effects Engine for even more in-depth sound design options.\
+"""
 
 [liberis-angelic-choir]
 vendor = "8dio"
@@ -227,6 +381,15 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/8dio-liberis-angelic-choir-the-divine-and-the-devilish-by-robin-hall?in=8dawn/sets/8dio-liberis-2-0-angelic-choir"
 url = "https://8dio.com/products/liberis-epic-childrens-choir"
 price = 400
+description = """\
+Liberis is our new-generation choir library, featuring the professional 45-Piece, Award-Winning Piedmont’s Children’s Choir, led by choral conductor Bob Geary. The library represents the most accurate and detailed deep-sampled Children’s Choir on the market, including the Full Ensemble Choir and 3 Deep-Sampled Soloists. 
+
+In addition to True Layered Legato, which includes both normal and portamento legato based on velocity, the library contains a deep section of over 28 Multi-Vowels for the Ensemble and 22 Multi-Vowels for the 3 soloists. We also included an unrivaled effects section with over 1,000 effects ranging from basic consonants/vowels, clusters, sweeps, whispers, shouts, chirps, children's songss, claps, snaps, and more. 
+
+Liberis was exclusively recorded with large arrays of Neumann Microphones in the same A-Frame Shaped Church we used for our Adagio, Agitato, Adagietto, and Anthology String Series. The library includes three distinct microphone (5.1) positions including Close, Middle and Room/Far. Everything was recorded in pristine 24-Bit using some of the best pre-amps and recording devices in existence. 
+
+The library also comes in a highly intuitive and playable User Interface, allowing you to freely switch between articulations without loading additional patches. We created additional controls like Amp Env, Pitch Env, and the ability to rhythmically pulse between articulations. We also added new Front-Faced effects, including different filter options, BPM-synced gate, Stereo-Delays, Compression, Textural Convolutions, Experimental Convolutions, and a large set of custom Reverb impulses from our private sample catalog. You can put the choir anywhere you want!\
+"""
 
 [majestica]
 vendor = "8dio"
@@ -237,6 +400,15 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/majestica"
 url = "https://8dio.com/products/majestica-2-0"
 price = 80
+description = """\
+Majestica 2.0 is the same Majestica you know and love, but better! It has been upgraded to our new user-friendly Century UI. We have also included our Polyphonic Legato and TM Pro Arcs in this iconic library. 
+
+Majestica is the largest symphony orchestra ever sampled, containing 240 players divided into 5 sections: strings (100), brass (60), high woodwinds (30), low woodwinds (30), and percussion (20). 
+
+Derived from our exclusive V8P sample catalogue, Majestica is designed for composers and producers that desire the ultimate, unrivaled, epic symphonic sound. We spared no expense and there is nothing like this on the market. 
+
+Majestica was recorded at 96kHz in the same large, world-class orchestral hall used for exclusive V8P series and 8Dio instruments such as CAGE, AGE, and Lacrimosa Epic Choir. It includes 3 microphone positions (Mixed, Decca and Far).  The UI system for Majestica was built from scratch and contains over 35,000 lines of code giving you the ultimate experience in ease, flexibility, and playability.\
+"""
 
 [ostinato-strings-chapter-2]
 vendor = "8dio"
@@ -247,6 +419,19 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/8dio-ostinato-strings-chapter-2"
 url = "https://8dio.com/products/century-advanced-ostinato-strings-ii-2"
 price = 238
+description = """\
+Ostinato Strings Chapter II is the sequel to our repetition-based string instrument, Ostinato Strings. This latest edition continues the series by taking the concept of deep-sampled phrase-based string repetitions and builds upon it with fifteen in-depth and articulate ostinato string figures, each one effortlessly playable and undeniably musical. 
+
+Ostinato Strings Chapter II features a dynamically arranged ensemble of 6 Violins, 6 Violas, 4 Cellos, and 4 Double Basses. Each section was independently recorded to allow for ultimate flexibility and customization in the production process. This collection of instruments perfectly captures the essence and realism of many iconic ostinato based string patterns used in modern cinema, making this latest chapter the perfect companion to any orchestral palette. 
+
+Each figure is not only available across an instrument’s musical range, but is also fully host tempo synchronized. Utilizing our “poly-time” legato mode also offers you the ability to change a phrase’s pitch mid-way through the pattern, allowing for an almost endless array of rhythmic and tonal possibilities. 
+
+The entire Ostinato Strings series was painstakingly captured at 96 kHz before being carefully down-sampled to 48 kHz for ease of streaming. Each recording session also featured only the very best in recording equipment, ensuring an analog signal path and carefully managed workflow. This not only preserves and enhances the accuracy and character of each instrument, but helps us to truly honor the sound of these master musicians. 
+
+Century is and always will be more than a collection of sample libraries to us. Each one tells the story of our musical journey: emotional, distinct, and undoubtedly one of the most realistic series of instruments ever launched. 
+
+From superheroes to adventurers, high-paced action to swarms of foes, Ostinato Strings helps you add the driving force and a sense of dynamic realism to any score.\
+"""
 
 [productions-requiem-professional]
 vendor = "8dio"
@@ -257,6 +442,13 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/requiem-pro"
 url = "https://8dio.com/products/requiem-professional"
 price = 50
+description = """\
+Requiem Professional is a next-generation virtual choir developed for professional composers featuring full ensemble, divisi male/female, and 5 solo singers. There are 3 microphone positions for the ensemble patches, and 4 for the solo singers. 
+
+The library is based on a variety of new recording and sampling techniques, some which have never been deployed in choral sample libraries before. The library contains true (polyphonic) legato intervals from piano to forte, sustains, staccatos, ultra-forte marcato, tempo-synced Latin chants recorded at different speeds, and over 1,000 choral effects including whispers, shouts, clusters, demonic chants, sweeps, consonants without tone, claps, snaps, and more. 
+
+Requiem Professional was recorded in one of the most famous cathedrals in San Francisco and has the natural sound and acoustics of this world-class stage.\
+"""
 
 [rhythmic-revolution]
 vendor = "8dio"
@@ -267,6 +459,15 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=hN9h-ftfqFY"
 url = "https://8dio.com/products/rhythmic-revolution"
 price = 198
+description = """\
+Rhythmic Revolution is an advanced instrument capable of creating an eternity of new and inspiring materials. Whether you want a Birdman-like drum groove or the grittiest of sound designs, it can be used as a phenomenal tool for filmic action grooves or the most floating and ambient sounds. We see it as the world's most extreme adaptive sample randomizer. Designed to surprise you and be controlled when needed, everything is fully synced to your host tempo. 
+
+The heart of Rhythmic Revolution revolves around two different worlds of sounds: the conventional world of drums and percussion, and an unconventional world of custom instruments and extreme sound designs.  
+
+Rhythmic Revolution contains a completely new Quadro-Engine with four parallel modular systems. Each module has its own sample pool, its own effects systems, and its own convolution impulses. In addition, it contains over 300 hand-crafted Textural Convolutions that create a textural delay. You can also reverse anything you want with a single click. We also included our newest Chaos FX 3.3 and a brand new panorama architecture that allows individual tuning and panning of each layer. 
+
+Rhythmic Revolution contains over 15 GB of content (compressed to 7.1GB) created by Prof. Mario Bajardi, using a complicated chained setup that includes a full KYMA system and the ability to physically draw waveforms in real-time.\
+"""
 
 [santur]
 vendor = "8dio"
@@ -277,6 +478,15 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/8dio-santur"
 url = "https://8dio.com/products/santur-vst-au-aax-kontakt-instrument"
 price = 58
+description = """\
+The Santur, Santouri, Santour, or Santoor is a hammered dulcimer (sort of an ancient Cimbalom) of Babylonian origin, currently played in several countries around the Balkans, Middle East, and Eastern Europe. 
+
+This library has been deeply sampled to give composer a great tool made with unique colors of sound thanks to the use of three sets of mallets (wooden, semi soft, and soft) and three different damper configurations (no dampers for long sustains, one damper for staccato, two dampers for staccatissimo). 
+
+Two microphone positions, over six thousand samples, and quarter-tone tuning options make this library a very versatile tool which fulfills the needs of any type of user. 
+
+Our CHAOS engine has also been added to multiply the textures and possibilities this library has to offer. We hope you enjoy using this library as much as we enjoyed making for you.\
+"""
 
 [silka-choir]
 vendor = "8dio"
@@ -287,6 +497,15 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/8dio-silka-choir-teaser-3-by-troels-folmann"
 url = "https://8dio.com/products/silka"
 price = 495
+description = """\
+Silka is a new-generation, deep-sampled choral library dedicated to realistic, expressive, and easy choral writing. In addition to our super realistic and easily playable polyphonic legato, Silka also contains several new types of legato, including dynamically layered intimate legatos, and a wealth of rhythmic and textural articulations. 
+
+Silka can be the falling star across the summer sky, a powerful instrument for even the largest of compositions, or a subtle, gentle stroke with your compositional brush. It can be ethereal and angelic, or roaring and dramatic. It is an immersive instrument designed to cover the true emotion and motion of choral writing. 
+
+The soul of Silka is 40 males and 25 females hand-picked by master conductor Petr Polonanik, the same group used in our Insolidus Choir.  
+
+A variety of new recording and sampling techniques were used in Silka, making it the most realistic, instantly playable, and lyrical symphonic choir in existence. Our new Syllable arcs offer a naturally swelling motion of the choir, and the ability to control the number of syllables (2, 4, or 5). Silka contains an advanced phrase-builder offering you the ability to create up to 64 strings of syllables. You have a deep assortment of new, rhythmic Staccato-Legatos and a wealth of other rhythmic and textural articulations. You have new velocity based Intimate True Legato for classic syllables (Ah, Eh, Oh, Uh and Mmmmm).\
+"""
 
 [solo-studio-violin]
 vendor = "8dio"
@@ -297,6 +516,11 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/8dio-studio-series-deep-solo-violin"
 url = "https://8dio.com/products/solo-studio-strings-violin"
 price = 98
+description = """\
+The 8Dio SQS (Studio Quartet Series) Solo Violin marks a new leap in sampling for us. We recorded one of the greatest solo violinists alive today, a principal violinist of the BBC and other orchestras, ultra-deep-sampled with 88 articulations ranging from true polyphonic legato to a wealth of short-note options, dozens of velocity-based arcs, twelve different Ostinatos, and performance-based articulations. Recorded in a controlled studio environment at Scotland’s Premiere Recording Studio, Gorbals Sound, the Violin was captured in incredible detail and without compromise utilizing two dual-microphone techniques. This combined method allows you to freely blend between a direct signal and a more spacious and ambient position, enabling you to control the positioning and distance of the Violin accurately. 
+
+Organized into six separate categories, each of the included sound-sets offers a range of features and playing styles, all easily accessible from the in-built browser system. The Solo Violin features five individually recorded Legato articulations enabling you to play in a variety of styles, speeds, and with and without a mute (con sordino). Each of the main performance-based Legatos also features original and musical coloration and dynamic changes, ensuring the pure and lifelike nature of the live performance can be accurately preserved. With eighty-eight independently captured, multi-dynamic, and authentically sounding articulations, you have access to all the tools you need to create music that goes beyond realism.\
+"""
 
 [studio-vintage-hammond-organ]
 vendor = "8dio"
@@ -307,6 +531,15 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/8dio-studio-hammond-vintage-organ"
 url = "https://8dio.com/products/studio-vintage-series-studio-hammond-for-kontakt-vst-au-aax"
 price = 98
+description = """\
+8Dio Studio Vintage Series represents the most comprehensively deep-sampled collection of vintage keyboards, recorded at Scotland’s Premiere Recording Studio: Gorbals Sound. The 8Dio Studio Vintage Organ is no exception, being a faithful representation of our very own B2 – B3 Hybrid Hammond® Organ. 
+
+While many other attempts at capturing factory standard Hammonds® in the past featured heavily on the Direct signal (D.I). We instead purposely chose to record the Organ in its natural state, using vintage and immaculately maintained Leslie cabinets. In fact, we used two independent Leslies (and blew up a third): one to capture the genre defining rotations at all speeds, and another with a modified motor to record the pure unhindered tone of the Leslie itself. 
+
+Both Leslies are available within the 8Dio Vintage Organ. “Analog” highlights the natural acoustics of the Hammond® Leslie and its expressive spinning states.  “Modelled” demonstrates the static, non-spinning, pure timbre of the Leslie cabinet, with a virtual rotation applied. This allows you to choose the tone and workflow that best suits you. 
+
+It has been our mission to push sampling forwards in our entire vintage keys range. From realism to playability 8Dio Studio Vintage Organ offers the best of all worlds.\
+"""
 
 [symphonic-shadows]
 vendor = "8dio"
@@ -317,6 +550,17 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/8dio-symphonic-shadows"
 url = "https://8dio.com/products/symphonic-shadows"
 price = 198
+description = """\
+Symphonic Shadows is a library born in the shadows of nightfall: a dark orchestral library containing over 7,000 unique aleatoric effect samples. 
+
+The library comes with three orchestral sections. First, the fiery tones of a 40-piece String Orchestra (12, 10, 8, 6, 4), with an isolated 10-Piece Low String Section (6 Cellos and 4 Basses). Next, the piercing sound of an 11-piece Brass Ensemble (4 Horns, 2 Trumpets, 3 Trombones and 2 Bass Trombones). Last, but by no means least, a sonic hurricane in the woodwind ensemble containing a piccolo flute, alto flute, 2 flutes, 2 clarinets, and 2 bassoons. 
+
+Symphonic Shadows follows the aleatoric tradition we established with our CAGE (Concert Aleatoric Group Effects) libraries. The two can cruise side by side. However, Shadows is more than just orchestral samples. It lives in the twilight zone between conventional sampling and musical sound design. All the content was designed around our custom user interface, allowing for fast, intuitive, and powerful sound design. 
+
+The majority of the library comes with three microphone positions: Room, Spot 1, and Spot 2. All articulations and playing styles are easily accessible from our built-in browser system and just a single click away. 
+
+We’ve also included a new dual-layered FX system, the first of which is our front-face system, which gives you control over a trance gate, filters, pitch, delay, compression, and our new textural convolution delay. We have also included our new Chaos FX engine, which gives you control over things such as EQ, phasing, distortion, stereo delay, and an additional impulse reverb.\
+"""
 
 [ambient-guitar]
 vendor = "8dio"
@@ -327,6 +571,13 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/ambient-guitar"
 url = "https://8dio.com/products/the-new-ambient-guitar-vst-au-aax-kontakt-instruments-samples"
 price = 98
+description = """\
+The Ambient Guitar is a massive collection of carefully crafted sounds all derived from several different guitars. The source material is comprised of live guitar with various effects applied in real-time, with minimal post-production processing, and includes drones, phrases, and multi-samples. 
+
+Contrary to most guitar libraries, the focus of The Ambient Guitar is the unrecognizable, ambient side of the instrument. Beyond the strums, palm-mutes, plucks, picks, squeals, pinch-harmonics, and lightning fast, finger-bleeding leads typically played on guitars, there lies a dreamy, synth-y, rarely heard realm of droning beauty. Of course, there is plenty of range within this realm. You’ll find sounds from awe-inspiring beauty to fist-clenching rage, from the eerie unknown to somber loneliness, and from pulse-pounding horror to gentle, soothing harmony. Along with the realm of pure ambience, there is a select group of bonus, post-apocalyptic-inspired, minimalist phrases. These phrases are still very ambient in nature and are meant to work perfectly on top of the purely ambient patches. 
+
+But what’s that you say? You want to be able to play your own melodies? Hey, this is an ambient library! But then again, we couldn’t help ourselves and decided to multi-sample the bass and guitar, giving you a massive range of standard plucked notes to play any melody you wish. Divided into five major emotional categories (Awe, Horror, Mystery, Rage, Sadness) and with the phrases and multi-samples, this library is unlike any guitar library you’ve heard before\
+"""
 
 [epic-dhol-ensemble]
 vendor = "8dio"
@@ -337,6 +588,13 @@ requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/epic-dhol-ensemble"
 url = "https://8dio.com/products/epic-dhol-ensemble"
 price = 78
+description = """\
+The Epic Dhol Ensemble is the most comprehensive and deep-sampled collection of large-scale Epic Dhols on the market. The library is a completely remastered, redesigned, and reprogrammed edition of our original Epic Dhol Ensemble, containing over 2,000 samples, a built-in articulation browser, internal step-sequencer, front-face effects, textural convolutions, and our newest 3.3 Chaos Engine. 
+
+The library consists of a large ensemble of Punjab Dhol drums and was recorded in the same orchestral hall as our Epic Toms Ensemble. The Punjab Dhol is a double-sided barrel drum, large and bulky, producing a loud bass tone. Animal hide or synthetic skin is stretched over the open ends of the wooden barrel, covering them completely. These skins can be stretched or loosened with a tightening mechanism made up of either interwoven ropes, or nuts and bolts, which subtly alters the pitch of the drum. The stretched skin on one of the ends is thicker and produces a deep, low (high bass) sound and the other one is thinner, producing a higher sound. In contemporary Punjabi music, dhols with synthetic, or plastic treble skins are very common. 
+
+The Epic Dhol Ensemble was recorded at 10 velocity layers with 10 round robins. It contains a great variety of articulations, since each side of drum produces a different sound. Essentially, it is divided into a bass section and a snare section. We played the bass section with the traditional big wooden Dhol sticks, mallets, hands, and fingers to ensure we covered the entire range.\
+"""
 
 [infinite-brass]
 vendor = "aaron-venture"
@@ -346,6 +604,12 @@ categories = ["vsti.brass"]
 requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=p-rlPo8hdhM"
 url = "https://www.aaronventure.com/infinite-brass"
+description = """\
+Infinite Brass is a collection of next-gen virtual brass instruments that let you play any line exactly as it sounds in your head—right on your keyboard with no keyswitching—and render your performance authentically with a fantastic, clean, modern sound in one of 3 different spaces.
+Build your own ensembles with 29 individual instruments and 13 different mutes. Whether you prefer a more centered sound for concert works or a wide sound for film scoring, 58 positions allow you to create any layout you desire. Infinite Brass comes with 3 standard spaces: the warm Mozarteum, the bombastic Bersa Hall, and the dry Studio. The ambiance is generated in real-time through convolution using bespoke impulse responses unique to each position and room, so the ambiance is always 100% reflecting the performance. Phase-aligned samples result in no perceived cross-fades between the layers; the response is smooth, musical, and sounds like the real thing.
+Infinite Brass boasts some of the widest brass instrument ranges on the market and a consistent dynamic range from ppp to fff for all instruments. All instruments have playable vibrato, flutter, and growl, even all three at the same time.
+Infinite Brass was chromatically sampled at 48 kHz/24-bit. In spite of all the listed features, these instruments are some of the lightest you’ll ever use, totaling 14.0 GB with only ~50 MB of RAM used per instrument.\
+"""
 
 [surge-xt]
 vendor = "surge-synth-team"
@@ -382,6 +646,15 @@ url = "https://www.ariasounds.com/aurora-choir.html"
 categories = ["vsti.vocal"]
 requires = [["native-instruments-kontakt", "4"]]
 demo = "https://www.youtube.com/watch?v=xmclSI88Odo"
+description = """\
+The Aurora Choir is an elegant and powerful choir sample library for Kontakt, and represents somewhat of a milestone for Aria Sounds, being the culmination of many hours of work, study and tweaking.
+
+The library contains both Sopranos and Altos (separate instruments for maximum control), and has an absolutely stunning legato tone. On top of this, it has short syllables, arranged into a very conveniently playable sequencer. Simple arrange your phrase in the sequence, and play away - the choir will automatically sing the syllables you enter.
+
+Multiple Legato Modes at Multiple Dynamics
+
+The choir contains four true legato modes (ah, eh, ih and oh) sampled at multiple dynamic layers, giving a total of EIGHT true sampled legato sets, for absolute realism and variation. On top of this, there are a total of twenty four different syllable shorts, sequence-able in the GUI, each sampled at three dynamic layers, giving a total of 72 variations per short note!\
+"""
 
 [bansuri-flute]
 vendor = "aria-sounds"
@@ -391,6 +664,14 @@ price = 35.99
 size = 797
 categories = ["vsti.ethnic", "vsti.woodwinds.flute"]
 requires = [["native-instruments-kontakt", "4"]]
+description = """\
+The Bansuri is an traditional, ancient Indian flute. Get that fantastic, well known and loved ethnic sound in your scores/soundtracks.
+
+Featuring true legato interval playing, we have sampled this instrument extensively with a wide variety of expressional playing, vibrato, no vibrato, artiulations including different types of turn, more complex ornaments, FP (loud - sudden quiet), accelerating vibrato and airy soft vs harder attacks. These are all switchable throughout playing via two conveniently placed keyswitch areas below the main playing range on your keyboard.
+We also sampled all legato intervals up to the octave for true realism in playing, plus, due to the fact that the Bansuri does not play chromacitally (all notes), we artificially filled these notes in so you can now play it in any key for the convenience of your music.
+
+The range is two octaves, starting from middle C going up.\
+"""
 
 [catalyst-percussion]
 vendor = "aria-sounds"
@@ -401,6 +682,14 @@ requires = [["native-instruments-kontakt", "4"]]
 price = 99
 demo = "https://soundcloud.com/aria-sounds/sets/catalyst-cinematic-percussion"
 url = "https://www.ariasounds.com/catalyst_kontakt_drums_percussion.html"
+description = """\
+ARIA Sounds are proud to present CATALYST, our first high end sample library, with over twenty stunning cinematic percussion instruments.
+Catalyst contains over twenty stunning cinematic percussion instruments including the Alfia, Big Floor Tom, Bodhran, Daf, Darbuka, Deep Bass Drum, Djembe, Floor Tom 2, Frame Drum, Gaia, Gong Cymbal, Indian Bells, Indian Frame Drum, Keys, Pandeiro, Riq, SFX Rims, Shakers, Sizzle Cymbal, Slammer, Snail, Tom Tom, Virus and Wreckage Drums!
+
+The instrument is also compatible with both version 4 and 5 of Kontakt, unlike out other instruments, and comes with a staggering FOUR mic positions to mix between. These include close, overheads, mid, and far mic positions, for ultimate control over the sound.
+
+Instruments are sampled with up to five round robins per note, with multiple velocity layers per note, for maximum realism and that extra human sounding quality. Each drum was sampled with different types of mallets/sticks, hard, soft, large, wood, etc, as well as trills and extra and even extended techniques included.\
+"""
 
 [celtic-harp]
 vendor = "aria-sounds"
@@ -411,6 +700,11 @@ categories = ["vsti.strings.harp"]
 requires = [["native-instruments-kontakt", "4"]]
 size = 860
 demo = "https://soundcloud.com/aria-sounds/kontakt-celtic-harp-by-aria"
+description = """\
+Aria's "Celtic Harp"is our first traditional, folk sounding instrument, outside the realms of standard classical music. This was sampled in a completely different room to the our other instruments released so far. We chose a location that would compliment and retain the instrument's warth of tone.
+
+It comes complete with three true dynamic levels, and a brilliant maximum nine true variations per note!\
+"""
 
 [classical-guitarist]
 vendor = "aria-sounds"
@@ -421,6 +715,9 @@ url = "https://www.ariasounds.com/classical_guitar_virtual_instrument.html"
 price = 35.99
 categories = ["vsti.guitar"]
 requires = [["native-instruments-kontakt", "5"]]
+description = """\
+Aria's "Classical Guitarist", is a beautifully sampled and hugely diverse classical guitar. When programming this vst, we decided to work out some sort of system that would let the instrument keep the full natural attack on every sample/note, whilst still allowing the instrument to be played to a tempo comfortably, and without feelings of latency.\
+"""
 
 [colossal-toms]
 vendor = "aria-sounds"
@@ -431,6 +728,16 @@ categories = ["vsti.percussion"]
 requires = [["native-instruments-kontakt", "5"]]
 url = "https://www.ariasounds.com/kontakt_epic_drums_colossal_toms.html"
 price = 39
+description = """\
+ARIA Sounds are proud to present "Colossal Toms", an ensemble of eight separately playable toms, with tunings from large and deep to high.Â One of the things that really makes this library stand out, easy to use, and realistic, is that we tried to max out the velocity layers, so each hit has up to 127 different, separately recorded dynamics. This means, on top of the fact that you virtually eliminate the problem of hearing one sample twice too soon, creating an artificial sound, but you can obtain extremely realistic performances.
+A loud section can be easily scaled down in dynamics, due to the fact that there are so many velocity layers - see the upcoming demos for examples of this.
+
+The instrument is also compatible with both version 4 and 5 of Kontakt, and comes with a close mic position, and hall mic position.
+
+Each drum has been played with varied techniques, including soft mallets, sticks, sticks with newspaper on the drum, rims, hands, brushes etc.
+
+Click each of the drum icons on the interface to loud and unloud that particular drum. Unloaded drums will appear on the keyboard interface as black, and loaded drums with active samples will be shown as blue keys.\
+"""
 
 [london-solo-french-horn]
 vendor = "aria-sounds"
@@ -441,6 +748,13 @@ url = "https://www.ariasounds.com/french_horn_kontakt_vst.html"
 price = 79
 categories = ["vsti.brass.french-horn"]
 requires = [["native-instruments-kontakt", "4"]]
+description = """\
+After a long period of silence, Aria Sounds is very pleased to present the LSB Solo French Horn for Kontakt 4 and above. This instrument is yet another step up for Aria Sounds, packed with features, and carefully sampled to produce a powerfully convincing sound.The library is 5GB extracted (leave at leastÂ 10GB free for download and extraction), and runs in Kontakt 4 and above.
+
+The instrument contains true legato sampled at three true dynamic layers, cross-fade-able via MIDI CC1 (mod wheel), as well as a variety of other articulations...
+
+The Solo French Horn comes with a mixer allowing you to blend between FOUR mic positions; close mono, spot pair, stage (mid) and room (far), to create anything from a close, dry sound, to a massive, distant, cinematic soundscape.\
+"""
 
 [hybrichord-1]
 vendor = "aria-sounds"
@@ -450,6 +764,13 @@ price = 39
 categories = ["vsti.keys.piano"]
 requires = [["native-instruments-kontakt", "5"]]
 url = "https://www.ariasounds.com/hybrichord_cinematic_piano_sonic_landscapes.html"
+description = """\
+The vol.1 of Hybrichord is our first exploration into what we can really get out of a normal piano, and the initial results are fantastic. Using various means of getting the instrument to vibrate, including wiring the instrument up, using magnets, electric current, etc, we managed to create some fantastic organic sounding sonic landscapes.Â 
+
+The user interface has controls to allow you to shape and sculpt some of the sound to your liking for use in your music.Â 
+
+Of course, we have also included a variety of more well known experimental techniques, including picks, plucks, bows, hammers, drumming, screws in the strings etc.\
+"""
 
 [london-solo-double-bass]
 vendor = "aria-sounds"
@@ -460,6 +781,15 @@ url = "https://www.ariasounds.com/lss-solo-double-bass.html"
 price = 69
 categories = ["vsti.strings.bass"]
 requires = [["native-instruments-kontakt", "4"]]
+description = """\
+The "Solo Double Bass" is the fourth and final installment in our "LSS Solo Strings" Sample Library Bundle, complete with the same fantastic features as the rest of the LSS Solo Strings...
+
+Three legato modes were sampled - slurred, bowed and portamento. These are easily switchable during use via keyswitches, and one exceptionally useful feature, which we are shocked to say we rarely see in string libraries, is the ability to change bow on the same note. Simply hold the note you want to change bow on, and press the low G keyswitch (see screenshot below).
+
+Staccato and whole tone trills are also included, with the staccatos having 24 variations per note so as to never sound repetitive - also switchable via keyswitch.
+
+Another feature included is the ability to alter the release sound when the final note is played and released. A soft release is a normal removal of the bow from the string, but through keyswitching, you can also select hard release, which triggers a hard release. This is the sound of a player ending the note with a sharp crescendo and quick accented lift of the bow.\
+"""
 
 [london-solo-viola]
 vendor = "aria-sounds"
@@ -470,6 +800,15 @@ categories = ["vsti.strings.viola"]
 requires = [["native-instruments-kontakt", "4"]]
 price = 69
 url = "https://www.ariasounds.com/lss-solo-viola.html"
+description = """\
+The solo viola boasts the same set of fantastic features as its cousins from the LSS Solo Strings bundle, including THREE true legato types, 8RR x 3 Dynamic Layer Staccato playing, TWO true release modes (hard and soft), plus trills, al with four fantastically blendable mic positions, which, between them, can offer a huge variety in sonic pallete.
+
+The three legato modes - slurred, bowed and portamento, are easily switchable during use via keyswitches, and one exceptionally useful feature, which we are shocked to say we rarely see in string libraries, is the ability to change bow on the same note. Simply hold the note you want to change bow on, and press the low G keyswitch (see screenshot below).
+
+Staccato and whole tone trills are also included, with the staccatos having 24 variations per note so as to never sound repetitive - also switchable via keyswitch.
+
+Another feature included is the ability to alter the release sound when the final note is played and released. A soft release is a normal removal of the bow from the string, but through keyswitching, you can also select hard release, which triggers a hard release. This is the sound of a player ending the note with a sharp crescendo and quick accented lift of the bow.\
+"""
 
 [london-solo-violin]
 vendor = "aria-sounds"
@@ -480,6 +819,15 @@ categories = ["vsti.strings.violin"]
 requires = [["native-instruments-kontakt", "4"]]
 url = "https://www.ariasounds.com/kontakt_violin_instrument_vst.html"
 price = 69
+description = """\
+We have sampled the instrument in a large beautiful London concert hall, with many microphones, making up four main, mixable mic perspectives, close mono, close pair, mid room and far room. The difference in perspectives is huge, meaning you can create sounds ranging from a very dry and up close sound, to a singing, naturally reverberated distant violin - as well as any degree between the two.
+
+Three legato modes were sampled - slurred, bowed and portamento. These are easily switchable during use via keyswitches, and one exceptionally useful feature, which we are shocked to say we rarely see in string libraries, is the ability to change bow on the same note. Simply hold the note you want to change bow on, and press the low G keyswitch (see screenshot below).
+
+Staccato and whole tone trills are also included, with the staccatos having 24 variations per note so as to never sound repetitive - also switchable via keyswitch.
+
+Another feature included is the ability to alter the release sound when the final note is played and released. A soft release is a normal removal of the bow from the string, but through keyswitching, you can also select hard release, which triggers a hard release. This is the sound of a player ending the note with a sharp crescendo and quick accented lift of the bow.\
+"""
 
 [pipe-organ]
 vendor = "aria-sounds"
@@ -490,6 +838,11 @@ requires = [["native-instruments-kontakt", "4"]]
 url = "https://www.ariasounds.com/church_pipe_organ_vst_kontakt_instrument.html"
 price = 49
 size = 1860
+description = """\
+We are proud to present our sampled pipe organ, a magnificent huge church organ where you can virtually pull out the stops in the interface, choosing between a fantastic selection of stops, combinations and tuttis. Ranges of each stop will be shown on the keyboard when activated, pedals low, and manuals higher, plus optional octave extention controls, just like on a real organ. There is also the option to reduce/extend the length of the release samples, depending on whether you want that huge grand organ sound in a large space, or a cleaner more crisp and defined sound.Â We chose to also sample some optional combinations and tutti sounds, as well as individual stops, due to the fact that the way sound interacts and moves around in a room when the stops are pulled out together, is not faithfully enough replicated when individually sampled and layered digitally.
+
+The church organ sampled here contains 2GB of magnificently engineered sound, by a top class organ, and was recorded at 96KHz, 24Bit.\
+"""
 
 [surdos-and-snares]
 vendor = "aria-sounds"
@@ -499,6 +852,15 @@ price = 39
 url = "https://www.ariasounds.com/aria_sounds_surdos_snares_percussion.html"
 categories = ["vsti.percussion"]
 requires = [["native-instruments-kontakt", "4"]]
+description = """\
+ARIA Sounds are proud to present "Surdos & Snares", a percussion ensemble consisting of three snares and three surdo drums, all placed in the displayed formation (screenshot below), and reproduced faithfully, so you can play these drums, and they will sound in these positions.
+We have absolutely pushed the variation and authenticity to the limit with this library. There are 127 dynamic layers per hit/technique/key in these drums, which provides even more benefits than the obvious lack of repetition, or the dreaded "machine-gun effect". Say you record/play in a performance with this instrument, and then possibly go into the MIDI data and tweak a few hits' dynamics to get the performance how you want it... and then decide the general feel needs to be either louder or quieter. As there is a smooth gradient from bottom to top in terms of dynamic layers (see curve below), dragging the entire velocity data of the track up and down will completely transform the performance, as opposed to just moving the MIDI data through a few dynamic layers, and primarily relying on simply lowering and raising the volume of certain samples. In our demo videos, you can see this in action.
+The instrument is also compatible with both version 4 and 5 of Kontakt (the full version, not the free Kontakt Player - the paid version of Kontakt only), and comes with a close mic position, and main stage mic position.
+
+Each drum has been played with varied techniques, including soft mallets, sticks, rims, hands, different brushes.
+
+Click each of the drum icons on the interface to loud and unloud that particular drum. Unloaded drums will appear on the keyboard interface as black, and loaded drums with active samples will be shown as blue keys.\
+"""
 
 [xiao]
 vendor = "aria-sounds"
@@ -508,6 +870,12 @@ price = 35.99
 size = 537
 categories = ["vsti.ethnic"]
 requires = [["native-instruments-kontakt", "4"]]
+description = """\
+The Xiao is a ancient traditional Chinese, end-blown bamboo flute, also known as the dÃ²ngxiao. We have sampled this instrument with true legato intervals all the way up to the octave, and, like the bansuri, have artificially filled in the notes which actually are not possible to play on the instrument physically. With our instrument, you can play it in any key, as you would any other VST instrument on the keyboard, without worrying about which notes are possible etc.
+
+There are multiple keyswitches, arranged so you can choose the first note of a phrase, and alter the experssion of notes throughout a phrase as you play, allowing for an extremely human like sound. The expression wheel also controls dynamics.
+The range is two octaves, starting from Eb above middle C working up.\
+"""
 
 [origin-x]
 vendor = "artistry-audio"
@@ -515,10 +883,13 @@ name = "Origin X"
 url = "https://artistryaudio.com/origin-x/"
 size = 4140
 categories = ["vsti.synthesizer"]
-requires = [["native-instruments-kontakt", "6"]]
+requires = [["native-instruments-kontakt-player", "6"]]
 nks = true
 demo = "https://www.youtube.com/watch?v=j1lyogcfRiU"
 price = 199
+description = """\
+With over 50,000 lines of code, Origin X is one of the most powerful loop engines on the market today.  Find inspriation quickly with one of the included 1400+ cutting edge loops, or simply drag and drop your own samples and save your custom user kits and effects chains.\
+"""
 
 [scorpio]
 vendor = "artistry-audio"
@@ -529,6 +900,9 @@ categories = ["vsti.synthesizer"]
 requires = [["native-instruments-kontakt", "6"]]
 demo = "https://www.youtube.com/watch?v=e8V63_71laY"
 price = 149
+description = """\
+Scorpio is a next-level modern motion synth ready to push the boundaries of your music to new heights. Whether you want to keep things simple with the hundreds of presets, or dive deep beneath the surface to sculpt something that’s all your own, this instrument is packed with high definition sounds that are sure to inspire your creativity.\
+"""
 
 [celestial-voices-calypso]
 vendor = "auddict"
@@ -539,6 +913,19 @@ url = "https://www.auddict.com/celestial-voices-calypso"
 price = 130
 size = 2460
 demo = "https://soundcloud.com/auddict-77772158/sets/celestial-voices-calypso"
+description = """\
+Prepare yourself to be blown away by the second vocalist from the "Celestial Voices"... Calypso is a solo female soprano vocalist, with a soaring sound that provokes powerful emotions.
+
+It comes with five mic positions, so you can blend your own personal sound, flexible enough to create a broad projecting operatic sound, as well as a clean, dry pop sound, which opens the possibility to add your own reverb if you so wish.
+
+WHAT'S INCLUDED?
+
+* FIVE True Legato Modes (ah, eh, ee/ih, oh, mm)
+* TWELVE further consonant sounds to craft the openings of phrases, multiplying legato options and variations several-fold!
+* FIVE mic positions - craft your ideal sound
+* 4GB in size (8GB Required during installation)
+* Legato aid function
+"""
 
 [drums-of-the-deep-ii]
 vendor = "auddict"
@@ -549,6 +936,17 @@ demo = "https://soundcloud.com/dorianmarko/im-just-getting-started?in=auddict-77
 categories = ["vsti.percussion"]
 requires = [["native-instruments-kontakt", "4"]]
 price = 250
+description = """\
+Included in the library are Ensembles of Taikos, Gran Casas/Huge Concert Bass Drums, Field Drums, Frame Drums, Huge Toms, Rope Tension Drums, Boobams, Surdos and Timpani... Over 50 instruments were recorded to make up DOTD II
+
+Here are some of the things which make Drums of the Deep II, the powerhouse sample library that it is.
+
+* Over 27GB of top quality content
+* Five microphone positions, to blend you own personal sound
+* Bigger than ever, with up to eight drummer ensembles recorded
+* Over 20,000 samples included
+* Over 50 instruments recorded to create this library. Patch list:
+"""
 
 [master-brass-trombones]
 vendor = "auddict"
@@ -556,9 +954,33 @@ name = "Master Brass: Trombones"
 url = "https://www.auddict.com/master-brass-trombones"
 price = 60
 categories = ["vsti.brass.trombone"]
-requires = [["native-instruments-kontakt", "4"]]
+requires = [["native-instruments-kontakt-player", "4"]]
 size = 6800
 demo = "https://soundcloud.com/auddict-77772158/trombones-demo-24"
+description = """\
+We are very proud to release the next installment in our brass series; a six player Trombone ensemble, complete with seven mic positions, to continue the venture of creating a series with the same controllable sonic environment/soundscape as you would have in a film scoring session. There are seven mic positions, carefully set to cover a very broad sound-scape, recorded chords, fast and normal legato with multiple dynamic layers (true sampled sustains and intervals), release samples, staccato (16 variations per note) and more...
+
+Mix between the perspectives; Decca tree sides and mid, flanks, room, woodwind spots (see more about this below!), close ribbons and close LDCs, with the flexibility aimed at replicating a real scoring session. Now you have control over the different mic and perspective levels in the session, enabling you to morph your own sound in your scores, as if you were at the studio with the console at your fingertips.
+
+You might have noticed that one of the perspectives included is "woodwind spots". While this is not a woodwind library, the mics that spot the woodwinds were set up and included in the recording. The reason for this, is that a lot of the brass sound bleeds heavily into the woodwind mics in scoring sessions, adding to the perceived depth of the sound, so whilst pushing to achieve the most versatile, we felt that this absolutely had to be included.\
+
+Two Types of True Sampled Legato
+
+The instrument comes with two true legato modes - a normal slurred legato, and a fast legato, for faster passages,which will allow you to play virtuoso runs and scale passages.
+
+We recorded major and minor chords in various positions, as well as open fifths (combined gives you the ability to also create MAJ7, min7 and other chords... for the reason that each note has it's own little space in the sonic field, and it is this separation that is one of the major things we miss from a real recording, and a track with layer upon layer of samples. With this instrument, you can achieve that real spacious sound.
+
+Full list of articulations:
+
+* No Legato (allows polyphonic playing)
+* Legato - normal slurred legato (piano and forte dynamic layers crossfade-able)
+* Fst Legato - Fast legato specially for fast playing
+* Staccato - Short detached notes (16 variations per note)
+* Flutter - Flutter tongued sustains
+* Rips - Rips up to the played note
+* Chords < - Crescendo major, minor and open 5th chords
+* Chords > - Diminuendo major, minor and open 5th chords
+"""
 
 [master-brass-tubas]
 vendor = "auddict"
@@ -569,6 +991,26 @@ price = 50
 size = 5600
 categories = ["vsti.brass.tuba"]
 requires = [["native-instruments-kontakt", "4"]]
+description = """\
+Auddict is happy to bring you the tubas section from our Master Brass orchestral brass sample library. Like its MB counterparts, the Master Brass tubas also come with a staggering seven mic positions for absolute sonic control and sculpt-ability.
+
+Mix between the perspectives; Decca tree sides and mid, flanks, room, woodwind spots (see more about this below!), close ribbons and close LDCs, with the flexibility aimed at replicating a real scoring session. Now you have control over the different mic and perspective levels in the session, enabling you to morph your own sound in your scores, as if you were at the studio with the console at your fingertips.
+
+You might have noticed that one of the perspectives included is "woodwind spots". While this is not a woodwind library, the mics that spot the woodwinds were set up and included in the recording. The reason for this, is that a lot of the brass sound bleeds heavily into the woodwind mics in scoring sessions, adding to the perceived depth of the sound, so whilst pushing to achieve the most versatile, we felt that this absolutely had to be included.
+
+The instrument comes with true sampled legato, allowing for realistic and seamless transition from one note to the next.
+
+Like the rest of the Master Brass, we have recorded major and minor chords in various positions, as well as open fifths (combined gives you the ability to also create MAJ7, min7 and other chords... again for the reason that each note has it's own little space in the sonic field, and it is this separation that is one of the major things we miss from a real recording, and a track with layer upon layer of samples. With this instrument, you can achieve that real spacious sound.
+
+Full list of articulations:
+
+* No Legato (allows polyphonic playing)
+* Legato - normal slurred legato  (piano and forte dynamic layers crossfade-able)
+* Rips - Short trumpet rips
+* Chords < - Crescendo major, minor and open 5th chords
+* Chords > - Diminuendo major, minor and open 5th chords
+* Staccato - Short notes, with 7RR per dynamic layer (three layers)
+"""
 
 [master-solo-woodwinds]
 vendor = "auddict"
@@ -579,6 +1021,39 @@ categories = ["vsti.woodwinds"]
 requires = [["native-instruments-kontakt", "4"]]
 size = 46200
 demo = "https://soundcloud.com/auddict-77772158/master-solo-woodwinds-robin?in=auddict-77772158/sets/master-solo-woodwinds"
+description = """\
+After much recording, production, tireless testing, re-testing and finally refining the end result, we are very happy to bring you the complete Master Solo Woodwinds bundle, which contains meticulously sampled solo flute, piccolo, oboe, clarinet and bassoon sampled Kontakt instruments (will work in Kontakt 4 and all higher versions - but not the free Kontakt "player").
+
+True Legato
+
+Multiple sets of true legato intervals were recorded both with and without vibrato, for the ultimate in realistic sounding performance.
+
+Trills/Tremolos
+
+Select this articulation, and you can play a trill or tremolo between any two notes by holding them down on the keyboard (up to seven notes apart/a perfect fifth). See the video demo below for a demonstration of this.
+
+Key Noises
+
+These woodwind instruments owe part of the character of their sound to the mechanics of the instrument, so we decided to come up with something that allows some form of control over this subtle characteristic in timbre. What we ended up with was a knob that can control the level of mechanical noise that is audible from the instrument. You can turn this up, or off completely in the GUI to set the average level that seems right, and it will then, on top of this, react to the velocity of your own playing, much like it would a real player pressing harder or softer.
+
+Please note, as vibrato on the Clarinet is not a standard technique, we have not included it, but the other four instruments all include vibrato legato as WELL as non vibrato legato and sustains, all at multiple crossfade-able dynamic layers (MIDI CC1/Mod Wheel).
+You are even able to control the level/volume of the key sounds/mechanics of the instruments, and the sound of the flautist pressing the keys will also be louder depending on how hard you press the key on your MIDI keyboard (velocity).
+
+One feature we are exceptionally proud of is the intuitive trills articulation system, which allows you to play any trill/tremolo within the flute's playable range up to a perfect fifth (seven chromatic notes)... See the demo video for an insight in to how this works!
+
+ARTICULATION LIST
+
+* Legato with recorded vibrato
+* Legato without vibrato
+* Polyphonic/Chord playing with vibrato
+* Polyphonic/Chord playing without vibrato
+* Trills/Tremolos
+* Flutter Tongue
+* Triple Tongue
+* Staccato
+* Staccatissimo
+* Key Noises (able to play in isolation if needed as well)
+"""
 
 [virtuosic-violin]
 vendor = "auddict"
@@ -589,6 +1064,51 @@ categories = ["vsti.strings.violin"]
 requires = [["native-instruments-kontakt", "4"]]
 size = 8000
 demo = "https://soundcloud.com/auddict-77772158/virtuosic-violin-nocturne?in=auddict-77772158/sets/auddict-virtuoso-violin"
+description = """\
+With an instrument as diverse, capable, and exposed as the violin, there is no cutting corners, so we strived to capture as much of the possible sounds a violin can make as possible, resulting in the huge list of articulations you can see below, as well as four sampled legato styles, also shown below. We even specially sampled slurred and bowed legato so you can correctly and realistically phrase passages, and a specially sampled "fast legato" set of intervals, which will allow you to play virtuosic runs and scale passages.
+
+On top of this, we want our instruments to be as close in sonic-flexibility to a real situation as they can be, so in addition to providing close and stage mic positions, we have also made sure to have both a ribbon and condenser mic, which you can choose to switch between. Both sounds offer so much in their own right, the ribbon having a beautiful smooth tone, and the condenser being ruthless in exposing every little detail in the sound.
+
+The stereo mic position can be widened and narrowed by dragging the mics in the interface.
+
+We wanted to make this instrument even more musical, so we have once again used our idea of the "phrase builder", which allows you to select the attack, or beginning sound of a phrase, and then switch around the type of legato throughout a musical phrase.
+
+One huge give-away that an instrument is a sampled one and not a real instrument is how the beginning of every musical phrase sounds the same. A great performer will not sound like this. They will vary the phrase beginnings, and perhaps start some quietly, some with an FP, some with a stutter, and so we have included five options for this, to ensure that your compositions sound evolving, musical, and extremely convincing.
+
+The width of the stereo mic perspective can be changed by dragging the bottom pair of microphones in the interface, and dynamics can be brought up and down by either the mod wheel or expression Midi CC - depending on whether you have MOD or EXP selected in the bottom right hand corner of the instrument GUI, and the shorts' dynamics are controlled by velocity.
+
+Four True-sampled Legato Styles
+
+We spent a while tackling how to approach allowing the user to play both slow more drawn out passages, and then also being able to create realistic renditions of more virtuosic, fast passages, and eventually came up with a very intricate technique which allows both.
+
+We sampled these intervals completely differently, and set it up so you can switch between these depending on whether you are playing fast or not. So for the faster legato, you can switch to "fast" with the legato keyswitching, and play intervals up to and including a minor third in your scales and runs, maintaining a very realistic sound. The sound of the note transitions on a violin when playing fast is completely different from the sound when playing slower, and both are captured and skilfully programmed into this instrument.
+
+Types of Legato
+
+* Slurred Legato - switching note with the finger only, without changing bow direction... the smoothest legato sound.
+* Bowed Legato - changing the bow at the note change. A more noticeable interval. (slurred and bowed legato are both essential in obtaining a realistic and well phrased performance)
+* Portamento Legato - a subtle slide between notes.
+* Fast Legato - Specially sampled intervals which allow you to play fast runs/scales with intervals up to a minor third between each note - something seriously lacking and rarely possible with most sample libraries.
+
+ARTICULATION LIST
+
+* Normal Sustain
+* Stutter (a quick stuttered grace note before the main sustain)
+* Crescendo
+* FP (loud then suddenly quiet with a crescendo back up)
+* Marcato (A more accented pronounced attack and note)
+* Harmonics
+* Tremolo
+* Trill Semitonevirtuosicviolinmanual
+* Trill Tone
+* Eight sets/combinations of grace note shorts
+* Octave up shorts
+* Pizzicato
+* Spiccato
+* Staccato on-string (detached playing without lifting the bow)
+* Major chords
+* Minor chords
+"""
 
 [octohorn]
 vendor = "auddict"
@@ -599,6 +1119,34 @@ requires = [["native-instruments-kontakt", "4"]]
 price = 60
 demo = "https://www.youtube.com/watch?v=M2lXGlGrMwo"
 size = 7000
+description = """\
+We are proud to present Octohorn, the first release from our brass series, with an eight-player French Horn ensemble, boasting no less then seven mic positions, with the aims of giving you absolute and ultimate control over your soundscape.
+
+This instrument was created with the intentions of producing something in a completely new league of sonic sculpt-ability, able to sit in a track with the depth and spread of a real ensemble recording. We have achieved this through multiple new and innovative features, including the seven mic positions, carefully set to cover the whole soundscape, recorded chords and octaves to minimize "sample layering" in tracks, which kills the depth of a track, and much more...
+
+Mix between the perspectives; Decca tree sides and mid, flanks, room, woodwind spots (see more about this below!), close ribbons and close LDCs, with the flexibility aimed at replicating a real scoring session. Now you have control over the different mic and perspective levels in the session, enabling you to morph your own sound in your scores, as if you were at the studio with the console at your fingertips.
+
+You might have noticed that one of the perspectives included is "woodwind spots". While this is not a woodwind library, the mics that spot the woodwinds were set up and included in the recording. The reason for this, is that a lot of the brass sound bleeds heavily into the woodwind mics in scoring sessions, adding to the perceived depth of the sound, so whilst pushing to achieve the most versatile, we felt that this absolutely had to be included.
+
+Three True-sampled Legato Styles
+
+The instrument comes with three true legato modes - a normal slurred legato, a sample octave legato, and a fast legato, for faster passages,which will allow you to play virtuoso runs and scale passages.
+
+The reason we included octave sustains and legato, is because when you play octaves by layering the same instrument twice, what you are hearing is no longer a real octave passage, but two sets of the exact same horns, in the exact same position, layered on top of one another. When an ensemble plays real octave, every note has it's own sonic space and position in hall, and therefore in the perceived depth/stereo field, and you lose this by layering samples. For this reason, we recorded octave sustains and legato specially for a completely true and real sound. 
+
+Not only did we just record the octaves, we recorded major and minor chords in various positions, as well as open fifths (combined gives you the ability to also create MAJ7, min7 and other chords... again for the reason that each note has it's own little space in the sonic field, and it is this separation that is one of the major things we miss from a real recording, and a track with layer upon layer of samples. With this instrument, you can achieve that real spacious sound.
+
+Full list of articulations:
+
+* No Legato (allows polyphonic playing)
+* Legato - normal slurred legato (piano and forte dynamic layers crossfade-able)
+* Oct Legato - True octave legato
+* Fst Legato - Fast legato specially for fast playing
+* Stutter (a quick stuttered grace note before the main sustain)
+* Chords < - Crescendo major, minor and open 5th chords
+* Chords > - Diminuendo major, minor and open 5th chords
+* Staccato - Short notes, with up to 5RR per dynamic layer (three layers)
+"""
 
 [angel-strings-1]
 vendor = "auddict"
@@ -609,6 +1157,43 @@ price = 220
 categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt", "4"]]
 size = 60000
+description = """\
+Music composition and production is constantly evolving, and the tools used to create music need to evolve along with this. The concept for this library involved capturing colours from a string orchestra which have not yet been recorded for any sample library, and place them at your fingertips, ready to compose and perform with.
+
+Angel Strings Vol.1 Includes textural elements, morphing into/out from atonality, risers/divebombs ideal for building tension (for example in trailer music), different styles of spiccato/staccato, marcato to soft attacks with sustains, fast tempo-locked tremolo for powerful driving string hooks and more...
+
+The techniques and articulations available in Angel Strings Vol.1 were cleverly recorded with the entire string orchestra in the same room all at once, in a way that seamlessly blends from the bottom of the range (double basses) to the highest violin notes. You can play the entire orchestra with each articulation across a single keyboard with a single NKI, making this library perfect for anything from merely sketching your ideas out on a full keyboard range - to easily executing unique parts for your final compositions.
+
+THE STUDIOANGEL STUDIOS
+This library was recorded at Angel Studios in London, where countless pop/rock stars have recorded (notably Adele's "21"), and many major film and video game scores have been recorded, including The Lion King, Jackie, Blue Planet, Planet Earth, Horizon: Zero Dawn and many more...
+
+Angel Strings Vol.1 is another collaboration between Auddict and the fantastic "United Strings of Europe", a London-based ensemble made up of young professionals from across the European Union and Switzerland with the goal of promoting musical and cultural cooperation at the highest level.
+
+The ensemble is gaining recognition for its exciting performances in Switzerland, France, Lebanon and the UK. With several world premieres of works by Hristic, Marinkovic and Winkler, the ensemble has collaborated with a number of distinguished artists including Hildegarde Fesneau, Marc Benzekri, Mateja Marinkovic, Jack Liebeck, Walter Delahunt and Ljubisa Jovanovic.
+
+ARTICULATION LIST
+
+* Scratch Tone/Overpress
+* Tremolo Divebombs
+* Accent Landing Divebombs
+* Smooth Divebombs
+* Sustains (Marcato to Soft Attack)
+* Molto Sul Tasto
+* Percussive Sounds
+* Risers Marcato
+* Risers
+* Scratch Tone
+* Bends/Slides Up-Down-Up and Down-Up-Down
+* Spiccato
+* Sautille
+* Molto Sul Ponticello
+* Molto Sul Pont Tremolo
+* Sul Tasto Staccato
+* Sustains Behind Bridge
+* Tremolo Behind Bridge
+* Timbre Oscillation
+* Timed Tremolo (Tempo Lock-able)
+"""
 
 [united-strings-of-europe]
 vendor = "auddict"
@@ -619,6 +1204,73 @@ demo = "https://soundcloud.com/auddict-77772158/united-strings-of-europe-first-v
 categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt", "4"]]
 size = 60000
+description = """\
+The United Strings of Europe is a London-based ensemble made up of young professionals from across the European Union and Switzerland with the goal of promoting musical and cultural cooperation at the highest level. This sample library aims to capture the essence and beauty of the ensemble's sound with lush sounding smooth legato and a variety of other articulations,
+
+This library contains meticulously sampled violin I, violin II, violas, cellos and basseswill work in Kontakt 4 and all higher versions - but not the free Kontakt "player").
+
+FIRST VIOLINS
+
+* Over 12GB of content
+* SEVEN microphone positions replicating a film scoring setup, so you can craft your own sound to taste. Separate desk spot mics can be used to simulate divisi.
+* Recorded at the world-renowned Cadogan Hall
+* Over 22,000 samples+
+* Multiple TRUE LEGATO sets including normal and portamento, at different dynamics (cross-fade-able with MIDI CC1)
+* 7RR Staccato, Pizzicato and Sautille/Spiccato multiplied by multiple dynamic layers
+* Tremolo, Harmonics and Trills
+
+SECOND VIOLINS
+
+* Over 14GB of content
+* SEVEN microphone positions replicating a film scoring setup, so you can craft your own sound to taste. Separate desk spot mics can be used to simulate divisi.
+* Recorded at the world-renowned Cadogan Hall
+* Over 22,000 samples+
+* Multiple TRUE LEGATO sets including normal and portamento, at different dynamics (cross-fade-able with MIDI CC1)
+* 7RR Staccato, Pizzicato and Sautille/Spiccato multiplied by multiple dynamic layers
+* Tremolo, Harmonics and Trills
+
+VIOLAS
+
+* Over 7GB of content
+* SEVEN microphone positions replicating a film scoring setup, so you can craft your own sound to taste. Separate desk spot mics can be used to simulate divisi.
+* Recorded at the world-renowned Cadogan Hall
+* Over 19,000 samples+
+* Multiple TRUE LEGATO sets including normal and portamento, at different dynamics (cross-fade-able with MIDI CC1)
+* 7RR Staccato, Pizzicato and Sautille/Spiccato multiplied by multiple dynamic layers
+* Tremolo, Harmonics and Trills
+
+CELLOS
+
+* Over 12GB of content
+* SEVEN microphone positions replicating a film scoring setup, so you can craft your own sound to taste. Separate desk spot mics can be used to simulate divisi.
+* Recorded at the world-renowned Cadogan Hall
+* Over 22,000 samples+
+* Multiple TRUE LEGATO sets including normal and portamento, at different dynamics (cross-fade-able with MIDI CC1)
+* 7RR Staccato, Pizzicato and Sautille/Spiccato multiplied by multiple dynamic layers
+* Tremolo, Harmonics and Trills
+
+BASSES
+
+* Over 6GB of content
+* SIX microphone positions replicating a film scoring setup, so you can craft your own sound to taste. Separate desk spot mics can be used to simulate divisi.
+* Recorded at the world-renowned Cadogan Hall
+* Over 13,000 samples+
+* TRUE LEGATO at different dynamics (cross-fade-able with MIDI CC1)
+* 7RR Staccato, Pizzicato and Sautille/Spiccato multiplied by multiple dynamic layers
+* Tremolo, Harmonics and Trills
+
+ARTICULATION LIST
+
+* Polyphonic
+* Legato
+* Tremolo
+* Harmonics
+* Trills
+* Staccato
+* Pizzicato
+* Sautille
+* Portamento
+"""
 
 [areia]
 vendor = "audio-imperia"
@@ -631,6 +1283,45 @@ demo = "https://soundcloud.com/audioimperia/sets/areia"
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt-player", "6"]]
+description = """\
+Areia is a cinematic ensemble strings software instrument made for Kontakt Player, that combines the most sought after features into one single product: detailed realism with expressive emotion and range, and a lush Hollywood sound - all the way from delicate and soft to aggressive and epic. Areia is a powerful and intuitive instrument that provides you with a lot more than just the essentials for modern string writing and gives you stunning control and the true ability to sculpt and shape the sound to your liking.
+
+Now Powered by Pyramid.
+
+Introducing Pyramid. Our unified Kontakt scripting framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+ 
+Completing your collection.
+
+Areia completes what we started with Jaeger and Nucleus, our two flagship, award-winning products. It adds more than 10 new articulations to expand your string pallet for maximum expression.
+
+Real Con Sordino.
+
+Nothing beats the nuances and subtleties of real Con Sordino samples. Con Sordino was recorded for Sustained for all the instrument sections, in three dynamics, vibrato and non-vibrato. Additionally, emulated Con Sordino is offered for the rest of the articulations.
+  
+Two types of phrase-sourced Spiccatos.
+
+We recorded two types of spiccato phrases: Slow and Fast repetitions, and then we built multi-samples out of them. The result: the most realistic and playable spiccatos you will ever try.
+ 
+Industry-leading Measured Tremolo.
+
+For the first time in a strings sample library, you can play Measured Tremolo at any tempo, without any time-stretching. Either sequenced or as playable multi-samples. And we didn't stop there: you can also add accents in sequenced mode, and save/load accent presets.
+ 
+Recorded with Capellen Music Production.
+
+A magnificent set of players, an incredibly balanced room, state of the art equipment, and an exceptional team of sound engineers. Mix all of that together and you get the authentic sound of Hollywood. Right at your fingertips.
+ 
+Our signature Sound Design.
+
+In true Audio Imperia style, we provide you with some really unique sound design elements to enhance your experience with the library.
+
+Introducing Performance Patches.
+
+Sometimes you just need to sketch out ideas quickly, and while key-switching is a great tool for expression, it can be quite time-consuming. That is where our Performance Patches come in. 
+ 
+Technical perfection.
+
+High standards of quality - that is the base of our foundation. All of our sample libraries are meticulously handcrafted, and every single sample is treated like a gem: carefully polished to bring out all their brilliance. This ensures you a buttery-smooth experience when making music. Carefully synced sample-starts and standardized pre-pads ensure that your performances will never be out of sync, while ensuring maximum realism. 
+"""
 
 [areia-lite]
 vendor = "audio-imperia"
@@ -643,22 +1334,68 @@ requires = [["native-instruments-kontakt-player", "6"]]
 size = 13000
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/areia"
+description = """\
+Both Areia Lite Edition and the full version of Areia share the same lush Hollywood sound that takes you from delicate and soft to aggressive and epic. Areia Lite Edition provides you with everything you need to write captivating string arrangements that shine with a detailed realistic sound without breaking the bank and an easy upgrade path to the full version when you are ready for it. If you are looking to add stunning sounding string ensembles to your music, look no further.
+
+Now Powered by Pyramid.
+
+Introducing Pyramid. Our unified Kontakt scripting framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+ 
+A no-brainer price.
+
+The amount of content you get for the price is astonishing. Legato for ALL, yes, you read that right, ALL instruments. Individual sections, pre-orchestrated ensembles, full ensembles, sound design... need we say more?
+The Rosetta Stone of string writing.
+Areia LE covers everything you need to start writing beautiful string arrangements. From soft and delicate to epic and powerful. If you own Nucleus LE, Areia LE is the perfect way of expanding and adding depth to your strings.
+Want more? We got you covered.
+You can upgrade to Areia full version anytime. Use the Areia LE purchase amount as a credit towards upgrading to the full version of Areia. Send us an e-mail to info@audioimperia.com whenever you're ready.
+
+Recorded with Capellen Music Production.
+
+A magnificent set of players, an incredibly balanced room, state of the art equipment, and an exceptional team of sound engineers. Mix all of that together and you get that authentic, lush sound you hear in so many Hollywood scores. Right at your fingertips.
+ 
+Our signature Sound Design.
+
+In true Audio Imperia style, we provide you with some really unique sound design elements to enhance your experience with the library.
+
+Introducing Performance Patches.
+
+Sometimes you just need to sketch out ideas quickly, and while key-switching is a great tool for expression, it can be quite time-consuming. That is where our Performance Patches come in. 
+ 
+Technical perfection.
+
+High standards of quality - that is the base of everything we do. All of our sample libraries are meticulously handcrafted, and every single sample is treated like a gem: carefully polished to bring out all their brilliance. This ensures you a buttery-smooth experience when making music. Carefully synced sample-starts and standardized pre-pads ensure that your performances will never be out of sync, while ensuring maximum realism. 
+"""
 
 [artifact-reanimate]
 vendor = "audio-imperia"
-name = "Artifact Reanimate"
+name = "Artifact Reanimate Modern Trailer Sound Design"
 url = "https://www.audioimperia.com/collections/all/products/artifact-reanimate-1"
-categories = ["vsti.synthesizer"]
+categories = ["vsti.synthesizer", "vsti.percussion"]
 requires = [["native-instruments-kontakt-player", "6"]]
 nks = true
 price = 249
 size = 3630
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/artifact-reanimate"
+description = """\
+ARTIFACT REANIMATE is a fully redesigned and expanded version of our popular release "Artifact Fractal" and evolves the original concept into a complete, comprehensive sound design toolkit. 
+
+More is more.
+
+ARTIFACT REANIMATE is a lot more than just a re-release, as it combines the original "Artifact Fractal" content (released in 2016) with the newly created "Artifact Tonal" content under one roof and inside our Big Knob sound design engine that offers extra manipulation options. The original collection of massive, gritty, and hard-hitting percussion sounds has now been completed with a large array of tonal tools that fit many musical environments and a variety of styles.
+
+Two years in the making.
+
+Two years in the making, ARTIFACT REANIMATE was designed to provide you with a large collection of those unique elements that help glue a musical composition together and make it stand out. While the main focus of the library is on modern trailer music, it can be used with any other genre of music as well and add a revitalizing and fresh sound.
+ 
+Sound Design by Valentin Boomes.
+
+All of the magnificent sound design in Artifact Reanimate was done by trailer music powerhouse Valenin Boomes. Valentin's music and sound design work can be found in many major motion picture trailer advertising campaigns.\
+"""
 
 [cerberus]
 vendor = "audio-imperia"
-name = "Cerberus"
+name = "Cerberus Epic Cinematic Drums"
 price = 299
 url = "https://www.audioimperia.com/collections/all/products/cerberus"
 categories = ["vsti.drums", "vsti.percussion"]
@@ -667,10 +1404,45 @@ size = 19511
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 nks = true
 demo = "https://soundcloud.com/audioimperia/sets/cerberus"
+description = """\
+Cerberus is an innovative drum library with a wide range of options that will take you from individual cinematic drum kit to epic ensemble powerhouse. Recorded on the same recording stage as our flagship orchestral library Jaeger, Cerberus delivers an easy way to build larger-than-life drum ensembles with a brand new stacking system. You can transform the hard-hitting drummer trio we used during the sessions (which gave the library its name) into an army of players, ready to crush anything standing in their way. To make the library even more flexible we recorded an individual drum kit with cymbals as well as a thundering Gran Cassa Ensemble.
+
+Now Powered by Pyramid.
+
+Introducing Pyramid. Our unified Kontakt scripting framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+
+The three headed monster.
+
+Cerberus is all about tight and punchy drums, covering from Gran Cassas, Kicks, Toms and Snares to Clacks and Clicks. We recorded a trio of players, each one playing two drums at the same time, giving you a total of 6 simultaneous sounding drums. This results in a larger-than-life sound without losing any tightness.
+
+You need more players?, here’s an army for you.
+
+Because bigger is better than big, Cerberus offers a state-of-the-art functionality for stacking drums. We recorded the triple amount of round robins, so you could stack up to 3 different layers. That gives you 18 simultaneous sounding drums! You can even add timing/pan variation to each hit to make it sound looser/broader.
+
+Droom Loops.
+
+Cerberus comes loaded with a large set of tempo synced drum loops, all created from the original source material. The loops come in 120bpm, 90bpm, 4/4, and 3/4 variations. Each loop additionally has the low, mid, and high stems laid out on the keyboard, allowing you to layer stems to create your own combinations. For a TV or library composer who writes lots of underscore, these loops are going to be incredible time savers.
+
+Still not enough? Here’s an extra full drum kit.
+
+We included a beautiful sounding drum kit just in case you’re feeling those metal/rock vibes, the icing of the cake.
+
+Recorded with Capellen Music Production.
+
+A magnificent set of players, an incredibly balanced room, state of the art equipment, and an exceptional team of sound engineers. Mix all of that together and you get the authentic sound of Hollywood. Right at your fingertips.
+
+Our signature Sound Design.
+
+In true Audio Imperia style, we provide you with some really unique sound design elements to enhance your experience with the library.
+
+Technical perfection.
+
+High standards of quality - that is the base of our foundation. All of our sample libraries are meticulously handcrafted, and every single sample is treated like a gem: carefully polished to bring out all their brilliance. This ensures you a buttery-smooth experience when making music. Carefully synced sample-starts and standardized pre-pads ensure that your performances will never be out of sync, while ensuring maximum realism.\
+"""
 
 [chorus]
 vendor = "audio-imperia"
-name = "Chorus"
+name = "Chorus Modern Cinematic And Symphonic Choir"
 price = 499
 size = 69298
 url = "https://www.audioimperia.com/collections/all/products/chorus-modern-cinematic-and-symphonic-choir-for-kontakt-player"
@@ -679,6 +1451,29 @@ categories = ["vsti.vocal"]
 requires = [["native-instruments-kontakt-player", "6"]]
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/chorus"
+description = """\
+Chorus is an incredible cinematic choir made for Kontakt Player, that can deliver the full spectrum of emotions and depth that choir vocals are capable of. Whisper quiet and soft, but also mighty, epic, and thundering. This unique property makes Chorus an invaluable tool for any composer looking to add what naturally resonates with all of us: the human voice.
+
+Powered by Pyramid.
+
+Powered by Pyramid. Our unified Kontakt sample library framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+
+Twice the know-how - A true collaboration.
+
+With Chorus you get the know-how and experience from not just one but two orchestral developers: Audio Imperia and Performance Samples. Both Jasper Blunk (Owner of Performance Samples) and Audio Imperia brought everything to the table which, for example, you can see in how we approached the syllables: Jasper brought his expertise with energetic syllables and Audio Imperia brought the expertise with slow syllables. 
+
+A new signature mix: Scott Michael Smith
+
+Additionally, we also brought renowned and Grammy Award-winning Hollywood mixing and recording engineer Scott Michael Smith on board for Chorus. Scott's credits include The Revenant, The Handmaids Tale, It Chapter 2, Shazam!, Mank, The Gilded Age, The Adam Project, Call of Duty: Vanguard, and many others. He provided a signature mix mic for Chorus, that really brings the sound of modern film music to the library.
+
+Versatile and Cinematic.
+
+Chorus is a powerful choir library that works across many, many genres. We recorded not only a comprehensive set of traditional articulations but also not just one, but three types of syllables: Traditional, Energetic, and Slow.
+
+Recorded with Budapest Scoring.
+
+Recorded with 24 women and 24 men at the wonderful Rottenbiller recording stage. An incredible team of contractors, musicians, and sound engineers. A true recipe for success.
+"""
 
 [chorus-lite]
 vendor = "audio-imperia"
@@ -691,10 +1486,25 @@ accessibility_description = "Audio Imperia products come with additional mic pos
 demo = "https://soundcloud.com/audioimperia/sets/chorus"
 price = 99
 size = 2700
+description = """\
+Chorus Lite Edition captures the same emotional dexterity of Chorus, within a smaller, more concise package ideal for anyone wanting to begin exploring choral composition. Packaged with full NKS integration within Kontakt Player, Chorus Lite Edition includes the same 48-piece choir that sits at the heart of Chorus, with both male and female longs and shorts, able to reach a breadth of different genres.
+
+Powered by Pyramid.
+
+Powered by Pyramid. Our unified Kontakt sample library framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+
+A new signature mix: Scott Michael Smith
+
+Additionally, we also brought renowned and Grammy Award-winning Hollywood mixing and recording engineer Scott Michael Smith on board for Chorus and Chorus Lite Edition. Scott's credits include The Revenant, The Handmaids Tale, It Chapter 2, Shazam!, Mank, The Gilded Age, The Adam Project, Call of Duty: Vanguard, and many others. He provided a signature mix mic for Chorus, that really brings the sound of modern film music to the library.
+
+Recorded with Budapest Scoring.
+
+Recorded with 24 women and 24 men at the wonderful Rottenbiller recording stage. An incredible team of contractors, musicians, and sound engineers. A true recipe for success.\
+"""
 
 [constrictor]
 vendor = "audio-imperia"
-name = "Constrictor"
+name = "Constrictor Cinematic Tension Strings"
 url = "https://www.audioimperia.com/collections/all/products/constrictor"
 nks = true
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
@@ -703,10 +1513,25 @@ categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt-player", "6"]]
 size = 30000
 demo = "https://soundcloud.com/audioimperia/sets/constrictor"
+description = """\
+Constrictor is dark, Constrictor is eerie, Constrictor is unnerving. A string library with a nightmarish purpose that will help you set the tone for thrilling atmospheres and gripping suspense.
+
+Powered by Pyramid.
+
+Powered by Pyramid. Our unified Kontakt sample library framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+
+Versatile and Cinematic.
+
+The over 400 articulations spread across Sustains, Cluster Sustains, Tonal Shorts, Atonal Shorts, Cluster Runs, Risers, and Downers articulations as well as across the four separate string sections provide you with an incredible amount of flexible-to-use tools for your next terrifying scoring project.
+
+Recorded with Budapest Scoring.
+
+Recorded in situ with 10 Violins, 4 Violas, 4 Cello, and 3 Double Basses at the wonderful Rottenbiller recording stage. An incredible team of contractors, musicians, and sound engineers. A true recipe for success.\
+"""
 
 [jaeger]
 vendor = "audio-imperia"
-name = "Jaeger"
+name = "Jaeger Essential Modern Orchestra"
 price = 599
 url = "https://www.audioimperia.com/collections/all/products/jaeger-essential-modern-orchestra"
 nks = true
@@ -715,10 +1540,43 @@ categories = ["vsti.strings", "vsti.brass", "vsti.percussion"]
 requires = [["native-instruments-kontakt-player", "6"]]
 demo = "https://soundcloud.com/audioimperia/sets/jaeger"
 size = 52596
+description = """\
+From the German word for “hunter”, Jaeger is a brawny and agile hybrid orchestral instrument with modernity at its core. Designed to fire up stories with a loudly dramatic flair, this is the tool that does it all.
+
+Jaeger is the first release in a series of orchestral instruments that will usher you into a new era of modern cinematic music. As composers, we constantly find ourselves chasing that next creative spark, but our short deadlines don’t always allow us the time to let inspiration hit. You have to simply apply fingers to keys and let the music begin.
+
+Now Powered by Pyramid.
+
+Introducing Pyramid. Our unified Kontakt scripting framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+
+Everything you need for Epic/Hybrid music, and much more.
+
+Jaeger conceptually focuses on Epic/Hybrid music. However, it can be used for many other genres. Give your scores the impact and emotion you’re looking for with this set of exceptionally flexible tools.
+ 
+Vocals by Merethe Soltvedt.
+
+Merethe Soltvedt is an award-winning vocalist who has performed for composers such as Jeff Broadbent, Henry Lai, Tom Salta, Ivan Torrent and companies like Brand X, Two Steps From Hell, and Ghostwriter Music. A truly unique and very angelic voice that will add a whole other dimension to your music
+
+Recorded with Capellen Music Production.
+
+A magnificent set of players, an incredibly balanced room, state of the art equipment, and an exceptional team of sound engineers. Mix all of that together and you get the authentic sound of Hollywood. Right at your fingertips.
+
+Our signature Sound Design.
+
+In true Audio Imperia style, we provide you with some really unique sound design elements to enhance your experience with the library.
+
+Introducing Performance Patches.
+
+Sometimes you just need to sketch out ideas quickly, and while key-switching is a great tool for expression, it can be quite time-consuming. That is where our Performance Patches come in. 
+
+Technical perfection.
+
+High standards of quality - that is the base of our foundation. All of our sample libraries are meticulously handcrafted, and every single sample is treated like a gem: carefully polished to bring out all their brilliance. This ensures you a buttery-smooth experience when making music. Carefully synced sample-starts and standardized pre-pads ensure that your performances will never be out of sync, while ensuring maximum realism.\
+"""
 
 [klavier]
 vendor = "audio-imperia"
-name = "Klavier"
+name = "Klavier Hybrid Pianos"
 url = "https://www.audioimperia.com/collections/all/products/klavier"
 categories = ["vsti.keys.piano"]
 requires = [["native-instruments-kontakt-player", "6"]]
@@ -727,10 +1585,44 @@ nks = true
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/klavier"
 size = 24098
+description = """\
+Two top-quality hybrid pianos in one instrument, for the ultimate in depth and versatility. Gravitas morphs between an orchestral grand and a synthetic piano engineered by top sound designers, while Red Planet layers in electric guitar for out-of-this-world tones.
+
+Lush, spacious, and rich in tone, Klavier is a versatile, top-quality hybrid and underscore piano instrument that is incredibly easy to use. At the core of Klavier, we have two instruments: The first, our Gravitas Piano, allows you to morph between a deeply sampled orchestral grand piano, and synthetic piano sound design created by some of the top trailer composers and sound designers out there. The second, our Red Planet Piano, allows you to morph between our deeply sampled orchestral grand and electric guitar sound design layers. With this wide range of sonic possibilities, Klavier serves as an incredibly useful instrument for a wide range of music.
+
+Gravitas Piano (Piano meets Sound Design).
+
+AUDIO IMPERIA's “Klavier" is the first instrument in our new “Private Stock Instruments” series. Originally intended as a private sample library for a group of trailer composers, the two instruments in this series combine the very best of the worlds of raw/organic recordings and post-production/sound design. The goal throughout the whole project was to start with the user experience and the raw sound and to work our way backwards to a final product that is both versatile and instantly inspiring.
+The Gravitas Piano was designed specifically for trailer music. A piano that can cut through in a big and epic mix, yet still retain a lot of warmth and depth. To achieve this, we used a set of six stereo microphones and then combined these with their corresponding sound-designed (“Synthetic”) counterparts in post production.
+
+Organic Piano: Yamaha Baby Grand Piano
+
+* 2x Brauner Phantom Classic Front End Audio Microphones (above the piano)
+* 2x DPA 4011A Cardioid Microphones (below the piano)
+* 2x Neumann KM184 Small-diaphragm Cardioid Condenser Microphones (above the keys, one on each side of the player)
+* 2x Neumann U87 Large-diaphragm Condenser Microphones (inside the lid)
+* 2x Coles 4038 Ribbon Microphones (inside the lid)
+* 2x Earthworks QTC40 Small-diaphragm Omnidirectional Condenser Microphones (room)
+
+The Gravitas Piano comes with 35 “Synthetic” presets, made by some of the best producers in the trailer industry. These “Synthetic” presets can be accessed via the preset control on the “Synthetic” side of the piano. The “Organic” piano offers both Sustained and Staccato articulations. All of the “Synthetic” presets were made using the original samples from the “Organic” piano. No synthesizers or other instruments were used, just pure sound manipulation and sound design.
+
+* Attila Áts
+* Bryan Leach
+* Danny Cocke
+* Jeremiah Pena
+* Joshua Crispin aka Generdyn
+* Paul Ortiz aka Chimp Spanner
+
+Red Planet Piano (Piano meets Electric Guitar).
+
+The “Red Planet Piano” was heavily inspired by the movie adaptation of Andy Weir’s “The Martian”. Harry Gregson-Williams' score is absolutely amazing and inspired us to create an “outer space” version of the Klavier. 
+The Red Planet Piano shares the same organic sample pool used for the Gravitas Piano. But to get that particular “outer space” electric guitar sound, we created a number of complex guitar sounds. They are designed to match that lush and wide sound that you need to evoke that feeling of depth and space. This, combined with the organic piano, creates a truly unique sound.
+We used a blend of the neck (humbucker) and the split-coil (single coil) position of the very limited Ibanez JPM90HAM. A perfect blend of the single coil twang and directness and the warmth and depth of the neck humbucker. The initial recordings were done direct and we then reamped the recordings through various amp and fx signal chains.\
+"""
 
 [legacy]
 vendor = "audio-imperia"
-name = "Legacy"
+name = "Legacy Cinematic SFX Collection"
 url = "https://www.audioimperia.com/collections/all/products/legacy-cinematic-sfx-collection-for-kontakt-player"
 categories = ["vsti.synthesizer"]
 requires = [["native-instruments-kontakt-player", "6"]]
@@ -739,10 +1631,23 @@ price = 199
 size = 4120
 demo = "https://soundcloud.com/audioimperia/sets/legacy"
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+description = """\
+Assimilating some of Audio Imperia’s most popular science-fiction and superhero sound effects products in one package, Legacy beams up sci-fi composition tools like Event Horizon, Dark Dimensions and Terraform with the superhero composer Scenes From The Multiverse.
+
+Legacy is a collection of the best of our first year products consolidated into one incredibly versatile sound design and sound effects product: Scenes from the Multiverse, Event Horizon, Dark Dimensions and Terraform. Scenes from the Multiverse is an impressive collection of sounds, everything you need for creating a hybrid track. Dark Dimensions has a darker tone, intended for very menacing scores. Event Horizon is focused on sci-fi and futuristic sounds. Terraform is a very comprehensive collection of pulses and rhythmic patterns that will fit perfectly with our orchestral pallet. Whether you are a composer, a songwriter, or a filmmaker, these sounds will set you up with a vast range of incredible cinematic sounds.
+
+Now Powered by Pyramid.
+
+Introducing Pyramid. Our unified Kontakt scripting framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+
+4 products in 1.
+
+Combined from the now discontinued libraries: Scenes from the Multiverse, Event Horizon, Dark Dimensions and Terraform (which combined had an MSRP of over $300). Now find all those products under one roof at a very affordable, reduced price.\
+"""
 
 [nucleus]
 vendor = "audio-imperia"
-name = "Nucleus"
+name = "Nucleus The Orchestral Core"
 categories = ["vsti.strings", "vsti.woodwinds", "vsti.brass", "vsti.vocal", "vsti.percussion"]
 requires = [["native-instruments-kontakt-player", "6"]]
 nks = true
@@ -751,6 +1656,43 @@ size = 29627
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/nucleus"
 price = 449
+description = """\
+Working on the go? Nucleus preserves system resources while packing a mighty punch, with all the essentials of modern cinematic composition and an intuitive interface. Clean, compact, and easy-to-use, Nucleus is an all-in-one package that’s hard to beat.
+
+Nucleus is an orchestral software instrument made for Kontakt Player, that covers the full orchestral range of instruments with strings, brass, woodwinds, percussion, and choirs under one roof. It is an uncompromising symphonic essentials library designed to bring cinematic sound quality and an easy-to-use and complete creative toolset within anybody’s reach.
+
+Now Powered by Pyramid.
+
+Introducing Pyramid. Our unified Kontakt scripting framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+ 
+A full orchestra at your fingertips.
+
+We handpicked some of the best orchestral content out of our catalog, recorded and added a ton of new content, and made a comprehensive sample library that’s both perfect for starters and for seasoned professionals. You get the whole package, all in their separate sections: Strings, Brass, Woodwinds, Tonal/Atonal Percussion, and even a Choir.
+
+The most beautiful set of soloists you’ll ever hear.
+
+Long-form legato and progressive vibrato. That’s the secret. True-to-life and emotional performances that will blow your mind.
+
+Easy on resources.
+
+Nucleus is exceptionally resource-friendly with zero compromises in sound. Nucleus is the perfect choice while you're on the go, or when you need to sketch up your ideas as quickly as possible.
+
+Recorded with Capellen Music Production.
+
+A magnificent set of players, an incredibly balanced room, state of the art equipment, and an exceptional team of sound engineers. Mix all of that together and you get the authentic sound of Hollywood. Right at your fingertips.
+
+Our signature Sound Design.
+
+In true Audio Imperia style, we provide you with some really unique sound design elements to enhance your experience with the library.
+
+Introducing Performance Patches.
+
+Sometimes you just need to sketch out ideas quickly, and while key-switching is a great tool for expression, it can be quite time-consuming. That is where our Performance Patches come in. 
+
+Technical perfection.
+
+High standards of quality - that is the base of our foundation. All of our sample libraries are meticulously handcrafted, and every single sample is treated like a gem: carefully polished to bring out all their brilliance. This ensures you a buttery-smooth experience when making music. Carefully synced sample-starts and standardized pre-pads ensure that your performances will never be out of sync, while ensuring maximum realism.\
+"""
 
 [nucleus-lite]
 vendor = "audio-imperia"
@@ -763,10 +1705,34 @@ size = 5000
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/nucleus"
 price = 99
+description = """\
+Nucleus Lite Edition is a powerful orchestral virtual instrument for Native Instruments Kontakt Player with full NKS integration. Both Nucleus Lite Edition and the full version of Nucleus share the same rich cinematic sound and ease-of-use interface and provide you with different options depending on your feature and your budget requirements. Nucleus Lite Edition provides you with all the tools you need to get started without breaking the bank and an easy upgrade path to the full version when you are ready for it. If you are looking to dip your toes into the vast world of orchestral sample libraries, this is it.
+
+Features
+
+* Carefully selected essentials from Nucleus Full Edition.
+* Crisp & smooth cinematic orchestral sound.
+* Two highly versatile microphone mixes: Classic & Modern.
+* Full Ensembles for Strings, Woodwinds, Brass and Choir.
+* Essential Tonal & Atonal Percussion.
+* Essential Sound Design.
+* Multi and Single Articulation Patches.
+* NEW! Performance Patches, for instant playability.
+* Very small footprint and low resource consumption.
+* Made for the free Kontakt Player, Version 6.4 or higher.
+* NKS ready.
+
+Nucleus Lite Edition boils the cinematic orchestra formula down to the essentials needed for realistic cinematic orchestral scoring.
+Nucleus Lite Edition's intuitive interface design provides a number of innovative solutions – a perfect mix of functionality, usability, and aesthetics. All the flexibility and customization you'd expect is there, but the advanced controls stay out of your way when you don't need them.
+ 
+Writing an orchestral track can be an overwhelming task if you are just starting out — and who wants to spend all day balancing a mix? Nucleus LE is an incredible starter library for beginners and a well worthy addition for the more experienced user.
+
+Purchasing Nucleus Lite Edition qualifies you for a credit toward Nucleus (Full Version)! Simply email us at info@audioimperia.com for your personal crossgrade invoice (the full purchase amount that you pay for Nucleus Lite Edition would be used as a credit toward that upgrade). Please note, this crossgrade discount is only available if Nucleus Lite Edition was purchased through our web store and you are crossgrading to the full version through our web store at www.audioimperia.com.\
+"""
 
 [photosynthesis]
 vendor = "audio-imperia"
-name = "Photosynthesis"
+name = "Photosynthesis Otherworldly Cinematic Sounds"
 url = "https://www.audioimperia.com/collections/all/products/photosynthesis"
 price = 199
 categories = ["vsti.synthesizer"]
@@ -775,10 +1741,30 @@ nks = true
 demo = "https://soundcloud.com/audioimperia/sets/photosynthesis-vol-2-mystic-by"
 size = 6466
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
+description = """\
+A treasure trove of otherworldly sounds from film & game composer Jeremiah Pena, brought together in a single KONTAKT instrument. Deepen your compositions with evolving pads (Sphere), ambient cello (Mystic), heavy basses (Embers), and bowed metals (Realms).
+
+Created by Film & Game composer Jeremiah Pena, Photosynthesis offers a massive amount of otherworldly and ambient soundscapes, wavering pads and rhythmic synths, as well as creative instrument effects. All of them are spread across four chapters: Sphere (Gorgeous Evolving Pads), Mystic (Ambient Cello), Embers (Heavy Growling Basses), and Realms (Bowed Metals). Each of the four chapters inside Photosynthesis offers a unique sound and makes the library perfect for cinematic film scoring. 
+
+A one-of-a-kind organic sound.
+
+Created by composer Jeremiah Pena, Photosynthesis is a powerful and unique sample library for working composers and producers. Inspired by playing old instruments in unique ways, creating unusual sounds from everyday objects, and transforming them into usable virtual instruments.
+
+Four are now One.
+
+Previously released as four separate volumes, we have now compiled them into one single product which is fully NKS-enabled and made for the free Kontakt Player. Each volume focused on a different sound source ranging from a Cello to metallic bowed objects, giving the user an enormous amount of diversity when needing to feel inspired. 
+
+Previously known as
+
+* Photosynthesis Volume One - Sphere: Gorgeous Evolving Pads, Dark Soundscapes and Rhythmic Underscore, Creative Instrument Effects.
+* Photosynthesis Volume Two - Mystic: Ambient Cello, Unique Cello Articulations, Otherworldly Pads and Soundscapes.
+* Photosynthesis Volume Three - Embers: Heavy Growling Basses, Distant Organic Instruments, Wavering Pads and Rhythmic Synths.
+* Photosynthesis Volume Four - Realms: Extensive Bowed Metal Objects, Beautiful Shimmering Organic Pads, Dark and Eerie Soundscapes.\
+"""
 
 [solo]
 vendor = "audio-imperia"
-name = "Solo"
+name = "Solo Lyrical And Expressive Soloists"
 url = "https://www.audioimperia.com/collections/all/products/solo-made-for-kontakt-player"
 nks = true
 categories = ["vsti.vocal", "vsti.strings", "vsti.brass", "vsti.woodwinds"]
@@ -787,10 +1773,51 @@ accessibility_description = "Audio Imperia products come with additional mic pos
 size = 89822
 price = 299
 demo = "https://soundcloud.com/audioimperia/sets/solo"
+description = """\
+Solo puts a vast collection of all-new recorded lyrical and expressive orchestral Soloists, unified within our Pyramid engine:
+
+* Strings - Violin, Viola, Cello
+* Brass - Trumpet, French Horn, Descant Horn
+* Winds - Flute, Clarinet, Oboe, English Horn, Bassoon
+* Voice - Soprano Angelic, Soprano Operatic
+
+Solo is a uniquely comprehensive collection with a pronounced sound that will expand the level of emotion and expression within your music, straight out of the box. 
+
+Powered by Pyramid.
+
+Powered by Pyramid. Our unified Kontakt sample library framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+
+13 reasons why to love Solo.
+
+You wanted more, we delivered. We recorded 13, yes, you read that right, thirteen new instruments: Violin, Viola, Cello, Trumpet, French Horn, Descant Horn, Flute, Clarinet, Oboe, English Horn, Bassoon, Soprano Angelic and Soprano Operatic. 100% new recordings.
+
+Two types of long-form true legato | No key-switching required.
+
+Introducing Legato Combined
+
+We recorded two types of legato for each instrument: Rebowed and Slurred for Strings, Fingered and Retongued for Woodwinds and Brass, Aah and Ooh for the Sopranos. You can even switch between the two types of legato without using key-switches, by using either velocity or CC. 
+
+Less is more.
+
+We recorded just one dynamic layer on legato articulations, which is actually better for solo instruments. The less crossfades you do, the less phasing artifacts you get.
+This unique dynamic layer contains all the musicality and emotion you will ever need. The recipe: slight crescendo-diminuendos, some progressive vibrato, and voilà. It just works.
+
+Recorded with Budapest Scoring.
+
+A breath of fresh air. An incredible team of contractors, musicians and sound engineers. A true recipe for success.
+
+Our signature Sound Design.
+
+In true Audio Imperia style, we provide you with some really unique pads that were made exclusively from the recordings.
+
+Technical perfection.
+
+High standards of quality - that is the base of everything we do. All of our sample libraries are meticulously handcrafted, and every single sample is treated like a gem: carefully polished to bring out all their brilliance. This ensures you a buttery-smooth experience when making music. Carefully synced sample-starts and standardized pre-pads ensure that your performances will never be out of sync, while ensuring maximum realism.\
+"""
 
 [talos]
 vendor = "audio-imperia"
-name = "Talos"
+name = "Talos Epic Brass Ensembles"
 nks = true
 categories = ["vsti.brass"]
 requires = [["native-instruments-kontakt-player", "6"]]
@@ -799,10 +1826,43 @@ url = "https://www.audioimperia.com/collections/all/products/talos-epic-brass-en
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 size = 10724
 demo = "https://soundcloud.com/audioimperia/sets/talos"
+description = """\
+Need earth-shattering brass? Look no further. With a huge sonic range and stomping sound, Talos is an incredible brass instrument with a wide range of versatility. A powerhouse, yet equally adept at the soft and subtle elements of brass, Talos is a must-have.
+
+Talos is all about big ensemble sizes (12 French Horns and 12 Low Brass players: 4x Tubas, 4x Cimbassi, 4x Bass Trombones) that can go from soft and subtle to earth-shatteringly epic. One of the main goals and challenges for the library was to create something that can go the full sonic range in a larger than life ensemble size but still retain all of the realism. We also ensured that Talos not only blends perfectly with our other libraries (Jaeger, Cerberus, etc.) but truly sits well in a mix and enhances your writing experience.
+
+Now Powered by Pyramid.
+
+Introducing Pyramid. Our unified Kontakt scripting framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+
+2 products in 1.
+
+Talos used to be two separate products: Talos Vol. 1: Horns and Talos Vol. 2: Low Brass. Now find both products under one roof at a very affordable price.
+
+Power cranked to the max.
+
+People asked us for bigger ensembles, we delivered. People asked for stronger dynamics, we delivered. Talos was designed to perfectly match and expand what Jaeger offers. Add all the extra weight you need to your compositions with this gigantic brass titan.
+
+Recorded with Capellen Music Production.
+
+A magnificent set of players, an incredibly balanced room, state of the art equipment, and an exceptional team of sound engineers. Mix all of that together and you get the authentic sound of Hollywood. Right at your fingertips.
+
+Our signature Sound Design.
+
+In true Audio Imperia style, we provide you with some really unique sound design elements to enhance your experience with the library.
+
+Introducing Performance Patches.
+
+Sometimes you just need to sketch out ideas quickly, and while key-switching is a great tool for expression, it can be quite time-consuming. That is where our Performance Patches come in. 
+
+Technical perfection.
+
+High standards of quality - that is the base of our foundation. All of our sample libraries are meticulously handcrafted, and every single sample is treated like a gem: carefully polished to bring out all their brilliance. This ensures you a buttery-smooth experience when making music. Carefully synced sample-starts and standardized pre-pads ensure that your performances will never be out of sync, while ensuring maximum realism.\
+"""
 
 [trailer-guitars-2]
 vendor = "audio-imperia"
-name = "Trailer Guitars 2"
+name = "Trailer Guitars 2 Epic Cinematic Guitars"
 url = "https://www.audioimperia.com/collections/all/products/trailer-guitars-2"
 price = 249
 nks = true
@@ -811,6 +1871,35 @@ requires = [["native-instruments-kontakt-player", "6"]]
 size = 5577
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
 demo = "https://soundcloud.com/audioimperia/sets/trailer-guitars-2"
+description = """\
+Bringing you everything from distorted fight-scene sonics to angelic ambience, Trailer Guitars 2 can be used as a conventional guitar instrument or an epic composition tool. Dynamically rich and lovingly recorded on an eight string Ibanez RG2228, if you need amped strings you’ll find them here.
+
+Trailer Guitars 2 has everything you need from clean tones to gritty distortion and sonic drones, loops, kits and curated content. This library never lets up and always keeps you in the thick of it with its unforgiving sound design and the wide array of electric guitar patches, making it perfect for big, epic cinematic scores.
+
+Now Powered by Pyramid.
+
+Introducing Pyramid. Our unified Kontakt scripting framework. Countless hours were spent on bringing one of the easiest user experiences in the industry. No learning curves for each product, once you know Pyramid, you know them all.
+
+Zero knowledge required.
+
+There's a bunch of electric guitar libraries in the market, but most of them require at least some basic knowledge on how to play the real deal. Frets, finger positions, yuck. We hated that. With Trailer Guitars 2 you get that instant satisfaction of getting the sound you're craving for with zero effort and zero knowledge. It can go from clean and angelic to distorted and hellish in a second.
+
+Multisampled, multitracked.
+
+The big player of Trailer Guitars 2 is the Multisamples. We recorded 13 different articulations in mono, twice. This allows you to pan each one of the recording sets to L and R independently. The result: A breathtaking stereo sound out of the box. You can even control both of the channels volume and pan independently.
+
+The simplest of loops.
+
+We recorded a huge set of "simple loops". These are basic and generic sequences that are very commonly played on backing electric guitars, which are specially useful for adding some organic movement to your tracks.
+
+Our signature Sound Design.
+
+In true Audio Imperia style, we provide you with some really unique sound design elements to enhance your experience with the library.
+
+Technical perfection.
+
+High standards of quality - that is the base of our foundation. All of our sample libraries are meticulously handcrafted, and every single sample is treated like a gem: carefully polished to bring out all their brilliance. This ensures you a buttery-smooth experience when making music. Carefully synced sample-starts and standardized pre-pads ensure that your performances will never be out of sync, while ensuring maximum realism.\
+"""
 
 [dsk-indian-dreamz]
 vendor = "dsk-music"
@@ -1041,4 +2130,18 @@ Meet RAUM, your do-it-all creative reverb. Made to sculpt any space, RAUM can do
 * MODULATION: Add a shifting, detuned feel to RAUM’s reverb tails, or go all-out in the Cosmic mode for wonky atmospheric soundscapes and unique granular textures.\
 """
 accessibility_description = """User interface isn't accessible but parameters fully usable when used within Komplete Kontrol or via the parameter dialogue. """
+os = ["windows","mac_intel","mac_arm"]
+
+[oldskoolverb]
+vendor = "voxengo"
+name = "OldSkoolVerb"
+categories = ["fx.reverb"]
+url = "https://www.voxengo.com/product/oldskoolverb/"
+demo = "https://www.voxengo.com/files/soundexamples/adj_71.mp3/getbyname/OldSkoolVerb%20-%20Acoustic%20Piano%20-%20Grand%20Hall.mp3"
+price = 0
+description = """\
+OldSkoolVerb is a free algorithmic reverberation AAX, AudioUnit, and VST plugin for professional streaming, sound, and music production applications.  This plugin implements a kind of “classic” stereo reverb algorithm which is technically simple yet optimal.  It produces a very clear spatial image that blends well with the mix.
+OldSkoolVerb offers you a comprehensive set of parameters permitting you to achieve various reverbs ranging from plate reverb to room reverb to hall reverb sound.  OldSkoolVerb is best suited for non-percussive and soft-attack sounds like vocals, piano, and pad sounds.  A narrow “plate” range of settings, however, can be used on percussive sounds, with good results.\
+"""
+accessibility_description = """All parameters are accessible via the parameter list and there are around 20 presets to get you going."""
 os = ["windows","mac_intel","mac_arm"]
