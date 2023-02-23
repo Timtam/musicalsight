@@ -2511,3 +2511,44 @@ Each of the Sessions in Opacity contains multiple song sections/variations
 and gives you the freedom to use any of the different parts of the sessions
 or increase complexity by adding complimentary guitar parts.
 """
+
+[instinct-trailer-sound-effects]
+vendor = "ava-music-group"
+name = "Instinct - Trailer Sound Effects"
+categories = ["vsti.synthesizer"]
+requires = [["native-instruments-kontakt","5"]]
+size = 606
+url = "https://avamusicgroup.com/products/instinct-trailer-sound-effects"
+demo = "https://soundcloud.com/ava-music-group/instinct-trailer-sound-effects-demo"
+price = 79
+description = """* 100 CREATIVE SAMPLES including Hits, Whooshes, Risers, Phrases, Braams, loops and more.
+* UNIQUE INDUSTRIAL SOUNDS captured in the rawness of abandoned places in Detroit.
+* Recorded and processed at the HIGHEST QUALITY to meet Broadcast, Cinema and video games standards.
+"""
+
+[prism-retro-pop-drums]
+vendor = "ava-music-group"
+name = "Prism Retro Pop Drums"
+categories = ["vsti.drums"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 417
+url = "https://avamusicgroup.com/products/prism-retro-pop-drums"
+demo = "https://soundcloud.com/karelpsota/sets/ava-prism-modern-pop-drums"
+nks = true
+description = """Tight Tones with Powerful Dynamics
+Timeless Drum Tones
+
+Browse through dozens of drum kit presets to quickly find the perfect percussion tone for your next song.
+
+Powerful User Interface
+
+Easy access to a virtual endless array of drum options means you’ll spend less time searching for sounds and more time creating.
+
+Only the Essentials
+
+With PRISM, you’ll never get lost down the rabbit hole when it comes to trying to find the perfect drum sound. Every sound in the engine has been expertly mixed and produced to give producers and performers of every experience level tools to create studio-quality music instantly.
+
+Vintage Tones and Punchy Processing
+
+Recorded with state-of-the-art analog gear and processed with cutting-edge production techniques––a perfect balance between organic vintage sounds and heavy modern drum processing.
+"""
