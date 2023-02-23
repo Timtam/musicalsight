@@ -2552,3 +2552,24 @@ Vintage Tones and Punchy Processing
 
 Recorded with state-of-the-art analog gear and processed with cutting-edge production techniques––a perfect balance between organic vintage sounds and heavy modern drum processing.
 """
+
+[c-digital-grand]
+vendor = "bechstein-digital"
+name = "C. Digital Grand"
+categories = ["vsti.keys.piano"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 23700
+url = "https://www.bechstein-digital.com/en/digital-grand/"
+demo = "https://www.youtube.com/watch?v=9-gZ9TgMee4"
+price = 249
+nks = true
+description = """The C. Bechstein Digital Grand has been developed to meet the high expectations of composers & musicians as well as comprehensive requirements in a daily recording practice at a high level.
+This applies both to the sonic aspects, as well as to the usability, which remains intuitive at all times. Every control element has been constantly challenged by our product developers and extensively tested in DAW plugin environments, but also in virtuoso live performances with different genres.
+
+Capturing that C. Bechstein Sound
+
+The acoustic role model for the Digital Grand is a carefully selected C. Bechstein D 282 concert grand.
+With its ability to highlight and emphasize even the most subtle melody lines through its unparalleled richness of tone colors, the D 282 belongs to the best modern concert grand pianos in the world. Playing a C. Bechstein, you can freely stress a certain voice, underscore a certain melody or accentuate a certain chord, and thus make your interpretation more lively and vivid.
+
+The C. Bechstein Digital Grand for Native Instrument’s KONTAKT and KONTAKT-Player follows the high standards we set for our acoustical instrument´s development and production: sound and manufacturing at the highest level, made for connoisseurs and people with passion.
+"""
