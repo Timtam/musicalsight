@@ -2447,3 +2447,67 @@ The Divisis:
 * 10 Cellos – recorded in 2 divisis (5 Cls) separately
 * 8 Basses – recorded in 2 divisis (4 Cbs) separately
 """
+
+[atom]
+vendor = "audiomodern"
+name = "Atom"
+categories = ["vsti.synthesizer"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 6550
+url = "https://audiomodern.com/shop/instruments/atom-software/"
+demo = "https://soundcloud.com/audiomodern/atom-impacts-demo"
+price = 99
+nks = true
+description = """“Arguably the most important musical elements in a film score are atmospheric in nature.
+ATOM has your back! Especially, if you are working on something that is meant to be frightening. This is 7 GB of sounds ranging from some of the most ghoulish atmospheres to blistering effects that will have your audience shaking in their socks. ATOM is really a one stop little shop of horrors. “
+
+Textured and Revealing
+
+The machine is built around a beautifully diverse collection of intricate textures and organic elements, that were created from a huge collection of field recordings, custom made acoustic instruments including a tuned anker, propellers, the famous Koka’s experimental Box even a WWII Torpedo and analogue machine noises, which were then painstakingly recorded, edited using the most advanced sound design techniques and finally assembled into a stunning collection of abstract cinematic & experimental organic elements. with over 180 patches & presets to be mixed and matched as desired.
+
+Preloaded with Exquisitely Crafted Presets
+
+Each sound can be shaped into lush evolving pads, dense uplifting chords, strange acoustic tones, deep Textures, ambient soundscapes, layered ambiences, Impacts, transitional cinematic FX and elements for adding drama and movement into your compositions with all advanced features that allow unlimited flexibility over morphing, manipulating and processing.
+"""
+
+[modularps-2]
+vendor = "audiomodern"
+name = "ModulARPS 2"
+categories = ["vsti.synthesizer"]
+size = 835
+url = "https://audiomodern.com/shop/instruments/modularps-2/"
+demo = "https://soundcloud.com/synthpresets/audiomodern-modularps-vol2"
+price = 18
+description = """Created by a unique modular setup and controlled by Sound designer Pau Cabruja, ModulARPS Vol.2 holds one of the finest collection of experimental Ambient sounds we’ve ever assembled.
+Inside this library you will find a vast array of sequence loops divided into folders Bass, Beats, Melodies, Textures, Drones, Rhythms and all designed to fit together perfectly. Expect the unexpected in this twisted library of modular goodness.
+"""
+
+[opacity]
+vendor = "audiomodern"
+name = "Opacity"
+categories = ["vsti.guitar"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 3770
+url = "https://audiomodern.com/shop/instruments/opacity/"
+demo = "https://www.youtube.com/watch?v=XrCrfsIvqw8"
+price = 99
+nks = true
+description = """Opacity is a boutique collection of Cinematic Guitar and professional six string performances that will work across Film, TV, Sound Design, Documentaries, Games, Film Trailers, Commercials and Contemporary Cinematic and Ambient music.
+The library provides deeply manipulable guitar sounds that are endlessly diverse and expressive.
+From nice & rich atmospheres, to percussive rhythms, beautiful harmonics, lead licks, phrases, sequence loops, ensembles, and shimmering stretched out atmospheres.
+Created and performed by the Washington DC based duo Terre Grande, specializing on epic cinematic music and achieving a unique blend of sounds from the quietest moments of dawn, to the clashing loudness of a huge waterfall.
+Terre Grande partner with Audiomodern to deliver a unique virtual instrument that is reflective of the amazing earth surrounding us. The unique playing style captured showcases the Electric guitar in its natural beauty, featuring percussive rhythms, beautiful phrases, lead licks, hammer hits, ensembles, and textured atmospheres.
+
+ABOUT THE ENGINE
+
+Introducing Sessions. Perform, Compose and Re-arrange.
+Hosted on a unique new engine that is aimed towards composition
+and in-studio performance providing maximum flexibility as a professional
+composition module.
+The engine contains 14 complete Sessions, plus three variations, where each session
+contains 4 groups of Loop performances and tonal elements such as
+Chords, Phrases, Sequences and Melodic Textures.
+Each of the Sessions in Opacity contains multiple song sections/variations
+and gives you the freedom to use any of the different parts of the sessions
+or increase complexity by adding complimentary guitar parts.
+"""
