@@ -71,7 +71,6 @@ function FilterDialog({
                                         label={`${v.name} (${
                                             catalog.getProducts({
                                                 ...createProductFilter(),
-                                                enabled: true,
                                                 vendors: [v.id],
                                             }).length
                                         })`}
@@ -211,7 +210,6 @@ function FilterDialog({
                                         )} (${
                                             catalog.getProducts({
                                                 ...createProductFilter(),
-                                                enabled: true,
                                                 oss: [
                                                     parseInt(
                                                         os
@@ -285,7 +283,6 @@ function FilterDialog({
                             nks: nks,
                             categories: categories,
                             oss: oss,
-                            enabled: true,
                         })
                         filter = undefined
                     }}

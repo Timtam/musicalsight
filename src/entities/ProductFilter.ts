@@ -5,7 +5,6 @@ import { OperatingSystem } from "./OperatingSystem"
 
 export interface ProductFilter {
     searchQuery: string
-    enabled: boolean
     vendors: string[]
     priceFrom: number
     priceTo: number
@@ -17,7 +16,6 @@ export interface ProductFilter {
 export const createProductFilter = (): ProductFilter => {
     return {
         searchQuery: "",
-        enabled: false,
         vendors: [],
         priceFrom: 0,
         priceTo: 0,

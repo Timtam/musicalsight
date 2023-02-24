@@ -35,7 +35,6 @@ function CatalogVendor() {
             setProducts(
                 catalog.getProducts({
                     ...createProductFilter(),
-                    enabled: true,
                     vendors: [vendorId],
                 })
             )

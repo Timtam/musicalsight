@@ -128,33 +128,31 @@ class CatalogService {
     }
 
     filterMatchesProduct(p: Product, f: ProductFilter): boolean {
-        if (f.enabled === true) {
-            if (f.vendors.length > 0 && !f.vendors.includes(p.vendor.id))
-                return false
+        if (f.vendors.length > 0 && !f.vendors.includes(p.vendor.id))
+            return false
 
-            if (
-                p.price !== undefined &&
-                (f.priceFrom > 0 || f.priceTo > 0) &&
-                (p.price < f.priceFrom || p.price > f.priceTo)
-            )
-                return false
+        if (
+            p.price !== undefined &&
+            (f.priceFrom > 0 || f.priceTo > 0) &&
+            (p.price < f.priceFrom || p.price > f.priceTo)
+        )
+            return false
 
-            if (f.nks !== undefined && f.nks !== !!p.nks) return false
+        if (f.nks !== undefined && f.nks !== !!p.nks) return false
 
-            if (
-                f.categories.length > 0 &&
-                f.categories.filter((f) =>
-                    p.categories.some((c) => c.id.startsWith(f))
-                ).length === 0
-            )
-                return false
+        if (
+            f.categories.length > 0 &&
+            f.categories.filter((f) =>
+                p.categories.some((c) => c.id.startsWith(f))
+            ).length === 0
+        )
+            return false
 
-            if (
-                f.oss.length > 0 &&
-                p.os.filter((os) => f.oss.includes(os)).length === 0
-            )
-                return false
-        }
+        if (
+            f.oss.length > 0 &&
+            p.os.filter((os) => f.oss.includes(os)).length === 0
+        )
+            return false
 
         return true
     }

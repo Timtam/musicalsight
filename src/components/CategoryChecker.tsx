@@ -31,7 +31,6 @@ function CategoryChecker({
                         ? `${category.name} (${
                               catalog.getProducts({
                                   ...createProductFilter(),
-                                  enabled: true,
                                   categories: [category.id],
                               }).length
                           })`

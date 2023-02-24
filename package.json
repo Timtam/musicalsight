@@ -15,6 +15,7 @@
         "@types/react-router-bootstrap": "^0.24.5",
         "bootstrap": "^5.2.2",
         "class-transformer": "^0.5.1",
+        "deep-equal": "^2.2.0",
         "filesize": "^10.0.6",
         "fuse.js": "^6.6.2",
         "natsort": "^2.0.3",
@@ -68,6 +69,7 @@
         ]
     },
     "devDependencies": {
+        "@types/deep-equal": "^1.0.1",
         "toml": "^3.0.0",
         "ts-node": "^10.9.1"
     }

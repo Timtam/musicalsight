@@ -1,3 +1,4 @@
+import equal from "deep-equal"
 import { useState } from "react"
 import Button from "react-bootstrap/Button"
 import ButtonGroup from "react-bootstrap/ButtonGroup"
@@ -53,7 +54,13 @@ function Search({
                         Configure filter
                     </Button>
                     <Button
-                        disabled={!filter.enabled}
+                        disabled={equal(
+                            {
+                                ...createProductFilter(),
+                                searchQuery: filter.searchQuery,
+                            },
+                            filter
+                        )}
                         onClick={() => {
                             setFilter({
                                 ...createProductFilter(),
