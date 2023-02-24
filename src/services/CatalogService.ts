@@ -112,13 +112,15 @@ class CatalogService {
 
         if (filter.searchQuery !== "") {
             let fs = new Fuse(Array.from(this.products.values()), {
+                ignoreFieldNorm: true,
+                ignoreLocation: true,
                 includeScore: true,
                 keys: ["name", "description"],
             })
 
             products = fs
                 .search(filter.searchQuery)
-                .filter((r) => r.score! <= 0.5)
+                .filter((r) => r.score! <= 0.03)
                 .map((r) => r.item)
         } else products = Array.from(this.products.values())
 
