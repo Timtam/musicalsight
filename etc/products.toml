@@ -2590,3 +2590,14 @@ While exceptionally fast to use, its advanced synthesis, cross-filtering and rev
 Supports VST 2.x, VST 3.x, AU, RTAS and AAX Native on Mac And PC"""
 accessibility_description = """Nearly all features are accessible from the parameter list. The exception is the ability to use the on screen keyboard to instruct what harmonics the reverb should maintain but this does not detract from the majority of great features this reverb has."""
 os = ["windows","mac_intel","mac_arm"]
+
+[atlantis-reverb]
+vendor = "geraint-luff"
+name = "Atlantis Reverb"
+categories = ["fx.reverb"]
+requires = ["cockos-reaper"]
+url = "https://geraintluff.github.io/jsfx/#Atlantis%20Reverb"
+demo = "https://www.youtube.com/watch?v=Os7b_yzYZlw"
+price = 0
+description = """A reverb designed for rich textures and long release tails using spectral analysis and resynthesis. Also includes a shimmer effect. """
+accessibility_description = """All parameters are accessible from the parameter list. """
