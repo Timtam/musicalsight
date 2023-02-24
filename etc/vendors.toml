@@ -101,3 +101,7 @@ url = "https://avamusicgroup.com/"
 [bechstein-digital]
 name = "Bechstein Digital"
 url = "https://www.bechstein-digital.com/en/"
+
+[zynaptiq]
+name = "Zynaptiq"
+url = "https://www.zynaptiq.com/products/"

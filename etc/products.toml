@@ -2573,3 +2573,20 @@ With its ability to highlight and emphasize even the most subtle melody lines th
 
 The C. Bechstein Digital Grand for Native Instrument’s KONTAKT and KONTAKT-Player follows the high standards we set for our acoustical instrument´s development and production: sound and manufacturing at the highest level, made for connoisseurs and people with passion.
 """
+
+[adaptiverb]
+vendor = "zynaptiq"
+name = "Adaptiverb"
+categories = ["fx.reverb"]
+url = "https://www.zynaptiq.com/adaptiverb/"
+demo = "https://youtu.be/aZYmZCczxfc"
+price = 250
+description = """A good sounding reverb that reduces mudiness by removing clashing harmonics as you move from one note or chord to another. Here is the introductory text from the web site.
+
+ADAPTIVERB  is a revolutionary reflectionless reverberation plugin. Unlike traditional reflection-based acoustic room modeling, ADAPTIVERB adds perceived depth, harmonic richness, and butter-smooth tails without obscuring the source. Preserving the tonal definition and directness of your mix, it adds size, glue and body – making it perfect for mixing and mastering applications alike.
+Powered by ray tracing, source separation, and advances in artificial intelligence, ADAPTIVERB automatically adapts to the input audio like a chameleon, blending with your sounds perfectly, and conforming its reverb tail to the tonality of the input or a user defined set of notes.
+While exceptionally fast to use, its advanced synthesis, cross-filtering and reverb pitch processing functionality provides ambient artists, film composers and sound designers with exciting new creative options for making evolving drones, organic pads, lush ambient sound scapes, and more.
+
+Supports VST 2.x, VST 3.x, AU, RTAS and AAX Native on Mac And PC"""
+accessibility_description = """Nearly all features are accessible from the parameter list. The exception is the ability to use the on screen keyboard to instruct what harmonics the reverb should maintain but this does not detract from the majority of great features this reverb has."""
+os = ["windows","mac_intel","mac_arm"]
