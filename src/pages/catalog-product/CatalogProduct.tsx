@@ -10,6 +10,7 @@ import Head from "../../components/Head"
 import { getOperatingSystemString } from "../../entities/OperatingSystem"
 import Product from "../../entities/Product"
 import CatalogService from "../../services/CatalogService"
+import Loading from "../loading/Loading"
 import NotFound from "../not-found/NotFound"
 
 function CatalogProduct() {
@@ -20,21 +21,27 @@ function CatalogProduct() {
         productId: string
     }>()
     let [product, setProduct] = useState(undefined as Product | undefined)
+    let [loading, setLoading] = useState(true)
 
     useEffect(() => {
         if (productId !== undefined && productId !== "") {
             let p = catalog.getProductById(productId)
             setProduct(p)
+            setLoading(false)
         }
     }, [productId, catalog])
 
-    if (product === undefined) return <NotFound />
+    if (loading) return <Loading />
+
+    if (!loading && product === undefined) return <NotFound />
 
     return (
         <>
-            <Head title={`${product.name} - ${product.vendor.name}`} />
+            <Head title={`${product!.name} - ${product!.vendor.name}`} />
             <FA
-                title={`Product details for ${product.name} by ${product.vendor.name}`}
+                title={`Product details for ${product!.name} by ${
+                    product!.vendor.name
+                }`}
             />
             <DemoPlayer url={demoUrl} onClose={() => setDemoUrl("")} />
             <ul>
@@ -60,30 +67,30 @@ function CatalogProduct() {
                 </li>
                 {product!.url !== "" ? (
                     <li>
-                        Website: <a href={product.url}>{product!.url}</a>
+                        Website: <a href={product!.url}>{product!.url}</a>
                     </li>
                 ) : (
                     ""
                 )}
                 <li>
                     {"Price: " +
-                        (product.price === undefined
+                        (product!.price === undefined
                             ? "unknown"
-                            : product.price === 0
+                            : product!.price === 0
                             ? "free"
-                            : `$${product.price}`)}
+                            : `$${product!.price}`)}
                 </li>
-                <li>{`Categories: ${product.categories
+                <li>{`Categories: ${product!.categories
                     .map((c) => c.getName())
                     .sort(sorter)
                     .join(", ")}`}</li>
-                <li>{`OS: ${product.os
+                <li>{`OS: ${product!.os
                     .map((os) => getOperatingSystemString(os))
                     .join(", ")}`}</li>
-                {product.requires.length > 0 ? (
+                {product!.requires.length > 0 ? (
                     <li>
                         Requirements:{" "}
-                        {product.requires.map((r) => (
+                        {product!.requires.map((r) => (
                             <Link to={`/catalog/product/${r.product.id}`}>
                                 {r.version
                                     ? `${r.product.name} (minimum version ${r.version}`
@@ -96,8 +103,8 @@ function CatalogProduct() {
                 )}
                 <li>
                     Size:{" "}
-                    {product.size !== undefined
-                        ? filesize(product.size, {
+                    {product!.size !== undefined
+                        ? filesize(product!.size, {
                               base: 2,
                               standard: "jedec",
                           }).toString()
@@ -105,26 +112,26 @@ function CatalogProduct() {
                 </li>
                 <li>
                     NKS compatible:{" "}
-                    {product.nks
-                        ? typeof product.nks === "string"
-                            ? `yes (${product.nks})`
+                    {product!.nks
+                        ? typeof product!.nks === "string"
+                            ? `yes (${product!.nks})`
                             : "yes"
                         : "no"}
                 </li>
             </ul>
-            {product.description !== "" ? (
+            {product!.description !== "" ? (
                 <>
                     <h4>Product description</h4>
-                    <ReactMarkdown>{product.description}</ReactMarkdown>
+                    <ReactMarkdown>{product!.description}</ReactMarkdown>
                 </>
             ) : (
                 <h4>No product description available</h4>
             )}
-            {product.accessibility_description !== "" ? (
+            {product!.accessibility_description !== "" ? (
                 <>
                     <h4>Accessibility description</h4>
                     <ReactMarkdown>
-                        {product.accessibility_description}
+                        {product!.accessibility_description}
                     </ReactMarkdown>
                 </>
             ) : (
@@ -135,7 +142,7 @@ function CatalogProduct() {
                 In the case that you expected something else to show up here, or
                 you know that the information displayed on this page is wrong,
                 why not take a minute and update this product?{" "}
-                <Link to={`/catalog/submit?p=${product.id}`}>
+                <Link to={`/catalog/submit?p=${product!.id}`}>
                     Just follow this link
                 </Link>
                 , I promise it won't take to long.

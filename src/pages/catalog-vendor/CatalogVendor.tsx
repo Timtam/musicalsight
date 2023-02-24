@@ -10,6 +10,7 @@ import Product from "../../entities/Product"
 import { createProductFilter } from "../../entities/ProductFilter"
 import Vendor from "../../entities/Vendor"
 import CatalogService from "../../services/CatalogService"
+import Loading from "../loading/Loading"
 import NotFound from "../not-found/NotFound"
 
 const RESULTS_PER_PAGE: number = 20
@@ -24,6 +25,7 @@ function CatalogVendor() {
     }>()
     let [vendor, setVendor] = useState(undefined as Vendor | undefined)
     let [products, setProducts] = useState([] as Product[])
+    let [loading, setLoading] = useState(true)
 
     useEffect(() => {
         if (vendorId !== undefined && vendorId !== "") {
@@ -37,17 +39,20 @@ function CatalogVendor() {
                     vendors: [vendorId],
                 })
             )
+            setLoading(false)
         }
     }, [vendorId, catalog])
 
-    if (vendor === undefined) return <NotFound />
+    if (loading) return <Loading />
+
+    if (!loading && vendor === undefined) return <NotFound />
 
     return (
         <>
-            <Head title={`${vendor.name} - vendor`} />
-            <FA title={`Vendor details for ${vendor.name}`} />
+            <Head title={`${vendor!.name} - vendor`} />
+            <FA title={`Vendor details for ${vendor!.name}`} />
             <p>
-                Website: <a href={vendor.url}>{vendor.url}</a>
+                Website: <a href={vendor!.url}>{vendor!.url}</a>
             </p>
             {products.length > 0 ? (
                 <h3>

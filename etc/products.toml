@@ -2473,7 +2473,7 @@ Each sound can be shaped into lush evolving pads, dense uplifting chords, strang
 [modularps-2]
 vendor = "audiomodern"
 name = "ModulARPS 2"
-categories = ["vsti.synthesizer"]
+categories = ["vsti.synthesizer", "audio"]
 size = 835
 url = "https://audiomodern.com/shop/instruments/modularps-2/"
 demo = "https://soundcloud.com/synthpresets/audiomodern-modularps-vol2"

@@ -12,7 +12,6 @@ export interface ProductFilter {
     categories: string[]
     nks: boolean | undefined
     oss: OperatingSystem[]
-    requires: string[]
 }
 
 export const createProductFilter = (): ProductFilter => {
@@ -25,6 +24,5 @@ export const createProductFilter = (): ProductFilter => {
         categories: [],
         nks: undefined,
         oss: [],
-        requires: [],
     }
 }

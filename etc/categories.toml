@@ -62,10 +62,10 @@ name = "Guitar"
 name = "Synthesizer"
 
 [vsti.synthesizer.subtractive]
-name = "Subtractive Synthesizer"
+name = "Subtractive"
 
 [vsti.synthesizer.fm]
-name = "FM Synthesizer"
+name = "FM"
 
 [vsti.sampler]
 name = "Sampler"
@@ -76,11 +76,11 @@ name = "Drums"
 [vsti.percussion]
 name = "Percussion"
 
-[vsti.percussion.tuned]
-name = "Tuned Percussion"
+[vsti.percussion.tonal]
+name = "Tonal Percussion"
 
-[vsti.percussion.melodic]
-name = "Melodic Percussion"
+[vsti.percussion.atonal]
+name = "Atonal Percussion"
 
 [vsti.ethnic]
 name = "Ethnic"
@@ -156,3 +156,6 @@ name = "Sample Player"
 
 [software.daw]
 name = "Digital Audio Workstation"
+
+[audio]
+name = "Audio Files"
