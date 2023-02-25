@@ -252,6 +252,56 @@ function CatalogSubmit() {
                         }
                     />
                 </Form.Group>
+                <h5>Vendor</h5>
+                <Form.Group>
+                    <Form.Label for="form-vendor-select">
+                        Select vendor
+                    </Form.Label>
+                    <Form.Select
+                        value={data.vendor}
+                        id="form-vendor-select"
+                        onChange={(evt) =>
+                            setData({ ...data, vendor: evt.target.value })
+                        }
+                    >
+                        <option value=""></option>
+                        <option value="new">
+                            (not listed here, enter details below)
+                        </option>
+                        {catalog
+                            .getVendors()
+                            .sort((a, b) => sorter(a.name, b.name))
+                            .map((v) => (
+                                <option value={v.id}>{v.name}</option>
+                            ))}
+                    </Form.Select>
+                    <Form.Label for="form-vendor-name">
+                        Vendor name *
+                    </Form.Label>
+                    <Form.Control
+                        id="form-vendor-name"
+                        required
+                        type="input"
+                        placeholder="Enter vendor name"
+                        disabled={data.vendor !== "new"}
+                        value={data.vendorName}
+                        onChange={(evt) =>
+                            setData({ ...data, vendorName: evt.target.value })
+                        }
+                    />
+                    <Form.Label for="form-vendor-url">Vendor URL *</Form.Label>
+                    <Form.Control
+                        required
+                        type="input"
+                        id="form-vendor-url"
+                        placeholder="Enter vendor website URL"
+                        disabled={data.vendor !== "new"}
+                        value={data.vendorUrl}
+                        onChange={(evt) =>
+                            setData({ ...data, vendorUrl: evt.target.value })
+                        }
+                    />
+                </Form.Group>
                 <h5>Product Categories</h5>
                 <Form.Group controlId="formCategories">
                     {catalog
@@ -461,56 +511,6 @@ function CatalogSubmit() {
                                 version: "",
                             })
                         }}
-                    />
-                </Form.Group>
-                <h5>Vendor</h5>
-                <Form.Group>
-                    <Form.Label for="form-vendor-select">
-                        Select vendor
-                    </Form.Label>
-                    <Form.Select
-                        value={data.vendor}
-                        id="form-vendor-select"
-                        onChange={(evt) =>
-                            setData({ ...data, vendor: evt.target.value })
-                        }
-                    >
-                        <option value=""></option>
-                        <option value="new">
-                            (not listed here, enter details below)
-                        </option>
-                        {catalog
-                            .getVendors()
-                            .sort((a, b) => sorter(a.name, b.name))
-                            .map((v) => (
-                                <option value={v.id}>{v.name}</option>
-                            ))}
-                    </Form.Select>
-                    <Form.Label for="form-vendor-name">
-                        Vendor name *
-                    </Form.Label>
-                    <Form.Control
-                        id="form-vendor-name"
-                        required
-                        type="input"
-                        placeholder="Enter vendor name"
-                        disabled={data.vendor !== "new"}
-                        value={data.vendorName}
-                        onChange={(evt) =>
-                            setData({ ...data, vendorName: evt.target.value })
-                        }
-                    />
-                    <Form.Label for="form-vendor-url">Vendor URL *</Form.Label>
-                    <Form.Control
-                        required
-                        type="input"
-                        id="form-vendor-url"
-                        placeholder="Enter vendor website URL"
-                        disabled={data.vendor !== "new"}
-                        value={data.vendorUrl}
-                        onChange={(evt) =>
-                            setData({ ...data, vendorUrl: evt.target.value })
-                        }
                     />
                 </Form.Group>
                 <h5>Personal information</h5>
