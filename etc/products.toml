@@ -2601,3 +2601,19 @@ demo = "https://www.youtube.com/watch?v=Os7b_yzYZlw"
 price = 0
 description = """A reverb designed for rich textures and long release tails using spectral analysis and resynthesis. Also includes a shimmer effect. """
 accessibility_description = """All parameters are accessible from the parameter list. """
+
+[humonica]
+vendor = "geraint-luff"
+name = "Humonica"
+categories = ["fx.modulation"]
+requires = ["cockos-reaper"]
+url = "https://geraintluff.github.io/jsfx/#Humonica"
+demo = "https://www.youtube.com/watch?v=eTiwH886nAc"
+price = 0
+description = """\
+This effect is anywhere between a vocoder and a synth with sharp filter-sweeps.
+It can use input audio for its timbre to act as a vocoder ("audio" mode) or use a spectrum which you can draw precisely with the mouse, allowing extremely sharp cutoffs. You can shift this timbre up or down based on pitch, velocity, or a per-note envelope ("sweep").
+In "audio" mode, you can control how much audio is used to calculate the timbre (window) and how often (overlap). There is a zero-latency mode for live performance, and a latency-compensated one. The "Volume" section acts like a basic compressor - turn both dials to 0 to disable.
+The "fixed" mode lets you draw the spectrum for a single pulse of the oscillator using the mouse. Shift-click lets you draw straight lines.\
+"""
+accessibility_description = """All the features are accessible through the parameter list."""
