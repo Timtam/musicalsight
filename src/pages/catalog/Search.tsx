@@ -1,5 +1,5 @@
 import equal from "deep-equal"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Button from "react-bootstrap/Button"
 import ButtonGroup from "react-bootstrap/ButtonGroup"
 import Form from "react-bootstrap/Form"
@@ -23,6 +23,8 @@ function Search({
     let [dialogFilter, setDialogFilter] = useState(
         undefined as ProductFilter | undefined
     )
+
+    useEffect(() => setSearchText(filter.searchQuery), [filter])
 
     return (
         <>

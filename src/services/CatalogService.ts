@@ -194,6 +194,10 @@ class CatalogService {
     getCategories(): Category[] {
         return Array.from(this.categories.values())
     }
+
+    getCategoryById(id: string): Category | undefined {
+        return this.categories.get(id)
+    }
 }
 
 export default CatalogService
