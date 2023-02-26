@@ -4,12 +4,14 @@ import Modal from "react-bootstrap/Modal"
 function ResponseModal({
     response,
     onClose,
+    onClosed,
 }: {
     response: {
         type: "error" | "success" | ""
         message: string
     }
     onClose: (clean: boolean) => void
+    onClosed: () => void
 }) {
     let [show, setShow] = useState(false)
 
@@ -17,7 +19,9 @@ function ResponseModal({
 
     return (
         <Modal
+            restoreFocus={false}
             show={show}
+            onExited={onClosed}
             onHide={() => {
                 if (response.type === "error") onClose(false)
                 else onClose(true)

@@ -1,5 +1,5 @@
 import natsort from "natsort"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import { useNavigate, useSearchParams } from "react-router-dom"
@@ -59,6 +59,7 @@ function CatalogSubmit() {
         version: "" as string,
     })
     let [insertingRequirement, setInsertingRequirement] = useState(false)
+    let headRef = useRef<HTMLElement>(null)
     let navigate = useNavigate()
 
     useEffect(() => {
@@ -81,6 +82,7 @@ function CatalogSubmit() {
                 }
             />
             <FA
+                ref={headRef}
                 title={
                     update
                         ? "Update a product within the catalog"
@@ -122,6 +124,9 @@ function CatalogSubmit() {
                         type: "",
                         message: "",
                     })
+                }}
+                onClosed={() => {
+                    if (headRef.current) headRef.current.focus()
                 }}
             />
             <h4>Product information</h4>
