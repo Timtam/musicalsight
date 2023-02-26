@@ -2617,3 +2617,31 @@ In "audio" mode, you can control how much audio is used to calculate the timbre 
 The "fixed" mode lets you draw the spectrum for a single pulse of the oscillator using the mouse. Shift-click lets you draw straight lines.\
 """
 accessibility_description = """All the features are accessible through the parameter list."""
+
+[readelay]
+vendor = "cockos"
+name = "ReaDelay"
+categories = ["fx.delay"]
+url = "https://www.reaper.fm/reaplugs/"
+price = 0
+description = """Stock plug-in from Reaper but also available as a separate download for other DAW's. Any number of delay tabs can be added with each tab giving control over the delay in either milliseconds or beats, the feedback, a high pass and a low pass filter, volume and pan. It's a rare day when this delay plug-in doesn't cover the delay job I want doing. """
+accessibility_description = """All the controls are accessible through the main user interface although there is quite a bit tabbing involved. OSARA does also enable cycling through the tabs with control- tab and control+shift tab. Parameters also accessible through the parameter dialogue."""
+os = ["windows","linux","mac_intel","mac_arm"]
+
+[echoboy]
+vendor = "soundtoys"
+name = "EchoBoy"
+categories = ["fx.delay"]
+url = "https://www.soundtoys.com/product/echoboy/"
+demo = "https://www.youtube.com/watch?v=UK1Uh_Vi050"
+price = 199
+description = """\
+* Choose from 30 different echo styles: Echoplex, Space Echo, Memory Man, DM-2, and many more
+* Warm up vocals with high-end tape sound modeled on the Ampex ATR-102
+* Control saturation, tape flutter and diffusion for strikingly analog-sounding effects
+* Create rich stereo delays with Dual and Ping-Pong modes
+* Adjust shuffle, swing and accent. The only echo with true “groove”
+* Design one-of-a-kind rhythmic delay effects using Rhythm Echo mode\
+"""
+accessibility_description = """There is an RPL file available for this plugin with lots of useful presets. And there are a good number of parameters available through the parameter list. Some features require the GUI such as setting up the rhythm of the delays. A useful plug-in but you may get disappointed if you want to dig deeper into the features."""
+os = ["windows","mac_intel","mac_arm"]
