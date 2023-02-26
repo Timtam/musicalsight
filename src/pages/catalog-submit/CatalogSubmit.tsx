@@ -2,7 +2,7 @@ import natsort from "natsort"
 import { useEffect, useMemo, useState } from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
-import { useSearchParams } from "react-router-dom"
+import { useNavigate, useSearchParams } from "react-router-dom"
 import slugify from "slugify"
 import dedent from "ts-dedent"
 import CategoryChecker from "../../components/CategoryChecker"
@@ -58,6 +58,8 @@ function CatalogSubmit() {
         product: "none" as string,
         version: "" as string,
     })
+    let [insertingRequirement, setInsertingRequirement] = useState(false)
+    let navigate = useNavigate()
 
     useEffect(() => {
         let productId = searchParams.get("p")
@@ -105,7 +107,17 @@ function CatalogSubmit() {
             <ResponseModal
                 response={response}
                 onClose={(clean) => {
-                    if (clean) setData(createFormData())
+                    if (clean) {
+                        setData(createFormData())
+
+                        if (update) {
+                            let productId = searchParams.get("p")
+
+                            if (productId && productId !== "")
+                                navigate(`/catalog/product/${productId}`)
+                        }
+                    }
+
                     setResponse({
                         type: "",
                         message: "",
@@ -420,7 +432,10 @@ function CatalogSubmit() {
                                     </p>
                                     <Button
                                         ref={(e: any) => {
-                                            if (e) e.focus()
+                                            if (e && insertingRequirement) {
+                                                e.focus()
+                                                setInsertingRequirement(false)
+                                            }
                                         }}
                                         onClick={(evt) => {
                                             if (data.requires.includes(r))
@@ -447,12 +462,13 @@ function CatalogSubmit() {
                     <Form.Select
                         id="form-requirements-selector"
                         value={selectedRequirement.product}
-                        onChange={(evt) =>
+                        onChange={(evt) => {
+                            setInsertingRequirement(true)
                             setSelectedRequirement({
                                 product: evt.target.value,
                                 version: selectedRequirement.version,
                             })
-                        }
+                        }}
                     >
                         <option value="none">
                             (select a product this product should require)
