@@ -419,6 +419,9 @@ function CatalogSubmit() {
                                             : `${r.product.name} by ${r.product.vendor.name}`}
                                     </p>
                                     <Button
+                                        ref={(e: any) => {
+                                            if (e) e.focus()
+                                        }}
                                         onClick={(evt) => {
                                             if (data.requires.includes(r))
                                                 setData({
