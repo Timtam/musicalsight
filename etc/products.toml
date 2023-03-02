@@ -2645,3 +2645,62 @@ description = """\
 """
 accessibility_description = """There is an RPL file available for this plugin with lots of useful presets. And there are a good number of parameters available through the parameter list. Some features require the GUI such as setting up the rhythm of the delays. A useful plug-in but you may get disappointed if you want to dig deeper into the features."""
 os = ["windows","mac_intel","mac_arm"]
+
+[reatune]
+vendor = "cockos"
+name = "ReaTune"
+categories = ["fx.pitch"]
+url = "https://www.reaper.fm/reaplugs/"
+demo = "https://www.dropbox.com/s/lfjsi2oruzhuv6h/Chessel%20demos%20reaTune.m4a?dl=1"
+price = 0
+description = """This is the stock autotune plugin that comes with Reaper. Can be applied to a track or added to just an item to correct the pitch of audio or get that autotune effect. You can set the scale type and root note plus the attack time of the autotune. Also detects the pitch and displays this pitch. """
+accessibility_description = """The autotune features can be accessed through the UI and you have to select the right tab to get the autotune functionality. To get reaTune to tell you the pitch of audio, an approach is to record it and loop a short section. Add reaTune and then shift tab to the reference field, and then shift tab one more time."""
+os = ["windows","linux","mac_intel","mac_arm"]
+
+[valhalla-super-massive-reverb]
+vendor = "valhalla-dsp"
+name = "Valhalla Super Massive"
+categories = ["fx.reverb"]
+url = "https://valhalladsp.com/shop/reverb/valhalla-supermassive/"
+demo = "https://www.youtube.com/watch?v=2nGgMAIV_-k"
+price = 0
+description = """\
+ValhallaSupermassive has been designed from the ground up for MASSIVE delays and reverbs.   Get ready for luscious clouds of reverb, otherworldly delays, and swelling waves of feedback unlike any you’ve heard before.
+Supermassive has 18 out-of-this-world reverb/delay modes:
+
+* Gemini: Fast attack, shorter decay, high echo density.
+* Hydra: Fast-ish attack, shorter decay, low to high echo density (depending on the DENSITY control setting)
+* Centaurus: Medium attack, longer decay, medium to high echo density (depending on the DENSITY control setting)
+* Sagittarius: Slow attack, longer decay, high echo density
+* Great Annihilator: Medium attack, very long decay, medium to high echo density (depending on the DENSITY control setting)
+* Andromeda: Slowest attack, very long decay, very high echo density
+* Lyra: Fast attack, shorter decay, low echo density
+* Capricorn: Fast attack, shorter decay, medium echo density
+* Large Magellanic Cloud: Long reverb, LOOOONG repeating echoes, long decay, medium attack
+* Triangulum: Long reverb, VERY LONG repeating echoes, long decay, slow attack
+* Cirrus Major: Low/medium echo density, strange repeating patterns, fast attack
+* Cirrus Minor: Low echo density, strange repeating patterns, fast attack, smaller than Cirrus Major
+* Cassiopeia: Initially low echo density that quickly builds to long and lush reverbs, mysterious repeating patterns, fast attack
+* Orion: the much bigger version of Cassiopeia. Low echo density that can build to enormous reverbs, fast attack, strange resonances and repeating patterns.
+* Aquarius: a dedicated EchoVerb algorithm, with a strong audible echo/de;au that can morph into a lush reverb with higher DENSITY settings
+* Pisces: the bigger sibling of Aquarius. EchoVerb, with even denser and lusher reverbs on tap than Aquarius.
+* Scorpio (new in 2.5.0): Fast attack, shorter decay, high echo density, cross-channel feedback, and filtering in the feedback loop for more realistic reverb decay.
+* Libra (new in 2.5.0): Medium attack, long decay, very high echo density, lush balanced modulation, and filtering in the feedback loop for more realistic reverb decay.
+
+All Valhalla plugins are self-documenting, so you can rollover the controls for the tooltip.
+And it’s free.  No strings attached.   Just download to blow your mind and your music to new levels of consciousness and experience.\
+"""
+accessibility_description = """All the parameters are available in the parameter list and there is an RPL in the Reaper dropbox with a large number of presets."""
+os = ["windows","mac_intel","mac_arm"]
+
+[camel-crusher]
+vendor = "camel-audio"
+name = "Camel Crusher"
+categories = ["fx.distortion"]
+url = "https://www.audiopluginsforfree.com/camelcrusher/"
+demo = "https://www.youtube.com/watch?v=re7hzL4aOn8"
+price = 0
+description = """Camel Crusher is a super easy to use VST plugin making it perfect for beginners, to advanced music producers. Camel Crusher can simply add some color to your master, or completely distort your instruments.  Whether you want to camel crush your synths or just add some glimmering warmth and high end, this VST plugin is still the perfect choice for the electronic music producer.  
+Camel Audio Camel Crusher is a stripped-down free version of its big brother Camel Phat but still holds its own against other modern big hitters in the distortion category.  Other great distortion plugins like iZotope Trash and SoundToys Decapitator are also great options, but they come with a hefty price tag.  Camel crusher is absolutely free!"""
+accessibility_description = """All the parameters are accessible from the parameter list and the presets work from the standard FX list."""
+os = ["windows","mac_intel","mac_arm"]

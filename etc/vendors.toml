@@ -113,3 +113,11 @@ url = "https://geraintluff.github.io/jsfx/"
 [soundtoys]
 name = "SoundToys"
 url = "https://www.soundtoys.com/"
+
+[valhalla-dsp]
+name = "Valhalla DSP"
+url = "https://valhalladsp.com/"
+
+[camel-audio]
+name = "Camel Audio"
+url = "https://www.kvraudio.com/developer/camel-audio"
