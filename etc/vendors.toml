@@ -121,3 +121,7 @@ url = "https://valhalladsp.com/"
 [camel-audio]
 name = "Camel Audio"
 url = "https://www.kvraudio.com/developer/camel-audio"
+
+[benjamin-osterhouse]
+name = "Benjamin Osterhouse"
+url = "http://ben.osterhouse.org/"

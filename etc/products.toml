@@ -2704,3 +2704,143 @@ description = """Camel Crusher is a super easy to use VST plugin making it perfe
 Camel Audio Camel Crusher is a stripped-down free version of its big brother Camel Phat but still holds its own against other modern big hitters in the distortion category.  Other great distortion plugins like iZotope Trash and SoundToys Decapitator are also great options, but they come with a hefty price tag.  Camel crusher is absolutely free!"""
 accessibility_description = """All the parameters are accessible from the parameter list and the presets work from the standard FX list."""
 os = ["windows","mac_intel","mac_arm"]
+
+[cello-textures]
+vendor = "benjamin-osterhouse"
+name = "Cello Textures"
+categories = ["vsti.strings.cello"]
+requires = [["native-instruments-kontakt","5"]]
+size = 504
+url = "https://www.lootaudio.com/category/kontakt-instruments/ben-osterhouse/cello-textures-kontakt"
+demo = "https://soundcloud.com/ben-osterhouse/sets/cello-textures"
+price = 35
+description = """The Cello Textures instrument is a carefully curated playground of expressive cello articulations.
+If you are looking for inspiring, niche string sounds to add splashes of color and realism to your music, this instrument is for you.
+
+* Four cello articulations: Staccato, Accent, Dramatic Swell, and Slow Swell
+* Each articulation recorded with 3 different tone qualities (normale, ponticello, fingered harmonics)
+* Options for each articulation to be octave shifted, reversed, or looped.
+* Options to randomize articulations
+* Intuitive interface\
+"""
+
+[pattern-strings]
+vendor = "benjamin-osterhouse"
+name = "Pattern Strings"
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt","5"]]
+size = 8320
+url = "https://www.lootaudio.com/category/kontakt-instruments/ben-osterhouse/pattern-strings-kontakt"
+demo = "https://www.youtube.com/watch?v=jpMvf4q36bo"
+price = 65
+description = """Pattern Strings offers a unique approach to ostinatos by providing a collection of tempo-synced rhythmic fragments.
+These 19 rhythms have been recorded at two dynamic layers on violin, viola, cello, and bass, with 4 round robins.
+The interface utilizes an intuitive drag and drop mechanic which allows you to arrange the rhythms into sequences in which all the rhythms flow together with natural phrasing and musicality.
+
+You can Drag and Drop rhythms in the center to either of the pattern strips. If you want to change the order of the rhythms you can do that too, by dragging them around.
+
+With Legato turned on, new notes start sync-ed with previous held notes. This way it's possible to create convincing lines by changing notes according to the rhythms, as seen in the demos.
+
+Pattern Strings has an Automatic Bow Direction feature. It plays downbow samples on downbeats and upbow samples on upbeats, which creates a natural ebb and flow between beats.
+
+The Tempo Sync switch allows you to set the sample playback to half speed or double speed.
+Some of the samples were recorded at 90bpm, and others at 80bpm. So, let's say you're working at 160bpm. This would mean that the 90bpm samples would be time stretched to twice their original speed! To make up for this, you could use the Tempo Sync option to set the speed to be half as fast.
+
+All the combinations of instruments have been rendered down, both single and with stereo doubling. This makes it possible to layer instruments together without so much memory and cpu.
+
+Because Pattern Strings contains 8.32GB of samples, the interface was designed with a Dynamic Loading system so that it only loads what you need. In order to make it more efficient, combinations of instruments have been rendered together, saving on voice count and memory. This way if all instruments are enabled, it will use the same amount of memory and CPU as if only one instrument was enabled.
+
+Beef up the sound of an instrument by turning on Doubling. Stereo-doubled samples have been rendered down, so turning this on won't increase the number of voices or memory needed.
+
+Say you're using Pattern Strings on a track, and you have a couple of different variations you want to use at different parts of the track. Rather than opening up multiple instances, you could save variations into Custom Keyswitches.
+Just click “Map”, then click on one of the colored keys at the very bottom of the keyboard, and Voilà, the current pattern can now be recalled by that key!
+
+Generate a sequence of rhythms using the Random Button, and perhaps you will find something useful.\
+"""
+
+[sospiro-strings]
+vendor = "benjamin-osterhouse"
+name = "Sospiro Strings"
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt","5"]]
+size = 3190
+url = "https://www.lootaudio.com/category/kontakt-instruments/ben-osterhouse/sospiro-strings-ben-osterhouse-kontakt"
+demo = "https://www.youtube.com/watch?v=bs-XkdmhK4A"
+price = 47
+description = """Sospiro Strings is a Kontakt library for creating slow, emotive strings. It features 4 different length swells and 3 sustained articulations, recorded on bass, cello, viola, and violin.
+
+There are separate nki's for each individual instrument, and there is an nki with all instruments mixed together, to work as a simpler sketching tool, and also to save memory.
+There are 2 varieties of Swells:
+
+* The vibrato swells are provide a warm, individual sound. The vibrato samples sound better or worse depending on how much they are being timed-stretched, which is why it is especially nice to have non-vibrato as an option. All of the swells were originally recorded at 110 BPM
+* The non-vibrato swells have a clear tone which especially brings attention to the change in tone as each instrument louder and softer.
+Each version, Vibrato and non-vibrato has a single velocity layer. 
+
+Using the Length in Beats slider, you can choose the appropriate length, and the corresponding swell will be chosen and time-stretched if needed.
+The Length Multiplier is useful if you have a project with a fast bpm and you want it to sound slow, or vice versa.
+The Smart Release feature makes it so that however far into the crescendo-ing part of the sample you have held the note, it will jump that far from the end of the swell. This means that the longer you hold a note, the longer its release will be.
+All of the swells can be either vibrato or non-vibrato. The vibrato adds warmth and individuality to the sound, but may be a bit over dramatic in some cases. The non-vibrato has a lot of clarity, and especially brings attention to change in tone as each instrument gets louder and softer. The vibrato samples sound better or worse depending on how much they are being timed-stretched, which is why it is especially nice to have non-vibrato as an option.
+The Sync feature is one of the most essential features: with Sync enabled, any notes you add or change in a chord will sync with the first note that was played.
+There are 3 varieties of Sustains:
+
+* The cold sustains are played with a slow bow and no vibrato --a fragile sound at the edge of breaking.
+* The warm sustains are played over the fingerboard with a fast, freely changing bow and generous vibrato.
+* The full sustains are played closer to the bridge with a slow, heavy bow. Vibrato is used with discretion.
+
+There is an option to double the sound, which layers two instances together and pans them slightly apart. This sounds better if you are only using one instrument by itself and only playing a few notes at a time. If you are playing big chords and layering all 4 instruments together, the doubled feature tends to sound more generic and uninteresting.\
+"""
+
+[string-flow-cello]
+vendor = "benjamin-osterhouse"
+name = "String Flow Cello"
+categories = ["vsti.strings.cello"]
+requires = [["native-instruments-kontakt","5"]]
+size = 957
+url = "https://www.lootaudio.com/category/kontakt-instruments/ben-osterhouse/string-flow-cello-kontakt"
+demo = "https://soundcloud.com/ben-osterhouse/string-flow-cello-simple-joys"
+price = 35
+description = """String Flow Cello samples a technique string players use, in which they quickly roll the bow across the strings to create an energetic, chordal texture.
+There are 2 ways to play the instrument.
+The first way is simple: just choose what type of chord you want, what key to be in, and then play on the white keys. Whatever you play will pick a harmony which will fit into whatever key you've chosen. It's kind of like the "Harmonize" factory scripts in Kontakt, except that in this case, all of the harmonies had to be manually recorded!
+The second way to play requires more knowledge of the instrument, and is more flexible. If you play a chord that has been recorded, the instrument will play that chord on viola.
+The midi clips which come with the instrument demonstrate which chords work.
+
+* The interface reacts to notes played, displaying what the music notation would look like to the player, and also showing which voicing, inversion, and key the chord is in. This could be an educational for those looking to write music for live musicians.
+* Comes with a collection of midi clips to introduce the instrument. These include a collection of short progressions, and examples of all the possible voicings.
+* Each chord was played for 4 measures (about 9 seconds). Loops are enabled for all samples.
+* Automatically tempo-syncs to project tempo. The samples were recorded at 100BPM. 85 - 160BPM sounds good, and the optimal tempo is 120BPM.
+* Chords are organized into 4 different types of voicings. Closed spacing, open spacing, 7th chords, and open 5ths.
+* The closed spacing chords were recorded in both major and minor, and in all 3 inversions. The 7th chords include a dominant 7th, minor 7th, and major 7th voicing.
+* Except for the open 5ths voicings, each chord recorded at 2 velocity layers, and each velocity layer has a normale version and a ponticello version, which can be crossfaded between using the modwheel. This is a good way to add motion to the sound.
+* The louder velocity layer has rubato which adds contrast, and brings out the bassline.\
+"""
+
+[string-flow-viola]
+vendor = "benjamin-osterhouse"
+name = "String Flow Viola"
+categories = ["vsti.strings.viola"]
+requires = [["native-instruments-kontakt","5"]]
+size = 671
+url = "https://www.lootaudio.com/category/kontakt-instruments/ben-osterhouse/string-flow-viola-kontakt"
+demo = "https://soundcloud.com/ben-osterhouse/string-flow-viola-simple-joys"
+price = 35
+description = """String Flow Viola samples a technique string players use, in which they quickly roll the bow across the strings to create an energetic, chordal texture.
+There are 2 ways to play the instrument.
+The first way is simple: just choose what type of chord you want, what key to be in, and then play on the white keys. Whatever you play will pick a harmony which will fit into whatever key you've chosen. It's kind of like the "Harmonize" factory scripts in Kontakt, except that in this case, all of the harmonies had to be manually recorded!
+The second way to play requires more knowledge of the instrument, and is more flexible. If you play a chord that has been recorded, the instrument will play that chord on viola. The midi clips which come with the instrument demonstrate which chords work.\
+"""
+
+[string-flow-violin]
+vendor = "benjamin-osterhouse"
+name = "String Flow Violin"
+categories = ["vsti.strings.violin"]
+requires = [["native-instruments-kontakt","5"]]
+size = 862
+url = "https://www.lootaudio.com/category/kontakt-instruments/ben-osterhouse/string-flow-violin-kontakt"
+demo = "https://soundcloud.com/ben-osterhouse/string-flow-violin-neptune"
+price = 35
+description = """String Flow Violin samples a technique string players use, in which they quickly roll the bow across the strings to create an energetic, chordal texture.
+There are 2 ways to play the instrument.
+The first way is simple: just choose what type of chord you want, what key to be in, and then play on the white keys. Whatever you play will pick a harmony which will fit into whatever key you've chosen. It's kind of like the "Harmonize" factory scripts in Kontakt, except that in this case, all of the harmonies had to be manually recorded!
+The second way to play requires more knowledge of the instrument, and is more flexible. If you play a chord that has been recorded, the instrument will play that chord on violin The midi clips which come with the instrument demonstrate which chords work.\
+"""
