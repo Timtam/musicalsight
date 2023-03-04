@@ -631,12 +631,14 @@ function CatalogSubmit() {
                         else if (data.nks === true) msg += `nks = ${data.nks}\n`
                         if (data.description !== "") {
                             msg += dedent`description = """\
-${data.description}"""`
+${data.description}\
+"""`
                             msg += "\n"
                         }
                         if (data.accessibility_description !== "") {
                             msg += dedent`accessibility_description = """\
-${data.accessibility_description}"""`
+${data.accessibility_description}\
+"""`
                             msg += "\n"
                         }
                         if (data.oss.length > 0)
