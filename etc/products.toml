@@ -1274,7 +1274,7 @@ ARTICULATION LIST
 
 [areia]
 vendor = "audio-imperia"
-name = "Areia Cinematic Ensemble Strings"
+name = "Areia - Cinematic Ensemble Strings"
 url = "https://www.audioimperia.com/collections/all/products/areia"
 price = 399
 nks = true
@@ -1368,7 +1368,7 @@ High standards of quality - that is the base of everything we do. All of our sam
 
 [artifact-reanimate]
 vendor = "audio-imperia"
-name = "Artifact Reanimate Modern Trailer Sound Design"
+name = "Artifact - Reanimate Modern Trailer Sound Design"
 url = "https://www.audioimperia.com/collections/all/products/artifact-reanimate-1"
 categories = ["vsti.synthesizer", "vsti.percussion"]
 requires = [["native-instruments-kontakt-player", "6"]]
@@ -1395,7 +1395,7 @@ All of the magnificent sound design in Artifact Reanimate was done by trailer mu
 
 [cerberus]
 vendor = "audio-imperia"
-name = "Cerberus Epic Cinematic Drums"
+name = "Cerberus - Epic Cinematic Drums"
 price = 299
 url = "https://www.audioimperia.com/collections/all/products/cerberus"
 categories = ["vsti.drums", "vsti.percussion"]
@@ -1442,7 +1442,7 @@ High standards of quality - that is the base of our foundation. All of our sampl
 
 [chorus]
 vendor = "audio-imperia"
-name = "Chorus Modern Cinematic And Symphonic Choir"
+name = "Chorus - Modern Cinematic And Symphonic Choir"
 price = 499
 size = 69298
 url = "https://www.audioimperia.com/collections/all/products/chorus-modern-cinematic-and-symphonic-choir-for-kontakt-player"
@@ -1504,7 +1504,7 @@ Recorded with 24 women and 24 men at the wonderful Rottenbiller recording stage.
 
 [constrictor]
 vendor = "audio-imperia"
-name = "Constrictor Cinematic Tension Strings"
+name = "Constrictor - Cinematic Tension Strings"
 url = "https://www.audioimperia.com/collections/all/products/constrictor"
 nks = true
 accessibility_description = "Audio Imperia products come with additional mic positions turned off by default, which need to be enabled with sighted help and cannot be turned on with NKS alone."
@@ -1531,7 +1531,7 @@ Recorded in situ with 10 Violins, 4 Violas, 4 Cello, and 3 Double Basses at th
 
 [jaeger]
 vendor = "audio-imperia"
-name = "Jaeger Essential Modern Orchestra"
+name = "Jaeger - Essential Modern Orchestra"
 price = 599
 url = "https://www.audioimperia.com/collections/all/products/jaeger-essential-modern-orchestra"
 nks = true
@@ -1576,7 +1576,7 @@ High standards of quality - that is the base of our foundation. All of our sampl
 
 [klavier]
 vendor = "audio-imperia"
-name = "Klavier Hybrid Pianos"
+name = "Klavier - Hybrid Pianos"
 url = "https://www.audioimperia.com/collections/all/products/klavier"
 categories = ["vsti.keys.piano"]
 requires = [["native-instruments-kontakt-player", "6"]]
@@ -1622,7 +1622,7 @@ We used a blend of the neck (humbucker) and the split-coil (single coil) positio
 
 [legacy]
 vendor = "audio-imperia"
-name = "Legacy Cinematic SFX Collection"
+name = "Legacy - Cinematic SFX Collection"
 url = "https://www.audioimperia.com/collections/all/products/legacy-cinematic-sfx-collection-for-kontakt-player"
 categories = ["vsti.synthesizer"]
 requires = [["native-instruments-kontakt-player", "6"]]
@@ -1647,7 +1647,7 @@ Combined from the now discontinued libraries: Scenes from the Multiverse, Event 
 
 [nucleus]
 vendor = "audio-imperia"
-name = "Nucleus The Orchestral Core"
+name = "Nucleus - The Orchestral Core"
 categories = ["vsti.strings", "vsti.woodwinds", "vsti.brass", "vsti.vocal", "vsti.percussion"]
 requires = [["native-instruments-kontakt-player", "6"]]
 nks = true
@@ -1732,7 +1732,7 @@ Purchasing Nucleus Lite Edition qualifies you for a credit toward Nucleus (Full 
 
 [photosynthesis]
 vendor = "audio-imperia"
-name = "Photosynthesis Otherworldly Cinematic Sounds"
+name = "Photosynthesis - Otherworldly Cinematic Sounds"
 url = "https://www.audioimperia.com/collections/all/products/photosynthesis"
 price = 199
 categories = ["vsti.synthesizer"]
@@ -1764,7 +1764,7 @@ Previously known as
 
 [solo]
 vendor = "audio-imperia"
-name = "Solo Lyrical And Expressive Soloists"
+name = "Solo - Lyrical And Expressive Soloists"
 url = "https://www.audioimperia.com/collections/all/products/solo-made-for-kontakt-player"
 nks = true
 categories = ["vsti.vocal", "vsti.strings", "vsti.brass", "vsti.woodwinds"]
@@ -1817,7 +1817,7 @@ High standards of quality - that is the base of everything we do. All of our sam
 
 [talos]
 vendor = "audio-imperia"
-name = "Talos Epic Brass Ensembles"
+name = "Talos - Epic Brass Ensembles"
 nks = true
 categories = ["vsti.brass"]
 requires = [["native-instruments-kontakt-player", "6"]]
@@ -1862,7 +1862,7 @@ High standards of quality - that is the base of our foundation. All of our sampl
 
 [trailer-guitars-2]
 vendor = "audio-imperia"
-name = "Trailer Guitars 2 Epic Cinematic Guitars"
+name = "Trailer Guitars 2 - Epic Cinematic Guitars"
 url = "https://www.audioimperia.com/collections/all/products/trailer-guitars-2"
 price = 249
 nks = true
@@ -2843,4 +2843,811 @@ description = """String Flow Violin samples a technique string players use, in w
 There are 2 ways to play the instrument.
 The first way is simple: just choose what type of chord you want, what key to be in, and then play on the white keys. Whatever you play will pick a harmony which will fit into whatever key you've chosen. It's kind of like the "Harmonize" factory scripts in Kontakt, except that in this case, all of the harmonies had to be manually recorded!
 The second way to play requires more knowledge of the instrument, and is more flexible. If you play a chord that has been recorded, the instrument will play that chord on violin The midi clips which come with the instrument demonstrate which chords work.\
+"""
+
+[altus-the-voice-of-renaissance]
+vendor = "best-service"
+name = "Altus - The Voice of Renaissance"
+categories = ["vsti.vocal"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 1350
+url = "https://www.bestservice.com/en/altus.html"
+demo = "https://www.youtube.com/watch?v=svAbtvepIDc"
+price = 159
+description = """Often misunderstood and wrapped in mystery, the countertenor is another milestone in Eduardo Tarilonte's series of exceptional voices. Altus brings you a real countertenor for your Renaissance and
+Baroque music productions, for films, documentaries, video games, and new age music.
+
+Unparalleled realism ... Pure inspiration
+
+Altus is a unique solo vocal library featuring José Hernández Pastor, a countertenor with a magnificent expression and a truly beautiful and unique voice.
+Altus aims for easily creating your own ultra-realistic melodies, without using any phrases. Altus offers a powerful and innovative word builder which combines 26 words (136 elements including words and their syllables) with 5 true legato and portamento vowels (a, e, i, o, u), all at your fingertips in one patch.
+
+Altus offers:
+
+* 5 different true legatos and portamenti (a, e, i, o, u)
+* a powerful phrase arranger with words, 2 different articulations (fast and slow speeds).
+* words can be split into a total of 136 words/syllables
+* words can be combined with true legato vowel playing while the corresponding vowel is automatically selected
+* 130 beautiful phrases
+* 15 soundscapes, created from vocal samples
+* dry recordings allow you to match the reverb amount exactly to you needs.
+ 
+Altus introduces a great and innovative new feature, allowing you to connect any word with all 5 true legato vowels to build realistic melodies without using any pre-recorded phrases.\
+"""
+
+[cantus-gregorian-chants]
+vendor = "best-service"
+name = "Cantus - Gregorian Chants"
+categories = ["vsti.vocal"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 2780
+url = "https://www.bestservice.com/en/cantus.html"
+demo = "https://www.youtube.com/watch?v=rUcXaNYCrws"
+price = 199
+description = """Continuing the vocal series by Eduardo Tarilonte, Cantus offers a real Gregorian Monk Ensemble featuring the sounds of the dark Middle Ages. 
+A perfect tool for composers and sound designers to create ambiences and music for films, documentaries, video games and new age music.
+
+Unparalleled realism ... Pure inspiration
+
+Cantus is a unique choir library that aims for easily creating your own ultra-realistic liturgical melodies, without using any phrases. Cantus offers a powerful and innovative Phrase-Arranger which combines 24 words (120 elements including words and their syllables) with 5 true legato vowels (a, e, i, o, u) and a special Mmmh articulation, all at your finger tips in one patch.
+
+Cantus offers:
+
+* 5 different true Gregorian style legatos (a, e, i, o, u)
+* Mmmh articulation
+* A powerful Phrase-Arranger with 24 words, 3 different articulations (staccato, fast and slow speeds).
+* Words can be split into a total of 120 words/syllables
+* Words can be combined with true legato playing while the corresponding vowel is automatically selected
+* A collection of 20 Gregorian chants splitted into 400 phrases.
+* 60 minutes of music
+* 19 soundscapes, created from vocal samples.
+* 6.000 samples (stereo, 44kHz, 24 bit), Library Size 2.8 GB.\
+"""
+
+[chris-hein-chromatic-harmonica]
+vendor = "best-service"
+name = "Chris Hein Chromatic Harmonica"
+categories = ["vsti.ethnic"]
+requires = [["native-instruments-kontakt","5"]]
+size = 3460
+url = "https://www.bestservice.com/en/chris_hein_chromatic_harmonica.html"
+demo = "https://www.youtube.com/watch?v=Ri64NFdHKA4"
+price = 139
+description = """\
+The most detailed sampled Chromatic Harmonica on the planet
+
+Play harmonica like Stevie Wonder or Toots Thielemans - but on your MIDI-keyboard.
+With almost 7.000 samples, 14 articulations, up to 8 dynamic-layers and a full range of 4 octaves, CH-Harmonica is definitely the most detailedly sampled Chromatic Harmonica on the planet. The user interface holds tons of features on several pages to shape the sound the way you want it. However, if you do not feel like editing, just play and explore the 26 pre-programmed Key-Switch presets ranging from A-1 to A#1 on the lower keys of your MIDI-keyboard.
+To achieve the feeling of a live performance, the user interface offers four "Dynamic Modes", „Key-Vibrato“, „Hot-Keys“ and a revolutionary new concept of articulation presets .
+One of the most unique features in CH-Harmonica are the Phase-Aligned samples. After six months of research, Chris Hein found a solution to phase-synchronize the samples. This enables an absolutely perfect blending between six dynamic layers.
+During the development of CH-Harmonica, most attention was spent on how to work with dynamic expression.
+
+Berthold Matschat
+
+The Player
+
+We were very happy when Berthold Matschat gave us permission to sample his rare harmonica. There are very few chromatic harmonica players worldwide, and he is the leading player in Germany. Berthold Matschat is also an accomplished jazz pianist and composer. Since he extensively works with sampled instruments in his own studio, he had a detailed concept of what needed to be played on and sampled of the harmonica.
+His tone is particularly soulful and emotional. We recorded an old rare Hohner Harmonica, that dates back to those times, when Hohner could impress with the words “Made in Germany”.
+
+Features:
+
+* 1 Single Instrument for Kontakt 5.2.1 or higher (full version required)
+* 4 octaves range / 3.5 GB Content / 7.000 Samples / 14 Articulations
+* Up To 8 Dynamic Layers / Unique Phase-Align Technique / 4 Dynamic Modes
+* Hot-Keys / Intelligent Legato / Glide-Mode to play realistic runs
+* 10 built in DSP-Effects / 2 independent Convolution Reverbs / 63 high class IRs
+* Attack- & Release controls
+* Special Noise Controls
+* Ensemble Maker
+* Micro-Tuner
+* Adjustable Fader Settings in the GUI
+* Intelligent LFO-Vibrato including EQ
+* Customizable Auto-Vibrato
+* Key-Vibrato
+* Hand-Damping simulation\
+"""
+
+[chris-hein-guitars]
+vendor = "best-service"
+name = "Chris Hein Guitars"
+categories = ["vsti.guitar"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 7800
+url = "https://www.bestservice.com/en/chris_hein_guitars.html"
+demo = "https://www.youtube.com/watch?v=iOaSRTrPyN4"
+price = 189
+description = """\
+Seven Guitars, professionally sampled in one virtual instrument
+
+Chris Hein - Guitar is an outstanding, sampled virtual guitar library. Thousands of samples, many articulations and dynamics all in one preset per instrument. With about 40.000 samples and 10 GB content, its one of the largest guitar libraries available. Thanks to Native Instruments' genius script feature, Chris Hein - Guitar is easy to control.
+
+Main Features:
+
+* Kontakt Player included
+* ca. 40.000 Samples,  10GB content
+* 3.000 - 6.000 samples per instrument
+* over 30 articulations in one preset
+* up to 13 velocities
+* 70 intelligent midicontroller
+
+Instruments
+
+* E-Guitar Clean
+* Jazz Guitar Plectrum
+* Jazz Guitar Finger
+* Steel Guitar Plectrum
+* Nylon Guitar Finger
+* Banjo
+* Mandolin
+
+Controls & Scripts
+
+* Chord Mode, Different Slide Modes, Solo Mode (hammer on/pull off), Harmonizer, Electric/acoustic blending, different Release-Controls, different attack -controls, Fall Control, Rattle Control, Automatic Up- and Downstroke, Bridge- and Center playing, Reverb, Chorus, Delay, Flanger, Phaser, Filter included, IKM AmpliTube 3 Custom Shop included\
+"""
+
+[convolution-space]
+vendor = "best-service"
+name = "Convolution Space"
+categories = ["vsti.synthesizer"]
+requires = [["native-instruments-kontakt-player","2"]]
+size = 8500
+url = "https://www.bestservice.com/en/convolution_space.html"
+demo = "https://www.youtube.com/watch?v=69G2DlWus28"
+price = 199
+description = """\
+Welcome adventurers to Convolution Space – an entirely new region of the sound universe containing unexplored and uncharted sonic landscapes! Based on a package of 8.5 GB of lovingly handcrafted Stereo and 5.1 Surround textures. This system is packed into the Native Instruments Kontakt 2 Player, with 625 built-in instruments to endlessly combine and explore these textures, through the wonders of Convolution Based Spectral Recombination! 
+Your sound source for multimedia, commercials, movie and ambient music.
+The technique is advanced and hard to explain, yet simple to use. Select an instrument, play it on your keyboard and tweak the ModWheel - and the texture you are playing suddenly starts transforming into something completely different! You have entered Convolution Space! 
+
+Convolution Space was designd for all kinds of atmospheres and is the first one using the innovative convolution technology:
+ 
+* Abstract: Metaphysical and esoteric sounds that would not fit any other description. 
+* Emotional: beautiful, sad and ecstatic. Simple sounds that evoke emotions – mostly positive.
+* Fantasy: Magical and otherworldly, these are sounds for your imagination.
+* Mental: Sounds of the states of mind, ranging all the way from psychotic to the spiritual and psychedelic.
+* Scary: Sinister and malice, all for your horror soundtrack. This is not for the faint of heart.
+* SciFi: The sounds of tomorrow and its futuristic technology – and your high concept soundscape.
+* Underground: dark and devoid of hope, these sounds only vibrate downwards.
+* Deep&Rumble: Earthshattering and relentless in the one pursue of deeper realms.
+* Structures: The eerie and strange; these are places you would normally avoid.
+* Technology: The imaginary sounds of communicating CPU’s, searchlights and future machines \
+"""
+
+[dark-horizon]
+vendor = "best-service"
+name = "Dark Horizon"
+categories = ["vsti.synthesizer"]
+requires = [["native-instruments-kontakt-player","6"]]
+size = 1160
+url = "https://www.bestservice.com/en/dark_horizon.html"
+demo = "https://www.youtube.com/watch?v=hfmQUywM9Js"
+price = 99
+nks = true
+description = """\
+The Cosmic Darkness
+
+A journey into the future of sound turned dark and gritty fast. In Best Service - Dark Horizon, by Sonuscore, Elysion’s famous ensemble engine has been hijacked, augmented, and vaporized. With the drifting cosmic remains, Dark Horizon molds the future into a dystopian atmosphere of massive basses, cosmic arps, and drifting pads. Turn simple chords into unreal, nightmarish space-scapes, while moving the mod-wheel bends time and transports you into the dark, disparate corners of eldritch furies.
+
+* Experience the diversity of 80 instantly playable, bass-heavy instruments.
+* Experience the infinite depth of over 1.2GB of sample content.
+* Experience the flexibility of 180 complex animated and fully customizable themes.
+
+Dark Horizon is an earth-shattering bass-heavy synth built using synthesizers and a variety of sounds bent and warped into fascinating soundscapes and powerful low ends. Dark Horizon is built from the same engine as ELYSION, creating an even darker sound palette with new presets, themes, and effects. 
+
+For Extraordinary and Dark Bass Sound
+
+With a focus on dark, dirty bass sounds, Dark Horizon pushes levels and tones not yet explored by the Elysion series. Space engineer Tobias Menguser sent wavs into the far reaches of the cosmos, beyond the known universe, where only the terrifying nightmares and figments of reality lurk. In those unknown places, the sounds were twisted and experimented upon, crafting a full sound palette of dark and low basses. They mutated into growling instruments, screaming oscillations, and ground-shaking subs.
+For Modern Producers and Score Composers
+For ambient, modern electronic, and experimental music, Dark Horizon can bring a new power into your work with its library of grinds and grooves. For scoring and blockbusters, these sounds make for perfect tension-building underscore.
+Dark Horizon  - What´s Included?
+As the deep underbelly of the Elysion series, Dark Horizon is a powerful Kontakt instrument that resynthesizes orchestral sounds and sound FX along with a great variety of rare analog synths and FX boxes. The resulting instruments are mind-crushing sounds, gut-wrenching themes, rhythmic arps, whirling pads, and a set of effects to push them even further beyond the imagination.
+
+* Ambient - Resynthesized - Cinematic - Dark Horizon pushes sounds into unrecognizable extremes, utilizing analogue rack effects and the dark powers of eldritch gods. Use Dark Horizon as a scoring tool for any project that needs a dose of profound bass and gritty depth or use it as a really exceptional synth to create innovative melodies with outstanding sonic power.
+* Layered - Dirty - Powerful - With four layers of sounds and an onboard compressor, delay, and hall reverb, create unique and disturbing combinations for a truly original experience. Each layer is linked to an independent arpeggiator and two pan engines, allowing you to easily create complex, evolving pads.
+* Sampling Redefined - Bursting with Expression and Variety - We recorded, sampled and produced the sounds, treating them like acoustic instruments. This results in an unimaginable dynamic and unprecedented sound. Integrated into the pathbreaking ensemble engine, Dark Horizon further expands our strongest composing lineup, together with Elysion 2 and The Orchestra.
+Score the Dark with a Familiar User Interface
+
+Users of Elysion and The Orchestra will find Dark Horizon’s user interface familiar, with all the essential controls in the same places or intuitive to find.
+
+* Main Page - Select instruments, presets and control all layers from the main page. Play up to 4 instruments simultaneously.
+* Ensemble Engine - Modify and perfect your sounds to the very last detail with the critically-acclaimed ensemble engine. Create exciting new sonic experiences by simply playing some chords.
+* Mix Page - Mix & pan your layers and breathe live and dynamic variation into every single pattern.
+* Motion Engine - Customize the instruments fundamentally, steering e.g. attack or decay vi MIDI CC.
+* Preset Browser - Explore the massive selection of presets using intuitive filters and categories.
+* Pan Engine - Create outstanding motion and effects by controlling and automating the panning of the sounds.
+
+Powerful Features - Supernatural Workflow
+
+Dark Horizon features the critically acclaimed ensemble technology, empowering you to create complex sounds by playing simple chords.
+
+* Modified Ensemble Engine - Dark Horizon uses a modified version of the Elysion ensemble engine. This means you can play up to four different instrument modules at the same time, and each module allows independent controls for arpeggiators. Using the mod-wheel unlocks an astounding filter effect that produces a great number of kinetic, digital possibilities.
+* Motion Engine - Dark Horizon comes with its own unique dynamic FX engine. It allows the fundamental customization of the instruments, e.g. steering attack or decay via Midi CC. Besides other FX the Motion Engine includes also two Pan Steppers, breathing live and variation into every pattern in no time.
+
+Once you have been inspired by a theme in ’, drag and drop the arrangement of your performance to your DAW. Now you are free to use it within every library you own. Unleash the power of the ensemble engine onto your personal template, change notes, combine different patterns and make them your own. Experience the incredible efficiency of Dark Horizon, Elysion 2 and The Orchestra merging together within your DAW.
+
+Maximize Your Creativity
+
+Dark Horizon comes with 180 complex animated and fully customizable themes, spread across five different categories. Each category has its unique style and purpose, providing you with either rhythmic elements, dark textures or sounds that are perfect for playing melodies.
+
+* Poly Animations - Complex rhythms for chords that push the audio floor with movement and vibration. The modwheel modifies the arps and filters, increasing the tension, while introducing horn blasts, braahms, and drones.
+* Rhythmic Pulses - Low pulsing basses with complex arpeggiations reveal great dynamic range when the modwheel is pushed, morphing the rhythms and raising the filters.
+* Mono Arpeggios - Legato arpeggios arranged in danceable grooves with the modwheel pressing the frequencies and creating a much sharper tone.
+* Lowest Textures - Dark, tension-filled drones complimented by screeching impulses, filter swipes, and stellar reverb effects at the turn of the modwheel.
+* Playable Sounds - Wide cosmic pads and gently gliding legatos, this set includes the bulk of the playable content. The modwheel releases all the built up anger and tension as the frequencies push.
+
+Tobias Menguser Banner
+
+Tobias Menguser has been working in sound design since the 1990s and started out programming synths for companies like Waldorf, Ensoniq and Clavia and did pioneer work in producing sample CD-ROMs for Ensoniq EPS16+ and ASR10. In the early 2000s Tobias has been working for Native Instruments for over 10 years, he helped make Komplete what it is today and in the last ten years he has contributed sounds for over 450 US movie trailers.
+Tobias’s latest projects mainly focus on software instrument building and include work for Sonuscore, Softube, Heavyocity, Steinberg, Presonus, and Arturia. “Working in my studio and designing samples and instruments is not work for me,” Tobias tells us, “It’s big fun – knowing those samples and instruments will inspire musicians to create exciting tracks and scores!
+
+Dark Horizon Key Features
+
+* Earth-shattering bass-heavy synth for extraordinary and dark bass sound.
+* Designed by renown sound designer Tobias Menguser.
+* Built from the same engine as Elysion with a modified Ensemble Engine, the Motion Engine, and the Pan Engine.
+* Familiar and intuitive user interface known from Elysion and The Orchestra.
+* 180 complex animated and fully customizable themes, featuring up to 4 fully controllable instruments.
+* 80 instantly playable bass-heavy instruments.
+* 765 individual samples. All carefully recorded, sampled, and handcrafted.
+* MIDI-Export: Unleash the power of the ensemble engine onto your personal template.
+
+Dark Horizon was developed for Best Service by Sonuscore / Dynamedion, the makers of The Orchestra, ELYSION, Trinity Drums, Strings of Winter, Horns of Hell as well as NI Action Strings, Action Strikes and Emotive Strings.
+Works with the Free Kontakt Player Version 6.6.1 or higher.\
+"""
+
+[elysion-2-the-encounter]
+vendor = "best-service"
+name = "Elysion 2 - The Encounter"
+categories = ["vsti.synthesizer"]
+requires = [["native-instruments-kontakt-player","6"]]
+size = 21920
+url = "https://www.bestservice.com/en/elysion_2.html"
+demo = "https://www.youtube.com/watch?v=mCpUA1Jjpbg"
+price = 249
+nks = true
+description = """\
+The Future is Now – Encounter Elysion 2!
+
+We started a journey into the future of sound – and we arrived! Encounter Elysion 2 – our massive and incredibly fast scoring tool. Play simple chords and instantly create overwhelming sound worlds. Move your modwheel and distort time and space. Let the famous ensemble engine animate your music.
+
+* Powerful synth built on handcrafted processed and synthetic sounds, treated like acoustic instruments.
+* Sets a new level of hybrid composing: incredibly simple and outrageously beautiful.
+* Forms the massive hybrid twin to The Orchestra.
+* Extends the Elysion ambient synth with aggressive and powerful new instruments, presets, themes and effects.
+* 207 playable instruments, and over 400 complex animated themes.
+
+Elysion 2 – The Encounter takes you to the very extremes of our universe – within one modwheel-turn. It enriches your synthetic palette with more aggressive, powerful and driving sounds. Press a key and unleash a raw and vivid sonic scenario with our breakthrough and award-winning ensemble engine, known from The Orchestra. If you’re scoring trailers, blockbusters or just want to hear the universe burn – Elysion 2 will get you covered!
+Crossgrade Available: For owners of "The Orchestra Essentials", "The Orchestra", "Strings of Winter", "Horns of Hell" or "The Orchestra Complete".
+
+What´s Included?
+
+Elysion 2 takes off to an exciting chapter of our popular synth Elysion. It comes with a variety of driving and powerful instruments, themes, effects and features. Elysion 2 further includes the complete original ambient synth Elysion!
+
+* Ambient – Organic – Cinematic: Elysion is a huge and incredibly fast ambient scoring tool, perfectionated to fill the space with inspiration. Experience the infinite sound cosmos full of shimmering spheres, organic ambiances and complex cinematic themes.
+* Aggresive – Powerful – Driving: Elysion 2 - The Encounter takes a very different path. It enriches the palette of Elysion with aggressive, raw and wild instruments and effects, featuring epic spheres, powerful pulses and shattering themes. Unleash the extreme force of Elysion 2 with a simple keystroke.
+
+Each Interstellar Object hast its own Sonic Character
+
+The Elysion 2 themes are named after the planets of our solar system and other interstellar objects, each one representing a different sonic character.
+
+* Earth – Terrestrial, Familiar, Conventional, Poppy
+* Mars – Aggresive, Strong, Energy, Violence
+* Sagittarius – Violent, Brute, Dark, Shattering, Destructive
+* Venus – Sensuality, Tranquility
+* Antares – Bombastic, Cinematic, Modern
+* Mercury – Lively, Vibrant, Diverse
+* Jupiter – Happiness, Joyfulness
+* Saturn – Old, Wise, Sad, Melancholics
+* Uranus – Magical, Enchanted, Wonderful
+* Neptune – Dark, Mysterious
+* Sirius – Powerful, Hot, Bright, Positive, Alive, Energetic
+* Orion – Mystical, Indeterminate, Nebulous, Creepy
+
+Elysion 2 Features
+
+Elysion 2 offers you features that make creating new and exciting sound compositions even more intuitive.
+
+* Single-Instrument NKIs – We included every instrument as a single-instrument NKI to freely play it outside Elysion’s engine.
+* Distortion & Saturation FX – Elysion 2 comes with various built-in effects to enable a more aggressive and driving sound.
+* Switchable GUI – Choose freely between the two GUIs of Elysion and Elysion 2.
+
+Sampling Redefinied Bursting with Expression and Variety
+
+As the first one able to catch the incredible dynamic and lively character of synthetic instruments, the Elysion series redefines sampling. We recorded, sampled and produced our synthetic future-sounds, treating them like acoustic instruments. This results in an unimaginable dynamic and unprecedented sound. Integrated into our pathbreaking ensemble engine, Elysion 2 forms the massive synthetic twin for The Orchestra.
+
+A Whole New Experience
+
+Elysion 2 is made to expand the range of our flagship The Orchestra into and beyond the digital era. Together, they set a new level of hybrid composing: incredibly simple and outrageously beautiful.
+
+* Encounter the diversity of 207 instantly playable hybrid organic instruments.
+* Encounter the infinite depth of over 12.500 samples. All carefully recorded, handcrafted and layered with up to 5 velocity layers.
+* Encounter the flexibility of over 400 complex animated and fully customizable themes.
+
+Score The Future with Our Familiar User Interface
+
+The interface of Elysion 2 is the advanced progression of the highly-acclaimed GUI from The Orchestra. The most essential controls are easily and quickly accessible to keep you focused on your creative scoring.
+
+* Main Page – Select Instruments, presets and control all layers from the main page. Play up to 5 instruments simultaneously.
+* Ensemble Engine – Modify and perfect your sound to the very last detail with our critically-acclaimed ensemble engine. Create exciting new sonic experiences by simply playing some chords.
+* Mix Page –  Mix & pan your layers and breathe live and dynamic variation into every single pattern.
+* Motion Engine – Customize the instruments fundamentally, steering e.g. attack or decay via MIDI CC
+* Preset Browser – Explore the massive selection of presets using intuitive filters and categories.
+* Pan Engine – Create outstanding motion and effects by controlling and automating the panning of the sounds.
+
+Powerful Features - Supernatural Workflow
+
+Elysion 2 brings numerous new functionalities to our critically acclaimed ensemble technology.
+
+* Sampled Synthetic Instruments – Up to 3 Round Robins and 5 Velocity Layers deepen the dynamic of our carefully handcrafted synthetic instruments, providing extreme expressiveness: Every layer of the ambient synth is carefully designed to correspond and even outdo the immense liveliness of real instruments in timbre, impact and intensity.
+* Ensemble Engine 2.0 – For Elysion 2 we reworked our critically acclaimed ensemble engine, which lets you play and customize up to five instrument modules simultaneously. Within every module you are now free to control it via envelope or arpeggiator. You can now even morph between two Layers in both the Arpeggiator and the Envelope, which lets you control up to 10 interleaved rhythms within one patch. An additional stutter feature enriches the possibilities of our Envelope even more and lets you create extremely complex rhythms by only using sustained instruments.
+* Motion Engine – Elysion 2 comes with its own unique dynamic FX engine. It allows the fundamental customization of the ambient synth instruments, e.g. steering attack or decay via Midi CC. Besides other FX the Motion Engine includes also two Pan Steppers, breathing live and variation into every pattern in no time.
+
+Maximize Your Creativity
+
+Elysion 2 comes well prepared for instant inspiration and composing with 400 complex animated and fully customizable themes. Its covers an extremely wide range of diverse timbres, often only one modwheel-turn away from each other. Every theme is arranged out of five controllable instruments within our ensemble engine, providing you an enormous influence on the sound.
+
+* Dynamic Spheres – Spheres are lively and sustained themes with an enormous dynamic range, easily controllable via modhweel. Simple keystrokes and chords yield a rich futuristic ensemble sound, each one with a different interpretation of the futures tone.
+* Animated Themes – The animated synthesized themes go even further and create complex and diverse ensemble rhythms from any played note. This is where the future starts!
+* Powerful Pulses – The synthetic pulses contain rhythmical patterns, providing an extremely large range of different timbres and styles. From simple and incredibly useful rhythms to inspirations completely out of the box
+
+Export Your Custom Performance with MIDI Drag & Drop
+
+Once you have been inspired by a theme in Elysion 2, drag and drop the arrangement of your performance to your DAW. Now you are free to use it within every library you own. Unleash the power of the ensemble engine onto your personal template, change notes, combine different patterns and make them your own. Experience the incredible efficiency of Elysion 2 and The Orchestra merging together within your DAW.
+
+Key Features
+
+* All instruments available as single NKI, to freely play them outside the engine
+* New distortion and saturation FX for a more aggressive and driving sound
+* Sampled Synthetic Instruments, containing up to 3 Round Robins and 5 Velocity Layers
+* Refined Ensemble Engine 2.0 with new, powerful functionalities
+* Unique Motion Engine allowing fundamental customizations
+* Massive synth hybrid twin of The Orchestra for a new level of cinematic composing
+* Over 400 complex animated and fully customizable themes, featuring up to 5 fully controllable instruments
+* Over 207 instantly playable hybrid organic instruments
+* 12.500+ individual samples. All carefully recorded, sampled and handcrafted
+* MIDI-Export: Unleash the power of the ensemble engine onto your personal template
+
+"Elysion 2 " was developed for Best Service by Sonuscore / Dynamedion, the makers of The Orchestra, Trinity Drums as well as NI Action Strings, Action Strikes, Emotive Strings and many more.
+Dynamedion was founded in 2000 by Tilman Sillescu and Pierre Langer, two composers with university degrees in music. With a steadily increasing number of contracts and growing customer base it has since become a leader in soundtrack composition and sound design on the European computer game market. In 2005 Dynamedion produced highly successful, first benchmark live orchestra recordings for a German game soundtrack, setting the standard for large-scale projects in the industry. With numerous further productions for the video game industry, Dynamedion has earned itself a reputation for unsurpassed quality and integrity in this area.
+Elysion 2 works with NI Kontakt and Free Kontakt Player Version 6.6.0 and higher!\
+"""
+
+[emotional-cello]
+vendor = "best-service"
+name = "Emotional Cello"
+categories = ["vsti.strings.cello"]
+requires = [["native-instruments-kontakt-player","6"]]
+size = 11780
+url = "https://www.bestservice.com/en/emotional_cello.html"
+demo = "https://www.youtube.com/watch?v=t27TKS2zZfU"
+price = 199
+nks = true
+description = """\
+Emotional Cello – never before, a virtual instrument could be played with this level of expression.
+
+The Emotional Cello from the Munich-based developers Harmonic Subtones is a virtual instrument that features a powerful and emotional sound and opens up unknown dimensions of expression.
+Whether film scoring, pop music productions, songwriting, classical music or modern, avant-garde cello compositions, the Emotional Cello shines through a variety of contained articulations, a direct and unadulterated sound as well as unusual playing techniques and rebowing.
+
+Contextual Sampling
+
+"Contextual Sampling" is what the developers of Emotional Cello call the philosophy behind this project in which all samples are always recorded in a musical context to capture the natural bowing and expressiveness of real instrumentalists. In this approach the recordings of a real vibrato play an important role, as they are always more inspiring and organic than adding an artificial vibrato.
+
+Articulations, Patches & True Legato
+
+Emotional Cello was created from well over 100 articulations and their variants. By means of an elaborate and intelligent script, countless articulations are linked together in a meaningful way so that they follow the playing style of the user.
+The library contains three master patches, including the "Emotional Cello", the "Sulponticello" and the "Harmonic Cello". These contain most of the recorded articulations, which logically interlock and provide an elegantly aligned sound, thanks to „True Legato“. Three different transition types have been captured in several sessions and simulate, among other things, realistic changes in bowing direction or passionate portamento while playing. The user simply controls the velocity - the tempo of the tone transitions automatically adapts to your DAW!
+In addition to the Master Patch, the Emotional Cello also contains an Individuals Patch which is a set of key switch patches with different articulations of the same category such as sustains, shorts, trills and more. The Specials Patch offers some unusual articulations and effects and the Stackable Patch contains the main articulations with standardized key switching to match the stackable patches of Emotional Violin & Emotional Viola.
+
+Selection of the included playing styles:
+Spiccimo & frog, Stacc, Fast Spiccato, Frog Madness, Pizzicato, Delicate, Delicate fast, Proud Vibrato
+Hero Vibrato, Martele half NV 8RR, Martele half Vib 4RR, Pickup, Fortepiano, Vivid, Paganini Run, Moderate 2, Sustain Non Vib XFDe, Expressive XFDe, Pastorale, Pastorale slow, Tremolo, Trill HAT,
+Trill WT.
+
+Ornament Key Switches
+
+The Ornament Key Switches are another great feature. Unlike the articulation key switches, these are temporary and allow variations of the already selected articulation. By pressing one of the Ornament Key Switches, the current playing style can be faded into another articulation or variations can be generated. Last but not least, the Ornament MKS offer typical effects like glissando, flageolet and many more.
+
+The Effects
+
+In order to customize the sound of the Cello according to your wishes, you can use effects specially designed for the instrument. These include a 3-band EQ, a switchable sordino and a timbre function. The latter contains 15 convolution-based presets from renowned and experienced sound engineers for easy and characteristic modulation of the basic sound.
+For the use of the Cello as 1st chair cello in an orchestral environment, there are also timbre EQs which place the viola in its correct position in the orchestra room. The final touch is provided by the "Room" and "Reverb" modules, which use professionally recorded convolution reverb presets to reproduce the sound of real rooms and can also be adjusted separately.
+
+You are the artist!
+
+The interface of the Emotional Cello has some advanced features to make it easier for you to play the library. For example, "PolyLegato" recognizes whether you are playing a bound melody line or a chord, and "Legato Trimming" allows you to manually adjust the speed of legato and portamento transitions.
+The Attack function allows you to add an additional start sample independent of the currently selected articulation in order to let short notes flow in during legato playing or to simulate harsh starting notes. Correct tuning is also taken care of: Using the "Micro Tuning Option", the most popular tunings can be applied to the viola, and completely new tunings can be created.
+
+The Recording
+
+Emotional Cello was recorded in the Mastermix Studio near Munich, in a wood-panelled room with high ceilings and the greatest possible distance from the wall. For the greatest possible flexibility of use, two Neumann microphones, type KM184 and U87, were used for close recording. In this way, the room was kept quite subtle, and you can then create your desired sound with your own effects. However, you can also use the integrated Convolution Reverb.
+Kontakt Player 6.2.2 or newer required.\
+"""
+
+[emotional-viola]
+vendor = "best-service"
+name = "Emotional Viola"
+categories = ["vsti.strings.viola"]
+requires = [["native-instruments-kontakt-player","6"]]
+size = 4450
+url = "https://www.bestservice.com/en/emotional_viola.html"
+demo = "https://www.youtube.com/watch?v=Xty1Doizjfk"
+price = 199
+nks = true
+description = """\
+The most expressive and detailed virtual Viola available
+
+Emotional Viola is the third member of the Emotional Strings series by Harmonic Subtones. This long anticipated and logical addition to the cello and violin, represents a very comprehensive virtual instrument that is easy to play, and of course offers numerous possibilities for individual customization.
+Not only does the Emotional Viola harmonize excellently with the cello and the violin, it is also highly valued as a solo instrument with its direct and unadulterated sound, its variety of essential to extraordinary articulations as well as true legato and rebowing.
+Emotional Viola is the first choice if you are looking for the perfect instrument for film scoring, pop music, songwriting, classical or modern, avant-garde viola compositions!
+
+Contextual Sampling
+
+As with the other instruments from the Emotional series, the Munich-based developers decided to stay true to their concept of contextual sampling in which all samples are always recorded in a musical context to capture the natural bowing and expressiveness of real instrumentalists. In this approach, the recordings of a real vibrato play an important role, as they are always more inspiring and organic than adding an artificial vibrato.
+
+Articulations, Patches & True Legato
+
+Emotional Viola was created from well over 50 articulations and their variants. By means of an elaborate and intelligent script, countless articulations are wisely linked together, so that they follow the user’s style of playing.
+The Emotional Viola Master Patch contains most of the recorded articulations, which logically interlock and provide an elegantly aligned sound, thanks to „True Legato“. Three different transition types have been captured in several sessions and simulate, among other things, realistic changes in bowing direction or passionate portamento while playing. The user simply controls the velocity - the tempo of the tone transitions automatically adapts to your DAW!
+In addition to the Master Patch, the Emotional Viola also contains an Individuals Patch which is a set of key switch patches with different articulations of the same category such as sustains, shorts, trills and more. The Specials Patch offers some unusual articulations and effects and the Stackable Patch contains the main articulations with standardized key switching to match the stackable patches of Emotional Cello & Emotional Viola.
+
+Selection of the included playing styles:
+Spiccato, Rota Spicc, Pizzicato, Fliegender Aufstrich, Delicate Phrased, Delicate Sustain, Touch Sense Espressive, Espressivo Long, Progressive Vibrato Phrased, Progressive Vibrato Long, Expressive Brahms, Brahms Long, Arpeggio Shorts RR, Rota Vivid, Czardas Sfz, Sustain Vib XFDe, Sustain Non Vib XFDe, Kernig NV Shorts, Nordic Long, Nordic Variety, Fast Lines Late Vib, Fast Lines Swelling Vib, Tremolo XFDe, Trill HT, Trill WT, Flautando, Nordic, Morbid, Harmonics, Sulponticello XFDE, Sul C, Undulation Wait.
+
+Ornament Key Switches
+
+The Ornament Key Switches are another great feature. Unlike the articulation key switches, these are temporary and allow variations of the already selected articulation. By pressing one of the Ornament Key Switches, the current playing style can be faded into another articulation or variations can be generated. Last but not least, the Ornament MKS offer typical effects like glissando, flageolet and many more.
+
+The Effects
+
+In order to customize the sound of the viola according to your wishes, you can use effects specially designed for the instrument. These include a 3-band EQ, a switchable sordino and a timbre function. The latter contains 15 convolution-based presets from renowned and experienced sound engineers for easy and characteristic modulation of the basic sound.
+For the use of the Viola as 1st chair viola in an orchestral environment, there are also timbre EQs which place the viola in its correct position in the orchestra room. The final touch is provided by the "Room" and "Reverb" modules, which use professionally recorded convolution reverb presets to reproduce the sound of real rooms and can also be adjusted separately.
+
+You are the artist!
+
+The interface of the Emotional Viola has some advanced features to make it easier for you to play the library. For example, "Poly Legato" recognizes whether you are playing a bound melody line or a chord, and "Legato Trimming" allows you to manually adjust the speed of legato and portamento transitions.
+The Attack function allows you to add an additional start sample independent of the currently selected articulation in order to let short notes flow in during legato playing or to simulate harsh starting notes. Correct tuning is also taken care of: Using the "Micro Tuning Option", the most popular tunings can be applied to the viola, and completely new tunings can be created.
+
+The Recording
+
+Like the cello and violin, the viola was recorded in the Mastermix Studio near Munich, in a wood-panelled room with high ceilings and the greatest possible distance from the wall. For the greatest possible flexibility of use, two Neumann microphones, type KM184 and U87, were used for close recording. In this way, the room was kept quite subtle, and you can then create your desired sound with your own effects. However, you can also use the integrated Convolution Reverb.
+Kontakt Player 6.2.2 or newer required.\
+"""
+
+[emotional-violin]
+vendor = "best-service"
+name = "Emotional Violin"
+categories = ["vsti.strings.violin"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 6550
+url = "https://www.bestservice.com/en/emotional_violin.html"
+demo = "https://www.youtube.com/watch?v=aeH4LwVzlVU"
+price = 199
+nks = true
+description = """\
+Emotional Violin - the most expressive virtual violin of all time
+
+If you are looking for the perfect instrument for film scoring, pop music, songwriting, classical or modern avant-garde violin compositions, the Emotional Violin is your first choice! A unique, virtual instrument that convinces through its variety of articulations, its direct and unadulterated sound and functions like True Legato and Rebowing. With its impressive and at the same time emotional sound, it enables expressions that have never been achieved before.
+
+Contextual Sampling
+
+Our philosophy during the recordings is called "Contextual Sampling". In order to find the perfect sound, several string instruments were sampled in various ways over a period of four years. We came to the conclusion that no technique comes even close to the actual and natural vibrato of a trained musician. The samples of true legato were always much more inspiring and had a more organic feel than added artificial legato. So our goal was to perfectly capture these musical aspects and combine them into a great sounding and easy to play instrument.
+Emotional Violin consists of more than 100 articulations and their variations. Through elaborate, intelligent scripting countless articulations were usefully linked, so that they follow the user’s style of playing. This is the secret of Emotional Violin that makes for its exceedingly realistic and authentic sound.
+
+Master Patches & True Legato
+
+Emotional Violin contains three Master Patches, including „Emotional Violin“ and „Intimate Violin“. These contain a multitude of the recorded articulations, which logically interlock and provide an elegantly aligned sound, thanks to „True Legato“. In total, 3 different transition types were captured in countless sessions, which perfectly simulate bow changes or passionate portamento, easily controlled via velocity. The speed of the transitions automatically matches your DAW’s tempo.
+
+Ornament Keyswitches
+
+A special highlight are the Ornament Keyswitches. Unlike the articulation keyswitches, these are designed for the moment, to bring variations into chosen articulations. This way you can blend from a current playing style to another one (e.g. trills and tremolos) or you can generate variations (e.g. bow changes, to smoothly end a note), just by pushing an Ornament Keyswitch (e.g. trills and tremolos). Last but not least the Ornament MKS offer typical violin-effects like glissando (up and down), flageolett and many more.
+
+Effective sound shaping
+
+Emotional Violin offers a small but mighty collection of sound shaping possibilities, specifically tailored to the instrument. Aside from a typical 3-band EQ and a connectable sordino you will find timbre functions.
+4 famous and experienced sound engineers created these convolution based presets (so called
+Timbre Impulses) that allow for an easy and characterful modulation of the violin sound. To use the violin as 1st Chair Violin in an orchestral arrangement, we added a timbre EQ that places the violin in the correct orchestral seating. The icing on the cake are modules „Room“ and „Reverb“, which provide the sound of actual rooms, thanks to professionally recorded convolution presets - plus they can be tweaked separately.
+
+You are the artist!
+
+To meet the requirements of your playing, Emotional Violin offers additional features. At „Poly Legato“, for example, it automatically recognises whether a bound melody line or an chord is played and via „Legato Trimming“ you can manually set the speed of legato and portamento transitions. A speciality represents the attack feature, which enables the user to add a start sample independent of the selected articulation - for instance to add short or harsh starting notes during legato. The correct tuning is also provided: via the „Micro Tuning Option“ you can apply established tunings to the violin (e.g. pythagorean, Werkmeister III, and many more) or create entirely new ones.
+
+The result is a library with unsurpassed authenticity
+
+Emotional Violin offers a multitude of articulations - also unusual ones - you won’t find in any other library. Aside from the 3 big Master Patches, you will find more than 70 articulations structured in categories and available as Multi-Keyswitch-Patches - from expressive sustains, to pinpoint shorts with up 9 Round Robins, to trills and exotic effects, to dynamic crossfades within four layers. You can deactivate unused playing styles / keyswitches at any time via the „Purge“ feature, freeing up working storage for other instruments. So if you prefer to not work exclusively with keyswitches, this method perfectly suits you.
+Simply select from one of the following
+Normal Sustains with and without Vibrato, Multiple Progressive Vibratos, Multiple Espressivo, Flautando, Sul Ponticello, Morbid Sustains, Harmonics, Multiple Spiccatos, Staccato, Marcato, Tremolo, Tremolo Sul Ponticello, Multiple Trills, Pizzicato, Pizzicato Snap, Paganini Pizzicato, Scratches, Piazolla FX, Diverse Violin Effekte, Violin Percussions
+
+The Recording
+
+The Emotional Violin was recorded at the Mastermix Studio near Munich in a wood-panelled room with a large ceiling height and at the greatest possible distance to the wall. For maximum flexibility, two Neumann KM184 and U87 microphones were used very closely. Therefore the room amount is quite subtle, so you can use your own effects for further processing. However, you can also use the integrated Convolution Reverb.
+Kontakt Player 5.7.3 or higher required.
+Emotional Violin is the second virtual instrument in this series, produced by Harmonic Subtones, the makers of Emotional Cello.\
+"""
+[ethno-world-6-instruments]
+vendor = "best-service"
+name = "Ethno World 6 - Instruments"
+categories = ["vsti.ethnic"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 15330
+url = "https://www.bestservice.com/en/ethno_world_6_instruments.html"
+demo = "https://www.youtube.com/watch?v=4SzDQAxT_BU"
+price = 259
+nks = true
+description = """\
+The ultimate Sample-library for Ethnic Instruments from all over the World
+
+ETHNO WORLD 6 Instruments is the summit of a library that has continuously been growing and improving for over 16 years. In this sixth edition, numerous new instruments with a volume of several gigabytes have been added to the library.
+Award-winning film composer Marcel Barsotti (e. g. Pope Joan, The Miracle of Bern) has gathered a gigantic selection of instruments from all over the word from widely varying cultures.
+ETHNO WORLD 6 Instruments now consists of 264 instruments, with roughly 620 patches, 10 construction sets and 5 shaker sets. For the most authentic sound, the instruments were recorded with different play techniques that can easily and precisely be accessed from the patches via key-switches. The library consists of 24.7 gigabytes (uncompressed) of sample data and 23,559 samples. All instruments come in 24 bit and 44.1 kHz.
+Over 70 musicians from all over world were involved in the recording process, conducted by music-producer Andreas Hofner. The recordings took place in different local studios with the use of first-class gear such as microphones by Neumann and Brauner, SPL preamplifiers and converters by RME.
+ETHNO WORLD 6 Instruments comprises an incredible spectrum of instruments from the most diverse regions of Asia, Africa, Europe, North- and South-America. Here, you will find the perfect instruments for folkloric, ethnic as well as for modern music.
+Library size ~ 15 GB (using Kontakt´s lossless compression)
+Kontakt / Kontakt Player 5.6 or newer required!
+
+INSTRUMENTS
+
+The library contains an extensive selection of stringed, plucked and bowed instruments, as well as the most different woodwinds including numerous flutes and, of course, a large selection of drums and percussion.
+Alongside film-score-proven taikos and big ethnic tom drums, there are hundreds of inspiring loops and even an entire "Gongs, Bells & Metal Type Instruments" category - ranging from the large big feng gong to delicately sparkling wind chimes. New in ETHNO WORLD 6 Instruments are some unique sounds such as the two meter spanning gong by Paiste, several new percussion-instruments and a waterphone.
+Almost all sections of the predecessor have been expanded once again. In addition, a couple of instruments of ETHNO WORLD 5 have been re-recorded. Among them is a new mandolin and a great sounding banjo, programmed with countless articulations and licks by one of Germany’s best banjo-players, Rüdiger Helbig.
+Furthermore, you will now find a concertina, an autoharp, a Japanese koto, the aforementioned new mandolin with multiple play styles, a South-American charango, a bansuri, bass quena and an Indian flute plus additional play styles for the instruments launeddas, mancosedda, dvojacka and the Irish traverse flute.
+With its selection of instruments, ETHNO WORLD 6 Instruments is the perfect library for film- and television productions that demand authentic sounds from specific regions of the world. Naturally, these instruments will work in music productions of diverse genres that embrace these specific sonic elements - from pop to ambient to dance.
+
+CONTENT
+
+ETHNO WORLD 6 Instruments contains all sounds of the previous versions, categorised in “Bowed Instruments”, “Stringed Instruments”, “Woodwind & Brass”, “Key Instruments”, “World Drums”, “World Percussion” and “Gongs, Bells & Metals”.
+A good number of special instruments were additionally recorded for version 6. Among them is the new “Gamelan” category. The instruments were recorded in Munich's Stadtmuseum and contain two different gamelan orchestras from Bali and Java, available in slendro, pelog and international tunings. Here, you will find more than 25 instruments such as kempli, kendhang drums, cheng cheng, bells, kecer cymbals, kethuk and kempiang.
+ETHNO WORLD 6 Instruments also unlocks an entire new region by offering a complete ensemble of alpine folk music including plucked instruments, brass as well as male and female yodelers. Find instruments like the Styrian harmonica, a nylon stringed concert guitar, zither, raffele, dulcimer, alpenhorn, flugelhorn, trumpet, trombone, tuba, folk-violin and two clarinets. And of course it includes an acoustic bass.
+For historical contexts, such as historic dramas or fantasy movies, ETHNO WORLD 6 Instruments offers a large selection of medieval instruments, among them a hurdy gurdy, renaissance lute, fife, doucaine, shawm, pasalterium, pump organ and a shruti box. In a nutshell: every instrument for songs about fire and ice.
+
+THE INTERFACE
+
+ETHNO WORLD 6 Instruments uses the free Kontakt 5 Player by Native Instruments as its sample-engine and can of course be used with the full version of Kontakt 5, too. For the new version, the user-interface's graphic has been completely redesigned and optimized for ultra fast access. There are numerous editing possibilities as well as innovative functions. ETHNO WORLD 6 Instruments supports the Native Kontrol Standard (NKS), which allows tagging and interaction with the NI Komplete Kontrol keyboards and NI Maschine.
+Further additions are a new waveform display, visualization of the sample-start-offset as well as a clearer use of the effects where, among other features, delay times are now displayed in tempo-related note values and milliseconds. The Timemachine (TM PRO) delivers significantly improved audio results with tempo adapted material, especially for polyphonic licks and loops.
+And this is not only a benefit for the latest sounds of ETHNO WORLD 6 Instruments but also for all sounds of ETHNO WORLD 5 which were completely revised in this regard. At the same time, the number of patches has been reduced, leading to a clearer menu structure.
+Thanks to the integrated convolution reverb, all instruments sound exceptionally realistic and natural. Solo instruments additionally offer a high-quality legato mode. Plus, the humanize mode will play each new note with a slightly changed timbre. The micro-tuning allows the use of multiple ethnical tunings and scales. By using top-quality filters, LFOs, tune, automation, harmonizer and further effects, all instruments and voices can be efficiently edited and manipulated if needed - allowing to create new sonic worlds equally suited for modern music genres and film productions.
+A unique feature of ETHNO WORLD 6 Instruments is the integrated IDB-INFO (Information Database), being directly available from every instrument. Via the menu entry "IDB-INFO", you can access photos of the instruments as well as many details about their original play techniques and tunings, origins and variations. You will also find notes on how to use key-switches, achieving realistic results with the corresponding instrument. 
+
+Vocal Expansion
+
+In addition to ETHNO WORLD 6 Instruments, the separate dedicated vocal-library ETHNO WORLD 6 Voices is available. This library offers perfectly matching extensive solo-voices, phrases and choirs from Cameroon, Guinea, China, Iran, Turkey, Bulgaria, Northern Africa, Spain and Ukraine. For version 6, the voices and choirs have been expanded by new contributions from Africa, Arabia, Jamaica and India.
+Requires Kontakt Player 5.6.1\
+"""
+
+[ethno-world-6-voices]
+vendor = "best-service"
+name = "Ethno World 6 - Voices"
+categories = ["vsti.ethnic"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 6730
+url = "https://www.bestservice.com/en/ethno_world_6_voices.html"
+demo = "https://www.youtube.com/watch?v=-hmjr7vXXjw"
+price = 259
+nks = true
+description = """\
+The ultimate Sample-library for ethnic Voices from all over the World
+
+ETHNO WORLD 6 Voices is the summit of a library that has continuously been growing and improving for over 16 years. Never before was there such a comprehensive and high-quality library of ethnic voice recordings. ETHNO WORLD 6 Voices sets new standards for the musical use of ethnic voices. Never before, was there a library that was comprehensive, of perfect sound and yet innovative to play.
+Award-winning film composer Marcel Barsotti (e. g. Pope Joan, The Miracle of Bern) has gathered a gigantic selection of solo-voices, phrases and choirs from all over the word and widely varying cultures.
+ETHNO WORLD 6 Voices consists of approximately 177 patches with solo-voices, phrases and choirs. The library consists of 8,68 gigabytes (uncompressed) of sample data and 5,230 samples. All recordings come in 24 bit and 44.1 kHz.
+Singers from all over world were involved in the recording process, conducted by music-producer Andreas Hofner. The recordings took place in different local studios with the use of first-class gear such as microphones by Neumann and Brauner, SPL preamplifiers and converters by RME.
+
+Library size ~ 7 GB (using Kontakt´s lossless compression)
+Kontakt / Kontakt Player 5.6 or newer required!
+
+CONTENT
+
+ETHNO WORLD 6 Voices comprises an incredible spectrum of voices from the most diverse regions of the world. Here, you will find the fitting voice-recordings for folkloric, ethnic as well as for modern music. The library offers extensive solo-voices, phrases and choirs from Cameroon, Guinea, China, Iran, Turkey, Bulgaria, Northern Africa, Spain and Ukraine. The voices and choirs have been expanded by new contributions from Africa, Arabia, Jamaica and India. For example, the Houari Algerian rai singer is not only perfect for creating authentic atmospheres but also for EDM and Hip-Hop.
+Equally extraordinary are the Balinese and Mongolian overtone singings, the voices of the Chinese opera, Arabian, Indian and African choirs and solo-voices as well as the chants of American natives. Thus, there is a versatile choice of voices for the wide range of film-scoring, ethnic- or traditional music and also for modern music productions.
+With its selection of voice-recordings, ETHNO WORLD 6 Voices is the perfect library for film- and television productions that demand authentic sounds from specific regions of the world. Naturally, these voices will work in music productions of diverse genres that embrace these specific sonic elements - from pop to ambient to dance.
+For a detailed listing of all voices please go to "More Infos".
+
+THE INTERFACE
+
+ETHNO WORLD 6 Voices uses the free Kontakt 5 Player by Native Instruments as its sample-engine and can of course be used with the full version of Kontakt 5, too. For the new version, the user-interface's graphic has been completely redesigned and optimized for ultra fast access. There are numerous editing possibilities as well as innovative functions. ETHNO WORLD 6 Voices supports the Native Kontrol Standard (NKS), which allows tagging and interaction with the NI Komplete Kontrol keyboards and NI Maschine.
+Further additions are a new waveform display, visualization of the sample-start-offset as well as a clearer use of the effects where, among other features, delay times are now displayed in tempo-related note values and milliseconds. The Timemachine (TM PRO) delivers significantly improved audio results with tempo adapted material, especially for polyphonic licks and loops.
+And this is not only a benefit for the latest sounds of ETHNO WORLD 6 Voices but also for all sounds of ETHNO WORLD 5 which were completely revised in this regard. At the same time, the number of patches has been reduced, leading to a clearer menu structure.
+Thanks to the integrated convolution reverb, all voices sound exceptionally realistic and natural. By using top-quality filters, LFOs, tune, automation, harmonizer and further effects, all instruments and voices can be efficiently edited and manipulated if needed - allowing to create new sonic worlds equally suited for modern music genres and film productions.
+
+Instrumental Extension
+
+ETHNO WORLD 6 Voices is the perfect choice whenever voices with a specific cultural coloring are needed for your productions. The solo-voices, phrases and choirs can be combined with almost any musical genre. If you aim for fully authentic productions of folkloric or traditional music, ETHNO WORLD 6 Instruments with its gigantic pool of string, wind, drum and percussion instruments is the perfect extension to ETHNO WORLD 6 Voices.
+EW 6 Complete
+Requires Kontakt Player 5.6.1\
+"""
+
+[mystica-female-chamber-choir]
+vendor = "best-service"
+name = "Mystica - Female Chamber Choir"
+categories = ["vsti.vocal"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 3170
+url = "https://www.bestservice.com/en/mystica.html"
+demo = "https://www.youtube.com/watch?v=LFmuA2mg8Fc"
+price = 199
+description = """\
+Mystica – where world class vocalists meet the topmost innovative library designer and superior studio gear
+
+With Mystica, Eduardo Tarilonte continues his incomparable series of vocal-libraries. This classical chamber choir consists of eight extraordinary female vocalists, delivering a unique, enchanting sound without comparison.
+Mystica was designed as a female-choir-library for unconfined solo use. At the same time, the library forms a perfectly matched mixed choir when being combined with Cantus. Therefore, Mystica was recorded under identical conditions in spanish KBYO Recording Studios, located in Granada, using eight selected Neumann microphones and Avalon preamps.
+
+Cantus cover
+
+To ensure perfect team play of both libraries, Mystica offers the same words and Phrase-Arranger as Cantus. In addition, there is a new feature for quick-exchanging phrases and wordbuilder-settings between the libraries - in both directions. This way, the combination of Mystica and Cantus forms an impressive tool to create overwhelming choir passages.
+Mystica is an unparalleled choir with an extraordinary sound quality. Mystica offers an almost magical sound which is extraordinarily versatile and equally suited for esoteric and mystic melodies as well as for big cinematic passages. One of the benefits of Mystica is its wonderful, expressive „True Legato“.
+
+Mystica unifies realism and inspiration
+
+This unrivaled choir-library allows creating incredibly realistic choir-phrases with ease. Mystica's powerful and innovative wordbuilder combines 24 words in the form of 120 elements, consisting of full words, corresponding syllables and five True-Legato vowels (A, E, I, O, U) plus an additional “Mmmh“-articulation.
+As every Tarilonte vocal-library, Mystica offers the brilliant and innovative option of combining each word with any of the five True-Legato vowels, too. This way, realistically sounding vocal phrases can be created without using ready-made phrases.
+Nevertheless, Mystica can, of course, be used as a typical choir-library without its Phrase-Arranger. There is an ample choice of 100 Gregorian vocal phrases, allowing to create sacral atmospheres with ease. In addition, the library offers twelve soundscapes being formed from vocal recordings as well as vocal effects to create unusual sounds.
+
+Mystica Features:
+
+* unique „Numen Ensemble“ female choir with eight vocalists
+* 5 GB WAV samples, 24 bit/44.1 kHz
+* 5 “True Legato” vowels (A, E, I, O, U), separate “Mmmh”-articulation
+* powerful Phrase-Arranger with 24 words and three different articulations (staccato, fast, slow)
+* words can be separated in 120 short words/syllables
+* combine words with True-Legato vowels - automatic vowel selection
+* 100 Gregorian vocal phrases
+* 12 soundscapes, moulded from vocal recordings
+* additional vocal effects
+* new import/export functions to exchange Phrase-Arranger patches between Mystica and Cantus
+* dry recordings, perfect to be spiced up with individual reverberation
+
+The female choir selected by Tarilonte is the “Numen Ensemble”, founded 2011. This choir is formed by experienced and talented vocalists with broad vocal repertoire. Most singers have been or still are members of renowned ensembles such as the Baroque Sevilla Choir, the Choir of the Maestranza or the Choir of the City of Granada Symphonic Orchestra.\
+"""
+
+[shevannai-the-voices-of-elves]
+vendor = "best-service"
+name = "Shevannai - The Voices of Elves"
+categories = ["vsti.vocal"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 2600
+url = "https://www.bestservice.com/en/shevannai.html"
+demo = "https://www.youtube.com/watch?v=DUgDwelor-c"
+price = 159
+description = """\
+Welcome to "Shevannai, the Voice of Elves" !
+
+A perfect tool for composers and sound designers to create ambiences and music for films, documentaries, video games and new age music. Unparalleled realism... Pure inspiration
+Shevannai is a beautiful solo vocal library aiming for easily creating your own ultra-realistic melodies, without using any phrases. Thanks to over 4000 carefully recorded and wisely programmed samples by Eduardo Tarilonte, handling the 5 true legato types and 33 words, is intuitively easy.
+Shevannai´s voice patch offers:
+
+* 5 different true legatos (a,e,i o,u)
+* 33 words
+* 27 staccatos (16 short and 11 long)
+* 113 phrases in different keys (A,Bb, C, D, E, Eb, F and G)
+* 52 phrases in Elven Language reciting some Elven poems
+* 57 whispered phrases in Elven Language reciting some Elven poems.
+* 110 different whispers. Divided in long and short whispers.
+* 20 beautiful and inspiring soundscapes
+ 
+Shevannai is grouped into three sections:
+
+* The Voice: Legato, Staccato and Inhale patches
+* Phrases: Over 100 phrases in different keys (A,Bb, C, D, E, Eb, F and G) and whispers.
+* Soundscapes: 20 beautiful and inspiring soundscapes.
+ 
+4,409 unique samples (mono, 44 Khz, 24 bits) 3,60 GB.
+Minimum Free Kontakt Player od Full Kontakt Version 5.8.1 required.
+
+Lara Asensi
+
+One of the most important features of this library is that the voice was recorded without vibrato. Singing non-vibrato requires a very experienced singer and a lot of effort to obtain a true ethereal feeling. Of course you may add vibrato at any time.
+Thank you Lara Ausensi for giving Shevannai such a wonderful voice!\
+"""
+
+[the-orchestra-complete]
+vendor = "best-service"
+name = "The Orchestra Complete"
+categories = ["vsti.brass","vsti.percussion","vsti.strings","vsti.woodwinds"]
+requires = [["native-instruments-kontakt-player","6"]]
+size = 23370
+url = "https://www.bestservice.com/en/the_orchestra_complete.html"
+demo = "https://www.youtube.com/watch?v=xQK7X_tBcxc"
+price = 479
+nks = true
+description = """\
+The Orchestra Complete 3 - New Features - New Instruments - New Presets
+
+"The Orchestra Complete 3" combines the powerful orchestration capabilities that have made "The Orchestra" recognized in the composition community with brand-new articulations and the most effective new features ever. Composing faster, more freely, and more uniquely has never been simpler.
+The third version, which includes all three "The Orchestra" expansions, is filled with thrilling potential and power. Among them are "Horns Of Hell", which features a diabolical "evil brass" section, "Strings Of Winter", which features a 41-piece string orchestra and captures the wild spirit of nature, and "Woods Of The Wild", which re-energizes the woodwinds to catch all that is evocative in their breath.
+In addition to  these expansions comes the all-in-one package of the base orchestra, a top-quality-recorded 80-piece orchestra with a massive array of articulations and a groundbreaking ensemble engine that has been rebuilt and expanded upon. It's now simpler than ever to turn your ideas into music.
+
+What´s Included?
+
+"The Orchestra Complete 3" extends our entry-level instrument "The Orchestra" with more instruments, more presets and extended powerful features. Now including:
+
+* Woods Of The Wild - Complete and extended woodwind section with impressive articulations like triple tongues and rips and trills. Also included are mallets, other wooden drums, and percussion.
+* Horns Of Hell - More than 65 expressive brass articulations and 120 incredible and powerful presets, including a full Organ library.
+* Strings Of Winter - 60 string articulations, two new ethnic string sections and all additional content from Strings Of Winter.
+* Sequence Designer - In addition to the default options, you can create your own unique musical patterns. You have the option to change each of these sequences separately, which gives you the ability to make more intricate compositions.
+* Pure Performance Legato - We are pleased to present a powerful legato engine that has undergone a complete redesign. Because the engine can differentiate between the two articulations without the use of keyswitches, you can play both fast true legato and staccato runs without any hassles.
+* Main Page: Voicing Selection - Assign which instrument plays which note of the chord to allow for more realistic ensemble sounds. Or choose from over 90 pre-arranged Voicings. The Ensemble Engine is just like having a real-life orchestrator working for you.
+* Additional presets and multi-instruments - Discover how the Voicings (208 presets), Rhythms (239 presets), and Animated Orchestra settings (223 presets) work with the 5-part arranging engine by exploring the presets to get the most out of "The Orchestra Complete 3". Updated Voicings that use and bring together the expanded libraries in innovative and expressive ways are also included in "The Orchestra Complete 3".
+* MIDI Export - "The Orchestra Complete 3" comes with MIDI-Export. Patterns and arrangements generated by the engine can be exported onto separate MIDI Tracks, opening endless possibilities.
+
+The Core – The Ensemble Engine
+
+The Ensemble Engine works through a number of independent arpeggiators and velocity envelopes, heavily inspired by the Sonuscore Origins-Series.
+
+Create Complex Arrangements With Simple Chords
+
+Create pulsating rhythms and inspiring full arrangements with simple chords and without the use of any pre-recorded phrases. At the heart of "The Orchestra Complete 3" is the Ensemble Engine, which allows this inspiring dance of instruments and rhythms to unfold before your very eyes with only the press of a chord.
+
+* 3 independent arpeggiators and 2 velocity envelopes can be assigned to create vivid and powerful orchestral voicings
+* Create and customize your own patterns through the sequencer designer.
+* Load up to 5 different instruments in independent slots and play them together.
+* Every slot can be assigned to one of five different modules.
+* Assign percussion to the arpeggiator to create pulsating rhythms.
+* Voicings selection - Assign which instrument plays which note of the chord to allow for more realistic ensemble sounds. Or you can choose from our 90+ pre-arranged Voicings.
+
+Compose Faster with Full Instrumental Groups
+
+Choose from nearly 700 Presets in Three Categories.
+
+* Orchestral Voicings - Orchestral Voicings include various playable arrangements of instruments that create the fullest and richest orchestral sound.
+* Orchestral Rhythms - Orchestral Rhythms presets bring you cinematic and expressive rhythms that take full advantage of the Ensemble Engine.
+* Animated Orchestra - Making full use of all the possibilities of the Ensemble Engine, the Animated Orchestra presets are for the most complex and magical musical ideas.
+
+Export Your Custom Performance
+
+Drag and drop MIDI to your DAW. Once you have been inspired by a preset or have created your own complex arrangement, drag and drop your passage right from the Kontakt orchestra nki to your DAW. Unleash the power of the Customizer Engine onto your personal template, change notes, combine different patterns, and make them your own.
+
+Take Full Control Over The Ensemble
+
+Work quickly and intuitively with our straightforward user interface.
+On the Engine page you can access all individual controls for each of the five instrument modules. Short notes can be arranged with the arpeggiators, while sustained notes can be shaped with the velocity envelope. Create the orchestral colors as you need them and let the magic happen.
+
+* Arpeggiator - The arpeggiator creates fascinating melodic patterns to give your project a rich and lively orchestral feeling. Change the pattern of the arpeggiator with the rhythm stepper. If needed, you can modify almost every parameter to stay in full control of your orchestral voicing.
+* Sequence Designer - The Sequence Designer is included in the arpeggiator. This allows you to create in detail your own musical passages. Instead of following the specific styles of preset arpeggios, create your own and make it as complex as you’d like.
+* Velocity Envelope - Shape your sustain sounds with the Velocity Envelope, adding to your sound a recurring dynamic movement from a sustained note. The centerpiece is the envelope shape, which can be drawn freely.
+
+Play Over 280 Instruments / Articulations Freely
+
+Create full and detailed orchestrations from scratch. Play your ideas and your melodies freely with countless single instruments. Included are all standard sections and articulations from a symphonic orchestra, including percussion as well as tonal percussion (Marimbaphone, Vibraphone, Xylophone and Glockenspiel) and as a bonus: choir, piano, cembalo, celesta and a massive church organ.
+
+Pure Performance Legato
+
+With our Pure Performance Legato technology, you can play both fast true legato and staccato runs without any problems, as the engine can distinguish between both articulations without the need for keyswitches. Special attention was paid to the integration of the true legato transitions, fitting each of the more than 400 transitions per instrument independently into the intervals in a way that allows for a very smooth and playable legato.
+
+Ensemble-Multi Patches: Unleash The Full Orchestral Power
+
+Multis take the Ensemble Engine even further toward instant playability and epic sound as they load and layer multiple instances of "The Orchestra". The easiest way to create complex orchestral arrangements.
+There are full playable orchestral multis for single articulations that work perfectly for quick sketching and layering. Orchestral Rhythm and Animated Orchestra Multis combine multiple instances of the Ensemble Engine to create even more complex patterns.
+
+The Samples: Rough, Unpolished And Human
+
+"The Orchestra" was recorded and processed with the intention to sound a bit rougher and more “honest” than the common Hollywood-sounding orchestra vst. It offers an alternative and promises straight and powerful sounds, punch and a vivid musical experience.
+The instruments for "The Orchestra" were recorded in Budapest at the renowned Studio 22 in their traditional seating position and mixed and edited with great attention to detail. This way the different sections blend together perfectly in the same room. All essential articulations are available, including playable true legato samples and multiple round robins for short articulations.
+
+Preset Browser
+
+The updated preset browser is available for "The Orchestra Complete 3", "Strings Of Winter", "Horns Of Hell" and "Woods of the Wild". Explore the massive selection of presets using intuitive filters and categories.
+
+Choose Your Favorite Interface Design
+
+"The Orchestra Complete 3" by default loads each instrument in the appropriate design. If you prefer a different design, you can switch it anytime via the instrument settings.
+
+Key Features
+
+* Breakthrough Ensemble Engine
+* Play freely or create stunning orchestral colors with simple chords
+* Complete set of standard articulations for all instruments
+* True Legato Interval Sampling
+* 670 ready-to-go ensemble presets
+* 230 Multi-Rack Patches
+* 25GB of data
+* 40,000+ individual Samples
+* Fast loading times
+
+The Orchestra: The Power of a Full Orchestra at your Fingertips
+
+"The Orchestra" was developed for Best Service by Sonuscore / Dynamedion, the makers of Trinity Drums as well as NI Action Strings, Action Strikes and Emotive Strings.
+
+Dynamedion
+
+Dynamedion was founded in 2000 by Tilman Sillescu and Pierre Langer, two composers with university degrees in music. With a steadily increasing number of contracts and growing customer base it has since become a leader in soundtrack composition and sound design on the European computer game market. In 2005 Dynamedion produced highly successful, first benchmark live orchestra recordings for a German game soundtrack, setting the standard for large-scale projects in the industry. With numerous further orchestral productions for the video game industry, Dynamedion has earned itself a reputation for unsurpassed quality and integrity in this area.
+Minimum required free Kontakt Player or full Kontakt version 6.7\
 """
