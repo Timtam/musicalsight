@@ -25,7 +25,7 @@ const createFormData = (p?: Product) => ({
     url: p?.url || "",
     demo: p?.demo || "",
     size: p?.size ? p.size / 1024 / 1024 : (undefined as number | undefined),
-    price: p?.price || (undefined as number | undefined),
+    price: p?.price?.toString() || "",
     nks: p?.nks || (false as boolean | string),
     description: p?.description || "",
     accessibility_description: p?.accessibility_description || "",
@@ -192,17 +192,17 @@ function CatalogSubmit() {
                     </Form.Label>
                     <Form.Control
                         type="number"
+                        step="0.01"
+                        lang="en"
                         id="form-details-price"
-                        value={data.price !== undefined ? data.price : ""}
-                        onChange={(evt) =>
-                            setData({
-                                ...data,
-                                price:
-                                    evt.target.value !== ""
-                                        ? parseInt(evt.target.value)
-                                        : undefined,
-                            })
-                        }
+                        value={data.price}
+                        onChange={(evt) => {
+                            if (!isNaN(parseInt(evt.target.value)))
+                                setData({
+                                    ...data,
+                                    price: evt.target.value,
+                                })
+                        }}
                     />
                     <Form.Label for="form-details-nks">NKS Support</Form.Label>
                     <Form.Select
@@ -589,6 +589,7 @@ function CatalogSubmit() {
                         let vendorId = ""
                         let productId = slugify(data.name, {
                             lower: true,
+                            strict: true,
                         })
 
                         evt.preventDefault()
@@ -624,8 +625,7 @@ function CatalogSubmit() {
                             msg += `size = ${data.size}\n`
                         if (data.url !== "") msg += `url = "${data.url}"\n`
                         if (data.demo !== "") msg += `demo = "${data.demo}"\n`
-                        if (data.price !== undefined)
-                            msg += `price = ${data.price}\n`
+                        if (data.price !== "") msg += `price = ${data.price}\n`
                         if (typeof data.nks === "string")
                             msg += `nks = "${data.nks}"\n`
                         else if (data.nks === true) msg += `nks = ${data.nks}\n`
