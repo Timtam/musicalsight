@@ -4378,3 +4378,332 @@ Zodiac is powered by the industry-leading Kontakt engine. It is compatible with 
 - 4.6 GB (over 8 GB uncompressed)
 - Kontakt Player 5.2.1 included\
 """
+
+[the-morpheus]
+vendor = "big-werks"
+name = "The Morpheus"
+categories = ["vsti.ambient","vsti.guitar","vsti.strings","vsti.synthesizer","vsti.vocal","vsti.brass"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 4680
+url = "https://bigwerks.com/product/the-morpheus-kontakt-library/"
+demo = "https://www.youtube.com/watch?v=VaFrNHT3iz4"
+price = 59.99
+description = """\
+The Morpheus is a kontakt library designed for all genre of music, game & film composers. With dark & ambient sounds, cinematic guitars, deep unique bass samples, vocals, and much, much more.
+
+- Over 350 Presets
+- Custom GUI
+- Plenty of Fx to manipulate sounds
+- Arpeggiation, and two fx Pages
+- 9 GB of content, uncompressed
+- 20 custom impulse responses
+ 
+Is the Morpheus worth it?
+
+Bigwerks and Xclusive-Audio spent 8 months creating and perfecting these sounds dynamically and sonically.
+With over 350 dark and cinematic sounds and also adding unique vocal runs,
+the Morpheus is a stand out kontakt library.
+
+About the sounds.
+
+- Guitars were recorded using Neumann microphones and/or recorded directly into the studio computers.
+- Strings, brass and choir samples were recorded by 3rd party company (BigWerks, Xclusive-audio also) and edited, programmed into kontakt by Bigwerks.
+- Pianos recorded/designed my Bigwerks (Xclusive-audio also)
+- Vocal recordings by Laquan Green.
+- All synth designs were created with hardware and virtual synthesizers.
+- Special thanks to Xclusice-audio who designed the gui and 100 of the 350+ sounds.
+
+Instruments include:
+
+* Cinematic Guitars, Brass, bass, strings & pianos.
+* Drones, Dark unique Pads, Vocals,
+* 808s, Choirs, Arps, Bells, Hits,
+* Plucks, Multi use & unique Fx,
+* Guitar phrases, Leads, Synth.
+ 
+FX include:
+
+filter & amp envelopes, lfo controls(2), phaser, glide controls (mono, Leg.),
+e.q, hp & lp filter controls, screamer, cabinet, delay(2), reverb, chorus & arpeggiator
+
+System Requirements
+
+- The Morpheus runs on Kontakt full version 5.1.0 or higher
+- At least 4 GB of RAM (8 GB recommended), and 12 GB of free drive space
+- Est. download time for The Morpheus Kontakt Library - 50 Min\
+"""
+
+[handbells]
+vendor = "bolder-sounds"
+name = "Handbells"
+categories = ["vsti.percussion"]
+requires = [["native-instruments-kontakt","3"]]
+size = 519
+url = "https://www.boldersounds.com/index.php?main_page=product_music_info&cPath=3_18&products_id=85&zenid=5h1k8q09nspghubikqvjqtflq4"
+demo = "https://soundcloud.com/bolder-sounds/sets/handbells-v2"
+price = 129
+description = """\
+Handbell V2 Sampled Articulations -
+
+Handbell Clapper - samples are created with the traditional technique of holding it against the shoulder, bell-upwards, and then swinging the bell through an elliptical shape to cause the clapper to strike the casting of the bell.
+
+Suspended Handbell with a soft rubber mallet - samples were recorded with the bells suspended from the ceiling of the room while being struck with a soft rubber mallet.
+
+Suspended Handbell with a hard rubber mallet - samples were recorded with the bells suspended from the ceiling of the room while being struck with a hard rubber mallet.
+
+Suspended Handbell with a plastic chopstick - samples were recorded with the bells suspended from the ceiling of the room while being struck with a plastic chopstick. This creates a great deal of high frequency content for a special effect.
+
+Singing Handbells - The Singing Handbells sound is created by running a wood dowel along the rim of the handbell, similar to the way you can run a wet finger along the edge of a crystal glass and make it sing.
+
+Plucked Handbells - is accomplished by using the thumb and forefinger to force the clapper head into the casting while the bell is on the table, producing a staccato note.
+
+Malleted Handbells on a padded table - samples are created by striking the bell with a rubber mallet while the bell is resting on the foam of a padded table. This produces a tone brighter and more percussive than the plucked samples.
+
+Handbell Shakes - is accomplished by quickly ringing the bell back and forth so that the clapper strikes both the front and back of the bell casting in rapid succession. This creates a continuous sustained tone.
+
+Martellato (mart) - this articulation is created when the handbell is rung by holding it by the handle and gently striking the full body of the handbell horizontally on the padded table.
+
+Martellato Lift (mart-lift) - is the above Martellato articulation followed by immediately lifting the handbell from the table to allow the bell to continue to ring.\
+"""
+
+[shimmer-and-shake]
+vendor = "vstbuzz"
+name = "Shimmer & Shake"
+categories = ["audio","vsti.percussion"]
+requires = [["native-instruments-kontakt","5"]]
+size = 3750
+url = "https://vstbuzz.com/the-vault/shimmer-shake/"
+demo = "https://www.youtube.com/watch?v=4PWme3ZgTnc"
+price = 29
+description = """\
+Shimmer & Shake is a re-release of the original Nine Volt Audio sample library – updated and improved for 2019. It contains 25 instruments with 89 different rhythms (over 2300 loops) covering 4/4, 3/4, 7/8 and 5/4 time signatures and individual hits and rolls for each instrument.
+Available in Kontakt, WAV & RMX, REX formats, its perfect for your small percussion needs in a range of styles including Indie, Pop, Rock, Underscore and more!\
+"""
+
+[cinematic-studio-piano]
+vendor = "cinematic-studio-series"
+name = "Cinematic Studio Piano"
+categories = ["vsti.keys"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 4190
+url = "https://cinematicstudioseries.com/piano/"
+demo = "https://www.youtube.com/watch?v=s-EbCDqiM9o"
+price = 69
+nks = true
+description = """\
+INTRODUCING CINEMATIC STUDIO PIANO
+
+The vibrancy and realism of CSP make it the perfect piano accompaniment to the rest of the Cinematic Studio Series of orchestral libraries. CSP features a beautiful Yamaha C7 Grand, recorded in Australia’s premiere scoring stage. Great care went into capturing the full dynamic range of the instrument, with the pedal up and down. We also captured the incidental key and pedal noises that occur during a real performance, adding greater authenticity to the sound.
+
+STRAIGHTFORWARD AND REALISTIC
+
+Like the rest of the Cinematic Studio Series, CSP features a no-nonsense GUI, which is easy to learn so you can get straight to work. Four microphone channels, controlled via the mixer, provide the perfect combination of detail and ambience. We also included a variety of scrapes, glissandos and plucks in an FX patch, perfect for adding tension to a score. The output routing feature makes it easy to sculpt your own sound, and the modest resource footprint means you can comfortably add it to any project.
+
+Cinematic Studio Piano is recorded in the same world-class scoring stage as Cinematic Studio Strings, and is the perfect piano accompaniment to the rest of the series. With an integrated high quality reverb, multiple microphone positions and carefully recorded key and pedal noises, CSP’s intuitive GUI and real-life sound make it an invaluable addition to your orchestral template.\
+"""
+
+[cinematic-studio-strings]
+vendor = "cinematic-studio-series"
+name = "Cinematic Studio Strings"
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 45200
+url = "https://cinematicstudioseries.com/strings/"
+demo = "https://www.youtube.com/watch?v=VTRxLOAnbjI"
+price = 399
+nks = true
+description = """\
+INTRODUCING CINEMATIC STUDIO STRINGS
+
+CSS features a Hollywood-style string section, recorded in position in Australia’s premiere scoring stage – Trackdown. From the soaring colourful vibrato of the high violins to the dark and woody textures of the low cello and bass notes, you’ll be instantly inspired. Our aim was to create an instrument that’s instantly playable, sounds great out-of-the-box and is backed up by speedy customer support.
+
+GROUNDBREAKING INTERFACE
+
+At the heart of CSS is its cutting edge GUI, building on our previous critically-acclaimed library Cinematic Strings 2. This means a short-but-sweet patch list, easily assignable keyswitches and MIDI CCs, and a full mixer with output routing options plus reverb. These features and many others are all accessible via the main GUI page, you’ll have CSS working alongside you on your latest project within minutes.
+
+REALISTIC AND EXPRESSIVE
+
+CSS features a stunningly realistic legato engine. We painstakingly recorded true legato transitions for each note, up and down, including a beautiful portamento. We also recorded ‘re-bow’ samples, meaning you can play repeated legato notes smoothly and with true-legato realism. Please check out the Legato Introduction video below. NEW: Powerful marcato articulation allows you to  create highly realistic runs with ease.
+
+LIVE SOUND, NO REVERB REQUIRED
+
+With smooth legato, punchy spiccatos, inspiring textural harmonics and con sordino, CSS covers a wide range of the sound palette afforded by a world-class string section. We’ve kept an authentic, human element in the sound, so you’ll feel like you’re at a live session. With this new level of realism, you’ll feel comfortable using CSS without reverb; in fact, we recommend it! All of our demos were created without reverb – all you hear is the natural air captured in the samples.
+
+FULLY MIXED - LOAD AND PLAY
+
+We used a variety of beautiful ribbon and condenser microphones to record CSS at three distances, which you can combine to create your own unique mix either inside Kontakt or via the newly included output-routing option. Alternatively, you can use our pre-mixed combination of all 3 if you want a great sound with fewer resources. Full and Lite Ensemble patches optimise workflow and are perfect for sketching or filling out a track.
+
+Articulations
+
+* LEGATO, INCLUDING SAME-NOTE RE-BOWS, PORTAMENTO AND VIBRATO CONTROL
+* SPICCATO
+* STACCATISSIMO
+* STACCATO
+* SFORZANDO
+* PIZZICATO, INCLUDING BARTÓK SNAPS
+* COL LEGNO
+* HARMONICS
+* TREMOLO
+* TRILLS (HALF AND WHOLE TONE)
+* MEASURED TREMOLO (TREMOLO SYNC AND FREE SYNC)
+* MARCATO/FAST RUNS
+* CON SORDINO EMULATION (WHOLE LIBRARY)\
+"""
+
+[cinematic-studio-woodwinds]
+vendor = "cinematic-studio-series"
+name = "Cinematic Studio Woodwinds"
+categories = ["vsti.woodwinds"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 90500
+url = "https://cinematicstudioseries.com/woodwinds/"
+demo = "https://www.youtube.com/watch?v=uzvyLoLyW7E"
+price = 399
+nks = true
+description = """\
+NEW! CINEMATIC STUDIO WOODWINDS
+
+Cinematic Studio Woodwinds is the latest addition to the Cinematic Studio Series collection. Whether you want to blow the roof off with the bright penetrating sound of the piccolo, express emotion with the beautiful lyrical oboe, or vibrate the floor with the deep and powerful bass clarinet, these superb instruments bring warmth and vitality to your orchestral template. They perfectly complement the rest of the series: the Strings, Solo Strings, Brass and Piano.
+
+INTUITIVE, EASY-TO-USE INTERFACE
+
+At the heart of Cinematic Studio Woodwinds is its intuitive and efficient GUI. This means one patch per instrument, easily assignable keyswitches and MIDI CCs, and a full mixer with output routing options plus reverb. To save memory, articulations can be loaded in or out of RAM with a couple of clicks. As the layout is functionally the same as for Cinematic Studio Strings and Brass, these features and many others are all accessible via the main GUI page.
+
+BROAD PALETTE — SOLOISTS AND SECTIONS
+
+To record Cinematic Studio Woodwinds we used a marvellous selection of top-tier players to capture the full range and character of each of nine solo instruments and four sections. Whether you want the fine detail of a soloist, or the warm collaborative synergy of our two-player sections, we recorded the full dynamic range to harness both nuance and power. Every instrument was treated equally, including the piccolo, cor anglais, alto flute, bass clarinet and contrabassoon.
+
+VERSATILITY AND REALISM
+
+CSW features a range of articulations including playful short notes, expansive textures with flutter-tongue and trills, and a stunningly realistic legato engine. We spent countless hours recording true long-form legato transitions for each note, resulting in unparalleled realism. Because we’ve kept an authentic, human element in the sound you’ll feel like you’re in the room with the players. Every sample was tuned by ear, and carefully edited and programmed to ensure a delicate balance between consistency, playability and realism.
+
+FULLY MIXED — LOAD AND PLAY
+
+We used a variety of beautiful ribbon and condenser microphones to record Cinematic Studio Woodwinds at four mic distances: Close, Overhead, Main and Room, which you can combine to create your own mix inside Kontakt or via the output-routing option. Alternatively, you can use our ready-to-go mix position that contains all four mics in a stereo mix if you want a great sound with fewer resources. A Full Ensemble patch will be released as an update in the near future.
+
+Instruments and articulations
+
+* SOLO FLUTE
+* 2 FLUTES
+* SOLO OBOE
+* 2 OBOES
+* SOLO CLARINET
+* 2 CLARINETS
+* SOLO BASSOON
+* 2 BASSOONS
+* SOLO PICCOLO
+* SOLO COR ANGLAIS
+* SOLO ALTO FLUTE
+* SOLO BASS CLARINET
+* SOLO CONTRABASSOON
+* SUSTAINS — WITH AND W/O VIBRATO
+* LEGATO — WITH AND W/O VIBRATO
+* REPETITIONS
+* STACCATISSIMO
+* STACCATO
+* SFORZANDO
+* HALF AND WHOLE TRILLS
+* FLUTTER TONGUE (FLUTES ONLY)
+* MARCATO
+* PLAYABLE RUNS
+* MEASURED REPETITIONS\
+"""
+
+[cinematic-studio-brass]
+vendor = "cinematic-studio-series"
+name = "Cinematic Studio Brass"
+categories = ["vsti.brass"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 33900
+url = "https://cinematicstudioseries.com/brass/"
+demo = "https://www.youtube.com/watch?v=7zndqAMQm7c"
+price = 399
+nks = true
+description = """\
+INTRODUCING CINEMATIC STUDIO BRASS
+
+Cinematic Studio Brass brings a powerful Hollywood-style brass section to your fingertips and is the newest addition to our Cinematic Studio Series. We spent nearly 300 hours recording in a world-class scoring stage, using a unique combination of microphones to capture the individual character and charm of each instrument. The result is a stunning package of playable, realistic brass instruments; CSB stands out from the crowd either on its own, or as a perfect complement to Cinematic Studio Strings.
+
+INTUITIVE SCRIPTING, EASY TO USE GUI
+
+The GUI is streamlined and efficient, with its minimal number of patches making it quick to learn and easy to use. The layout is functionally the same as for Cinematic Studio Strings, so of course it’s easy to work with on its own, or equally easy when using both libraries together. The GUI features easily assignable keyswitches and MIDI CCs, and a full mixer with output routing options plus reverb. To save memory, articulations can be loaded in or out of RAM with a couple of clicks.
+
+DETAILED SOLOISTS, POWERFUL SECTIONS
+
+Cinematic Studio Brass is a highly versatile library, capable of bringing you the sweet sounds of a gentle melody, or packing a real punch to bring all the drama and impact of a real Hollywood brass section to your music. We recorded the full dynamic range across every instrument, so when you play hard, you’ll hear hard – thanks to our talented players giving their all in every session. There’s nothing like hearing a brass ensemble really bring a room to life, and that’s exactly the sensation we’ve captured here.
+
+UNRIVALED REALISM AND CONSISTENCY
+
+We’ve broken new ground here with our smooth and powerful legato and marcato articulations. Long-form legato was captured across the entire dynamic range – the result of countless hours of recordings and retakes. You’ll be swept away by the level of realism we’ve achieved. In addition the legato scripting has been upgraded with further under-the-hood functionality, so sculpting new melodic phrases is easier than ever. As always, we’ve maintained the highest possible level of consistency across all instruments to give them all a similar feel on the keyboard.
+
+FULLY MIXED - LOAD AND PLAY
+
+We used a variety of beautiful ribbon and condenser microphones to record Cinematic Studio Brass at three mic distances, Close, Main and Room, which you can combine to create your own mix inside Kontakt or via the output-routing option. Alternatively, you can use our ready-to-go mix position that contains all three mics in a stereo mix if you want a great sound with fewer resources. The Full Ensemble patches optimise workflow and are perfect for sketching or filling out a track.
+
+Instruments and articulations
+
+* SOLO TRUMPET
+* 2 TRUMPETS
+* SOLO FRENCH HORN
+* 4 FRENCH HORNS
+* SOLO TROMBONE
+* 2 TROMBONES
+* BASS TROMBONE
+* TUBA
+* SUSTAINS WITH LONG-FORM LEGATO, FROM PP UP TO FFF
+* REPETITIONS, STACCATISSIMO, STACCATO AND SFORZANDO
+* MUTED NOTES ⁠— BOTH SHORT & LONG
+* FLUTTER TONGUE
+* TRILLS
+* DOUBLE TONGUE
+* MARCATO
+* RIPS\
+"""
+
+[cinematic-studio-solo-strings]
+vendor = "cinematic-studio-series"
+name = "Cinematic Studio Solo Strings"
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 38700
+url = "https://cinematicstudioseries.com/solo-strings/"
+demo = "https://www.youtube.com/watch?v=WFvSrlt9lAM"
+price = 299
+nks = true
+description = """\
+PRESENTING CINEMATIC STUDIO SOLO STRINGS
+
+Cinematic Studio Solo Strings is the perfect complement to Cinematic Studio Strings. CSSS brings you solo violins 1 and 2, viola and cello to add a tantalising new dimension to your musical creations. We spent more than 120 hours recording Australia’s finest string players in a world-class scoring stage, using a unique combination of microphones to capture the individual character and charm of each instrument. The result is a stunning package of playable, realistic solo strings that stands out from the crowd either on their own, as an exquisite quartet, or as first chair for the full-section strings.
+
+INTUITIVE, EASY TO USE GUI
+
+The GUI is streamlined and efficient, with a minimal number of patches making it quick and easy to learn. The layout is functionally the same as for Cinematic Studio Strings, so you can double the solo instrument patches with their section counterparts (eg Solo Violin I with 1st Violins), and play them at the same time on one MIDI channel. This first-chair functionality serves to reinforce the sound of each section, with the lush sound of the section bolstered by a 1st-chair solo patch. This blending together of the two libraries creates an even smoother, richer sound.
+
+VIRTUOSO SOLO, QUARTET OR FIRST CHAIR
+
+Cinematic Studio Solo Strings brings all the emotional depth and virtuosity of an outstanding quartet to your fingertips, making it the perfect compositional tool for exposed lyrical solo or quartet passages. And because we maintained positional accuracy and recorded the same diverse range of articulations, CSSS provides a vibrant first-chair accompaniment to our full section library Cinematic Studio Strings. This allows you to seamlessly transition between writing for solo strings and full sections.
+
+UNPARALLELED REALISM
+
+Cinematic Studio Solo Strings are expressive, emotive and powerful, with a smooth realistic sound that gives any melody that elusive human touch. Every sample was tuned by ear, and carefully edited and programmed to ensure that delicate balance between consistency, playability and realism. All of the dynamics have been preserved in their natural state, and as with CSS, no EQ or reverb was applied to the demos, so what you hear is the pure, out-of-the-box sound.
+
+COMPREHENSIVE LIST OF ARTICULATIONS
+
+Cinematic Studio Solo Strings features a comprehensive list of playing articulations and styles, including true long-form legato for enhanced realism, portamentos and marcato. There is an excellent range of short notes, as well as tremolos, trills, and col legno. The articulation list, dynamic layers and keyswitch layout of the library match Cinematic Studio Strings in order to provide  a perfect first-chair accompaniment.
+
+Articulations
+
+* LEGATO, INCLUDING LEGATO REPETITION AND PORTAMENTO
+* SPICCATO
+* STACCATISSIMO
+* STACCATO
+* SFORZANDO
+* PIZZICATO, INCLUDING BARTOK SNAPS
+* COL LEGNO
+* HARMONICS
+* TREMOLO
+* TRILLS (HALF AND WHOLE TONE)
+* MEASURED TREMOLO (TREMOLO SYNC AND FREE SYNC)
+* MARCATO/FAST RUNS
+* CON SORDINO EMULATION (WHOLE LIBRARY)\
+"""

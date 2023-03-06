@@ -133,3 +133,19 @@ url = "https://www.bestservice.com/en/index.html"
 [big-fish-audio]
 name = "Big Fish Audio"
 url = "https://www.bigfishaudio.com/"
+
+[big-werks]
+name = "Big Werks"
+url = "https://bigwerks.com/"
+
+[bolder-sounds]
+name = "Bolder Sounds"
+url = "https://boldersounds.com/"
+
+[vstbuzz]
+name = "VSTBuzz"
+url = "https://vstbuzz.com/"
+
+[cinematic-studio-series]
+name = "Cinematic Studio Series"
+url = "https://cinematicstudioseries.com/"
