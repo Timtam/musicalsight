@@ -4,68 +4,20 @@ name = "Virtual Instrument"
 [vsti.keys]
 name = "Keys"
 
-[vsti.keys.piano]
-name = "Piano"
-
-[vsti.keys.organ]
-name = "Organ"
-
 [vsti.brass]
 name = "Brass"
-
-[vsti.brass.french-horn]
-name = "French Horn"
-
-[vsti.brass.trumpet]
-name = "Trumpet"
-
-[vsti.brass.trombone]
-name = "Trombone"
-
-[vsti.brass.tuba]
-name = "Tuba"
 
 [vsti.woodwinds]
 name = "Woodwinds"
 
-[vsti.woodwinds.flute]
-name = "Flute"
-
-[vsti.woodwinds.oboe]
-name = "Oboe"
-
-[vsti.woodwinds.clarinet]
-name = "Clarinet"
-
-[vsti.woodwinds.bassoon]
-name = "Bassoon"
-
 [vsti.strings]
 name = "Strings"
-
-[vsti.strings.violin]
-name = "Violin"
-
-[vsti.strings.viola]
-name = "Viola"
-
-[vsti.strings.cello]
-name = "Cello"
-
-[vsti.strings.bass]
-name = "Bass"
 
 [vsti.guitar]
 name = "Guitar"
 
 [vsti.synthesizer]
 name = "Synthesizer"
-
-[vsti.synthesizer.subtractive]
-name = "Subtractive"
-
-[vsti.synthesizer.fm]
-name = "FM"
 
 [vsti.sampler]
 name = "Sampler"
@@ -75,12 +27,6 @@ name = "Drums"
 
 [vsti.percussion]
 name = "Percussion"
-
-[vsti.percussion.tonal]
-name = "Tonal Percussion"
-
-[vsti.percussion.atonal]
-name = "Atonal Percussion"
 
 [vsti.ethnic]
 name = "Ethnic"
@@ -144,9 +90,6 @@ name = "Tone Generators"
 
 [unclassified]
 name = "Unclassified"
-
-[vsti.strings.harp]
-name = "Harp"
 
 [software]
 name = "Software"

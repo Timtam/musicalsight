@@ -1,7 +1,7 @@
 [1990-studio-grand-piano]
 vendor = "8dio"
 name = "1990 Studio Grand Piano"
-categories = ["vsti.keys.piano"]
+categories = ["vsti.keys"]
 requires = [["native-instruments-kontakt", "5"]]
 url = "https://8dio.com/products/1990-studio-grand-piano"
 size = 17300
@@ -16,7 +16,7 @@ We wanted to create a hyper-realistic virtual instrument that pays an homage to 
 [adagio-violins1]
 vendor = "8dio"
 name = "Adagio Violins Vol. 1"
-categories = ["vsti.strings.violin"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt", "5"]]
 url = "https://8dio.com/products/adagio-violins"
 size = 15800
@@ -73,7 +73,7 @@ It has always been our mantra to push sampling forward in regards to realism and
 [soul-series-christopher-young]
 vendor = "8dio"
 name = "Soul Series - Christopher Young"
-categories = ["vsti"]
+categories = ["vsti.ambient"]
 requires = [["native-instruments-kontakt", "5"]]
 url = "https://8dio.com/products/young-the-collection"
 size = 20100
@@ -93,7 +93,7 @@ Christopher Young has a beautifully unique way of approaching scores – both 
 vendor = "8dio"
 name = "Claire - Alto Flute Virtuoso"
 size = 6430
-categories = ["vsti.woodwinds.flute"]
+categories = ["vsti.woodwinds"]
 requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=XuPmKYOIT7k"
 url = "https://8dio.com/products/alto-flute-virtuoso"
@@ -108,7 +108,7 @@ Our Alto Flute Virtuoso is the most expressive, playable, and lifelike Alto-Flut
 vendor = "8dio"
 name = "Claire - Bassoon Virtuoso"
 size = 5010
-categories = ["vsti.woodwinds.bassoon"]
+categories = ["vsti.woodwinds"]
 requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=fh1z7CbP03M"
 url = "https://8dio.com/products/bassoon-virtuoso"
@@ -121,7 +121,7 @@ The Claire Woodwind Series is a deep-sampled collection of the finest virtuoso w
 vendor = "8dio"
 name = "Claire - Clarinet Virtuoso"
 size = 5660
-categories = ["vsti.woodwinds.clarinet"]
+categories = ["vsti.woodwinds"]
 requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=bmoBSsUQD0M"
 url = "https://8dio.com/products/clarinet-virtouso"
@@ -134,7 +134,7 @@ The Claire Woodwind Series is a deep-sampled collection of the finest virtuoso w
 vendor = "8dio"
 name = "Claire - Flute Virtuoso"
 size = 4890
-categories = ["vsti.woodwinds.flute"]
+categories = ["vsti.woodwinds"]
 requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=uP37J3YC19M"
 url = "https://8dio.com/products/flute-virtuoso"
@@ -147,7 +147,7 @@ The Claire Woodwind Series is a deep-sampled collection of the finest virtuoso w
 vendor = "8dio"
 name = "Claire - Oboe Virtuoso"
 size = 4540
-categories = ["vsti.woodwinds.oboe"]
+categories = ["vsti.woodwinds"]
 requires = [["native-instruments-kontakt", "5"]]
 demo = "https://www.youtube.com/watch?v=FaBM25kTbvk"
 url = "https://8dio.com/products/oboe-virtuoso"
@@ -160,7 +160,7 @@ The Claire Woodwind Series is a deep-sampled collection of the finest virtuoso w
 vendor = "impact-soundworks"
 name = "Curio"
 size = 1200
-categories = ["vsti.keys.piano"]
+categories = ["vsti.keys"]
 requires = [["native-instruments-kontakt", "4"]]
 demo = "https://www.youtube.com/watch?v=iU9d9uK-4Cg"
 url = "https://impactsoundworks.com/product/curio-cinematic-toy-piano/"
@@ -511,7 +511,7 @@ A variety of new recording and sampling techniques were used in Silka, making it
 vendor = "8dio"
 name = "Studio Series - Deep Solo Violin"
 size = 11610
-categories = ["vsti.strings.violin"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/8dio-studio-series-deep-solo-violin"
 url = "https://8dio.com/products/solo-studio-strings-violin"
@@ -526,7 +526,7 @@ Organized into six separate categories, each of the included sound-sets offers a
 vendor = "8dio"
 name = "Studio Vintage Hammond Organ"
 size = 14200
-categories = ["vsti.keys.organ"]
+categories = ["vsti.keys"]
 requires = [["native-instruments-kontakt", "5"]]
 demo = "https://soundcloud.com/8dawn/sets/8dio-studio-hammond-vintage-organ"
 url = "https://8dio.com/products/studio-vintage-series-studio-hammond-for-kontakt-vst-au-aax"
@@ -634,7 +634,7 @@ There are plug-in and standalone versions for Windows and Mac but no accessible 
 The UI is large and there is scope for improving ease of use to reduce the amount of key bashing and the graphical equaliser remains out of reach.
 """
 nks = "requires a user-defined .nksf set available as freeware and by Native Instruments forum member Christos"
-categories = ["vsti.synthesizer.subtractive"]
+categories = ["vsti.synthesizer"]
 os = ["windows", "linux", "mac_intel", "mac_arm"]
 
 [aurora-choir]
@@ -662,7 +662,7 @@ name = "Bansuri Flute"
 url = "https://www.ariasounds.com/kontakt_indian_bansuri_instrument_vst.html"
 price = 35.99
 size = 797
-categories = ["vsti.ethnic", "vsti.woodwinds.flute"]
+categories = ["vsti.ethnic", "vsti.woodwinds"]
 requires = [["native-instruments-kontakt", "4"]]
 description = """\
 The Bansuri is an traditional, ancient Indian flute. Get that fantastic, well known and loved ethnic sound in your scores/soundtracks.
@@ -696,7 +696,7 @@ vendor = "aria-sounds"
 name = "Celtic Harp"
 url = "https://www.ariasounds.com/kontakt_celtic_harp_vst_instrument.html"
 price = 35.99
-categories = ["vsti.strings.harp"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt", "4"]]
 size = 860
 demo = "https://soundcloud.com/aria-sounds/kontakt-celtic-harp-by-aria"
@@ -746,7 +746,7 @@ size = 349
 demo = "https://www.youtube.com/watch?v=Ym2rRxzpBU4"
 url = "https://www.ariasounds.com/french_horn_kontakt_vst.html"
 price = 79
-categories = ["vsti.brass.french-horn"]
+categories = ["vsti.brass"]
 requires = [["native-instruments-kontakt", "4"]]
 description = """\
 After a long period of silence, Aria Sounds is very pleased to present the LSB Solo French Horn for Kontakt 4 and above. This instrument is yet another step up for Aria Sounds, packed with features, and carefully sampled to produce a powerfully convincing sound.The library is 5GB extracted (leave at leastÂ 10GB free for download and extraction), and runs in Kontakt 4 and above.
@@ -761,7 +761,7 @@ vendor = "aria-sounds"
 name = "Hybrichord Vol. 1"
 size = 4240
 price = 39
-categories = ["vsti.keys.piano"]
+categories = ["vsti.keys"]
 requires = [["native-instruments-kontakt", "5"]]
 url = "https://www.ariasounds.com/hybrichord_cinematic_piano_sonic_landscapes.html"
 description = """\
@@ -779,7 +779,7 @@ size = 4280
 demo = "https://www.youtube.com/watch?v=veKm2O0WvBQ"
 url = "https://www.ariasounds.com/lss-solo-double-bass.html"
 price = 69
-categories = ["vsti.strings.bass"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt", "4"]]
 description = """\
 The "Solo Double Bass" is the fourth and final installment in our "LSS Solo Strings" Sample Library Bundle, complete with the same fantastic features as the rest of the LSS Solo Strings...
@@ -796,7 +796,7 @@ vendor = "aria-sounds"
 name = "London Solo Viola"
 size = 4130
 demo = "https://soundcloud.com/aria-sounds/lss-solo-strings-demo-beyond?in=aria-sounds/sets/lss-solo-violin-demos"
-categories = ["vsti.strings.viola"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt", "4"]]
 price = 69
 url = "https://www.ariasounds.com/lss-solo-viola.html"
@@ -815,7 +815,7 @@ vendor = "aria-sounds"
 name = "London Solo Violin"
 size = 4730
 demo = "https://soundcloud.com/aria-sounds/lss-solo-strings-demo-quintet-excerpt"
-categories = ["vsti.strings.violin"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt", "4"]]
 url = "https://www.ariasounds.com/kontakt_violin_instrument_vst.html"
 price = 69
@@ -833,7 +833,7 @@ Another feature included is the ability to alter the release sound when the fina
 vendor = "aria-sounds"
 name = "Pipe Organ"
 demo = "https://soundcloud.com/aria-sounds/organ-demo-lament"
-categories = ["vsti.keys.organ"]
+categories = ["vsti.keys"]
 requires = [["native-instruments-kontakt", "4"]]
 url = "https://www.ariasounds.com/church_pipe_organ_vst_kontakt_instrument.html"
 price = 49
@@ -953,7 +953,7 @@ vendor = "auddict"
 name = "Master Brass: Trombones"
 url = "https://www.auddict.com/master-brass-trombones"
 price = 60
-categories = ["vsti.brass.trombone"]
+categories = ["vsti.brass"]
 requires = [["native-instruments-kontakt-player", "4"]]
 size = 6800
 demo = "https://soundcloud.com/auddict-77772158/trombones-demo-24"
@@ -989,7 +989,7 @@ url = "https://www.auddict.com/mb-tubas"
 demo = "https://soundcloud.com/auddict-77772158/auddict-master-brass-expedition"
 price = 50
 size = 5600
-categories = ["vsti.brass.tuba"]
+categories = ["vsti.brass"]
 requires = [["native-instruments-kontakt", "4"]]
 description = """\
 Auddict is happy to bring you the tubas section from our Master Brass orchestral brass sample library. Like its MB counterparts, the Master Brass tubas also come with a staggering seven mic positions for absolute sonic control and sculpt-ability.
@@ -1060,7 +1060,7 @@ vendor = "auddict"
 name = "Virtuosic Violin"
 url = "https://www.auddict.com/virtuosic-violin"
 price = 120
-categories = ["vsti.strings.violin"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt", "4"]]
 size = 8000
 demo = "https://soundcloud.com/auddict-77772158/virtuosic-violin-nocturne?in=auddict-77772158/sets/auddict-virtuoso-violin"
@@ -1114,7 +1114,7 @@ ARTICULATION LIST
 vendor = "auddict"
 name = "Octohorn"
 url = "https://www.auddict.com/octohorn"
-categories = ["vsti.brass.french-horn"]
+categories = ["vsti.brass"]
 requires = [["native-instruments-kontakt", "4"]]
 price = 60
 demo = "https://www.youtube.com/watch?v=M2lXGlGrMwo"
@@ -1578,7 +1578,7 @@ High standards of quality - that is the base of our foundation. All of our sampl
 vendor = "audio-imperia"
 name = "Klavier - Hybrid Pianos"
 url = "https://www.audioimperia.com/collections/all/products/klavier"
-categories = ["vsti.keys.piano"]
+categories = ["vsti.keys"]
 requires = [["native-instruments-kontakt-player", "6"]]
 price = 199
 nks = true
@@ -1943,7 +1943,7 @@ os = ["windows","mac_intel","mac_arm"]
 [upright-piano]
 vendor = "99sounds"
 name = "Upright Piano"
-categories = ["vsti.keys.piano"]
+categories = ["vsti.keys"]
 url = "http://rudifiasco.altervista.org/"
 demo = "https://www.youtube.com/watch?v=lTm-jfhEOcg"
 price = 0
@@ -1953,7 +1953,7 @@ os = ["windows","mac_intel"]
 [atmos-3]
 vendor = "electronik-sound-lab"
 name = "Atmos 3"
-categories = ["vsti.keys.piano"]
+categories = ["vsti.keys"]
 url = "https://electroniksoundlab.com/atmos-3-lite/"
 demo = "https://www.youtube.com/watch?v=liJgnBOhqos"
 price = 0
@@ -2072,7 +2072,7 @@ os = ["windows","mac_intel"]
 [monster-piano]
 vendor = "agus-hardiman"
 name = "Monster Piano"
-categories = ["vsti.keys.piano"]
+categories = ["vsti.keys"]
 url = "https://agushardiman.tv/monster-piano-a-lightweight-free-acoustic-piano-vst-with-multi-character/#:~:text=%23MonsterPianoVST%20is%20a%20Free%20Piano,making%20(I%20hope%20so)."
 demo = "https://www.youtube.com/watch?v=2ba175HTang"
 price = 0
@@ -2556,7 +2556,7 @@ Recorded with state-of-the-art analog gear and processed with cutting-edge produ
 [c-digital-grand]
 vendor = "bechstein-digital"
 name = "C. Digital Grand"
-categories = ["vsti.keys.piano"]
+categories = ["vsti.keys"]
 requires = [["native-instruments-kontakt-player","5"]]
 size = 23700
 url = "https://www.bechstein-digital.com/en/digital-grand/"
@@ -2708,7 +2708,7 @@ os = ["windows","mac_intel","mac_arm"]
 [cello-textures]
 vendor = "benjamin-osterhouse"
 name = "Cello Textures"
-categories = ["vsti.strings.cello"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt","5"]]
 size = 504
 url = "https://www.lootaudio.com/category/kontakt-instruments/ben-osterhouse/cello-textures-kontakt"
@@ -2793,7 +2793,7 @@ There is an option to double the sound, which layers two instances together and 
 [string-flow-cello]
 vendor = "benjamin-osterhouse"
 name = "String Flow Cello"
-categories = ["vsti.strings.cello"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt","5"]]
 size = 957
 url = "https://www.lootaudio.com/category/kontakt-instruments/ben-osterhouse/string-flow-cello-kontakt"
@@ -2818,7 +2818,7 @@ The midi clips which come with the instrument demonstrate which chords work.
 [string-flow-viola]
 vendor = "benjamin-osterhouse"
 name = "String Flow Viola"
-categories = ["vsti.strings.viola"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt","5"]]
 size = 671
 url = "https://www.lootaudio.com/category/kontakt-instruments/ben-osterhouse/string-flow-viola-kontakt"
@@ -2833,7 +2833,7 @@ The second way to play requires more knowledge of the instrument, and is more fl
 [string-flow-violin]
 vendor = "benjamin-osterhouse"
 name = "String Flow Violin"
-categories = ["vsti.strings.violin"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt","5"]]
 size = 862
 url = "https://www.lootaudio.com/category/kontakt-instruments/ben-osterhouse/string-flow-violin-kontakt"
@@ -3016,7 +3016,7 @@ Convolution Space was designd for all kinds of atmospheres and is the first one 
 [dark-horizon]
 vendor = "best-service"
 name = "Dark Horizon"
-categories = ["vsti.synthesizer"]
+categories = ["vsti.synthesizer","vsti.ambient"]
 requires = [["native-instruments-kontakt-player","6"]]
 size = 1160
 url = "https://www.bestservice.com/en/dark_horizon.html"
@@ -3098,7 +3098,7 @@ Works with the Free Kontakt Player Version 6.6.1 or higher.\
 [elysion-2-the-encounter]
 vendor = "best-service"
 name = "Elysion 2 - The Encounter"
-categories = ["vsti.synthesizer"]
+categories = ["vsti.synthesizer","vsti.ambient"]
 requires = [["native-instruments-kontakt-player","6"]]
 size = 21920
 url = "https://www.bestservice.com/en/elysion_2.html"
@@ -3215,7 +3215,7 @@ Elysion 2 works with NI Kontakt and Free Kontakt Player Version 6.6.0 and higher
 [emotional-cello]
 vendor = "best-service"
 name = "Emotional Cello"
-categories = ["vsti.strings.cello"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt-player","6"]]
 size = 11780
 url = "https://www.bestservice.com/en/emotional_cello.html"
@@ -3266,7 +3266,7 @@ Kontakt Player 6.2.2 or newer required.\
 [emotional-viola]
 vendor = "best-service"
 name = "Emotional Viola"
-categories = ["vsti.strings.viola"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt-player","6"]]
 size = 4450
 url = "https://www.bestservice.com/en/emotional_viola.html"
@@ -3316,7 +3316,7 @@ Kontakt Player 6.2.2 or newer required.\
 [emotional-violin]
 vendor = "best-service"
 name = "Emotional Violin"
-categories = ["vsti.strings.violin"]
+categories = ["vsti.strings"]
 requires = [["native-instruments-kontakt-player","5"]]
 size = 6550
 url = "https://www.bestservice.com/en/emotional_violin.html"
