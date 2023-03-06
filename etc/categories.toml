@@ -159,3 +159,6 @@ name = "Digital Audio Workstation"
 
 [audio]
 name = "Audio Files"
+
+[vsti.ambient]
+name = "Ambient"

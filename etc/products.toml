@@ -3651,3 +3651,730 @@ Dynamedion
 Dynamedion was founded in 2000 by Tilman Sillescu and Pierre Langer, two composers with university degrees in music. With a steadily increasing number of contracts and growing customer base it has since become a leader in soundtrack composition and sound design on the European computer game market. In 2005 Dynamedion produced highly successful, first benchmark live orchestra recordings for a German game soundtrack, setting the standard for large-scale projects in the industry. With numerous further orchestral productions for the video game industry, Dynamedion has earned itself a reputation for unsurpassed quality and integrity in this area.
 Minimum required free Kontakt Player or full Kontakt version 6.7\
 """
+
+[ambient-black]
+vendor = "big-fish-audio"
+name = "Ambient Black"
+categories = ["vsti.ambient"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 3430
+url = "https://www.bigfishaudio.com/Ambient-Black"
+demo = "https://www.youtube.com/watch?v=gCSv8x0rWjM"
+price = 199.95
+description = """\
+Ambient Black is the second of a linked pair of sound design-based virtual instruments designed to provide composers and producers with a collection of original instruments and textures suitable for all sorts of ambient music.
+
+As its name implies, Ambient Black covers the darker end of the ambient spectrum, focusing on harsh, aggressive, atonal, mysterious, and industrial sounds. Ambient White, the first VI in this series, covers the opposite end of the ambient spectrum.
+
+The majority of sounds used in the creation of Ambient Black were derived from organic sources: found sounds and audio recordings subjected to extreme sound design techniques, prepared and heavily processed musical instruments, and sounds recorded in natural environments. The synth sounds were also processed with sound design techniques, and combined with various organic sounds and instruments.
+
+The end result is a product that combines acoustic, human, industrial, and electronic elements to produce an organic-sounding virtual instrument.
+
+THE INSTRUMENT PATCHES
+
+Ambient Black features over 280 different instrument patches and combinations (over 6.5 GB of uncompressed WAV data), divided into seven categories:
+
+1. Multi-Layered Instruments
+2. Drones & Atmospheres
+3. Bass Instruments
+4. Percussive Instruments
+5. Melodic Instruments
+6. Looped Instrument Phrases
+7. Effects & Textures
+
+The most complex instrument patches in Ambient Black are the Multi-Layered Instruments, created using combinations of patches from the other six categories. These patches are organized by their basic type, using the following prefixes:
+
+* ATMOS: Layered Atmospheres and Pads
+* BASS: Layered Bass Instruments
+* FX: Layered Effects & Textures
+* LOOP: Layered Looped Phrases
+* MELO: Layered Melodic Instruments
+* PERC: Layered Percussive Instruments
+
+MULTI-LAYERED INSTRUMENT PATCHES
+
+Many of the Multi-Layered Instrument patches consist of multiple evolving atmospheres, effects, textures, and looped phrases. For the best results, try playing these patches with one finger, or in octaves. This suggestion doesn't apply to Layered PERC patches, which in general don't have any pronounced melodic or harmonic content; playing multiple notes at a time with these layered patches can produce some interesting polyrhythmic patterns.
+
+EFFECTS & TEXTURES
+
+The Effects & Textures category includes a number of strange and aggressive sounds that were primarily designed to be used as cinematic sound design elements. Most don't have an identifiable pitch or key-center, and can be used as drones.
+
+PERCUSSIVE INSTRUMENTS
+
+The Percussive Instruments include several different acoustic, industrial, and electronic drum kits. There's also a selection of cinematic hits, glitches, industrial sounds, and other unusual percussive sounds.
+
+DRONES & ATMOSPHERES
+
+Many of the Drones & Atmospheres are long and evolve over time. Try holding a key for 10, 20, or even 30 seconds, and listen to how each of these sounds develop. Because most of these sounds are huge and dense, try playing just single notes or octaves.
+
+MELODIC AND BASS INSTRUMENTS
+
+The Melodic and Bass Instruments are mainly single-note patches. However, a few of these patches also have some underlying harmonic content, and can be used as pads.
+
+LOOPED INSTRUMENTS
+
+The Looped Instruments include simple repeating patterns and some complex patterns created by mixing multiple loops together. Some loops do not lock to tempo intentionally in order to add an element of randomness and unpredictability to some of the patches. Looped Instruments should be played like the Drones & Atmospheres, using solo notes or octaves for less-complex patterns and different intervals for more experimental and harmonically-dense effects.\
+"""
+
+[ambient-white]
+vendor = "big-fish-audio"
+name = "Ambient White"
+categories = ["vsti.ambient"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 3950
+url = "https://www.bigfishaudio.com/Ambient-White"
+demo = "https://www.youtube.com/watch?v=u1nyhjS2s8A"
+price = 199.95
+description = """\
+Ambient White is the first of a linked pair of sound design-based virtual instruments designed to provide composers and producers with a collection of original instruments and textures suitable for all sorts of ambient music.
+
+As its name implies, Ambient White covers the lighter end of the ambient spectrum, focusing on beautiful, peaceful, melodic, harmonious, and natural sounds. Ambient Black, the second VI in this series, will cover the opposite end of the ambient spectrum.
+
+The vast majority of the sounds used in the creation of Ambient White were derived from organic sources: found sounds and audio recordings subjected to extreme sound design techniques, prepared and/or heavily processed musical instruments, and sounds recorded in natural environments. The few synth sounds that were used were also processed with sound design techniques, and/or combined with various organic sounds and instruments.
+
+The end result is a product that combines acoustic, humanistic, and electronic elements to produce an organic-sounding virtual musical instrument.
+
+THE INSTRUMENT PATCHES
+
+Ambient White features over 250 different instrument patches and combinations (almost 7.5GB of uncompressed WAV data *4GB compressed), divided into several categories:
+
+1. Multi-Layered Instruments
+2. Pads & Atmospheres
+3. Melodic Instruments
+4. Percussive Instruments
+5. Bass Instruments
+6. Looped Instrument Phrases
+7. Effects & Textures
+
+The most complex instrument patches in Ambient White are the Multi-Layered Instruments, which were created using combinations of patches from the other six categories. These patches are arranged by their basic type, using the following prefixes:
+
+* ATMOS: Layered Atmospheres and Pads
+* BASS: Layered Bass Instruments
+* FX: Layered Effects & Textures
+* LOOP: Layered Looped Phrases
+* MELO: Layered Melodic Instruments
+* PERC: Layered Percussive Instruments
+
+MULTI-LAYERED INSTRUMENT PATCHES
+
+Many of the Multi-Layered Instrument patches consist of multiple evolving atmospheres, chordal and/or melodic components, and/or looped phrases. For best results, try playing these patches with one finger, in octaves, or in fifths. This doesn't apply to Layered PERC patches, which in general don't have any pronounced melodic or harmonic content; playing multiple notes at a time with these Layered patches can produce some interesting polyrhythmic patterns.
+
+EFFECTS & TEXTURES
+
+The Effects & Textures category includes a number of patches that were mainly designed to work in tandem with other types of patches. These patches were designed with that in mind.
+
+PERCUSSIVE INSTRUMENTS
+
+The Percussive Instruments include several different acoustic and electronic drum kits. There's also a selection of tuned hand drums, cymbals and gongs, and other percussive sounds.
+
+PADS & ATMOSPHERES
+
+Many of the Pads & Atmospheres also include chordal components. When trying these patches for the first time, it's probably best to play them with one finger or in octaves. You can then experiment with playing different intervals, depending on the level of harmonic complexity you're looking for.
+
+MELODIC AND BASS INSTRUMENTS
+
+The Melodic and Bass Instruments are mainly single-note patches. However, a few of these patches also few have some underlying harmonic content, and can be used as Pads.
+
+LOOPED INSTRUMENT PHRASES
+
+The Looped Instrument Phrases include simple repeating patterns and some more-complex patterns created by mixing multiple loops together. Many of the loops lock to tempo, but some do not; this was done intentionally, in order to add an element of randomness and unpredictability to some of the patches. Looped Instrument Phrases should be played like the Pads & Atmospheres, using solo notes or octaves for less-complex patterns and different intervals for more experimental and harmonically-dense effects.\
+"""
+
+[hypnotic-trapsoul]
+vendor = "big-fish-audio"
+name = "Hypnotic: Trapsoul"
+categories = ["audio","vsti.drums"]
+requires = [["native-instruments-kontakt","5"]]
+size = 4430
+url = "https://www.bigfishaudio.com/Hypnotic-Trapsoul"
+demo = "https://www.youtube.com/watch?v=HAJqhZ5U3Io"
+price = 129.95
+description = """\
+Hypnotic: Trapsoul brings you 50 construction kits of material in the styles of The Weekend, Bryson Tiller, Drake, Ty Doll $ign, Travis Scott, Tory Lanez and more! Inside this library you will find all the modern Trapsoul elements you need to make that next hit. Each of the 50 kits contain everything from the iconic trap snares to modern R&B rhodes and synths to make sure your next Trapsoul production has true vibe.
+
+In addition to the regular loop content, each kit includes a folder of MIDI files for full flexibility and control over the melodic content of the track using your own virtual instruments.
+
+Hypnotic: Trapsoul has been formatted in the most widely-used formats: Apple Loops, Acidized WAV, and REX files, making it usable in virtually every piece of software and hardware on the market today.
+
+MULTI FORMAT
+
+Hypnotic: Trapsoul has been formatted in all the industry standard file types: Apple Loops, Acidized WAV and REX. Every piece of commonly used hardware and software will be compatible with at least one of these fully developed and usable formats.
+
+Each audio file has been expertly cut and edited to loop perfectly, and has been recorded in the highest quality 24-bit rate to ensure absolutely top quality end results.
+
+If you work primarily with Apple products, be sure to utilize the extra loop tagging functionality in Garageband and Apple Logic as well as Apple's proprietary time stretching and pitch bending algorithms.
+
+If you're working inside Protools, Cubase, Fruity Loops, Ableton Live, Sony ACID, or any other DAW on the market, the Acidized WAV files are the perfect fit for time stretching and pitch bending capabilities. The Acidized WAV files can also be used as standard WAV files in almost any music tool in production today.
+
+Beat-makers and artists who love sampled melodic slices can take advantage of our REX/RMX format that utilizes all the powerful programming found in Stylus RMX and the Dr. Octo REX player in Propellerheads Reason.
+
+MOMENTUM PLUGIN
+
+Momentum is a free plugin from Big Fish Audio that unlocks the potential of your loops and samples with the next generation of sound sculpting tools. Click here to learn more about Momentum.
+
+Apple Loops:
+
+* 4.25 GB Total Content
+* 869 Files
+
+Acidized WAV:
+
+* 4.31 GB Total Content
+* 862 Files
+
+REX/RMX:
+
+* 1.7 GB Total Content
+* 735 REX Files
+
+KLI 3.0 SERIES VERSION
+
+* You must have a FULL version of Kontakt 5.6.5 to use this product.
+* 4.43 GB of content
+* 709 Total Kontakt Patches
+* 50 Kit Combo Patches
+* 23 Single Instrument Patches
+* 565 Sliced Loop Patches
+* 20 Drum Menu Patches
+* 50 Drum Kits Patches
+* 1 Kit Demo Patch\
+"""
+
+[movement-pop-rock-hits]
+vendor = "big-fish-audio"
+name = "Movement: Pop Rock Hits"
+categories = ["audio","vsti.drums"]
+requires = [["native-instruments-kontakt","5"]]
+size = 3710
+url = "https://www.bigfishaudio.com/Movement-Pop-Rock-Hits"
+demo = "https://www.youtube.com/watch?v=aY3l_2Zr4LM"
+price = 129.95
+description = """\
+From the powerful duo of Jeff Carruthers and Michael Carey comes Movement: Pop Rock Hits, a Pop-Rock Library packed with radio ready tracks and chart-topping hits. Based on the sounds of both current radio hits and styles that are on the rise, Movement is truly ahead of the curve and delivers all the elements necessary to create solid pop-rock tracks for the modern ear. With over 3.5 GB of original content split between 10 full construction kits, you know that only the best production methods were followed, only the best gear was used and not a single corner was cut. Each Construction Kit includes full sections to build entire rock tracks from front to back and a folder of multi-drum stems so that you have complete production control over your drum track.
+
+Michael Carey, an established and highly sought after LA guitarist, producer and programmer, takes care of the stringed instruments here with the vibe and precision that comes only with a lifetime of recording and performing at the highest level. Michael also co-produced this library, and his unique sound gives Movement something truly special. All Drums and Percussion are straight from the legendary M.B. Gordy, and sound every bit as amazing as you would expect from the man who's reputation is only topped by hearing the man himself. In Movement: Pop Rock Hits, we give you access to 10 full drum sessions with multi stems and stereo mixes from M.B. Gordy himself. All vocals were performed by Julia Feldman, and drip with character, and true emotion that you wont find anywhere else. The entire project was co-produced and overseen by the amazing Jeff Carruthers, who is hands-down, the very best in the business. The name Jeff Carruthers is synonymous with “Quality” and everything this amazing musician and producer touches is pure gold. Not only did Jeff produce, he also recorded some instruments for the library and the result is simply stunning. Movement: Pop Rock Hits is a library that was exciting to put together, and we know it will be exciting to use, take a listen to the demos and see for yourself!
+
+NOTE FROM THE PRODUCERS
+
+Our intention with these kits was to create an inspiring, instantly useful collection of loops, stems, parts, and textures for modern pop/indie/rock producers, composers and DJs. We drew from a rich mixture of organic and electronic sounds and styles; indie-acoustic, electro- pop, 80's synths and drum machines, gorgeously recorded real drum kits and percussion, aggressive, saturated bass, and lush, vintage electric and acoustic guitars (recorded through boutique pedals, classic amps, mic's and mic pre's) for fat, satisfying, timeless sounds. Happy music-making!
+
+MULTI FORMAT
+
+Movement: Pop Rock Hits has been formatted in all the industry standard file types: Apple Loops, Acidized WAV and REX. Every piece of commonly used hardware and software will be compatible with at least one of these fully developed and usable formats.
+
+Each audio file has been expertly cut and edited to loop perfectly and has been recoded in the highest quality 24-bit rate to ensure absolutely top quality end results.
+
+If you work primarily with Apple Products be sure to utilize the extra loop tagging functionality in Garageband and Apple Logic as well as Apple's proprietary time stretching and pitch bending algorithms.
+
+If you're working inside Protools, Cubase, Fruity Loops, Ableton Live, Sony ACID or any other DAW on the market, the Acidized WAV files are the perfect fit for time stretching and pitch bending capabilities. The Acidized WAV files can also be used as standard wav files in almost any music tool in production today.
+
+Beat-makers and artists who love sampled melodic slices work well with our REX/RMX format that takes advantage of all the powerful programming found in Stylus RMX and the Dr. Octo REX player in Propellerheads Reason DAW.
+
+MOMENTUM PLUGIN
+
+Momentum is a free plugin from Big Fish Audio that unlocks the potential of your loops and samples with the next generation of sound sculpting tools. Click here to learn more about Momentum.
+
+Apple Loops:
+
+* 3.54 GB Total Content
+* 1,008 Files
+
+Acidized WAV:
+
+* 3.59 GB Total Content
+* 1,008 Files
+
+REX/RMX:
+
+* 1.1 GB Total Content
+* 578 REX Files
+
+KLI 3.0 SERIES VERSION
+
+* You must have a FULL version of Kontakt 5.6.5 to use this product.
+* 3.71 GB of content
+* 568 Total Kontakt Patches
+* 16 Kit Combo Patches
+* 15 Single Instrument Patches
+* 524 Sliced Loop Patches
+* 1 Demo Patch\
+"""
+
+[sunrise-modern-country]
+vendor = "big-fish-audio"
+name = "Sunrise: Modern Country"
+categories = ["audio","vsti.drums"]
+requires = [["native-instruments-kontakt","5"]]
+size = 7110
+url = "https://www.bigfishaudio.com/Sunrise-Modern-Country"
+demo = "https://www.youtube.com/watch?v=YqBzQ_I-5HU"
+price = 129.95
+description = """\
+Big Fish Audio and Sample Factory are proud to present Sunrise: Modern Country. This massive 15 GB collection of Modern Country sounds is influenced by artists like Luke Bryan, Jason Aldean, Keith Urban, Eric Church, Blake Shelton, Brantley Gilbert, and many more. Sunrise contains 15 Huge Kits with over 7 GB of original content including instruments like Dobro, Banjo, Acoustic Guitar, Hi Strung Guitar, Slide Guitar, Baritone Guitar, Electric Guitar, Cigar Box Guitar, Bass, Drums and many more. Each and every kit contains multiple song-style sections giving you tons of flexibility with drag and drop ease. We’ve also included a full Drum Tracks folder for each kit. That means every kit in the library comes with multitrack drum recordings allowing you to have maximum control over the mix. Sunrise is sure to inspire your next Modern Country project!
+
+Sunrise: Modern Country has been formatted in the most widely-used formats: Apple Loops, Acidized WAV, and REX files, making it usable in virtually every piece of software and hardware on the market today.
+
+MULTI FORMAT
+
+Sunrise: Modern Country has been formatted in all the industry standard file types: Apple Loops, Acidized WAV and REX. Every piece of commonly used hardware and software will be compatible with at least one of these fully developed and usable formats.
+
+Each audio file has been expertly cut and edited to loop perfectly, and has been recorded in the highest quality 24-bit rate to ensure absolutely top quality end results.
+
+If you work primarily with Apple products, be sure to utilize the extra loop tagging functionality in Garageband and Apple Logic as well as Apple's proprietary time stretching and pitch bending algorithms.
+
+If you're working inside Protools, Cubase, Fruity Loops, Ableton Live, Sony ACID, or any other DAW on the market, the Acidized WAV files are the perfect fit for time stretching and pitch bending capabilities. The Acidized WAV files can also be used as standard WAV files in almost any music tool in production today.
+
+Beat-makers and artists who love sampled melodic slices can take advantage of our REX/RMX format that utilizes all the powerful programming found in Stylus RMX and the Dr. Octo REX player in Propellerheads Reason.
+
+MOMENTUM PLUGIN
+
+Momentum is a free plugin from Big Fish Audio that unlocks the potential of your loops and samples with the next generation of sound sculpting tools. Click here to learn more about Momentum.
+
+Apple Loops:
+
+* 6.61 GB Total Content
+* 3,331 Files
+
+Acidized WAV:
+
+* 6.61 GB Total Content
+* 3,331 Files
+
+REX:
+
+* 1.41 GB Total Content
+* 1,399 Files
+
+KLI 3.0 SERIES VERSION
+
+* You must have a FULL version of Kontakt 5.8.0 to use the KLI format of this product.
+* 7.11 GB Total Content
+* 3,414 Total Kontakt Patches\
+"""
+
+[prosonus-orchestral-brass]
+vendor = "big-fish-audio"
+name = "Prosonus Orchestral Brass"
+categories = ["vsti.brass"]
+requires = [["native-instruments-kontakt","3"]]
+size = 504
+url = "https://www.bigfishaudio.com/Prosonus-Orchestral-Brass"
+price = 49.95
+description = """\
+Includes:
+
+Solo Bass:
+Sustain, Pizzicato, Dry, Room
+
+Large Brass Ensemble Sustained - 10 Instruments
+Large Brass Ensemble Short - 12 Instruments
+Large Brass Ensemble Effects - 6 Instruments
+Brass Orchestra - 4 Instruments
+
+Trumpet:
+Sustain, Mutes, Swells, Stacato
+
+Piccolo Trumpet:
+Sustain, Mutes, Trills, Stacato
+
+Flugel Horn:
+Sustain, Swells
+
+French Horn:
+Sustain, Mutes, Swells, Stop
+
+Trombone:
+Sustain, Mutes, Swells, Wah
+
+Bass Trombone:
+Sustained
+
+Tuba:
+Sustain, Elephant, Stacato, Slap\
+"""
+
+[smack-claps-snaps-and-stomps]
+vendor = "big-fish-audio"
+name = "SMACK: Claps, Snaps & Stomps"
+categories = ["vsti.drums","vsti.percussion"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 742
+url = "https://www.bigfishaudio.com/SMACK.html"
+demo = "https://www.youtube.com/watch?v=xyk-0Ro3BLo"
+price = 99.95
+description = """\
+Big Fish Audio is proud to present SMACK: Claps, Snaps & Stomps! A time-saving resource for the modern composer, this collection of various claps, snaps, stomps, bass drums, shakers, tambourines, and found percussion will easily unlock your creativity. This unique percussion virtual instrument is the perfect tool to add color to music of any genre, or provide the foundation for your next composition.
+
+SMACK was created to save you time and enhance the creative process by deeply sampling various groups of percussion, claps, snaps, and stomps. With single, small group, and large group options, there are limitless songwriting applications! Use the intuitive user interface to easily navigate between up to 10 groups per patch, and strengthen each sample by adding any of the 8 premium FX included.
+
+SMACK includes 7 Patches with individual groups:
+
+* SMACK - Bass Drums, Toms, Stomps Small, Stomps Large, Claps Single, Claps Small Group, Claps Large group, Snaps Single, Snaps Small Group, and Snaps Large Group.
+* Claps & Snaps Natural - Claps Natural Single, Claps Natural Group, Snaps Natural Single, and Snaps Natural Group.
+* Claps & Snaps Electronic - Claps Electronic and Snaps Electronic.
+* Stomps - Kick, Kick Combos, Stomps, Toms, Wood, Plastic, and Metal.
+* Combos - Combo 1, Combo 2, Combo 3, Combo 4, Combo 5, Combo 6, and Combo 7.
+* Shakers & Tambourines - Shaker Collection, Glass Metal Gravel, Tambourine RR, Shaker RR, and Tambourine Collection.
+* Found Percussion - Low Percussion, Industrial Percussion, Household Percussion, Kitchen Percussion, Loose Percussion, and Ticks.
+
+SMACK is powered by the industry-leading Kontakt engine. It is compatible with VST, RTAS (Pro Tools 9 & 10), and AAX (Pro Tools 10 & 11) plug-in formats allowing it to work seamlessly within any major sequencer, in addition to standalone use.
+
+Each patch contains up to 10 groups which can be individually edited and customized.
+
+Choose from any of the 8 included FX including Stereo Width, EQ, Transient Master, Distortion, Compression, Convolution Reverb (with hand picked IR's), Delay, and Tune.
+
+System Requirements:
+
+* Kontakt Player 5.6.8 or higher
+* 4 GB RAM or more
+* 16 GB hard drive space once installed
+
+Patch List:
+
+* SMACK
+* Claps & Snaps Natural
+* Claps & Snaps Electronic
+* Stomps
+* Combos
+* Shakers & Tambourines
+* Found Percussion
+
+Included FX:
+
+* Stereo Width
+* Equalizer
+* Transient Master
+* Distortion
+* Compression
+* Reverb
+* Delay
+* Tune
+
+Features:
+
+* Up to 10 velocity layers and 3 round robins
+* MIDI Select for easy group selection
+* Global control and FX option
+* Individual group control and FX option
+* Hand selected IR options available for the convolution reverb
+* 742MB (uncompressed)\
+"""
+
+[vintage-rhythm-section]
+vendor = "big-fish-audio"
+name = "Vintage Rhythm Section"
+categories = ["vsti.drums","vsti.guitar","vsti.keys","vsti.percussion"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 7300
+url = "https://www.bigfishaudio.com/Vintage-Rhythm-Section"
+demo = "https://www.youtube.com/watch?v=5LdqJprwKb4"
+price = 199.95
+description = """\
+Vintage Rhythm Section is a virtual instrument for Kontakt 5 designed to emulate the classic rhythm section sounds of R&B, Soul, Funk, Jazz, and Rock records from the 1960's and 1970's.
+
+Vintage Rhythm Section (VRS) is easy to use, with a simple interface that lets you work quickly and intuitively. If you're producing retro or indie-style music on a budget, or if you're a TV or film composer working on a tight deadline, VRS can be used to create live-sounding drums, bass, guitar, keyboard, and percussion tracks.
+
+CAPTURING THAT VINTAGE RHYTHM SECTION SOUND
+
+Like its sister-products, Vintage Horns and Vintage Strings, Vintage Rhythm Section was not designed to be a shiny, perfect-sounding virtual instrument. Instead, we tried to capture the way rhythm sections sounded back in the 60's and 70's, including some of the minor imperfections that added character to those instruments and made them sound so good.
+
+For VRS, we sampled a large collection of vintage instruments - some amazingly still in mint condition, and others looking every bit as "vintage" as you'd expect a piece of 40-50 year-old gear to look.
+
+Wherever possible, we used the same types of amps and mics that were used in the 60's and 70's. Some of this old gear was pretty funky-sounding, which probably would have disqualified it from being used on most other types of sample libraries. But for VRS, it was just what we were looking for.
+
+VRS features two easy-to-use GUIs:
+
+1) A 12-channel mixer for drums
+2) The main GUI, which is used for all of the keyboards, basses, and guitars.
+
+THE DRUM MIXER
+
+- Reverb Select: This is a drop-down menu that allows you to select various types of convolution IRs.
+- Channel Strips: Each offers controls for Treble, Bass, Reverb Amount, Pan, and Solo/Mute. Note that not all kits have the same number of toms and cymbals. Instead, each kit was custom-built to fit the musical genre and era it came from.
+- Master Channel: Allows you to add tape saturation (SAT) and/or compression (COMP) to the entire kit.
+
+THE MAIN GUI
+
+From top to bottom and left to right, this GUI has the following controls:
+
+- TAPE SAT adds tape-style saturation/compression
+- TREBLE adds or cuts high end
+- BASS adds or cuts low end
+- DISTORTION SWITCH - use this to turn the effect on or off
+- DISTORTION adds amp-style distortion
+- DELAY controls the amount of tape-style delay
+- DELAY SELECT allows you to choose from several types of delay
+- ROTATOR SWITCH turs Leslie-style effect on or off
+- ROTATOR allows you to select the speed of the Leslie-effect
+- REVERB controls the amount of reverb added
+- REVERB SELECT allows you to choose from a selection of high-quality Convolution Reverbs designed to replicate a number of vintage amp-reverbs and recording spaces
+- MOD-WAH SWITCH turns on your controller's Mod Wheel as a wah-wah pedal
+
+Key-Switches
+
+Key-switching is a function that allows the user to quickly change from one articulation to another. If an instrument has any key-switch options, it will have red keys located on the far left of the Kontakt virtual keyboard. Many of the basses and guitars offer key-switched long and short (sustain and staccato) articulations, and some of the keyboards offer different key-switched presets.\
+"""
+
+[vintage-strings]
+vendor = "big-fish-audio"
+name = "Vintage Strings"
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 5090
+url = "https://www.bigfishaudio.com/Vintage-Strings"
+demo = "https://www.youtube.com/watch?v=JZW8quGudN0"
+price = 199.95
+description = """\
+Vintage Strings is a virtual instrument for Kontakt 5 designed to emulate the classic violin string section sounds of R&B, Soul, and Funk records from the 1960's and 1970's. Whether you're an experienced arranger or casual producer, Vintage Strings was designed to make it quick and easy for you to create great sounding string tracks for your productions. Like its sister product, Vintage Horns, Vintage Strings was not designed to be a shiny, perfect sounding virtual instrument. Instead, we tried to capture the way string sections sounded back in the '60s and '70s; including the decidedly not classical playing style and minor imperfections that added character to those sections and made them sound so good.
+
+For Vintage Strings we recorded a 6 piece violin section using vintage Neuman U-87 mics and Royer ribbon mics run through a great sounding SSL board. To capture a true vintage string sound, we used close mics, room mics, and string section positioning based on actual session notes from old Motown and Philly Soul recording sessions. Rather than record the violins in a magnificent concert hall or some other large and resonant recording space, we recorded our players in a funky old studio with a smaller, less-reverberant room that had characteristics similar to the rooms used to record classic Soul and R&B records. Using the tracks we recorded in this space, we then created three types of sections:
+
+2 VIOLINS:
+
+The 2VLN patches are very useful for creating the sound of smaller string sections. Even if played in 3-part harmony, these patches sound like a 6 piece section, rather than a full orchestral string section. The 2VLN patches take up a lot less sonic space in the mix, and also have the advantage of sounding like the smaller types of string sections used on a lot of old Soul and R&B records, which didn't have the time or budget to record a larger section.
+
+6 VIOLINS:
+
+The 6VLN patches are great for recording unison (1 part) lines that emulate the sound of a true 6 violin section, which was very commonly used in many old Soul recordings. When used for 2-part harmonies or octaves these patches can be used to replicate the sound of an overdubbed 6 violin section (i.e., a faux 12 violin section), which was a very common recording technique used on many Motown recording sessions.
+
+12 VIOLINS:
+
+The 12VLN patches are very useful for creating unison (1 part) string lines that sound like an overdubbed 6 violin section. If you want to get a bigger sound with the size of a larger orchestral string section, without the color and character present in a large recroding hall or symphonic space, use the patches for string parts in 2 or 3 part harmonies.
+
+The result is a virtual instrument that has a sound and character that is distinctly different from orchestral based sampled string libraries. The sound of Vintage Strings is intentionally not big, rich, and glossy. It's a smaller, more intimate, and more "human" sound, which more accurately emulates the string sound on those classic old records.
+
+FAST AND EASY STRING SECTION PARTS USING PRE-SET PATCHES
+
+If you don't have a lot experience writing for strings, or even if you're an experienced string-arranger on a tight deadline, Vintage Strings also offers a number of pre-programmed instrument patches that can help you quickly create great sounding string parts. These include the Tonal Harmonization Patches, which contain 2 part, 3 part, and 4 part patches for 2, 6, and 12 violins. Playing with just one finger on your keyboard you can easily write string lines in 2 parts (intervals), 3 parts (triads), or 4 parts (seventh chords). Secondly, the Tonal Harmonization patches include Fixed Chord & Interval Patches containing 2 part, 3 part, and 4 part Chord Patches, for 2, 6, and 12 violins. These patches are programmed to play a specific interval or chord according to the type of patch in 12 different keys.
+
+THE VINTAGE STRINGS GUI
+
+The Vintage Strings graphical user interface (GUI) is very simple and easy to use. The main page of the interface includes control over tape saturation, high EQ, and reverb with 15 custom selected convolution reverbs.
+
+THE HARMONIZE PAGE
+
+On the Harmonize page you can choose the key and scale of the interval or chord-based preset patches, or create custom interval and chord-based patches of your own.
+
+FEATURES:
+
+* 3 group sizes: 2, 6, and 12 players
+* Recorded with the highest quality vintage outboard gear
+* 11 articulations
+* Auto harmonization feature for impressively quick arranging
+* Hand selected IR options available for the convolution reverb
+* 5.1GB (uncompressed)
+* Kontakt Player 5 included
+
+COMPLETE PATCH LIST:
+
+2-Violin Patches:
+
+2VLN CHR = long articulations as the default, with key-switches for staccato, swells,
+major & minor runs up and down, fall-offs, tremolo, harmonics, and pizzicato.
+
+Single Articulation Patches:
+
+* 2VLN CHR Sustain + Staccato
+* 2VLN CHR Swells
+* 2VLN CHR Fall-Offs
+* 2VLN CHR Tremolo
+* 2VLN CHR Harmonics
+* 2VLN CHR Pizzicato
+
+Fixed Harmonized Patches:
+
+* 2VLN FXD 2-Part Major 3rds
+* 2VLN FXD 2-Part Octaves
+* 2VLN FXD 2-Part Minor 3rds
+* 2VLN FXD 3-Part Major Triad
+* 2VLN FXD 3-Part Minor Triad
+* 2VLN FXD 3-Part Diminished Triad
+* 2VLN FXD 3-Part Sus 4 Chord
+* 2VLN FXD 4-Part Major 7th Chord
+* 2VLN FXD 4-Part Minor 7th Chord
+* 2VLN FXD 4-Part Dominant 7th Chord
+* 2VLN FXD 5-Part Major 9th Chord
+* 2VLN FXD 5-Part Minor 9th Chord
+* 2VLN FXD 5-Part Dominant 9th Chord
+* 2VLN FXD 5-Part Dominant 7th #9 Chord
+
+Tonal Harmonized Patches:
+
+* 2VLN TNL 2-Part 3rds
+* 2VLN TNL 3-Part Triad
+* 2VLN TNL 4-Part 7th Chord
+* 2VLN TNL 5-Part 9th Chord
+
+6-Violin Patches
+
+6VLN CHR = long articulations as the default, with key-switch layers for staccato, swells,
+major & minor runs up and down, fall-offs, tremolo, harmonics, and pizzicato.
+
+Single Articulation Patches:
+
+* 6VLN CHR Sustain + Staccato
+* 6VLN CHR Swells
+* 6VLN CHR Major Runs Up
+* 6VLN CHR Major Runs Down
+* 6VLN CHR Minor Runs Up
+* 6VLN CHR Minor Runs Down
+* 6VLN CHR Fall-Offs
+* 6VLN CHR Tremolo
+* 6VLN CHR Harmonics
+* 6VLN CHR Pizzicato
+
+Fixed Harmonized Patches:
+
+* 6VLN FXD 2-Part Major 3rds
+* 6VLN FXD 2-Part Minor 3rds
+* 6VLN FXD 2-Part Octaves
+* 6VLN FXD 3-Part Major Triad
+* 6VLN FXD 3-Part Minor Triad
+* 6VLN FXD 3-Part Diminished Triad
+* 6VLN FXD 3-Part Sus 4 Chord
+* 6VLN FXD 4-Part Major 7th Chord
+* 6VLN FXD 4-Part Minor 7th Chord
+* 6VLN FXD 4-Part Dominant 7th Chord
+* 6VLN FXD 5-Part Major 9th Chord
+* 6VLN FXD 5-Part Minor 9th Chord
+* 6VLN FXD 5-Part Dominant 9th Chord
+* 6VLN FXD 5-Part Dominant 7th #9 Chord
+
+Tonal Harmonized Patches:
+
+* 6VLN TNL 2-Part 3rds
+* 6VLN TNL 3-Part Triad
+* 6VLN TNL 4-Part 7th Chord
+* 6VLN TNL 5-Part 9th Chord
+
+12-Violin Patches
+
+12VLN CHR = long articulations as the default, with key-switch layers for staccato, swells,
+major & minor runs up and down, fall-offs, tremolo, harmonics, and pizzicato.
+
+Single Articulation Patches:
+
+* 12VLN CHR Sustain + Staccato
+* 12VLN CHR Swells
+* 12VLN CHR Major Runs Up
+* 12VLN CHR Major Runs Down
+* 12VLN CHR Minor Runs Up
+* 12VLN CHR Minor Runs Down
+* 12VLN CHR Fall-Offs
+* 12VLN CHR Tremolo
+* 12VLN CHR Harmonics
+* 12VLN CHR Pizzicato
+
+Fixed Harmonized Patches:
+
+* 12VLN FXD 2-Part Major 3rds
+* 12VLN FXD 2-Part Minor 3rds
+* 12VLN FXD 2-Part Octaves
+* 12VLN FXD 3-Part Major Triad
+* 12VLN FXD 3-Part Minor Triad
+* 12VLN FXD 3-Part Diminished Triad
+* 12VLN FXD 3-Part Sus 4 Chord
+* 12VLN FXD 4-Part Major 7th Chord
+* 12VLN FXD 4-Part Minor 7th Chord
+* 12VLN FXD 4-Part Dominant 7th Chord
+* 12VLN FXD 5-Part Major 9th Chord
+* 12VLN FXD 5-Part Minor 9th Chord
+* 12VLN FXD 5-Part Dominant 9th Chord
+* 12VLN FXD 5-Part Dominant 7th #9 Chord
+
+Tonal Harmonized Patches:
+
+* 12VLN TNL 2-Part 3rds
+* 12VLN TNL 3-Part Triad
+* 12VLN TNL 4-Part 7th Chord
+* 12VLN TNL 5-Part 9th Chord
+
+Minimum System Requirements
+
+Mac: Intel Core Duo, 2GB of RAM, and OS 10.7.x or later. For optimum performance, Big Fish Audio recommends a 2.0GHz processor or faster. The library requires 5.1GB of free hard drive space.
+
+Windows; Windows 7 or Windows 8 (latest Service Pac, 32/64 Bit) Intel Core Duo or AMD Athlon 64, and 2GB of RAM. For optimum performance, Big Fish Audio recommends a 2.0GHz processor or faster. The library requires 5.1GB of free hard drive space.\
+"""
+
+[zoodiac]
+vendor = "big-fish-audio"
+name = "Zoodiac"
+categories = ["vsti.ambient"]
+requires = [["native-instruments-kontakt-player","5"]]
+size = 4600
+url = "https://www.bigfishaudio.com/Zodiac"
+demo = "https://www.youtube.com/watch?v=YAM6F1n37wc"
+price = 199.95
+description = """\
+Zodiac is a unique-sounding Virtual Instrument designed to provide composers and producers with a collection of original sounds and instruments suitable for film or TV scores, video games, and all types of ambient and experimental music.
+
+No synthesizers were used to create the instruments in Zodiac. Instead, all instruments were created from organic sources such as found sounds, sonic manipulations inspired by classic Musique Concrete, Experimental and Avant Garde Music compositions, prepared or heavily processed musical instruments, and audio recordings subjected to extreme sound design techniques.
+
+Zodiac features over 200 patches and Multis (over 8GB of uncompressed wav data), divided into six categories:
+
+* Pads & Atmospheres
+* Melodic Instruments
+* Bass Instruments
+* Percussive Instruments
+* Experimental Instruments
+* Zodiac Kits
+
+Zodiac's instruments range from beautiful and ethereal soundscapes to wildly inventive percussion and mysterious, haunting, atonal and experimental sounds that defy easy categorization. Search through Zodiac's patch folders, and you won't find anything like a regular bass, guitar, keyboard, or drum set. Instead, you'll find a collection of sounds that are quite unlike those made by any standard instrument.
+
+Not only does Zodiac feature a constellation of ready-to-use instrument patches, it's also a powerful sound-design VI. Use Zodiac's simple but versatile controls to dramatically alter, sculpt, or tweak and customize sounds to fit your individual style. However, you don't even need to touch a single control to get a variety of sounds from Zodiac's preset patches.
+
+Zodiac is made for experimentation: hold down a key on many instrument patches and a sound loops and morphs, revealing surprising musical timbres and harmonic strata. Play an instrument one way and it has a percussive quality; play it another, and the notes expand into a pad or atmosphere. Play a patch in one octave and it sounds dreamy and surreal; play it in another octave and it behaves and sounds quite differently.
+
+No matter what soft synths, sound modules, or VIs you already own, Zodiac will expand the palette of sounds in your sonic tool box and add a unique character to your music.
+
+The Zodiac GUI
+
+Despite its somewhat enigmatic appearance, Zodiac's Graphic User Interface (GUI) is quite simple to use. Here's the key:
+
+The Control Banks
+
+ON either side of the Zodiac logo is a control bank consisting of SIX levers. Under each lever is a single letter, which stand for the following:
+
+(Lefthand Bank)
+
+AMP ENV - Amp Envelope controls:
+
+A - Attack
+D - Decay
+S - Sustain
+R - Release
+
+T - Tuning (Pitch)
+R - Reverb amount
+
+(Righthand Bank)
+
+DELAY - the Delay controls:
+
+T - Delay Time
+D - Delay Damping
+P - Dealy Panning
+F - Delay Feedback
+
+B - Bass
+T - Treble
+
+The Levers
+
+Note that the four white-tipped levers on either side represent a grouping of related controls, and have a range of 0 to 10.
+
+Note also that the red-tipped levers represent controls not related to the white groups, and that three of these have a range from -10 to +10.
+
+Use command-click (MAC) or control-click (PC) to return any of the levers to the default setting of zero.
+
+The Reverb Window
+
+The window below the Zodiac logo contains a drop-down menu, with a list of fifteen very different-sounding Convolution Reverb IRs. Click on this window if you'd like to change the type of reverb on the instrument being played. Note that the R(everb) lever to the left of the window controls the amount of reverb.
+
+Zodiac is powered by the industry-leading Kontakt engine. It is compatible with VST, AudioUnit, AAX (Pro Tools 10) and RTAS (Pro Tools 9 & 10) plug-in formats allowing it to work seamlessly within any major sequencer, in addition to standalone use.
+
+- Over 150 different instrument patches and 50 Multis
+- Six Categories: Pads & Atmospheres, Melodic Instruments, Bass Instruments, Experimental Instruments and Zodiac Kits
+- 4.6 GB (over 8 GB uncompressed)
+- Kontakt Player 5.2.1 included\
+"""
