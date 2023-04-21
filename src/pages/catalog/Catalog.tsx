@@ -128,8 +128,8 @@ function Catalog() {
 
     return (
         <>
-            <Head title="Audio Plugin And Instrument Accessibility Catalog" />
-            <FA title="Audio Plugin And Instrument Accessibility Catalog" />
+            <Head title="Accessible Audio Plugin And Software Catalog" />
+            <FA title="Accessible Audio Plugin And Software Catalog" />
             <Search
                 filter={filter}
                 setFilter={(filter) =>

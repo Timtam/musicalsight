@@ -51,8 +51,8 @@ function Navigation() {
                             </NavDropdown>
                             <Nav.Item>
                                 <Nav.Link as={Link} to="/catalog" active>
-                                    Audio Plugin And Instrument Accessibility
-                                    Catalog
+                                    Accessible Audio Plugin And Software Catalog
+                                    (APS)
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>

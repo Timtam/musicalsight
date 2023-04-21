@@ -141,11 +141,11 @@ function CatalogProduct() {
             <p>
                 In the case that you expected something else to show up here, or
                 you know that the information displayed on this page is wrong,
-                why not take a minute and update this product?{" "}
+                why not take a minute and{" "}
                 <Link to={`/catalog/submit?p=${product!.id}`}>
-                    Just follow this link
+                    update this product
                 </Link>
-                , I promise it won't take to long.
+                ? I promise it won't take to long.
             </p>
         </>
     )
