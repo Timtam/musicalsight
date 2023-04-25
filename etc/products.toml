@@ -4724,3 +4724,112 @@ The plugin parameters can be edited with the Automation Window of the digital au
 It is worth mentioning that a blind user should ask a registry file (with the .reg extension) to be provided by the developer via an email. The .reg file allows a blind user to register the products (including Equinoxe) independently because the registry information (i.e. license key and user ID) are stored on that file. To execute it, please press the Enter key few times. First, the Windows system should ask you if you wanted the registry changes included in the file to be stored on the registry (please answer "Yes" on this question). Finally, the Windows system should announce that the registration was successfully made so please quit the dialog with the press of the "OK" button.\
 """
 os = ["windows"]
+
+[seventh-heaven-professional]
+vendor = "liquidsonics"
+name = "Seventh Heaven Professional"
+categories = ["fx.reverb"]
+size = 3072
+url = "https://www.liquidsonics.com/software/seventh-heaven-professional/"
+demo = "https://www.youtube.com/watch?v=FI35bhu5fjo"
+price = 299
+description = """\
+The Best M7 Simulation Ever
+Made Possible With Fusion-IR
+
+For years the Bricasti M7 eluded all attempts to capture and reproduce the subtle beauty of this legendary hardware. Many in the industry considered it impossible.
+Fusion-IR is a unique modulated convolution-based capture and reproduction technology developed specifically around the needs of M7. It redefines the rules of acoustic and workflow possibilities for convolution based reverberation processors.
+
+Nothing comes closer to M7 hardware than Seventh Heaven Professional.
+
+Now used around the world, from the smallest mountain-top backpack studios to the biggest post production facilities in London and Los Angeles, Seventh Heaven Professional is the definitive way to experience the power and beauty of M7 reverbs natively within your DAW in up to Atmos 7.1.6.
+
+The M7 excels in presenting the world’s most realistic simulation of rooms, spaces and plates in the most flattering of lights.
+From tight, realistic interiors, chambers and studios to lush outdoor expanses, cathedrals and halls, the M7 can do it all.
+Seventh Heaven Professional includes every single preset available in the Bricasti M7.
+This includes all v1 and v2 firmware revision presets, including the special nonlinear reverbs and even additional interiors presets not available in hardware.
+It took many months of fully automated capture to produce the thousands of Fusion-IRs needed for Seventh Heaven Professional. Only then could the true finesse of the modulated hardware be achieved via convolution. The early reflections, low frequency reverb, and late reverb were captured individually for the ultimate in control and acoustic realism.
+
+The Sound And Flexibility of Algorithmic Reverbs
+
+Treat Seventh Heaven Professional like any algorithmic reverb and forget what you’ve heard about the lifeless sound of convolution. It doesn’t apply here.
+In a sampled reverb it is typically impossible to sculpt a space as required, and as is expected from users of hardware and software algorithmic reverbs. Even simple, critical tasks such as balancing the early and late reverb are impossible jobs with most convolution reverbs. Not to mention, usually any modulation is completely lost and the captures lose the organic life of the hardware.
+Not so in Seventh Heaven Professional. It has the flexibility of algorithmic reverbs allowing you to perfect the acoustics of a space just as can be done on an M7 and retains the organic, lively vibe thought to be impossible to capture.
+You can even use the stereo captures in surround workflows. LiquidSonics’ advanced impulse response decorrelation technology ensures excellent fold-down compatibility and the convenience of up to 7.1.6 workflows in your DAW.
+Vast Editing Potential
+
+The Ultimate Reverb Tails
+
+The M7’s lush, rich decays are the star of the show. The original v1 decays are the most realistic ever heard, and the v2 exhibit stunning modulation qualities.
+Every preset’s decay can be set across the M7’s full decay time range (from 200 milliseconds right up to 30 seconds).
+
+Delays With Added Tempo Synchronisation
+
+The M7’s pre-delay and multi-voice delay can be modified as freely as within the hardware itself.
+Seventh Heaven Professional takes a further step by providing the ability to sync pre-delay and delay to DAW tempo.
+
+Reflection Pattern Selection
+
+Each and every modulated early reflection pattern has been captured and can be freely swapped at will. Any space can be absolutely transformed, an unprecedented feat for a sampled reverb.
+Advanced Equalisation
+
+Precise Roll-off Filtering
+
+The M7’s unique roll-off curves are perfectly designed for its reverberation and reflections. Each curve (different for v1/v2 decay and early reflections) was studied and reproduced in every available position. This provides an extremely accurate reproduction of this critical component in the acoustic chain.
+
+5-band Post-EQ
+
+The M7’s early and late reverb filters have been augmented with a full 5-band parametric equaliser in Seventh Heaven Professional.
+
+Frequency Dependent Reverb Decay Times
+
+Seventh Heaven Professional also includes the ability to apply post-process low and high frequency decay time modification to the reverb.
+
+Ducking
+
+Ducking is a very powerful tool that helps you improve clarity of a reverb by tucking the wet away until a musical phrase has ended, the reverb simply floods in to fill the space rather than competing with the instrument itself.\
+"""
+accessibility_description = """\
+All the parameters are accessible via the plug-in parameters. In addition to that, a preset file containing all the presets in REAPER's RPL format can be downloaded from here: \
+"""
+os = ["windows","mac_intel","mac_arm"]
+
+[little-plate]
+vendor = "soundtoys"
+name = "Little Plate"
+categories = ["fx.reverb"]
+url = "https://www.soundtoys.com/product/little-plate/"
+demo = "https://soundtoysdev.kinsta.cloud/wp-content/uploads/Infinity-Vox-Zero-to-Infinity-Manual-Fade-320.mp3"
+price = 99
+description = """\
+The unmistakable plate reverb sound – warm, rich and spacious – is now at your fingertips.
+
+Inspired by the original EMT 140 plate reverb, we captured the gorgeous sound and vibe of this studio classic and turned it into a fun and musically inspiring plug-in. And we couldn’t resist pushing the limits of reality, so we added a couple of fun twists that let you take Little Plate to spaces the original hardware only dreamed of.
+
+Simple Control, Infinite Possibilities
+
+Once we recreated the iconic 140 sound, we couldn’t resist going even further.
+While the original reverb could only muster a modest five seconds of reverberation time, we pushed that number higher. A lot higher. With Decay Time set to infinity, Little Plate’s reverb tails never fade away. Check out these audio clips of presets that demonstrate this:
+
+Keep your reverb and your mixes clean with the built-in Low Cut filter.
+
+Sometimes the low frequency build-up in reverbs can get a little out of control. Use the Low Cut control to tame those boomy bass frequencies.
+
+Flip the Mod switch to introduce slight modulation into the reverb tail.
+
+These subtle and chaotic variations can result in a thicker and smoother sound, especially at long decay times on pitched instruments like keys, guitar, and voice.
+
+Heavy Vibes
+
+At Soundtoys, we’ve got a reputation for obsessing over legendary hardware. But when we decided to build our first reverb plug-in, we went farther than ever before. We collected five EMT 140s from around the country and gathered them in our lab.
+We tuned them up. We teched them out. We went to the chiropractor (that’s one and a half tons of plate reverb). Then we took our time listening and testing, zeroing in on a sound that we think captures the classic EMT 140 vibe. Warm, rich, spacious and slightly dark, Little Plate packs the essence of plate reverb into one little plug-in that won’t break your back.
+
+A Little Plate History
+
+The EMT 140 uses a magnetic transducer to vibrate a massive sheet of metal, sending the result back to the engineer via a pickup that captures the resulting reverberation.
+The EMT 140 was introduced in 1957 and was capable of dense and smooth reverberation unlike anything the world had heard. While it doesn’t exactly sound like a real room, it has a beauty of its own, which is why plate reverb is still such a sought-after sound even many decades later. 140s are getting hard to find though, and replacement parts even harder. Not to mention their sheer size and weight keep them out of reach of the average studio.\
+"""
+accessibility_description = """\
+The plug-in parameters are accessible from within the DAW. Although the interface is not very accessible, all the presets are available within REAPER's RPL format and can be downloaded here: \
+"""
+os = ["windows","mac_intel","mac_arm"]
