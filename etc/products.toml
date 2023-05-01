@@ -2581,14 +2581,18 @@ categories = ["fx.reverb"]
 url = "https://www.zynaptiq.com/adaptiverb/"
 demo = "https://youtu.be/aZYmZCczxfc"
 price = 250
-description = """A good sounding reverb that reduces mudiness by removing clashing harmonics as you move from one note or chord to another. Here is the introductory text from the web site.
+description = """\
+A smooth-sounding, pitch-aware reverb that reduces muddiness by removing clashing harmonics as you move from one note or chord to another. Here is the introductory text from the web site.
 
 ADAPTIVERB  is a revolutionary reflectionless reverberation plugin. Unlike traditional reflection-based acoustic room modeling, ADAPTIVERB adds perceived depth, harmonic richness, and butter-smooth tails without obscuring the source. Preserving the tonal definition and directness of your mix, it adds size, glue and body – making it perfect for mixing and mastering applications alike.
 Powered by ray tracing, source separation, and advances in artificial intelligence, ADAPTIVERB automatically adapts to the input audio like a chameleon, blending with your sounds perfectly, and conforming its reverb tail to the tonality of the input or a user defined set of notes.
 While exceptionally fast to use, its advanced synthesis, cross-filtering and reverb pitch processing functionality provides ambient artists, film composers and sound designers with exciting new creative options for making evolving drones, organic pads, lush ambient sound scapes, and more.
 
-Supports VST 2.x, VST 3.x, AU, RTAS and AAX Native on Mac And PC"""
-accessibility_description = """Nearly all features are accessible from the parameter list. The exception is the ability to use the on screen keyboard to instruct what harmonics the reverb should maintain but this does not detract from the majority of great features this reverb has."""
+Supports VST 2.x, VST 3.x, AU, RTAS and AAX Native on Mac And PC\
+"""
+accessibility_description = """\
+Nearly all features are accessible from DAW automation (OSARA Parameters dialog in REAPER, Controls view in Logic etc). Two exceptions are no possibility to use the on-screen keyboard to instruct which harmonics the reverb should maintain, and there's no accessible way to toggle its low latency mode for live input. The majority of great features this reverb has are workable though.\
+"""
 os = ["windows","mac_intel","mac_arm"]
 
 [atlantis-reverb]
@@ -4831,5 +4835,31 @@ The EMT 140 was introduced in 1957 and was capable of dense and smooth reverbera
 """
 accessibility_description = """\
 The plug-in parameters are accessible from within the DAW. Although the interface is not very accessible, all the presets are available within REAPER's RPL format and can be downloaded here: \
+"""
+os = ["windows","mac_intel","mac_arm"]
+
+[finality]
+vendor = "joey-sturgis-tones"
+name = "Finality"
+categories = ["fx.dynamics","fx.mastering"]
+url = "https://www.joeysturgistones.com/collections/everything/products/finality"
+demo = "https://www.youtube.com/watch?v=o4Y_Mwwq2a4"
+price = 69
+description = """\
+Don’t be limited. Be versatile.
+Finality is a limiter designed from the ground up to be both powerful and versatile. Whether your source is very dynamic like drums and vocals, or more flat like distorted rhythm guitars and synth, Finality can be dialed to masterfully control peak and level dynamics in your mix.
+
+* Hard and soft modes will change the character of the transients
+* Aggro can alter the release envelope to be more favorable to drums.
+* Need a little edge? The color button can add helpful saturation to a signal.
+* There’s even a mix control to allow for parallel processing.
+* Anticipate and handle any unruly peaks with look ahead.
+* Utilize the sidechain to optimally react to low-end material
+* Auto gain automatically sets the make-up gain and can be switched off
+
+There is a light and an advanced version.\
+"""
+accessibility_description = """\
+Has been tested with Reaper, all parameters are controllable within Osaras parameter dialog.\
 """
 os = ["windows","mac_intel","mac_arm"]
