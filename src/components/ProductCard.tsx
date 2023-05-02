@@ -41,12 +41,11 @@ function ProductCard({
                 </Card.Header>
                 <ListGroup>
                     <ListGroup.Item>
-                        Vendor:{" "}
                         <Link to={"/catalog/vendor/" + product.vendor.id}>
-                            {product.vendor.name}
+                            Vendor: {product.vendor.name}
                         </Link>
                     </ListGroup.Item>
-                    <ListGroup.Item>
+                    <ListGroup.Item disabled>
                         {"Price: " +
                             (product.price === undefined
                                 ? "unknown"
@@ -54,11 +53,11 @@ function ProductCard({
                                 ? "free"
                                 : `$${product.price}`)}
                     </ListGroup.Item>
-                    <ListGroup.Item>{`Categories: ${product.categories
+                    <ListGroup.Item disabled>{`Categories: ${product.categories
                         .map((c) => c.getName())
                         .sort(sorter)
                         .join(", ")}`}</ListGroup.Item>
-                    <ListGroup.Item>{`OS: ${product.os
+                    <ListGroup.Item disabled>{`OS: ${product.os
                         .map((os) => getOperatingSystemString(os))
                         .join(", ")}`}</ListGroup.Item>
                     {product.requires.length > 0 ? (
@@ -75,7 +74,7 @@ function ProductCard({
                     ) : (
                         ""
                     )}
-                    <ListGroup.Item>
+                    <ListGroup.Item disabled>
                         Size:{" "}
                         {product.size !== undefined
                             ? filesize(product.size, {
@@ -84,7 +83,7 @@ function ProductCard({
                               }).toString()
                             : "unknown"}
                     </ListGroup.Item>
-                    <ListGroup.Item>
+                    <ListGroup.Item disabled>
                         NKS compatible:{" "}
                         {product.nks
                             ? typeof product.nks === "string"
