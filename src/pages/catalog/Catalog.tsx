@@ -1,7 +1,7 @@
 import boolifyString from "boolify-string"
 import equal from "deep-equal"
 import natsort from "natsort"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useState, useRef } from "react"
 import { Link, useSearchParams } from "react-router-dom"
 import DemoPlayer from "../../components/DemoPlayer"
 import FA from "../../components/FocusAnchor"
@@ -29,6 +29,7 @@ function Catalog() {
     let [products, setProducts] = useState([] as Product[])
     let [searchParams, setSearchParams] = useSearchParams()
     let [filter, setFilter] = useState(createProductFilter())
+    let headRef = useRef<HTMLElement>(null)
 
     useEffect(() => {
         let paramFilter = createProductFilter()
@@ -89,12 +90,14 @@ function Catalog() {
     useEffect(() => {
         setProducts(catalog.getProducts(filter))
         setStartIndex(0)
+
+        if(headRef.current) headRef.current.focus()
     }, [filter, catalog])
 
     return (
         <>
             <Head title="Accessible Audio Plugin And Software Catalog" />
-            <FA title="Accessible Audio Plugin And Software Catalog" />
+            <FA ref={headRef} title="Accessible Audio Plugin And Software Catalog" />
             <Search
                 filter={filter}
                 setFilter={(filter) => {
