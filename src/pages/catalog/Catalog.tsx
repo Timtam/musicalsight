@@ -10,9 +10,11 @@ import Pagination from "../../components/Pagination"
 import ProductCard from "../../components/ProductCard"
 import { OperatingSystem } from "../../entities/OperatingSystem"
 import Product from "../../entities/Product"
-import { createProductFilter } from "../../entities/ProductFilter"
+import {
+    createProductFilter,
+    createProductSearchParams,
+} from "../../entities/ProductFilter"
 import CatalogService from "../../services/CatalogService"
-import { useAppDispatch, useAppSelector } from "../../state/hooks"
 import Search from "./Search"
 
 const RESULTS_PER_PAGE: number = 20
@@ -22,17 +24,13 @@ function Catalog() {
         return new CatalogService()
     }, [])
     let sorter = useMemo(() => natsort(), [])
-    let filter = useAppSelector((state) => state.catalogFilter)
-    let dispatch = useAppDispatch()
     let [demoUrl, setDemoUrl] = useState("")
     let [startIndex, setStartIndex] = useState(0)
     let [products, setProducts] = useState([] as Product[])
     let [searchParams, setSearchParams] = useSearchParams()
-    let [loading, setLoading] = useState(true)
+    let [filter, setFilter] = useState(createProductFilter())
 
     useEffect(() => {
-        if (!loading) return
-
         let paramFilter = createProductFilter()
 
         let searchQuery = searchParams.get("q")
@@ -85,46 +83,13 @@ function Catalog() {
                         ]
                 )
 
-        if (
-            !equal(paramFilter, createProductFilter()) &&
-            !equal(paramFilter, filter)
-        )
-            dispatch({
-                type: "filter/update",
-                payload: paramFilter,
-            })
-
-        setLoading(false)
-    }, [catalog, dispatch, filter, searchParams, loading])
+        if (!equal(paramFilter, filter)) setFilter(paramFilter)
+    }, [catalog, filter, searchParams])
 
     useEffect(() => {
-        let up = {} as {
-            c?: string
-            nks?: string
-            os?: string
-            pf?: string
-            pt?: string
-            q?: string
-            v?: string
-        }
-
         setProducts(catalog.getProducts(filter))
         setStartIndex(0)
-
-        if (filter.searchQuery !== "") up.q = filter.searchQuery
-        if (filter.priceFrom > 0) up.pf = filter.priceFrom.toString()
-        if (filter.priceTo > 0) up.pt = filter.priceTo.toString()
-        if (filter.vendors.length > 0) up.v = filter.vendors.join(",")
-        if (filter.nks !== undefined) up.nks = filter.nks.toString()
-        if (filter.categories.length > 0) up.c = filter.categories.join(",")
-        if (filter.oss.length > 0)
-            up.os = filter.oss
-                .map((o: OperatingSystem) => OperatingSystem[o])
-                .map((o: string) => o.toLowerCase())
-                .join(",")
-
-        setSearchParams(up)
-    }, [filter, catalog, setSearchParams])
+    }, [filter, catalog])
 
     return (
         <>
@@ -132,9 +97,12 @@ function Catalog() {
             <FA title="Accessible Audio Plugin And Software Catalog" />
             <Search
                 filter={filter}
-                setFilter={(filter) =>
-                    dispatch({ type: "filter/update", payload: filter })
-                }
+                setFilter={(filter) => {
+                    setFilter(filter)
+
+                    let up = createProductSearchParams(filter)
+                    setSearchParams(up as any)
+                }}
                 catalog={catalog}
             />
             {products.length > 0 ? (

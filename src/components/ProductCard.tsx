@@ -53,10 +53,18 @@ function ProductCard({
                                 ? "free"
                                 : `$${product.price}`)}
                     </ListGroup.Item>
-                    <ListGroup.Item disabled>{`Categories: ${product.categories
-                        .map((c) => c.getName())
-                        .sort(sorter)
-                        .join(", ")}`}</ListGroup.Item>
+                    <ListGroup.Item>
+                        Categories:{" "}
+                        {product.categories
+                            .sort((a, b) => sorter(a.getName(), b.getName()))
+                            .map((c) => {
+                                return (
+                                    <Link to={`/catalog?c=${c.id}`}>
+                                        {c.getName()}
+                                    </Link>
+                                )
+                            })}
+                    </ListGroup.Item>
                     <ListGroup.Item disabled>{`OS: ${product.os
                         .map((os) => getOperatingSystemString(os))
                         .join(", ")}`}</ListGroup.Item>
