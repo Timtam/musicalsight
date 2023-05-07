@@ -71,4 +71,7 @@ export default class Product {
 
     @Expose()
     price: number | undefined = undefined
+
+    @Expose()
+    additional_links: { [key: string]: string } = {}
 }

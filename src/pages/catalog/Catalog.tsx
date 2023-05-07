@@ -1,7 +1,7 @@
 import boolifyString from "boolify-string"
 import equal from "deep-equal"
 import natsort from "natsort"
-import { useEffect, useMemo, useState, useRef } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { Link, useSearchParams } from "react-router-dom"
 import DemoPlayer from "../../components/DemoPlayer"
 import FA from "../../components/FocusAnchor"
@@ -91,13 +91,16 @@ function Catalog() {
         setProducts(catalog.getProducts(filter))
         setStartIndex(0)
 
-        if(headRef.current) headRef.current.focus()
+        if (headRef.current) headRef.current.focus()
     }, [filter, catalog])
 
     return (
         <>
             <Head title="Accessible Audio Plugin And Software Catalog" />
-            <FA ref={headRef} title="Accessible Audio Plugin And Software Catalog" />
+            <FA
+                ref={headRef}
+                title="Accessible Audio Plugin And Software Catalog"
+            />
             <Search
                 filter={filter}
                 setFilter={(filter) => {

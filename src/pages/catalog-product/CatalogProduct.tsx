@@ -137,6 +137,22 @@ function CatalogProduct() {
             ) : (
                 <h4>No accessibility description available</h4>
             )}
+            {Object.keys(product!.additional_links).length > 0 ? (
+                <>
+                    <h4>Additional Links</h4>
+                    <ul aria-label="Additional Links">
+                        {Object.entries(product!.additional_links).map(
+                            ([k, v]) => (
+                                <li>
+                                    <a href={v}>{k}</a>
+                                </li>
+                            )
+                        )}
+                    </ul>
+                </>
+            ) : (
+                <h4>No additional links available</h4>
+            )}
             <h3>Seeing something unexpected?</h3>
             <p>
                 In the case that you expected something else to show up here, or

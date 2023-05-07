@@ -4794,9 +4794,12 @@ Ducking
 Ducking is a very powerful tool that helps you improve clarity of a reverb by tucking the wet away until a musical phrase has ended, the reverb simply floods in to fill the space rather than competing with the instrument itself.\
 """
 accessibility_description = """\
-All the parameters are accessible via the plug-in parameters. In addition to that, a preset file containing all the presets in REAPER's RPL format can be downloaded from here: \
+All the parameters are accessible via the plug-in parameters. In addition to that, a preset file containing all the presets in REAPER's RPL format can be downloaded from the additional links.\
 """
 os = ["windows","mac_intel","mac_arm"]
+
+[seventh-heaven-professional.additional_links]
+"RPL Presets" = "https://www.dropbox.com/s/b64zr3uun8zw9td/Seventh%20Heaven%20Professional%20%28created%20by%20Toni%29.RPL?dl=1"
 
 [little-plate]
 vendor = "soundtoys"
@@ -4834,9 +4837,12 @@ The EMT 140 uses a magnetic transducer to vibrate a massive sheet of metal, send
 The EMT 140 was introduced in 1957 and was capable of dense and smooth reverberation unlike anything the world had heard. While it doesn’t exactly sound like a real room, it has a beauty of its own, which is why plate reverb is still such a sought-after sound even many decades later. 140s are getting hard to find though, and replacement parts even harder. Not to mention their sheer size and weight keep them out of reach of the average studio.\
 """
 accessibility_description = """\
-The plug-in parameters are accessible from within the DAW. Although the interface is not very accessible, all the presets are available within REAPER's RPL format and can be downloaded here: \
+The plug-in parameters are accessible from within the DAW. Although the interface is not very accessible, all the presets are available within REAPER's RPL format and can be downloaded from the additional links.\
 """
 os = ["windows","mac_intel","mac_arm"]
+
+[little-plate.additional_links]
+"RPL Presets" = "https://www.dropbox.com/s/6pbq5ku7ulk2txd/Little%20Plate%20VST.RPL?dl=1"
 
 [finality]
 vendor = "joey-sturgis-tones"
