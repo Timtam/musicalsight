@@ -37,6 +37,7 @@ const createFormData = (p?: Product) => ({
               product: Product
               version?: string
           }[]),
+    additional_links: p?.additional_links || {},
     vendor: p?.vendor.id || "",
     vendorName: "",
     vendorUrl: "",
@@ -59,6 +60,11 @@ function CatalogSubmit() {
         version: "" as string,
     })
     let [insertingRequirement, setInsertingRequirement] = useState(false)
+    let [selectedLink, setSelectedLink] = useState({
+        name: "" as string,
+        link: "" as string,
+    })
+    let [insertingLink, setInsertingLink] = useState(false)
     let headRef = useRef<HTMLElement>(null)
     let navigate = useNavigate()
 
@@ -537,6 +543,94 @@ function CatalogSubmit() {
                         }}
                     />
                 </Form.Group>
+                <h5>Additional links</h5>
+                <Form.Group>
+                    {Object.keys(data.additional_links).length > 0 ? (
+                        <div role="list" aria-label="Additional links">
+                            {Object.entries(data.additional_links).map(
+                                ([k, v]) => (
+                                    <div role="listitem">
+                                        <p>{`${k}: ${v}`}</p>
+                                        <Button
+                                            ref={(e: any) => {
+                                                if (e && insertingLink) {
+                                                    e.focus()
+                                                    setInsertingLink(false)
+                                                }
+                                            }}
+                                            onClick={(evt) => {
+                                                if (
+                                                    data.additional_links[k] !==
+                                                    undefined
+                                                )
+                                                    setData({
+                                                        ...data,
+                                                        additional_links: {
+                                                            ...data.additional_links,
+                                                            [k]: v,
+                                                        },
+                                                    })
+                                            }}
+                                        >
+                                            Remove this link
+                                        </Button>
+                                    </div>
+                                )
+                            )}
+                        </div>
+                    ) : (
+                        <p>No links added so far.</p>
+                    )}
+                    <Form.Label for="form-links-name">
+                        Descriptive Text
+                    </Form.Label>
+                    <Form.Control
+                        id="form-links-name"
+                        type="input"
+                        value={selectedLink.name}
+                        onChange={(evt) => {
+                            setSelectedLink({
+                                name: evt.target.value,
+                                link: selectedLink.link,
+                            })
+                        }}
+                    />
+                    <Form.Label for="form-links-link">URL</Form.Label>
+                    <Form.Control
+                        id="form-links-link"
+                        type="input"
+                        value={selectedLink.link}
+                        onChange={(evt) => {
+                            setSelectedLink({
+                                name: selectedLink.name,
+                                link: evt.target.value,
+                            })
+                        }}
+                    />
+                    <Form.Label for="form-links-submit">
+                        Add new link
+                    </Form.Label>
+                    <Form.Control
+                        id="form-links-submit"
+                        type="button"
+                        disabled={
+                            selectedLink.name === "" || selectedLink.link === ""
+                        }
+                        onClick={(evt) => {
+                            setData({
+                                ...data,
+                                additional_links: {
+                                    ...data.additional_links,
+                                    [selectedLink.name]: selectedLink.link,
+                                },
+                            })
+                            setSelectedLink({
+                                name: "",
+                                link: "",
+                            })
+                        }}
+                    />
+                </Form.Group>
                 <h5>Personal information</h5>
                 <p>
                     You don't need to enter those details, they're only
@@ -643,6 +737,15 @@ ${data.accessibility_description}\\
                         }
                         if (data.oss.length > 0)
                             msg += `os = ${JSON.stringify(data.oss)}\n`
+                        if (Object.keys(data.additional_links).length > 0) {
+                            msg += `[${productId}.additional_links]\n`
+
+                            for (const [k, v] of Object.entries(
+                                data.additional_links
+                            )) {
+                                msg += `"${k}" = "${v}"\n`
+                            }
+                        }
 
                         try {
                             let body: {

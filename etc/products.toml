@@ -2661,7 +2661,7 @@ description = """This is the stock autotune plugin that comes with Reaper. Can b
 accessibility_description = """The autotune features can be accessed through the UI and you have to select the right tab to get the autotune functionality. To get reaTune to tell you the pitch of audio, an approach is to record it and loop a short section. Add reaTune and then shift tab to the reference field, and then shift tab one more time."""
 os = ["windows","linux","mac_intel","mac_arm"]
 
-[valhalla-super-massive-reverb]
+[valhalla-super-massive]
 vendor = "valhalla-dsp"
 name = "Valhalla Super Massive"
 categories = ["fx.reverb"]
@@ -2694,8 +2694,13 @@ Supermassive has 18 out-of-this-world reverb/delay modes:
 All Valhalla plugins are self-documenting, so you can rollover the controls for the tooltip.
 And it’s free.  No strings attached.   Just download to blow your mind and your music to new levels of consciousness and experience.\
 """
-accessibility_description = """All the parameters are available in the parameter list and there is an RPL in the Reaper dropbox with a large number of presets."""
+accessibility_description = """\
+All the parameters are available in the parameter list and there is an REAPER Preset Library (RPL) available in the additional links section.\
+"""
 os = ["windows","mac_intel","mac_arm"]
+
+[valhalla-super-massive.additional_links]
+"RPL Presets" = "https://www.dropbox.com/s/1mqgzylwj9qjur8/Valhalla%20Supermassive%20VST%20%28created%20by%20Scott%29.RPL?dl=1"
 
 [camel-crusher]
 vendor = "camel-audio"
