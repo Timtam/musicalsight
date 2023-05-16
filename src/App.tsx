@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import Navigation from "./components/Navigation"
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
         <>
             <h1>Musical Sight</h1>
             <Navigation></Navigation>
+            <Footer />
         </>
     )
 }

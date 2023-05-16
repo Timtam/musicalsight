@@ -16,6 +16,7 @@ import Loading from "../pages/loading/Loading"
 import NotFound from "../pages/not-found/NotFound"
 import Note from "../pages/note/Note"
 import Notes from "../pages/notes/Notes"
+import PrivacyPolicy from "../pages/privacy-policy/PrivacyPolicy"
 import Scale from "../pages/scale/Scale"
 import Scales from "../pages/scales/Scales"
 
@@ -87,6 +88,10 @@ function Navigation() {
                         <Route
                             path="/scales/:scale/:note?"
                             element={<Scale />}
+                        />
+                        <Route
+                            path="/privacy-policy"
+                            element={<PrivacyPolicy />}
                         />
                         <Route path="/scales" element={<Scales />} />
                         <Route path="/chords" element={<Chords />} />
