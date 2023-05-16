@@ -101,6 +101,7 @@ function Catalog() {
                 ref={headRef}
                 title="Accessible Audio Plugin And Software Catalog"
             />
+            <Link to="/catalog/submit">Submit a new entry</Link>
             <Search
                 filter={filter}
                 setFilter={(filter) => {
@@ -161,10 +162,6 @@ function Catalog() {
             ) : (
                 ""
             )}
-            <h3>Missing something?</h3>
-            Do you know a product that we're currently missing here? You can
-            help the catalog grow by{" "}
-            <Link to="/catalog/submit">submitting an entry here</Link>.
         </>
     )
 }
