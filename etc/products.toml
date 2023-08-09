@@ -2109,6 +2109,28 @@ Panagement FREE gets everything except the Delay and PGMT-400 chip.\
 accessibility_description = """all effects are accessible through presets."""
 os = ["windows","linux","mac_intel","mac_arm"]
 
+[panagement-full]
+vendor = "auburn-sounds"
+name = "Panagement Full"
+categories = ["fx.pan"]
+url = "https://www.auburnsounds.com/products/Panagement.html"
+demo = "https://www.youtube.com/watch?v=sfi2HPBGwzo"
+price = 39
+description = """\
+Panagement is the spatialization laboratory that has found its way to thousands of studios around the world. Panagement gives you raw power over your stereo tracks.
+
+* The Binaural Distance Panner lets you position a track anywhere in the sound field,
+* The Reverb increases realism of distance modeling with automatic early and late reflections,
+* Width and Tilt open your mix to unforeseen decisions,
+* The LFO dramatically extends the possibilities (eg: reverb ducking),
+* The Binaural Delay revisit the product, allowing more spatial complexity,
+* Comes with the sought-after PGMT-400 chip mod.
+
+With uniquely integrated Delay, Reverb, and Binaural processing, Panagement push the limits of practical teleportation.
+"""
+accessibility_description = """all effects are accessible through presets."""
+os = ["windows","linux","mac_intel","mac_arm"]
+
 [raum]
 vendor = "native-instruments"
 name = "Raum"
@@ -4874,3 +4896,17 @@ accessibility_description = """\
 Has been tested with Reaper, all parameters are controllable within Osaras parameter dialog.\
 """
 os = ["windows","mac_intel","mac_arm"]
+
+[folk-art-violin]
+vendor = "david-hilowitz-music"
+name = "Folk Art Violin"
+categories = ["vsti.strings"]
+url = "https://www.decentsamples.com/product/folk-art-violin/"
+demo = "https://www.youtube.com/watch?v=2xKhAO9gIYc"
+price = 0
+description = """\
+a beautiful Violin plugin sampled from a very old vintage handmade Violin by W. T. Fisher.\
+"""
+accessibility_description = """\
+runs on Decent sampler plugin which is manageable to use with JAWS and NVDA.\
+"""
