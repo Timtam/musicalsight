@@ -4910,3 +4910,4 @@ a beautiful Violin plugin sampled from a very old vintage handmade Violin by W. 
 accessibility_description = """\
 runs on Decent sampler plugin which is manageable to use with JAWS and NVDA.\
 """
+os = ["windows","linux","mac_intel"]
