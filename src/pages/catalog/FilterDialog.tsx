@@ -86,8 +86,8 @@ function FilterDialog({
                                                 if (vendors.includes(v.id))
                                                     setVendors(
                                                         vendors.filter(
-                                                            (vs) => vs !== v.id
-                                                        )
+                                                            (vs) => vs !== v.id,
+                                                        ),
                                                     )
                                             }
                                         }}
@@ -132,8 +132,8 @@ function FilterDialog({
                                     nks === undefined
                                         ? "disabled"
                                         : nks === false
-                                        ? "no"
-                                        : "yes"
+                                          ? "no"
+                                          : "yes"
                                 }
                                 onChange={(evt) => {
                                     switch (evt.target.value) {
@@ -172,7 +172,7 @@ function FilterDialog({
                                             if (checked) {
                                                 if (
                                                     !categories.includes(
-                                                        category.id
+                                                        category.id,
                                                     )
                                                 )
                                                     setCategories([
@@ -182,15 +182,15 @@ function FilterDialog({
                                             } else {
                                                 if (
                                                     categories.includes(
-                                                        category.id
+                                                        category.id,
                                                     )
                                                 )
                                                     setCategories(
                                                         categories.filter(
                                                             (cs) =>
                                                                 cs !==
-                                                                category.id
-                                                        )
+                                                                category.id,
+                                                        ),
                                                     )
                                             }
                                         }}
@@ -206,49 +206,49 @@ function FilterDialog({
                                         id={`form-os-${os}`}
                                         type="checkbox"
                                         label={`${getOperatingSystemString(
-                                            parseInt(os) as OperatingSystem
+                                            parseInt(os) as OperatingSystem,
                                         )} (${
                                             catalog.getProducts({
                                                 ...createProductFilter(),
                                                 oss: [
                                                     parseInt(
-                                                        os
+                                                        os,
                                                     ) as OperatingSystem,
                                                 ],
                                             }).length
                                         })`}
                                         checked={oss.includes(
-                                            parseInt(os) as OperatingSystem
+                                            parseInt(os) as OperatingSystem,
                                         )}
                                         onChange={(evt) => {
                                             if (evt.target.checked === true) {
                                                 if (
                                                     !oss.includes(
                                                         parseInt(
-                                                            os
-                                                        ) as OperatingSystem
+                                                            os,
+                                                        ) as OperatingSystem,
                                                     )
                                                 )
                                                     setOss([
                                                         ...oss,
                                                         parseInt(
-                                                            os
+                                                            os,
                                                         ) as OperatingSystem,
                                                     ])
                                             } else {
                                                 if (
                                                     oss.includes(
                                                         parseInt(
-                                                            os
-                                                        ) as OperatingSystem
+                                                            os,
+                                                        ) as OperatingSystem,
                                                     )
                                                 )
                                                     setOss(
                                                         oss.filter(
                                                             (osn) =>
                                                                 osn !==
-                                                                parseInt(os)
-                                                        )
+                                                                parseInt(os),
+                                                        ),
                                                     )
                                             }
                                         }}

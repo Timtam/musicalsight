@@ -34,17 +34,17 @@ function Navigation() {
                                 </Nav.Link>
                             </Nav.Item>
                             <NavDropdown title="Music Theory">
-                                <NavDropdown.Item>
+                                <NavDropdown.Item as="div">
                                     <Nav.Link as={Link} to="/notes">
                                         Notes
                                     </Nav.Link>
                                 </NavDropdown.Item>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item as="div">
                                     <Nav.Link as={Link} to="/scales">
                                         Scales
                                     </Nav.Link>
                                 </NavDropdown.Item>
-                                <NavDropdown.Item>
+                                <NavDropdown.Item as="div">
                                     <Nav.Link as={Link} to="/chords">
                                         Chords
                                     </Nav.Link>

@@ -34,14 +34,14 @@ export default class Product {
                             ? OperatingSystem[
                                   os.toUpperCase() as keyof typeof OperatingSystem
                               ]
-                            : OperatingSystem.UNKNOWN
-                    )
+                            : OperatingSystem.UNKNOWN,
+                    ),
                 ),
             ]
         },
         {
             toClassOnly: true,
-        }
+        },
     )
     os: OperatingSystem[] = [OperatingSystem.UNKNOWN]
 
@@ -53,7 +53,7 @@ export default class Product {
         },
         {
             toClassOnly: true,
-        }
+        },
     )
     size: number
 

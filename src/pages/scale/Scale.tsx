@@ -63,7 +63,7 @@ function Scale() {
             ...TonalScale.get(currentNote + "4 " + unescape(scale!)).notes,
             currentNote + "5",
             ...TonalScale.get(
-                currentNote + "4 " + unescape(scale!)
+                currentNote + "4 " + unescape(scale!),
             ).notes.reverse(),
         ]
         let lengths: string[] = notes.map((note, i, arr) => {
@@ -95,18 +95,18 @@ function Scale() {
                         The following notes are included in this scale by
                         applying the above intervals to the selected root note:{" "}
                         {TonalScale.get(
-                            currentNote + "4 " + unescape(scale!)
+                            currentNote + "4 " + unescape(scale!),
                         ).notes.map((note) => (
                             <Link
                                 to={
                                     "/notes/" +
                                     mapNoteToLink(
-                                        TonalNote.simplify(note.slice(0, -1))
+                                        TonalNote.simplify(note.slice(0, -1)),
                                     )
                                 }
                             >
                                 {mapNoteToName(
-                                    TonalNote.simplify(note.slice(0, -1))
+                                    TonalNote.simplify(note.slice(0, -1)),
                                 )}
                             </Link>
                         ))}
@@ -146,7 +146,7 @@ function Scale() {
                     </thead>
                     <tbody>
                         {TonalScale.scaleChords(
-                            currentNote + " " + unescape(scale!)
+                            currentNote + " " + unescape(scale!),
                         ).map((chord) => (
                             <tr>
                                 <td>
@@ -154,7 +154,7 @@ function Scale() {
                                         to={
                                             "/chords/" +
                                             escape(
-                                                TonalChord.getChord(chord).name
+                                                TonalChord.getChord(chord).name,
                                             ) +
                                             "/" +
                                             mapNoteToLink(currentNote)
@@ -163,8 +163,8 @@ function Scale() {
                                         {titleCase(
                                             TonalChord.getChord(
                                                 chord,
-                                                currentNote
-                                            ).name
+                                                currentNote,
+                                            ).name,
                                         )}
                                     </Link>
                                 </td>
@@ -174,9 +174,9 @@ function Scale() {
                                             playback.playChord(
                                                 TonalChord.getChord(
                                                     chord,
-                                                    currentNote + "4"
+                                                    currentNote + "4",
                                                 ).notes,
-                                                "4n"
+                                                "4n",
                                             )
                                         }}
                                     >
@@ -189,9 +189,9 @@ function Scale() {
                                             playback.playChord(
                                                 TonalChord.getChord(
                                                     chord,
-                                                    currentNote + "4"
+                                                    currentNote + "4",
                                                 ).notes,
-                                                "32n"
+                                                "32n",
                                             )
                                         }}
                                     >
@@ -204,8 +204,8 @@ function Scale() {
                                             playback.playChord(
                                                 TonalChord.getChord(
                                                     chord,
-                                                    currentNote + "4"
-                                                ).notes
+                                                    currentNote + "4",
+                                                ).notes,
                                             )
                                         }}
                                     >
@@ -262,7 +262,7 @@ function Scale() {
                             {TonalScale.get(unescape(scale!)).intervals.map(
                                 (interval) => (
                                     <li>{mapToIntervalName(interval)}</li>
-                                )
+                                ),
                             )}
                         </ul>
                     </Card.Text>

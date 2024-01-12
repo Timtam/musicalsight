@@ -75,13 +75,13 @@ function Catalog() {
                 .filter((o) =>
                     Object.keys(OperatingSystem)
                         .filter((ko) => isNaN(parseInt(ko, 10)))
-                        .includes(o.toUpperCase())
+                        .includes(o.toUpperCase()),
                 )
                 .map(
                     (o) =>
                         OperatingSystem[
                             o.toUpperCase() as keyof typeof OperatingSystem
-                        ]
+                        ],
                 )
 
         if (!equal(paramFilter, filter)) setFilter(paramFilter)
@@ -117,7 +117,7 @@ function Catalog() {
                     Results {(startIndex + 1).toString()} to{" "}
                     {Math.min(
                         startIndex + RESULTS_PER_PAGE,
-                        products.length
+                        products.length,
                     ).toString()}{" "}
                     out of {products.length.toString()}
                 </h3>
@@ -133,7 +133,7 @@ function Catalog() {
                         idx <
                             Math.min(
                                 startIndex + RESULTS_PER_PAGE,
-                                products.length + 1
+                                products.length + 1,
                             )
                     )
                 })

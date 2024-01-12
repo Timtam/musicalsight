@@ -45,7 +45,7 @@ class CatalogService {
                 console.log(
                     `invalid product: ${key}, vendor not found: ${
                         (value as any).vendor
-                    }`
+                    }`,
                 )
                 continue
             }
@@ -83,7 +83,7 @@ class CatalogService {
                             console.log(
                                 `invalid product requirement ${r} for product ${
                                     p!.id
-                                }`
+                                }`,
                             )
                             return null
                         }
@@ -91,7 +91,7 @@ class CatalogService {
                             product: or,
                             version: Array.isArray(r) ? r[1] : undefined,
                         }
-                    }
+                    },
                 )
 
                 // special cases for product types and os support
@@ -143,7 +143,7 @@ class CatalogService {
         if (
             f.categories.length > 0 &&
             f.categories.filter((f) =>
-                p.categories.some((c) => c.id.startsWith(f))
+                p.categories.some((c) => c.id.startsWith(f)),
             ).length === 0
         )
             return false

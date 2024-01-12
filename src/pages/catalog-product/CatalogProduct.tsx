@@ -77,8 +77,8 @@ function CatalogProduct() {
                         (product!.price === undefined
                             ? "unknown"
                             : product!.price === 0
-                            ? "free"
-                            : `$${product!.price}`)}
+                              ? "free"
+                              : `$${product!.price}`)}
                 </li>
                 <li>{`Categories: ${product!.categories
                     .map((c) => c.getName())
@@ -146,7 +146,7 @@ function CatalogProduct() {
                                 <li>
                                     <a href={v}>{k}</a>
                                 </li>
-                            )
+                            ),
                         )}
                     </ul>
                 </>

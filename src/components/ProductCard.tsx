@@ -50,8 +50,8 @@ function ProductCard({
                             (product.price === undefined
                                 ? "unknown"
                                 : product.price === 0
-                                ? "free"
-                                : `$${product.price}`)}
+                                  ? "free"
+                                  : `$${product.price}`)}
                     </ListGroup.Item>
                     <ListGroup.Item>
                         Categories:{" "}

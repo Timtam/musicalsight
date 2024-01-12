@@ -36,7 +36,7 @@ export interface ProductSearchParams {
 }
 
 export const createProductSearchParams = (
-    filter: ProductFilter
+    filter: ProductFilter,
 ): ProductSearchParams => {
     let up: ProductSearchParams = {}
 

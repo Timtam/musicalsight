@@ -24,7 +24,7 @@ const FocusAnchor = forwardRef<HTMLElement, FocusAnchorProps>(
                 {title}
             </h3>
         )
-    }
+    },
 )
 
 export default FocusAnchor

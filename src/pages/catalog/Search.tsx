@@ -21,7 +21,7 @@ function Search({
 }) {
     let [searchText, setSearchText] = useState(filter.searchQuery)
     let [dialogFilter, setDialogFilter] = useState(
-        undefined as ProductFilter | undefined
+        undefined as ProductFilter | undefined,
     )
 
     useEffect(() => setSearchText(filter.searchQuery), [filter])
@@ -61,7 +61,7 @@ function Search({
                                 ...createProductFilter(),
                                 searchQuery: filter.searchQuery,
                             },
-                            filter
+                            filter,
                         )}
                         onClick={() => {
                             setFilter({

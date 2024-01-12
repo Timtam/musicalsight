@@ -24,7 +24,7 @@ class PlaybackService {
     playNote(
         note: string,
         length: string | number = "8n",
-        when: number = Tone.now()
+        when: number = Tone.now(),
     ) {
         this.piano.keyDown({
             note: note,
@@ -47,7 +47,7 @@ class PlaybackService {
                 Tone.Time("2n").toSeconds() +
                 (offset === undefined
                     ? 0
-                    : Tone.Time(offset).toSeconds() * (notes.length - i))
+                    : Tone.Time(offset).toSeconds() * (notes.length - i)),
         )
 
         let when: number = Tone.now()

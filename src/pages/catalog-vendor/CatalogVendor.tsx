@@ -36,7 +36,7 @@ function CatalogVendor() {
                 catalog.getProducts({
                     ...createProductFilter(),
                     vendors: [vendorId],
-                })
+                }),
             )
             setLoading(false)
         }
@@ -58,7 +58,7 @@ function CatalogVendor() {
                     Showing {(startIndex + 1).toString()} to{" "}
                     {Math.min(
                         startIndex + RESULTS_PER_PAGE,
-                        products.length
+                        products.length,
                     ).toString()}{" "}
                     out of {products.length.toString()} products
                 </h3>
@@ -74,7 +74,7 @@ function CatalogVendor() {
                         idx <
                             Math.min(
                                 startIndex + RESULTS_PER_PAGE,
-                                products.length + 1
+                                products.length + 1,
                             )
                     )
                 })

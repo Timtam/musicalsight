@@ -51,12 +51,12 @@ function Chord() {
             <Head
                 title={titleCase(
                     TonalChord.getChord(unescape(chord), currentNote).name +
-                        " chord"
+                        " chord",
                 )}
             />
             <h3>
                 {titleCase(
-                    TonalChord.getChord(unescape(chord)).name + " chord"
+                    TonalChord.getChord(unescape(chord)).name + " chord",
                 )}
             </h3>
             Select the current chord:
@@ -117,14 +117,14 @@ function Chord() {
                     <Card.Title as="h4">
                         {titleCase(
                             TonalChord.getChord(unescape(chord), currentNote)
-                                .name + " chord"
+                                .name + " chord",
                         )}
                     </Card.Title>
                     <Card.Text>
                         The following notes are included in this chord:{" "}
                         {TonalChord.getChord(
                             unescape(chord),
-                            currentNote
+                            currentNote,
                         ).notes.map((note) => (
                             <Link
                                 to={
@@ -141,9 +141,9 @@ function Chord() {
                             playback.playChord(
                                 TonalChord.getChord(
                                     unescape(chord!),
-                                    currentNote + "4"
+                                    currentNote + "4",
                                 ).notes,
-                                "4n"
+                                "4n",
                             )
                         }}
                     >
@@ -154,9 +154,9 @@ function Chord() {
                             playback.playChord(
                                 TonalChord.getChord(
                                     unescape(chord!),
-                                    currentNote + "4"
+                                    currentNote + "4",
                                 ).notes,
-                                "32n"
+                                "32n",
                             )
                         }}
                     >
@@ -167,8 +167,8 @@ function Chord() {
                             playback.playChord(
                                 TonalChord.getChord(
                                     unescape(chord!),
-                                    currentNote + "4"
-                                ).notes
+                                    currentNote + "4",
+                                ).notes,
                             )
                         }}
                     >

@@ -342,7 +342,7 @@ function CatalogSubmit() {
                                     if (checked) {
                                         if (
                                             !data.categories.includes(
-                                                category.id
+                                                category.id,
                                             )
                                         )
                                             setData({
@@ -355,7 +355,7 @@ function CatalogSubmit() {
                                     } else {
                                         if (
                                             data.categories.includes(
-                                                category.id
+                                                category.id,
                                             )
                                         )
                                             setData({
@@ -363,7 +363,7 @@ function CatalogSubmit() {
                                                 categories:
                                                     data.categories.filter(
                                                         (cs) =>
-                                                            cs !== category.id
+                                                            cs !== category.id,
                                                     ),
                                             })
                                     }
@@ -377,17 +377,17 @@ function CatalogSubmit() {
                         .filter(
                             (os) =>
                                 !isNaN(parseInt(os)) &&
-                                parseInt(os) !== OperatingSystem.UNKNOWN
+                                parseInt(os) !== OperatingSystem.UNKNOWN,
                         )
                         .map((os) => (
                             <Form.Check
                                 id={`form-os-${os}`}
                                 type="checkbox"
                                 label={getOperatingSystemString(
-                                    parseInt(os) as OperatingSystem
+                                    parseInt(os) as OperatingSystem,
                                 )}
                                 checked={data.oss.includes(
-                                    OperatingSystem[parseInt(os)].toLowerCase()
+                                    OperatingSystem[parseInt(os)].toLowerCase(),
                                 )}
                                 onChange={(evt) => {
                                     if (evt.target.checked === true) {
@@ -395,7 +395,7 @@ function CatalogSubmit() {
                                             !data.oss.includes(
                                                 OperatingSystem[
                                                     parseInt(os)
-                                                ].toLowerCase()
+                                                ].toLowerCase(),
                                             )
                                         )
                                             setData({
@@ -412,7 +412,7 @@ function CatalogSubmit() {
                                             data.oss.includes(
                                                 OperatingSystem[
                                                     parseInt(os)
-                                                ].toLowerCase()
+                                                ].toLowerCase(),
                                             )
                                         )
                                             setData({
@@ -422,7 +422,7 @@ function CatalogSubmit() {
                                                         osn !==
                                                         OperatingSystem[
                                                             parseInt(os)
-                                                        ].toLowerCase()
+                                                        ].toLowerCase(),
                                                 ),
                                             })
                                     }
@@ -454,7 +454,7 @@ function CatalogSubmit() {
                                                     ...data,
                                                     requires:
                                                         data.requires.filter(
-                                                            (re) => re !== r
+                                                            (re) => re !== r,
                                                         ),
                                                 })
                                         }}
@@ -489,8 +489,8 @@ function CatalogSubmit() {
                             .sort((a, b) =>
                                 sorter(
                                     `${a.name} ${a.vendor.name}`,
-                                    `${b.name} ${b.vendor.name}`
-                                )
+                                    `${b.name} ${b.vendor.name}`,
+                                ),
                             )
                             .map((p) => (
                                 <option
@@ -527,7 +527,7 @@ function CatalogSubmit() {
                                     ...data.requires,
                                     {
                                         product: catalog.getProductById(
-                                            selectedRequirement.product
+                                            selectedRequirement.product,
                                         )!,
                                         version:
                                             selectedRequirement.version !== ""
@@ -575,7 +575,7 @@ function CatalogSubmit() {
                                             Remove this link
                                         </Button>
                                     </div>
-                                )
+                                ),
                             )}
                         </div>
                     ) : (
@@ -669,14 +669,14 @@ function CatalogSubmit() {
                             reqs: {
                                 product: Product
                                 version?: string
-                            }[]
+                            }[],
                         ): string => {
                             return JSON.stringify(
                                 reqs.map((r) => {
                                     if (r.version)
                                         return [r.product.id, r.version]
                                     else return r.product.id
-                                }) as (string | string[])[]
+                                }) as (string | string[])[],
                             )
                         }
                         let msg = ""
@@ -709,11 +709,11 @@ function CatalogSubmit() {
 
                         if (data.categories.length > 0)
                             msg += `categories = ${JSON.stringify(
-                                data.categories
+                                data.categories,
                             )}\n`
                         if (data.requires.length > 0)
                             msg += `requires = ${formatRequirements(
-                                data.requires
+                                data.requires,
                             )}\n`
                         if (data.size !== undefined)
                             msg += `size = ${data.size}\n`
@@ -741,7 +741,7 @@ ${data.accessibility_description}\\
                             msg += `[${productId}.additional_links]\n`
 
                             for (const [k, v] of Object.entries(
-                                data.additional_links
+                                data.additional_links,
                             )) {
                                 msg += `"${k}" = "${v}"\n`
                             }
@@ -780,7 +780,7 @@ ${data.accessibility_description}\\
                                     headers: {
                                         "Content-Type": "application/json",
                                     },
-                                }
+                                },
                             )
 
                             let json = await res.json()
