@@ -16,4 +16,5 @@ export default defineConfig({
             include: ["events"],
         }),
     ],
+    base: "/musicalsight/",
 })
