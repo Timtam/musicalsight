@@ -1,5 +1,5 @@
-const fs = require("fs/promises")
-const toml = require("toml")
+import fs from "fs/promises"
+import toml from "toml"
 
 const main = async () => {
     let catalog = {
