@@ -4911,3 +4911,96 @@ accessibility_description = """\
 runs on Decent sampler plugin which is manageable to use with JAWS and NVDA.\
 """
 os = ["windows","linux","mac_intel"]
+
+[aurora-fm]
+vendor = "audionebula"
+name = "Aurora FM"
+categories = ["vsti.synthesizer"]
+url = "https://www.audionebula.ca/"
+demo = "https://soundcloud.com/user-637213504/prelude-to-aurora-osc-155?si=0c8c4d96157c4e48bf1126884d75dbb5&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+description = """\
+* 4-part multi-timbral FM synthesizer with 6 operators, 39 algorithms, 65 waveform variations, 64 voices, deep modulation, effects (overdrive, chorus, delay, and reverb), and performance features.  A whopping 602 parameters per part.
+* High performance, 100% original C++ and assembly code with meticulously optimized execution paths for processors supporting SSE2, AVX, or AVX2+FMA instruction set extensions.
+* Single-screen, everything-visible, non-skeuomorphic UI with controls designed for efficient mouse interaction and visual feedback; no hidden parameters, tabs, menu-diving, etc.
+* Unique variable 2x3 or 3x2 algorithm-dependant operator layout elevates clarity and usability beyond other FM synthesizers.
+* DPI-aware and custom scaling from 50-200%.
+* ODDSound's MTS-ESP microtuning support.
+* Not a DX7 emulation! Aurora FM translates Yamaha DX7/21/27/100/11 & TX81Z patches but is a superior, semi-modular, highly-usable modern instrument for musicians and synthesists.
+* Inspired by modulation monsters like the Alesis Ion and Waldorf Q.
+
+Architecture
+
+* 4-part multi-timbral
+  * 4 complete synthesis engine instances, each with channel, key range, voice limit, mute, and level
+  * plus parallel Reverb effect, with per-part pre/post-fader send
+* Per-part 1x-4x oversampling
+* Full 32-bit floating-point signal path
+* Full-rate modulation
+* High-resolution, fast approximate sine generators, with about 85dB average / 75dB worst case SNR; No look-up tables
+* Execution paths for SSE2, AVX, or AVX2+FMA SIMD extensions
+
+Operators
+
+* 65 combined waveform variants, which include the 8 sine and sine-transorm waveforms found in the TX81Z and DX11, and many others
+  * 13 base waveforms, 5 waveform variants, and polarity
+  * Waveform Depth, interpolates between sine at 0% and the selected waveform at 100%; Moddable
+* Independent per-operator feedback by self or any descendant modulated operator; Moddable
+* 3 frequency selection modes - Ratio, Fixed, and the unique Relative mode which facilitates setting intervals
+* Variable waveform sync phase (0°, 90°, 180°, 270°, None)
+* On/Off toggling with clear visual feedback
+* Variable 2x3 or 3x2 algorithm-dependant operator layout with visual separation of modulators and carriers provides unparalleled clarity and navigation
+
+Envelopes
+
+* 6 stages: Delay, Attack, Decay1, Decay2, Sustain, Release
+* 9 slopes: 3 Logarithmic, Linear, and 5 Exponential
+* Tempo-syncable
+* Loopable
+
+Modulation Generators
+
+* 2 x LFOs, 1 x S&H, 1 x Envelope
+* Tempo-syncable
+* 3 voicing modes: Mono Reset, Mono Run, Poly Reset
+  * Monophonic mod sources are global and shared by all voices; Polyphonic mod sources are unique to each voice
+  * Reset/Run - Resets at each key-press / Free-running
+* Amplitude scaling by ModWheel and a variable Mod Source
+* LFO1/2 selectable start phase (0°, 90°, 180°, 270°)
+
+Modulation
+
+* Operator pitch and amplitude modulation by 5 simultaneous modulation sources, with 3 modulation polarity modes and 3 convenient modulation ranges
+* Additional operator amplitude scaling by Key and Velocity
+* Envelope rate scaling by Key, Velocity (On + Off), and selectable modulation source
+* 2 mod source slots for CC inputs (CTL1/CTL2)
+* Mod Matrix
+  * 11-entry, with Destination, Source, Amount, and Polarity
+  * Destinations: Pan, Unison Detune, Feedback 1-6, Operator Waveform Depth 1-6, Part Level, Reverb Send, LFO1/LFO2/S&H Rate, OD, Chorus Rate, Chorus Depth, Chorus Mix, Delay Level, and Delay Feedback
+  * Sources: LFO1, LFO2, S&H, Env, ModWheel, CTL1, CTL2, AT C, AT P, Random On/Off/Both, Key Lin, Key Exp, Vel On/Off/Both, Uni #
+  
+Performance
+
+* Polyphonic (64-voice), Poly Retrigger, Mono, and Mono Legato voice modes
+* Unison with 2-4 voices and variable detune
+* Portamento
+  * Normal and Legato modes
+  * Rate, Time, and Tempo Sync modes
+  * Time
+* Pitch bend range, +/- 24 semitone Transpose, variable A440 tuning (+/- 1 semitone in 0.1 Hz increments)
+* Numerous built-in alternate temperaments and non-traditional scales
+* As well as MTS-ESP microtuning support
+
+Effects
+
+* Overdrive, 2 variations
+* Chorus, 4 variations, tempo-syncable (Off/Alg1-4, Rate Mode (Rate/Sync), Rate, Depth, Dry:Wet Mix)
+* Delay, 4 variations, tempo-syncable (Mode, Time Mode (Time/Sync), Time, Feedback, Level)
+  * Stereo (2Ch), Mono (M), Stereo Ping-pong (P-P 2), Mono Ping-poing (P-P M)
+* Reverb (Time, Tone, Level)
+* Output bit-depth reduction, optional dithering"\
+"""
+accessibility_description = """\
+This synth is completely accessible using the Reaper's parameters list and you can also access the main interface to select sounds, banks etc. There is. Tested with NVDA Screen Reader.\
+"""
+os = ["windows"]
+price = 32
