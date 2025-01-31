@@ -169,3 +169,355 @@ url = "https://library.davidhilowitz.com/"
 [audionebula]
 name = "Audionebula"
 url = "https://www.audionebula.ca/"
+
+[ben-osterhouse]
+name = "Ben Osterhouse"
+url = ""
+
+[buzz]
+name = "Buzz"
+url = ""
+
+[cinematique-instruments]
+name = "Cinematique Instruments"
+url = ""
+
+[cinesamples]
+name = "CineSamples"
+url = ""
+
+[crypto-cipher]
+name = "Crypto Cipher"
+url = ""
+
+[cymatic-form]
+name = "Cymatic Form"
+url = ""
+
+[echo-sound-works]
+name = "Echo Sound Works"
+url = ""
+
+[embertone]
+name = "Embertone"
+url = ""
+
+[emergence-audio]
+name = "Emergence Audio"
+url = ""
+
+[evolution-series]
+name = "Evolution Series"
+url = ""
+
+[fable-sounds]
+name = "Fable Sounds"
+url = ""
+
+[fluffy-audio]
+name = "Fluffy Audio"
+url = ""
+
+[getgood-drums]
+name = "GetGood Drums"
+url = ""
+
+[gryd-studio]
+name = "Gryd Studio"
+url = ""
+
+[heavyocity]
+name = "Heavyocity"
+url = ""
+
+[hidden-path-audio]
+name = "Hidden Path Audio"
+url = ""
+
+[ilya-efimov]
+name = "Ilya Efimov"
+url = ""
+
+[indiginus]
+name = "Indiginus"
+url = ""
+
+[indigisounds]
+name = "Indigisounds"
+url = ""
+
+[ingram-audio]
+name = "Ingram Audio"
+url = ""
+
+[insanity-samples]
+name = "Insanity Samples"
+url = ""
+
+[keepforest]
+name = "KeepForest"
+url = ""
+
+[kirk-hunter-studios]
+name = "Kirk Hunter Studios"
+url = ""
+
+[korg]
+name = "Korg"
+url = ""
+
+[laboratory-audio]
+name = "Laboratory Audio"
+url = ""
+
+[lm-sounds]
+name = "LM Sounds"
+url = ""
+
+[luftrum]
+name = "Luftrum"
+url = ""
+
+[mixwave]
+name = "Mixwave"
+url = ""
+
+[muletone-audio]
+name = "Muletone Audio"
+url = ""
+
+[nami-audio]
+name = "Nami Audio"
+url = ""
+
+[naroth-audio]
+name = "Naroth Audio"
+url = ""
+
+[nashville-sampling]
+name = "Nashville Sampling"
+url = ""
+
+[norctrack]
+name = "NorCTrack"
+url = ""
+
+[orange-tree-samples]
+name = "Orange Tree Samples"
+url = ""
+
+[orchestral-tools]
+name = "Orchestral Tools"
+url = ""
+
+[organic-samples]
+name = "Organic Samples"
+url = ""
+
+[output]
+name = "Output"
+url = ""
+
+[panndora-audio]
+name = "Panndora Audio"
+url = ""
+
+[paper-stone-instruments]
+name = "Paper Stone Instruments"
+url = ""
+
+[particle-sound]
+name = "Particle Sound"
+url = ""
+
+[performance-samples]
+name = "Performance Samples"
+url = ""
+
+[pettinhouse]
+name = "Pettinhouse"
+url = ""
+
+[precisionsound]
+name = "Precisionsound"
+url = ""
+
+[projectsam]
+name = "ProjectSAM"
+url = ""
+
+[prominy]
+name = "Prominy"
+url = ""
+
+[realitone]
+name = "Realitone"
+url = ""
+
+[red-room-audio]
+name = "Red Room Audio"
+url = ""
+
+[rhythmic-robot-audio]
+name = "Rhythmic Robot Audio"
+url = ""
+
+[rigid-audio]
+name = "Rigid Audio"
+url = ""
+
+[room-sound]
+name = "Room Sound"
+url = ""
+
+[sample-logic]
+name = "Sample Logic"
+url = ""
+
+[sampleism]
+name = "Sampleism"
+url = ""
+
+[scarbee]
+name = "Scarbee"
+url = ""
+
+[simple-sam-samples]
+name = "Simple Sam Samples"
+url = ""
+
+[skybox-audio]
+name = "Skybox Audio"
+url = ""
+
+[slate-and-ash]
+name = "Slate and Ash"
+url = ""
+
+[sonex-audio]
+name = "Sonex Audio"
+url = ""
+
+[sonic-scores]
+name = "Sonic Scores"
+url = ""
+
+[sonica-instruments]
+name = "Sonica Instruments"
+url = ""
+
+[soniccouture]
+name = "Soniccouture"
+url = ""
+
+[sonixinema]
+name = "Sonixinema"
+url = ""
+
+[sonokinetic-bv]
+name = "Sonokinetic BV"
+url = ""
+
+[sonora-cinematic]
+name = "Sonora Cinematic"
+url = ""
+
+[sonuscore]
+name = "Sonuscore"
+url = ""
+
+[sound-dust]
+name = "Sound Dust"
+url = ""
+
+["sound.io"]
+name = "Sound.io"
+url = ""
+
+[soundiron]
+name = "Soundiron"
+url = ""
+
+[spitfire-audio]
+name = "Spitfire Audio"
+url = ""
+
+[strezov-sampling]
+name = "Strezov Sampling"
+url = ""
+
+[submission-audio]
+name = "SubMission Audio"
+url = ""
+
+[sudden-audio]
+name = "Sudden Audio"
+url = ""
+
+["taqs.im"]
+name = "Taqs.im"
+url = ""
+
+[th-studio-production]
+name = "TH Studio Production"
+url = ""
+
+[tonehammer]
+name = "Tonehammer"
+url = ""
+
+[versilian-studios]
+name = "Versilian Studios"
+url = ""
+
+[vienna-symphonic-orchestra]
+name = "Vienna Symphonic Orchestra"
+url = ""
+
+[vir2-instruments]
+name = "Vir2 Instruments"
+url = ""
+
+[wave-alchemy]
+name = "Wave Alchemy"
+url = ""
+
+[wavelore]
+name = "Wavelore"
+url = ""
+
+[waverley-instruments]
+name = "Waverley Instruments"
+url = ""
+
+[wavesfactory]
+name = "Wavesfactory"
+url = ""
+
+[westwood-instruments]
+name = "Westwood Instruments"
+url = ""
+
+[weyrerton]
+name = "WeyrerTon"
+url = ""
+
+[wide-blue-sound]
+name = "Wide Blue Sound"
+url = ""
+
+[xtant-audio]
+name = "Xtant Audio"
+url = ""
+
+[yamaha]
+name = "Yamaha"
+url = ""
+
+[zero-g]
+name = "Zero-G"
+url = ""
+
+[sonic-faction]
+name = "Sonic Faction"
+url = ""
