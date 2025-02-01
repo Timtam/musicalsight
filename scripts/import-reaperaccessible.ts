@@ -76,17 +76,23 @@ const main = async () => {
                 $next = $($next).next()
             }
 
-            const pId = slugify($($next).text(), {
-                lower: true,
-            })
-
             product["name"] = $($next).text().replaceAll("\n", " ")
 
-            if (product["name"].startsWith(oVendors[vId]["name"] + " - ")) {
+            if (product["name"].toLowerCase().startsWith(oVendors[vId]["name"].toLowerCase() + " - ")) {
                 product["name"] = product["name"].substring(
                     oVendors[vId]["name"].length + 3,
                 )
             }
+
+            if (product["name"].toLowerCase().endsWith(" - " + oVendors[vId]["name"].toLowerCase())) {
+                product["name"] = product["name"].substring(0,
+                    oVendors[vId]["name"].length
+                )
+            }
+
+            const pId = slugify(product["name"], {
+                lower: true,
+            })
 
             $next = nextElement($, $next)
 

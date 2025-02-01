@@ -122,7 +122,7 @@ url = "https://valhalladsp.com/"
 name = "Camel Audio"
 url = "https://www.kvraudio.com/developer/camel-audio"
 
-[benjamin-osterhouse]
+[ben-osterhouse]
 name = "Benjamin Osterhouse"
 url = "http://ben.osterhouse.org/"
 
@@ -169,10 +169,6 @@ url = "https://library.davidhilowitz.com/"
 [audionebula]
 name = "Audionebula"
 url = "https://www.audionebula.ca/"
-
-[ben-osterhouse]
-name = "Ben Osterhouse"
-url = ""
 
 [buzz]
 name = "Buzz"
