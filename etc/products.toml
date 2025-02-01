@@ -1920,7 +1920,7 @@ vendor = "cockos"
 name = "ReaEQ"
 categories = [ "fx.eq" ]
 url = "https://www.reaper.fm/reaplugs/"
-demo = "https://www.dropbox.com/s/7x2xvwjcs26d5mv/Scott%20makes%20a%20phone%20line%20filter%20preset%20with%20ReaEQ.m4a?dl=1"
+demo = "https://hoard.reaperaccessibility.com/Tutorials%20and%20Demos/Audio/_WhatsApp%20Reaper%20Access%20Chat/EQ/Scott%20makes%20a%20phone%20line%20filter%20preset%20with%20ReaEQ.m4a"
 price = 0
 nks = false
 description = """
@@ -1934,7 +1934,7 @@ vendor = "bertom-audio"
 name = "Bertom Denoiser Classic"
 categories = [ "fx.filter" ]
 url = "https://www.bertomaudio.com/denoiser-classic.html"
-demo = "https://www.dropbox.com/s/zavbivlgkriqvjl/Scott%20demos%20Bertom%20Audio%20Denoiser%20for%20Chris%2C%20a%20pay-what-you-want%20noise%20reduction%20plug-in.mp3?dl=1"
+demo = "https://hoard.reaperaccessibility.com/Tutorials%20and%20Demos/Audio/Scott%20demos%20Bertom%20Audio%20Denoiser%20for%20Chris,%20a%20pay-what-you-want%20noise%20reduction%20plug-in.mp3"
 price = 0
 nks = false
 description = "A pay-what-you-want noise reduction plug-in for removing constant noise like air conditioning fan noise that doesn't vary over time. Divides the frequency range to be filtered into 5 bands each with their own gain control."
@@ -2612,7 +2612,7 @@ vendor = "cockos"
 name = "ReaTune"
 categories = [ "fx.pitch" ]
 url = "https://www.reaper.fm/reaplugs/"
-demo = "https://www.dropbox.com/s/lfjsi2oruzhuv6h/Chessel%20demos%20reaTune.m4a?dl=1"
+demo = "https://hoard.reaperaccessibility.com/Tutorials%20and%20Demos/Audio/_WhatsApp%20Reaper%20Access%20Chat/Tuning%20Vocals/Chessel%20demos%20reaTune.m4a"
 price = 0
 description = "This is the stock autotune plugin that comes with Reaper. Can be applied to a track or added to just an item to correct the pitch of audio or get that autotune effect. You can set the scale type and root note plus the attack time of the autotune. Also detects the pitch and displays this pitch. "
 accessibility_description = "The autotune features can be accessed through the UI and you have to select the right tab to get the autotune functionality. To get reaTune to tell you the pitch of audio, an approach is to record it and loop a short section. Add reaTune and then shift tab to the reference field, and then shift tab one more time."
@@ -2654,7 +2654,7 @@ accessibility_description = "All the parameters are available in the parameter l
 os = [ "windows", "mac_intel", "mac_arm" ]
 
   [valhalla-super-massive.additional_links]
-  "RPL Presets" = "https://www.dropbox.com/s/1mqgzylwj9qjur8/Valhalla%20Supermassive%20VST%20%28created%20by%20Scott%29.RPL?dl=1"
+  "RPL Presets" = "https://hoard.reaperaccessibility.com/Presets%20for%20Plug-ins%20and%20Instruments/RPL%20(Reaper%20preset%20libraries)/Valhalla%20DSP/Valhalla%20Supermassive%20VST%20by%20Scott.RPL"
 
 [camel-crusher]
 vendor = "camel-audio"
@@ -4735,7 +4735,7 @@ accessibility_description = "All the parameters are accessible via the plug-in p
 os = [ "windows", "mac_intel", "mac_arm" ]
 
   [seventh-heaven-professional.additional_links]
-  "RPL Presets" = "https://www.dropbox.com/s/b64zr3uun8zw9td/Seventh%20Heaven%20Professional%20%28created%20by%20Toni%29.RPL?dl=1"
+  "RPL Presets" = "https://hoard.reaperaccessibility.com/Presets%20for%20Plug-ins%20and%20Instruments/RPL%20(Reaper%20preset%20libraries)/LiquidSonics/Seventh%20Heaven%20Professional%20VST3%20by%20Toni.RPL"
 
 [little-plate]
 vendor = "soundtoys"
@@ -4775,7 +4775,7 @@ accessibility_description = "The plug-in parameters are accessible from within t
 os = [ "windows", "mac_intel", "mac_arm" ]
 
   [little-plate.additional_links]
-  "RPL Presets" = "https://www.dropbox.com/s/6pbq5ku7ulk2txd/Little%20Plate%20VST.RPL?dl=1"
+  "RPL Presets" = "https://hoard.reaperaccessibility.com/Presets%20for%20Plug-ins%20and%20Instruments/RPL%20(Reaper%20preset%20libraries)/Soundtoys%205%20by%20Scott/Little%20Plate%20VST.RPL"
 
 [finality]
 vendor = "joey-sturgis-tones"
