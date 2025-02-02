@@ -15919,6 +15919,9 @@ size = 21_500
 requires = [ [ "native-instruments-kontakt", "6.0.0" ] ]
 nks = true
 demo = "https://www.youtube.com/watch?v=ZcHMtOS-HxA"
+categories = ["vsti.keys"]
+url = "https://www.skyboxaudio.com/products/hammers-waves-acoustic-1"
+price = 85.00
 description = """
 
 Between Synthogy, Galaxy
@@ -15944,21 +15947,23 @@ scripting, Skybox managed to deliver a perfectly convincing recreation of the
 instruments with 16 velocity levels.
 A total of 10 instruments
 have been sampled and are available:
- Modern Grand and Obscura
+
+* Modern Grand and Obscura
 Grand, recorded from a Yamaha C6
- UX Upright, recorded
+* UX Upright, recorded
 from a Yamaha UX3
- Suitcase 73, recorded
+* Suitcase 73, recorded
 from a Fender Rhodes
- EP200A, recorded from a
+* EP200A, recorded from a
 Wurlitzer 200A
- Relic Upright and Muted
+* Relic Upright and Muted
 Relic, recorded from a Schaff Bros.
- Dulcitone
- J Celeste, recorded from
+* Dulcitone
+* J Celeste, recorded from
 a Jenco Celeste instrument
- J Toy Piano, recorded
+* J Toy Piano, recorded
 from a Vintage Jaymar Toy Piano
+
 On the interface, you will
 find the Swarm knob, which contains a granular synthesis engine, as well as the
 Fractals knob which hides an arpeggiator"""
@@ -19512,3 +19517,19 @@ phrase/loop change with key switches.
 24 variations of each
  Individual double / half
 speed of each loop."""
+
+[copperphone]
+vendor = "8dio"
+name = "Copperphone"
+categories = ["vsti.percussion"]
+size = 2744
+url = "https://8dio.com/products/the-new-copperphone"
+demo = "https://youtu.be/HhLd7cXEQ4w"
+price = 0
+nks = true
+requires = [ [ "native-instruments-kontakt", "5.8.1" ] ]
+description = """\
+The Copperphone is a custom instrument made from modified Copper pipes. This 12-pipe instrument sounds somewhere between pristine bells and a metallic marimba of sorts. The Copperphone contains five core deep-sampled articulation types, which were made by playing the instrument with a hard mallet, soft mallet, wooden mallet, muted, and with fingernails. The hard mallet, wooden mallet, and fingernails have the most pronounced attack, whereas the soft mallet has a more smooth and relaxed tone. The included muted articulation adds a non-sustained sound. 
+
+The Copperphone also contains 15 custom ambiences that were made entirely from the Copperphone, allowing the ambiences to seamlessly blend with the Copperphone itself. All the core patches were deep-sampled extensively, including several velocity layers and up to 8 round robin repetitions per layer. \
+"""
