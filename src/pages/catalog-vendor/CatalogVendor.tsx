@@ -53,6 +53,21 @@ export function Component() {
             <p>
                 Website: <a href={vendor!.url}>{vendor!.url}</a>
             </p>
+            {vendor!.aaf ? (
+                <p>
+                    {vendor!.name} is partnered with the{" "}
+                    <a href="https://www.ableartist.org/">
+                        Able Artist Foundation
+                    </a>
+                </p>
+            ) : (
+                <p>
+                    {vendor!.name} is not partnered with the{" "}
+                    <a href="https://www.ableartist.org/">
+                        Able Artist Foundation
+                    </a>
+                </p>
+            )}
             {products.length > 0 ? (
                 <h3>
                     Showing {(startIndex + 1).toString()} to{" "}

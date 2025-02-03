@@ -41,6 +41,7 @@ const createFormData = (p?: Product) => ({
     vendor: p?.vendor.id || "",
     vendorName: "",
     vendorUrl: "",
+    vendorAaf: false,
     userName: "",
     userEmail: "",
 })
@@ -314,7 +315,6 @@ export function Component() {
                     />
                     <Form.Label for="form-vendor-url">Vendor URL *</Form.Label>
                     <Form.Control
-                        required
                         type="input"
                         id="form-vendor-url"
                         placeholder="Enter vendor website URL"
@@ -322,6 +322,16 @@ export function Component() {
                         value={data.vendorUrl}
                         onChange={(evt) =>
                             setData({ ...data, vendorUrl: evt.target.value })
+                        }
+                    />
+                    <Form.Check
+label="Vendor is partnered with Able Artist Foundation *"
+                        type="checkbox"
+                        id="form-vendor-aaf"
+                        disabled={data.vendor !== "new"}
+                        checked={data.vendorAaf}
+                        onChange={(evt) =>
+                            setData({ ...data, vendorAaf: evt.target.checked })
                         }
                     />
                 </Form.Group>
@@ -696,6 +706,8 @@ export function Component() {
                             msg += dedent`[${vendorId}]
     name = "${data.vendorName}"
     url = "${data.vendorUrl}"`
+
+                            if (data.vendorAaf) msg += "\naaf = true"
 
                             msg += "\n"
                         } else {

@@ -45,13 +45,24 @@ function ProductCard({
                             Vendor: {product.vendor.name}
                         </Link>
                     </ListGroup.Item>
-                    <ListGroup.Item disabled>
-                        {"Price: " +
-                            (product.price === undefined
-                                ? "unknown"
-                                : product.price === 0
-                                  ? "free"
-                                  : `$${product.price}`)}
+                    <ListGroup.Item>
+                        Price:{" "}
+                        {product.price === undefined ? (
+                            "unknown"
+                        ) : product.price === 0 ? (
+                            "free"
+                        ) : product.vendor.aaf ? (
+                            <>
+                                ${product.price.toFixed(2)} USD ($
+                                {(product.price / 2).toFixed(2)} USD for{" "}
+                                <a href="https://ableartist.org/">
+                                    Able Artist Foundation members
+                                </a>
+                                )
+                            </>
+                        ) : (
+                            `$${product.price.toFixed(2)} USD`
+                        )}
                     </ListGroup.Item>
                     <ListGroup.Item>
                         Categories:{" "}

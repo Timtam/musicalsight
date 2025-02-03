@@ -8,4 +8,7 @@ export default class Vendor {
 
     @Expose()
     url: string
+
+    @Expose()
+    aaf: boolean = false
 }

@@ -5,10 +5,12 @@ url = "https://8dio.com/"
 [impact-soundworks]
 name = "Impact Soundworks"
 url = "https://impactsoundworks.com/"
+aaf = true
 
 [aaron-venture]
 name = "Aaron Venture"
 url = "https://www.aaronventure.com/"
+aaf = true
 
 [surge-synth-team]
 name = "Surge Synth Team"
@@ -29,6 +31,7 @@ url = "https://www.auddict.com/"
 [audio-imperia]
 name = "Audio Imperia"
 url = "https://www.audioimperia.com/"
+aaf = true
 
 [dsk-music]
 name = "DSK Music"
@@ -93,6 +96,7 @@ url = "https://audiobro.com/"
 [audiomodern]
 name = "Audiomodern"
 url = "https://audiomodern.com/"
+aaf = true
 
 [ava-music-group]
 name = "AVA Music Group"
@@ -181,6 +185,7 @@ url = ""
 [cinesamples]
 name = "CineSamples"
 url = ""
+aaf = true
 
 [crypto-cipher]
 name = "Crypto Cipher"
@@ -197,14 +202,17 @@ url = ""
 [embertone]
 name = "Embertone"
 url = ""
+aaf = true
 
 [emergence-audio]
 name = "Emergence Audio"
 url = ""
+aaf = true
 
 [evolution-series]
 name = "Evolution Series"
 url = ""
+aaf = true
 
 [fable-sounds]
 name = "Fable Sounds"
@@ -249,6 +257,7 @@ url = ""
 [insanity-samples]
 name = "Insanity Samples"
 url = ""
+aaf = true
 
 [keepforest]
 name = "KeepForest"
@@ -289,6 +298,7 @@ url = ""
 [naroth-audio]
 name = "Naroth Audio"
 url = ""
+aaf = true
 
 [nashville-sampling]
 name = "Nashville Sampling"
@@ -301,10 +311,12 @@ url = ""
 [orange-tree-samples]
 name = "Orange Tree Samples"
 url = ""
+aaf = true
 
 [orchestral-tools]
 name = "Orchestral Tools"
 url = ""
+aaf = true
 
 [organic-samples]
 name = "Organic Samples"
@@ -349,10 +361,12 @@ url = ""
 [realitone]
 name = "Realitone"
 url = ""
+aaf = true
 
 [red-room-audio]
 name = "Red Room Audio"
 url = ""
+aaf = true
 
 [rhythmic-robot-audio]
 name = "Rhythmic Robot Audio"
@@ -385,6 +399,7 @@ url = ""
 [skybox-audio]
 name = "Skybox Audio"
 url = ""
+aaf = true
 
 [slate-and-ash]
 name = "Slate and Ash"
@@ -409,10 +424,12 @@ url = ""
 [sonixinema]
 name = "Sonixinema"
 url = ""
+aaf = true
 
 [sonokinetic-bv]
 name = "Sonokinetic BV"
 url = ""
+aaf = true
 
 [sonora-cinematic]
 name = "Sonora Cinematic"
@@ -421,10 +438,12 @@ url = ""
 [sonuscore]
 name = "Sonuscore"
 url = ""
+aaf = true
 
 [sound-dust]
 name = "Sound Dust"
 url = ""
+aaf = true
 
 ["sound.io"]
 name = "Sound.io"
@@ -433,10 +452,12 @@ url = ""
 [soundiron]
 name = "Soundiron"
 url = ""
+aaf = true
 
 [spitfire-audio]
 name = "Spitfire Audio"
 url = ""
+aaf = true
 
 [strezov-sampling]
 name = "Strezov Sampling"
@@ -449,6 +470,7 @@ url = ""
 [sudden-audio]
 name = "Sudden Audio"
 url = ""
+aaf = true
 
 ["taqs.im"]
 name = "Taqs.im"
@@ -513,6 +535,7 @@ url = ""
 [zero-g]
 name = "Zero-G"
 url = ""
+aaf = true
 
 [sonic-faction]
 name = "Sonic Faction"
