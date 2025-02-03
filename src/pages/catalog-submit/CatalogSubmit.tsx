@@ -45,7 +45,7 @@ const createFormData = (p?: Product) => ({
     userEmail: "",
 })
 
-function CatalogSubmit() {
+export function Component() {
     let catalog = useMemo(() => new CatalogService(), [])
     let sorter = useMemo(() => natsort(), [])
     let [data, setData] = useState(createFormData())
@@ -811,5 +811,3 @@ ${data.accessibility_description}\\
         </>
     )
 }
-
-export default CatalogSubmit

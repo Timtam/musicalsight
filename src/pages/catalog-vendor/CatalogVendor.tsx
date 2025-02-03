@@ -15,7 +15,7 @@ import NotFound from "../not-found/NotFound"
 
 const RESULTS_PER_PAGE: number = 20
 
-function CatalogVendor() {
+export function Component() {
     let catalog = useMemo(() => new CatalogService(), [])
     let sorter = useMemo(() => natsort(), [])
     let [demoUrl, setDemoUrl] = useState("")
@@ -106,5 +106,3 @@ function CatalogVendor() {
         </>
     )
 }
-
-export default CatalogVendor

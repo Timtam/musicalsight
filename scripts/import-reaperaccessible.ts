@@ -1,6 +1,6 @@
-import fs from "fs/promises"
 import toml from "@iarna/toml"
 import * as cheerio from "cheerio"
+import fs from "fs/promises"
 import fetch from "node-fetch"
 import slugify from "slugify"
 
@@ -18,13 +18,14 @@ const nextElement = (
     $elem: cheerio.AnyNode,
     filter?: RegExp,
 ): cheerio.AnyNode => {
-    while ($($elem).next().length > 0 &&  
-        $($($elem).next()).text().trim() === "" ||
+    while (
+        ($($elem).next().length > 0 &&
+            $($($elem).next()).text().trim() === "") ||
         (filter && filter.test($($($elem).next()).text().replaceAll("\n", " ")))
     ) {
         $elem = $($elem).next()
     }
-    if($($elem).next().length === 0) return null
+    if ($($elem).next().length === 0) return null
     return $($elem).next()
 }
 
@@ -78,15 +79,24 @@ const main = async () => {
 
             product["name"] = $($next).text().replaceAll("\n", " ")
 
-            if (product["name"].toLowerCase().startsWith(oVendors[vId]["name"].toLowerCase() + " - ")) {
+            if (
+                product["name"]
+                    .toLowerCase()
+                    .startsWith(oVendors[vId]["name"].toLowerCase() + " - ")
+            ) {
                 product["name"] = product["name"].substring(
                     oVendors[vId]["name"].length + 3,
                 )
             }
 
-            if (product["name"].toLowerCase().endsWith(" - " + oVendors[vId]["name"].toLowerCase())) {
-                product["name"] = product["name"].substring(0,
-                    oVendors[vId]["name"].length
+            if (
+                product["name"]
+                    .toLowerCase()
+                    .endsWith(" - " + oVendors[vId]["name"].toLowerCase())
+            ) {
+                product["name"] = product["name"].substring(
+                    0,
+                    oVendors[vId]["name"].length,
                 )
             }
 
@@ -203,7 +213,11 @@ const main = async () => {
             if (
                 $($next).text().replaceAll("\n", " ").toLowerCase() ===
                     "demo not available." ||
-                $($next).text().replaceAll("\n", " ").toLowerCase().startsWith("pas de ")
+                $($next)
+                    .text()
+                    .replaceAll("\n", " ")
+                    .toLowerCase()
+                    .startsWith("pas de ")
             ) {
                 $next = nextElement($, $next)
             }
@@ -222,8 +236,9 @@ const main = async () => {
                 }
             }
 
-            if ($next !== null && 
-                $($next).text().toLowerCase() === "comment:" ||
+            if (
+                ($next !== null &&
+                    $($next).text().toLowerCase() === "comment:") ||
                 $($next).text().toLowerCase().startsWith("commentaire")
             ) {
                 $next = nextElement($, $next)
@@ -232,7 +247,10 @@ const main = async () => {
             if (!oProducts[pId]) {
                 oProducts[pId] = product
             }
-        } while ($next !== null && ["h2", "h3"].includes($($next).get(0).tagName))
+        } while (
+            $next !== null &&
+            ["h2", "h3"].includes($($next).get(0).tagName)
+        )
 
         if ($next !== null && $($next).get(0).tagName !== "h1") {
             console.log(

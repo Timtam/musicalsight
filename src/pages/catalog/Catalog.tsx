@@ -19,7 +19,7 @@ import Search from "./Search"
 
 const RESULTS_PER_PAGE: number = 20
 
-function Catalog() {
+export function Component() {
     let catalog = useMemo(() => {
         return new CatalogService()
     }, [])
@@ -165,5 +165,3 @@ function Catalog() {
         </>
     )
 }
-
-export default Catalog

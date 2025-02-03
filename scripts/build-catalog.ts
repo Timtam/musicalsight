@@ -1,5 +1,5 @@
-import fs from "fs/promises"
 import toml from "@iarna/toml"
+import fs from "fs/promises"
 
 const main = async () => {
     let catalog = {

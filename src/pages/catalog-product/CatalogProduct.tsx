@@ -13,7 +13,7 @@ import CatalogService from "../../services/CatalogService"
 import Loading from "../loading/Loading"
 import NotFound from "../not-found/NotFound"
 
-function CatalogProduct() {
+export function Component() {
     let sorter = useMemo(() => natsort(), [])
     let catalog = useMemo(() => new CatalogService(), [])
     let [demoUrl, setDemoUrl] = useState("")
@@ -166,5 +166,3 @@ function CatalogProduct() {
         </>
     )
 }
-
-export default CatalogProduct
