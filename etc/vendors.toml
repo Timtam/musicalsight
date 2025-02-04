@@ -93,11 +93,6 @@ url = "https://www.audioollie.com/"
 name = "Audiobro"
 url = "https://audiobro.com/"
 
-[audiomodern]
-name = "Audiomodern"
-url = "https://audiomodern.com/"
-aaf = true
-
 [ava-music-group]
 name = "AVA Music Group"
 url = "https://avamusicgroup.com/"
@@ -540,3 +535,7 @@ aaf = true
 [sonic-faction]
 name = "Sonic Faction"
 url = ""
+
+[fracture-sounds]
+name = "Fracture Sounds"
+url = "https://fracturesounds.com/"

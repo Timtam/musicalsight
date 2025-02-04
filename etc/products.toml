@@ -493,24 +493,6 @@ The 8Dio SQS (Studio Quartet Series) Solo Violin marks a new leap in sampling fo
 \r
 Organized into six separate categories, each of the included sound-sets offers a range of features and playing styles, all easily accessible from the in-built browser system. The Solo Violin features five individually recorded Legato articulations enabling you to play in a variety of styles, speeds, and with and without a mute (con sordino). Each of the main performance-based Legatos also features original and musical coloration and dynamic changes, ensuring the pure and lifelike nature of the live performance can be accurately preserved. With eighty-eight independently captured, multi-dynamic, and authentically sounding articulations, you have access to all the tools you need to create music that goes beyond realism."""
 
-[studio-vintage-hammond-organ]
-vendor = "8dio"
-name = "Studio Vintage Hammond Organ"
-size = 14_200
-categories = [ "vsti.keys" ]
-requires = [ [ "native-instruments-kontakt", "5" ] ]
-demo = "https://soundcloud.com/8dawn/sets/8dio-studio-hammond-vintage-organ"
-url = "https://8dio.com/products/studio-vintage-series-studio-hammond-for-kontakt-vst-au-aax"
-price = 98
-description = """
-8Dio Studio Vintage Series represents the most comprehensively deep-sampled collection of vintage keyboards, recorded at Scotland’s Premiere Recording Studio: Gorbals Sound. The 8Dio Studio Vintage Organ is no exception, being a faithful representation of our very own B2 – B3 Hybrid Hammond® Organ. \r
-\r
-While many other attempts at capturing factory standard Hammonds® in the past featured heavily on the Direct signal (D.I). We instead purposely chose to record the Organ in its natural state, using vintage and immaculately maintained Leslie cabinets. In fact, we used two independent Leslies (and blew up a third): one to capture the genre defining rotations at all speeds, and another with a modified motor to record the pure unhindered tone of the Leslie itself. \r
-\r
-Both Leslies are available within the 8Dio Vintage Organ. “Analog” highlights the natural acoustics of the Hammond® Leslie and its expressive spinning states.  “Modelled” demonstrates the static, non-spinning, pure timbre of the Leslie cabinet, with a virtual rotation applied. This allows you to choose the tone and workflow that best suits you. \r
-\r
-It has been our mission to push sampling forwards in our entire vintage keys range. From realism to playability 8Dio Studio Vintage Organ offers the best of all worlds."""
-
 [symphonic-shadows]
 vendor = "8dio"
 name = "Symphonic Shadows"
@@ -531,7 +513,7 @@ The majority of the library comes with three microphone positions: Room, Spot 1,
 \r
 We’ve also included a new dual-layered FX system, the first of which is our front-face system, which gives you control over a trance gate, filters, pitch, delay, compression, and our new textural convolution delay. We have also included our new Chaos FX engine, which gives you control over things such as EQ, phasing, distortion, stereo delay, and an additional impulse reverb."""
 
-[ambient-guitar]
+[the-new-ambient-guitar]
 vendor = "8dio"
 name = "Ambient Guitar"
 size = 2_660
@@ -547,7 +529,7 @@ Contrary to most guitar libraries, the focus of The Ambient Guitar is the unreco
 \r
 But what’s that you say? You want to be able to play your own melodies? Hey, this is an ambient library! But then again, we couldn’t help ourselves and decided to multi-sample the bass and guitar, giving you a massive range of standard plucked notes to play any melody you wish. Divided into five major emotional categories (Awe, Horror, Mystery, Rage, Sadness) and with the phrases and multi-samples, this library is unlike any guitar library you’ve heard before"""
 
-[epic-dhol-ensemble]
+[the-new-epic-dhol-ensemble]
 vendor = "8dio"
 name = "Epic Dhol Ensemble"
 size = 1_100
@@ -622,7 +604,7 @@ Multiple Legato Modes at Multiple Dynamics\r
 \r
 The choir contains four true legato modes (ah, eh, ih and oh) sampled at multiple dynamic layers, giving a total of EIGHT true sampled legato sets, for absolute realism and variation. On top of this, there are a total of twenty four different syllable shorts, sequence-able in the GUI, each sampled at three dynamic layers, giving a total of 72 variations per short note!"""
 
-[bansuri-flute]
+[bansuri]
 vendor = "aria-sounds"
 name = "Bansuri Flute"
 url = "https://www.ariasounds.com/kontakt_indian_bansuri_instrument_vst.html"
@@ -699,7 +681,7 @@ Each drum has been played with varied techniques, including soft mallets, sticks
 \r
 Click each of the drum icons on the interface to loud and unloud that particular drum. Unloaded drums will appear on the keyboard interface as black, and loaded drums with active samples will be shown as blue keys."""
 
-[london-solo-french-horn]
+[french-horn]
 vendor = "aria-sounds"
 name = "London Solo French Horn"
 size = 349
@@ -730,7 +712,7 @@ The user interface has controls to allow you to shape and sculpt some of the sou
 \r
 Of course, we have also included a variety of more well known experimental techniques, including picks, plucks, bows, hammers, drumming, screws in the strings etc."""
 
-[london-solo-double-bass]
+[london-symphonic-strings-double-basses]
 vendor = "aria-sounds"
 name = "London Solo Double Bass"
 size = 4_280
@@ -766,7 +748,7 @@ Staccato and whole tone trills are also included, with the staccatos having 24 v
 \r
 Another feature included is the ability to alter the release sound when the final note is played and released. A soft release is a normal removal of the bow from the string, but through keyswitching, you can also select hard release, which triggers a hard release. This is the sound of a player ending the note with a sharp crescendo and quick accented lift of the bow."""
 
-[london-solo-violin]
+[lss-solo-violin]
 vendor = "aria-sounds"
 name = "London Solo Violin"
 size = 4_730
@@ -784,7 +766,7 @@ Staccato and whole tone trills are also included, with the staccatos having 24 v
 \r
 Another feature included is the ability to alter the release sound when the final note is played and released. A soft release is a normal removal of the bow from the string, but through keyswitching, you can also select hard release, which triggers a hard release. This is the sound of a player ending the note with a sharp crescendo and quick accented lift of the bow."""
 
-[pipe-organ]
+[organ]
 vendor = "aria-sounds"
 name = "Pipe Organ"
 demo = "https://soundcloud.com/aria-sounds/organ-demo-lament"
@@ -2404,73 +2386,6 @@ The Divisis:\r
 * 8 Basses – recorded in 2 divisis (4 Cbs) separately\r
 """
 
-[atom]
-vendor = "audiomodern"
-name = "Atom"
-categories = [ "vsti.synthesizer" ]
-requires = [ [ "native-instruments-kontakt-player", "5" ] ]
-size = 6_550
-url = "https://audiomodern.com/shop/instruments/atom-software/"
-demo = "https://soundcloud.com/audiomodern/atom-impacts-demo"
-price = 99
-nks = true
-description = """
-“Arguably the most important musical elements in a film score are atmospheric in nature.\r
-ATOM has your back! Especially, if you are working on something that is meant to be frightening. This is 7 GB of sounds ranging from some of the most ghoulish atmospheres to blistering effects that will have your audience shaking in their socks. ATOM is really a one stop little shop of horrors. “\r
-\r
-Textured and Revealing\r
-\r
-The machine is built around a beautifully diverse collection of intricate textures and organic elements, that were created from a huge collection of field recordings, custom made acoustic instruments including a tuned anker, propellers, the famous Koka’s experimental Box even a WWII Torpedo and analogue machine noises, which were then painstakingly recorded, edited using the most advanced sound design techniques and finally assembled into a stunning collection of abstract cinematic & experimental organic elements. with over 180 patches & presets to be mixed and matched as desired.\r
-\r
-Preloaded with Exquisitely Crafted Presets\r
-\r
-Each sound can be shaped into lush evolving pads, dense uplifting chords, strange acoustic tones, deep Textures, ambient soundscapes, layered ambiences, Impacts, transitional cinematic FX and elements for adding drama and movement into your compositions with all advanced features that allow unlimited flexibility over morphing, manipulating and processing.\r
-"""
-
-[modularps-2]
-vendor = "audiomodern"
-name = "ModulARPS 2"
-categories = [ "vsti.synthesizer", "audio" ]
-size = 835
-url = "https://audiomodern.com/shop/instruments/modularps-2/"
-demo = "https://soundcloud.com/synthpresets/audiomodern-modularps-vol2"
-price = 18
-description = """
-Created by a unique modular setup and controlled by Sound designer Pau Cabruja, ModulARPS Vol.2 holds one of the finest collection of experimental Ambient sounds we’ve ever assembled.\r
-Inside this library you will find a vast array of sequence loops divided into folders Bass, Beats, Melodies, Textures, Drones, Rhythms and all designed to fit together perfectly. Expect the unexpected in this twisted library of modular goodness.\r
-"""
-
-[opacity]
-vendor = "audiomodern"
-name = "Opacity"
-categories = [ "vsti.guitar" ]
-requires = [ [ "native-instruments-kontakt-player", "5" ] ]
-size = 3_770
-url = "https://audiomodern.com/shop/instruments/opacity/"
-demo = "https://www.youtube.com/watch?v=XrCrfsIvqw8"
-price = 99
-nks = true
-description = """
-Opacity is a boutique collection of Cinematic Guitar and professional six string performances that will work across Film, TV, Sound Design, Documentaries, Games, Film Trailers, Commercials and Contemporary Cinematic and Ambient music.\r
-The library provides deeply manipulable guitar sounds that are endlessly diverse and expressive.\r
-From nice & rich atmospheres, to percussive rhythms, beautiful harmonics, lead licks, phrases, sequence loops, ensembles, and shimmering stretched out atmospheres.\r
-Created and performed by the Washington DC based duo Terre Grande, specializing on epic cinematic music and achieving a unique blend of sounds from the quietest moments of dawn, to the clashing loudness of a huge waterfall.\r
-Terre Grande partner with Audiomodern to deliver a unique virtual instrument that is reflective of the amazing earth surrounding us. The unique playing style captured showcases the Electric guitar in its natural beauty, featuring percussive rhythms, beautiful phrases, lead licks, hammer hits, ensembles, and textured atmospheres.\r
-\r
-ABOUT THE ENGINE\r
-\r
-Introducing Sessions. Perform, Compose and Re-arrange.\r
-Hosted on a unique new engine that is aimed towards composition\r
-and in-studio performance providing maximum flexibility as a professional\r
-composition module.\r
-The engine contains 14 complete Sessions, plus three variations, where each session\r
-contains 4 groups of Loop performances and tonal elements such as\r
-Chords, Phrases, Sequences and Melodic Textures.\r
-Each of the Sessions in Opacity contains multiple song sections/variations\r
-and gives you the freedom to use any of the different parts of the sessions\r
-or increase complexity by adding complimentary guitar parts.\r
-"""
-
 [instinct-trailer-sound-effects]
 vendor = "ava-music-group"
 name = "Instinct - Trailer Sound Effects"
@@ -3609,7 +3524,7 @@ Dynamedion\r
 Dynamedion was founded in 2000 by Tilman Sillescu and Pierre Langer, two composers with university degrees in music. With a steadily increasing number of contracts and growing customer base it has since become a leader in soundtrack composition and sound design on the European computer game market. In 2005 Dynamedion produced highly successful, first benchmark live orchestra recordings for a German game soundtrack, setting the standard for large-scale projects in the industry. With numerous further orchestral productions for the video game industry, Dynamedion has earned itself a reputation for unsurpassed quality and integrity in this area.\r
 Minimum required free Kontakt Player or full Kontakt version 6.7"""
 
-[ambient-black]
+[big-fish-audio-and-funk-soul-productions-ambient-black]
 vendor = "big-fish-audio"
 name = "Ambient Black"
 categories = [ "vsti.ambient" ]
@@ -3672,7 +3587,7 @@ LOOPED INSTRUMENTS\r
 \r
 The Looped Instruments include simple repeating patterns and some complex patterns created by mixing multiple loops together. Some loops do not lock to tempo intentionally in order to add an element of randomness and unpredictability to some of the patches. Looped Instruments should be played like the Drones & Atmospheres, using solo notes or octaves for less-complex patterns and different intervals for more experimental and harmonically-dense effects."""
 
-[ambient-white]
+[big-fish-audio-and-funk-soul-productions-ambient-white]
 vendor = "big-fish-audio"
 name = "Ambient White"
 categories = [ "vsti.ambient" ]
@@ -4904,428 +4819,37 @@ price = 32
 
 [studio-vintage-organ]
 vendor = "8dio"
-name = "Studio Vintage Organ"
-size = 14_200
-requires = [ [ "native-instruments-kontakt", "5.7.1" ] ]
-nks = false
-demo = "https://soundcloud.com/8dawn/sets/8dio-studio-hammond-vintage-organ"
-
-[the-new-ambient-guitar]
-vendor = "8dio"
-name = "The New Ambient Guitar"
-size = 2_660
-requires = [ [ "native-instruments-kontakt", "5.7.1" ] ]
-nks = false
-demo = "https://soundcloud.com/8dawn/sets/ambient-guitar"
-
-[the-new-epic-dhol-ensemble]
-vendor = "8dio"
-name = "The New Epic Dhol Ensemble"
-size = 1_100
-requires = [ [ "native-instruments-kontakt", "5.5.0" ] ]
-nks = false
-demo = "https://soundcloud.com/8dawn/sets/epic-dhol-ensemble"
-description = """
-
-The New Epic Dhol Set is
-the most comprehensive and in-depth collection of large-scale Epic Dhol sets on
-the market. The library is a completely remastered, redesigned and reprogrammed
-edition of our original Epic Dhol Set. The New Epic Dhol Ensemble features over
-2,000 samples, a built-in articulation browser, internal sequencer,
-front-facing FX, texture convolutions, and our newest 3.3 Chaos engine.
-The New Epic Dhol Ensemble
-VST consists of a large ensemble of Punjab Dhol drums and records them in the
-same orchestra hall as our New Epic Toms Ensemble.
- 2,056 Samples.
- 2.9GB (compressed to
-1.1GB)
- Multi-sampled Dhol Set
- 10 velocity layers / 10
-pr repeats. layer
- Sampled loop/phrase
- Epic Dhol Together
- Over 850 loops from 80
-to 140 BPM
-Dhol Set FX"""
-
-[bansuri]
-vendor = "aria-sounds"
-name = "Bansuri"
-size = 797
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = false
-
-[french-horn]
-vendor = "aria-sounds"
-name = "French Horn"
-size = 349
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=Ym2rRxzpBU4"
-
-[london-symphonic-strings-double-basses]
-vendor = "aria-sounds"
-name = "London Symphonic Strings Double Basses"
-size = 7_970
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=veKm2O0WvBQ"
-
-[london-symphonic-strings]
-vendor = "aria-sounds"
-name = "London Symphonic Strings"
-size = 4_730
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://soundcloud.com/aria-sounds/sets/london-symphonic-strings"
-
-[lss-solo-violin]
-vendor = "aria-sounds"
-name = "LSS Solo Violin"
-size = 4_730
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://soundcloud.com/aria-sounds/lss-solo-strings-demo-quintet-excerpt"
-
-[organ]
-vendor = "aria-sounds"
-name = "Organ"
-size = 1_860
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://soundcloud.com/aria-sounds/organ-demo-lament"
-
-[violinist]
-vendor = "aria-sounds"
-name = "Violinist"
-size = 346
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = false
-
-[audict-celestial-voices-calypso]
-vendor = "auddict"
-name = "Audict - Celestial Voices Calypso"
-size = 2_460
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = false
-demo = "https://soundcloud.com/auddict-77772158/sets/celestial-voices-calypso"
-
-[audict-drums-of-the-deep-ii-unleashed]
-vendor = "auddict"
-name = "Audict - Drums of the Deep II UNLEASHED"
-size = 9_390
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = false
-
-[audict-master-brass-trombones]
-vendor = "auddict"
-name = "Audict - Master Brass Trombones"
-size = 6_800
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
-[audict-master-brass-tubas]
-vendor = "auddict"
-name = "Audict - Master Brass Tubas"
-size = 2_820
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
-[audict-master-solo-woodwinds-bassoon]
-vendor = "auddict"
-name = "Audict - Master Solo Woodwinds Bassoon"
-size = 6_950
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = false
-
-[audict-mss-solo-viola]
-vendor = "auddict"
-name = "Audict - MSS Solo Viola"
-size = 12_900
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
-[strings-vol-1]
-vendor = "auddict"
-name = "Strings Vol 1"
-size = 32_700.000000000004
-requires = [ [ "native-instruments-kontakt", "5.6.1" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=-SBcXNDK45U"
-
-[audict-united-strings-of-europe-basses]
-vendor = "auddict"
-name = "Audict - United Strings of Europe Basses"
-size = 2_820
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
-[audict-united-strings-of-europe-cellos]
-vendor = "auddict"
-name = "Audict - United Strings of Europe Cellos"
-size = 7_130
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
-[audict-united-strings-of-europe-first-violins]
-vendor = "auddict"
-name = "Audict - United Strings of Europe First Violins"
-size = 7_910
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
-[audict-united-strings-of-europe-second-violins]
-vendor = "auddict"
-name = "Audict - United Strings of Europe Second Violins"
-size = 7_920
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
-[audict-united-strings-of-europe-violas]
-vendor = "auddict"
-name = "Audict - United Strings of Europe Violas"
-size = 4_140
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
-[audict-virtuoso-violin]
-vendor = "auddict"
-name = "Audict - Virtuoso Violin"
-size = 4_120
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://soundcloud.com/auddict-77772158/sets/auddict-virtuoso-violin"
-
-[audict-woodwinds]
-vendor = "auddict"
-name = "Audict - Woodwinds"
-size = 8_910
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
-[jaeger-hangar-4]
-vendor = "audio-imperia"
-name = "Jaeger Hangar 4"
-size = 649
+name = "Studio Vintage Hammond Organ"
+size = 15_300
+categories = [ "vsti.keys" ]
 requires = [ [ "native-instruments-kontakt", "5.8.1" ] ]
 nks = false
-demo = "https://www.youtube.com/watch?v=A0DlvkOPSdQ"
+demo = "https://www.youtube.com/watch?v=A6KUemWtM5s"
+url = "https://8dio.com/products/studio-vintage-series-studio-hammond-for-kontakt-vst-au-aax"
+price = 28
 description = """
+8Dio Studio Vintage Series represents the most comprehensively deep-sampled collection of vintage keyboards, recorded at Scotland’s Premiere Recording Studio: Gorbals Sound. The 8Dio Studio Vintage Organ is no exception, being a faithful representation of our very own B2 – B3 Hybrid Hammond® Organ. 
 
-At the request of Jaeger
-users, Audio Imperia offers the vocal part of Merethe Soltvedt in a limited
-edition in a separate bank.
-If you own Jaeger, this ad
-won't help you, but if you're looking for a cinematic voicebank for Kontakt,
-check out this special Hangar 4 edition from Audio Imperia's limited-edition
-collection.
-Jaeger Hangar 4 brings
-together the vocal section of Merethe Soltvedt, with Aah, Ooh and Mmm in legato
-and sustain, as well as chromatic rises and phrases sung in major, minor, with
-power and softness.
-Since Jaeger's release,
-the library has received accolades from users and reviewers and we've received
-an overwhelming number of emails and messages about Jaeger's Hangar 4: Merethe
-Soltvedt's Song.
-Here's what some of you
-said about Hangar 4:
-"If there's one area
-where Jaeger impressed me, it's this set of samples, from singer Soltvedt.
-Vocal libraries are unwieldy because they present challenges and obstacles that
-don't are not present in the other instruments of the orchestra. Audio Imperia
-has made it stand out with its offer in this department." - Monthly Movie
-Score
-The library comes with:
- Legatos (Aah / Ooh /
-Mmm).
- Supports (Aah / Ooh /
-Mmm).
- Higher scales (in
-Major/Minor and Soft/Loud).
- Phrases (in Major/Minor
-and Soft/Loud).
-Merethe Soltvedt is an
-award-winning singer who has played for composers such as Jeff Broadbent, Henry
-Lai, Tom Salta, Ivan Torrent and companies like Brand X, Two Steps From Hell
-and Ghostwriter Music. A truly unique and very angelic voice that will add a
-whole new dimension to your music."""
+While many other attempts at capturing factory standard Hammonds® in the past featured heavily on the Direct signal (D.I). We instead purposely chose to record the Organ in its natural state, using vintage and immaculately maintained Leslie cabinets. In fact, we used two independent Leslies (and blew up a third): one to capture the genre defining rotations at all speeds, and another with a modified motor to record the pure unhindered tone of the Leslie itself. 
 
-[solo-boy-soloists]
-vendor = "audio-imperia"
-name = "Solo Boy Soloists"
-size = 1_120
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = true
-demo = "https://www.youtube.com/watch?v=tmPGLXIk0FU"
+Both Leslies are available within the 8Dio Vintage Organ. “Analog” highlights the natural acoustics of the Hammond® Leslie and its expressive spinning states.  “Modelled” demonstrates the static, non-spinning, pure timbre of the Leslie cabinet, with a virtual rotation applied. This allows you to choose the tone and workflow that best suits you. 
 
-[talos-volume-1-horns]
-vendor = "audio-imperia"
-name = "Talos - Volume 1 - Horns"
-size = 3_980
-requires = [ [ "native-instruments-kontakt", "5.5.2" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=B-RCbLLFTC8"
-
-[talos-volume-2-low-brass]
-vendor = "audio-imperia"
-name = "Talos - Volume 2 - Low Brass"
-size = 4_490
-requires = [ [ "native-instruments-kontakt", "5.5.2" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=B-RCbLLFTC8"
-
-[lass]
-vendor = "audiobro"
-name = "LASS"
-size = 21_500
-requires = [ [ "native-instruments-kontakt", "5.0.0" ] ]
-nks = false
-demo = "https://soundcloud.com/besknee/sets/la-scoring-strings"
-
-[lass-first-chair]
-vendor = "audiobro"
-name = "LASS First Chair"
-size = 1_180
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=omor5fG1Qek"
-
-[lass-legato-sordino-2]
-vendor = "audiobro"
-name = "LASS Legato Sordino 2"
-size = 5_390
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=cqPxsthpd38"
-
-[abuser]
-vendor = "audiomodern"
-name = "Abuser"
-size = 2_810
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = false
-demo = "https://soundcloud.com/audiomodern/audiomodern-abuser-powerhouse-samplerbank"
-
-[paths-ii]
-vendor = "audiomodern"
-name = "Paths II"
-size = 498
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = false
-demo = "https://soundcloud.com/audiosimple/sets/audiomodern-paths-2"
-
-[sync-3]
-vendor = "audiomodern"
-name = "Sync 3"
-size = 1_130
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = false
-demo = "https://soundcloud.com/audiomodern/audiomodern-sync-3-intelligent-polyrhythms"
-
-[ava-music-group-prism-retro-pop-drums]
-vendor = "ava-music-group"
-name = "Ava Music Group - PRISM Retro Pop Drums"
-size = 417
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = true
-demo = "https://soundcloud.com/karelpsota/sets/ava-prism-modern-pop-drums"
-
-[the-orchestra-complete-2-sonuscore]
-vendor = "best-service"
-name = "The Orchestra Complete 2 - Sonuscore"
-size = 14_400
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = true
-demo = "https://soundcloud.com/sonuscore/sets/the-orchestra-complete-2-demos"
-description = """
-
-Orchestra Complete 2 is an
-extension of our entry-level instrument "The Orchestra" with more instruments,
-more presets and expanded powerful functions. Now including:
-Horns Of Hell - Over 65
-expressive brass articulations and 120 amazing and powerful presets, including
-a comprehensive organ library.
-Strings Of Winter - 60
-string articulations, two new ethnic string sections, and all additional
-content from Strings Of Winter.
-Additional and
-Multi-Instrument Presets - Over 150 additional presets invite you to explore
-those additional sounds in combination with the full range of instruments that
-only "The Orchestra Complete 2" offers, bringing the total to over
-475 orchestrations and patterns playable.
-Revised Preset Browser -
-One of the biggest new features in ORCHESTRA COMPLETE 2 is the all-new Preset
-Browser. Explore the massive selection of presets with intuitive filters and
-categories. Finding the right preset for your favorite mood or style has never
-been easier.
-MIDI Export - Orchestra
-Complete 2 comes with MIDI Export. Patterns and arrangements generated by the
-engine can be exported to separate MIDI tracks, opening up endless
-possibilities.
-More Requested Features -
-We've also overhauled the original Ensemble engine, implementing smaller but
-much-requested features like a switchable GUI and more MIDI controller mapping
-options.
-The heart - The engine of
-the whole
-The Ensemble Engine works
-with a number of independent arpeggiators and velocity envelopes, heavily
-inspired by the Origins-Sonuscore series.
-Create complex
-arrangements with simple chords
-Create pulsating beats and
-inspiring full arrangements from any combination of notes. All without
-resorting to pre-recorded phrases - you're in full control. It will work no
-matter what chord or note you play. With minimal loading time, a large number
-of presets allow you to achieve complete ensemble colors from the start.
-Independent arpeggiators
-and velocity envelopes create vivid and powerful orchestral colors.
-Load up to 5 different
-instruments in independent slots and play them together.
-Each slot can be assigned
-to one of five different modules.
-Assign drums to the
-arpeggiator to create pulsing rhythms.
- Horns of Hell: over 65
-articulations and 120 brass presets
- Strings of Winter with
-60 articulations and two new ethnic string sections
- Over 150 new presets and
-multis
- New preset explorer with
-filters and categories
- MIDI export of patterns
-and arrangements
- Revision of the engine
-dedicated to sets
- New options for
-assigning MIDI controllers
- New graphics options
- Various improvements"""
-
-[big-fish-audio-and-funk-soul-productions-ambient-black]
-vendor = "big-fish-audio"
-name = "Big Fish Audio and Funk Soul Productions - Ambient Black"
-size = 3_230
-requires = [ [ "native-instruments-kontakt", "5.0.0" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=gCSv8x0rWjM"
-
-[big-fish-audio-and-funk-soul-productions-ambient-white]
-vendor = "big-fish-audio"
-name = "Big Fish Audio and Funk Soul Productions - Ambient White"
-size = 3_730
-requires = [ [ "native-instruments-kontakt", "5.0.0" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=u1nyhjS2s8A"
+It has been our mission to push sampling forwards in our entire vintage keys range. From realism to playability 8Dio Studio Vintage Organ offers the best of all worlds. """
 
 [kli-series-hypnotic-trapsoul]
 vendor = "big-fish-audio"
-name = "KLI Series - Hypnotic Trapsoul"
+name = "Hypnotic: Trapsoul"
+categories = [ "audio" ]
 size = 4_120
-requires = [ [ "native-instruments-kontakt" ] ]
 nks = false
 demo = "https://www.youtube.com/watch?v=HAJqhZ5U3Io"
+price = 129.95
+description = """
+Hypnotic: Trapsoul brings you 50 construction kits of material in the styles of The Weekend, Bryson Tiller, Drake, Ty Doll $ign, Travis Scott, Tory Lanez and more! Inside this library you will find all the modern Trapsoul elements you need to make that next hit. Each of the 50 kits contain everything from the iconic trap snares to modern R&B rhodes and synths to make sure your next Trapsoul production has true vibe.
+
+In addition to the regular loop content, each kit includes a folder of MIDI files for full flexibility and control over the melodic content of the track using your own virtual instruments.
+
+Hypnotic: Trapsoul has been formatted in the most widely-used formats: Apple Loops, Acidized WAV, and REX files, making it usable in virtually every piece of software and hardware on the market today."""
 
 [kli-series-pop-rocks]
 vendor = "big-fish-audio"
@@ -19532,4 +19056,48 @@ description = """\
 The Copperphone is a custom instrument made from modified Copper pipes. This 12-pipe instrument sounds somewhere between pristine bells and a metallic marimba of sorts. The Copperphone contains five core deep-sampled articulation types, which were made by playing the instrument with a hard mallet, soft mallet, wooden mallet, muted, and with fingernails. The hard mallet, wooden mallet, and fingernails have the most pronounced attack, whereas the soft mallet has a more smooth and relaxed tone. The included muted articulation adds a non-sustained sound. 
 
 The Copperphone also contains 15 custom ambiences that were made entirely from the Copperphone, allowing the ambiences to seamlessly blend with the Copperphone itself. All the core patches were deep-sampled extensively, including several velocity layers and up to 8 round robin repetitions per layer. \
+"""
+
+[lunaris-2]
+vendor = "luftrum"
+name = "Lunaris 2"
+categories = ["vsti.ambient"]
+size = 137000
+url = "https://www.luftrum.com/lunaris/"
+demo = "https://youtu.be/DV0218M1lSI"
+price = 159
+requires = [ [ "native-instruments-kontakt-player", "6.7.1" ] ]
+nks = true
+description = """\
+For years, Lunaris has been the industry standard for synth pads. Lunaris 2 continues this legacy, focusing solely on pads, and pads only. From analog pads to digital pads, string pads, cinematic pads, 80s-inspired pads, immersive ambient pads to everything in between.
+Explore deep space pads that take you to the outer reaches of the cosmos, rewind back to the 80s for some technicolor fare, and lose yourself among crystalline wavetable textures that sparkle like starlight.
+Lunaris 2 makes it easy to mix and match sound sources for instantly gratifying results. Sculpt and morph between the synth pads using the XY pad.\
+"""
+
+[blueprint-bass-guitar]
+vendor = "fracture-sounds"
+name = "Blueprint: Bass Guitar"
+categories = ["vsti.guitar"]
+size = 306
+url = "https://fracturesounds.com/product/blueprint-bass-guitar/"
+demo = "https://youtu.be/EdduoK56ok0"
+price = 0
+requires = [ [ "native-instruments-kontakt-player", "8" ] ]
+nks = true
+description = """\
+A detailed sampling of a Fender Precision bass, captured with both fingered and picked articulations, features a range of controls to shape its sound across various genres.\
+"""
+
+[blueprint-church-organ]
+vendor = "fracture-sounds"
+name = "Blueprint: Church Organ"
+categories = ["vsti.keys"]
+size = 2290
+url = "https://fracturesounds.com/product/blueprint-church-organ/"
+demo = "https://youtu.be/G7BhjywQVio"
+price = 0
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+nks = true
+description = """\
+A grand pipe organ, recorded in a spacious Georgian church, featuring a curated collection of stop combinations. With three microphone positions, this library showcases the organ’s full range, from soft, reedy tones to full-on majestic power.\
 """
