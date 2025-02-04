@@ -60,6 +60,10 @@ export function Component() {
 
         if (nks && nks !== "") paramFilter.nks = boolifyString(nks)
 
+        let free = searchParams.get("free")
+
+        if (free && free !== "") paramFilter.free = boolifyString(free)
+
         let categories = searchParams.get("c")
 
         if (categories && categories !== "")

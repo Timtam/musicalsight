@@ -30,6 +30,7 @@ function FilterDialog({
     let [vendors, setVendors] = useState([] as string[])
     let [priceFrom, setPriceFrom] = useState(0)
     let [priceTo, setPriceTo] = useState(0)
+    let [free, setFree] = useState(false)
     let [nks, setNks] = useState(undefined as boolean | undefined)
     let [categories, setCategories] = useState([] as string[])
     let [oss, setOss] = useState([] as OperatingSystem[])
@@ -39,6 +40,7 @@ function FilterDialog({
         setPriceFrom(filter === undefined ? 0 : filter.priceFrom)
         setPriceTo(filter === undefined ? 0 : filter.priceTo)
         setNks(filter === undefined ? undefined : filter.nks)
+        setFree(filter === undefined ? false : filter.free)
         setCategories(filter === undefined ? [] : filter.categories)
         setOss(filter === undefined ? [] : filter.oss)
         setShow(filter !== undefined)
@@ -100,6 +102,7 @@ function FilterDialog({
                             <Form.Control
                                 type="number"
                                 value={priceFrom}
+                                disabled={free}
                                 onChange={(evt) => {
                                     let n: number = parseInt(evt.target.value)
 
@@ -114,6 +117,7 @@ function FilterDialog({
                             <Form.Control
                                 type="number"
                                 value={priceTo}
+                                disabled={free}
                                 onChange={(evt) => {
                                     let n: number = parseInt(evt.target.value)
 
@@ -122,6 +126,14 @@ function FilterDialog({
                                         return
                                     }
                                     setPriceTo(n)
+                                }}
+                            />
+                            <Form.Check
+                                type="checkbox"
+                                checked={free}
+                                label="Free products only"
+                                onChange={(evt) => {
+                                    setFree(evt.target.checked)
                                 }}
                             />
                         </Form.Group>
@@ -280,6 +292,7 @@ function FilterDialog({
                             vendors: vendors,
                             priceFrom: priceFrom,
                             priceTo: priceTo,
+                            free: free,
                             nks: nks,
                             categories: categories,
                             oss: oss,

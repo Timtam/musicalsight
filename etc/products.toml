@@ -4867,10 +4867,17 @@ Our primary focus was creating a Mandolin instrument that delivers a natural and
 [marble]
 vendor = "cinematique-instruments"
 name = "Marble"
-size = 504
-requires = [ [ "native-instruments-kontakt" ] ]
+size = 1600
+requires = [ [ "native-instruments-kontakt", "5.6.8" ] ]
+categories = [ "vsti.percussion", "vsti.synthesizer", "vsti.drums", "vsti.ambient" ]
 nks = false
 demo = "https://soundcloud.com/soundonsound/cinematique-instruments-marble"
+price = 65.45
+url = "https://cinematique-instruments.com/pages_instr/page_marble.php"
+description = """
+MARBLE is a creative music tool
+
+It is an extremely versatile instrument, modern and inspiring. By coming up with two parallel sound slots equipped with an "open" sequencer, real-time sound shaping and loads of acoustic and synthetic sound sources MARBLE tries to find new approaches to music production. About 900 presets are surely demonstrating that. You have single sounds, tonal textures, rhythmical figures, drum beats, ambient patterns, moving spheres, percussion loops etc. There are endless ways you can use MARBLE."""
 
 [mountain-dulcimer]
 vendor = "cinematique-instruments"

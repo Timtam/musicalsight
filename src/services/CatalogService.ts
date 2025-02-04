@@ -141,10 +141,11 @@ class CatalogService {
             )
 
         if (
-            (f.priceFrom > 0 || priceTo > 0) &&
-            (p.price === undefined ||
-                p.price < f.priceFrom ||
-                p.price > priceTo)
+            (f.free && (p.price === undefined || p.price > 0)) ||
+            ((f.priceFrom > 0 || priceTo > 0) &&
+                (p.price === undefined ||
+                    p.price < f.priceFrom ||
+                    p.price > priceTo))
         )
             return false
 

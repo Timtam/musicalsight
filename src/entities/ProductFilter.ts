@@ -8,6 +8,7 @@ export interface ProductFilter {
     vendors: string[]
     priceFrom: number
     priceTo: number
+    free: boolean
     categories: string[]
     nks: boolean | undefined
     oss: OperatingSystem[]
@@ -19,6 +20,7 @@ export const createProductFilter = (): ProductFilter => {
         vendors: [],
         priceFrom: 0,
         priceTo: 0,
+        free: false,
         categories: [],
         nks: undefined,
         oss: [],
@@ -33,6 +35,7 @@ export interface ProductSearchParams {
     pt?: string
     q?: string
     v?: string
+    free?: string
 }
 
 export const createProductSearchParams = (
@@ -45,6 +48,7 @@ export const createProductSearchParams = (
     if (filter.priceTo > 0) up.pt = filter.priceTo.toString()
     if (filter.vendors.length > 0) up.v = filter.vendors.join(",")
     if (filter.nks !== undefined) up.nks = filter.nks.toString()
+    if (filter.free) up.free = filter.free.toString()
     if (filter.categories.length > 0) up.c = filter.categories.join(",")
     if (filter.oss.length > 0)
         up.os = filter.oss
