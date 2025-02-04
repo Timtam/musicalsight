@@ -4849,20 +4849,20 @@ categories = [ "vsti.strings" ]
 description = """
 We used a 5-String Banjo with a 33 cm diameter mahogany body. We played and recorded the Banjo in many ways to get the typical banjo sound – each in several velocity layers and 2 Round Robin variations. As a result, we came out with a very realistic and organic Banjo."""
 
-[bowed-guitars-and-bass-2]
-vendor = "cinematique-instruments"
-name = "Bowed Guitars and Bass 2"
-size = 150
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://cinematique-instruments.com/content_audio/bwdguit_clericaldance.mp3"
-
 [mandolin]
 vendor = "cinematique-instruments"
 name = "Mandolin"
-size = 249
-requires = [ [ "native-instruments-kontakt" ] ]
+size = 800
+requires = [ [ "native-instruments-kontakt", "5.8.1" ] ]
+categories = [ "vsti.strings" ]
 nks = false
+price = 47.60
+url = "https://cinematique-instruments.com/pages_instr/inst_mandolin15.php"
+demo = "https://cinematique-instruments.com/content_audio/mando_gustavoswaltz.mp3"
+description = """
+The Mandolin is a small string instrument - it is a flat back soprano Mandolin from Ireland. It is tuned like a violin in G-D-A-E.
+
+Our primary focus was creating a Mandolin instrument that delivers a natural and organic feel. Our instrument provides two different plucking sounds. Furthermore, the Mandolin is equipped with a powerful and organic tremolo feature. This tremolo feature allows you to easily play the Mandolin in the typical "tragic "tremolo style. In addition to that, we programmed a strumming engine which performs patterns based on the pressed keys. This is best suitable for accompanying your song or music. The Mandolin is an instrument that enriches your music with a natural and organic feel."""
 
 [marble]
 vendor = "cinematique-instruments"

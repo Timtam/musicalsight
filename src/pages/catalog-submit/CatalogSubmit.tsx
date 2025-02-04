@@ -325,7 +325,7 @@ export function Component() {
                         }
                     />
                     <Form.Check
-label="Vendor is partnered with Able Artist Foundation *"
+                        label="Vendor is partnered with Able Artist Foundation *"
                         type="checkbox"
                         id="form-vendor-aaf"
                         disabled={data.vendor !== "new"}

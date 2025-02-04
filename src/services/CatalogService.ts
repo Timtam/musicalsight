@@ -131,10 +131,20 @@ class CatalogService {
         if (f.vendors.length > 0 && !f.vendors.includes(p.vendor.id))
             return false
 
+        let priceTo = f.priceTo
+
+        if (priceTo < f.priceFrom)
+            priceTo = Math.max(
+                ...this.products
+                    .values()
+                    .map((p) => (p.price === undefined ? 0 : p.price)),
+            )
+
         if (
-            p.price !== undefined &&
-            (f.priceFrom > 0 || f.priceTo > 0) &&
-            (p.price < f.priceFrom || p.price > f.priceTo)
+            (f.priceFrom > 0 || priceTo > 0) &&
+            (p.price === undefined ||
+                p.price < f.priceFrom ||
+                p.price > priceTo)
         )
             return false
 

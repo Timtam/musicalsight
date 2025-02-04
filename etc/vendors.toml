@@ -169,10 +169,6 @@ url = "https://library.davidhilowitz.com/"
 name = "Audionebula"
 url = "https://www.audionebula.ca/"
 
-[buzz]
-name = "Buzz"
-url = ""
-
 [cinematique-instruments]
 name = "Cinematique Instruments"
 url = ""
