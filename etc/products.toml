@@ -4836,74 +4836,18 @@ Both Leslies are available within the 8Dio Vintage Organ. “Analog” highlight
 
 It has been our mission to push sampling forwards in our entire vintage keys range. From realism to playability 8Dio Studio Vintage Organ offers the best of all worlds. """
 
-[kli-series-hypnotic-trapsoul]
-vendor = "big-fish-audio"
-name = "Hypnotic: Trapsoul"
-categories = [ "audio" ]
-size = 4_120
-nks = false
-demo = "https://www.youtube.com/watch?v=HAJqhZ5U3Io"
-price = 129.95
-description = """
-Hypnotic: Trapsoul brings you 50 construction kits of material in the styles of The Weekend, Bryson Tiller, Drake, Ty Doll $ign, Travis Scott, Tory Lanez and more! Inside this library you will find all the modern Trapsoul elements you need to make that next hit. Each of the 50 kits contain everything from the iconic trap snares to modern R&B rhodes and synths to make sure your next Trapsoul production has true vibe.
-
-In addition to the regular loop content, each kit includes a folder of MIDI files for full flexibility and control over the melodic content of the track using your own virtual instruments.
-
-Hypnotic: Trapsoul has been formatted in the most widely-used formats: Apple Loops, Acidized WAV, and REX files, making it usable in virtually every piece of software and hardware on the market today."""
-
-[kli-series-pop-rocks]
-vendor = "big-fish-audio"
-name = "KLI Series - Pop Rocks"
-size = 3_220
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=aY3l_2Zr4LM"
-
-[kli-series-sunrise-modern-country]
-vendor = "big-fish-audio"
-name = "KLI Series - Sunrise Modern Country"
-size = 6_620
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=YqBzQ_I-5HU"
-
-[smack-claps-and-stomps]
-vendor = "big-fish-audio"
-name = "Smack Claps and Stomps"
-size = 708
-requires = [ [ "native-instruments-kontakt", "5.7.1" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=xyk-0Ro3BLo"
-description = """
-
-Big Fish Audio is proud to
-present SMACK: Claps, Snaps & Stomps! A time-saving resource for the modern
-composer, this collection of various claps, snaps, stomps, kick drums, shakers,
-tambourines, and classic percussion will easily unlock your creativity. This
-unique virtual percussion instrument is the perfect tool to add color to music
-of any genre, or to provide the basis for your next composition.
-SMACK was created to save
-you time and improve the creative process by deep sampling various groups of
-drums, claps, snaps and stomps. With options for a single person, a small
-group, or a large group, the songwriting apps are limitless! Use the intuitive
-user interface to easily navigate between up to 10 groups per patch, and
-enhance each sample by adding one of the 8 included premium effects.
-SMACK includes 7 patches
-with individual groups."""
-
-[vintage-vibe]
-vendor = "big-fish-audio"
-name = "Vintage Vibe"
-size = 10_300
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
 [banjo]
 vendor = "cinematique-instruments"
 name = "Banjo"
 size = 408
-requires = [ [ "native-instruments-kontakt" ] ]
+requires = [ [ "native-instruments-kontakt", "5.6.8" ] ]
 nks = false
+price = 35.70
+url = "https://www.cinematique-instruments.com/pages_instr/inst_banjo3.php"
+demo = "https://www.cinematique-instruments.com/content_audio/banjo_gonewest.mp3"
+categories = [ "vsti.strings" ]
+description = """
+We used a 5-String Banjo with a 33 cm diameter mahogany body. We played and recorded the Banjo in many ways to get the typical banjo sound – each in several velocity layers and 2 Round Robin variations. As a result, we came out with a very realistic and organic Banjo."""
 
 [bowed-guitars-and-bass-2]
 vendor = "cinematique-instruments"
