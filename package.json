@@ -6,7 +6,7 @@
     "private": true,
     "dependencies": {
         "@tonaljs/tonal": "^4.6.5",
-        "@tonejs/piano": "^0.2.1",
+        "@tonejs/piano": "github:Timtam/Piano",
         "@types/react": "^18.0.21",
         "@types/react-bootstrap": "^0.32.35",
         "@types/react-dom": "^18.0.6",
@@ -35,10 +35,10 @@
         "reflect-metadata": "^0.2.1",
         "slugify": "^1.6.5",
         "title-case": "^4.2.0",
-        "tone": "^14.9.17",
+        "tone": "^15.0.4",
         "ts-dedent": "^2.2.0",
         "typescript": "^5.3.3",
-        "webmidi": "^2.5.3"
+        "webmidi": "^3.1.12"
     },
     "scripts": {
         "import": "npx tsx --tsconfig ./tsconfig.scripts.json scripts/import-reaperaccessible.ts",
