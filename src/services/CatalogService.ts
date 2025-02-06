@@ -2,7 +2,6 @@ import { plainToClass } from "class-transformer"
 import Fuse from "fuse.js"
 import catalog from "../catalog.json"
 import Category from "../entities/Category"
-import { OperatingSystem } from "../entities/OperatingSystem"
 import Product from "../entities/Product"
 import { ProductFilter } from "../entities/ProductFilter"
 import Vendor from "../entities/Vendor"
@@ -51,9 +50,9 @@ class CatalogService {
             }
 
             if (!(value as any).categories)
-                p.categories = [this.categories.get("unclassified")!]
+                p._categories = [this.categories.get("unclassified")!]
             else {
-                p.categories = (value as any).categories.map((c: string) => {
+                p._categories = (value as any).categories.map((c: string) => {
                     let cat = this.categories.get(c)
 
                     if (!cat) {
@@ -64,7 +63,8 @@ class CatalogService {
                 })
             }
 
-            p.requires = []
+            p._requires = []
+            p.contains = []
 
             this.products.set(p.id, p)
         }
@@ -73,7 +73,7 @@ class CatalogService {
         for (const [key, value] of Object.entries(catalog.products)) {
             if (Array.isArray((value as any).requires)) {
                 let p = this.products.get(`${(value as any).vendor}-${key}`)
-                p!.requires = (value as any).requires.map(
+                p!._requires = (value as any).requires.map(
                     (r: string | string[]) => {
                         let or: Product | undefined
 
@@ -93,16 +93,23 @@ class CatalogService {
                         }
                     },
                 )
+            }
 
-                // special cases for product types and os support
-                if (
-                    p!.os.length === 1 &&
-                    p!.os[0] === OperatingSystem.UNKNOWN &&
-                    p!.requires.length > 0
-                )
-                    p!.os = p!.requires
-                        .map((r) => r.product.os)
-                        .reduce((p, c) => p.filter((e) => c.includes(e)))
+            if (Array.isArray((value as any).contains)) {
+                let p = this.products.get(`${(value as any).vendor}-${key}`)
+                p!.contains = (value as any).contains.map((cp: string) => {
+                    let c = this.products.get(cp)
+
+                    if (!c) {
+                        console.log(
+                            `invalid bundled product ${cp} for product ${
+                                p!.id
+                            }`,
+                        )
+                        return null
+                    }
+                    return c
+                })
             }
         }
     }

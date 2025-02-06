@@ -11,11 +11,13 @@ function CategoryChecker({
     catalog,
     showCounter,
     checked,
+    disabled,
     onChange,
 }: {
     category: Category
     catalog: CatalogService
     checked: (category: Category) => boolean
+    disabled?: boolean
     onChange: (category: Category, checked: boolean) => void
     showCounter?: boolean
 }) {
@@ -26,6 +28,7 @@ function CategoryChecker({
             <Form.Check
                 type="checkbox"
                 id={`form-category-${category.id}`}
+                disabled={disabled}
                 label={
                     showCounter
                         ? `${category.name} (${
@@ -39,7 +42,7 @@ function CategoryChecker({
                 checked={checked(category)}
                 onChange={(evt) => onChange(category, evt.target.checked)}
             />
-            {category.subcategories.length > 0 ? (
+            {!disabled && category.subcategories.length > 0 ? (
                 <Accordion>
                     <Accordion.Item eventKey={category.id}>
                         <Accordion.Header as="p">{`Subcategories for ${category.name}`}</Accordion.Header>

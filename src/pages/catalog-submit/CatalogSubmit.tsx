@@ -37,6 +37,7 @@ const createFormData = (p?: Product) => ({
               product: Product
               version?: string
           }[]),
+    contains: p?.contains ? p.contains : ([] as Product[]),
     additional_links: p?.additional_links || {},
     vendor: p?.vendor.id || "",
     vendorName: "",
@@ -66,6 +67,8 @@ export function Component() {
         link: "" as string,
     })
     let [insertingLink, setInsertingLink] = useState(false)
+    let [selectedContains, setSelectedContains] = useState("")
+    let [insertingContains, setInsertingContains] = useState(false)
     let headRef = useRef<HTMLElement>(null)
     let navigate = useNavigate()
 
@@ -182,7 +185,20 @@ export function Component() {
                     <Form.Control
                         id="form-details-size"
                         type="number"
-                        value={data.size !== undefined ? data.size : ""}
+                        value={
+                            data.contains.length > 0
+                                ? data.contains.reduce(
+                                      (acc: number, product: Product) =>
+                                          acc + product.size,
+                                      0,
+                                  ) /
+                                  1024 /
+                                  1024
+                                : data.size !== undefined
+                                  ? data.size
+                                  : ""
+                        }
+                        disabled={data.contains.length > 0}
                         onChange={(evt) =>
                             setData({
                                 ...data,
@@ -335,6 +351,92 @@ export function Component() {
                         }
                     />
                 </Form.Group>
+                <h5>Product bundle</h5>
+                <p>
+                    If this is a product bundle please add the individual
+                    products here.
+                </p>
+                <Form.Group>
+                    {data.contains.length > 0 ? (
+                        <div role="list" aria-label="Contained products">
+                            {data.contains.map((c) => (
+                                <div role="listitem">
+                                    <p>{`${c.name} by ${c.vendor.name}`}</p>
+                                    <Button
+                                        ref={(e: any) => {
+                                            if (e && insertingContains) {
+                                                e.focus()
+                                                setInsertingContains(false)
+                                            }
+                                        }}
+                                        onClick={(evt) => {
+                                            if (data.contains.includes(c))
+                                                setData({
+                                                    ...data,
+                                                    contains:
+                                                        data.contains.filter(
+                                                            (ce) => ce !== c,
+                                                        ),
+                                                })
+                                        }}
+                                    >
+                                        Remove this product
+                                    </Button>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p>No contained products added so far.</p>
+                    )}
+                    <Form.Label for="form-contains-selector">
+                        Select the contained product
+                    </Form.Label>
+                    <Form.Select
+                        id="form-contains-selector"
+                        value={selectedContains}
+                        onChange={(evt) => {
+                            setSelectedContains(evt.target.value)
+                        }}
+                    >
+                        <option value="none">
+                            (select a product that should be part of this
+                            bundle)
+                        </option>
+                        {catalog
+                            .getProducts(createProductFilter())
+                            .filter((p) => !data.contains.includes(p))
+                            .sort((a, b) =>
+                                sorter(
+                                    `${a.name} ${a.vendor.name}`,
+                                    `${b.name} ${b.vendor.name}`,
+                                ),
+                            )
+                            .map((p) => (
+                                <option
+                                    value={p.id}
+                                >{`${p.name} by ${p.vendor.name}`}</option>
+                            ))}
+                    </Form.Select>
+                    <Form.Label for="form-contains-submit">
+                        Add contained product
+                    </Form.Label>
+                    <Form.Control
+                        id="form-contains-submit"
+                        type="button"
+                        disabled={selectedContains === ""}
+                        onClick={(evt) => {
+                            setData({
+                                ...data,
+                                contains: [
+                                    ...data.contains,
+                                    catalog.getProductById(selectedContains)!,
+                                ],
+                            })
+                            setInsertingContains(true)
+                            setSelectedContains("")
+                        }}
+                    />
+                </Form.Group>
                 <h5>Product Categories</h5>
                 <Form.Group controlId="formCategories">
                     {catalog
@@ -345,6 +447,7 @@ export function Component() {
                             <CategoryChecker
                                 category={c}
                                 catalog={catalog}
+                                disabled={data.contains.length > 0}
                                 checked={(category) =>
                                     data.categories.includes(category.id)
                                 }
@@ -393,6 +496,7 @@ export function Component() {
                             <Form.Check
                                 id={`form-os-${os}`}
                                 type="checkbox"
+                                disabled={data.contains.length > 0}
                                 label={getOperatingSystemString(
                                     parseInt(os) as OperatingSystem,
                                 )}
@@ -442,9 +546,32 @@ export function Component() {
                 </Form.Group>
                 <h5>Product requirements</h5>
                 <Form.Group>
-                    {data.requires.length > 0 ? (
+                    {data.requires.length > 0 || data.contains.length > 0 ? (
                         <div role="list" aria-label="Required products">
-                            {data.requires.map((r) => (
+                            {(data.contains.length > 0
+                                ? data.contains.reduce(
+                                      (
+                                          acc: {
+                                              product: Product
+                                              version?: string
+                                          }[],
+                                          product: Product,
+                                      ): {
+                                          product: Product
+                                          version?: string
+                                      }[] => {
+                                          product.requires.forEach((req) =>
+                                              acc.push({
+                                                  product: req.product,
+                                                  version: req.version,
+                                              }),
+                                          )
+                                          return acc
+                                      },
+                                      [],
+                                  )
+                                : data.requires
+                            ).map((r) => (
                                 <div role="listitem">
                                     <p>
                                         {r.version
@@ -458,6 +585,7 @@ export function Component() {
                                                 setInsertingRequirement(false)
                                             }
                                         }}
+                                        disabled={data.contains.length > 0}
                                         onClick={(evt) => {
                                             if (data.requires.includes(r))
                                                 setData({
@@ -484,7 +612,6 @@ export function Component() {
                         id="form-requirements-selector"
                         value={selectedRequirement.product}
                         onChange={(evt) => {
-                            setInsertingRequirement(true)
                             setSelectedRequirement({
                                 product: evt.target.value,
                                 version: selectedRequirement.version,
@@ -517,6 +644,7 @@ export function Component() {
                         disabled={selectedRequirement.product === "none"}
                         value={selectedRequirement.version}
                         onChange={(evt) => {
+                            setInsertingRequirement(true)
                             setSelectedRequirement({
                                 product: selectedRequirement.product,
                                 version: evt.target.value,
@@ -719,15 +847,26 @@ export function Component() {
     name = "${data.name}"`
                         msg += "\n"
 
-                        if (data.categories.length > 0)
+                        if (
+                            data.contains.length === 0 &&
+                            data.categories.length > 0
+                        )
                             msg += `categories = ${JSON.stringify(
                                 data.categories,
                             )}\n`
-                        if (data.requires.length > 0)
+                        if (
+                            data.contains.length === 0 &&
+                            data.requires.length > 0
+                        )
                             msg += `requires = ${formatRequirements(
                                 data.requires,
                             )}\n`
-                        if (data.size !== undefined)
+                        if (data.contains.length > 0)
+                            msg += `contains = ${JSON.stringify(data.contains.map((c) => c.id))}\n`
+                        if (
+                            data.contains.length === 0 &&
+                            data.size !== undefined
+                        )
                             msg += `size = ${data.size}\n`
                         if (data.url !== "") msg += `url = "${data.url}"\n`
                         if (data.demo !== "") msg += `demo = "${data.demo}"\n`
@@ -747,7 +886,7 @@ ${data.accessibility_description}\\
 """`
                             msg += "\n"
                         }
-                        if (data.oss.length > 0)
+                        if (data.contains.length === 0 && data.oss.length > 0)
                             msg += `os = ${JSON.stringify(data.oss)}\n`
                         if (Object.keys(data.additional_links).length > 0) {
                             msg += `[${productId}.additional_links]\n`
