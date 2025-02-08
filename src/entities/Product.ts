@@ -80,86 +80,128 @@ export default class Product {
     contains: Product[]
 
     get size(): number {
-        if (this.contains.length > 0)
-            return this.contains.reduce(
-                (acc: number, product: Product) => acc + product._size,
-                0,
-            )
-        else return this._size
+        return getSize(this._size, this.contains)
     }
 
     get categories(): Category[] {
-        if (this.contains.length > 0)
-            return this.contains
-                .reduce(
-                    (acc: Category[], p: Product) => acc.concat(p.categories),
-                    [],
-                )
-                .filter((c, i, a) => a.indexOf(c) === i)
-        else return this._categories
+        return getCategories(this._categories, this.contains)
     }
 
     get requires(): {
         product: Product
         version?: string
     }[] {
-        if (this.contains.length > 0)
-            return this.contains
-                .reduce(
-                    (
-                        acc: {
-                            product: Product
-                            version?: string
-                        }[],
-                        p: Product,
-                    ) => acc.concat(p.requires),
-                    [],
-                )
-                .filter((r, _, a) =>
-                    a.every((re) => {
-                        if (r.product.id === re.product.id) {
-                            if (
-                                r.version !== undefined &&
-                                re.version === undefined
-                            )
-                                return true
-                            else if (
-                                r.version === undefined &&
-                                re.version !== undefined
-                            )
-                                return false
-                            else
-                                return (
-                                    compareVersions(
-                                        r.version as string,
-                                        re.version as string,
-                                    ) === 1
-                                )
-                        } else return true
-                    }),
-                )
-        else return this._requires
+        return getRequires(this._requires, this.contains)
     }
 
     get os(): OperatingSystem[] {
-        if (this.contains.length > 0)
-            return this.contains
-                .reduce(
-                    (acc: OperatingSystem[], p: Product) => acc.concat(p.os),
-                    [],
-                )
-                .filter((c, i, a) => a.indexOf(c) === i)
-        else {
-            // special cases for product types and os support
-            if (
-                this._os.length === 1 &&
-                this._os[0] === OperatingSystem.UNKNOWN &&
-                this.requires.length > 0
-            )
-                return this.requires
-                    .map((r) => r.product.os)
-                    .reduce((p, c) => p.filter((e) => c.includes(e)))
-            else return this._os
-        }
+        return getOperatingSystems(this._os, this.requires, this.contains)
     }
+}
+
+export const getCategories = (
+    categories: Category[],
+    contains: Product[],
+): Category[] => {
+    if (contains.length > 0)
+        return contains
+            .reduce(
+                (acc: Category[], p: Product) => acc.concat(p.categories),
+                [],
+            )
+            .filter((c, i, a) => a.indexOf(c) === i)
+    else return categories
+}
+
+export const getRequires = (
+    requires: {
+        product: Product
+        version?: string
+    }[],
+    contains: Product[],
+): {
+    product: Product
+    version?: string
+}[] => {
+    if (contains.length > 0) {
+        const reqs = new Map<Product, string | undefined>()
+
+        contains
+            .reduce(
+                (
+                    acc: {
+                        product: Product
+                        version?: string
+                    }[],
+                    p: Product,
+                ) => acc.concat(p.requires),
+                [],
+            )
+            .forEach((r) => {
+                if (
+                    !reqs.has(r.product) ||
+                    (r.version !== undefined &&
+                        reqs.get(r.product) === undefined) ||
+                    (r.version !== undefined &&
+                        reqs.get(r.product) !== undefined &&
+                        compareVersions(
+                            r.version as string,
+                            reqs.get(r.product) as string,
+                        ) === 1)
+                )
+                    reqs.set(r.product, r.version)
+            })
+
+        return Array.from(
+            reqs.entries(),
+            ([product, version]): {
+                product: Product
+                version?: string
+            } => ({
+                product: product,
+                version: version,
+            }),
+        )
+    } else return requires
+}
+
+export const getOperatingSystems = (
+    os: OperatingSystem[],
+    requires: {
+        product: Product
+        version?: string
+    }[],
+    contains: Product[],
+): OperatingSystem[] => {
+    if (contains.length > 0)
+        return contains
+            .reduce(
+                (acc: OperatingSystem[], p: Product) => acc.concat(p.os),
+                [],
+            )
+            .filter((c, i, a) => a.indexOf(c) === i)
+    else {
+        // special cases for product types and os support
+        if (
+            os.length === 1 &&
+            os[0] === OperatingSystem.UNKNOWN &&
+            requires.length > 0
+        )
+            return requires
+                .map((r) => r.product.os)
+                .reduce((p, c) => p.filter((e) => c.includes(e)))
+        else return os
+    }
+}
+
+export const getSize = (
+    size: number | undefined,
+    contains: Product[],
+): number => {
+    if (contains.length > 0)
+        return contains.reduce(
+            (acc: number, product: Product) => acc + product.size,
+            0,
+        )
+    else return size ?? 0
 }

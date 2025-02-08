@@ -4882,10 +4882,17 @@ It is an extremely versatile instrument, modern and inspiring. By coming up with
 [mountain-dulcimer]
 vendor = "cinematique-instruments"
 name = "Mountain Dulcimer"
-size = 1_190
-requires = [ [ "native-instruments-kontakt" ] ]
+size = 1_300
+price = 47.60
+requires = [ [ "native-instruments-kontakt", "5.8.1" ] ]
 nks = false
+url = "https://cinematique-instruments.com/pages_instr/inst_mountain_dulcimer.php"
 demo = "https://www.youtube.com/watch?v=em6sCtiVBpY"
+description = """
+The Mountain Dulcimer is a high-quality three-string wooden stringed instrument which produces a soft and melodic drone, also known as a bourdon tone. It is well known for its use in compositions by Thomas Newman, such as American Beauty.
+
+We focused on capturing the Mountain Dulcimer in a variety of articulations. One can play the mountain dulcimer with fingers - but we have also played it with a Piano Hammer, Plec and Mallets. Besides five presets, the new Stringed 2022 GI impressively keeps many options available. But in no way should we forget to mention the soft shimmering strumming.
+"""
 
 [ukulele-trio]
 vendor = "cinematique-instruments"
@@ -19051,4 +19058,249 @@ requires = [ [ "native-instruments-kontakt-player", "7" ] ]
 nks = true
 description = """\
 A grand pipe organ, recorded in a spacious Georgian church, featuring a curated collection of stop combinations. With three microphone positions, this library showcases the organ’s full range, from soft, reedy tones to full-on majestic power.\
+"""
+
+[emotional-recorder]
+vendor = "fracture-sounds"
+name = "Emotional Recorder"
+categories = ["vsti.woodwinds"]
+url = "https://fracturesounds.com/product/emotional-recorder/"
+demo = "https://youtu.be/IYngGern-oY"
+price = 0
+nks = true
+description = """\
+After over 5 years of development, we are proud to present Emotional Recorder. Performed by renowned recorder virtuoso Will Bedford, this prestinely sampled instrument captures the true essence of the descant recorder, with heartfelt emotion injected into each note. Magnificently sampled into a passionate and receptive instrument, Emotional Recorder transforms any piece through its ability to encapsulate raw, unencumbered feeling.
+The library features a groundbreaking true legato engine, with a unique ‘emotion’ control for embellishing the performance with ornaments and natural artifacts which bring the performance to life.
+This is underpinned by the inbuilt breath controls, which offer the ability to add natural breaths between phrases, enhancing the realism of the performance.
+The humble descant recorder has been long underrepresented in the sampling world, and we hope this library will find a home in your toolkit and enrich your music for years to come.
+"""
+size = 75
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[pumpkin-patch]
+vendor = "fracture-sounds"
+name = "Pumpkin Patch"
+categories = ["vsti.percussion"]
+size = 40
+url = "https://fracturesounds.com/product/pumpkin-patch/"
+demo = "https://youtu.be/nNV9eu9Bgxg"
+price = 0
+nks = true
+description = """\
+We are delighted to offer this free gift – a fun and simple percussion library created entirely from a pumpkin. Recorded dry and up-close in a kitchen, this library offers a surprisingly wide range of sounds from hits, slaps, chops, flicks, squelches and shakers. Download Pumpkin Patch today and add some fresh percussion sounds to your productions.
+"""
+requires = [ [ "native-instruments-kontakt", "5.5" ] ]
+
+[blueprint-electric-keys]
+vendor = "fracture-sounds"
+name = "Blueprint: Electric Keys"
+categories = ["vsti.keys"]
+size = 2300
+url = "https://fracturesounds.com/product/blueprint-electric-keys/"
+demo = "https://youtu.be/ur-Avi-hXd4"
+price = 0
+nks = true
+description = """\
+The first in our series of free Blueprint instruments is Electric Keys, a faithful sampling of a vintage Rhodes Mark 1 Stage Piano. With DI, amped, and acoustic signals, the instrument has been captured in exquisite detail, from the delicate tones to the characterful mechanicals.
+Included in the library is a bespoke Atmosphere Layer, a unique feature of all of our commercial piano products, which extends the sonic possibilities of Electric Keys from popular music productions, to funk and jazz, and into our own wheelhouse of cinematic soundscapes.
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-greenhead-chimes]
+vendor = "fracture-sounds"
+name = "Blueprint: Greenhead Chimes"
+categories = ["vsti.percussion"]
+size = 235
+url = "https://fracturesounds.com/product/blueprint-greenhead-chimes/"
+demo = "https://youtu.be/XH9yb0IMP-o"
+price = 0
+nks = true
+description = """\
+Greenhead Chimes introduces our staple Atmosphere Layer mixer to Blueprint. This layer mixer, a staple of many of our libraries, contains three different processed signals created from the original samples. This extends the sonic possibilities of the instrument and makes it instantly inspiring to play with.
+The second instrument in our Blueprint series represents some of the framework created by the developers at Fracture Sounds that informed the creation of the tuned percussion instruments in Zen: Meditations.
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-gentle-winds]
+vendor = "fracture-sounds"
+name = "Blueprint: Gentle Winds"
+categories = ["vsti.woodwinds"]
+size = 222
+url = "https://fracturesounds.com/product/blueprint-gentle-winds/"
+demo = "https://youtu.be/z37oXc_bqK4"
+price = 0
+nks = true
+description = """\
+To form ideas for his latest library, Dan Keen set about recording a set of woodwind instruments in a dry space to get a sense of what the instruments could achieve and how that would translate into samples. The experiments were successful and eventually led to the “Wisp” articulation, which forms the cornerstone of Petrichor: Earthy Winds.
+The team at Fracture Sounds have taken these samples and processed them into an ethereal Atmosphere Layer- which can be soloed on the interface. Add texture to your music now using Gentle Winds, available in the free Kontakt Player.
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-festive-bells]
+vendor = "fracture-sounds"
+name = "Blueprint: Festive Bells"
+categories = ["vsti.percussion"]
+size = 1200
+url = "https://fracturesounds.com/product/blueprint-festive-bells/"
+demo = "https://youtu.be/JRj0eFaoYR4"
+price = 0
+nks = true
+description = """\
+The fourth instalment of our Blueprint series combines three iconic bell sounds often associated with Christmas. Contained within is a traditional set of Hand Bells, a playful collection of Toy Bells, and a collection of different Sleigh Bells that are sure to inject the festive spirit into your music!\
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-textural-violin]
+vendor = "fracture-sounds"
+name = "Blueprint: Textural Violin"
+categories = ["vsti.strings"]
+size = 275
+url = "https://fracturesounds.com/product/blueprint-textural-violin/"
+demo = "https://youtu.be/axK3W2WaUmM"
+price = 0
+nks = true
+description = """\
+The fifth instalment of our Blueprint series showcases the early experiments performed by composer and violinist Alexander Parsons ahead of the recording sessions for our collaborative library, Trails: Evocative Soundscapes. The library showcases four articulations and a bespoke Atmosphere Layer that gives a small flavour of what’s possible with the full Trails library.\
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-toy-piano]
+vendor = "fracture-sounds"
+name = "Blueprint: Toy Piano"
+categories = ["vsti.keys"]
+size = 155
+url = "https://fracturesounds.com/product/blueprint-toy-piano/"
+demo = "https://youtu.be/VCo9erdYVl0"
+price = 0
+nks = true
+description = """\
+Introducing the playful chiming sounds of a vintage Toy Piano, captured in exquisite detail with additional tools to extend the sound.\
+The sound of the Toy Piano is produced by hammers striking metal rods (tines), resulting in a unique bell-like tone. The instrument was close mic’d in stereo, in a dry studio, and has controls available in the Faulkner Dulcichord, an instrument that was part of our previous release, Trails by Alexander Parsons.
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-gentle-strings]
+vendor = "fracture-sounds"
+name = "Blueprint: Gentle Strings"
+categories = ["vsti.strings"]
+size = 771
+url = "https://fracturesounds.com/product/blueprint-gentle-strings/"
+demo = "https://youtu.be/ru5fgbs3Jeg"
+price = 0
+nks = true
+description = """\
+This chamber-sized string ensemble was captured in a large studio hall playing with mutes to produce a long con sordino articulation. The library includes three microphone signals and a bespoke atmosphere layer produced from the original samples.\
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-short-strings]
+vendor = "fracture-sounds"
+name = "Blueprint: Short Strings"
+categories = ["vsti.strings"]
+size = 600
+url = "https://fracturesounds.com/product/blueprint-short-strings/"
+demo = "https://youtu.be/yJoEwCn2Krw"
+price = 0
+nks = true
+description = """\
+Short Strings captures a small, chamber-sized ensemble, playing the staccato technique in a playful manner- great for scoring anything from small-scale action to romantic comedies, or layering with other strings in your collection for a more intimate sound.\
+"""
+accessibility_description = """\
+Fully mapped for Komplete Kontrol\
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-feedback-guitar]
+vendor = "fracture-sounds"
+name = "Blueprint: Feedback Guitar"
+categories = ["vsti.guitar"]
+size = 222
+url = "https://fracturesounds.com/product/blueprint-feedback-guitar/"
+demo = "https://youtu.be/6CiSyK11L2U"
+price = 0
+nks = true
+description = """\
+Feedback Guitar captures the iconic Les Paul playing at its sonic extremes in a large studio. The result is a distinctive ambient pad featuring two articulation options, a perspective shift, and our innovative pitch-bending technology first introduced with Hemisphere Guitars.\
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-epic-grand]
+vendor = "fracture-sounds"
+name = "Blueprint: Epic Grand"
+categories = ["vsti.keys"]
+size = 4100
+url = "https://fracturesounds.com/product/blueprint-epic-grand/"
+demo = "https://youtu.be/tRIOXWH8oWA"
+price = 0
+nks = true
+description = """\
+A piano of epic proportions, this Steinway Model D has been recorded in octaves in a large concert hall with an array of microphone options and more effects to shape the sound.\
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-drum-kit]
+vendor = "fracture-sounds"
+name = "Blueprint: Drum Kit"
+categories = ["vsti.drums"]
+size = 900
+url = "https://fracturesounds.com/product/blueprint-drum-kit/"
+demo = "https://youtu.be/i9xRHf6rR5Q"
+price = 0
+nks = true
+description = """\
+Blueprint Drum Kit was recorded in the spacious studio hall of The Nave, and includes three microphone mixes offering exceptional control over the sound. Versatile enough to fit various genres, this library features a set of standard drum kit elements and a small collection of auxiliary percussion instruments.\
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-gentle-brass]
+vendor = "fracture-sounds"
+name = "Blueprint: Gentle Brass"
+categories = ["vsti.brass"]
+size = 440
+url = "https://fracturesounds.com/product/blueprint-gentle-brass/"
+demo = "https://youtu.be/Hu3pvQGfQqo"
+price = 0
+nks = true
+description = """\
+Brass Brand brings together some of the top musicians from the British brass banding scene in northern England, playing at their quietest dynamic to produce a warm and delicate tone.\
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-music-box]
+vendor = "fracture-sounds"
+name = "Blueprint: Music Box"
+categories = ["vsti.percussion"]
+size = 60
+url = "https://fracturesounds.com/product/blueprint-music-box/"
+demo = "https://youtu.be/v3YiV3uQ9Ug"
+price = 0
+nks = true
+description = """\
+A tiny music box, sampled and spread across the keys, coupled with a bespoke Atmosphere Layer to create playful or mysterious metallic plucks.\
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-string-trio]
+vendor = "fracture-sounds"
+name = "Blueprint: String Trio"
+categories = ["vsti.strings"]
+size = 2100
+url = "https://fracturesounds.com/product/blueprint-string-trio/"
+demo = "https://youtu.be/ERiIgOFUQKM"
+price = 0
+nks = true
+description = """\
+A trio of Solo String players combined together in a simple-to-use Ensemble patch, performing Sustain, Staccato, and Pizzicato articulations.\
+"""
+requires = [ [ "native-instruments-kontakt-player", "7" ] ]
+
+[blueprint-collection]
+vendor = "fracture-sounds"
+name = "Blueprint Collection"
+contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano"]
+url = "https://fracturesounds.com/product/blueprint-collection/"
+price = 0
+nks = true
+description = """\
+Our Blueprint series is a collection of free libraries that can all be accessed in the free Kontakt Player, downloadable via Native Instruments.\
 """

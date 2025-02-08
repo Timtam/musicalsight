@@ -8,20 +8,24 @@ import dedent from "ts-dedent"
 import CategoryChecker from "../../components/CategoryChecker"
 import FA from "../../components/FocusAnchor"
 import Head from "../../components/Head"
+import Category from "../../entities/Category"
 import {
     getOperatingSystemString,
     OperatingSystem,
 } from "../../entities/OperatingSystem"
-import Product from "../../entities/Product"
+import Product, {
+    getCategories,
+    getOperatingSystems,
+    getRequires,
+    getSize,
+} from "../../entities/Product"
 import { createProductFilter } from "../../entities/ProductFilter"
 import CatalogService from "../../services/CatalogService"
 import ResponseModal from "./ResponseModal"
 
 const createFormData = (p?: Product) => ({
     name: p?.name || "",
-    categories: p?.categories
-        ? p.categories.map((c) => c.id)
-        : ([] as string[]),
+    categories: p?.categories ? [...p!.categories] : ([] as Category[]),
     url: p?.url || "",
     demo: p?.demo || "",
     size: p?.size ? p.size / 1024 / 1024 : (undefined as number | undefined),
@@ -29,8 +33,7 @@ const createFormData = (p?: Product) => ({
     nks: p?.nks || (false as boolean | string),
     description: p?.description || "",
     accessibility_description: p?.accessibility_description || "",
-    oss: (p?.os.map((os) => OperatingSystem[os].toLowerCase()) ||
-        []) as string[],
+    os: p?.os ? [...p.os] : ([] as OperatingSystem[]),
     requires: p?.requires
         ? p.requires
         : ([] as {
@@ -186,17 +189,11 @@ export function Component() {
                         id="form-details-size"
                         type="number"
                         value={
-                            data.contains.length > 0
-                                ? data.contains.reduce(
-                                      (acc: number, product: Product) =>
-                                          acc + product.size,
-                                      0,
-                                  ) /
+                            data.contains.length > 0 || data.size !== undefined
+                                ? getSize(data.size, data.contains) /
                                   1024 /
                                   1024
-                                : data.size !== undefined
-                                  ? data.size
-                                  : ""
+                                : ""
                         }
                         disabled={data.contains.length > 0}
                         onChange={(evt) =>
@@ -449,34 +446,38 @@ export function Component() {
                                 catalog={catalog}
                                 disabled={data.contains.length > 0}
                                 checked={(category) =>
-                                    data.categories.includes(category.id)
+                                    getCategories(
+                                        data.categories,
+                                        data.contains,
+                                    ).includes(category)
                                 }
                                 onChange={(category, checked) => {
                                     if (checked) {
                                         if (
-                                            !data.categories.includes(
-                                                category.id,
-                                            )
+                                            !getCategories(
+                                                data.categories,
+                                                data.contains,
+                                            ).includes(category)
                                         )
                                             setData({
                                                 ...data,
                                                 categories: [
                                                     ...data.categories,
-                                                    category.id,
+                                                    category,
                                                 ],
                                             })
                                     } else {
                                         if (
-                                            data.categories.includes(
-                                                category.id,
-                                            )
+                                            getCategories(
+                                                data.categories,
+                                                data.contains,
+                                            ).includes(category)
                                         )
                                             setData({
                                                 ...data,
                                                 categories:
                                                     data.categories.filter(
-                                                        (cs) =>
-                                                            cs !== category.id,
+                                                        (cs) => cs !== category,
                                                     ),
                                             })
                                     }
@@ -500,43 +501,49 @@ export function Component() {
                                 label={getOperatingSystemString(
                                     parseInt(os) as OperatingSystem,
                                 )}
-                                checked={data.oss.includes(
-                                    OperatingSystem[parseInt(os)].toLowerCase(),
-                                )}
+                                checked={getOperatingSystems(
+                                    data.os,
+                                    data.requires,
+                                    data.contains,
+                                ).includes(parseInt(os) as OperatingSystem)}
                                 onChange={(evt) => {
                                     if (evt.target.checked === true) {
                                         if (
-                                            !data.oss.includes(
-                                                OperatingSystem[
-                                                    parseInt(os)
-                                                ].toLowerCase(),
+                                            !getOperatingSystems(
+                                                data.os,
+                                                data.requires,
+                                                data.contains,
+                                            ).includes(
+                                                parseInt(os) as OperatingSystem,
                                             )
                                         )
                                             setData({
                                                 ...data,
-                                                oss: [
-                                                    ...data.oss,
-                                                    OperatingSystem[
-                                                        parseInt(os)
-                                                    ].toLowerCase(),
+                                                os: [
+                                                    ...data.os,
+                                                    parseInt(
+                                                        os,
+                                                    ) as OperatingSystem,
                                                 ],
                                             })
                                     } else {
                                         if (
-                                            data.oss.includes(
-                                                OperatingSystem[
-                                                    parseInt(os)
-                                                ].toLowerCase(),
+                                            getOperatingSystems(
+                                                data.os,
+                                                data.requires,
+                                                data.contains,
+                                            ).includes(
+                                                parseInt(os) as OperatingSystem,
                                             )
                                         )
                                             setData({
                                                 ...data,
-                                                oss: data.oss.filter(
+                                                os: data.os.filter(
                                                     (osn) =>
                                                         osn !==
-                                                        OperatingSystem[
-                                                            parseInt(os)
-                                                        ].toLowerCase(),
+                                                        (parseInt(
+                                                            os,
+                                                        ) as OperatingSystem),
                                                 ),
                                             })
                                     }
@@ -548,59 +555,41 @@ export function Component() {
                 <Form.Group>
                     {data.requires.length > 0 || data.contains.length > 0 ? (
                         <div role="list" aria-label="Required products">
-                            {(data.contains.length > 0
-                                ? data.contains.reduce(
-                                      (
-                                          acc: {
-                                              product: Product
-                                              version?: string
-                                          }[],
-                                          product: Product,
-                                      ): {
-                                          product: Product
-                                          version?: string
-                                      }[] => {
-                                          product.requires.forEach((req) =>
-                                              acc.push({
-                                                  product: req.product,
-                                                  version: req.version,
-                                              }),
-                                          )
-                                          return acc
-                                      },
-                                      [],
-                                  )
-                                : data.requires
-                            ).map((r) => (
-                                <div role="listitem">
-                                    <p>
-                                        {r.version
-                                            ? `${r.product.name} (minimum version ${r.version}) by ${r.product.vendor.name}`
-                                            : `${r.product.name} by ${r.product.vendor.name}`}
-                                    </p>
-                                    <Button
-                                        ref={(e: any) => {
-                                            if (e && insertingRequirement) {
-                                                e.focus()
-                                                setInsertingRequirement(false)
-                                            }
-                                        }}
-                                        disabled={data.contains.length > 0}
-                                        onClick={(evt) => {
-                                            if (data.requires.includes(r))
-                                                setData({
-                                                    ...data,
-                                                    requires:
-                                                        data.requires.filter(
-                                                            (re) => re !== r,
-                                                        ),
-                                                })
-                                        }}
-                                    >
-                                        Remove this requirement
-                                    </Button>
-                                </div>
-                            ))}
+                            {getRequires(data.requires, data.contains).map(
+                                (r) => (
+                                    <div role="listitem">
+                                        <p>
+                                            {r.version
+                                                ? `${r.product.name} (minimum version ${r.version}) by ${r.product.vendor.name}`
+                                                : `${r.product.name} by ${r.product.vendor.name}`}
+                                        </p>
+                                        <Button
+                                            ref={(e: any) => {
+                                                if (e && insertingRequirement) {
+                                                    e.focus()
+                                                    setInsertingRequirement(
+                                                        false,
+                                                    )
+                                                }
+                                            }}
+                                            disabled={data.contains.length > 0}
+                                            onClick={(evt) => {
+                                                if (data.requires.includes(r))
+                                                    setData({
+                                                        ...data,
+                                                        requires:
+                                                            data.requires.filter(
+                                                                (re) =>
+                                                                    re !== r,
+                                                            ),
+                                                    })
+                                            }}
+                                        >
+                                            Remove this requirement
+                                        </Button>
+                                    </div>
+                                ),
+                            )}
                         </div>
                     ) : (
                         <p>No requirements added so far.</p>
@@ -611,6 +600,7 @@ export function Component() {
                     <Form.Select
                         id="form-requirements-selector"
                         value={selectedRequirement.product}
+                        disabled={data.contains.length > 0}
                         onChange={(evt) => {
                             setSelectedRequirement({
                                 product: evt.target.value,
@@ -852,7 +842,7 @@ export function Component() {
                             data.categories.length > 0
                         )
                             msg += `categories = ${JSON.stringify(
-                                data.categories,
+                                data.categories.map((c) => c.id),
                             )}\n`
                         if (
                             data.contains.length === 0 &&
@@ -886,8 +876,8 @@ ${data.accessibility_description}\\
 """`
                             msg += "\n"
                         }
-                        if (data.contains.length === 0 && data.oss.length > 0)
-                            msg += `os = ${JSON.stringify(data.oss)}\n`
+                        if (data.contains.length === 0 && data.os.length > 0)
+                            msg += `os = ${JSON.stringify(data.os.map((o) => getOperatingSystemString(o).toLowerCase()))}\n`
                         if (Object.keys(data.additional_links).length > 0) {
                             msg += `[${productId}.additional_links]\n`
 
