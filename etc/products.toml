@@ -1945,40 +1945,46 @@ demo = "https://theglobalvoice.info/reaper_files/Core%20Concepts%20with%20Justin
 [kontakt]
 vendor = "native-instruments"
 name = "Kontakt"
+categories = ["software.sampler","vsti.sampler"]
 url = "https://www.native-instruments.com/en/products/komplete/samplers/kontakt-7/"
-categories = [ "software.sampler", "vsti.sampler" ]
-description = "KONTAKT is everything from instant inspiration for music makers to the industry’s leading instrument-building tool. More than a sampler, this shapeshifting platform has powered two decades of blockbuster film scores and chart-topping hits, plus thousands of incredible instruments."
-accessibility_description = """
-While Kontakt itself isn't accessible on its own, the community developed several scripts and tools to help access some of its functionalities, like loading instruments, change channel routings or batch resave instruments. The instrument's parameters are accessible within a DAW like [REAPER](/catalog/product/cockos-reaper) or Logic. The following tools/scripts are recommended when working with Kontakt:\r
-\r
-* [LBL NVDA Add-On under Windows (free)](https://reaperaccessible.fr/archives/LBL%20Add-On%20For%20NVDA.zip)\r
-* [Kontakt Access script for Windows (one-time payment of $35)](https://access4music.com/en/script/purchase/kontakt)\r
-"""
-os = [ "windows", "mac_intel", "mac_arm" ]
 price = 299
+description = """\
+KONTAKT is everything from instant inspiration for music makers to the industry’s leading instrument-building tool. More than a sampler, this shapeshifting platform has powered two decades of blockbuster film scores and chart-topping hits, plus thousands of incredible instruments.\
+"""
+accessibility_description = """\
+While Kontakt itself isn't accessible on its own, the community developed several scripts and tools to help access some of its functionalities, like loading instruments, change channel routings or batch resave instruments. The instrument's parameters are accessible within a DAW like [REAPER](/catalog/product/cockos-reaper), Ableton Live or Logic. You can find links to helper tools in the additional links section.\
+"""
+os = ["windows","intel-based mac","arm-based mac"]
+
+[kontakt.additional_links]
+"ReaHotkey Download" = "https://github.com/MatejGolian/ReaHotkey/releases/latest"
 
 [kontakt-player]
 vendor = "native-instruments"
 name = "Kontakt Player"
-categories = [ "software.sampler", "vsti.sampler" ]
+categories = ["software.sampler","vsti.sampler"]
 url = "https://www.native-instruments.com/en/products/komplete/samplers/kontakt-7-player/"
 price = 0
-description = """
-KONTAKT is the foundation of our huge range of sampled instruments.\r
-\r
-Whether it’s the dramatic sound of ACTION STRINGS 2, the unmistakable twang of SESSION GUITARIST – ELECTRIC VINTAGE, or the inspiring, randomized sound design of PLAYBOX, our instruments provide creative inspiration for musicians and composers around the world.\r
-\r
-All KONTAKT instruments from NI run in the free KONTAKT PLAYER.\r
-\r
-THE WIDE WORLD OF KONTAKT\r
-KONTAKT is also a host for hundreds of highly realistic and detailed sampled instruments from other manufacturers. This diverse ecosystem means that KONTAKT is your access point to the industry’s biggest collection of playable sampled sound.\r
-\r
-Many of these instruments run in the KONTAKT PLAYER – you don't need the full version of KONTAKT to use them:\r
+description = """\
+KONTAKT is the foundation of our huge range of sampled instruments. 
+
+Whether it’s the dramatic sound of ACTION STRINGS 2, the unmistakable twang of SESSION GUITARIST – ELECTRIC VINTAGE, or the inspiring, randomized sound design of PLAYBOX, our instruments provide creative inspiration for musicians and composers around the world. 
+
+All KONTAKT instruments from NI run in the free KONTAKT PLAYER. 
+
+THE WIDE WORLD OF KONTAKT 
+KONTAKT is also a host for hundreds of highly realistic and detailed sampled instruments from other manufacturers. This diverse ecosystem means that KONTAKT is your access point to the industry’s biggest collection of playable sampled sound. 
+
+Many of these instruments run in the KONTAKT PLAYER – you don't need the full version of KONTAKT to use them: 
+\
 """
-accessibility_description = """
-Kontakt Player sadly isn't compatible with LBL or Kontakt Access which can be used to access various features of the paid Kontakt software. The only accessible way of running Kontakt Player seems to be through Komplete Kontrol.\r
+accessibility_description = """\
+Kontakt Player accessibility got better from version 7 onward, especially with the help of OCR, however even better accessibility can be achieved with the ReaHotkey tool which is linked within the additional links section.\
 """
-os = [ "windows", "mac_intel", "mac_arm" ]
+os = ["windows","intel-based mac","arm-based mac"]
+
+[kontakt-player.additional_links]
+"ReaHotkey Download" = "https://github.com/MatejGolian/ReaHotkey/releases/latest"
 
 [monster-drum]
 vendor = "agus-hardiman"
@@ -4910,97 +4916,20 @@ The 'Ukulele Trio' consists of a soprano, a tenor and a baritone ukulele. Our pr
 All ukuleles come with three articulations: muted notes, open notes and dead notes. These articulations are perfectly suitable for a strumming engine performing patterns based on the pressed keys, which is the best fit for accompanying your song or music. Overall, the Ukulele Trio is an instrument set that lets you easily and quickly play to your music and enriches it with a nice organic feel.\
 """
 
-[90s-retro-trumpets]
-vendor = "cinesamples"
-name = "90s Retro Trumpets"
-size = 1_000
-requires = [ [ "native-instruments-kontakt", "5.6.8" ] ]
-nks = true
-demo = "https://www.youtube.com/watch?v=uQvqNTNsu-s"
-description = """
-
-CineSamples takes you back
-to 90s movies with its new bank of trumpets for Kontakt 90s Retro Trumpets.
-The story that led to 90's
-Retro Trumpets is quite original. The CineSamples team were making takes at the
-MGM Scoring Stage at Sony Picture Studios in Los Angeles last year when they
-came across directions for the orchestra's recording sessions for Jurassic Park
-(the first). The idea therefore came to reproduce this sound by following these
-instructions and with the help of the people from Sony Scoring who were present
-at the time.
-Direction the studios with
-a set of four veteran trumpeters with the instruments and playing techniques of
-the time, To perform the takes, CineSamples used the same three Neumann M50
-microphones modified in Decca Tree configuration, patched the preamp parameters
-to the same models always present in the studio, applied Lexicon 480 reverb and
-Avalon 2055 EQ also available. The result of all this is a sound that is less
-metallic, simpler and softer than modern recorded trumpets.
-90's Retro Trumpets thus
-includes 12 patches, the interface for Kontakt also allows you to access the
-six keyswitches, the dynamics (to be managed with the modulation wheel), the
-vibrato, the velocity, the legato, the mute of the trumpets and three effects:
-tape saturation, EQ and reverb. You can also extend the note range of the
-trumpets beyond what was recorded if you need to."""
-
-[abbey-road-classic-upright-pianos]
-vendor = "cinesamples"
-name = "Abbey Road Classic Upright Pianos"
-size = 15_000
-requires = [ [ "native-instruments-kontakt", "5.3.1" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=DZmFFZsdLyU"
-description = """
-
-CineSamples and the team
-at London's Abbey Road studios
-recorded and sampled two
-vintage upright pianos for Kontakt 5.
-The Abbey Road Classic
-Upright Pianos collection includes the sounds
-two old upright acoustic
-pianos:
-A Challen Studio Piano
-made in London by Piano Works in the 1930s and used in particular on Beatles
-albums, with a sound described as soft.
-The team produced two
-patches, one with the usual sound and the other, called Challen Tack, with the
-sound of the piano whose Tack mechanism has been activated, which lowers brass
-tongues between the hammers and the strings .
-Mrs Mills, a 1905 Steinway
-Vertegrand modified by the Abbey Road crew in the late 1950s to lacquer the
-felts of the hammers to make them harder and create a brighter sound with more
-percussiveness (you can heard in particular on Penny Lane or With a Little Help
-from my Friends.This piano is slightly out of tune, as requested by Stuart
-Eltham.
-The pianos were recorded
-in Studio 2.
-The interface for Kontakt
-offers three mixes that you can use at the same time:
-Modern with three pairs of
-condenser mics, Room with a Decca Tree setup
-and a pair of ambient
-mics, and Vintage which uses the same mics used in the Beatles productions,
-namely AKG D19C (cardioid dynamic), Neuman U67 and AKG C12 (cardioid condenser)
-mics and the original REDD.37 console .
-You also have velocity
-curve settings, an effects section with EQ, stereo width, saturation and
-filters that you can adjust separately for each mix and knobs for sample start,
-release and pedal noise."""
-
-[african-marimba-and-udu]
-vendor = "cinesamples"
-name = "African Marimba & Udu"
-size = 159
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-
 [artist-series-taylor-davis]
 vendor = "cinesamples"
 name = "Artist Series - Taylor Davis"
-size = 8_000
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = true
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt-player","5.6.8"]]
+size = 8000
+url = "https://store.cinesamples.com/products/taylor-davis"
 demo = "https://www.youtube.com/watch?v=290xB3YIpoE"
+price = 177.1
+nks = true
+description = """\
+Artist Series - Taylor Davis is a solo violin library and a part of Cinesamples' Artist Series. Her Violin Legato library incorporates the same unique seamless legato recording and programming techniques as the Tina Guo Acoustic Cello Legato, Tina Guo vol 2, and CineStrings SOLO libraries. The legato allows for agile melodic passages and there are additional articulations including spiccato, marcato, tenuto, pizzicato, and open strings.
+Works with the FREE version of Kontakt 5.6.8+\
+"""
 
 [artist-series-randys-prepared-piano]
 vendor = "cinesamples"

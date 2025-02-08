@@ -694,10 +694,19 @@ export function Component() {
                                                 )
                                                     setData({
                                                         ...data,
-                                                        additional_links: {
-                                                            ...data.additional_links,
-                                                            [k]: v,
-                                                        },
+                                                        additional_links:
+                                                            Object.fromEntries(
+                                                                Object.entries(
+                                                                    data.additional_links,
+                                                                ).filter(
+                                                                    ([
+                                                                        k2,
+                                                                        v2,
+                                                                    ]) =>
+                                                                        k !==
+                                                                        k2,
+                                                                ),
+                                                            ),
                                                     })
                                             }}
                                         >
@@ -746,6 +755,7 @@ export function Component() {
                             selectedLink.name === "" || selectedLink.link === ""
                         }
                         onClick={(evt) => {
+                            setInsertingLink(true)
                             setData({
                                 ...data,
                                 additional_links: {
