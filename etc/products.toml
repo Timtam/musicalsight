@@ -4885,6 +4885,7 @@ name = "Mountain Dulcimer"
 size = 1_300
 price = 47.60
 requires = [ [ "native-instruments-kontakt", "5.8.1" ] ]
+categories = ["vsti.strings","vsti.ethnic"]
 nks = false
 url = "https://cinematique-instruments.com/pages_instr/inst_mountain_dulcimer.php"
 demo = "https://www.youtube.com/watch?v=em6sCtiVBpY"
@@ -4897,10 +4898,17 @@ We focused on capturing the Mountain Dulcimer in a variety of articulations. One
 [ukulele-trio]
 vendor = "cinematique-instruments"
 name = "Ukulele Trio"
-size = 658
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt","5.8.1"]]
+size = 300
+url = "https://cinematique-instruments.com/pages_instr/inst_ukutrio2.php"
 demo = "https://www.cinematique-instruments.com/content_audio/uku3_mrfoster.mp3"
+price = 47.6
+description = """\
+The 'Ukulele Trio' consists of a soprano, a tenor and a baritone ukulele. Our primary focus was to create a ukulele instrument with a natural and organic feel which is easy and quick to use in music production. So, we skipped complex articulations, such as advanced solo playing abilities.
+
+All ukuleles come with three articulations: muted notes, open notes and dead notes. These articulations are perfectly suitable for a strumming engine performing patterns based on the pressed keys, which is the best fit for accompanying your song or music. Overall, the Ukulele Trio is an instrument set that lets you easily and quickly play to your music and enriches it with a nice organic feel.\
+"""
 
 [90s-retro-trumpets]
 vendor = "cinesamples"

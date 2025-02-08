@@ -115,7 +115,7 @@ export function Component() {
                 <li>
                     Size:{" "}
                     {product!.size !== undefined
-                        ? filesize(product!.size, {
+                        ? filesize(product!.size * 1024 * 1024, {
                               base: 2,
                               standard: "jedec",
                           }).toString()

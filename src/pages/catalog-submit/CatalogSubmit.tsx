@@ -28,7 +28,7 @@ const createFormData = (p?: Product) => ({
     categories: p?.categories ? [...p!.categories] : ([] as Category[]),
     url: p?.url || "",
     demo: p?.demo || "",
-    size: p?.size ? p.size / 1024 / 1024 : (undefined as number | undefined),
+    size: p?.size ? p.size : (undefined as number | undefined),
     price: p?.price?.toString() || "",
     nks: p?.nks || (false as boolean | string),
     description: p?.description || "",
@@ -190,9 +190,7 @@ export function Component() {
                         type="number"
                         value={
                             data.contains.length > 0 || data.size !== undefined
-                                ? getSize(data.size, data.contains) /
-                                  1024 /
-                                  1024
+                                ? getSize(data.size, data.contains)
                                 : ""
                         }
                         disabled={data.contains.length > 0}
@@ -497,7 +495,10 @@ export function Component() {
                             <Form.Check
                                 id={`form-os-${os}`}
                                 type="checkbox"
-                                disabled={data.contains.length > 0}
+                                disabled={
+                                    data.contains.length > 0 ||
+                                    data.requires.length > 0
+                                }
                                 label={getOperatingSystemString(
                                     parseInt(os) as OperatingSystem,
                                 )}
@@ -813,6 +814,9 @@ export function Component() {
                             lower: true,
                             strict: true,
                         })
+                        const categories = data.categories.filter(
+                            (c) => c.id !== "unclassified",
+                        )
 
                         evt.preventDefault()
 
@@ -837,12 +841,9 @@ export function Component() {
     name = "${data.name}"`
                         msg += "\n"
 
-                        if (
-                            data.contains.length === 0 &&
-                            data.categories.length > 0
-                        )
+                        if (data.contains.length === 0 && categories.length > 0)
                             msg += `categories = ${JSON.stringify(
-                                data.categories.map((c) => c.id),
+                                categories.map((c) => c.id),
                             )}\n`
                         if (
                             data.contains.length === 0 &&
@@ -876,7 +877,11 @@ ${data.accessibility_description}\\
 """`
                             msg += "\n"
                         }
-                        if (data.contains.length === 0 && data.os.length > 0)
+                        if (
+                            data.contains.length === 0 &&
+                            data.requires.length === 0 &&
+                            data.os.length > 0
+                        )
                             msg += `os = ${JSON.stringify(data.os.map((o) => getOperatingSystemString(o).toLowerCase()))}\n`
                         if (Object.keys(data.additional_links).length > 0) {
                             msg += `[${productId}.additional_links]\n`

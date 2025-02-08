@@ -47,16 +47,7 @@ export default class Product {
     private _os: OperatingSystem[] = [OperatingSystem.UNKNOWN]
 
     @Expose({ name: "size" })
-    @Transform(
-        ({ value }) => {
-            if (value !== undefined) return value * 1024 * 1024
-            return value
-        },
-        {
-            toClassOnly: true,
-        },
-    )
-    private _size: number
+    private _size?: number
 
     @Expose()
     url: string = ""
@@ -200,7 +191,7 @@ export const getSize = (
 ): number => {
     if (contains.length > 0)
         return contains.reduce(
-            (acc: number, product: Product) => acc + product.size,
+            (acc: number, product: Product) => acc + (product.size ?? 0),
             0,
         )
     else return size ?? 0

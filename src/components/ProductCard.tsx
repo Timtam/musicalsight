@@ -29,15 +29,19 @@ function ProductCard({
                     <Link to={"/catalog/product/" + product.id}>
                         {product.name}
                     </Link>{" "}
-                    (
-                    {product!.demo === "" ? (
-                        "no demo available"
+                    {product!.contains.length > 0 ? (
+                        `(bundle containing ${product!.contains.length} products)`
+                    ) : product!.demo === "" ? (
+                        "(no demo available)"
                     ) : (
-                        <Button onClick={() => playDemo(product!.demo)}>
-                            Play demo
-                        </Button>
+                        <>
+                            (
+                            <Button onClick={() => playDemo(product!.demo)}>
+                                Play demo
+                            </Button>
+                            )
+                        </>
                     )}
-                    )
                 </Card.Header>
                 <ListGroup>
                     <ListGroup.Item>
@@ -96,7 +100,7 @@ function ProductCard({
                     <ListGroup.Item disabled>
                         Size:{" "}
                         {product.size !== undefined
-                            ? filesize(product.size, {
+                            ? filesize(product.size * 1024 * 1024, {
                                   base: 2,
                                   standard: "jedec",
                               }).toString()
