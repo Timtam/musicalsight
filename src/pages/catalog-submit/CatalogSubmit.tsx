@@ -74,6 +74,7 @@ export function Component() {
     let [insertingContains, setInsertingContains] = useState(false)
     let headRef = useRef<HTMLElement>(null)
     let navigate = useNavigate()
+    let [product, setProduct] = useState<Product | undefined>(undefined)
 
     useEffect(() => {
         let productId = searchParams.get("p")
@@ -81,6 +82,7 @@ export function Component() {
         if (productId && productId !== "") {
             let product = catalog.getProductById(productId)
             if (product) {
+                setProduct(product)
                 setData(createFormData(product))
                 setUpdate(true)
             }
@@ -399,7 +401,12 @@ export function Component() {
                         </option>
                         {catalog
                             .getProducts(createProductFilter())
-                            .filter((p) => !data.contains.includes(p))
+                            .filter(
+                                (p) =>
+                                    !data.contains.includes(p) &&
+                                    (product === undefined ||
+                                        p.id !== product.id),
+                            )
                             .sort((a, b) =>
                                 sorter(
                                     `${a.name} ${a.vendor.name}`,
@@ -892,7 +899,7 @@ ${data.accessibility_description}\\
                             data.requires.length === 0 &&
                             data.os.length > 0
                         )
-                            msg += `os = ${JSON.stringify(data.os.map((o) => getOperatingSystemString(o).toLowerCase()))}\n`
+                            msg += `os = ${JSON.stringify(data.os.map((o) => OperatingSystem[o].toLowerCase()))}\n`
                         if (Object.keys(data.additional_links).length > 0) {
                             msg += `[${productId}.additional_links]\n`
 

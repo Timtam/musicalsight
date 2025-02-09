@@ -70,7 +70,7 @@ export default class Product {
     // this product is a bundle and contains other products
     contains: Product[]
 
-    get size(): number {
+    get size(): number | undefined {
         return getSize(this._size, this.contains)
     }
 
@@ -188,11 +188,12 @@ export const getOperatingSystems = (
 export const getSize = (
     size: number | undefined,
     contains: Product[],
-): number => {
-    if (contains.length > 0)
+): number | undefined => {
+    if (contains.length > 0) {
+        if (contains.some((c) => c.size === undefined)) return undefined
         return contains.reduce(
-            (acc: number, product: Product) => acc + (product.size ?? 0),
+            (acc: number, product: Product) => acc + (product.size as number),
             0,
         )
-    else return size ?? 0
+    } else return size
 }

@@ -1954,7 +1954,7 @@ KONTAKT is everything from instant inspiration for music makers to the industryâ
 accessibility_description = """\
 While Kontakt itself isn't accessible on its own, the community developed several scripts and tools to help access some of its functionalities, like loading instruments, change channel routings or batch resave instruments. The instrument's parameters are accessible within a DAW like [REAPER](/catalog/product/cockos-reaper), Ableton Live or Logic. You can find links to helper tools in the additional links section.\
 """
-os = ["windows","intel-based mac","arm-based mac"]
+os = ["windows","mac_intel","mac_arm"]
 
 [kontakt.additional_links]
 "ReaHotkey Download" = "https://github.com/MatejGolian/ReaHotkey/releases/latest"
@@ -1981,7 +1981,7 @@ Many of these instruments run in the KONTAKT PLAYER â€“ you don't need the full 
 accessibility_description = """\
 Kontakt Player accessibility got better from version 7 onward, especially with the help of OCR, however even better accessibility can be achieved with the ReaHotkey tool which is linked within the additional links section.\
 """
-os = ["windows","intel-based mac","arm-based mac"]
+os = ["windows","mac_intel","mac_arm"]
 
 [kontakt-player.additional_links]
 "ReaHotkey Download" = "https://github.com/MatejGolian/ReaHotkey/releases/latest"
@@ -4934,30 +4934,16 @@ Works with the FREE version of Kontakt 5.6.8+\
 [artist-series-randys-prepared-piano]
 vendor = "cinesamples"
 name = "Artist Series - Randys Prepared Piano"
-size = 12_400
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = true
+categories = ["vsti.keys"]
+requires = [["native-instruments-kontakt-player","5.6.8"]]
+size = 12400
+url = "https://store.cinesamples.com/products/randy-s-prepared-piano"
 demo = "https://www.youtube.com/watch?v=NZpvdDTncqY"
-description = """
-
-It is not a reproduction
-of Rhodes, and yet it is an electro-mechanical piano that CineSamples offers.
-The Keyboard in Blue
-includes the sound of an electro-mechanical piano built entirely from scratch.
-The sound will remind you of a Rhodes, but CineSamples adds that it has better
-sustain and improved sound quality. Also, instead of recording the direct
-output of the instrument, the signal was fed into a vintage tube guitar combo
-and the whole thing was recorded at Hollywood Scoring Studios.
-Keyboard in Blue offers
-five distinct mixes: two FET and ribbon mics in front of the amp, a mid-room
-pickup, the whole room, and a full mix.
-The graphical interface
-will allow you to adjust the dynamic range, the level of each mix, the volumes
-of the key noises, the pedal, the release of the notes and the beginning of the
-sample. You can also activate a staccato mode to take advantage of short notes
-and apply reverb, tremolo, phaser effects, band saturation and a four-band
-equalizer with gain compensation. Finally, a Pan page is used to adjust the
-range of low notes sent in the left channel and treble in the right channel."""
+price = 177.71
+nks = true
+description = """\
+Another great addition to Cinesamples' Artist Series, Randy's Prepared Piano is a collection of 3 pianos recorded at the legendary MGM Scoring Stage at Sony Pictures Studios and at Hollywood Scoring Studios Stage in Los Angeles. It features various extended techniques used by Los Angeles studio musician, Randy Kerber.\
+"""
 
 [artist-series-tina-guo]
 vendor = "cinesamples"
