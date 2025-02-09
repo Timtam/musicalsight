@@ -65,6 +65,7 @@ class CatalogService {
 
             p._requires = []
             p.contains = []
+            p.contained = []
 
             this.products.set(p.id, p)
         }
@@ -108,6 +109,7 @@ class CatalogService {
                         )
                         return null
                     }
+                    c.contained.push(p!)
                     return c
                 })
             }

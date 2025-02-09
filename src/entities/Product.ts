@@ -70,6 +70,9 @@ export default class Product {
     // this product is a bundle and contains other products
     contains: Product[]
 
+    // this product is part of a bundle
+    contained: Product[] = []
+
     get size(): number | undefined {
         return getSize(this._size, this.contains)
     }

@@ -7,11 +7,15 @@ import { Link, useParams } from "react-router-dom"
 import DemoPlayer from "../../components/DemoPlayer"
 import FA from "../../components/FocusAnchor"
 import Head from "../../components/Head"
+import Pagination from "../../components/Pagination"
+import ProductCard from "../../components/ProductCard"
 import { getOperatingSystemString } from "../../entities/OperatingSystem"
 import Product from "../../entities/Product"
 import CatalogService from "../../services/CatalogService"
 import Loading from "../loading/Loading"
 import NotFound from "../not-found/NotFound"
+
+const RESULTS_PER_PAGE: number = 20
 
 export function Component() {
     let sorter = useMemo(() => natsort(), [])
@@ -22,6 +26,8 @@ export function Component() {
     }>()
     let [product, setProduct] = useState(undefined as Product | undefined)
     let [loading, setLoading] = useState(true)
+    let [bundleStartIndex, setBundleStartIndex] = useState(0)
+    let [bundledStartIndex, setBundledStartIndex] = useState(0)
 
     useEffect(() => {
         if (productId !== undefined && productId !== "") {
@@ -163,6 +169,124 @@ export function Component() {
                 </>
             ) : (
                 <h4>No additional links available</h4>
+            )}
+            {product!.contains.length > 0 ? (
+                <>
+                    <h4>{`This bundle contains ${product!.contains.length} products`}</h4>
+                    <h4>
+                        Product {(bundleStartIndex + 1).toString()} to{" "}
+                        {Math.min(
+                            bundleStartIndex + RESULTS_PER_PAGE,
+                            product!.contains.length,
+                        ).toString()}{" "}
+                        out of {product!.contains.length.toString()}
+                    </h4>
+                    {product!.contains
+                        .sort((a, b) => sorter(a.name, b.name))
+                        .filter((p, idx) => {
+                            return (
+                                idx >= bundleStartIndex &&
+                                idx <
+                                    Math.min(
+                                        bundleStartIndex + RESULTS_PER_PAGE,
+                                        product!.contains.length + 1,
+                                    )
+                            )
+                        })
+                        .map((p) => {
+                            return (
+                                <ProductCard
+                                    id={p.id}
+                                    catalog={catalog}
+                                    playDemo={(url: string) => {
+                                        setDemoUrl(url)
+                                    }}
+                                />
+                            )
+                        })}
+                    {product!.contains.length > RESULTS_PER_PAGE ? (
+                        <Pagination
+                            pages={
+                                Math.floor(
+                                    product!.contains.length / RESULTS_PER_PAGE,
+                                ) +
+                                (product!.contains.length % RESULTS_PER_PAGE > 0
+                                    ? 1
+                                    : 0)
+                            }
+                            currentPage={
+                                bundleStartIndex / RESULTS_PER_PAGE + 1
+                            }
+                            setPage={(page: number) =>
+                                setBundleStartIndex(page * RESULTS_PER_PAGE)
+                            }
+                        />
+                    ) : (
+                        ""
+                    )}
+                </>
+            ) : (
+                ""
+            )}
+            {product!.contained.length > 0 ? (
+                <>
+                    <h4>{`This product is part of ${product!.contained.length} bundles`}</h4>
+                    <h4>
+                        Bundle {(bundledStartIndex + 1).toString()} to{" "}
+                        {Math.min(
+                            bundledStartIndex + RESULTS_PER_PAGE,
+                            product!.contained.length,
+                        ).toString()}{" "}
+                        out of {product!.contained.length.toString()}
+                    </h4>
+                    {product!.contained
+                        .sort((a, b) => sorter(a.name, b.name))
+                        .filter((p, idx) => {
+                            return (
+                                idx >= bundledStartIndex &&
+                                idx <
+                                    Math.min(
+                                        bundledStartIndex + RESULTS_PER_PAGE,
+                                        product!.contained.length + 1,
+                                    )
+                            )
+                        })
+                        .map((p) => {
+                            return (
+                                <ProductCard
+                                    id={p.id}
+                                    catalog={catalog}
+                                    playDemo={(url: string) => {
+                                        setDemoUrl(url)
+                                    }}
+                                />
+                            )
+                        })}
+                    {product!.contained.length > RESULTS_PER_PAGE ? (
+                        <Pagination
+                            pages={
+                                Math.floor(
+                                    product!.contained.length /
+                                        RESULTS_PER_PAGE,
+                                ) +
+                                (product!.contained.length % RESULTS_PER_PAGE >
+                                0
+                                    ? 1
+                                    : 0)
+                            }
+                            currentPage={
+                                bundledStartIndex / RESULTS_PER_PAGE + 1
+                            }
+                            setPage={(page: number) =>
+                                setBundledStartIndex(page * RESULTS_PER_PAGE)
+                            }
+                        />
+                    ) : (
+                        ""
+                    )}
+                </>
+            ) : (
+                ""
             )}
             <h3>Seeing something unexpected?</h3>
             <p>

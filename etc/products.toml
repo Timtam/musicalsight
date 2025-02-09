@@ -4948,39 +4948,16 @@ Another great addition to Cinesamples' Artist Series, Randy's Prepared Piano is 
 [artist-series-tina-guo]
 vendor = "cinesamples"
 name = "Artist Series - Tina Guo"
-size = 9_290
-requires = [ [ "native-instruments-kontakt", "5.4.2" ] ]
-nks = false
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt-player","6.7.1"]]
+size = 14300
+url = "https://store.cinesamples.com/products/tina-guo"
 demo = "https://www.youtube.com/watch?v=k6X8MzD7RS8"
-description = """
-
-The Tina Guo Library
-offers a unique and progressive interpretation of the acoustic and electric
-cello, as well as the traditional Chinese instrument, the erhu. Integrating
-Tina's ultra-expressive and experimental performance style into a library of
-samples is an endeavor that has been accomplished by blurring the lines between
-music and sound design, a vital part of her music. A vast arsenal of innovative
-sound design and composition tools introduces a host of new ways to explore and
-create fresh sounds that are sure to take your productions to the next level.
-New features
-Reflecting the fact that
-Tina's sound and approach to her instruments are constantly evolving, the
-library includes a host of inventive features that give the player the ability
-to similarly develop a fresh sound in many new and different ways. Among these
-may be mentioned
- The Phrase Builder: A
-system for building melodic ideas using fragments of Tina's performances in a
-variety of playing styles
- Drone Designer: Create
-variable sound beds by manipulating intensity and navigating through long
-samples of unfolding cello drones using the Mod wheel
- Built-in Granular Synth
-FX: Explore a harmonically rich and complex sound design spread across the
-stereo field with left-right graining functionality
- Repeat Note Round Robin
-Staccatos (RNRRS): A new feature that automatically switches to a separate RR
-sample set when repeating a short note, resulting in a much more natural cello
-sound"""
+price = 356.63
+nks = true
+description = """\
+An expansive arsenal of innovative sound design and composition tools brought to life through a collection of expressive electric and erhu performances. The Acoustic Cello Legato patches, recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, includes Cinesamples' CineStrings Solo Legato engine and Infinite Bow feature. For owners of Kontakt (Full and Player) 6.7.1 or higher.\
+"""
 
 [artist-series-tina-guo-vol-2]
 vendor = "cinesamples"

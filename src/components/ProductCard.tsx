@@ -25,7 +25,7 @@ function ProductCard({
     return (
         <>
             <Card>
-                <Card.Header as="h4">
+                <Card.Header as="h5">
                     <Link to={"/catalog/product/" + product.id}>
                         {product.name}
                     </Link>{" "}
