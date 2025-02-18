@@ -34,6 +34,16 @@ function Navigation() {
                                     </Nav.Link>
                                 </NavDropdown.Item>
                             </NavDropdown>
+                            <NavDropdown title="Ear Training">
+                                <NavDropdown.Item as="div">
+                                    <Nav.Link
+                                        as={Link}
+                                        to="/frequency-identifier"
+                                    >
+                                        Frequency Identifier (WIP)
+                                    </Nav.Link>
+                                </NavDropdown.Item>
+                            </NavDropdown>
                             <Nav.Item>
                                 <Nav.Link as={Link} to="/catalog" active>
                                     Accessible Audio Plugin And Software Catalog

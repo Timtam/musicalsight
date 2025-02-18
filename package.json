@@ -37,6 +37,7 @@
         "tone": "^15.0.4",
         "ts-dedent": "^2.2.0",
         "typescript": "^5.3.3",
+        "use-effect-event": "^1.0.2",
         "webmidi": "^3.1.12"
     },
     "scripts": {

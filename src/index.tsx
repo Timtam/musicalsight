@@ -8,6 +8,7 @@ import App from "./App"
 import "./index.css"
 import Chord from "./pages/chord/Chord"
 import Chords from "./pages/chords/Chords"
+import FrequencyIdentifier from "./pages/frequency-identifier/FrequencyIdentifier"
 import Home from "./pages/home/Home"
 import Imprint from "./pages/imprint/Imprint"
 import NotFound from "./pages/not-found/NotFound"
@@ -49,6 +50,10 @@ const router = createHashRouter([
             {
                 element: <Home />,
                 path: "/",
+            },
+            {
+                element: <FrequencyIdentifier />,
+                path: "/frequency-identifier",
             },
             {
                 element: <Imprint />,
