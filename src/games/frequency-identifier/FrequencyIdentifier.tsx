@@ -1,3 +1,4 @@
+import { useLocalStorage } from "@uidotdev/usehooks"
 import Linkify from "linkify-react"
 import { useEffect, useMemo, useRef, useState } from "react"
 import Button from "react-bootstrap/Button"
@@ -26,10 +27,12 @@ export default function FrequencyIdentifier({
     const audioElement = useRef<HTMLAudioElement>(null)
     const audioNode = useRef<MediaElementAudioSourceNode | null>(null)
     const eqNode = useRef<BiquadFilterNode | null>(null)
+    const gainNode = useRef<GainNode | null>(null)
     const [frequency, setFrequency] = useState<number>(0)
     const [gain, setGain] = useState(0)
     const [countIn, setCountIn] = useState(0)
     const anchor = useRef<HTMLElement>(null)
+    const [gameVolume] = useLocalStorage("gameVolume", "1.0")
 
     const start = useEffectEvent((frequencies: number[]) => {
         let countIn = 5
@@ -68,24 +71,33 @@ export default function FrequencyIdentifier({
             audioNode.current = audioCtx.createMediaElementSource(
                 audioElement.current!,
             )
+            gainNode.current = audioCtx.createGain()
+            gainNode.current!.gain.value = parseFloat(gameVolume)
             eqNode.current = audioCtx.createBiquadFilter()
 
             eqNode.current!.type = "peaking"
             eqNode.current!.gain.value = gain
 
             audioNode
-                .current!.connect(eqNode.current!)
+                .current!.connect(gainNode.current!)
+                .connect(eqNode.current!)
                 .connect(audioCtx.destination)
 
             if (audioCtx.state === "suspended") audioCtx.resume()
 
             start(LEVELS.get(level)!)
         }
-    }, [audioCtx, audioNode, eqNode, level, start])
+    }, [audioCtx, audioNode, eqNode, gainNode, level, start])
 
     useEffect(() => {
         if (eqNode.current) eqNode.current.gain.value = gain
     }, [eqNode, gain])
+
+    useEffect(() => {
+        if (gainNode.current) {
+            gainNode.current.gain.value = parseFloat(gameVolume)
+        }
+    }, [gameVolume])
 
     return (
         <>
