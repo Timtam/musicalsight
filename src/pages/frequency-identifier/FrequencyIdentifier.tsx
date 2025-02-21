@@ -1,9 +1,12 @@
+import { useState } from "react"
 import FA from "../../components/FocusAnchor"
 import Game from "../../components/Game"
 import Head from "../../components/Head"
 import FrequencyIdentifierGame from "../../games/frequency-identifier/FrequencyIdentifier"
 
 export default function FrequencyIdentifier() {
+    const [level, setLevel] = useState(1)
+
     return (
         <>
             <Head title="Frequency Identifier - Ear Training" />
@@ -16,8 +19,35 @@ export default function FrequencyIdentifier() {
                 correctly, you'll get a different song with a different
                 frequency and so on, until you end the game.
             </p>
+            <fieldset>
+                <legend>Level of prophiciency</legend>
+                <div className="form-check">
+                    {(
+                        [
+                            ["Beginner", 1],
+                            ["Intermediate", 2],
+                        ] as [string, number][]
+                    ).map(([name, value]: [string, number]) => (
+                        <>
+                            <input
+                                type="radio"
+                                className="form-check-input"
+                                id={`level-${name.toLowerCase()}`}
+                                checked={level === value}
+                                onClick={() => setLevel(value)}
+                            />
+                            <label
+                                htmlFor={`level-${name.toLowerCase()}`}
+                                className="form-check-label"
+                            >
+                                {name}
+                            </label>
+                        </>
+                    ))}
+                </div>
+            </fieldset>
             <Game>
-                <FrequencyIdentifierGame level={1} />
+                <FrequencyIdentifierGame level={level} />
             </Game>
         </>
     )

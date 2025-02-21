@@ -1,3 +1,4 @@
+import Linkify from "linkify-react"
 import { useEffect, useMemo, useRef, useState } from "react"
 import Button from "react-bootstrap/Button"
 import { useEffectEvent } from "use-effect-event"
@@ -120,6 +121,14 @@ export default function FrequencyIdentifier({
                     </li>
                 ))}
             </ul>
+            <div>
+                <>
+                    <p>You are listening to: {asset?.title}</p>
+                    <p>
+                        <Linkify>{asset?.credits}</Linkify>
+                    </p>
+                </>
+            </div>
             <Button
                 aria-pressed={gain === 0}
                 disabled={countIn > 0}
