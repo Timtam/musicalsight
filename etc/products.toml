@@ -4962,90 +4962,16 @@ An expansive arsenal of innovative sound design and composition tools brought to
 [artist-series-tina-guo-vol-2]
 vendor = "cinesamples"
 name = "Artist Series - Tina Guo Vol 2"
-size = 9_290
-requires = [ [ "native-instruments-kontakt", "5.4.2" ] ]
-nks = false
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt-player","5.6.8"]]
+size = 9290
+url = "https://store.cinesamples.com/products/tina-guo-vol-2"
 demo = "https://www.youtube.com/watch?v=BKNL8xk0po8"
-description = """
-
-More Tina Guo at
-CineSamples
-CineSamples completes the
-collection of cello samples played by Tina Guo with a second volume offering
-new articulations.
-Tina Guo Volume 2
-completes the Tina Guo Acoustic Cello Legato bank by providing additional
-articulations, including spiccato, marcato, sul ponticello, vibrato pizzicato
-and harmonics. This new edition should also facilitate your melodic passages by
-offering more agility, faster playing with less vibrato.
-To produce this new
-volume, Tina Guo used the same cello and the teams worked at the MGM Scoring
-Stage in Los Angeles using the same microphones and the same mixing as for the
-original collection.
-The graphic interface in
-Kontakt and the Kontakt Player allows you to adjust the legato speed, the
-volume of the release, the reverb, to vary the movements of the bow and even to
-bring a little surprise in the reading thanks to a function of randomization.
-The modulation wheel will finally be used to control the overall dynamics and
-know that the instrument is NKS compatible.
-Tina Guo vol. 2 is a
-valuable expansion of the original Tina Guo Acoustic Cello Legato library that
-uses the same unique seamless recording and programming techniques. The legato
-of flight. 2 allows for more nimble melodic passages and additional articulations
-such as spiccato, marcato, harmonics, sul ponticello, and pizzicato vibrato.
-Combining volume 2 with the original library results in a complete combination
-of Tina's solo acoustic cello.
-A completely new product
-How is Tina Guo vol 2
-different from Tina Guo Acoustic Cello Legato?
-The main difference is the
-playing style. Tina Guo Acoustic Cello Legato is characterized by a romantic
-and expressive playing style that lends itself well to longer melodic lines.
-Tina Guo vol 2 allows for an agile and more connected style of play. Also,
-faster playing naturally allows less time for vibrato on passing notes. Volume
-2 also features other articulations that are not available in the original
-library (see below).
-Otherwise, Tina played the
-same instrument at the MGM Scoring Stage in Los Angeles, recorded with the same
-microphones as the original library. Tim Starnes recreated the same mix as the
-original library as well as the desktop mix from the Scoring Stage.
-Articulations
- Attack overlay
-Selecting this option adds
-a staccato attack overlay to the beginnings of the sustains. Its volume depends
-on the speed. They appear at higher speeds. Support attack is also speed
-sensitive.
- Legato
-Selecting this option
-enables monophonic harmonization with recorded legato transitions. Unselected
-allows polyphonic sustain samples only. Legato transitions are velocity
-sensitive.
- ∞ Bow
-Unselected, this includes
-Tina's natural bow changes on sustained notes. Selected, it allows you to
-lengthen the arc length as needed. Just re-attack a note when you need a change
-of bow on the same note.
- Volume of releases
-This controls the volume
-of released notes. If set too high, it will sound like it has too much reverb
-and decay. Too low a setting will make legato transitions sound unnatural.
- Legato Speed ​​(CC02)
-Higher settings allow for
-faster reading. Lower settings allow for slower playback and will reveal more
-of the recorded legato transition.
- Mod Wheel
-The modulation wheel
-controls the overall dynamics.
-Other articulations
-include:
- Open Strings - attaches
-to the 4 open strings of the cello
- Sul Ponticello
- Harmonics
- Spiccato
- Marcato - an elongated
-espressivo-style short
- Pizzicato Vibrato"""
+price = 174.83
+nks = true
+description = """\
+Tina Guo vol. 2 is a valuable expansion of the original Tina Guo Acoustic Cello Legato library utilizing the same unique seamless legato recording and programming techniques. The legato in vol. 2 allows for more agile melodic passages and additional articulations including spiccato, marcato, harmonics, sul ponticello, and vibrato pizzicato. Combining vol. 2 with the original library provides a complete combination of Tina's solo acoustic cello. Tina Guo vol 2 is recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles.\
+"""
 
 [cinebrass-descant-horn]
 vendor = "cinesamples"
@@ -19197,10 +19123,25 @@ requires = [ [ "native-instruments-kontakt-player", "7" ] ]
 [blueprint-collection]
 vendor = "fracture-sounds"
 name = "Blueprint Collection"
-contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano"]
+contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble"]
 url = "https://fracturesounds.com/product/blueprint-collection/"
 price = 0
 nks = true
 description = """\
 Our Blueprint series is a collection of free libraries that can all be accessed in the free Kontakt Player, downloadable via Native Instruments.\
+"""
+
+[blueprint-woodwind-ensemble]
+vendor = "fracture-sounds"
+name = "Blueprint: Woodwind ensemble"
+categories = ["vsti.woodwinds"]
+requires = [["native-instruments-kontakt-player","8"]]
+size = 3100
+url = "https://fracturesounds.com/product/blueprint-woodwind-ensemble/"
+demo = "https://www.youtube.com/watch?v=-_2UOZWnQ0Q"
+price = 0
+nks = true
+description = """\
+Woodwind Ensemble features piccolo, flute, oboe, cor anglais, clarinet, and bassoon performances, all blended together across the sweet spots in their ranges. Like our other orchestral libraries in the Blueprint range, it was captured in the spacious Nave Studios hall, offering a versatile selection of microphone positions- close, mid and far.
+The library features two articulations: a crisp, characterful staccato and an expressive sustain, dynamically controlled via the mod wheel. These are also combined into a new Performance Short-Sustain articulation, enabling highly intuitive playing by responding to velocity, eliminating the need for traditional keyswitches (though they remain available for those who prefer them).\
 """
