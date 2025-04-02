@@ -2,6 +2,7 @@ import natsort from "natsort"
 import { useEffect, useMemo, useRef, useState } from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
+import ReCAPTCHA from "react-google-recaptcha"
 import { useNavigate, useSearchParams } from "react-router-dom"
 import slugify from "slugify"
 import dedent from "ts-dedent"
@@ -75,6 +76,8 @@ export function Component() {
     let headRef = useRef<HTMLElement>(null)
     let navigate = useNavigate()
     let [product, setProduct] = useState<Product | undefined>(undefined)
+    let [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
+    let recaptchaRef = useRef<ReCAPTCHA | null>(null)
 
     useEffect(() => {
         let productId = searchParams.get("p")
@@ -141,7 +144,8 @@ export function Component() {
                     })
                 }}
                 onClosed={() => {
-                    if (headRef.current) headRef.current.focus()
+                    headRef.current?.focus()
+                    recaptchaRef.current?.reset()
                 }}
             />
             <h4>Product information</h4>
@@ -803,8 +807,14 @@ export function Component() {
                         }
                     />
                 </Form.Group>
+                <ReCAPTCHA
+                    sitekey="6LeRxgYrAAAAAGGbGi77YbNfc4wVUvS9mJGjWzYC"
+                    onChange={setRecaptchaToken}
+                    ref={recaptchaRef}
+                />
                 <Button
                     disabled={
+                        recaptchaToken === null ||
                         data.name === "" ||
                         data.vendor === "" ||
                         (data.vendor === "new" &&
@@ -913,18 +923,19 @@ ${data.accessibility_description}\\
                         try {
                             let body: {
                                 message: string
-                                accessKey: string
+                                apiKey: string
                                 email?: string
                                 replyTo?: string
                                 name?: string
                                 subject: string
+                                recaptchaToken: string
                             } = {
-                                message: msg.replaceAll("\n", "<br />"),
+                                message: msg,
                                 subject: update
                                     ? `APIAC Product update for product ${data.name}`
                                     : `APIAC Product submission for product ${data.name}`,
-                                accessKey:
-                                    "56f0885e-efe6-4378-9bf4-673bc7b3b00d",
+                                apiKey: "56f0885e-efe6-4378-9bf4-673bc7b3b00d",
+                                recaptchaToken: recaptchaToken!,
                             }
 
                             if (data.userName !== "")
@@ -948,7 +959,7 @@ ${data.accessibility_description}\\
 
                             let json = await res.json()
 
-                            if (json.success) {
+                            if (res.status == 200) {
                                 setResponse({
                                     type: "success",
                                     message: "",

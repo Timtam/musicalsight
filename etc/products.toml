@@ -4976,10 +4976,14 @@ Tina Guo vol. 2 is a valuable expansion of the original Tina Guo Acoustic Cello 
 [cinebrass-descant-horn]
 vendor = "cinesamples"
 name = "CineBrass Descant Horn"
-size = 4_580
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
+categories = ["vsti.brass"]
+requires = [["native-instruments-kontakt-player","5.5.0"]]
+size = 4580
+url = "https://store.cinesamples.com/products/cinebrass-descant-horn"
 demo = "https://www.youtube.com/watch?v=04H6ea8cKwI"
+price = 118.72
+nks = true
+description = """A perfect partner to CineBrass Core and Pro, CineBrass Descant Horn expands the range of the Horn section. Pro horn players often pull out this instrument for delicate higher passages and it's great for soaring solos. Like CineBrass Core and Pro, CineBrass Descant Horn was recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles."""
 
 [cinebrass-horns-of-the-deep]
 vendor = "cinesamples"
@@ -19123,7 +19127,7 @@ requires = [ [ "native-instruments-kontakt-player", "7" ] ]
 [blueprint-collection]
 vendor = "fracture-sounds"
 name = "Blueprint Collection"
-contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble"]
+contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos"]
 url = "https://fracturesounds.com/product/blueprint-collection/"
 price = 0
 nks = true
@@ -19145,3 +19149,17 @@ description = """\
 Woodwind Ensemble features piccolo, flute, oboe, cor anglais, clarinet, and bassoon performances, all blended together across the sweet spots in their ranges. Like our other orchestral libraries in the Blueprint range, it was captured in the spacious Nave Studios hall, offering a versatile selection of microphone positions- close, mid and far.
 The library features two articulations: a crisp, characterful staccato and an expressive sustain, dynamically controlled via the mod wheel. These are also combined into a new Performance Short-Sustain articulation, enabling highly intuitive playing by responding to velocity, eliminating the need for traditional keyswitches (though they remain available for those who prefer them).\
 """
+
+[blueprint-textural-pianos]
+vendor = "fracture-sounds"
+name = "Blueprint: Textural Pianos"
+categories = ["vsti.keys"]
+requires = [["native-instruments-kontakt-player","8"]]
+size = 2350
+url = "https://fracturesounds.com/product/blueprint-textural-pianos/"
+demo = "https://www.youtube.com/watch?v=zmVDwP00nVo"
+price = 0
+nks = true
+description = """Blueprint: Textural Pianos is a rich collection of acoustic and electric textural piano performances, curated by Fracture Sounds founder Will Bedford.
+This release features 20 articulations, spanning a variety of acoustic and electric piano performances. With over 1,000 possible sound combinations, further sculpted by envelope controls, filters, and onboard effects, the creative possibilities are endless.
+Instantly spark inspiration with the shuffle button, or explore one of the eight carefully crafted presets designed by the Fracture Sounds team—just a glimpse into the depth of this expressive library."""
