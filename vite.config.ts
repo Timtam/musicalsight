@@ -22,6 +22,6 @@ export default defineConfig({
     ],
     base: "/musicalsight/",
     server: {
-        port: 3001,
+        port: 3100,
     },
 })

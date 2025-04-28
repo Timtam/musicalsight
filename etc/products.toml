@@ -4988,10 +4988,14 @@ description = """A perfect partner to CineBrass Core and Pro, CineBrass Descant 
 [cinebrass-horns-of-the-deep]
 vendor = "cinesamples"
 name = "CineBrass Horns of the Deep"
-size = 1_700
-requires = [ [ "native-instruments-kontakt" ] ]
+categories = ["vsti.brass"]
+requires = [["native-instruments-kontakt-player","5.8.1"]]
+size = 1700
+url = "https://store.cinesamples.com/products/horns-of-the-deep"
+demo = " https://www.youtube.com/watch?v=Y4us6L24CO8"
+price = 104.30
 nks = true
-demo = "https://www.youtube.com/watch?v=Y4us6L24CO8"
+description = """CineBrass Horns of the Deep is an extension of our CineBrass family also recorded at MGM Studios. Consisting of 3 Tubas and 3 Euphonium in unison, it is a warm, mellow low brass library. It can be a smooth, sonorous alternative timbre to French Horns, and it can provide character and depth in unison with the Trombone section."""
 
 [cinebrass-pro]
 vendor = "cinesamples"
@@ -19127,7 +19131,7 @@ requires = [ [ "native-instruments-kontakt-player", "7" ] ]
 [blueprint-collection]
 vendor = "fracture-sounds"
 name = "Blueprint Collection"
-contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos"]
+contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos","fracture-sounds-blueprint-textural-cello"]
 url = "https://fracturesounds.com/product/blueprint-collection/"
 price = 0
 nks = true
@@ -19163,3 +19167,15 @@ nks = true
 description = """Blueprint: Textural Pianos is a rich collection of acoustic and electric textural piano performances, curated by Fracture Sounds founder Will Bedford.
 This release features 20 articulations, spanning a variety of acoustic and electric piano performances. With over 1,000 possible sound combinations, further sculpted by envelope controls, filters, and onboard effects, the creative possibilities are endless.
 Instantly spark inspiration with the shuffle button, or explore one of the eight carefully crafted presets designed by the Fracture Sounds team—just a glimpse into the depth of this expressive library."""
+
+[blueprint-textural-cello]
+vendor = "fracture-sounds"
+name = "Blueprint: Textural Cello"
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt-player","8"]]
+size = 375
+url = "https://fracturesounds.com/product/blueprint-textural-cello/"
+demo = " https://www.youtube.com/watch?v=zmVDwP00nVo"
+price = 0
+nks = true
+description = """Textural Cello is the counterpart to Textural Violin, featuring texturally rich articulations originally conceived by composer and Trails collaborator Alexander Parsons. It includes two expressive long articulations, a short Col Legno, and eery bend effects—all enhanced by our signature Atmosphere Layer, which transforms the raw cello recordings into an evocative soundscape."""
