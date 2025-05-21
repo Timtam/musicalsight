@@ -7,7 +7,7 @@ interface HeadProps {
 function Head({ title }: HeadProps) {
     return (
         <Helmet>
-            <title>{title} - Musical Sight</title>
+            <title>{title} - Ear Dojo</title>
         </Helmet>
     )
 }
