@@ -20,7 +20,7 @@ export default defineConfig({
             typescript: true,
         }),
     ],
-    base: "/musicalsight/",
+    base: "/",
     server: {
         port: 3100,
     },

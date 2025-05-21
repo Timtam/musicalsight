@@ -5,7 +5,7 @@ import Navigation from "./components/Navigation"
 function App() {
     return (
         <>
-            <h1>Musical Sight</h1>
+            <h1>Ear Dojo</h1>
             <Navigation />
             <Outlet />
             <Footer />
