@@ -5000,79 +5000,14 @@ description = """CineBrass Horns of the Deep is an extension of our CineBrass fa
 [cinebrass-pro]
 vendor = "cinesamples"
 name = "CineBrass PRO"
-size = 20_000
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = true
+categories = ["vsti.brass"]
+requires = [["native-instruments-kontakt-player","5.8.1"]]
+size = 20000
+url = "https://store.cinesamples.com/products/cinebrass-pro"
 demo = "https://www.youtube.com/watch?v=PQ6fj2ENDrU"
-description = """
-
-CineBrass PRO is the extension of the popular
-CineBrass Core library.
-CineBrass PRO is a completely separate and unique
-library comprised of brand new brass orchestra content, using LA's top solo
-musicians at the SONY Scoring Stage, mixed by Dennis Sands
-Instrument details
-CINESAMPLES ADAPTIVE LEGATO ENGINE
-CineBrass PRO v1.5 has been rebuilt from the ground up
-to include the Legacy CineSamples adaptive engine featured in CineStrings SOLO,
-CineStrings CORE, and CineWinds CORE and PRO.
-It allows you to tailor the legato response to your
-own playing style, and is designed to respond musically to your performance.
-The engine detects your game speed and intelligently
-adjusts the interval speed to match it.
-This means you can play slow, expressive lines and
-fast passages in a single performance, without touching the speed dial.
-Additionally, the Intensity parameter responds to velocity.
-PATCH CHANGE
-The Horns Ensemble Stopped and Fluttered has been
-split into two different patches: Horn Ensemble Stopped and Horn Ensemble Fluttered
-List of fixes
-Once again we have assembled the most talented crew
-and musicians in Los Angeles to bring you something truly remarkable.
-At the heart of this expansion is the finest
-collection of brass soloists ever sampled. Today's premier chairs in Hollywood
-are recorded in Sony's unrivaled MGM Scoring Stage space by famed engineer
-Dennis Sands.
-This quartet of soloists (trumpet, F horn, trombone
-and tuba) received a full treatment including real legato, shorts and multiple
-dynamic layers.
-You will be immediately surprised by the power,
-expressiveness and clarity produced by these virtuosos. Under the direction of
-renowned composer/violinist Michael Levine was born a set of cinematic effects
-perfectly designed for convenient realization in your sequencer.
-Presets and articulations
- 01 Trumpet Solo Articulations
- 02 Solo Trumpet True Legato PRO
- 03 Trumpets Ensemble Sustains and Tenuto
- 04 Trumpets Ensemble Deaf Articulations
- 05 Trumpets Ensemble Harmon Mute Articulations
- 06 Coro Solo Articulations
- 07 Horn Solo True Legato PRO
- 08 Horn Ensemble fff Sustains and Shorts
- 09 Horn Ensemble stopped
- 10 Horn Ensemble Fluttered
- 11 horn ensemble triad chords
- 12 Horn Ensemble Seventh Chords
- 13 Horns Set Rips
- 14 Twelve French Horn Ensemble Articulations
- 15 Twelve Horn Ensemble True Legato
- 16 Twelve Horn Ensemble Mutes
- 17 Split Patches - Solo Trombone Articulations
- 18 True Legato PRO Solo Trombone
- 19 Trombones Set Muted Articulations
- 20 Harmon Mute Articulations Ensemble Trombones
- 21 Paper Clips Flutter Set
- 22 Tuba Solo Articulations
- 23 Tuba Solo True Legato PRO
- 24 Full Set FX Part 1
- 25 Full Set FX Part 2
- 26 Full Set FX Part 3
- 27 full chords of high chords
- 28 full ensemble bass chords
- 29 Monster Low Brass Joints
- 30 Monster Low brass spoons
- 31 Monster Low Brass clusters
- 32 Monster Low Brass FX"""
+price = 303.43
+nks = true
+description = """CineBrass PRO is the expansion to the popular CineBrass Core library. CineBrass PRO is a completely separate and unique library comprised of entirely new orchestral brass sample content, using the first-call Los Angeles musicians at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, mixed by Dennis Sands. Our CineBrass CORE library, released in June 2011, covers the essentials of the orchestral brass section, and functions as a solid foundation in our composing templates. But what about all the other things brass can do? We asked you, the film music community, what you wanted to see in an expansion. The result is CineBrass PRO."""
 
 [cinebrass-sonore]
 vendor = "cinesamples"
@@ -19131,7 +19066,7 @@ requires = [ [ "native-instruments-kontakt-player", "7" ] ]
 [blueprint-collection]
 vendor = "fracture-sounds"
 name = "Blueprint Collection"
-contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos","fracture-sounds-blueprint-textural-cello"]
+contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos","fracture-sounds-blueprint-textural-cello","fracture-sounds-blueprint-electric-strings"]
 url = "https://fracturesounds.com/product/blueprint-collection/"
 price = 0
 nks = true
@@ -19179,3 +19114,15 @@ demo = " https://www.youtube.com/watch?v=zmVDwP00nVo"
 price = 0
 nks = true
 description = """Textural Cello is the counterpart to Textural Violin, featuring texturally rich articulations originally conceived by composer and Trails collaborator Alexander Parsons. It includes two expressive long articulations, a short Col Legno, and eery bend effects—all enhanced by our signature Atmosphere Layer, which transforms the raw cello recordings into an evocative soundscape."""
+
+[blueprint-electric-strings]
+vendor = "fracture-sounds"
+name = "Blueprint: Electric Strings"
+categories = ["vsti.strings","vsti.synthesizer"]
+requires = [["native-instruments-kontakt-player","8"]]
+size = 706
+url = "https://fracturesounds.com/product/blueprint-electric-strings/"
+demo = "https://www.youtube.com/watch?v=j0CgSpZoN8U"
+price = 0
+nks = true
+description = """Electric Strings harnesses our powerful Layer Blends engine to fuse the iconic warmth of a vintage Solina electric string synthesiser with our signature 9 Atmosphere Layers, all crafted from the original samples. The result is a versatile instrument capable of delivering both retro charm and modern cinematic textures. Explore 17 unique sounds, offering over 600 possible unique combinations—each one a fresh creative starting point, or simply select one of the 10 curated snapshots, curated by the Fracture Sounds team to instantly inspire."""

@@ -5,16 +5,14 @@ function PrivacyPolicy() {
     return (
         <>
             <Head title="Privacy Policy" />
-            <FA title="Privacy Policy for Musical Sight" />
+            <FA title="Privacy Policy for Ear Dojo" />
 
             <p>
-                At Musical Sight, accessible from{" "}
-                <a href="https://timtam.github.io/musicalsight">
-                    https://timtam.github.io/musicalsight
-                </a>
-                , one of our main priorities is the privacy of our visitors.
-                This Privacy Policy document contains types of information that
-                is collected and recorded by Musical Sight and how we use it.
+                At Ear Dojo, accessible from{" "}
+                <a href="https://eardojo.com">https://eardojo.com</a>, one of
+                our main priorities is the privacy of our visitors. This Privacy
+                Policy document contains types of information that is collected
+                and recorded by Ear Dojo and how we use it.
             </p>
 
             <p>
@@ -90,8 +88,8 @@ function PrivacyPolicy() {
             <h4>Log Files</h4>
 
             <p>
-                Musical Sight follows a standard procedure of using log files.
-                These files log visitors when they visit websites. All hosting
+                Ear Dojo follows a standard procedure of using log files. These
+                files log visitors when they visit websites. All hosting
                 companies do this and a part of hosting services' analytics. The
                 information collected by log files include internet protocol
                 (IP) addresses, browser type, Internet Service Provider (ISP),
@@ -106,7 +104,7 @@ function PrivacyPolicy() {
 
             <p>
                 You may consult this list to find the Privacy Policy for each of
-                the advertising partners of Musical Sight.
+                the advertising partners of Ear Dojo.
             </p>
 
             <p>
@@ -121,18 +119,18 @@ function PrivacyPolicy() {
             </p>
 
             <p>
-                Note that Musical Sight has no access to or control over these
+                Note that Ear Dojo has no access to or control over these
                 cookies that are used by third-party advertisers.
             </p>
 
             <h4>Third Party Privacy Policies</h4>
 
             <p>
-                Musical Sight's Privacy Policy does not apply to other
-                advertisers or websites. Thus, we are advising you to consult
-                the respective Privacy Policies of these third-party ad servers
-                for more detailed information. It may include their practices
-                and instructions about how to opt-out of certain options.
+                Ear Dojo's Privacy Policy does not apply to other advertisers or
+                websites. Thus, we are advising you to consult the respective
+                Privacy Policies of these third-party ad servers for more
+                detailed information. It may include their practices and
+                instructions about how to opt-out of certain options.
             </p>
 
             <p>
@@ -226,12 +224,12 @@ function PrivacyPolicy() {
             </p>
 
             <p>
-                Musical Sight does not knowingly collect any Personal
-                Identifiable Information from children under the age of 13. If
-                you think that your child provided this kind of information on
-                our website, we strongly encourage you to contact us immediately
-                and we will do our best efforts to promptly remove such
-                information from our records.
+                Ear Dojo does not knowingly collect any Personal Identifiable
+                Information from children under the age of 13. If you think that
+                your child provided this kind of information on our website, we
+                strongly encourage you to contact us immediately and we will do
+                our best efforts to promptly remove such information from our
+                records.
             </p>
         </>
     )
