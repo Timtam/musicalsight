@@ -5012,28 +5012,14 @@ description = """CineBrass PRO is the expansion to the popular CineBrass Core li
 [cinebrass-sonore]
 vendor = "cinesamples"
 name = "CineBrass Sonore"
+url = "https://store.cinesamples.com/products/cinebrass-sonore"
+price = 113.50
 size = 7_120
-requires = [ [ "native-instruments-kontakt", "5.5.1" ] ]
+requires = [ [ "native-instruments-kontakt-player", "5.7.2" ] ]
 nks = true
+categories = [ "vsti.brass" ]
 demo = "https://www.youtube.com/watch?v=ZaZWPQr3rK4"
-description = """
-
-CineSamples Cinebrass goes Sound
-Not that the previous ones weren't heard, but this new
-edition of the brass ensembles offers a different sound.
-CineSamples has therefore just started the sale of CineBrass
-Sonore, a new variant of its bank of orchestral brass instruments played
-"sonoro", that is to say with a lot of resonance and body. The
-designer thus wanted to obtain a dense, harmonious and warm sound.
-CineSamples adds that it re-recorded the trumpet and
-horn sections, maximizing the sound in order to achieve a more open and wide
-result. The legato has also been improved for all instruments, the number of
-which has also been increased compared to the Core edition.
-The brass ensembles were recorded at the MGM Scoring
-Stage at Sony Pictures studios in Los Angeles and will be used in the full
-version of Kontakt 5.
-The bank offers four microphone positions that you can
-mix (to surround), a reverb with presets and a tape saturation effect."""
+description = """Sonore (adj.): resonant; with rich tone. When you see “sonore” written in a musical score, the composer is simply asking the musicians to play with the maximum resonance, body, and tone of which they are capable. It is the opposite concept of brashness and blasting - “sonore” is a thick and warm sound. We set out to recapture trumpet and horn sections in which we maximized tone and body rather than concentrating solely on loud dynamics. You’ll notice a wider, more open sound that takes up more room in the mix at a mezzo forte dynamic. We selected articulations specifically for the creation of melodies. Our greatest influence and inspiration were the organic processes employed by the great film composers of orchestral music. Recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles, these ensembles also come with vastly improved legato."""
 
 [cinebrass-twelve-horn-ensemble]
 vendor = "cinesamples"
@@ -13689,20 +13675,26 @@ demo = "https://soundcloud.com/projectsam/sets/symphobia-colours-orchestrator/s-
 [the-free-orchestra]
 vendor = "projectsam"
 name = "The Free Orchestra"
-size = 554
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
+url = "https://projectsam.com/libraries/the-free-orchestra"
+size = 920
+requires = [ [ "native-instruments-kontakt-player", "6.6" ] ]
 nks = true
-demo = "https://www.youtube.com/watch?v=2qoyucwQrDY"
+demo = "https://www.youtube.com/watch?v=-wNmJhmg10E"
 price = 0
-description = """
+categories = [ "vsti.brass", "vsti.percussion", "vsti.strings", "vsti.woodwinds" ]
+description = """The Free Orchestra draws from our renowned orchestral catalog, offering you an inspiring gateway into the cinematic world of ProjectSAM."""
 
-A solid gigabyte of free
-cinematic sounds pulled straight from ProjectSAM's acclaimed libraries.
-From orchestral string
-staccatos and brass clusters to symphonic percussion and dystopian sound
-design.
-Now with new presets and
-Kontakt Player compatibility!"""
+[the-free-orchestra-2]
+vendor = "projectsam"
+name = "The Free Orchestra 2"
+url = "https://projectsam.com/libraries/the-free-orchestra-2"
+size = 4300
+requires = [ [ "native-instruments-kontakt-player", "6.6" ] ]
+nks = true
+demo = "https://www.youtube.com/watch?v=cZnChrqMyEc"
+price = 0
+categories = [ "vsti.brass", "vsti.percussion", "vsti.strings", "vsti.woodwinds" ]
+description = """The Free Orchestra 2 builds on the legacy of its predecessor, offering you an even larger collection of cinematic sounds from our renowned orchestral catalog."""
 
 [true-strike]
 vendor = "projectsam"
