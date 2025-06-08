@@ -4924,7 +4924,7 @@ requires = [["native-instruments-kontakt-player","5.6.8"]]
 size = 8000
 url = "https://store.cinesamples.com/products/taylor-davis"
 demo = "https://www.youtube.com/watch?v=290xB3YIpoE"
-price = 177.1
+price = 149
 nks = true
 description = """\
 Artist Series - Taylor Davis is a solo violin library and a part of Cinesamples' Artist Series. Her Violin Legato library incorporates the same unique seamless legato recording and programming techniques as the Tina Guo Acoustic Cello Legato, Tina Guo vol 2, and CineStrings SOLO libraries. The legato allows for agile melodic passages and there are additional articulations including spiccato, marcato, tenuto, pizzicato, and open strings.
@@ -4939,7 +4939,7 @@ requires = [["native-instruments-kontakt-player","5.6.8"]]
 size = 12400
 url = "https://store.cinesamples.com/products/randy-s-prepared-piano"
 demo = "https://www.youtube.com/watch?v=NZpvdDTncqY"
-price = 177.71
+price = 149
 nks = true
 description = """\
 Another great addition to Cinesamples' Artist Series, Randy's Prepared Piano is a collection of 3 pianos recorded at the legendary MGM Scoring Stage at Sony Pictures Studios and at Hollywood Scoring Studios Stage in Los Angeles. It features various extended techniques used by Los Angeles studio musician, Randy Kerber.\
@@ -4953,7 +4953,7 @@ requires = [["native-instruments-kontakt-player","6.7.1"]]
 size = 14300
 url = "https://store.cinesamples.com/products/tina-guo"
 demo = "https://www.youtube.com/watch?v=k6X8MzD7RS8"
-price = 356.63
+price = 299
 nks = true
 description = """\
 An expansive arsenal of innovative sound design and composition tools brought to life through a collection of expressive electric and erhu performances. The Acoustic Cello Legato patches, recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, includes Cinesamples' CineStrings Solo Legato engine and Infinite Bow feature. For owners of Kontakt (Full and Player) 6.7.1 or higher.\
@@ -4967,7 +4967,7 @@ requires = [["native-instruments-kontakt-player","5.6.8"]]
 size = 9290
 url = "https://store.cinesamples.com/products/tina-guo-vol-2"
 demo = "https://www.youtube.com/watch?v=BKNL8xk0po8"
-price = 174.83
+price = 149
 nks = true
 description = """\
 Tina Guo vol. 2 is a valuable expansion of the original Tina Guo Acoustic Cello Legato library utilizing the same unique seamless legato recording and programming techniques. The legato in vol. 2 allows for more agile melodic passages and additional articulations including spiccato, marcato, harmonics, sul ponticello, and vibrato pizzicato. Combining vol. 2 with the original library provides a complete combination of Tina's solo acoustic cello. Tina Guo vol 2 is recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles.\
@@ -4981,7 +4981,7 @@ requires = [["native-instruments-kontakt-player","5.5.0"]]
 size = 4580
 url = "https://store.cinesamples.com/products/cinebrass-descant-horn"
 demo = "https://www.youtube.com/watch?v=04H6ea8cKwI"
-price = 118.72
+price = 149
 nks = true
 description = """A perfect partner to CineBrass Core and Pro, CineBrass Descant Horn expands the range of the Horn section. Pro horn players often pull out this instrument for delicate higher passages and it's great for soaring solos. Like CineBrass Core and Pro, CineBrass Descant Horn was recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles."""
 
@@ -4993,7 +4993,7 @@ requires = [["native-instruments-kontakt-player","5.8.1"]]
 size = 1700
 url = "https://store.cinesamples.com/products/horns-of-the-deep"
 demo = " https://www.youtube.com/watch?v=Y4us6L24CO8"
-price = 104.30
+price = 149
 nks = true
 description = """CineBrass Horns of the Deep is an extension of our CineBrass family also recorded at MGM Studios. Consisting of 3 Tubas and 3 Euphonium in unison, it is a warm, mellow low brass library. It can be a smooth, sonorous alternative timbre to French Horns, and it can provide character and depth in unison with the Trombone section."""
 
@@ -5005,7 +5005,7 @@ requires = [["native-instruments-kontakt-player","5.8.1"]]
 size = 20000
 url = "https://store.cinesamples.com/products/cinebrass-pro"
 demo = "https://www.youtube.com/watch?v=PQ6fj2ENDrU"
-price = 303.43
+price = 399
 nks = true
 description = """CineBrass PRO is the expansion to the popular CineBrass Core library. CineBrass PRO is a completely separate and unique library comprised of entirely new orchestral brass sample content, using the first-call Los Angeles musicians at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, mixed by Dennis Sands. Our CineBrass CORE library, released in June 2011, covers the essentials of the orchestral brass section, and functions as a solid foundation in our composing templates. But what about all the other things brass can do? We asked you, the film music community, what you wanted to see in an expansion. The result is CineBrass PRO."""
 
@@ -5013,21 +5013,13 @@ description = """CineBrass PRO is the expansion to the popular CineBrass Core li
 vendor = "cinesamples"
 name = "CineBrass Sonore"
 url = "https://store.cinesamples.com/products/cinebrass-sonore"
-price = 113.50
+price = 149
 size = 7_120
 requires = [ [ "native-instruments-kontakt-player", "5.7.2" ] ]
 nks = true
 categories = [ "vsti.brass" ]
 demo = "https://www.youtube.com/watch?v=ZaZWPQr3rK4"
 description = """Sonore (adj.): resonant; with rich tone. When you see “sonore” written in a musical score, the composer is simply asking the musicians to play with the maximum resonance, body, and tone of which they are capable. It is the opposite concept of brashness and blasting - “sonore” is a thick and warm sound. We set out to recapture trumpet and horn sections in which we maximized tone and body rather than concentrating solely on loud dynamics. You’ll notice a wider, more open sound that takes up more room in the mix at a mezzo forte dynamic. We selected articulations specifically for the creation of melodies. Our greatest influence and inspiration were the organic processes employed by the great film composers of orchestral music. Recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles, these ensembles also come with vastly improved legato."""
-
-[cinebrass-twelve-horn-ensemble]
-vendor = "cinesamples"
-name = "CineBrass Twelve Horn Ensemble"
-size = 1_810
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=81zV5BzrWAo"
 
 [cineharps]
 vendor = "cinesamples"

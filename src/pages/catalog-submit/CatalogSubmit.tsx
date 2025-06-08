@@ -808,7 +808,7 @@ export function Component() {
                     />
                 </Form.Group>
                 <ReCAPTCHA
-                    sitekey="6LeRxgYrAAAAAGGbGi77YbNfc4wVUvS9mJGjWzYC"
+                    sitekey="6Lei01krAAAAAKW9r1SK1OIqiZ8wfkZEPiJi9iKY"
                     onChange={setRecaptchaToken}
                     ref={recaptchaRef}
                 />
