@@ -5024,32 +5024,14 @@ description = """Sonore (adj.): resonant; with rich tone. When you see “sonore
 [cineharps]
 vendor = "cinesamples"
 name = "CineHarps"
-size = 10_900
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = true
+categories = ["vsti.strings"]
+requires = [["native-instruments-kontakt-player","5.6.8"]]
+size = 10900
+url = "https://store.cinesamples.com/products/cineharps"
 demo = "https://www.youtube.com/watch?v=eQeGV818Sdk"
-description = """
-
-CineHarps is a carefully
-sampled collection of orchestral harps that are easy to use and packed with
-techniques and features that will make them a classic in any composer's
-template. Recorded with a wide variety of styles on the legendary MGM stage at
-Sony Pictures studios in Los Angeles, CineHarps will fit seamlessly into any
-mix.
-CineHarps includes the
-addition of a new perspective mode. When Perspective mode is enabled, a slider
-appears and crossfades between the microphone's Close, Room, and Surround
-positions. This slider is automatically associated with the mode dial, allowing
-you to instantly control the relative depth of the instrument.
-Gliss mode transposes all
-white keys according to the selected notes and pedal diagram. This makes it
-easy to play glissandi on the white keys. When the Gliss Mode button is active,
-note attacks in faster phrases are slightly attenuated. The faster you play,
-the softer the attack.
-Tip: By activating Gliss
-mode and leaving the pedals in C major, you can play chromatically, but you can
-also soften the attack of each note in the faster phrases, which makes it
-possible to obtain trills, bisbigliandi and other more realistic game types."""
+price = 249
+nks = true
+description = """A MusicTech 10/10 awarded orchestral harp sample library. CineHarps, the top-rated harp VST, is a collection of deeply sampled orchestral harps that's easy to use and is loaded with techniques and features that will make this a classic in any composer’s template. This harp sample library was recorded with a wide variety of perspectives at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles, and will quickly become a favorite harp VST plugin in your orchestral composition template."""
 
 [cineharpsichord]
 vendor = "cinesamples"
@@ -19050,7 +19032,7 @@ requires = [ [ "native-instruments-kontakt-player", "7" ] ]
 [blueprint-collection]
 vendor = "fracture-sounds"
 name = "Blueprint Collection"
-contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos","fracture-sounds-blueprint-textural-cello","fracture-sounds-blueprint-electric-strings"]
+contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos","fracture-sounds-blueprint-textural-cello","fracture-sounds-blueprint-electric-strings","fracture-sounds-blueprint-textural-viola"]
 url = "https://fracturesounds.com/product/blueprint-collection/"
 price = 0
 nks = true
@@ -19110,3 +19092,16 @@ demo = "https://www.youtube.com/watch?v=j0CgSpZoN8U"
 price = 0
 nks = true
 description = """Electric Strings harnesses our powerful Layer Blends engine to fuse the iconic warmth of a vintage Solina electric string synthesiser with our signature 9 Atmosphere Layers, all crafted from the original samples. The result is a versatile instrument capable of delivering both retro charm and modern cinematic textures. Explore 17 unique sounds, offering over 600 possible unique combinations—each one a fresh creative starting point, or simply select one of the 10 curated snapshots, curated by the Fracture Sounds team to instantly inspire."""
+
+[blueprint-textural-viola]
+vendor = "fracture-sounds"
+name = "Blueprint: Textural Viola"
+requires = [["native-instruments-kontakt-player","8"]]
+categories = ["vsti.strings"]
+size = 298
+url = "https://fracturesounds.com/product/blueprint-textural-viola/"
+demo = "https://www.youtube.com/watch?v=Zk556X_9o4E"
+price = 0
+nks = true
+description = """A collection of four textural viola articulations and a unique Atmosphere Layer designed to inspire.
+"""
