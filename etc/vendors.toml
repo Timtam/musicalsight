@@ -535,3 +535,7 @@ url = ""
 [fracture-sounds]
 name = "Fracture Sounds"
 url = "https://fracturesounds.com/"
+
+[danylo-werman]
+name = "Danylo Werman" 
+url = " https://github.com/werman/"

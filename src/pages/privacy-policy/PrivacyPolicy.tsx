@@ -23,7 +23,7 @@ function PrivacyPolicy() {
             <p>
                 This Privacy Policy applies only to our online activities and is
                 valid for visitors to our website with regards to the
-                information that they shared and/or collect in Musical Sight.
+                information that they shared and/or collect in Ear Dojo.
                 This policy is not applicable to any information collected
                 offline or via channels other than this website. Our Privacy
                 Policy was created with the help of the{" "}

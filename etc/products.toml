@@ -5034,34 +5034,18 @@ nks = true
 description = """A MusicTech 10/10 awarded orchestral harp sample library. CineHarps, the top-rated harp VST, is a collection of deeply sampled orchestral harps that's easy to use and is loaded with techniques and features that will make this a classic in any composer’s template. This harp sample library was recorded with a wide variety of perspectives at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles, and will quickly become a favorite harp VST plugin in your orchestral composition template."""
 
 [cineharpsichord]
-vendor = "cinesamples"
-name = "CineHarpsichord"
-size = 3_540
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = true
+vendor = "cinesamples" 
+name = "CineHarpsichord" 
+categories = ["vsti.keys"] 
+requires = [["native-instruments-kontakt-player","6.6.1"]] 
+size = 3540 
+url = "https://store.cinesamples.com/products/cineharpsichord"
 demo = "https://www.youtube.com/watch?v=FwjciDgro2I"
-description = """
-
-To make cineHarpsichord,
-the CineSamples team recorded a Franco-Flemish Iohannes Rückers Colmar
-harpsichord from 1624 at the MGM Scoring Stage. They then made the virtual
-instrument for Kontakt and the Kontakt Player, which has four stops and three
-patches very different characters.
-The first patch, 01
-CineHarpsichord, includes Full, Close, Room and Surround mic mixes as well as
-various presets, including a custom mix that you can save. The close mics have
-been delayed to align the signals to those in the room and surround positions.
-The second patch, 02
-Baroque, offers a more silky, distant and ambient sound, the stereo image here
-is manageable via a single fader.
-Finally, the 03 Vintage
-favors proximity and adds tape emulation and discrete analog processing,
-including a Chandler EQ and tube harmonic processing.
-CineHarpsichord also includes
-a new Perspective Mode function, which allows crossfades between microphone
-positions, to be controlled via a dedicated slider which is mapped to the
-modulation wheel. You can also manage the number of round robins for each
-dynamic layer and the volume of the release samples."""
+price = 99 
+nks = true
+description = """\ 
+CineHarpsichord is a modern adaptation of a Franco-Flemish 1624 Iohannes Rückers Colmar harpsichord sampled by hand at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles. With four stops and three distinct sonic characters, CineHarpsichord will be suitable for use in scoring and classical applications.\ 
+"""
 
 [cineorch]
 vendor = "cinesamples"
@@ -19105,3 +19089,28 @@ price = 0
 nks = true
 description = """A collection of four textural viola articulations and a unique Atmosphere Layer designed to inspire.
 """
+
+[rnnoise]
+vendor = "danylo-werman" 
+name = "RNNoise" 
+categories = ["fx.filter"] 
+url = "https://github.com/werman/noise-suppression-for-voice/"
+price = 0 
+description = """\
+A real-time noise suppression plugin for voice based on Xiph's RNNoise. 
+The plugin is meant to suppress a wide range of noise origins (from original paper): computer fans, office, crowd, airplane, car, train, construction. 
+From my tests mild background noise is always suppressed, loud sounds, like clicking of mechanical keyboard, are suppressed while there is no voice however they are only reduced in volume when voice is present. 
+Please note that this plugin could not improve the voice quality with bad microphone, it even could make things worse by misclassifying the voice as a noise which would reduce already not-so-good voice quality."""
+os = ["windows","linux","mac_intel","mac_arm"] 
+
+[silver]
+vendor = "audiobro"
+name = "Silver"
+categories = ["vsti.percussion"]
+size = 520
+url = "https://audiobro.com/SILVER/"
+demo = "https://youtu.be/D5hoQBgVWwg"
+price = 0
+nks = true
+description = """\
+A collection of 5 instruments with some presets (they call them snapshots), basic effects, and articulations. It is intended to be simple, diverse, and inspirational."""
