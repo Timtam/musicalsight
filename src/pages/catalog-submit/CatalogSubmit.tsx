@@ -2,7 +2,6 @@ import natsort from "natsort"
 import { useEffect, useMemo, useRef, useState } from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
-import ReCAPTCHA from "react-google-recaptcha"
 import { useNavigate, useSearchParams } from "react-router-dom"
 import slugify from "slugify"
 import dedent from "ts-dedent"
@@ -23,6 +22,8 @@ import Product, {
 import { createProductFilter } from "../../entities/ProductFilter"
 import CatalogService from "../../services/CatalogService"
 import ResponseModal from "./ResponseModal"
+
+const API_KEY = "56f0885e-efe6-4378-9bf4-673bc7b3b00d"
 
 const createFormData = (p?: Product) => ({
     name: p?.name || "",
@@ -76,8 +77,7 @@ export function Component() {
     let headRef = useRef<HTMLElement>(null)
     let navigate = useNavigate()
     let [product, setProduct] = useState<Product | undefined>(undefined)
-    let [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
-    let recaptchaRef = useRef<ReCAPTCHA | null>(null)
+    let [altchaVerified, setAltchaVerified] = useState(false)
 
     useEffect(() => {
         let productId = searchParams.get("p")
@@ -91,6 +91,26 @@ export function Component() {
             }
         }
     }, [searchParams, catalog])
+
+    useEffect(() => {
+        import("altcha")
+
+        // Listen for Altcha verification
+        const interval = setInterval(() => {
+            const widget = document.querySelector("altcha-widget")
+            if (widget) {
+                widget.addEventListener("statechange", (e) => {
+                    // @ts-expect-error event type not typed
+                    if (e.detail.state === "verified") {
+                        setAltchaVerified(true)
+                    }
+                })
+                clearInterval(interval)
+            }
+        }, 100)
+
+        return () => clearInterval(interval)
+    }, [setAltchaVerified])
 
     return (
         <>
@@ -145,7 +165,9 @@ export function Component() {
                 }}
                 onClosed={() => {
                     headRef.current?.focus()
-                    recaptchaRef.current?.reset()
+                    setAltchaVerified(false)
+                    // @ts-expect-error altcha widget type not typed
+                    document.querySelector("altcha-widget")?.reset?.()
                 }}
             />
             <h4>Product information</h4>
@@ -807,14 +829,14 @@ export function Component() {
                         }
                     />
                 </Form.Group>
-                <ReCAPTCHA
-                    sitekey="6Lei01krAAAAAKW9r1SK1OIqiZ8wfkZEPiJi9iKY"
-                    onChange={setRecaptchaToken}
-                    ref={recaptchaRef}
+                <altcha-widget
+                    challengeurl={`https://api.staticforms.xyz/api/altcha/challenge?apiKey=${API_KEY}`}
+                    name="altchaToken"
+                    auto="onfocus"
                 />
                 <Button
                     disabled={
-                        recaptchaToken === null ||
+                        !altchaVerified ||
                         data.name === "" ||
                         data.vendor === "" ||
                         (data.vendor === "new" &&
@@ -928,14 +950,12 @@ ${data.accessibility_description}\\
                                 replyTo?: string
                                 name?: string
                                 subject: string
-                                recaptchaToken: string
                             } = {
                                 message: msg,
                                 subject: update
                                     ? `APIAC Product update for product ${data.name}`
                                     : `APIAC Product submission for product ${data.name}`,
-                                apiKey: "56f0885e-efe6-4378-9bf4-673bc7b3b00d",
-                                recaptchaToken: recaptchaToken!,
+                                apiKey: API_KEY,
                             }
 
                             if (data.userName !== "")
@@ -951,9 +971,6 @@ ${data.accessibility_description}\\
                                 {
                                     method: "POST",
                                     body: JSON.stringify(body),
-                                    headers: {
-                                        "Content-Type": "application/json",
-                                    },
                                 },
                             )
 
@@ -967,13 +984,13 @@ ${data.accessibility_description}\\
                             } else {
                                 setResponse({
                                     type: "error",
-                                    message: json.message,
+                                    message: json.error,
                                 })
                             }
                         } catch (e) {
                             setResponse({
                                 type: "error",
-                                message: e as string,
+                                message: JSON.stringify(e),
                             })
                         }
                     }}
