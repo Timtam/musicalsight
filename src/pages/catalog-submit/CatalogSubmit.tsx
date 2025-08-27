@@ -942,6 +942,9 @@ ${data.accessibility_description}\\
                             }
                         }
 
+                        let altchaToken: string =
+                            document.forms[0].altchaToken.value
+
                         try {
                             let body: {
                                 message: string
@@ -950,12 +953,14 @@ ${data.accessibility_description}\\
                                 replyTo?: string
                                 name?: string
                                 subject: string
+                                altchaToken: string
                             } = {
                                 message: msg,
                                 subject: update
                                     ? `APIAC Product update for product ${data.name}`
                                     : `APIAC Product submission for product ${data.name}`,
                                 apiKey: API_KEY,
+                                altchaToken: altchaToken,
                             }
 
                             if (data.userName !== "")

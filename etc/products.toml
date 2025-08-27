@@ -5047,13 +5047,19 @@ description = """\
 CineHarpsichord is a modern adaptation of a Franco-Flemish 1624 Iohannes Rückers Colmar harpsichord sampled by hand at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles. With four stops and three distinct sonic characters, CineHarpsichord will be suitable for use in scoring and classical applications.\ 
 """
 
-[cineorch]
-vendor = "cinesamples"
-name = "CineOrch"
-size = 767
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://soundcloud.com/user110062042/cinesamples-cineorch"
+[orchestral-chords]
+vendor = "cinesamples" 
+name = "Orchestral Chords" 
+categories = ["vsti.brass","vsti.strings","vsti.woodwinds"] 
+requires = [["native-instruments-kontakt-player","6.6.1"]] 
+size = 767 
+url = "https://store.cinesamples.com/products/orchestral-chords"
+demo = "https://www.youtube.com/watch?v=7SjKpm1HJME"
+price = 99
+nks = true
+description = """\ 
+Cinesamples' classic CineOrch library, redesigned and encoded for Kontakt Player 6.6.1+ and NKS. With a beautiful collection of chords, octaves, and inversions performed by a 70-piece orchestra in a gorgeous space, this library is a must-have for enhancing your mockups. Use these recorded ensemble chords to add depth and character to your compositions with ease!\
+"""
 
 [cineperc-core]
 vendor = "cinesamples"
@@ -5262,14 +5268,6 @@ classic sound of a pipe organ. O stands out for its flexibility in tone and
 design, offering traditional and modern pipe combinations out of the box, as
 well as sound design capabilities that deliver great results in modern scoring
 situations. ."""
-
-[orchestral-chords]
-vendor = "cinesamples"
-name = "Orchestral Chords"
-size = 770
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = true
-demo = "https://www.youtube.com/watch?v=7SjKpm1HJME"
 
 [piano-in-blue]
 vendor = "cinesamples"
@@ -19016,7 +19014,7 @@ requires = [ [ "native-instruments-kontakt-player", "7" ] ]
 [blueprint-collection]
 vendor = "fracture-sounds"
 name = "Blueprint Collection"
-contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos","fracture-sounds-blueprint-textural-cello","fracture-sounds-blueprint-electric-strings","fracture-sounds-blueprint-textural-viola"]
+contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos","fracture-sounds-blueprint-textural-cello","fracture-sounds-blueprint-electric-strings","fracture-sounds-blueprint-textural-viola","fracture-sounds-blueprint-thumb-piano"]
 url = "https://fracturesounds.com/product/blueprint-collection/"
 price = 0
 nks = true
@@ -19114,3 +19112,31 @@ price = 0
 nks = true
 description = """\
 A collection of 5 instruments with some presets (they call them snapshots), basic effects, and articulations. It is intended to be simple, diverse, and inspirational."""
+
+[blueprint-thumb-piano]
+vendor = "fracture-sounds" 
+name = "Blueprint: Thumb Piano" 
+categories = ["vsti.percussion"] 
+requires = [["native-instruments-kontakt-player","8"]] 
+size = 350 
+url = " https://fracturesounds.com/product/blueprint-thumb-piano/"
+demo = " https://www.youtube.com/watch?v=V_S28T6OzfU"
+price = 0 
+nks = true
+description = """\ 
+Thumb Piano captures the warm, characterful sound of a traditional Kalimba, enhanced with three atmospheric layers for added depth. Each layer, including the raw instrument, can be blended to taste via the built-in mixer, while controls like Colour and Damping let you shape the tone even further. 
+Recorded in a dry studio space, this library offers a glimpse into the meditative instruments featured in Zen: Meditations, and sits alongside other Blueprint favourites such as Greenhead Chimes, Toy Piano, and Music Box. 
+THE INTERFACE 
+Colour
+– An EQ effect to change the brightness of the overall sound. 
+Stereo Width 
+– Controls the stereo widening effect, turn clockwise to widen the signal, turn fully anticlockwise for a mono signal. 
+Damping
+– Dampen the release of the played sample. 
+Reverb
+– Control the reverb level with further settings if you click the cog. 
+Atmosphere Intensity
+– Control the dynamics of the Atmosphere Layers only (CC1, Mod Wheel). 
+Mix
+– Control the overall volume of the raw layer and the three Atmosphere Layers provided with the library.\ 
+"""
