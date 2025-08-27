@@ -830,7 +830,7 @@ export function Component() {
                     />
                 </Form.Group>
                 <altcha-widget
-                    challengeurl={`https://api.staticforms.xyz/api/altcha/challenge?apiKey=${API_KEY}`}
+                    challengeurl={`https://www.staticforms.xyz/api/altcha/challenge?apiKey=${API_KEY}`}
                     name="altchaToken"
                     auto="onfocus"
                 />
