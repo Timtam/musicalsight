@@ -5061,63 +5061,6 @@ description = """\
 Cinesamples' classic CineOrch library, redesigned and encoded for Kontakt Player 6.6.1+ and NKS. With a beautiful collection of chords, octaves, and inversions performed by a 70-piece orchestra in a gorgeous space, this library is a must-have for enhancing your mockups. Use these recorded ensemble chords to add depth and character to your compositions with ease!\
 """
 
-[cineperc-core]
-vendor = "cinesamples"
-name = "CinePerc Core"
-size = 19_400
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://soundcloud.com/cinesamples/cineperc-core-demo-full-mix"
-
-[cineperc-epic]
-vendor = "cinesamples"
-name = "CinePerc EPIC"
-size = 8_370
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://soundcloud.com/cinesamples/cineperc-epic-teaser-demo"
-
-[cineperc-pro]
-vendor = "cinesamples"
-name = "CinePerc PRO"
-size = 27_500
-requires = [ [ "native-instruments-kontakt", "5.0.0" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=HxmOC8IPNVw"
-description = """
-
-CinePerc PRO is a
-fundamentally useful part of our large CinePerc library.
-Like all "Cine"
-libraries, CinePerc was recorded at the SONY Scoring Stage in Los Angeles, and
-mixed by master engineer Dennis Sands.
-Patches will expand your
-compositing toolbox and combine perfectly with all other "Cine" series
-libraries.
-One of the highlights of
-the CinePerc PRO library is the addition of a massive drum kit.
-The main thing that sets
-these kits apart from other kits is the room it was recorded in. You have a kit
-that was sampled in the same room that thousands of great orchestral pieces
-were recently recorded in.
-This drum kit has a
-legendary history and has been used on hundreds of hit movie scores as well as
-some rock albums.
-There are several options
-in the mixer, including a Quad + LFE (4.1) to get the exact sound you're
-looking for, whether it's a tight, tight sound, or a more ambient sound from
-"orchestra mix", this kit can be used in any style of music.
-CinePerc innovates by
-adding a new "LFE / SUB" channel. With the QUAD, you can finalize a
-final 4.1 mix for large cinemas.
-With the LFE channel (on
-most instruments), CinePerc adds the standard full mix of Dennis Sands, Close,
-Overhead, Mid Room, Room and Surrounds. When the LFE is created (for low
-frequency instruments), the Room and Surround transform into a QUAD Front and a
-QUAD rear chain creating a perfect 4.1 environment, specially remixed by Dennis
-Sands. Different microphone positions can drastically change your mix, this
-also underlines the versatility of our library."""
-
 [cinepiano]
 vendor = "cinesamples"
 name = "CinePiano"
@@ -19139,4 +19082,52 @@ Atmosphere Intensity
 – Control the dynamics of the Atmosphere Layers only (CC1, Mod Wheel). 
 Mix
 – Control the overall volume of the raw layer and the three Atmosphere Layers provided with the library.\ 
+"""
+
+[w1-limiter]
+vendor = "george-yohng" 
+name = "W1 Limiter" 
+categories = ["fx.dynamics"] 
+url = "https://www.yohng.com/software/w1limit"
+demo = "https://www.youtube.com/watch?v=c9h2EifrJCA"
+price = 0
+description = """\
+W1 Limiter is a clone of Waves L1, with identical output, as well as an approximation of Waves L2. 
+This was accomplished without reverse engineering Waves products, and the result was obtained by adjusting 4Front YLimiter by doing the following: 
+
+* Simplifying release curve 
+* Increasing release time 3 times (see notes below) 
+* Altering softening circuit filter 
+
+Waves L1 famous limiter (and thus W1 - for compatibility reasons) uses three times longer actual release time than the standard RT60 metric. This means that if you set a 50ms release in the limiter, it will actually yield a 150ms standard RT60 release time. 
+Different engineers recommend different values for release time; the default value is chosen reasonably to provide a smooth limiting for most typical usage of the limiter. If one is not experienced with limiters, keeping the default release time is recommended. 
+The current version also adds the adaptive release. I tried to replicate Waves L2; however, their tangent curve is very complex, so I could only approximate its behaviour (which actually should be pretty close, but unlike the L1 part, it won't be digitally identical). Waves ARC uses fixed thresholds of 250 and 500ms, while W1 still allows changing release time while in adaptive mode. Also, IDR dithering is not emulated, but most DAWs these days have dithered export options.\
+"""
+os = ["windows","mac_intel","mac_arm"] 
+
+[overtone-geq]
+vendor = "voxengo"
+name = "Overtone GEQ" 
+categories = ["fx.eq"] 
+url = "https://www.voxengo.com/product/overtonegeq/"
+price = 0
+description = """\
+Overtone GEQ is a free 7-band harmonic (overtone) graphic equalizer AudioUnit, AAX, and VST plugin with multi-channel operation support (supporting up to 8 input/output channels, audio host application-dependent).  Overtone GEQ offers extensive internal channel routing capabilities, and supports mid/side channel processing. 
+Beside equalizing, Overtone GEQ applies harmonic enhancement: it uses 7 harmonic enhancement modules, one for each EQ band.  This generates a complex harmonic coloration you will probably like a lot. 
+Overtone GEQ was designed to allow audio engineers to apply quick EQ shape adjustments together with adding a bit of harmonic richness to the audio material (mainly mixes and sub-mixes due to a comparably high load this EQ puts on a CPU).\
+"""
+os = ["windows","mac_intel","mac_arm"] 
+
+[cineperc]
+vendor = "cinesamples"
+name = "CinePerc" 
+categories = ["vsti.drums","vsti.percussion"] 
+requires = [["native-instruments-kontakt-player","5.8.1"]] 
+size = 92600 
+url = "https://store.cinesamples.com/products/cineperc"
+demo = "https://www.youtube.com/watch?v=XBqikgJYHNM"
+price = 699 
+nks = true
+description = """\ 
+Complete Orchestral Percussion Library - CinePerc, recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, is a powerhouse complete orchestral percussion library. This cinematic percussion library spans orchestral, auxiliary, ethnic, woods, and metal instruments and provides a one-stop solution for your entire percussion needs. An easy-to-use, top cinematic percussion VST for orchestral and trailer music production.\
 """
