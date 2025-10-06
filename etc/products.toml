@@ -5062,12 +5062,18 @@ Cinesamples' classic CineOrch library, redesigned and encoded for Kontakt Player
 """
 
 [cinepiano]
-vendor = "cinesamples"
-name = "CinePiano"
-size = 9_060
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = true
+vendor = "cinesamples" 
+name = "CinePiano" 
+categories = ["vsti.keys"] 
+requires = [["native-instruments-kontakt-player","6.7.1"]] 
+size = 9060 
+url = "https://store.cinesamples.com/products/cinepiano"
 demo = "https://soundcloud.com/mikebarry/debussy-clair-de-lune-cinepiano-played-by-michael-barry"
+price = 199 
+nks = true
+description = """\
+CinePiano is the modern follow-up to our popular Piano in Blue library. A Concert Grand Piano sampled by hand at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles, we applied the same recording and sampling techniques and many of the same microphones from Piano in Blue. With four distinct sonic characters, CinePiano will be your most versatile piano library.\
+"""
 
 [cinestrings-core]
 vendor = "cinesamples"
@@ -18957,7 +18963,7 @@ requires = [ [ "native-instruments-kontakt-player", "7" ] ]
 [blueprint-collection]
 vendor = "fracture-sounds"
 name = "Blueprint Collection"
-contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos","fracture-sounds-blueprint-textural-cello","fracture-sounds-blueprint-electric-strings","fracture-sounds-blueprint-textural-viola","fracture-sounds-blueprint-thumb-piano"]
+contains = ["fracture-sounds-blueprint-bass-guitar","fracture-sounds-blueprint-church-organ","fracture-sounds-blueprint-drum-kit","fracture-sounds-blueprint-electric-keys","fracture-sounds-blueprint-epic-grand","fracture-sounds-blueprint-feedback-guitar","fracture-sounds-blueprint-festive-bells","fracture-sounds-blueprint-gentle-brass","fracture-sounds-blueprint-gentle-strings","fracture-sounds-blueprint-gentle-winds","fracture-sounds-blueprint-greenhead-chimes","fracture-sounds-blueprint-music-box","fracture-sounds-blueprint-short-strings","fracture-sounds-blueprint-string-trio","fracture-sounds-blueprint-textural-violin","fracture-sounds-blueprint-toy-piano","fracture-sounds-blueprint-woodwind-ensemble","fracture-sounds-blueprint-textural-pianos","fracture-sounds-blueprint-textural-cello","fracture-sounds-blueprint-electric-strings","fracture-sounds-blueprint-textural-viola","fracture-sounds-blueprint-thumb-piano","fracture-sounds-blueprint-brass-ensemble"]
 url = "https://fracturesounds.com/product/blueprint-collection/"
 price = 0
 nks = true
@@ -19130,4 +19136,19 @@ price = 699
 nks = true
 description = """\ 
 Complete Orchestral Percussion Library - CinePerc, recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, is a powerhouse complete orchestral percussion library. This cinematic percussion library spans orchestral, auxiliary, ethnic, woods, and metal instruments and provides a one-stop solution for your entire percussion needs. An easy-to-use, top cinematic percussion VST for orchestral and trailer music production.\
+"""
+
+[blueprint-brass-ensemble]
+vendor = "fracture-sounds" 
+name = "Blueprint: Brass Ensemble" 
+categories = ["vsti.brass"] 
+requires = [["native-instruments-kontakt-player","8"]] 
+size = 1300 
+url = "https://fracturesounds.com/product/blueprint-brass-ensemble/"
+demo = "https://www.youtube.com/watch?v=RiYrWmDoDU0"
+price = 0 
+nks = true
+description = """\
+The core instruments from the orchestral brass family. 
+Four of the staple orchestral brass instruments, recorded individually and seamlessly blended into an elegant ensemble patch for effortless sketching.\
 """
