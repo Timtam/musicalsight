@@ -5076,12 +5076,18 @@ CinePiano is the modern follow-up to our popular Piano in Blue library. A Concer
 """
 
 [cinestrings-core]
-vendor = "cinesamples"
-name = "CineStrings Core"
-size = 44_800
-requires = [ [ "native-instruments-kontakt", "5" ] ]
-nks = false
+vendor = "cinesamples" 
+name = "CineStrings Core" 
+categories = ["vsti.strings"] 
+requires = [["native-instruments-kontakt-player","6.7.1"]] 
+size = 44800 
+url = "https://store.cinesamples.com/products/cinestrings-core"
 demo = "https://www.youtube.com/watch?v=KgRpTKuYS0E"
+price = 399 
+nks = true
+description = """\
+CineStrings Core is a flagship orchestral strings library recorded at the MGM Scoring Stage at Sony Pictures Studios by master engineer Dennis Sands. This library is part of the CineSymphony series and blends well with our CineBrass, CineWinds and CinePerc libraries from this same legendary Hollywood scoring stage. Version 2.0 (released 3/3/23) features a brand new interface, a complete new sonic treatment for the samples, improvements to the scripting and Kontakt engine FX, and more! \
+"""
 
 [cinestrings-runs]
 vendor = "cinesamples"
@@ -19151,4 +19157,107 @@ nks = true
 description = """\
 The core instruments from the orchestral brass family. 
 Four of the staple orchestral brass instruments, recorded individually and seamlessly blended into an elegant ensemble patch for effortless sketching.\
+"""
+
+[dream-box]
+vendor = "sonixinema"
+name = "Dream Box" 
+categories = ["vsti.percussion"] 
+requires = ["native-instruments-kontakt-player"] 
+size = 103 
+url = "https://www.sonixinema.com/pages/dream-box"
+demo = "https://www.youtube.com/watch?v=0rAt18P6fuA"
+price = 0 
+nks = true
+description = """\
+A delicate, cinematic music box instrument that captures the nostalgic beauty of childhood memories and forgotten dreams.
+Recorded with intimate detail, Dream Box blends soft mechanical tones with natural resonance, creating a sound that’s both haunting and comforting.\
+"""
+
+[whispering-woodwinds]
+vendor = "sonixinema" 
+name = "Whispering Woodwinds" 
+categories = ["vsti.woodwinds"] 
+requires = ["native-instruments-kontakt-player"] 
+size = 1017 
+url = "https://www.sonixinema.com/pages/whispering-woodwinds"
+demo = "https://www.youtube.com/watch?v=mEqX_oQvMbU"
+price = 0 
+nks = true
+description = """\
+Whispering Woodwinds is a free woodwind sample library featuring a 12-piece ensemble. 
+Performed by a hand-picked ensemble of world-class players, this collection offers expressive, evolving performances full of nuance and realism. 
+Ideal for film scoring, ambient soundscapes, and modern orchestration, Whispering Woodwinds brings cinematic woodwinds to life.\
+"""
+
+[delicate-strings]
+vendor = "sonixinema" 
+name = "Delicate Strings" 
+categories = ["vsti.strings"] 
+requires = ["native-instruments-kontakt-player"] 
+size = 990 
+url = "https://www.sonixinema.com/pages/delicate-strings"
+demo = "https://www.youtube.com/watch?v=8Wt3J4khjsc"
+price = 0 
+nks = true
+description = """\
+Delicate Strings is a free string sample library featuring a 14-piece ensemble. 
+This cinematic string library captures lifelike performances that ebb and flow with expression, perfect for modern film scoring and contemporary composition.\
+"""
+
+[celestial-voices]
+vendor = "sonixinema" 
+name = "Celestial Voices" 
+categories = ["vsti.vocal"] 
+requires = ["native-instruments-kontakt-player"] 
+size = 270 
+url = "https://www.sonixinema.com/pages/celestial-voices"
+demo = "https://www.youtube.com/watch?v=xuvSpRkivZk"
+price = 0 
+nks = true
+description = """\
+Celestial Voices is a free vocal sample library featuring world renowned soprano, Grace Davidson. 
+This cinematic vocal library captures lifelike performances that ebb and flow with expression, perfect for modern film scoring and contemporary composition.\
+"""
+
+[ethereal-pads]
+vendor = "sonixinema" 
+name = "Ethereal Pads" 
+categories = ["vsti.ambient"] 
+requires = ["native-instruments-kontakt-player"] 
+size = 992 
+url = "https://www.sonixinema.com/pages/ethereal-pads"
+demo = "https://www.youtube.com/watch?v=crTLllbStFI"
+price = 0 
+nks = true
+description = """\
+Ethereal Pads is a free ambient sample library featuring 5 unique pads. 
+Featuring a curated selection of organic textures taken from orchestral and soloist performances, these sounds where then warped beyond recognition with a collection of Eurorack modules and guitar pedals to create some truly unique textures, perfect for cinematic scoring, trailer music, and modern production.\
+"""
+
+[emotive-brass]
+vendor = "sonixinema" 
+name = "Emotive Brass" 
+categories = ["vsti.brass"] 
+requires = ["native-instruments-kontakt-player"] 
+size = 198 
+url = "https://www.sonixinema.com/pages/emotive-brass"
+demo = "https://www.youtube.com/watch?v=O3AC0sFw_hE"
+price = 0 
+nks = true
+description = """\
+Emotive Brass is a free brass sample library featuring a 6-piece ensemble. 
+Featuring an expertly performed brass ensemble, this collection delivers dynamic, expressive performances perfect for cinematic scoring, trailer music, and modern orchestral production. 
+With rich, heartfelt swells and nuanced phrasing, Emotive Brass adds emotional depth to any composition.\
+"""
+
+[scorehub]
+vendor = "sonixinema"
+name = "ScoreHub" 
+contains = ["sonixinema-celestial-voices","sonixinema-emotive-brass","sonixinema-dream-box","sonixinema-delicate-strings","sonixinema-ethereal-pads","sonixinema-whispering-woodwinds"] 
+url = "https://www.sonixinema.com/pages/scorehub"
+price = 0 
+nks = true
+description = """\
+A free series of sample instruments for Kontakt Player, designed to spark new ideas. Download and start your journey today.\
 """

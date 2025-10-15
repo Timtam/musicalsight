@@ -9,7 +9,7 @@ function Home() {
                 <Card.Body>
                     <Card.Title as="h3">Welcome!</Card.Title>
                     <Card.Text>
-                        Ear Dojo, previously known as Ear Dojo, aims to provide
+                        Ear Dojo, previously known as Musical Sight, aims to provide
                         useful information about music theory, notes, scales and
                         alot more. Most of the stuff shown here is common
                         knowledge to sighted people who are able to communicate
