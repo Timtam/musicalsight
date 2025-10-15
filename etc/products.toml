@@ -1838,16 +1838,6 @@ price = 0
 description = "this Free VST has got 6 Nice and very Realistic Indian Instruments."
 os = [ "windows" ]
 
-[acoustic-indian-dhol]
-vendor = "rdv-audio"
-name = "Acoustic Indian Dhol"
-categories = [ "vsti.ethnic" ]
-url = "https://rdgaudio.com/acoustic-indian-dhol/"
-demo = "https://www.youtube.com/watch?v=C-KVd4yWcWc"
-price = 0
-description = "this is a fantastic Instrument plugin if you are looking for a real sounding Dhol."
-os = [ "windows", "mac_intel", "mac_arm" ]
-
 [swar-plug-4]
 vendor = "swar-systems"
 name = "Swar Plug 4"
@@ -5090,12 +5080,18 @@ CineStrings Core is a flagship orchestral strings library recorded at the MGM Sc
 """
 
 [cinestrings-runs]
-vendor = "cinesamples"
-name = "CineStrings Runs"
-size = 1_120
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
+vendor = "cinesamples" 
+name = "CineStrings Runs" 
+categories = ["vsti.strings"] 
+requires = [["native-instruments-kontakt-player","6.6.1"]] 
+size = 1120 
+url = "https://store.cinesamples.com/products/cinestrings-runs"
 demo = "https://www.youtube.com/watch?v=yWg_7wrxB3M"
+price = 149 
+nks = true
+description = """\
+A comprehensive collection of tempo-locked runs, scales and rips recorded for Violins I and II at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles.\
+"""
 
 [cinestrings-solo]
 vendor = "cinesamples"
