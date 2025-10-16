@@ -5094,20 +5094,18 @@ A comprehensive collection of tempo-locked runs, scales and rips recorded for Vi
 """
 
 [cinestrings-solo]
-vendor = "cinesamples"
-name = "CineStrings Solo"
-size = 46_400
-requires = [ [ "native-instruments-kontakt" ] ]
+vendor = "cinesamples" 
+name = "CineStrings Solo" 
+categories = ["vsti.strings"] 
+requires = [["native-instruments-kontakt-player","5.3.1"]] 
+size = 46400 
+url = "https://store.cinesamples.com/products/cinestrings-solo"
+demo = "https://www.youtube.com/watch?v=DY1SRrs7E5Q"
+price = 399 
 nks = true
-demo = "https://www.youtube.com/watch?v=DY1SRrs7E5Q"
-
-["cinestrings-solo-(close-edition)"]
-vendor = "cinesamples"
-name = "CineStrings Solo (Close Edition)"
-size = 8_220
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
-demo = "https://www.youtube.com/watch?v=DY1SRrs7E5Q"
+description = """\
+CineStrings Solo is a gorgeous solo strings library recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles. With an industry first Adaptive True Legato engine, this orchestral solo strings library is unparalleled in sound and playability. Experience solo violin, solo viola, solo cello and bass giving you all the tools to create moving sections of music to score any scene. These cinematic solo strings deliver and is part of the CineStrings Bundle.\
+"""
 
 [cinesymphony-lite]
 vendor = "cinesamples"
@@ -19159,7 +19157,7 @@ Four of the staple orchestral brass instruments, recorded individually and seaml
 vendor = "sonixinema"
 name = "Dream Box" 
 categories = ["vsti.percussion"] 
-requires = ["native-instruments-kontakt-player"] 
+requires = [["native-instruments-kontakt-player","8"]] 
 size = 103 
 url = "https://www.sonixinema.com/pages/dream-box"
 demo = "https://www.youtube.com/watch?v=0rAt18P6fuA"
@@ -19174,7 +19172,7 @@ Recorded with intimate detail, Dream Box blends soft mechanical tones with natur
 vendor = "sonixinema" 
 name = "Whispering Woodwinds" 
 categories = ["vsti.woodwinds"] 
-requires = ["native-instruments-kontakt-player"] 
+requires = [["native-instruments-kontakt-player","8"]] 
 size = 1017 
 url = "https://www.sonixinema.com/pages/whispering-woodwinds"
 demo = "https://www.youtube.com/watch?v=mEqX_oQvMbU"
@@ -19190,7 +19188,7 @@ Ideal for film scoring, ambient soundscapes, and modern orchestration, Whisperin
 vendor = "sonixinema" 
 name = "Delicate Strings" 
 categories = ["vsti.strings"] 
-requires = ["native-instruments-kontakt-player"] 
+requires = [["native-instruments-kontakt-player","7"]] 
 size = 990 
 url = "https://www.sonixinema.com/pages/delicate-strings"
 demo = "https://www.youtube.com/watch?v=8Wt3J4khjsc"
@@ -19205,7 +19203,7 @@ This cinematic string library captures lifelike performances that ebb and flow w
 vendor = "sonixinema" 
 name = "Celestial Voices" 
 categories = ["vsti.vocal"] 
-requires = ["native-instruments-kontakt-player"] 
+requires = [["native-instruments-kontakt-player","8"]] 
 size = 270 
 url = "https://www.sonixinema.com/pages/celestial-voices"
 demo = "https://www.youtube.com/watch?v=xuvSpRkivZk"
@@ -19220,7 +19218,7 @@ This cinematic vocal library captures lifelike performances that ebb and flow wi
 vendor = "sonixinema" 
 name = "Ethereal Pads" 
 categories = ["vsti.ambient"] 
-requires = ["native-instruments-kontakt-player"] 
+requires = [["native-instruments-kontakt-player","8"]] 
 size = 992 
 url = "https://www.sonixinema.com/pages/ethereal-pads"
 demo = "https://www.youtube.com/watch?v=crTLllbStFI"
@@ -19235,7 +19233,7 @@ Featuring a curated selection of organic textures taken from orchestral and solo
 vendor = "sonixinema" 
 name = "Emotive Brass" 
 categories = ["vsti.brass"] 
-requires = ["native-instruments-kontakt-player"] 
+requires = [["native-instruments-kontakt-player","8"]] 
 size = 198 
 url = "https://www.sonixinema.com/pages/emotive-brass"
 demo = "https://www.youtube.com/watch?v=O3AC0sFw_hE"
