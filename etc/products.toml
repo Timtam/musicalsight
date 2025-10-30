@@ -5108,12 +5108,18 @@ CineStrings Solo is a gorgeous solo strings library recorded at the legendary MG
 """
 
 [cinesymphony-lite]
-vendor = "cinesamples"
-name = "CineSymphony LITE"
-size = 2_060
-requires = [ [ "native-instruments-kontakt" ] ]
-nks = false
+vendor = "cinesamples" 
+name = "CineSymphony LITE" 
+categories = ["vsti.brass","vsti.strings","vsti.woodwinds"] 
+requires = [["native-instruments-kontakt-player","6.6.1"]] 
+size = 2060 
+url = "https://store.cinesamples.com/products/cinesymphony-lite"
 demo = "https://soundcloud.com/cinesamples/sets/cinesymphony-lite-demos"
+price = 299 
+nks = true
+description = """\
+Everything you need to quickly score any scene. CineSymphony LITE symphonic orchestra is a comprehensive orchestral vst sketch tool recorded at the world-famous MGM Scoring Stage at Sony Pictures Studios in Los Angeles and recorded by industry veteran Dennis Sands. CineSymphony LITE covers the essentials of all orchestral instrument sections and provides students and professional composers with a solid starting foundation in their music scoring palette.\
+"""
 
 [cinewinds-core]
 vendor = "cinesamples"
@@ -19255,3 +19261,25 @@ nks = true
 description = """\
 A free series of sample instruments for Kontakt Player, designed to spark new ideas. Download and start your journey today.\
 """
+
+[sforzando]
+vendor = "plogue" 
+name = "Sforzando" 
+categories = ["software.sampler"] 
+url = "https://www.plogue.com/products/sforzando.html"
+price = 0 
+description = """\
+sforzando is a free, highly SFZ 2.0 compliant sample player. Advanced sample hobbyists now have a powerful tool to experiment and share instruments without relying on proprietary formats. sforzando has only one instrument slot; no fancy UI, effects or mixers. Every tweak has to be done at the SFZ file level, no cheating!sforzando is also a name given for a sudden change in music dynamics which, in musical notation, is represented by the “sfz” symbol. 
+FREE AS IN FREE ME FROM PROPRIETARY FORMATS 
+The SFZ Format is widely accepted as the open standard to define the behavior of a musical instrument from a bare set of sound recordings. Being a royalty-free format, any developer can create, use and distribute SFZ files and players for either free or commercial purposes. So when looking for flexibility and portability, SFZ is the obvious choice. That’s why it’s the default instrument file format used in the ARIA Engine. 
+Open for Business… or For Fun!
+OEM developers and sample providers are offering a range of commercial and free sound banks dedicated to sforzando. Go check them out! And watch that space often, there’s always more to come! You are a developer and want to make a product for sforzando? Contact us! 
+As a bonus, an integrated format converter should get you started 
+You can also drop SF2, DLS and acidized WAV files directly on the interface, and they will automatically get converted to SFZ 2.0, which you can then edit and tweak to your liking!\
+"""
+accessibility_description = """\
+Sforzando itself is barely accessible, even without OCR. ReaHotkey does provide a layer of accessibility when working under Windows though, see the additional links section.\
+"""
+os = ["windows","linux","mac_intel","mac_arm"] 
+[sforzando.additional_links]
+"ReaHotkey" = "https://github.com/MatejGolian/ReaHotkey/releases/latest"

@@ -543,3 +543,7 @@ url = " https://github.com/werman/"
 [george-yohng]
 name = "George Yohng" 
 url = "https://www.yohng.com/software"
+
+[plogue]
+name = "Plogue"
+url = "https://www.plogue.com/"
