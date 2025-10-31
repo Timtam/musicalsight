@@ -537,13 +537,129 @@ name = "Fracture Sounds"
 url = "https://fracturesounds.com/"
 
 [danylo-werman]
-name = "Danylo Werman" 
+name = "Danylo Werman"
 url = " https://github.com/werman/"
 
 [george-yohng]
-name = "George Yohng" 
+name = "George Yohng"
 url = "https://www.yohng.com/software"
 
 [plogue]
 name = "Plogue"
 url = "https://www.plogue.com/"
+
+[10-phantom-rooms]
+name = "10 Phantom Rooms"
+url = ""
+
+[acustica-audio]
+name = "Acustica Audio"
+url = ""
+
+[air-music-technology]
+name = "AIR Music Technology"
+url = ""
+
+[ample-sound]
+name = "Ample Sound"
+url = ""
+
+[arturia]
+name = "Arturia"
+url = ""
+
+[audio-modeling]
+name = "Audio Modeling"
+url = ""
+
+[audiofier]
+name = "Audiofier"
+url = ""
+
+[audiomodern]
+name = "Audiomodern"
+url = ""
+
+[authentic-soundware]
+name = "Authentic Soundware"
+url = ""
+
+[baby-audio]
+name = "BABY Audio"
+url = ""
+
+[bfd-drums]
+name = "BFD Drums"
+url = ""
+
+[buzz]
+name = "Buzz"
+url = ""
+
+[cableguys]
+name = "Cableguys"
+url = ""
+
+[cherry-audio]
+name = "Cherry Audio"
+url = ""
+
+[cinematic-alpha]
+name = "Cinematic Alpha"
+url = ""
+
+[e-instruments]
+name = "E-Instruments"
+url = ""
+
+[glencoe-audio]
+name = "Glencoe Audio"
+url = ""
+
+[in-session-audio]
+name = "In Session Audio"
+url = ""
+
+[mdl-tone]
+name = "MDL Tone"
+url = ""
+
+[musical-sampling]
+name = "Musical Sampling"
+url = ""
+
+[noon-instruments]
+name = "Noon Instruments"
+url = ""
+
+[ocean-swift-synthesis]
+name = "Ocean Swift Synthesis"
+url = ""
+
+[reaperaccessible]
+name = "ReaperAccessible"
+url = ""
+
+[softube]
+name = "Softube"
+url = ""
+
+[spectre-digital]
+name = "Spectre Digital"
+url = ""
+
+[stigmatized-productions]
+name = "Stigmatized Productions"
+url = ""
+
+[streamtech-music]
+name = "Streamtech Music"
+url = ""
+
+[wavelet-audio]
+name = "Wavelet Audio"
+url = ""
+
+[waves]
+name = "Waves"
+url = ""

@@ -105,3 +105,6 @@ name = "Audio Files"
 
 [vsti.ambient]
 name = "Ambient"
+
+[vsti.sound-design]
+name = "Sound Design"
