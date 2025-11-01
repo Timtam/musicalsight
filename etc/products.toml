@@ -5107,14 +5107,18 @@ Cinesamples is proud to present CineWinds CORE Library, a next-generation orches
 """
 
 [cinewinds-monster-low-winds]
-vendor = "cinesamples"
-name = "CineWinds Monster Low Winds"
-size = 2_100
-requires = [ [ "native-instruments-kontakt-player", "5.6.8" ] ]
-nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20CineWinds%20Monster%20Low%20Winds.mp3"
-description = "Super-beefy low woodwind instruments for suspense and action, recorded ensemble with two bassoons, three contrabassoons, two contrabass clarinets, and three bass clarinets at the MGM Scoring Stage at Sony Pictures Studios in Los Angeles, featuring microphone arrays including Decca Tree, Wide, Surround plus close mic pairs, multiple mix modes (Tim’s Mix, Close, Room, Surround), a settings tab with Legato Speed knob, Dynamic Range slider, Tape Saturation, basic EQ and reverb, articulation patches (Legato, Sustains, Staccato, Secco), True Legato that handles intervalic leaps both upward and downward, plus effects such as Rumble, Squeaks, Clusters, Swells and Rips."
+vendor = "cinesamples" 
+name = "CineWinds Monster Low Winds" 
+categories = ["vsti.woodwinds"] 
+requires = [["native-instruments-kontakt-player","5.6.8"]] 
+size = 2100 
 url = "https://store.cinesamples.com/products/cinewinds-monster-low-winds"
+demo = "https://www.youtube.com/watch?v=fvsRJPlslWk"
+price = 99 
+nks = true
+description = """\
+Enjoy another addition to our woodwinds orchestra. CineWinds Monster Low Winds is a super beefy low woodwind ensemble of bassoons, contrabassoons, bass clarinets, and contrabass clarinets recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles. As part of our woodwind orchestra, CineWinds Monster Low Winds is the real Hollywood Woodwinds sound and will make a perfect trio with CineWinds Core and CineWinds Pro. This woodwinds VST plugin will quickly become a favorite in your composition workflow.\
+"""
 
 [cinewinds-pro]
 vendor = "cinesamples"
@@ -17999,42 +18003,6 @@ A simple UI keeps focus on sound — a first step toward true digital organicity
 • 48 kHz - 24 BIT / DOVInst Synthesis """
 url = "https://cinematicalpha.com/b/ZiNFw"
 
-[90s-retro-trumpets]
-vendor = "cinesamples"
-name = "90s Retro Trumpets"
-size = 1_000
-requires = [ [ "native-instruments-kontakt", "5.6.8" ] ]
-nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%2090s%20Retro%20Trumpets.mp3"
-description = "90s Retro Trumpets is a faithful emulation of all things trumpet and all things recording from this magical time that crafted many of our childhoods. Thoroughly researched, this melody-making library resurrects the actual microphones and the forgotten trumpet techniques that gave these scores such unique color, tutti, and magnificence. Recorded at the MGM Scoring Stage at Sony Pictures Studios in Los Angeles."
-url = "https://cinesamples.com/product/90s-retro-trumpets"
-
-[abbey-road-classic-upright-pianos]
-vendor = "cinesamples"
-name = "Abbey Road Classic Upright Pianos"
-size = 17_000
-requires = [ [ "native-instruments-kontakt-player", "5.3.1" ] ]
-nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Abbey%20Road%20Classic%20Upright%20Pianos.mp3"
-description = """
-CineSamples and the team at London’s Abbey Road Studios recorded and sampled two vintage upright pianos for Kontakt 5.
-The Abbey Road Classic Upright Pianos collection features the sound of two historic acoustic uprights:
-A Challen Studio Piano, built in London by Piano Works in the 1930s and famously used on Beatles albums, with a tone described as soft and warm.
-Two patches were produced:
-• the first with its natural tone,
-• the second called Challen Tack, with the Tack mechanism engaged, which drops brass strips between hammers and strings for a percussive tone.
-Mrs Mills, a 1905 Steinway Vertegrand, was modified by the Abbey Road team in the late 1950s by lacquering the hammer felts to harden them, creating a brighter and more percussive tone (famously heard on Penny Lane and With a Little Help from My Friends). This piano was deliberately tuned slightly out of tune at the request of Stuart Eltham.
-Both pianos were recorded in Abbey Road’s Studio 2.
-Kontakt Interface:
-• Three mix options, all usable simultaneously:
-- Modern: three pairs of condenser microphones
-- Room: Decca Tree configuration + a pair of ambient mics
-- Vintage: AKG D19C (dynamic cardioid), Neumann U67 and AKG C12 (cardioid condensers) + original REDD.37 console
-• Velocity curve control
-• Effects section with EQ, stereo width, saturation and filters, independently adjustable per mix
-• Controls for sample start, release, and pedal noise"""
-url = "https://cinesamples.com/product/abbey-road-classic-upright-pianos"
-
 [cinebrass-twelve-horn-ensemble]
 vendor = "cinesamples"
 name = "CineBrass Twelve Horn Ensemble"
@@ -18044,15 +18012,6 @@ nks = true
 demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20CineBrass%20Twelve%20Horn%20Ensemble.mp3"
 description = "CineBrass Twelve Horn Ensemble is an improved version of the classic Twelve Horn patches from the CineBrass PRO library. These patches feature the groundbreaking Cinesamples Adaptive Legato Engine from CineStrings SOLO, adding fluidity and unparalleled realism to your melodic lines. CineBrass Twelve Horn Ensemble was recorded at the MGM Scoring Stage in Los Angeles."
 url = "https://store.cinesamples.com/products/cinebrass-twelve-horn-ensemble"
-
-[cineorch]
-vendor = "cinesamples"
-name = "CineOrch"
-size = 767
-requires = [ [ "native-instruments-kontakt-player", "6.6.1" ] ]
-nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20CineOrch.mp3"
-description = "Beautiful full orchestra chords and textures, redesigned and encoded for Kontakt Player 6.6.1+ and NKS. With a beautiful collection of chords, octaves, and inversions performed by a 70-piece orchestra in a gorgeous space, this library is a must-have for enhancing your mockups. Use these recorded ensemble chords to add depth and character to your compositions with ease!"
 
 [slower]
 vendor = "e-instruments"
