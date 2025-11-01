@@ -5121,13 +5121,18 @@ Enjoy another addition to our woodwinds orchestra. CineWinds Monster Low Winds i
 """
 
 [cinewinds-pro]
-vendor = "cinesamples"
-name = "CineWinds Pro"
-size = 16_540
-requires = [ [ "native-instruments-kontakt-player", "5.8.1" ] ]
+vendor = "cinesamples" 
+name = "CineWinds Pro" 
+categories = ["vsti.woodwinds"] 
+requires = [["native-instruments-kontakt-player","5.8.1"]] 
+size = 16540 
+url = "https://store.cinesamples.com/products/cinewinds-pro"
+demo = "https://www.youtube.com/watch?v=AZcJ_8haF3M"
+price = 399 
 nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20CineWinds%20Pro.mp3"
-description = "Upcoming description"
+description = """\
+CineWinds PRO is the expansion to the next-generation orchestral woodwinds library, CineWinds CORE. Recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, CineWinds PRO expansion fills out the remainder of the woodwind instruments in the orchestra and also offers an eclectic choice of ethnic, renaissance, and period wind instruments most often used in film scoring. From the lowest woodwind in the orchestra to the highest, this is the real Hollywood Woodwinds sound. Together with CineWinds Core, this Woodwind VST bundle will become your best woodwind sample library taking center stage in your composition template.\
+"""
 
 [continuum-guitars]
 vendor = "cinesamples"
