@@ -1,3 +1,15 @@
+[69]
+vendor = "lindell-plugin-alliance"
+name = "69"
+requires = [ ]
+nks = false
+description = """
+Helios 69‑style channel strip.
+• Preamp, EQ, and dynamics with rock character.
+• Delivers rich mids and smooth highs.
+• Well suited to electric sources."""
+url = "https://www.plugin-alliance.com/products/69-series"
+
 [1990-studio-grand-piano]
 vendor = "8dio"
 name = "1990 Studio Grand Piano"
@@ -5093,56 +5105,54 @@ nks = true
 description = "Everything you need to quickly score any scene. CineSymphony LITE symphonic orchestra is a comprehensive orchestral vst sketch tool recorded at the world-famous MGM Scoring Stage at Sony Pictures Studios in Los Angeles and recorded by industry veteran Dennis Sands. CineSymphony LITE covers the essentials of all orchestral instrument sections and provides students and professional composers with a solid starting foundation in their music scoring palette."
 
 [cinewinds-core]
-vendor = "cinesamples" 
-name = "CineWinds CORE" 
-categories = ["vsti.woodwinds"] 
-requires = [["native-instruments-kontakt-player","5.8.1"]] 
-size = 16600 
+vendor = "cinesamples"
+name = "CineWinds CORE"
+categories = [ "vsti.woodwinds" ]
+requires = [ [ "native-instruments-kontakt-player", "5.8.1" ] ]
+size = 16_600
 url = "https://store.cinesamples.com/products/cinewinds-core"
 demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20CineWinds%20CORE.mp3"
-price = 399 
+price = 399
 nks = true
-description = """\
-Cinesamples is proud to present CineWinds CORE Library, a next-generation orchestral woodwinds library recorded in the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, and mixed by master engineer Dennis Sands (The Avengers, The Shawshank Redemption, Back to the Future, Forrest Gump, American Beauty). This is the real Hollywood Woodwinds sound. The CineWinds CORE Library covers the essentials of the orchestral woodwinds section, and as always, we focus on simplicity and unparalleled recording quality. Each instrument has been meticulously sampled to cover the nuance and detail of these while maintaining ease of use for the composer. CineWinds CORE Library provides a strong foundation of expressive woodwinds for our composing templates. Enjoy this 1st volume in our CineWinds lineup of products, covering all the woodwind instruments in the orchestra including ethnic woodwinds.\
-"""
+description = "Cinesamples is proud to present CineWinds CORE Library, a next-generation orchestral woodwinds library recorded in the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, and mixed by master engineer Dennis Sands (The Avengers, The Shawshank Redemption, Back to the Future, Forrest Gump, American Beauty). This is the real Hollywood Woodwinds sound. The CineWinds CORE Library covers the essentials of the orchestral woodwinds section, and as always, we focus on simplicity and unparalleled recording quality. Each instrument has been meticulously sampled to cover the nuance and detail of these while maintaining ease of use for the composer. CineWinds CORE Library provides a strong foundation of expressive woodwinds for our composing templates. Enjoy this 1st volume in our CineWinds lineup of products, covering all the woodwind instruments in the orchestra including ethnic woodwinds."
 
 [cinewinds-monster-low-winds]
-vendor = "cinesamples" 
-name = "CineWinds Monster Low Winds" 
-categories = ["vsti.woodwinds"] 
-requires = [["native-instruments-kontakt-player","5.6.8"]] 
-size = 2100 
+vendor = "cinesamples"
+name = "CineWinds Monster Low Winds"
+categories = [ "vsti.woodwinds" ]
+requires = [ [ "native-instruments-kontakt-player", "5.6.8" ] ]
+size = 2_100
 url = "https://store.cinesamples.com/products/cinewinds-monster-low-winds"
 demo = "https://www.youtube.com/watch?v=fvsRJPlslWk"
+price = 99
+nks = true
+description = "Enjoy another addition to our woodwinds orchestra. CineWinds Monster Low Winds is a super beefy low woodwind ensemble of bassoons, contrabassoons, bass clarinets, and contrabass clarinets recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles. As part of our woodwind orchestra, CineWinds Monster Low Winds is the real Hollywood Woodwinds sound and will make a perfect trio with CineWinds Core and CineWinds Pro. This woodwinds VST plugin will quickly become a favorite in your composition workflow."
+
+[cinewinds-pro]
+vendor = "cinesamples"
+name = "CineWinds Pro"
+categories = [ "vsti.woodwinds" ]
+requires = [ [ "native-instruments-kontakt-player", "5.8.1" ] ]
+size = 16_540
+url = "https://store.cinesamples.com/products/cinewinds-pro"
+demo = "https://www.youtube.com/watch?v=AZcJ_8haF3M"
+price = 399
+nks = true
+description = "CineWinds PRO is the expansion to the next-generation orchestral woodwinds library, CineWinds CORE. Recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, CineWinds PRO expansion fills out the remainder of the woodwind instruments in the orchestra and also offers an eclectic choice of ethnic, renaissance, and period wind instruments most often used in film scoring. From the lowest woodwind in the orchestra to the highest, this is the real Hollywood Woodwinds sound. Together with CineWinds Core, this Woodwind VST bundle will become your best woodwind sample library taking center stage in your composition template."
+
+[continuum-guitars]
+vendor = "metasonica" 
+name = "Continuum Guitars" 
+categories = ["vsti.guitar","vsti.sound-design","vsti.synthesizer"] 
+requires = [["native-instruments-kontakt-player","6.8.1"]] 
+size = 1840 
+url = "https://metasonica.net/continuum-guitars/"
+demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Continuum%20Guitars.mp3"
 price = 99 
 nks = true
 description = """\
-Enjoy another addition to our woodwinds orchestra. CineWinds Monster Low Winds is a super beefy low woodwind ensemble of bassoons, contrabassoons, bass clarinets, and contrabass clarinets recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles. As part of our woodwind orchestra, CineWinds Monster Low Winds is the real Hollywood Woodwinds sound and will make a perfect trio with CineWinds Core and CineWinds Pro. This woodwinds VST plugin will quickly become a favorite in your composition workflow.\
+Continuum Guitars brings you sampled guitar performances and evolving textures in an inspiring and innovative virtual instrument. Achieve your musical visions, from energetic rhythm guitar pulses to expressive harmonic and melodic beds. Sound either clean and organic or heavy and distorted. Enjoy synthetic filtered guitar pads, lo-fi textures and never explored dynamic soundscapes. A variety of evolving guitar performances were recorded with different playing techniques such as swells, tremolo picking and whammy bar, all processed through a chain of hand picked effect pedals. Another set of sources consists of inspiring rhythmic guitar patterns in a variety of styles sampled unprocessed across the guitar range with multiple dynamics. Deep sampled short and sustaining notes were included with multiple dynamics and round-robin variations. The Vector module allows continuously blending four sound sources in each XY pad across two user-defined keyboard zones for evolving drones or cinematic textures. An integrated arpeggiator interacts with the rhythmic loops, includes step modulation of multiple parameters. Effects include reverb stage (several types), delay (including reverse), amplifier & cabinet modeling, stomp-pedals, filtering, and modulation tools.\
 """
-
-[cinewinds-pro]
-vendor = "cinesamples" 
-name = "CineWinds Pro" 
-categories = ["vsti.woodwinds"] 
-requires = [["native-instruments-kontakt-player","5.8.1"]] 
-size = 16540 
-url = "https://store.cinesamples.com/products/cinewinds-pro"
-demo = "https://www.youtube.com/watch?v=AZcJ_8haF3M"
-price = 399 
-nks = true
-description = """\
-CineWinds PRO is the expansion to the next-generation orchestral woodwinds library, CineWinds CORE. Recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, CineWinds PRO expansion fills out the remainder of the woodwind instruments in the orchestra and also offers an eclectic choice of ethnic, renaissance, and period wind instruments most often used in film scoring. From the lowest woodwind in the orchestra to the highest, this is the real Hollywood Woodwinds sound. Together with CineWinds Core, this Woodwind VST bundle will become your best woodwind sample library taking center stage in your composition template.\
-"""
-
-[continuum-guitars]
-vendor = "cinesamples"
-name = "Continuum Guitars"
-size = 1_840
-requires = [ [ "native-instruments-kontakt-player", "6.5.2" ] ]
-nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Continuum%20Guitars.mp3"
-description = "Continuum Guitars brings you sampled guitar performances and evolving textures in an inspiring and innovative virtual instrument. Achieve your musical visions, from energetic rhythm guitar pulses to expressive harmonic and melodic beds. Sound either clean and organic or heavy and distorted. Enjoy synthetic filtered guitar pads, lo-fi textures and never explored dynamic soundscapes. A variety of evolving guitar performances were recorded with different playing techniques such as swells, tremolo picking and whammy bar, all processed through a chain of hand picked effect pedals. Another set of sources consists of inspiring rhythmic guitar patterns in a variety of styles sampled unprocessed across the guitar range with multiple dynamics. Deep sampled short and sustaining notes were included with multiple dynamics and round-robin variations. The Vector module allows continuously blending four sound sources in each XY pad across two user-defined keyboard zones for evolving drones or cinematic textures. An integrated arpeggiator interacts with the rhythmic loops, includes step modulation of multiple parameters. Effects include reverb stage (several types), delay (including reverse), amplifier & cabinet modeling, stomp-pedals, filtering, and modulation tools."
-url = "https://metasonica.net/continuum-guitars/"
 
 [deep-percussion-beds]
 vendor = "cinesamples"
@@ -24204,3 +24214,1985 @@ requires = [ ]
 nks = false
 description = "More advanced than X-Noise. Improved time resolution with fewer artifacts."
 url = "https://www.waves.com/plugins/z-noise"
+
+[curio-2]
+vendor = "8dio"
+name = "Curio"
+size = 1_040
+requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/8Dio%20-%20Curio.mp3"
+description = "A hidden world of sound generated from a miniature toy piano, primed, mangled, and deconstructed to create tonal textures, sweeps, moods, impact, deep percussion, and more! Perfect for movies, TV and games."
+
+[organ-2]
+vendor = "air-music-technology"
+name = "Organ"
+size = 529
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/AIR%20Music%20Technology%20-%20Organ.mp3"
+description = "Organ provides tonewheel organ sounds with drawbars and rotary simulation. Percussion, leakage, and key click controls add realism. Presets cover gospel, jazz, and rock settings. Drive and effects shape bite and space. It is designed for expressive organ performance."
+url = "https://www.airmusictech.com/virtual-instruments/organ/"
+
+  [organ-2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/organ"
+
+[shimmer-and-shake-2]
+vendor = "buzz"
+name = "Shimmer and Shake"
+size = 3_750
+requires = [ [ "native-instruments-kontakt", "5.6.1" ] ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Buzz%20-%20Shimmer%20and%20Shake.mp3"
+description = "Shimmer & Shake is a re-release of the original Nine Volt Audio sample library - updated and improved for 2019. It contains 25 instruments with 89 different rhythms (over 2300 loops) covering 4/4, 3/4, 7/8 and 5/4 time signatures and individual hits and rolls for each instrument. Available in Kontakt, WAV & RMX, REX formats, its perfect for your small percussion needs in a range of styles including Indie, Pop, Rock, Underscore and more!"
+url = "https://vstbuzz.com/the-vault/shimmer-shake/"
+
+[cello-textures-2]
+vendor = "emergence-audio"
+name = "Cello Textures"
+size = 3_330
+requires = [ [ "native-instruments-kontakt-player", "7.7.3" ] ]
+nks = true
+demo = "https://reaperaccessible.fr/catalog/demos/Emergence%20Audio%20-%20Cello%20Textures.mp3"
+description = """
+Cello Textures is the second installment in Emergence Audio’s non-static string series, using the Infinite Motion Engine™ and Non-Static Sampling™ for long, evolving performances.
+Featuring world-class cellist Mariko Muranaka to capture emotion and a neo-classical ambient vibe, this product allows you to sculpt expressive sonic landscapes for film, television, games, contemporary music, and beyond.
+Key Features:  
+• Ambient Cello  
+• Infinite Motion Engine™ 2.0  
+• Non-Static Sampling™  
+• Long evolving performances  
+• 17 traditional but uniquely performed articulations  
+• 100+ presets to get you started  
+• 100+ micro controls to fine-tune the sound  
+• 24-bit / 48 kHz samples  
+• MIDI Learn / Automation"""
+url = "https://emergenceaudio.com/product/cello-textures/?srsltid=AfmBOorXvxu8xXhuN93SBWtBZUmdTY-_BolVNtniydxixa8eGseXbNFa"
+
+[uilleann-pipes-2]
+vendor = "ilya-efimov"
+name = "Uilleann Pipes"
+size = 581
+requires = [ [ "native-instruments-kontakt", "5.6.0" ] ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Ilya%20Efimov%20-%20Uilleann%20Pipes.mp3"
+description = """
+The Uilleann Pipes are the national bagpipe of Ireland. Unusual and complex in construction, they demand significant mastery from the player. This library makes a complex instrument like the Uilleann Pipes easily available
+We sampled two full octaves for the chanter, including fast and slow legato notes, along with other articulations such as vibrato, staccato, and mordents. Legato speed can be controlled three ways: by keyswitch, by a MIDI controller, or by velocity
+A special keyboard range is provided for playing regulators and regulator chords, allowing accompaniment to the chanter’s melody in the manner of real bagpipers
+Traditional drones are usually tuned to D, limiting regulator notes. That limitation has been removed so you can choose any key, and the regulator range has been extended to a chromatic scale
+Controls are provided to turn drones, bellows noise, and other bagpipe FX on or off for a realistic sound
+This library delivers the unique reed blend and harmonic structure of the Uilleann Pipes, known for sounding sweeter and quieter than many other bagpipes
+• 2 natural legato types: normal and glissando
+• 8 different articulations
+• Two vibrato types with control over amount and speed
+• Realistic staccato with 6 round-robins
+• Reassignable keyswitches and MIDI controllers
+• 3 legato performance modes
+• Drone start, tuning, and volume control
+• Chromatic scale for regulator keys"""
+url = "https://www.ilyaefimov.com/products/ethnic-winds/uillean-pipes.html"
+
+[flanger]
+vendor = "ada-plugin-alliance"
+name = "Flanger"
+size = 44.9
+requires = [ ]
+nks = false
+description = "Official emulation of the late‑1970s A/DA flanger, recreated by Brainworx with authentic bucket‑brigade character. Controls like Threshold, Manual, Range, Speed, and Enhance take you from gentle shimmer to jet‑plane sweeps. Dual stereo modes and DAW tempo sync make wide, time‑locked modulation easy. • Switchable between the grainier 1979 circuit and the cleaner 2009 reissue. • Includes XL saturation and a Wet/Dry mix control."
+url = "https://www.plugin-alliance.com/products/flanger"
+
+[std_1]
+vendor = "ada-plugin-alliance"
+name = "STD_1"
+size = 34.19
+requires = [ ]
+nks = false
+description = "Stereo tapped delay inspired by the A/DA STD‑1 rack, ideal for short doubles, choruses, and thick ambience. Six harmonically related taps and a versatile LFO create rhythmic echoes and spacious textures. Independent left/right tap routing and regeneration give precise stereo field control. • MN3011 BBD circuit for authentic analog grit. • Designed for guitars, vocals, and any source that needs width and movement."
+url = "https://www.plugin-alliance.com/products/std-1-stereo-tapped-delay"
+
+[hype-2]
+vendor = "adptr-audio-plugin-alliance"
+name = "Hype"
+size = 67
+requires = [ ]
+nks = false
+description = "Multiband enhancement and excitation processor built to add controlled presence, clarity, and power. Optimized for fast mix and mastering workflows without harshness. Targeted low, mid, and high sections let you shape perceived energy across the spectrum. • Modern curve‑driven interface. • Great for pop, electronic, and productions that need to cut through."
+url = "https://www.plugin-alliance.com/products/hype"
+
+[metric-ab]
+vendor = "adptr-audio-plugin-alliance"
+name = "Metric AB"
+size = 93.5
+requires = [ ]
+nks = false
+description = "Reference A/B and analysis tool for instant comparisons against commercial tracks. Provides an A/B player with loop points, level control, and loudness compensation for honest matching. Includes spectrum, correlation, stereo width, and loudness metering for translation checks. • Manages reference playlists with precise alignment modes. • Built for demanding mixing and mastering."
+url = "https://www.plugin-alliance.com/products/metric-ab"
+
+[sculpt]
+vendor = "adptr-audio-plugin-alliance"
+name = "SCULPT"
+size = 101.9
+requires = [ ]
+nks = false
+description = "Dynamics and tone processor that combines transient control with spectral shaping to clean or energize a track. Reduces masking, refines attack, and balances bands without audible artifacts. Intelligent detection separates tonal and noisy content for quick, effective results. • Works on mix bus or individual tracks. • Helps reveal detail, punch, and clarity."
+url = "https://www.plugin-alliance.com/products/sculpt"
+
+[streamliner]
+vendor = "adptr-audio-plugin-alliance"
+name = "Streamliner"
+size = 65.36
+requires = [ ]
+nks = false
+description = "Codec auditioning and metering suite designed for streaming delivery. Audition major codecs and check normalized loudness before release. Displays true peak, integrated loudness, dynamics, and stereo image to anticipate platform behavior. • Before/after comparison and level matching tools included. • Tailored for mastering and quality control."
+url = "https://www.plugin-alliance.com/products/streamliner"
+
+[eq200]
+vendor = "amek-plugin-alliance"
+name = "EQ200"
+size = 57.9
+requires = [ ]
+nks = false
+description = "High‑end parametric equalizer inspired by AMEK consoles and outboard, with five wide bands and HP/LP filters. TMT models analog tolerances for a realistic stereo image. Modern additions include M/S processing, Mono‑Maker, stereo width control, and Auto Listen per band. • Scalable UI with optional THD for extra character. • Precision tool for mixing and mastering."
+url = "https://www.plugin-alliance.com/products/eq-200"
+
+[eq250]
+vendor = "amek-plugin-alliance"
+name = "EQ250"
+size = 76.4
+requires = [ ]
+nks = false
+description = "Emulation of a Sontec MEP‑250ex, renowned for transparency and silky top‑end. Five wide‑overlapping bands and switchable shelves enable fine‑grained shaping. Digital extras include TMT, M/S, Mono‑Maker, stereo width, and Auto Listen for rapid work. • Ideal for demanding mastering and surgical corrections. • Continuous controls provide exceptional freedom."
+url = "https://www.plugin-alliance.com/products/eq-250"
+
+[mastering-compressor-r2]
+vendor = "amek-plugin-alliance"
+name = "Mastering Compressor R2"
+size = 103.2
+requires = [ ]
+nks = false
+description = "Mastering compressor with combined RMS and peak detectors aimed at exemplary transparency. Three detectors—slow, fast, and peak—blend to follow real signal energy. Features a detector activity graph plus VCA Clip, 3‑band sidechain filters, and TMT. • Versatile on mix bus and in mastering. • Includes Stereo Width, Mono‑Maker, and Auto Listen."
+url = "https://www.plugin-alliance.com/products/mastering-compressor-amek"
+
+[b15n]
+vendor = "ampeg-plugin-alliance"
+name = "B15N"
+size = 61.47
+requires = [ ]
+nks = false
+description = "Official simulation of the Ampeg B‑15N bass amp, famous for thick tube warmth and weighty low end. Two historical circuits (1964 and 1966) deliver distinct feel and punch. Built‑in FX rack adds a noise gate, Power Soak, and HP/LP filters for refined tone shaping. • 42 studio recording chains crafted through a Neve console. • Perfect for soul, funk, and rock bass lines."
+url = "https://www.plugin-alliance.com/products/b-15n"
+
+[svt3pro]
+vendor = "ampeg-plugin-alliance"
+name = "SVT3Pro"
+size = 33.5
+requires = [ ]
+nks = false
+description = "Official emulation of the Ampeg SVT-3PRO head, combining a tube preamp with solid-state power for tight, modern low end. The mid Frequency Select offers five key centers to shape character and authority. The built-in FX rack adds a noise gate, switchable pre/post HP/LP filters, and a Power Soak for controlled saturation. • 27 Neve-crafted recording chains. • Ideal for precise bass work from R&B to metal."
+url = "https://www.plugin-alliance.com/products/svt-3pro"
+
+[svtvr-classic]
+vendor = "ampeg-plugin-alliance"
+name = "SVTVR Classic"
+requires = [ ]
+nks = false
+description = "Streamlined take on the SVT-VR, focused on essentials to deliver warmth and punch fast. A single full channel with Ultra Hi and Ultra Lo modes gives massive lows without extra complexity. The FX rack includes Power Soak, noise gate, and filters to fit the tone into a mix. • 3 carefully selected recording chains. • Built for quick production and direct bass tracking."
+url = "https://www.plugin-alliance.com/products/svt-vr-classic"
+
+[svtvr]
+vendor = "ampeg-plugin-alliance"
+name = "SVTVR"
+requires = [ ]
+nks = false
+description = "Emulation of the legendary dual-channel Ampeg SVT-VR, delivering huge lows and assertive mids. Choose between a three-band or two-band EQ, with authentic Bright, Ultra-Hi, and Ultra-Low switches. The FX rack adds a noise gate, Power Soak, and pre/post filters for precise shaping. • 23 recording chains crafted through a Neve console. • Designed for studio work and powerful bass reamping."
+url = "https://www.plugin-alliance.com/products/svt-vr"
+
+[v4b]
+vendor = "ampeg-plugin-alliance"
+name = "V4B"
+size = 58.2
+requires = [ ]
+nks = false
+description = "Recreation of the 100-watt all-tube Ampeg V-4B head, prized for rich texture and musical grit. A three-band EQ, Ultra-Low/Ultra-High switches, and gain staging take you from thick lows to controlled bite. The Brainworx FX rack provides a noise gate, Power Soak, and cabinet horn control. • 65 recording chains using classic mics and boutique outboard. • Excellent for vintage, soul, and rock bass lines."
+url = "https://www.plugin-alliance.com/en/products/ampeg-v4b.html"
+
+[bus-compressor]
+vendor = "bettermaker-plugin-alliance"
+name = "Bus Compressor"
+size = 39.3
+requires = [ ]
+nks = false
+description = "Bettermaker Bus Compressor delivers modern punch and refined control for mix glue. Flexible detection and a carefully tuned sidechain keep pumping at bay on buses. Clear interface with timing, threshold, and harmonic options enhances perceived energy. • Ideal on drum bus, full mix, or stems. • Preserves impact while smoothing peaks."
+url = "https://www.plugin-alliance.com/products/bus-compressor"
+
+[eq232d]
+vendor = "bettermaker-plugin-alliance"
+name = "EQ232D"
+size = 81.5
+requires = [ ]
+nks = false
+description = "Bettermaker EQ232D brings high-end analog-inspired tone shaping with powerful bands and silky air. Handles precise corrective moves as well as broad enhancement on tracks and buses. Modern conveniences meet classic musicality for fast, confident results. • Versatile tool for mastering and subtle mix work. • Continuous controls allow millimeter-level tweaks."
+url = "https://www.plugin-alliance.com/products/eq232d"
+
+[hg_2]
+vendor = "black-box-analog-design-plugin-alliance"
+name = "HG_2"
+size = 42.62
+requires = [ ]
+nks = false
+description = "Black Box HG-2 combines multiple tube stages to thicken, color, and densify signals. Adds harmonic weight and controlled presence on tracks and buses without harsh top end. Parallel drive and harmonic controls help glue a mix with intent. • Suits mixing and mastering when you need density. • Fine control over perceived loudness and depth."
+url = "https://www.plugin-alliance.com/products/hg-2"
+
+[hg_2ms]
+vendor = "black-box-analog-design-plugin-alliance"
+name = "HG_2MS"
+size = 54
+requires = [ ]
+nks = false
+description = "HG-2MS extends HG-2 with mid/side processing for independent saturation on center and sides. Thicken the foundation while opening the stereo edges without smearing the image. Musical drive with precise harmonic tuning and filtering options. • Great for widening a mix bus or adding glue without losing clarity. • Built for high-end finishing touches."
+url = "https://www.plugin-alliance.com/products/hg-2ms"
+
+[bx_2098-eq]
+vendor = "brainworx-plugin-alliance"
+name = "bx_2098 EQ"
+size = 37.5
+requires = [ ]
+nks = false
+description = "Brainworx bx-2098 EQ channels the famed Amek 9098 for controlled precision. Delivers effective bands, musical response, and modern stereo features. Equally at home on surgical fixes and broad bus curves. • M/S processing and practical width options. • Reliable from mixing to mastering."
+url = "https://www.plugin-alliance.com/products/bx-2098-eq"
+
+[bx_bassdude]
+vendor = "brainworx-plugin-alliance"
+name = "bx_bassdude"
+size = 37.3
+requires = [ ]
+nks = false
+description = 'Emulation of a vintage "Bassman"-style guitar head with dynamic cleans and classic crunch. Includes recording chains with modeled cabs, mics, and outboard to capture real-studio feel. The FX rack offers a noise gate, filters, and helpful utilities to tame the grit. • 35 varied recording chains. • Perfect for roots, surf, blues, and period rock guitars.'
+url = "https://www.plugin-alliance.com/products/bx-bassdude"
+
+[bx_blackdist2]
+vendor = "brainworx-plugin-alliance"
+name = "bx_blackdist2"
+requires = [ ]
+nks = false
+description = "Distortion plugin modeled after the ProCo RAT 2, covering tones from warm grit to biting fuzz. Straightforward Distortion, Filter, and Volume controls enable fast tone shaping. Works in mono or stereo on guitars, synths, and creative parallel chains. Useful for thickening rock riffs, pushing leads, and adding bite in a mix. • Place it before an amp simulator or as an insert to shape attack and grit."
+url = "https://www.plugin-alliance.com/en/products/bx-blackdist2.html"
+
+[bx_bluechorus2]
+vendor = "brainworx-plugin-alliance"
+name = "bx_bluechorus2"
+requires = [ ]
+nks = false
+description = "Software chorus inspired by the BOSS CE‑2, known for its rich, liquid tone and simplicity. Two controls, Rate and Depth, range from subtle thickening to wide ensemble motion. Operates in mono or stereo and suits guitars, keyboards, and pads. It adds width, movement, and glue to a mix without pedal noise. • Useful on clean inserts or on a stereo bus to widen a centered source."
+url = "https://www.plugin-alliance.com/en/products/bx-bluechorus2.html"
+
+[bx_boom]
+vendor = "brainworx-plugin-alliance"
+name = "bx_boom"
+size = 39.6
+requires = [ ]
+nks = false
+description = "A specialized tool for shaping kick drums and low‑end power. Frequency targeting and phase rotation help align sub content for greater punch. The drive section adds harmonic weight to make the kick stand out in the mix. Suitable for electronic, hip‑hop, and pop productions where tight low end is critical. • Use it on drum tracks, busses, or the final mix to tighten the lows."
+url = "https://www.plugin-alliance.com/products/bx-boom-v3"
+
+[bx_cleansweep-pro]
+vendor = "brainworx-plugin-alliance"
+name = "bx_cleansweep Pro"
+size = 50.2
+requires = [ ]
+nks = false
+description = "A hybrid high‑pass and low‑pass filter designed for quick pre‑mix cleanup. Multiple filter models with adjustable slopes and spectral analysis are included. The X/Y joystick allows intuitive simultaneous control of both cuts. Ideal for removing lows and highs you do not need and clarifying the soundstage. • Useful on tracks, groups, or for creative sweep effects."
+url = "https://www.plugin-alliance.com/products/bx-cleansweep-pro"
+
+[bx_clipper]
+vendor = "brainworx-plugin-alliance"
+name = "bx_clipper"
+size = 43.8
+requires = [ ]
+nks = false
+description = "A dedicated clipper for raising loudness without the pumping artifacts of heavy limiting. FET and Diode modes, Ceiling and Knee controls, and up to 32x oversampling. Designed to complement a limiter at the end of a mastering chain. Helps gain perceived dB while preserving transient impact. • Suits mix bus, mastering, and parallel processing."
+url = "https://www.plugin-alliance.com/products/bx-clipper"
+
+[bx_console-amek-200]
+vendor = "brainworx-plugin-alliance"
+name = "bx_console AMEK 200"
+size = 165.6
+requires = [ ]
+nks = false
+description = "A channel strip inspired by high‑end AMEK tools with a five‑band EQ and a mastering compressor. Includes a gate/expander, high‑pass and low‑pass filters, and a limiter with a VCA clipper. TMT technology provides 72 analog‑tolerant channels for greater width and depth. Suitable for mixing and mastering when controlled transparency is required. • Includes Mono Maker and Stereo Width to stabilize and shape the low end."
+url = "https://www.plugin-alliance.com/products/bx-console-amek-200"
+
+[bx_console-amek-9099]
+vendor = "brainworx-plugin-alliance"
+name = "bx_console AMEK 9099"
+size = 169.2
+requires = [ ]
+nks = false
+description = "A channel strip based on the AMEK 9098i featuring musical EQ, compressor, limiter, and a gate/expander section. Adds modern tools such as Mono Maker, Stereo Width, and a Clip mode. TMT models 72 channels to capture real console variation. Suitable for detailed mixing and main bus processing. • Includes Sheen/Glow shelf modes and a Notch option for precise control."
+url = "https://www.plugin-alliance.com/products/bx-console-amek-9099"
+
+[bx_console-focusrite-sc]
+vendor = "brainworx-plugin-alliance"
+name = "bx_console Focusrite SC"
+size = 60.3
+requires = [ ]
+nks = false
+description = "An officially approved Focusrite channel strip inspired by the ISA110 and ISA130 modules. Provides EQ, compressor/limiter, de‑esser, and gate/expander with modern enhancements. TMT offers 72 channels to recapture analog depth and width. Suitable for acoustic sources, vocals, and demanding modern mixes. • Includes THD and Virtual Gain to dial in saturation and simulated analog noise."
+url = "https://www.plugin-alliance.com/products/bx-console-focusrite-sc"
+
+[bx_console-e]
+vendor = "brainworx-plugin-alliance"
+name = "bx_console E"
+size = 49.1
+requires = [ ]
+nks = false
+description = "An approved emulation of the SSL 4000 E channel strip with switchable brown/black EQ and a full dynamics section. 72 TMT channels recreate real console variation, with V‑Gain and THD for analog vibe. Well suited to drums, guitars, and characterful rock mixes. • Resizable UI and presets help speed up workflow."
+url = "https://www.plugin-alliance.com/products/bx-console-ssl-4000-e"
+
+[bx_console-g]
+vendor = "brainworx-plugin-alliance"
+name = "bx_console G"
+requires = [ ]
+nks = false
+description = "SSL 4000 G channel strip with switchable pink and orange EQ flavors and E/G dynamics. TMT technology models 72 channels to reproduce analog variation. Ideal for punchy, precise mixes with more bite than the E series. Suitable for drums, guitars, and main busses that need extra edge. • Mono Maker and Stereo Width help stabilize the lows and open the image."
+url = "https://www.plugin-alliance.com/products/bx-console-ssl-4000-g"
+
+[bx_console-n]
+vendor = "brainworx-plugin-alliance"
+name = "bx_console N"
+requires = [ ]
+nks = false
+description = "Channel strip inspired by a Neve VXS with TMT technology providing 72 analog‑tolerant channels. It includes EQ, dynamics, high‑pass and low‑pass filters, and virtual gain controls. Works in mono or stereo and fits modern mixing workflows. Designed to deliver the depth, warmth, and precision of a large British desk. • Includes Mono Maker and Stereo Width controls to stabilize lows and shape the image."
+url = "https://www.plugin-alliance.com/products/bx-console-n"
+
+[bx_console-ssl-4000-e]
+vendor = "brainworx-plugin-alliance"
+name = "bx_console SSL 4000 E"
+requires = [ ]
+nks = false
+description = "SSL 4000 E channel strip with switchable EQ and a full dynamics section. TMT models 72 channels to capture real analog variation. Well suited to drums, guitars, vocals, and main busses. Resizable UI and a workflow that mirrors classic SSL desks. • Includes Mono Maker and Stereo Width to manage low end and space."
+url = "https://www.plugin-alliance.com/en/products/bx-console-ssl-4000-e.html"
+
+[bx_console-ssl-9000-j]
+vendor = "brainworx-plugin-alliance"
+name = "bx_console SSL 9000 J"
+requires = [ ]
+nks = false
+description = "SSL 9000 J channel strip with TMT modeling 72 channels for realistic analog variation. EQ, dynamics, filters, and THD/V‑Gain controls deliver precise tone shaping. Designed for modern mixes with wide imaging and high clarity. Suited for vocals, drums, guitars, and stereo busses. • Mono Maker and Stereo Width tools help stabilize lows and open the field."
+url = "https://www.plugin-alliance.com/products/bx-console-ssl-9000-j"
+
+[bx_control-v2]
+vendor = "brainworx-plugin-alliance"
+name = "bx_control V2"
+requires = [ ]
+nks = false
+description = "Control tool and mid/side matrix with Mono Maker and Stereo Width. Provides listening modes, an attenuator, and Peak/RMS meters. Enables low‑end centering and image management in mixing and mastering. Suitable for precise monitoring and upstream M/S processing. • Includes utility functions to correct phase and balance."
+url = "https://www.plugin-alliance.com/products/bx-control-v2"
+
+[bx_crispytuner]
+vendor = "brainworx-plugin-alliance"
+name = "bx_crispytuner"
+requires = [ ]
+nks = false
+description = "Vocal pitch‑correction processor with Simple, Advanced, and Graphical modes. Enables detailed editing, formant shifting, and scale transposition. Covers transparent tuning through to bold creative effects. Fits modern vocal chains and mix workflows. • Optimized for fast line‑by‑line tuning."
+url = "https://www.plugin-alliance.com/products/bx-crispytuner"
+
+[bx_delay2500]
+vendor = "brainworx-plugin-alliance"
+name = "bx_delay2500"
+requires = [ ]
+nks = false
+description = "Creative delay with mid/side matrix, ducking, distortion, and modulation. Supports glitch‑free time changes for dynamic effects. Ranges from subtle slapback to experimental soundscapes. Use on inserts or sends for vocals, guitars, and synths. • Includes tools to shape stereo image and repeat articulation."
+url = "https://www.plugin-alliance.com/products/bx-delay-2500"
+
+[bx_digital-v3]
+vendor = "brainworx-plugin-alliance"
+name = "bx_digital V3"
+requires = [ ]
+nks = false
+description = "An 11‑band EQ for mixing and mastering with stereo, dual‑mono, and M/S modes. Includes Mono Maker, Bass and Presence Shifters, and advanced monitoring. Designed for precise spectral control and imaging. Suitable for main busses and demanding mastering. • Full version with dedicated matrices and meters."
+url = "https://www.plugin-alliance.com/products/bx-digital-v3"
+
+[bx_digital-v3-mix]
+vendor = "brainworx-plugin-alliance"
+name = "bx_digital V3 mix"
+requires = [ ]
+nks = false
+description = "A streamlined bx-digital V3 variant for mixing without the full M/S section. Provides core equalization with a simplified interface. Useful on individual tracks and subgroups. Speeds up common adjustments without sacrificing precision. • Use it when a fast, clear EQ is enough."
+url = "https://www.plugin-alliance.com/products/bx-digital-v3"
+
+[bx_distorange-free]
+vendor = "brainworx-plugin-alliance"
+name = "bx_distorange - Free"
+requires = [ ]
+nks = false
+description = "Software distortion pedal inspired by a classic orange unit for sharp, edgy guitars. Simple controls for gain, tone, and level take you from crunch to heavy saturation. Works in mono or stereo and fits guitar chains or creative processing. Suitable for rock, grunge, and aggressive textures on synths and drum machines. • Ideal before an amp simulator to shape attack and grit."
+url = "https://www.plugin-alliance.com/collections/free-plugins"
+
+[bx_dyneq-v2]
+vendor = "brainworx-plugin-alliance"
+name = "bx_dynEQ V2"
+requires = [ ]
+nks = false
+description = "Dynamic equalizer for mixing and mastering with precise problem‑band targeting. Tames sibilance, controls lows, and adds punch with signal‑dependent action. Stereo and mid/side modes let you work in the center or on the sides. Suited to vocals, drums, and main busses when selective control is required. • Delivers surgical results without audible artifacts when properly set."
+url = "https://www.plugin-alliance.com/products/bx-dyneq-v2"
+
+[bx_enhancer]
+vendor = "brainworx-plugin-alliance"
+name = "bx_enhancer"
+requires = [ ]
+nks = false
+description = "All‑in‑one enhancement processor combining saturator, compressor, and EQ. Includes a clipper and control tools to add impact without inflating average level. Designed to speed up mixing of tracks and groups with a direct workflow. Fits guitars, vocals, drums, and synths that need character. • Use it on inserts to densify and clarify a source quickly."
+url = "https://www.plugin-alliance.com/en/products/bx-enhancer.html"
+
+[bx_greenscreamer-free]
+vendor = "brainworx-plugin-alliance"
+name = "bx_greenscreamer - Free"
+requires = [ ]
+nks = false
+description = "Software overdrive inspired by the famed green pedal with a vocal mid focus. Overdrive, Tone, and Level controls thicken clean guitars or push an amp. Works in mono or stereo and can color busses as well. Fits blues, rock, and metal as an input booster. • Place it before an amp simulator to tighten lows and emphasize mids."
+url = "https://www.plugin-alliance.com/collections/free-plugins"
+
+[bx_hybrid-v2]
+vendor = "brainworx-plugin-alliance"
+name = "bx_hybrid V2"
+requires = [ ]
+nks = false
+description = "An 11‑band EQ combining analog‑style tone with a digital workflow. Includes Mono Maker, Stereo Width, shifter bands, and audition modes. Designed for precise correction and tonal shaping in mix and mastering. Suited to tracks, subgroups, and main busses. • Joystick control and auto‑listen modes speed up frequency hunting."
+url = "https://www.plugin-alliance.com/products/bx-hybrid-v2"
+
+[bx_hybrid-v2-mix]
+vendor = "brainworx-plugin-alliance"
+name = "bx_hybrid V2 mix"
+requires = [ ]
+nks = false
+description = "A mix‑focused variant of bx-hybrid V2 offering core equalization. Streamlined interface for fast adjustments in dense sessions. Well suited to individual tracks and subgroups that need clear shaping. It preserves the precision and musicality of Brainworx filters. • Encourages quick decisions without parameter overload."
+url = "https://www.plugin-alliance.com/products/bx-hybrid-v2"
+
+[bx_limiter]
+vendor = "brainworx-plugin-alliance"
+name = "bx_limiter"
+requires = [ ]
+nks = false
+description = "Low‑latency limiter for mono and stereo channels aimed at stems and busses. Linked or independent detection, dry/wet mix, and convenient output dim. Designed to catch transients early and ease the final limiter’s job. Suited to drums, subgroups, and highly dynamic tracks. • An effective partner before a more transparent mastering limiter."
+url = "https://www.plugin-alliance.com/products/bx-limiter"
+
+[bx_limiter-true-peak]
+vendor = "brainworx-plugin-alliance"
+name = "bx_limiter True Peak"
+requires = [ ]
+nks = false
+description = "True Peak limiter built to hit loudness targets without inter‑sample peaks. Two limiting styles, selective oversampling, and built‑in XL saturation. Includes loudness and dynamic‑range meters for real‑time control. Suited to mix bus and mastering where level compliance is required. • Tone and foundation filters help set the master’s spectral balance."
+url = "https://www.plugin-alliance.com/products/bx-limiter-true-peak"
+
+[bx_masterdesk]
+vendor = "brainworx-plugin-alliance"
+name = "bx_masterdesk"
+requires = [ ]
+nks = false
+description = "A complete analog‑style mastering chain condensed into a single, easy‑to‑drive plugin. Three‑step workflow with input gain, foundation control, compression, and final limiting. Includes tone and width tools as well as dedicated meters. Enables quick, competitive masters without complex setup. • Suitable for finishing albums, EPs, and streaming deliverables."
+url = "https://www.plugin-alliance.com/products/bx-masterdesk"
+
+[bx_masterdesk-classic-free]
+vendor = "brainworx-plugin-alliance"
+name = "bx_masterdesk Classic - Free"
+requires = [ ]
+nks = false
+description = "A simplified mastering chain designed to reach competitive level and balanced tone quickly. It combines gain, foundation, EQ, compression, and final control in a single module. Built for fast decisions without parameter overload. Suitable for demos, EPs, and streaming deliverables that need quick polish. • Ideal when a direct workflow is the priority."
+url = "https://www.plugin-alliance.com/pages/free-plugins"
+
+[bx_masterdesk-pro]
+vendor = "brainworx-plugin-alliance"
+name = "bx_masterdesk Pro"
+requires = [ ]
+nks = false
+description = "An advanced mastering chain with extended tone, dynamics, and width controls. It enables fine adjustments while keeping a clear layout. Covers tasks from mix bus prep to final mastering. Suited to demanding productions where consistency is essential. • Provides headroom while preserving transient punch."
+url = "https://www.plugin-alliance.com/products/brainworx-bx-masterdesk-pro"
+
+[bx_masterdesk-true-peak]
+vendor = "brainworx-plugin-alliance"
+name = "bx_masterdesk True Peak"
+requires = [ ]
+nks = false
+description = "A mastering chain focused on meeting True Peak limits and loudness targets. Includes tools to control inter‑sample peaks and stabilize the low end. Simplifies compliance for streaming platforms. Suitable for modern deliverables where precise levels are required. • Optimized for a clean, controlled result."
+url = "https://www.plugin-alliance.com/products/bx-masterdesk-true-peak"
+
+[bx_megadual]
+vendor = "brainworx-plugin-alliance"
+name = "bx_megadual"
+requires = [ ]
+nks = false
+description = "A dual‑channel high‑gain guitar amp simulator with cabinet and mic models. Covers tones from muscular crunch to tight saturation. Includes EQ, gain, presence, and resonance controls. Suited to heavy rock and tight rhythm metal. • Pair with cabinet IRs to fine‑tune color."
+url = "https://www.plugin-alliance.com/products/bx-megadual"
+
+[bx_megasingle-free]
+vendor = "brainworx-plugin-alliance"
+name = "bx_megasingle - Free"
+requires = [ ]
+nks = false
+description = "A single‑channel high‑saturation guitar amp simulator with fast response. Delivers incisive mids and tight lows. Includes EQ, gain, presence, and dynamics controls. Good for aggressive leads and precise rhythms. • Works well with high‑efficiency cabinets."
+url = "https://www.plugin-alliance.com/pages/free-plugins"
+
+[bx_metal2]
+vendor = "brainworx-plugin-alliance"
+name = "bx_metal2"
+requires = [ ]
+nks = false
+description = "Software distortion pedal inspired by a classic metal design focused on attack and precision. Delivers tight grain and cutting upper mids. Fits fast riffs and pronounced palm‑mutes. Use it before an amp simulator or as a creative insert. • Favors a modern, punchy tone."
+url = "https://www.plugin-alliance.com/en/products/bx-metal2.html"
+
+[bx_meter-free]
+vendor = "brainworx-plugin-alliance"
+name = "bx_meter - Free"
+requires = [ ]
+nks = false
+description = "Comprehensive metering tool with Peak, RMS, and K‑System indicators. Helps evaluate dynamics, headroom, and level consistency. Useful in mixing and mastering to verify technical targets. Works on tracks, busses, and the main output. • Encourages measurement‑driven decisions."
+url = "https://www.plugin-alliance.com/pages/free-plugins"
+
+[bx_oberhausen]
+vendor = "brainworx-plugin-alliance"
+name = "bx_oberhausen"
+requires = [ ]
+nks = true
+demo = "https://reaperaccessible.fr/catalog/demos/Plugin%20Alliance%20-%20Brainworx%20-%20bx_oberhausen.mp3"
+description = "A polyphonic virtual synthesizer inspired by a classic SEM analog circuit. Features two oscillators, a multimode filter, and flexible modulation. Capable of thick tones, evolving pads, and percussive sequences. Fits electronic, cinematic, and pop styles. • Supports generous polyphony for rich chords."
+url = "https://www.plugin-alliance.com/products/bx-oberhausen"
+
+[bx_opto]
+vendor = "brainworx-plugin-alliance"
+name = "bx_opto"
+requires = [ ]
+nks = false
+description = "A soft‑knee optical compressor with simple controls for musical gain reduction. Suitable for vocals, bass, and clean guitars. Calibrated attack and release times yield natural control. Works on inserts or busses with subtle coloration. • Favors transparent, warm compression."
+url = "https://www.plugin-alliance.com/products/bx-opto"
+
+[bx_opto-pedal-free]
+vendor = "brainworx-plugin-alliance"
+name = "bx_opto Pedal - Free"
+requires = [ ]
+nks = false
+description = "A pedal‑style compressor based on opto circuits, built to level and sustain. It stabilizes guitar and bass lines without harshness. Provides a simple, performance‑oriented workflow. Ideal before an amp simulator or on an instrument bus. • Adds stability without crushing attack."
+url = "https://www.plugin-alliance.com/pages/free-plugins"
+
+[bx_paneq]
+vendor = "brainworx-plugin-alliance"
+name = "bx_panEQ"
+requires = [ ]
+nks = false
+description = "A panning‑oriented equalizer that shapes tone differently left and right. Useful for balancing complex stereo sources and creating space. Provides a clear workflow for precise adjustments. Fits keyboards, overheads, and stereo busses. • Enables spectral separation across the panorama."
+url = "https://www.plugin-alliance.com/products/bx_paneq"
+
+[bx_refinement]
+vendor = "brainworx-plugin-alliance"
+name = "bx_refinement"
+requires = [ ]
+nks = false
+description = "A spectral enhancer designed to smooth harshness and reduce high‑frequency aggression. Applies selective processing that preserves mix clarity. Use it on vocals, cymbals, and bright busses. Helps control listening fatigue in modern productions. • Acts like targeted polish for the top end."
+url = "https://www.plugin-alliance.com/products/bx-refinement-v3"
+
+[bx_rockergain100]
+vendor = "brainworx-plugin-alliance"
+name = "bx_rockergain100"
+requires = [ ]
+nks = false
+description = "A guitar amp simulator inspired by a 100‑watt British head. Offers channels from clean to high‑gain with firm dynamics. Includes EQ, presence, and resonance controls. Suited to modern rock, stoner, and metal. • Ideal with cabinet IRs to refine projection."
+url = "https://www.plugin-alliance.com/products/bx-rockergain100"
+
+[bx_rockrack-v3]
+vendor = "brainworx-plugin-alliance"
+name = "bx_rockrack V3"
+requires = [ ]
+nks = false
+description = "A suite of virtual guitar amps and cabinets combined in a software rack. Allows chaining of heads, cabinets, and mics for varied combinations. Covers tones from pristine clean to dense saturation. Suitable for studio and live reamping. • Includes presets to speed up getting started."
+url = "https://www.plugin-alliance.com/products/bx-rockrack-v3"
+
+[bx_rockrack-v3-player-free]
+vendor = "brainworx-plugin-alliance"
+name = "bx_rockrack V3 Player - Free"
+requires = [ ]
+nks = false
+description = "A free player for bx-rockrack V3 configurations with a limited model set. Delivers ready‑to‑play tones without deep editing. Useful for sketching, practice, and fast recording. Drops easily into dense sessions. • Less control but instant startup."
+url = "https://www.plugin-alliance.com/pages/free-plugins"
+
+[bx_rooms]
+vendor = "brainworx-plugin-alliance"
+name = "bx_rooMS"
+requires = [ ]
+nks = false
+description = "Stereo reverb with mid/side processing and TrueSpace technology, delivering a continuous range of rooms, halls, churches, and plates. Width control expands the reverb image without smearing the center. M/S parametric filters and center panning let you sculpt the field precisely. Nearly 200 presets get you started quickly. Low CPU usage makes it suitable for inserts across mixes and creative ambience."
+url = "https://www.plugin-alliance.com/products/bx_rooms"
+
+[bx_saturator-v2]
+vendor = "brainworx-plugin-alliance"
+name = "bx_saturator V2"
+requires = [ ]
+nks = false
+description = "Multiband M/S saturation that thickens the signal without flattening dynamics. Separate center and sides processing enhances width while keeping focus. Controls for drive, balance, and blend. Useful in mixing and mastering to add warmth and presence."
+url = "https://www.plugin-alliance.com/products/bx_saturator-v2"
+
+[bx_shredspread]
+vendor = "brainworx-plugin-alliance"
+name = "bx_shredspread"
+requires = [ ]
+nks = false
+description = "Stereo width tool tailored for doubled guitars and subgroups. M/S algorithms help maintain mono compatibility and reduce phase issues. Adjust width, tone, and low-end handling. Also effective on keyboards, choirs, and stereo layers."
+url = "https://www.plugin-alliance.com/en/industry-reviews/bx_shredspread.html"
+
+[bx_solo]
+vendor = "brainworx-plugin-alliance"
+name = "bx_solo"
+requires = [ ]
+nks = false
+description = "M/S utility for monitoring Mid, Side, Left, or Right in isolation. Quickly check stereo image and phase. Helps set width and diagnose compatibility problems. Simple interface for fast quality control."
+url = "https://www.plugin-alliance.com/en/products/bx_solo.html"
+
+[bx_stereomaker]
+vendor = "brainworx-plugin-alliance"
+name = "bx_stereomaker"
+requires = [ ]
+nks = false
+description = "Mono-to-stereo maker using controlled delays and M/S processing. Builds a wide image while preserving mono compatibility. Delay, width, and filtering controls reduce artifacts. Great for mono synths, drum machines, and single-mic sources."
+url = "https://www.plugin-alliance.com/products/bx_stereomaker"
+
+[bx_subfilter]
+vendor = "brainworx-plugin-alliance"
+name = "bx_subfilter"
+requires = [ ]
+nks = false
+description = "Resonant high-pass filter focused on tightening the low end. Emphasizes core bass energy with targeted settings. Removes mud while keeping impact. Fits 808s, kick drums, and bass lines."
+url = "https://www.plugin-alliance.com/en/products/bx_subfilter.html"
+
+[bx_subsynth]
+vendor = "brainworx-plugin-alliance"
+name = "bx_subsynth"
+requires = [ ]
+nks = false
+description = "Subharmonic generator inspired by analog processing. Adds an octave below to reinforce drums and bass. Separate sections shape weight while staying clear. Works in mixing, post, and live contexts."
+url = "https://www.plugin-alliance.com/products/bx_subsynth"
+
+[bx_townhouse-buss-compressor]
+vendor = "brainworx-plugin-alliance"
+name = "bx_townhouse Buss Compressor"
+requires = [ ]
+nks = false
+description = "British-style buss compressor that glues mixes together. Characteristic curves and timing stabilize dynamics. Dry/Wet control and internal sidechain enable precise blending. Suitable on mix buss and subgroups."
+url = "https://www.plugin-alliance.com/products/bx_townhouse-buss-compressor"
+
+[bx_tuner]
+vendor = "brainworx-plugin-alliance"
+name = "bx_tuner"
+requires = [ ]
+nks = false
+description = "Fast, readable chromatic tuner for guitar, bass, and more. Low latency and stable display for precise tuning. Convenience features allow tuning while monitoring. Practical for tracking and rehearsals."
+url = "https://www.plugin-alliance.com/en/products/bx_tuner.html"
+
+[bx_xl-v2]
+vendor = "brainworx-plugin-alliance"
+name = "bx_XL V2"
+requires = [ ]
+nks = false
+description = "M/S mastering limiter aimed at loud results without harshness. Separate center and sides controls keep the image stable. Harmonic section adds presence. Usable on the final chain or stems."
+
+[bx_yellowdrive]
+vendor = "brainworx-plugin-alliance"
+name = "bx_yellowdrive"
+requires = [ ]
+nks = false
+description = "Software overdrive pedal for analog-style color. Accentuates midrange and adds controlled grit. Responds to playing dynamics and input level. Fits guitars, keyboards, and creative busses."
+url = "https://www.plugin-alliance.com/en/products/bx_yellowdrive.html"
+
+[gav19t]
+vendor = "chandler-limited-plugin-alliance"
+name = "GAV19T"
+requires = [ ]
+nks = false
+description = "Guitar amp simulator inspired by classic British heads from Chandler. Multiple drive voicings and Baxandall EQ cover clean to heavy tones. Brainworx modeling includes cabinet IRs and an FX rack. Suited for rhythm parts, leads, and both vintage and modern colors. Designed to capture the dynamics and character of the original circuits."
+url = "https://www.plugin-alliance.com/products/gav19t"
+
+[bax-eq-master]
+vendor = "dangerous-music-plugin-alliance"
+name = "BAX EQ Master"
+requires = [ ]
+nks = false
+description = "Baxandall equalizer derived from Dangerous Music hardware. Gentle curves to shape lows and highs without harshness. Ideal on mix buss and mastering to add air and weight. Simple controls enable subtle yet effective adjustments. Prized for transparency and musical tone."
+url = "https://www.plugin-alliance.com/products/bax-eq"
+
+[bax-eq-mix]
+vendor = "dangerous-music-plugin-alliance"
+name = "BAX EQ Mix"
+requires = [ ]
+nks = false
+description = "Baxandall EQ tailored for mixing, based on Dangerous Music topology. Delivers clean, musical broad-stroke corrections. Helps tighten lows while opening the top end. Use on tracks, groups, and the main buss. Clear interface for quick, precise tweaks."
+url = "https://www.plugin-alliance.com/products/bax-eq"
+
+[herbert]
+vendor = "diezel-plugin-alliance"
+name = "Herbert"
+requires = [ ]
+nks = false
+description = "Simulation of the Diezel Herbert amp with colossal headroom. From extended cleans to massive distortion with cabinet IRs. Includes integrated FX for delay, gate, and precision filters. Great for low tunings and modern metal. Captures the punch and definition of the tube original."
+url = "https://www.plugin-alliance.com/products/herbert"
+
+[vh4]
+vendor = "diezel-plugin-alliance"
+name = "VH4"
+requires = [ ]
+nks = false
+description = "Emulation of the iconic four‑channel Diezel VH4 head. From solid cleans to muscular high‑gain tones with clarity. Includes a wide IR cabinet library and tone‑shaping tools. Works for energetic rock through modern metal. Recreates the signature response and grain of the original."
+url = "https://www.plugin-alliance.com/products/vh4"
+
+[tantra-2]
+vendor = "ds-audio-plugin-alliance"
+name = "Tantra 2"
+requires = [ ]
+nks = false
+description = "Rhythmic multi‑effect to animate and texture any source. Sequenced processing stages for filters, distortion, delays, and more. Creates tempo‑synced patterns and evolving movement. Useful on drums, synths, and evolving textures. Designed to add motion, depth, and controlled variation."
+url = "https://www.plugin-alliance.com/products/tantra-2"
+
+[thorn]
+vendor = "ds-audio-plugin-alliance"
+name = "Thorn"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Plugin%20Alliance%20-%20DS%20Thorn.mp3"
+description = "Modern spectral synthesizer. Accurate oscillators, expressive filters, and extensive modulation. Built‑in effects help sculpt timbres. Suitable for aggressive, percussive, or airy sounds. A versatile instrument for contemporary electronic production."
+url = "https://www.plugin-alliance.com/products/thorn"
+
+  [thorn.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/thorn"
+
+[alpha-compressor-master]
+vendor = "elysia-plugin-alliance"
+name = "alpha compressor master"
+requires = [ ]
+nks = false
+description = "Mastering compressor based on elysia alpha. Precise timing and ratio control for transparent glue. Designed for the main buss and subgroups. Adds stability and cohesion without losing detail. Suited to modern and classic productions."
+url = "https://www.plugin-alliance.com/en/products/elysia_alpha_compressor_v2.html"
+
+[alpha-compressor-mix]
+vendor = "elysia-plugin-alliance"
+name = "alpha compressor mix"
+requires = [ ]
+nks = false
+description = "Mix‑oriented edition of elysia alpha compressor. Controls tracks and busses with ease. Adjustable timing and musical curves for natural control. Delivers a solid, readable place in the mix. Practical on dynamic tracks and subgroups."
+url = "https://www.plugin-alliance.com/en/products/elysia_alpha_compressor_v2.html"
+
+[karacter-master]
+vendor = "elysia-plugin-alliance"
+name = "karacter master"
+requires = [ ]
+nks = false
+description = "elysia karacter saturation and color processor. From subtle harmonic enrichment to strong distortion. Works on tracks, busses, and the master with careful dosing. Thickens, brightens, or dirties in a controlled way. Straightforward controls to find the desired character fast."
+url = "https://www.plugin-alliance.com/products/karacter"
+
+[karacter-mix]
+vendor = "elysia-plugin-alliance"
+name = "karacter mix"
+requires = [ ]
+nks = false
+description = "Mix edition of karacter focused on track and subgroup inserts. Adds density and grain while staying manageable. Helps key elements cut through without excess. Wide range from gentle harmonics to bold saturation. Built for quick integration in mixing workflows."
+url = "https://www.plugin-alliance.com/products/karacter"
+
+[mpressor]
+vendor = "elysia-plugin-alliance"
+name = "mpressor"
+requires = [ ]
+nks = false
+description = "elysia mpressor compressor with fast response. Enables creative treatments and firm dynamic control. Great on drums, bass, and percussive sources. Can also serve as moderate glue depending on settings. Encourages energetic, punchy results."
+url = "https://www.plugin-alliance.com/products/mpressor"
+
+[mpressor-sc]
+vendor = "elysia-plugin-alliance"
+name = "mpressor sc"
+requires = [ ]
+nks = false
+description = "mpressor sc variant with tailored side‑chain behavior. Provides precise control through external detection. Effective for creative pumping or discreet control. Fits rhythmic tracks and subgroups. Shapes impact and the mix’s breathing."
+url = "https://www.plugin-alliance.com/products/mpressor"
+
+[museq-master]
+vendor = "elysia-plugin-alliance"
+name = "museq master"
+requires = [ ]
+nks = false
+description = "museq mastering equalizer with musical curves. Handles broad strokes and fine adjustments. Adds air, weight, and clarity across bands. Works on the main buss and stems. Contributes to a balanced, natural result."
+url = "https://www.plugin-alliance.com/en/products/elysia_museq.html"
+
+[museq-mix]
+vendor = "elysia-plugin-alliance"
+name = "museq mix"
+requires = [ ]
+nks = false
+description = "Mix version of the museq equalizer. Geared toward tracks and subgroups. Sculpts tone without harshness. Helps place elements in the soundstage. Delivers quick, consistent settings for workflow."
+url = "https://www.plugin-alliance.com/en/products/elysia_museq.html"
+
+[niveau-filter]
+vendor = "elysia-plugin-alliance"
+name = "Niveau Filter"
+requires = [ ]
+nks = false
+description = "Tilt-style Niveau filter inspired by elysia circuits, designed to rebalance lows and highs quickly without harshness. Processing pivots around a variable center frequency, boosting one band while attenuating the other. • x10 mode shifts the working range into higher frequencies. A simple, musical tool for tonal correction or character shaping."
+url = "https://www.plugin-alliance.com/en/products/elysia_niveau_filter.html"
+
+[nvelope]
+vendor = "elysia-plugin-alliance"
+name = "Nvelope"
+size = 29.6
+requires = [ ]
+nks = false
+description = "Envelope processor that shapes attack and sustain independently to add punch or tame transients. Works in Full Range mode for quick results or Dual Band mode to target specific frequency zones. • EQ mode provides high and low shelves for tonal tweaks. Great on drums, guitars, and ambience to control room and note length."
+url = "https://www.plugin-alliance.com/products/nvelope"
+
+[phils-cascade]
+vendor = "elysia-plugin-alliance"
+name = "Phils Cascade"
+size = 48.2
+requires = [ ]
+nks = false
+description = "Analog saturation modeled from a one-off hardware design built with rare NOS components. Adds harmonic richness and organic grit with a uniquely musical character. • Controls include Gain, Boost, Bias, Grid, Resonance, Peak and Filter for precise tone shaping. Ideal for thickening virtual instruments, adding edge to vocals, or creative sound design."
+url = "https://www.plugin-alliance.com/products/phils-cascade"
+
+[e646-vs]
+vendor = "engl-plugin-alliance"
+name = "E646 VS"
+size = 46.3
+requires = [ ]
+nks = false
+description = "Official emulation of the ENGL E646 Victor Smolski amp with multiple channels and modern metal voicings. Includes the Brainworx FX rack with gate, host‑syncable lo‑fi delay, filters, and power soak. • Over 100 recording chains based on premium cabinet, mic, and preamp IRs. Perfect for tight rhythm work, cutting leads, and reamping DI guitars."
+url = "https://www.plugin-alliance.com/products/engl_e646_vs_lead"
+
+[e765-rt]
+vendor = "engl-plugin-alliance"
+name = "E765 RT"
+size = 45
+requires = [ ]
+nks = false
+description = "Emulation of the ENGL E765 Retro Tube, ranging from dynamic cleans to vintage crunch. Built‑in FX rack with gate, lo‑fi delay, filters, and power soak delivers mix‑ready tones. • 100 recording chains captured with cabinets, mics, and a NEVE console. Great for classic rock, blues, and versatile retro textures."
+url = "https://www.plugin-alliance.com/products/engl_e765_rt"
+
+[savage-120]
+vendor = "engl-plugin-alliance"
+name = "Savage 120"
+size = 38.6
+requires = [ ]
+nks = false
+description = "Emulation of the ENGL Savage 120, a 4‑channel studio favorite with cutting midrange. Fast response, big headroom, and a wide range from clean to saturated lead. • Brainworx FX rack and 105 recording chains provide mix‑ready tones. Ideal for hard rock and metal where tight attack and cut are essential."
+url = "https://www.plugin-alliance.com/products/savage-120"
+
+[stage]
+vendor = "fiedler-audio-plugin-alliance"
+name = "stage"
+size = 40.5
+requires = [ ]
+nks = false
+description = "Stereo/ambisonic spatial image processor by Fiedler Audio to widen, place, and deepen the soundstage. Controls for width, depth, and proximity with detailed stereo field management. • Dedicated algorithms deliver precision without artifacts or mono loss. Useful in mixing and mastering to expand a stereo bus or stabilize sources."
+url = "https://www.plugin-alliance.com/products/stage?srsltid=AfmBOoo5BYAy4EkzQE3sUWw0iRu62UnA_cTxNCweIVMglg9GT9ne3lIa"
+
+[be100]
+vendor = "friedman-plugin-alliance"
+name = "BE100"
+size = 53.07
+requires = [ ]
+nks = false
+description = "Dave Friedman‑approved emulation of the BE‑100 head known for modern Plexi‑style voices. Two channels with extensive voicings deliver tight response and controlled saturation. • Brainworx FX rack (gate, lo‑fi delay, filters, power soak) and 100+ recording chains. Built for rock, hard rock, and melodic metal from muscular rhythms to singing leads."
+url = "https://www.plugin-alliance.com/products/be-100"
+
+[buxom-betty]
+vendor = "friedman-plugin-alliance"
+name = "Buxom Betty"
+size = 41.3
+requires = [ ]
+nks = false
+description = "Emulation of the hand‑wired Buxom Betty single‑channel amp, blending bright American cleans with British crunch. Tube behavior modeled from creamy cleans to snarling overdrive via your guitar’s volume. • Built‑in FX rack and 100 recording chains captured with cabinets, mics, and a Neve VXS console. Ideal for blues, country, classic rock, and reamped DI tracks."
+url = "https://www.plugin-alliance.com/products/buxom-betty"
+
+[ds40]
+vendor = "friedman-plugin-alliance"
+name = "DS40"
+size = 53.27
+requires = [ ]
+nks = false
+description = "Emulation of the Dirty Shirley DS‑40, inspired by classic British circuits for vintage grit. Single‑channel design with Gain and Master controls from lively clean to muscular crunch. • Brainworx FX rack, power soak, and 100+ recording chains. Suitable from blues to rock with a rich midrange that cuts through."
+url = "https://www.plugin-alliance.com/products/ds-40"
+
+[overdrive-supreme-50]
+vendor = "fuchs-plugin-alliance"
+name = "Overdrive Supreme 50"
+requires = [ ]
+nks = false
+description = """
+Guitar amp simulation of the Fuchs Overdrive Supreme 50.
+• Ranges from detailed cleans to singing overdrive with natural dynamics.
+• Virtual recording chains tailor cabinets and mics.
+• Suited for direct tracking, reamping, and in-the-box mixing."""
+url = "https://www.plugin-alliance.com/products/fuchs_overdrive_supreme_50"
+
+[train-ii]
+vendor = "fuchs-plugin-alliance"
+name = "Train II"
+requires = [ ]
+nks = false
+description = """
+Emulation of the Fuchs Train II with an incisive character.
+• Fast attack and highly responsive feel.
+• Virtual cab/mic options for tone shaping.
+• Ideal for tight rhythms and edgy leads."""
+url = "https://www.plugin-alliance.com/products/fuchs_train_ii"
+
+[800rb]
+vendor = "gallien-krueger-plugin-alliance"
+name = "800RB"
+requires = [ ]
+nks = false
+description = """
+Emulation of the Gallien‑Krueger 800RB bass head.
+• Bi‑amp architecture controls lows and highs independently.
+• Bass tones from tight low end to defined snap.
+• Built to sit firmly in the mix."""
+url = "https://www.plugin-alliance.com/products/gallien_krueger_800rb"
+
+[natalus-dsceq]
+vendor = "harris-doyle-plugin-alliance"
+name = "Natalus DSCEQ"
+requires = [ ]
+nks = false
+description = """
+Stereo EQ inspired by boutique hardware.
+• Musical curves for mixing and mastering.
+• Adds warmth and clarity without harshness.
+• Precise controls for subtle adjustments."""
+url = "https://www.plugin-alliance.com/products/natalus-dsceq?srsltid=AfmBOopS08xKwQli4QNH3qQqHp87bxDewzrstSRT3DfMjg7yelGkMgCx"
+
+[distinct-pro]
+vendor = "kiive-plugin-alliance"
+name = "Distinct Pro"
+requires = [ ]
+nks = false
+description = """
+Versatile saturation and dynamics tool.
+• Harmonic shaping from subtle to strong.
+• Targeted processing for drums, bass, and synths.
+• Preserves mix clarity."""
+url = "https://www.plugin-alliance.com/products/distinct-pro"
+
+[filkchannel-mk2]
+vendor = "kiive-plugin-alliance"
+name = "Filkchannel MK2"
+requires = [ ]
+nks = false
+description = """
+Modular channel strip with preamp, EQ, and dynamics.
+• Combines gentle correction with analog color.
+• M/S and flexible chaining suit modern workflows.
+• Effective on vocals, guitars, drums, and buses."""
+url = "https://www.plugin-alliance.com/products/filkchannel-mk2"
+
+[tape-face]
+vendor = "kiive-plugin-alliance"
+name = "Tape Face"
+requires = [ ]
+nks = false
+description = """
+Magnetic tape emulation.
+• Natural compression, saturation, and subtle wow/flutter.
+• From gentle polish to stronger color.
+• Useful on tracks, stems, and the mix bus."""
+url = "https://www.plugin-alliance.com/products/tape-face"
+
+[xtcomp]
+vendor = "kiive-plugin-alliance"
+name = "XTComp"
+requires = [ ]
+nks = false
+description = """
+Fast FET compressor.
+• Multiple ratios, filtered sidechain, and parallel mix.
+• From transparent control to bold character.
+• Versatile across many sources."""
+url = "https://www.plugin-alliance.com/products/xtcomp"
+
+[xtressor]
+vendor = "kiive-plugin-alliance"
+name = "Xtressor"
+requires = [ ]
+nks = false
+description = """
+Flexible compressor inspired by analog styles.
+• Varied modes and ratios to tailor the envelope.
+• Adds punch or glue as needed.
+• Works on tracks and buses."""
+url = "https://www.plugin-alliance.com/products/xtressor"
+
+[knifonium]
+vendor = "knif-audio-plugin-alliance"
+name = "Knifonium"
+requires = [ ]
+nks = true
+demo = "https://reaperaccessible.fr/catalog/demos/Plugin%20Alliance%20-%20Knif%20Audio%20-%20Knifonium.mp3"
+description = """
+Virtual synthesizer inspired by the tube Knifonium.
+• Rich oscillators, expressive filters, and deep modulation.
+• Organic tones for leads, basses, and textures.
+• Built-in effects expand the sound palette."""
+url = "https://www.plugin-alliance.com/products/knif_audio_knifonium"
+
+[soma]
+vendor = "knif-audio-plugin-alliance"
+name = "Soma"
+requires = [ ]
+nks = false
+description = """
+Mastering-grade passive stereo EQ.
+• Musical curves and natural phase.
+• Adds air, depth, and balance.
+• Suited to buses and the master chain."""
+url = "https://www.plugin-alliance.com/products/knif_audio_soma"
+
+[254e]
+vendor = "lindell-plugin-alliance"
+name = "254E"
+requires = [ ]
+nks = false
+description = """
+Diode-bridge compressor/limiter.
+• Adds density and character while taming peaks.
+• Parallel mix preserves dynamics.
+• Effective on drums, guitars, and buses."""
+url = "https://www.plugin-alliance.com/products/254e"
+
+[354e]
+vendor = "lindell-plugin-alliance"
+name = "354E"
+requires = [ ]
+nks = false
+description = """
+Multiband compressor derived from the 254E.
+• Independent control of lows, mids, and highs.
+• M/S mode to process mid and side.
+• From gentle glue to bold effects."""
+url = "https://www.plugin-alliance.com/products/354e"
+
+[6x_500]
+vendor = "lindell-plugin-alliance"
+name = "6X_500"
+requires = [ ]
+nks = false
+description = """
+Transformer-coupled virtual preamp with 2-band EQ.
+• Adds warmth and presence to sources.
+• Filters tidy lows and shape brightness.
+• Useful in tracking and mixing."""
+url = "https://www.plugin-alliance.com/products/6x-500"
+
+[7x_500]
+vendor = "lindell-plugin-alliance"
+name = "7X_500"
+requires = [ ]
+nks = false
+description = """
+Fast, punchy FET compressor.
+• Ideal for snare snap and vocals.
+• Simple controls and built-in parallel mix.
+• Adds energy and control."""
+url = "https://www.plugin-alliance.com/products/7x-500"
+
+[50-series]
+vendor = "lindell-plugin-alliance"
+name = "50 Series"
+requires = [ ]
+nks = false
+description = """
+Channel strip inspired by American 500-series modules.
+• Preamp, EQ, and compression in one plugin.
+• TMT-style channel variations.
+• For tracks, buses, and the mix bus."""
+url = "https://www.plugin-alliance.com/products/50-series"
+
+[80-series]
+vendor = "lindell-plugin-alliance"
+name = "80 Series"
+requires = [ ]
+nks = false
+description = """
+Neve 80‑series‑style channel strip.
+• Wide tone with thick lows and silky highs.
+• Diode‑bridge dynamics module.
+• Adds mix cohesion."""
+url = "https://www.plugin-alliance.com/products/80-series"
+
+[902-de_esser]
+vendor = "lindell-plugin-alliance"
+name = "902 De_esser"
+requires = [ ]
+nks = false
+description = """
+Simple, precise de-esser.
+• Targets sibilance without harming tone.
+• Fast setup for vocals and overheads.
+• Works transparently or more assertively."""
+url = "https://www.plugin-alliance.com/products/902_de-esser"
+
+[channelx]
+vendor = "lindell-plugin-alliance"
+name = "ChannelX"
+size = 20.8
+requires = [ ]
+nks = false
+description = """
+Virtual channel strip combining three Lindell 500 modules: 6X‑500 preamp, 7X‑500 FET compressor, and PEX‑500 passive EQ.
+• Flexible routing and module reordering to shape tone before or after dynamics.
+• The 6X‑500 delivers analog gain with variable high‑pass/low‑pass filters.
+• The 7X‑500 provides 1176‑style compression with sidechain filter and a Mix control for parallel compression.
+• The PEX‑500 adds the classic Pultec curve with boost/attenuate and Mid/Side options.
+Perfect for fast analog vibe, from subtle polish to aggressive rock tones."""
+url = "https://www.plugin-alliance.com/products/channelx"
+
+[mbc]
+vendor = "lindell-plugin-alliance"
+name = "MBC"
+size = 132.2
+requires = [ ]
+nks = false
+description = """
+Multiband compressor inspired by the API 2500 with three Low/Mid/High bands for independent control.
+• Feedforward/feedback modes, selectable knee, and sidechain filter with low‑cut and high emphasis.
+• SMASH button for extra aggressive compression on drums and vocals.
+• Variable stereo link, parallel Mix control, and flexible crossover points.
+• Suits mix bus, stems, and mastering to keep punch while controlling dynamics.
+Ships with a curated preset library for common tasks."""
+url = "https://www.plugin-alliance.com/products/mbc"
+
+[pex_500]
+vendor = "lindell-plugin-alliance"
+name = "PEX_500"
+size = 19.96
+requires = [ ]
+nks = false
+description = """
+Passive Pultec‑style EQ modeling the Lindell PEX‑500 module, with classic bass boost/attenuate and silky AIR band.
+• Stereo operation, Mid/Side matrix, and additional high‑frequency selections unique to the plugin.
+• Analog switch adds noise, hum, and transformer saturation.
+• Smooth, musical curves that suit vocals, drums, and buses.
+• Great for thick low end while keeping airy top clarity.
+Includes an input pad for accurate A/B level matching."""
+url = "https://www.plugin-alliance.com/products/pex-500"
+
+[sbc]
+vendor = "lindell-plugin-alliance"
+name = "SBC"
+size = 116.1
+requires = [ ]
+nks = false
+description = """
+Faithful and musical API‑style stereo bus compressor tailored for mix bus and drum groups.
+• Sidechain filter with low‑cut and high boost to target detector response.
+• Selectable knee, feedforward/feedback modes, and variable stereo link.
+• SMASH button for punchy, gluey compression effects.
+• Works on vocals, guitars, and drum buses for tight, punchy sound.
+Includes useful presets to get started fast."""
+url = "https://www.plugin-alliance.com/products/sbc"
+
+[te_100]
+vendor = "lindell-plugin-alliance"
+name = "TE_100"
+requires = [ ]
+nks = false
+description = """
+Passive vintage EQ inspired by Siemens/Telefunken TE‑100 with wide, gentle curves and classic tone.
+• Component‑level modeling with input/output gain for proper level matching.
+• Fixed bands and musical filter interaction for smooth sculpting.
+• Useful on mixing and mastering to soften highs and support lows.
+• Ships with presets for drums, vocals, and mix bus.
+Delivers big analog tone with minimal tweaking."""
+url = "https://www.plugin-alliance.com/products/te-100"
+
+[sa2rate2]
+vendor = "looptrotter-plugin-alliance"
+name = "SA2RATE2"
+requires = [ ]
+nks = false
+description = """
+Solid‑state saturator approved by Looptrotter that adds low‑order harmonics while smoothing peaks.
+• LO Safe and HI Smooth circuits preserve lows and tame highs without harshness.
+• Raises RMS without raising peaks, avoiding over‑compression artifacts.
+• Great on drum bus, bass, and mix bus for warmth and density.
+• Parallel Mix control to dial in coloration.
+Useful for sound design or gentle mastering duties."""
+url = "https://www.plugin-alliance.com/products/sa2rate-2"
+
+[chop-shop-eq]
+vendor = "ltl-plugin-alliance"
+name = "Chop Shop EQ"
+requires = [ ]
+nks = false
+description = """
+Fast, intuitive EQ from the Louder Than Liftoff Chop Shop 500‑series module for clean tonal shaping.
+• Focus and Tilt controls to clarify sources in seconds.
+• Musical filters to clean lows and smooth highs without artifacts.
+• Great for tracking, mixing, and buses to restore clarity.
+• Minimal, straight‑to‑the‑point interface.
+Solves tonal problems without upsetting the balance."""
+url = "https://www.plugin-alliance.com/products/chop-shop"
+
+[silver-bullet-mk2]
+vendor = "ltl-plugin-alliance"
+name = "Silver Bullet mk2"
+requires = [ ]
+nks = false
+description = """
+Stereo color channel inspired by the Silver Bullet mk2, combining A/N console voicings, filters, and Colour modules.
+• Switchable API/Neve‑style voicings to shape tone at the front end.
+• EQ section and saturation options to thicken, open, or round out a mix.
+• Built‑in Colour modules including Hitmaker 4000 plus plugin‑only additions.
+• Ideal on mix bus or stems for console‑like cohesion.
+Adds depth and glue without heavy compression."""
+url = "https://www.plugin-alliance.com/products/silver-bullet-mk2"
+
+[eq2]
+vendor = "maag-audio-plugin-alliance"
+name = "EQ2"
+requires = [ ]
+nks = false
+description = """
+Two‑band Mäag Audio EQ featuring the acclaimed AIR BAND for controlled presence and sheen.
+• Dedicated SUB band to anchor the low end.
+• Transparent, musical curves ideal for vocals and buses.
+• Mid/Side options for wide yet precise work.
+• Low phase shift to preserve source integrity.
+A classic for adding airy top without harshness."""
+url = "https://www.plugin-alliance.com/products/eq2"
+
+[eq4]
+vendor = "maag-audio-plugin-alliance"
+name = "EQ4"
+requires = [ ]
+nks = false
+description = """
+Six‑band Mäag Audio EQ with the iconic AIR BAND to add openness and presence.
+• Sub band foundation plus four fixed mid/high bands.
+• Low phase‑shift curves for clear, coherent results.
+• Ideal on vocals, acoustics, and stereo bus.
+• Mid/Side operation available in the plugin version.
+Delivers high‑end sheen without harshness."""
+url = "https://www.plugin-alliance.com/products/eq4"
+
+[magnum_k]
+vendor = "maag-audio-plugin-alliance"
+name = "MAGNUM_K"
+requires = [ ]
+nks = false
+description = """
+Dual‑stage compressor with MAGNUM and K‑Comp sections, plus AIR BAND on the output for final sparkle.
+• Can be transparent or colorful depending on the path.
+• L/R and Mid/Side operation with TMT for a stable image.
+• Great on vocals, drums, and mix bus to keep punch while smoothing.
+• Includes stereo width tools and Mono‑Maker.
+Built for mix duties and light mastering."""
+url = "https://www.plugin-alliance.com/products/magnum-k"
+
+[nseq_2]
+vendor = "millennia-plugin-alliance"
+name = "NSEQ_2"
+size = 29.4
+requires = [ ]
+nks = false
+description = """
+Mastering‑grade Twin Topology parametric EQ with 300 V tube and discrete JFET paths.
+• Exceptionally pure band behavior with minimal interaction.
+• JFET mode for neutrality, tube mode for warmth and depth.
+• Mid/Side operation and detailed non‑linear modeling.
+• Suits demanding mixing and mastering tasks.
+Includes professional presets."""
+url = "https://www.plugin-alliance.com/products/nseq-2"
+
+[tcl_2]
+vendor = "millennia-plugin-alliance"
+name = "TCL_2"
+size = 24
+requires = [ ]
+nks = false
+description = """
+Dual‑stage tube saturator built on novel circuitry with transformer‑coupled pre and power stages.
+• Rich, organic harmonics with onboard jumper mods for Emphasis Shift, Bass Compensator, and Voltage Sag.
+• Musical filters and interactions to widen or tighten source material.
+• Great for tracks, buses, or full mixes.
+• Carefully tuned analog behavior without digital harshness.
+Includes presets from renowned engineers."""
+url = "https://www.plugin-alliance.com/products/big-al"
+
+[vac-attack]
+vendor = "mixland-plugin-alliance"
+name = "Vac Attack"
+size = 26.4
+requires = [ ]
+nks = false
+description = """
+Optical compressor in the LA‑2A tradition with compression/limit modes and expanded controls for modern production.
+• Recovery control, Drive independent from compression, and detector emphasis.
+• Blend between a freshly serviced and an aged unit to tune character.
+• One‑knob parallel Mix and ear‑driven, simple workflow.
+• Excellent on vocals, bass, drums, and stereo bus.
+Component‑level modeling of the transformer, T4B cell, and tubes."""
+url = "https://www.plugin-alliance.com/products/vac-attack?srsltid=AfmBOopXCIYIzGwrJxyosFEkfzWCqXwT4ZudG6rSfDvZxfEuTL8FuIX5"
+
+[u2a]
+vendor = "neold-plugin-alliance"
+name = "U2A"
+size = 26.4
+requires = [ ]
+nks = false
+description = "An LA-2A-style opto compressor reimagined by NEOLD, with separate controls for compression and tube-style drive. The Aging control moves from a fresh unit to a vintage character while adjusting response. The R37 sidechain filter, a Mix control for parallel compression, and a limiter mode extend the classic workflow. Suitable for vocals, bass, drums, and stereo buses for controlled, musical leveling."
+url = "https://www.plugin-alliance.com/products/u2a"
+
+[u17]
+vendor = "neold-plugin-alliance"
+name = "U17"
+size = 30.8
+requires = [ ]
+nks = false
+description = "A hybrid compressor inspired by the 1954 U17, combining a germanium diode bridge with transformer-coupled tube amplification. A gentle soft clipper in front adds color and tames peaks before compression. The Torque control blends from transparent behavior to more aggressive action. Useful for mixing and mastering when controlled dynamics with analog flavor are desired."
+url = "https://www.plugin-alliance.com/products/u17"
+
+[big-al]
+vendor = "neold-plugin-alliance"
+name = "BIG AL"
+requires = [ ]
+nks = false
+description = "A dual-stage tube saturator with transformer-coupled pre and power sections for musical harmonics. It adds controlled density on vocals, guitars, drums, and buses without harshness. High- and low-cut filters and a Mix control enable clean parallel processing. Suited for sound design and mixing to add thickness, top-end sheen, and analog grit."
+url = "https://www.plugin-alliance.com/products/big-al"
+
+[warble]
+vendor = "neold-plugin-alliance"
+name = "WARBLE"
+size = 70.3
+requires = [ ]
+nks = false
+description = "A vintage tape modulation and lo-fi effect combining wow/flutter, flanger/chorus, and an aging section for noise, crackle, and harmonics. The modulation block spans wide ranges with independent controls for wow and flutter. Age/Dirt/Noise sections and resonant hi/lo-cut filters shape tone and texture. Tape speed switching and a Mix knob support parallel processing and retro soundscapes."
+url = "https://www.plugin-alliance.com/products/warble"
+
+[character]
+vendor = "noveltech-plugin-alliance"
+name = "Character"
+size = 35.2
+requires = [ ]
+nks = false
+description = "A tone enhancer based on Intelligent Adaptive Filtering that identifies and boosts pleasing characteristics in the source. Three modes target percussive/vocal material, guitars/synths, and bass/pads. Processing adapts dynamically to spectrum and micro-dynamics rather than boosting a fixed band. A fast tool to add clarity and attack without sounding artificial."
+url = "https://www.plugin-alliance.com/products/character"
+
+[vocal-enhancer]
+vendor = "noveltech-plugin-alliance"
+name = "Vocal Enhancer"
+requires = [ ]
+nks = false
+description = "A voice enhancement processor based on Intelligent Adaptive Filtering that adds clarity and presence without classic exciter artifacts. The Enhancement control blends frequency- and program-dependent processing for a natural result. It can also unmask details on snares, guitars, synths, and background tracks. Auto-leveling supports a balanced output level."
+url = "https://www.plugin-alliance.com/products/vocal-enhancer"
+
+[dsm-v3]
+vendor = "pro-audio-dsp-plugin-alliance"
+name = "DSM V3"
+size = 33.7
+requires = [ ]
+nks = false
+description = "A dynamic spectral processor with signature capture and spectrum mapping for compression, expansion, and de-essing. The capture system combines spectral and dynamic information to derive a credible threshold curve. Expand mode enhances low-level detail; the limiter remains transparent below −1 dBFS. Includes spectral sidechain, a Mix control, and applications from mixing to mastering."
+url = "https://www.plugin-alliance.com/products/dsm-v3"
+
+[mc-77]
+vendor = "purple-audio-plugin-alliance"
+name = "MC 77"
+requires = [ ]
+nks = false
+description = "A FET limiter inspired by the 1176, modeled on the hardware MC77 and expanded with modern features. Ultra-fast attack, flexible release, multiple ratios, and the All-Buttons mode. Brainworx adds M/S processing, Mono-Maker, stereo width, and an easy parallel Mix control. Works on vocals, bass, drums, and buses from transparent control to heavy limiting."
+url = "https://www.plugin-alliance.com/products/mc77"
+
+[double-ms]
+vendor = "schoeps-plugin-alliance"
+name = "Double MS"
+requires = [ ]
+nks = false
+description = "A Double MS decoding tool that dematrices three microphone signals in real time to 2.0 stereo or 5.0 surround. It can create virtual microphones in the horizontal plane with polar-plot visualization. Controls include diffuse-field level, decorrelation, rear-channel delay, and output gains. Useful for film sound, music mixing, and multi-capsule immersive recording."
+url = "https://schoeps.de/en/products/accessories/accessories-surround-3d/accessories-double-ms/double-ms-plugin-2018.html"
+
+[mono-upmix-1to2]
+vendor = "schoeps-plugin-alliance"
+name = "Mono UpMix 1to2"
+requires = [ ]
+nks = false
+description = "A mono-to-stereo upmix tool that extracts diffuse sound and places it decorrelated on L/R. Adjust source direction, width, and depth while controlling the diffuse-field level. It helps embed a spot microphone naturally with a clean, artifact-free downmix. Useful for dialogue, music, and post when you need a wider, deeper image."
+url = "https://schoeps.de/en/products/accessories/plugins/mono-upmix-plugin.html"
+
+[mono-upmix-1to3]
+vendor = "schoeps-plugin-alliance"
+name = "Mono UpMix 1to3"
+requires = [ ]
+nks = false
+description = "The mono-to-LCR version of the Schoeps upmix, generating three LCR outputs from a mono source. Controls preserve a clean downmix while adding controlled width and depth. Optimized for film and dialogue with adjustable placement and depth. A complementary approach to M/S or reverb-based widening without artifacts."
+url = "https://schoeps.de/en/products/accessories/plugins/mono-upmix-plugin.html"
+
+[class-a]
+vendor = "shadow-hills-plugin-alliance"
+name = "Class A"
+requires = [ ]
+nks = false
+description = "The Class A variant of the Shadow Hills compressor, with optical and VCA stages and a refined audio path. Brainworx adds TMT, M/S processing, and a Mix control for fast parallel work. It ranges from gentle control to aggressive punch on vocals, drums, and buses. Fits mixing and premastering when sculpting dynamics with character."
+url = "https://www.plugin-alliance.com/products/shadow_hills_class_a.html"
+
+[mastering-compressor]
+vendor = "shadow-hills-plugin-alliance"
+name = "Mastering Compressor"
+requires = [ ]
+nks = false
+description = "A mastering compressor with optical and VCA sections, known for precise control and switchable transformers. The plugin adds M/S processing, TMT, and a Mix control for parallel compression. It works on the main bus and subgroups with ample headroom. Suitable for mastering chains where density and glue are required."
+url = "https://www.plugin-alliance.com/products/shadow_hills_mastering_compressor.html"
+
+[attacker]
+vendor = "spl-plugin-alliance"
+name = "Attacker"
+requires = [ ]
+nks = false
+description = "An attack-focused module derived from the Transient Designer to enhance percussive impact. It emphasizes attack without changing overall level, great on snare, toms, and plucked instruments. Minimal interface for fast mixing work. Also helpful to restore bite on tracks softened by compression."
+url = "https://www.plugin-alliance.com/products/spl_attacker.html"
+
+[attacker-plus]
+vendor = "spl-plugin-alliance"
+name = "Attacker Plus"
+requires = [ ]
+nks = false
+description = "An enhanced Attacker variant with more control and a modern integration. It strengthens the attack of percussive and transient-rich sounds without raising overall level. Suitable for drums, rhythmic guitars, and dense percussive elements. Ideal when mixes need extra clarity and punch."
+url = "https://www.plugin-alliance.com/products/spl_attacker_plus.html"
+
+[de_esser]
+vendor = "spl-plugin-alliance"
+name = "De_Esser"
+requires = [ ]
+nks = false
+description = """
+• Software de-esser inspired by SPL hardware, designed to tame vocal sibilance while preserving tone.
+• Automatic detection targets the sibilant band and reduces unwanted energy precisely.
+• Mid/Side mode lets you de-ess full mixes without dulling cymbals and high frequencies.
+• Suitable for mixing and mastering when vocal clarity and top end are a priority."""
+url = "https://www.plugin-alliance.com/products/de-esser-collection"
+
+[de_esser-dual_band]
+vendor = "spl-plugin-alliance"
+name = "De_Esser Dual_Band"
+requires = [ ]
+nks = false
+description = """
+• Dual-band version that splits sibilant zones for more natural control across registers.
+• Automatic detection and simple operation deliver fast results without coloration.
+• M/S processing refines buses or masters while preserving air.
+• Effective on vocals, overheads, and bright sources that need targeted sibilance reduction."""
+url = "https://www.plugin-alliance.com/products/de-esser-collection"
+
+[de_verb-plus]
+vendor = "spl-plugin-alliance"
+name = "De_Verb Plus"
+size = 31.9
+requires = [ ]
+nks = false
+description = """
+• Reduces reverb and room tails using SPL’s differential envelope technology.
+• One main control to shorten decay quickly, plus soft limiter and Dry/Wet mix.
+• Cleans up drums, vocals, or ambience without complex processing chains.
+• Ideal for tightening close-miked tracks or fixing overly reverberant recordings."""
+url = "https://www.plugin-alliance.com/products/de-verb-plus"
+
+[drumxchanger]
+vendor = "spl-plugin-alliance"
+name = "DrumXchanger"
+size = 31.2
+requires = [ ]
+nks = false
+description = """
+• Real-time drum replacement built on Transient Designer detection.
+• Dual thresholds (level and transient) precisely capture hits including ghost notes.
+• Includes a sample library and an editor to create multi-samples with dynamic layers.
+• Ideal in mixing to reinforce or reshape snares, kicks, and toms without phase issues."""
+url = "https://www.plugin-alliance.com/products/drumxchanger"
+
+[eq-ranger-plus]
+vendor = "spl-plugin-alliance"
+name = "EQ Ranger Plus"
+size = 32.4
+requires = [ ]
+nks = false
+description = """
+• Thematic equalizers inspired by the hardware EQ Rangers series.
+• Preset frequency banks for vocals, bass, and a full mode, with L/R and M/S linking.
+• A/B/C/D recalls enable quick comparisons and faster workflows.
+• Versatile for mixing and mastering when musical curves are needed fast."""
+url = "https://www.plugin-alliance.com/products/eq-ranger-plus"
+
+[free-ranger]
+vendor = "spl-plugin-alliance"
+name = "Free Ranger"
+size = 26.8
+requires = [ ]
+nks = false
+description = """
+• Free four-band EQ focusing on 40 Hz, 150 Hz, 1.8 kHz, and 16 kHz.
+• Quick A/B/C/D comparisons and mouse-wheel control.
+• Adds sheen, highlights vocals/guitars, or reinforces lows depending on the band.
+• Handy for simple, musical corrections without parameter overload."""
+url = "https://www.plugin-alliance.com/products/free-ranger"
+
+[hawkeye]
+vendor = "spl-plugin-alliance"
+name = "HawkEye"
+size = 16.6
+requires = [ ]
+nks = false
+description = """
+• Comprehensive metering and analysis suite for mixing and mastering with peak, LUFS, and correlation views.
+• Time, Spectra, and Mix modules monitor dynamics, spectral balance, and stereo image.
+• Loudness measurements and compliance tools help ensure broadcast-ready levels.
+• Clear interface for continuously validating a program’s technical quality."""
+url = "https://www.plugin-alliance.com/products/hawkeye"
+
+[iron]
+vendor = "spl-plugin-alliance"
+name = "Iron"
+size = 102.9
+requires = [ ]
+nks = false
+description = """
+• Mastering compressor modeled on the IRON hardware with rectifier options and transformers.
+• Variable modes and sidechain section shape the response while preserving openness.
+• Stereo and M/S processing, built for transparency as well as character.
+• Suited to buses and mastering that demand controlled dynamics with analog vibe."""
+url = "https://www.plugin-alliance.com/products/iron"
+
+[mo_verb-plus]
+vendor = "spl-plugin-alliance"
+name = "Mo_Verb Plus"
+size = 31.3
+requires = [ ]
+nks = false
+description = """
+• Enhances reverb tails and spaciousness using SPL’s envelope technology.
+• Main sustain control, soft limiter, and Dry/Wet mix for precise dosing.
+• Stretches snares, percussion, and ambience without pitch artifacts.
+• Ideal for adding depth or extending space on tracks that feel too dry."""
+url = "https://www.plugin-alliance.com/products/mo-verb-plus"
+
+[passeq]
+vendor = "spl-plugin-alliance"
+name = "Passeq"
+size = 78.4
+requires = [ ]
+nks = false
+description = """
+• Passive, wide-band EQ with six bands per channel and 72 targetable frequencies.
+• L/R and M/S processing with channel linking for fast, consistent work.
+• Accurate modeling of filter interactions and input/output transformers.
+• Built for mixing and mastering when musical curves and analog smoothness are desired."""
+url = "https://www.plugin-alliance.com/products/passeq"
+
+[passeq-single]
+vendor = "spl-plugin-alliance"
+name = "Passeq Single"
+size = 78.4
+requires = [ ]
+nks = false
+description = """
+Parametric EQ inspired by SPL’s hardware Passeq, featuring passive filters and musical curves.
+• Designed for demanding mixing and mastering, enabling broad and transparent tone shaping.
+• Brainworx’s TMT engine keeps analog character with digital precision.
+• Great for adding air, tightening lows, and sculpting mids without harshness."""
+url = "https://www.plugin-alliance.com/products/passeq"
+
+[pq]
+vendor = "spl-plugin-alliance"
+name = "PQ"
+size = 114
+requires = [ ]
+nks = false
+description = """
+Five‑band parametric EQ with exemplary linearity, modeled on the SPL PQ.
+• Ideal for ultra‑precise mastering and surgical corrections.
+• M/S options, stereo width control, and TMT engine for an analog feel.
+• Adds air, cleans up lows, and shapes transients with finesse."""
+url = "https://www.plugin-alliance.com/products/pq"
+
+[transient-designer-plus]
+vendor = "spl-plugin-alliance"
+name = "Transient Designer Plus"
+size = 32.5
+requires = [ ]
+nks = false
+description = """
+Iconic transient shaper based on the SPL hardware to control attack and sustain.
+• Accentuate drums, dry out ambience, or extend natural tails.
+• Stereo and M/S operation with precise dynamics handling without thresholds.
+• A fast tool to restore punch and clean up a mix."""
+url = "https://www.plugin-alliance.com/products/transient-designer-plus"
+
+[twintube]
+vendor = "spl-plugin-alliance"
+name = "TwinTube"
+requires = [ ]
+nks = false
+description = """
+Modeled tube exciter combining saturation and harmonic enhancement.
+• Adds warmth, presence, and sheen on vocals, guitars, drums, and more.
+• Separate controls for saturation and harmonics across four fundamental bands.
+• Increases perceived loudness without raising peak level."""
+url = "https://www.plugin-alliance.com/products/twintube"
+
+[vitalizer-mk2_t]
+vendor = "spl-plugin-alliance"
+name = "Vitalizer MK2_T"
+requires = [ ]
+nks = false
+description = """
+Psychoacoustic processor that clarifies mixes and widens the stereo image.
+• Enhances intelligibility, brings out detail, and tightens the low end.
+• Dedicated bass, treble, and width sections inspired by the SPL hardware.
+• Useful on tracks, buses, and mastering for a more lively sound."""
+url = "https://spl.audio/en/spl-produkt/stereo-vitalizer-mk2-plugin/"
+
+[pt100]
+vendor = "suhr-plugin-alliance"
+name = "PT100"
+size = 47.2
+requires = [ ]
+nks = false
+description = """
+Software emulation of the Suhr PT100 amp with three channels and modern/classic voicings.
+• Includes virtual cabs and mics, multi‑mic recordings, and flexible routing.
+• Full channel controls with boost, noise gate, and rack options.
+• Suits rock, metal, and articulate lead tones with a premium character."""
+url = "https://www.plugin-alliance.com/products/pt100"
+
+[se100]
+vendor = "suhr-plugin-alliance"
+name = "SE100"
+size = 43.9
+requires = [ ]
+nks = false
+description = """
+Modeling of the Suhr SE100 tube amp focused on articulate high‑gain tones.
+• Choice of cabs and mics with multi‑mic captures for realism.
+• Includes boost, noise gate, and routing options in the Brainworx/PA ecosystem.
+• Ideal for tight riffs, singing leads, and controlled saturation."""
+url = "https://www.plugin-alliance.com/products/se100"
+
+[the-oven]
+vendor = "maor-appelbaum-mastering-and-hendyamps-plugin-alliance"
+name = "THE OVEN"
+size = 98.5
+requires = [ ]
+nks = false
+description = """
+Color box inspired by the THE OVEN hardware, created with Maor Appelbaum and Hendyamps.
+• COOK, TEMP, BAKE/BROIL, and BURNERS controls deliver band‑specific saturation.
+• Built‑in Mono‑Maker and Stereo Width plus TMT for realistic analog variation.
+• Warm up, thicken, and widen tracks, buses, or a master with character."""
+url = "https://www.plugin-alliance.com/products/the-oven"
+
+[spatial-creator]
+vendor = "thx-plugin-alliance"
+name = "Spatial Creator"
+size = 39
+requires = [ ]
+nks = false
+description = """
+Binaural processor for placing sources in 3D and creating immersive headphone mixes.
+• Visual positioning, continuous motion, and 360° reverb for an enveloping field.
+• Encodes spatial elements into a stereo file compatible with streaming platforms.
+• Suited for music, podcasts, and sound design without proprietary hardware."""
+url = "https://www.plugin-alliance.com/products/spatial-creator"
+
+[lisa]
+vendor = "tomo-audiolabs-plugin-alliance"
+name = "LISA"
+requires = [ ]
+nks = false
+description = """
+Modeled analog dynamic EQ with six bands and an opto cell per band.
+• Mastering‑oriented design with M/S processing, Mono‑Maker, Width, and TX Drive.
+• Includes HP/LP filters and musical parametric bands.
+• Ideal for shaping tone while controlling dynamics per frequency range."""
+url = "https://www.plugin-alliance.com/products/lisa"
+
+[body-technology-kirchhoff_eq]
+vendor = "three-plugin-alliance"
+name = "Body Technology - Kirchhoff_EQ"
+size = 65.6
+requires = [ ]
+nks = false
+description = """
+Advanced parametric EQ with 32 filter types, oversampling, and dynamic options.
+• NKS compatible and optimized engine for extreme precision in mixing and mastering.
+• M/S functions, per‑band processing, and phase controls for fine tuning.
+• Suits both surgical fixes and broad musical shaping."""
+url = "https://www.plugin-alliance.com/products/kirchhoff-eq"
+
+[body-technology-cenozoix-compressor]
+vendor = "three-plugin-alliance"
+name = "Body Technology - Cenozoix Compressor"
+size = 63.1
+requires = [ ]
+nks = false
+description = """
+Modern compressor with multiple circuit models and detection modes for clean or colored results.
+• NKS compatible, advanced sidechain, and versatile vintage/digital modes.
+• M/S tools, look‑ahead, and precise peak control for tracks, buses, and mastering.
+• Combines speed, musicality, and low distortion for reliable control."""
+url = "https://www.plugin-alliance.com/products/cenozoix-compressor"
+
+[bass-mint]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Bass Mint"
+size = 30.9
+requires = [ ]
+nks = false
+description = """
+Low‑end processor with five modes: Saturate, Resonate, Octave, Synthesize, and Overfold.
+• Low/high split, quick options (mono bass, anti‑rumble, etc.), and built‑in visualizer.
+• Thicken kicks, anchor bass lines, and manage subs.
+• Designed for fast results on tracks, stems, and full mixes."""
+url = "https://www.plugin-alliance.com/products/bass-mint"
+
+[battalion]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Battalion"
+size = 687
+requires = [ ]
+nks = true
+demo = "https://reaperaccessible.fr/catalog/demos/Plugin%20Alliance%20-%20Unfiltered%20Audio%20-%20Battalion.mp3"
+description = "Battalion is a software drum machine and drum synth with 8 voices, each switchable between synthesis and sampling. It includes 20+ synthesis engines, flexible per-voice modulators, and performance-oriented macro controls. The Performance page gives hands-on control of voices, choke groups, and trigger chaining for live workflows. Built-in effects, including Headspace Reverb and Shatter Delay, handle spatial and rhythmic shaping."
+url = "https://www.plugin-alliance.com/products/battalion"
+
+[byome]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "BYOME"
+size = 38.8
+requires = [ ]
+nks = true
+description = """
+Modular multi‑effects combining delays, reverbs, filters, distortion, compressors, and more.
+• NKS, flexible modulation, and complex patches via Unfiltered Audio’s modules.
+• Block routing, macros, and signal control for creative chains.
+• Suited for sound design and experimental or ambient mixing."""
+url = "https://www.plugin-alliance.com/products/byome"
+
+[dent-2]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Dent 2"
+size = 23.6
+requires = [ ]
+nks = false
+description = """
+Waveshaping distortion with multiple algorithms, filters, and modulation.
+• Ranges from subtle grit to extreme textures via modes and shaping curves.
+• Includes mix control, soft clip, and dynamics tools for restraint.
+• Especially effective on drums, bass, and synths."""
+url = "https://www.plugin-alliance.com/products/dent-2"
+
+[fault]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Fault"
+size = 25.3
+requires = [ ]
+nks = false
+description = "Fault is a creative spectral processor from Unfiltered Audio distributed by Plugin Alliance. It combines pitch and frequency shifting with a patchable modulation system to transform sounds dramatically. Sources can be shaped subtly or pushed into experimental textures. It excels for sound design, processed vocals, and special effects in post-production."
+url = "https://www.plugin-alliance.com/products/fault"
+
+[g8]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "G8"
+size = 30
+requires = [ ]
+nks = false
+description = "G8 is a flexible, creative gate. It offers powerful detection modes and internal modulation to shape envelopes and create rhythmic effects. Built‑in sidechain and filters help isolate the useful signal. It shines on drums, guitars, and loops to clean, pump, or chop the audio."
+url = "https://www.plugin-alliance.com/products/g8"
+
+[indent-2]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Indent 2"
+size = 33.14
+requires = [ ]
+nks = false
+description = "Indent 2 is a modulation‑driven saturation and filtering tool. It adds character, warmth, or aggressive textures using multiple algorithms and a dynamic filter section. Its virtual‑cable modulation matrix enables evolving movement. Ideal for enhancing synths, guitars, and drums."
+url = "https://www.plugin-alliance.com/products/indent_2"
+
+[instant-delay]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Instant Delay"
+size = 23.6
+requires = [ ]
+nks = false
+description = "Instant Delay is a compact, performance‑oriented delay. It offers varied delay modes, easy patchable modulation, and direct controls for slapback, rhythmic echoes, or lo‑fi textures. Its low CPU footprint makes it suitable for many instances. Useful for production and live use."
+url = "https://www.plugin-alliance.com/products/instant_delay"
+
+[lion]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "LION"
+size = 106.2
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Plugin%20Alliance%20-%20Unfiltered%20Audio%20-%20LION.mp3"
+description = "LION is a modern software synthesizer combining varied oscillators with an intuitive modular architecture. It covers classic, hybrid, and experimental tones with a large preset library. Patchable modulation and built‑in effects support a fast workflow. Suitable for electronic music, pop, and sound design."
+url = "https://www.plugin-alliance.com/products/lion"
+
+[lo_fi_af]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "lo_fi_af"
+size = 36.85
+requires = [ ]
+nks = false
+description = "LO‑FI‑AF models analog and digital artifacts including worn vinyl, radio, MP3, and more. Its engine recreates textures, noise, and instabilities to dirty sounds tastefully. Internal modulation enables lively, tempo‑synced degradation. Great for adding grit and a vintage patina."
+url = "https://www.plugin-alliance.com/products/lo-fi-af"
+
+[needlepoint]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Needlepoint"
+size = 47.36
+requires = [ ]
+nks = false
+description = "Needlepoint is a next‑gen vinyl emulation built on physical modeling. It recreates crackle, wow and flutter, groove wear, and turntable behavior. Detailed controls let you dial in the desired patina and coloration. Ideal on pianos, beats, and mixes for controlled retro vibe."
+url = "https://www.plugin-alliance.com/products/needlepoint"
+
+[sandman-pro]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Sandman Pro"
+size = 55.4
+requires = [ ]
+nks = false
+description = "Sandman Pro is a versatile delay ranging from slapback to granular and pitched textures. It stacks multiple modes, creative feedback control, and comprehensive modulation. Freeze and re‑pitch options open evolving soundscapes. Well‑suited to special effects, sound design, and electronic production."
+url = "https://www.plugin-alliance.com/products/sandman_pro"
+
+[sandman]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Sandman"
+size = 24.7
+requires = [ ]
+nks = false
+description = "Sandman is a creative delay that is both simple and musical. It covers classic uses and more extreme twists using straightforward controls and modulation. Rhythmic echoes, looping, and moving textures are easy to achieve. Great on guitars, keys, and vocals."
+url = "https://www.plugin-alliance.com/products/sandman"
+
+[silo]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Silo"
+size = 44.1
+requires = [ ]
+nks = false
+description = "SILO is a reverb based on granular processing with evolving spatial motion. It delivers dense decays, orbital movement, and shimmering timbres. Filters and an integrated dynamics section keep the tail under control. Designed for music production and post‑production."
+url = "https://www.plugin-alliance.com/products/silo"
+
+[specops]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "SpecOps"
+requires = [ ]
+nks = false
+description = "SpecOps is a spectral processor with 36 effects, a spectral compander, and patchable modulation. It splits audio into thousands of bins for subtle or extreme transformations. It enables frozen synthesis, glitch textures, and harmonic morphing. A flagship tool for experimentation and sound design."
+url = "https://www.plugin-alliance.com/products/specops"
+
+[tails]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Tails"
+size = 28.5
+requires = [ ]
+nks = false
+description = "TAILS is a reverb co‑developed with BT that automatically removes transients and dissonances from tails. A dual‑buffer system and auto‑ducking keep decays clean and musical. Multiple engines, including SHIMMER, broaden the palette. Efficient in the studio and on stage."
+url = "https://www.plugin-alliance.com/products/tails"
+
+[triad]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "TRIAD"
+size = 38.7
+requires = [ ]
+nks = false
+description = "TRIAD is a modular multi‑band processor built on BYOME. It splits audio into three bands and loads independent effects per band, with quick permutation and an FFT visualizer. It spans from pure splitting to Mid/Side and Left/Right routing. Ideal for creative mixing and advanced sound design."
+url = "https://www.plugin-alliance.com/products/triad"
+
+[zip]
+vendor = "unfiltered-audio-plugin-alliance"
+name = "Zip"
+size = 30.82
+requires = [ ]
+nks = true
+description = "Zip is a creative compressor featuring four envelope styles and six analysis modes. Internal modulation quickly turns processing into rhythmic effects or tempo‑synced ducking. The Color section adds saturation, bitcrushing, or post‑dynamics filtering. Full NKS support integrates with Native Instruments controllers."
+url = "https://www.plugin-alliance.com/products/zip"
+
+[vsc_2]
+vendor = "vertigo-plugin-alliance"
+name = "VSC_2"
+size = 29.69
+requires = [ ]
+nks = false
+description = "VSC‑2 emulates Vertigo’s Quad Discrete VCA compressor. It offers a progressive‑ratio Soft mode and a Brick mode that acts as a limiter. A filterable sidechain and stereo/dual‑mono modes cover mix bus and tracks. Clean yet musical compression suited to mixing and mastering."
+url = "https://www.plugin-alliance.com/products/vsc-2"
+
+[hydro]
+vendor = "wedge-force-plugin-alliance"
+name = "Hydro"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Plugin%20Alliance%20-%20WEDGE%20FORCE%20Hydro.mp3"
+description = """
+• Seven‑string DI guitar synthesizer for riffs and solos.
+
+• “Synthetic Force Engine” blends pre‑sampled waveforms with real‑time synthesis to preserve authentic guitar timbre.
+
+• Three‑pickup mixer (bridge, neck, piezo) and pinch‑harmonics added via the mod wheel.
+
+• Clean DI output designed for re‑amping with third‑party guitar effects.
+
+• Guitar‑centric controls: neck mapping, strumming offset, adjustable velocity and polyphony."""
+url = "https://www.wedgeforce.com/hydro-synth-download/"
+
+[keemun]
+vendor = "wedge-force-plugin-alliance"
+name = "Keemun"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Plugin%20Alliance%20-%20WEDGE%20FORCE%20Keemun.mp3"
+description = """
+• DI bass synthesizer built for riffs and rhythms.
+
+• “Synthetic Force Engine II” combines pre‑sampled waveforms with real‑time synthesis.
+
+• Clean DI output with no built‑in effects, intended for external amps and processors.
+
+• Bass techniques supported: mutes, slap/pick harmonics via the mod wheel.
+
+• Adjustable neck mapping, velocity curves, polyphony, and pitch‑bend range."""
+url = "https://www.wedgeforce.com/keemun-synth-download/"
+
+[matcha]
+vendor = "wedge-force-plugin-alliance"
+name = "Matcha"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Plugin%20Alliance%20-%20WEDGE%20FORCE%20Matcha.mp3"
+description = """
+• Guitar synthesizer aimed at heavy metal riffs and solos.
+
+• Clean DI output for re‑amping with third‑party guitar effects.
+
+• Includes AAX, VST2, VST3, and AU plugins plus a standalone app.
+
+• Natural playability with mod‑wheel harmonics and velocity mapping.
+
+• Designed for easy integration in major DAWs."""
+url = "https://www.wedgeforce.com/product/matcha-synthetic-guitar-digital-download/"
+
+[oolong]
+vendor = "wedge-force-plugin-alliance"
+name = "Oolong"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Plugin%20Alliance%20-%20WEDGE%20FORCE%20Oolong.mp3"
+description = """
+• Acoustic‑guitar oriented keyboard synthesizer.
+
+• DI output designed for re‑amping with external effects and amp sims.
+
+• Guitar‑style controls: neck mapping, string damping, and factory presets.
+
+• Works in major DAWs with confirmed VST3 support.
+
+• Suitable for acoustic arrangements, fingerstyle lines, and rhythmic accompaniments."""
+url = "https://www.wedgeforce.com/oolong-synth-download/"

@@ -4,6 +4,16 @@ import fs from "fs/promises"
 import fetch from "node-fetch"
 import slugify from "slugify"
 
+// we're ignoring products that are no longer maintained or that got incorrect vendor associations here
+
+const IGNORED_PRODUCTS: [string, string][] = [
+    ["cinesamples", "90s-retro-trumpets"],
+    ["cinesamples", "abbey-road-classic-upright-pianos"],
+    ["cinesamples", "cineorch"],
+    ["cinesamples", "cineperc-pro"],
+    ["cinesamples", "continuum-guitars"],
+]
+
 const downloadSource = async () => {
     let res = await fetch(
         "https://reaperaccessible.fr/catalog/data/catalog.csv",
@@ -65,153 +75,6 @@ const parseRequirement = (
     throw new Error(`invalid requirements ${r} with version ${v} supplied`)
 }
 
-/*
-const parseCategories = (
-    type: string,
-    itype: string,
-    etype: string,
-): string[] => {
-    switch (type) {
-        case "Instrument":
-            switch (itype.trim().toLowerCase()) {
-                case "electric piano":
-                case "hybrid piano":
-                case "symphonic strings":
-                case "double bass ensemble":
-                case "solo violin":
-                case "keys":
-                case "keyboard":
-                case "organ":
-                case "tape keyboard":
-                case "piano":
-                case "toy piano":
-                    return ["vsti.keys"]
-                case "string ensemble":
-                case "strings":
-                case "violin":
-                case "viola":
-                case "cello":
-                case "double bass":
-                case "harp":
-                    return ["vsti.strings"]
-                case "preset browser":
-                case "workstation":
-                case "synth":
-                    return ["vsti.synthesizer"]
-                case "percussion":
-                case "mallets":
-                case "percussion ensemble":
-                case "rhythm/percussion":
-                    return ["vsti.percussion"]
-                case "orchestra":
-                case "orchestral effects":
-                    return ["vsti.brass", "vsti.strings", "vsti.woodwinds"]
-                case "bassoon":
-                case "clarinet":
-                case "flute":
-                case "oboe":
-                case "woodwind ensemble":
-                case "woodwinds":
-                case "alto saxophone":
-                case "tenor saxophone":
-                case "soprano saxophone":
-                case "baritone saxophone":
-                case "bass clarinet":
-                case "english horn":
-                case "contrabassoon":
-                    return ["vsti.woodwinds"]
-                case "world instruments":
-                case "banjo":
-                case "didgeridoo":
-                case "dhol ensemble":
-                case "xiao flute":
-                case "dobro":
-                case "dulcimer":
-                case "guitar dobro":
-                case "guzheng":
-                case "chinese lute":
-                case "transverse flute":
-                case "vertical bamboo flute":
-                case "transverse bamboo flute":
-                case "erhu":
-                case "guqin":
-                case "konghou (chinese harp)":
-                    return ["vsti.ethnic"]
-                case "chinese percussion ensemble":
-                    return ["vsti.ethnic", "vsti.percussion"]
-                case "producer tool":
-                    return ["vsti.drums", "vsti.synthesizer"]
-                case "vocal":
-                case "choir":
-                case "vocal phrases":
-                    return ["vsti.vocal"]
-                case "cinematic effects":
-                case "effects/sound design":
-                case "hybrid sound design":
-                case "sound design":
-                    return ["vsti.sound-design"]
-                case "guitar ambience":
-                    return ["vsti.ambient"]
-                case "brass":
-                case "trumpet":
-                case "flugelhorn":
-                case "french horn":
-                case "euphonium":
-                case "tuba":
-                case "trombone":
-                case "brass ensemble":
-                    return ["vsti.brass"]
-                case "drum kit":
-                case "tom ensemble/percussion":
-                case "steel tongue drum":
-                case "drum synth":
-                    return ["vsti.drums"]
-                case "sampler":
-                    return ["vsti.sampler"]
-                case "groove workstation":
-                    return [
-                        "vsti.drums",
-                        "vsti.percussion",
-                        "vsti.synthesizer",
-                        "vsti.sound-design",
-                    ]
-                case "12-string acoustic guitar":
-                case "acoustic bass":
-                case "electric bass (5-string)":
-                case "electric bass (6-string)":
-                case "acoustic guitar":
-                case "classical guitar":
-                case "electric bass":
-                case "electric bass (fretless)":
-                case "electric guitar":
-                case "guitar":
-                case "jumbo acoustic guitar":
-                case "slide guitar":
-                case "ukulele":
-                case "upright bass":
-                    return ["vsti.guitar"]
-                case "instruments bundle":
-                case "instrument collection":
-                case "":
-                    return ["vsti"]
-                default:
-                    throw new Error(`Unknown instrument type ${itype}`)
-            }
-        case "Effect":
-            switch (etype) {
-                case "":
-                    return ["fx"]
-                default:
-                    throw new Error(`Unknown effect type ${etype}`)
-            }
-        case "":
-            return
-        default:
-            throw new Error(`Unknown product type ${type}`)
-    }
-}
-*/
-
 const main = async () => {
     let vendors: string
     let products: string
@@ -261,9 +124,19 @@ const main = async () => {
 
             product["name"] = raProduct["Name"]
 
-            const pId = slugify(product["name"], {
+            let pId = slugify(product["name"], {
                 lower: true,
             })
+
+            let pIdSuffix = 1
+
+            while (oProducts[pId] && oProducts[pId]["vendor"] !== vId) {
+                pIdSuffix += 1
+                pId =
+                    slugify(product["name"], {
+                        lower: true,
+                    }) + `-${pIdSuffix}`
+            }
 
             product["size"] = parseSize(raProduct["Size"])
 
@@ -303,18 +176,13 @@ const main = async () => {
             if (raProduct["Notes"])
                 product["accessibility_description"] = raProduct["Notes"]
 
-            /*
-            product["categories"] = parseCategories(
-                raProduct["Type"],
-                raProduct["InstrumentTypeEN"],
-                raProduct["EffectTypeEN"],
-            )
-*/
-
             if (
-                !oProducts[pId] ||
-                oProducts[pId]["price"] === undefined ||
-                oProducts[pId]["categories"] === undefined
+                !IGNORED_PRODUCTS.find(
+                    (elem) => elem[0] === vId && elem[1] === pId,
+                ) &&
+                (!oProducts[pId] ||
+                    oProducts[pId]["price"] === undefined ||
+                    oProducts[pId]["categories"] === undefined)
             ) {
                 oProducts[pId] = product
             }
