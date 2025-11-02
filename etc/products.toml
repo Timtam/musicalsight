@@ -5169,14 +5169,25 @@ Deep Percussion Beds 1 contains epic and emotional percussion loops for the film
 """
 
 [drums-of-war-1]
-vendor = "cinesamples"
-name = "Drums Of War 1"
-size = 333
-requires = [ [ "native-instruments-kontakt-player", "6.6.1" ] ]
-nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Drums%20Of%20War%201.mp3"
-description = "Drums of War I is an epic cinematic percussion library, redesigned and re-encoded for Kontakt Player 6.6.1+, featuring pristine 24/48k recordings at the legendary Manhattan Center Studios with fully-captured natural reverberation, extensive 5 dynamic layer patches each using level-based round robin programming, alternate takes up to RR x13, a quick EQ GUI with pre-selected frequencies, enhanced Kontakt 6 engine FX, and Kontakt Player/NKS encoding."
+vendor = "cinesamples" 
+name = "Drums Of War 1" 
+categories = ["vsti.percussion"] 
+requires = [["native-instruments-kontakt-player","6.7.1"]] 
+size = 333 
 url = "https://store.cinesamples.com/products/drums-of-war-1"
+demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Drums%20Of%20War%201.mp3"
+price = 99 
+nks = true
+description = """\
+Drums of War 1 is an epic cinematic percussion library, now redesigned and re-encoded for the free Kontakt Player 6.6.1+ 
+
+* Pristine 24/48k Recordings at the legendary Manhattan Center Studios 
+* Unprocessed natural cinematic sonic quality 
+* Fully-captured natural reverberation 
+* Extensive 5 Dynamic Layer Patches each using Level based Round Robin programming 
+* Quick EQ GUI using pre-selected frequencies for quick and accurate equalization* 
+* Alternate Takes Included (Up to RR X13)\
+"""
 
 [drums-of-war-2]
 vendor = "cinesamples"
