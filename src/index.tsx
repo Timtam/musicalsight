@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import React from "react"
 import ReactDOM from "react-dom/client"
-import { HelmetProvider } from "react-helmet-async"
+import { HelmetProvider } from "@dr.pogodin/react-helmet"
 import { RouterProvider, createHashRouter } from "react-router-dom"
 import "reflect-metadata"
 import App from "./App"

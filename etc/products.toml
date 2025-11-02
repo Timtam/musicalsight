@@ -5155,14 +5155,18 @@ Continuum Guitars brings you sampled guitar performances and evolving textures i
 """
 
 [deep-percussion-beds]
-vendor = "cinesamples"
-name = "Deep Percussion Beds"
-size = 4_480
-requires = [ [ "native-instruments-kontakt-player", "6.6.1" ] ]
-nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Deep%20Percussion%20Beds.mp3"
-description = "Deep Percussion Beds 1 contains epic and emotional percussion loops for the film, television, and game composer, featuring ready-to-use beds for peak energy and contemplative moments alike, Deep Percussion Beds 1 has the ability to transform any scene with multiple rhythmic variations and precise textures across every loop."
+vendor = "cinesamples" 
+name = "Deep Percussion Beds" 
+categories = ["vsti.percussion"] 
+requires = [["native-instruments-kontakt-player","6.7.1"]] 
+size = 4480 
 url = "https://store.cinesamples.com/products/deep-percussion-beds-1"
+demo = "https://www.youtube.com/watch?v=R2Ha0jSvEY4"
+price = 149 
+nks = true
+description = """\
+Deep Percussion Beds 1 contains epic and emotional percussion loops for the film, television, and game composer. From deep beds that sit nicely in a mix, to high-impact action grooves that pound through a track. For the composer on a deadline.\
+"""
 
 [drums-of-war-1]
 vendor = "cinesamples"
