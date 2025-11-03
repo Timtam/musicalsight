@@ -5141,44 +5141,40 @@ nks = true
 description = "CineWinds PRO is the expansion to the next-generation orchestral woodwinds library, CineWinds CORE. Recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, CineWinds PRO expansion fills out the remainder of the woodwind instruments in the orchestra and also offers an eclectic choice of ethnic, renaissance, and period wind instruments most often used in film scoring. From the lowest woodwind in the orchestra to the highest, this is the real Hollywood Woodwinds sound. Together with CineWinds Core, this Woodwind VST bundle will become your best woodwind sample library taking center stage in your composition template."
 
 [continuum-guitars]
-vendor = "metasonica" 
-name = "Continuum Guitars" 
-categories = ["vsti.guitar","vsti.sound-design","vsti.synthesizer"] 
-requires = [["native-instruments-kontakt-player","6.8.1"]] 
-size = 1840 
+vendor = "metasonica"
+name = "Continuum Guitars"
+categories = [ "vsti.guitar", "vsti.sound-design", "vsti.synthesizer" ]
+requires = [ [ "native-instruments-kontakt-player", "6.8.1" ] ]
+size = 1_840
 url = "https://metasonica.net/continuum-guitars/"
 demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Continuum%20Guitars.mp3"
-price = 99 
+price = 99
 nks = true
-description = """\
-Continuum Guitars brings you sampled guitar performances and evolving textures in an inspiring and innovative virtual instrument. Achieve your musical visions, from energetic rhythm guitar pulses to expressive harmonic and melodic beds. Sound either clean and organic or heavy and distorted. Enjoy synthetic filtered guitar pads, lo-fi textures and never explored dynamic soundscapes. A variety of evolving guitar performances were recorded with different playing techniques such as swells, tremolo picking and whammy bar, all processed through a chain of hand picked effect pedals. Another set of sources consists of inspiring rhythmic guitar patterns in a variety of styles sampled unprocessed across the guitar range with multiple dynamics. Deep sampled short and sustaining notes were included with multiple dynamics and round-robin variations. The Vector module allows continuously blending four sound sources in each XY pad across two user-defined keyboard zones for evolving drones or cinematic textures. An integrated arpeggiator interacts with the rhythmic loops, includes step modulation of multiple parameters. Effects include reverb stage (several types), delay (including reverse), amplifier & cabinet modeling, stomp-pedals, filtering, and modulation tools.\
-"""
+description = "Continuum Guitars brings you sampled guitar performances and evolving textures in an inspiring and innovative virtual instrument. Achieve your musical visions, from energetic rhythm guitar pulses to expressive harmonic and melodic beds. Sound either clean and organic or heavy and distorted. Enjoy synthetic filtered guitar pads, lo-fi textures and never explored dynamic soundscapes. A variety of evolving guitar performances were recorded with different playing techniques such as swells, tremolo picking and whammy bar, all processed through a chain of hand picked effect pedals. Another set of sources consists of inspiring rhythmic guitar patterns in a variety of styles sampled unprocessed across the guitar range with multiple dynamics. Deep sampled short and sustaining notes were included with multiple dynamics and round-robin variations. The Vector module allows continuously blending four sound sources in each XY pad across two user-defined keyboard zones for evolving drones or cinematic textures. An integrated arpeggiator interacts with the rhythmic loops, includes step modulation of multiple parameters. Effects include reverb stage (several types), delay (including reverse), amplifier & cabinet modeling, stomp-pedals, filtering, and modulation tools."
 
 [deep-percussion-beds]
-vendor = "cinesamples" 
-name = "Deep Percussion Beds" 
-categories = ["vsti.percussion"] 
-requires = [["native-instruments-kontakt-player","6.7.1"]] 
-size = 4480 
+vendor = "cinesamples"
+name = "Deep Percussion Beds"
+categories = [ "vsti.percussion" ]
+requires = [ [ "native-instruments-kontakt-player", "6.7.1" ] ]
+size = 4_480
 url = "https://store.cinesamples.com/products/deep-percussion-beds-1"
 demo = "https://www.youtube.com/watch?v=R2Ha0jSvEY4"
-price = 149 
+price = 149
 nks = true
-description = """\
-Deep Percussion Beds 1 contains epic and emotional percussion loops for the film, television, and game composer. From deep beds that sit nicely in a mix, to high-impact action grooves that pound through a track. For the composer on a deadline.\
-"""
+description = "Deep Percussion Beds 1 contains epic and emotional percussion loops for the film, television, and game composer. From deep beds that sit nicely in a mix, to high-impact action grooves that pound through a track. For the composer on a deadline."
 
 [drums-of-war-1]
-vendor = "cinesamples" 
-name = "Drums Of War 1" 
-categories = ["vsti.percussion"] 
-requires = [["native-instruments-kontakt-player","6.7.1"]] 
-size = 333 
+vendor = "cinesamples"
+name = "Drums Of War 1"
+categories = [ "vsti.percussion" ]
+requires = [ [ "native-instruments-kontakt-player", "6.7.1" ] ]
+size = 333
 url = "https://store.cinesamples.com/products/drums-of-war-1"
 demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Drums%20Of%20War%201.mp3"
-price = 99 
+price = 99
 nks = true
-description = """\
+description = """
 Drums of War 1 is an epic cinematic percussion library, now redesigned and re-encoded for the free Kontakt Player 6.6.1+ 
 
 * Pristine 24/48k Recordings at the legendary Manhattan Center Studios 
@@ -5186,28 +5182,21 @@ Drums of War 1 is an epic cinematic percussion library, now redesigned and re-e
 * Fully-captured natural reverberation 
 * Extensive 5 Dynamic Layer Patches each using Level based Round Robin programming 
 * Quick EQ GUI using pre-selected frequencies for quick and accurate equalization* 
-* Alternate Takes Included (Up to RR X13)\
-"""
+* Alternate Takes Included (Up to RR X13)"""
 
 [drums-of-war-2]
-vendor = "cinesamples"
-name = "Drums Of War 2"
-size = 2_650
-requires = [ [ "native-instruments-kontakt-player", "6.6.1" ] ]
-nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Drums%20Of%20War%202.mp3"
-description = "Deep Cinematic Percussion Expansion Drums Of War II enhances the percussive palette with intense, soundtrack-ready percussion instruments. Expanding Cinesamples' Drums Of War product line and setting the pace for the future. With the original Drums Of War I library focusing on capturing a huge sound, embodied in cinematic textures, Cinesamples wanted to create a follow-up with specific instrumentation and production techniques to provide a new way of working. They recorded individual percussion instruments, and created Ensemble patches by double, triple, and quadruple-tracking."
+vendor = "cinesamples" 
+name = "Drums Of War 2" 
+categories = ["vsti.percussion"] 
+requires = [["native-instruments-kontakt-player","6.6.1"]] 
+size = 2650 
 url = "https://store.cinesamples.com/products/drums-of-war-2"
-
-[keyboard-in-blue]
-vendor = "cinesamples"
-name = "Keyboard in Blue"
-size = 5_790
-requires = [ [ "native-instruments-kontakt", "5.6.8" ] ]
-nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Keyboard%20in%20Blue.mp3"
-description = "Keyboard In Blue is a genuine electro-mechanical piano built from scratch. It offers 5 separate mixes: 2 close mics on the … mounting, 2 close mics on the action side, and an ambience mic. The direct output is fed through a vintage tube guitar amp-cabinet for added character, and a “Character” knob allows adjusting between smooth and crunchy tone."
-url = "https://store.cinesamples.com/products/keyboard-in-blue"
+demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Drums%20Of%20War%202.mp3"
+price = 149 
+nks = true
+description = """\
+Deep Cinematic Percussion Expansion Drums Of War II enhances the percussive palette with intense, soundtrack-ready percussion instruments. Expanding Cinesamples' Drums Of War product line and setting the pace for the future. With the original Drums Of War I library focusing on capturing a huge sound, embodied in cinematic textures, Cinesamples wanted to create a follow-up with specific instrumentation and production techniques to provide a new way of working. They recorded individual percussion instruments, and created Ensemble patches by double, triple, and quadruple-tracking.\
+"""
 
 [o-forbes-pipe-organ]
 vendor = "cinesamples"
@@ -14941,7 +14930,8 @@ contains = [
   "fracture-sounds-blueprint-electric-strings",
   "fracture-sounds-blueprint-textural-viola",
   "fracture-sounds-blueprint-thumb-piano",
-  "fracture-sounds-blueprint-brass-ensemble"
+  "fracture-sounds-blueprint-brass-ensemble",
+  "fracture-sounds-blueprint-clavinet"
 ]
 url = "https://fracturesounds.com/product/blueprint-collection/"
 price = 0
@@ -26211,3 +26201,296 @@ description = """
 
 • Suitable for acoustic arrangements, fingerstyle lines, and rhythmic accompaniments."""
 url = "https://www.wedgeforce.com/oolong-synth-download/"
+
+[blueprint-clavinet]
+vendor = "fracture-sounds"
+name = "Blueprint: Clavinet"
+categories = [ "vsti.keys" ]
+requires = [ [ "native-instruments-kontakt-player", "8" ] ]
+size = 532
+url = "https://fracturesounds.com/product/blueprint-clavinet/"
+demo = "https://soundcloud.com/fracture-sounds/clavtastic-andre-louis?in=fracture-sounds/sets/blueprint-clavinet"
+price = 0
+nks = true
+description = """
+An iconic sound from the funk genre, reimagined with our production tools. 
+A direct recording of an original Clavinet, recorded in detail with different tone presets curated by the Fracture Sounds team."""
+
+[valhalla-delay]
+vendor = "valhalla-dsp"
+name = "Valhalla Delay"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Valhalla%20DSP%20-%20Valhalla%20Delay.mp3"
+description = "Versatile delay plugin covering tape, BBD, and digital echoes with pitch and ghost modes. The diffusion section morphs smeared echoes into ethereal reverbs. Age and Era controls shape tone, with Single, Dual, Ratio, Ping-Pong, and Quad styles. Suited for long loops, psychedelic effects, and tempo‑synced delays."
+url = "https://valhalladsp.com/shop/delay/valhalladelay/"
+
+[valhalla-freqecho]
+vendor = "valhalla-dsp"
+name = "Valhalla FreqEcho"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Valhalla%20DSP%20-%20Valhalla%20FreqEcho.mp3"
+description = "Combines Bode‑style frequency shifting with analog echo. Ranges from subtle chorusing to barber‑pole phasing and endless glissandi. Ideal for dub, sound design, and psychedelic textures. Simple interface enables continuous sweeps and extreme feedback."
+url = "https://valhalladsp.com/shop/delay/valhalla-freq-echo/"
+
+[valhalla-plate]
+vendor = "valhalla-dsp"
+name = "Valhalla Plate"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Valhalla%20DSP%20-%20Valhalla%20Plate.mp3"
+description = "Algorithmic plate reverb with twelve original algorithms. Emulates steel plate behavior while extending beyond hardware limits. Size and diffusion controls deliver dense and smooth decays. Suits vocals, guitars, and drums for warm and bright ambience."
+url = "https://valhalladsp.com/shop/reverb/valhalla-plate/"
+
+[valhalla-room]
+vendor = "valhalla-dsp"
+name = "Valhalla Room"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Valhalla%20DSP%20-%20Valhalla%20Room.mp3"
+description = "True‑stereo algorithmic reverb with twelve modes including Dark, Nostromo, and LV‑426. Psychoacoustic design yields realistic or hyper‑musical spaces. Separate Early and Late sections with modulation and tone control. Ranges from tight rooms to modulated halls for mixing and sound design."
+url = "https://valhalladsp.com/shop/reverb/valhalla-room/"
+
+[valhalla-shimmer]
+vendor = "valhalla-dsp"
+name = "Valhalla Shimmer"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Valhalla%20DSP%20-%20Valhalla%20Shimmer.mp3"
+description = "Pitch‑shifting reverb for pads and airy soundscapes. Four stereo modes with smoothed processing for click‑free transitions. Diffusion, Size, and Color controls shape attack and brightness. Ideal for ambient, cinematic textures, and ethereal guitars."
+url = "https://valhalladsp.com/shop/reverb/valhalla-shimmer/"
+
+[valhalla-spacemodulator]
+vendor = "valhalla-dsp"
+name = "Valhalla SpaceModulator"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Valhalla%20DSP%20-%20Valhalla%20SpaceModulator.mp3"
+description = "Flanger effect with eleven algorithms including through‑zero and barber‑pole. Capable of detuning, doubling, strange echoes, and reverbs. Simple controls for stable or extreme sweeps. Suits synths, guitars, and special effects."
+url = "https://valhalladsp.com/shop/modulation/valhalla-space-modulator/"
+
+[valhalla-supermassive]
+vendor = "valhalla-dsp"
+name = "Valhalla Supermassive"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Valhalla%20DSP%20-%20Valhalla%20Supermassive.mp3"
+description = "Feedback delay networks for massive reverbs and echoes. Multiple ambient‑focused modes from silky sustain to outsized tails. MODE control with distinct attack and decay behaviors. Ideal for pads, drones, and expansive spatialization."
+url = "https://valhalladsp.com/shop/reverb/valhalla-supermassive/"
+
+[valhalla-ubermod]
+vendor = "valhalla-dsp"
+name = "Valhalla UberMod"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Valhalla%20DSP%20-%20Valhalla%20UberMod.mp3"
+description = "Modulated multi‑tap delay with up to 32 taps, diffusion, and overdrive. Creates dimensional choruses, string ensembles, tape/BBD echoes, and nonlinear reverbs. Parallel slow and vibrato LFOs enable evolving textures. A versatile tool for widening, ambience, and rhythmic effects."
+url = "https://valhalladsp.com/shop/delay/valhalla-uber-mod/"
+
+[valhalla-vintageverb]
+vendor = "valhalla-dsp"
+name = "Valhalla VintageVerb"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Valhalla%20DSP%20-%20Valhalla%20VintageVerb.mp3"
+description = "Reverb inspired by 1970s–1980s digital hardware, with 22 modes and three color models. Wide palette from classic halls to chorused and random spaces. Clear controls to tune density, modulation, and brightness. Suited to modern mixing, keyboards, and vocals."
+url = "https://valhalladsp.com/shop/reverb/valhalla-vintage-verb/"
+
+[archetype-abasi]
+vendor = "neural-dsp"
+name = "Archetype Abasi"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Abasi.mp3"
+description = "Amp simulation suite created with Tosin Abasi. Three amps cover clean, rhythm, and lead tones with a 9‑band graphic EQ. The effects section includes delay and reverb for ambient textures. The cabinet simulator offers 70+ impulse responses captured by Adam “Nolly” Getgood with multi‑mic placement. Runs standalone or as a plugin in a DAW."
+url = "https://neuraldsp.com/plugins/archetype-abasi"
+
+[archetype-cory-wong-x]
+vendor = "neural-dsp"
+name = "Archetype Cory Wong X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Cory%20Wong%20X.mp3"
+description = "Clean and funk‑focused amp simulation developed with Cory Wong. The signal chain includes pre effects, amp, cabinet simulator, time effects, and post processing. Utilities such as Transpose, Doubler, and a tuner support practice and recording. A built‑in metronome is available in standalone mode. Runs as a standalone app or as a plugin."
+url = "https://neuraldsp.com/plugins/archetype-cory-wong"
+
+[archetype-gojira-x]
+vendor = "neural-dsp"
+name = "Archetype Gojira X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Gojira%20X.mp3"
+description = "Amp simulation inspired by Gojira with heavy yet articulate tones. The time‑effects section includes a tape‑flavored delay and a spacious reverb. Transpose and Doubler provide pitch shifting and stereo widening. A tuner and metronome are included, with standalone operation supported. Works standalone or as a plugin."
+url = "https://neuraldsp.com/plugins/archetype-gojira"
+
+[archetype-mateus-asato]
+vendor = "neural-dsp"
+name = "Archetype Mateus Asato"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Mateus%20Asato.mp3"
+description = "Amp suite created with Mateus Asato for expressive clean‑to‑lead tones. Effects include plate reverbs and extended post processing. Transpose and Doubler handle retuning and stereo projection. A tuner and metronome are provided, with standalone execution. Runs as a standalone app and as a plugin."
+url = "https://neuraldsp.com/plugins/archetype-mateus-asato"
+
+[archetype-misha-mansoor-x]
+vendor = "neural-dsp"
+name = "Archetype Misha Mansoor X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Misha%20Mansoor%20X.mp3"
+description = "X edition developed with Misha Mansoor, combining unique amps with experimental effects. The Preset Explorer speeds up organization and sound discovery. The chain covers pre effects, amp/cab with cab sim, and post effects. Standalone mode includes a tuner and practice tools. Suited for modern composition and tight rhythm work."
+url = "https://neuraldsp.com/plugins/archetype-misha-mansoor"
+
+[archetype-nolly-x]
+vendor = "neural-dsp"
+name = "Archetype Nolly X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Nolly%20X.mp3"
+description = "Amp simulation distilled from Nolly’s custom‑modded amp collection. Four amplifiers and a detailed cab sim span clean to high gain. The chain includes dynamics, modulation, and post effects. Runs in standalone mode and as a plugin. Built for modern studio and stage use."
+url = "https://neuraldsp.com/plugins/archetype-nolly"
+
+[archetype-petrucci-x]
+vendor = "neural-dsp"
+name = "Archetype Petrucci X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Petrucci%20X.mp3"
+description = "Amp simulation suite created with John Petrucci. Pre effects include overdrive, phaser/vibe, chorus, and flanger, along with dedicated compressor and wah. Multiple amps cover rhythm and lead tones with a flexible cab sim. Provides standalone and plugin operation for recording and live use. Engineered for precise tones with abundant sustain."
+url = "https://neuraldsp.com/plugins/archetype-petrucci"
+
+[archetype-plini-x]
+vendor = "neural-dsp"
+name = "Archetype Plini X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Plini%20X.mp3"
+description = "Versatile amp simulation developed with Plini. Effect modules and the cab sim span everything from clean to singing lead. Utilities like Transpose, Doubler, and a tuner streamline daily work. Available standalone and as a plugin. Designed for detailed arrangements and melodic textures."
+url = "https://neuraldsp.com/plugins/archetype-plini"
+
+[archetype-rabea-x]
+vendor = "neural-dsp"
+name = "Archetype Rabea X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Rabea%20X.mp3"
+description = "Guitar‑focused plugin combining amp simulation and a guitar‑controlled synth. Overlord Synth offers oscillators, a ladder‑style filter, and an arpeggiator with proprietary pitch tracking. The chain includes cab sim, effects, and utilities for modern production. Works in standalone and plugin modes. Built to expand tone without a keyboard or external MIDI."
+url = "https://neuraldsp.com/plugins/archetype-rabea"
+
+[archetype-tim-henson-x]
+vendor = "neural-dsp"
+name = "Archetype Tim Henson X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Tim%20Henson%20X.mp3"
+description = "Amp simulation developed with Tim Henson, focused on low‑gain textures and dynamic leads. Multiple amps cover glassy cleans, warm crunch, and rich lead sounds. The chain includes pre effects, cab sim, and post effects with practice utilities. Runs standalone or as a plugin. Ideal for detailed rhythm work and modern arrangements."
+url = "https://neuraldsp.com/plugins/archetype-tim-henson"
+
+[archetype-tom-morello]
+vendor = "neural-dsp"
+name = "Archetype Tom Morello"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Archetype%20Tom%20Morello.mp3"
+description = "Amp simulation suite created with Tom Morello, aimed at unconventional techniques and 90s‑inspired textures. The chain includes pre effects, amp stage, cabinet simulator with impulse responses, and time effects. Utilities like a tuner, Transpose, and Doubler support standalone practice. Flexible routing lets you stack pedals and post processing for percussive and expressive tones. Runs as a standalone app and as a plugin in a DAW."
+url = "https://neuraldsp.com/plugins/archetype-tom-morello"
+
+[darkglass-ultra]
+vendor = "neural-dsp"
+name = "Darkglass Ultra"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Darkglass%20Ultra.mp3"
+description = "Bass‑focused plugin modeling the Darkglass B7K Ultra and Vintage Ultra preamps. It provides EQ, drive, and a cabinet simulator to shape punch and attack. Practical tools such as a tuner and effect modules streamline recording and live use. The signal flow covers pre effects, preamp stage, and post processing tailored for bass. Available as a standalone app and as a plugin."
+url = "https://neuraldsp.com/plugins/darkglass-ultra"
+
+[fortin-cali-suite]
+vendor = "neural-dsp"
+name = "Fortin Cali Suite"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Fortin%20Cali%20Suite.mp3"
+description = "Fortin Cali suite with three amp channels ranging from vintage clean to modern high gain. Includes GRIND, ZUUL, and HEXDRIVE pedals plus a cabinet simulator with impulse responses. Detailed controls refine attack, mids, and compression. Use it standalone for practice and live shows or as a plugin in the studio. Built for tight rhythm work and cutting leads."
+url = "https://neuraldsp.com/plugins/fortin-cali-suite"
+
+[fortin-nameless-suite-x]
+vendor = "neural-dsp"
+name = "Fortin Nameless Suite X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Fortin%20Nameless%20Suite%20X.mp3"
+description = "X edition of Fortin’s single‑channel amp known for aggressive and precise response. The chain includes built‑in pedals, a cabinet simulator, and an IR loader with multi‑mic options. Practice tools and standalone operation make it useful outside a DAW. Its high‑gain voice stays articulate with tight low end. Suited to modern metal and fast palm‑muted riffs."
+url = "https://neuraldsp.com/plugins/fortin-nameless-suite"
+
+[fortin-nts-suite]
+vendor = "neural-dsp"
+name = "Fortin NTS Suite"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Fortin%20NTS%20Suite.mp3"
+description = "Fortin NTS suite inspired by the Natas, focused on versatile high‑gain tones. It includes dedicated pedals, precise EQ, and an IR‑based cabinet simulator. The lead channel delivers fast attack and high clarity in a mix. Runs standalone and as a plugin in your DAW. Well suited for tight rhythm parts and incisive solos."
+url = "https://neuraldsp.com/plugins/fortin-nts-suite"
+
+[mantra]
+vendor = "neural-dsp"
+name = "Mantra"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Mantra.mp3"
+description = "Mantra brings all the essential tools for modern vocal production into a single plugin. Its modules cover EQ, dynamics, saturation, time-based processing, and pitch correction within a coherent workflow. The signal path streamlines recording and mixing while reducing reliance on complex plugin chains. A standalone mode enables work without a DAW and speeds up vocal tracking. It is designed to accelerate decisions and deliver a clear, modern result."
+url = "https://neuraldsp.com/plugins/mantra"
+
+["mesa-boogie-mark-iic+-suite"]
+vendor = "neural-dsp"
+name = "Mesa Boogie Mark IIC+ Suite"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Mesa%20Boogie%20Mark%20IIC+%20Suite.mp3"
+description = "Suite dedicated to the Mesa Boogie Mark IIC+ and the IIC++ variant with switchable rhythm and lead channels. The cabinet simulator provides IRs and multiple mic positions to tailor projection. Time effects cover delay and reverb for classic and modern textures. Runs both as a standalone app and as a plugin. Designed for versatile tones from rock to progressive arrangements."
+url = "https://neuraldsp.com/plugins/mesa-boogie-mark-iic-suite"
+
+[morgan-amps-suite]
+vendor = "neural-dsp"
+name = "Morgan Amps Suite"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Morgan%20Amps%20Suite.mp3"
+description = "Collection centered on the Morgan PR12 and related models, spanning bright cleans to saggy overdrives. The cabinet simulator with IRs and spring reverb deliver authentic American flavor. A complete chain includes pedals, amp, and post effects for tracking and mixing. Works standalone and as a plugin. Ideal for roots, americana, and responsive accompaniment."
+url = "https://neuraldsp.com/plugins/morgan-amps-suite"
+
+[omega-ampworks-granophyre]
+vendor = "neural-dsp"
+name = "Omega Ampworks Granophyre"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Omega%20Ampworks%20Granophyre.mp3"
+description = "Simulation of the Omega Granophyre amplifier, from gritty blues to crushing metal. Includes a cabinet simulator with IR loading and an effects section. Controls deliver fast response, strong note recovery, and rich harmonics. Use it standalone or as a plugin. Built for dense yet readable saturation."
+url = "https://neuraldsp.com/plugins/omega-ampworks-granophyre"
+
+[parallax-x]
+vendor = "neural-dsp"
+name = "Parallax X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Parallax%20X.mp3"
+description = "Parallel bass processing suite redesigned as the X edition. Three dedicated paths combine clean sub, articulate mids, and a drive section. Shaping tools and EQ make quick mix adjustments straightforward. Runs as a standalone app and as a plugin. Optimized for modern, powerful bass lines."
+url = "https://neuraldsp.com/plugins/parallax"
+
+[soldano-slo-100-x]
+vendor = "neural-dsp"
+name = "Soldano SLO-100 X"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Soldano%20SLO-100%20X.mp3"
+description = "Official recreation of the Soldano SLO‑100 in the X edition, emblematic of American high gain. Two channels and a 9‑band graphic EQ pair with a cabinet simulator and IR loader. Dynamic response emphasizes pick attack and note sustain. Available as a standalone app and as a plugin. Built for solid rhythm work and singing leads."
+url = "https://neuraldsp.com/plugins/soldano-slo-100"
+
+[tone-king-imperial-mkii]
+vendor = "neural-dsp"
+name = "Tone King Imperial MKII"
+requires = [ ]
+nks = false
+demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Tone%20King%20Imperial%20MKII.mp3"
+description = "Suite based on the 20‑watt Imperial MKII combo with Rhythm and Lead channels. Spring reverb and bias‑modulated tremolo are modeled in detail. The chain includes pedals, amp, cabinet simulator, and time effects. Use it standalone or as a plugin for recording and live work. Aimed at nuanced, classic American tones."
+url = "https://neuraldsp.com/plugins/tone-king-imperial-mkii"

@@ -11,7 +11,8 @@ const IGNORED_PRODUCTS: [string, string][] = [
     ["cinesamples", "abbey-road-classic-upright-pianos"],
     ["cinesamples", "cineorch"],
     ["cinesamples", "cineperc-pro"],
-    ["cinesamples", "continuum-guitars"],
+    ["cinesamples", "continuum-guitars-2"],
+    ["cinesamples", "keyboard-in-blue"],
 ]
 
 const downloadSource = async () => {

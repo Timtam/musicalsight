@@ -831,3 +831,7 @@ url = ""
 [metasonica]
 name = "Metasonica"
 url = "https://metasonica.net/"
+
+[neural-dsp]
+name = "Neural DSP"
+url = ""
