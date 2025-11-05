@@ -5185,30 +5185,30 @@ Drums of War 1 is an epic cinematic percussion library, now redesigned and re-e
 * Alternate Takes Included (Up to RR X13)"""
 
 [drums-of-war-2]
-vendor = "cinesamples" 
-name = "Drums Of War 2" 
-categories = ["vsti.percussion"] 
-requires = [["native-instruments-kontakt-player","6.6.1"]] 
-size = 2650 
+vendor = "cinesamples"
+name = "Drums Of War 2"
+categories = [ "vsti.percussion" ]
+requires = [ [ "native-instruments-kontakt-player", "6.6.1" ] ]
+size = 2_650
 url = "https://store.cinesamples.com/products/drums-of-war-2"
 demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Drums%20Of%20War%202.mp3"
+price = 149
+nks = true
+description = "Deep Cinematic Percussion Expansion Drums Of War II enhances the percussive palette with intense, soundtrack-ready percussion instruments. Expanding Cinesamples' Drums Of War product line and setting the pace for the future. With the original Drums Of War I library focusing on capturing a huge sound, embodied in cinematic textures, Cinesamples wanted to create a follow-up with specific instrumentation and production techniques to provide a new way of working. They recorded individual percussion instruments, and created Ensemble patches by double, triple, and quadruple-tracking."
+
+[o-forbes-pipe-organ]
+vendor = "cinesamples" 
+name = "O - Forbes Pipe Organ" 
+categories = ["vsti.keys"] 
+requires = [["native-instruments-kontakt-player","6.6.0"]] 
+size = 12840 
+url = "https://store.cinesamples.com/products/o-forbes-pipe-organ"
+demo = "https://www.youtube.com/watch?v=uuKVe6QzUM0"
 price = 149 
 nks = true
 description = """\
-Deep Cinematic Percussion Expansion Drums Of War II enhances the percussive palette with intense, soundtrack-ready percussion instruments. Expanding Cinesamples' Drums Of War product line and setting the pace for the future. With the original Drums Of War I library focusing on capturing a huge sound, embodied in cinematic textures, Cinesamples wanted to create a follow-up with specific instrumentation and production techniques to provide a new way of working. They recorded individual percussion instruments, and created Ensemble patches by double, triple, and quadruple-tracking.\
+Experience O: Forbes Pipe Organ sampled from the renowned Harold Miossi Hall, at the Performing Arts Center in San Luis Obispo. This VST pipe organ brings a fresh approach and modern capabilities to a classic instrument. With O, you do not need to be a trained organist to reproduce the classic sound of a pipe organ. O sets itself apart with sonic and design flexibility, providing ready-made traditional and modern pipe combinations as well as sound design capabilities that deliver big in modern scoring situations. Experience the joy of this meticulously recorded Organ sample library!\
 """
-
-[o-forbes-pipe-organ]
-vendor = "cinesamples"
-name = "O - Forbes Pipe Organ"
-size = 12_840
-requires = [ [ "native-instruments-kontakt-player", "6.6.0" ] ]
-nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20O%20-%20Forbes%20Pipe%20Organ.mp3"
-description = """
-Extensive library of pipe organ sample:
-Check out O: Forbes Pipe Organ, sampled from the famous Harold Miossi Hall, at the Performing Arts Center in San Luis Obispo. This pipe organ VST brings a new approach and modern capabilities to a classic instrument. With O, you don't have to be a seasoned organist to reproduce the classic sound of a pipe organ. O stands out for its flexibility in tone and design, offering traditional and modern pipe combinations out of the box, as well as sound design capabilities that deliver great results in modern scoring situations. ."""
-url = "https://store.cinesamples.com/products/o-forbes-pipe-organ"
 
 [piano-in-blue]
 vendor = "cinesamples"
@@ -26494,3 +26494,49 @@ nks = false
 demo = "https://reaperaccessible.fr/catalog/demos/Neural%20DSP%20-%20Tone%20King%20Imperial%20MKII.mp3"
 description = "Suite based on the 20‑watt Imperial MKII combo with Rhythm and Lead channels. Spring reverb and bias‑modulated tremolo are modeled in detail. The chain includes pedals, amp, cabinet simulator, and time effects. Use it standalone or as a plugin for recording and live work. Aimed at nuanced, classic American tones."
 url = "https://neuraldsp.com/plugins/tone-king-imperial-mkii"
+
+[the-orchestra-elements]
+vendor = "sonuscore" 
+name = "The Orchestra Elements" 
+categories = ["vsti.brass","vsti.strings","vsti.woodwinds"] 
+requires = [["native-instruments-kontakt-player","6.7.1"]] 
+size = 4010 
+url = "https://www.sonuscore.com/shop/the-orchestra-elements/"
+demo = "https://soundcloud.com/sonuscore/invincible-tilman-sillescu-the-orchestra-elements-demo"
+price = 0 
+nks = true
+description = """\
+Experience the essence of THE ORCHESTRA, trusted by top composers for film, TV, and games, now available for free with THE ORCHESTRA ELEMENTS. 
+THE ORCHESTRA ELEMENTS is your free fast track to orchestral composing. It comes with a carefully selected curation of instruments from THE ORCHESTRA and is powered by our groundbreaking ensemble-engine. Beginners take your very first orchestral steps and create amazing music in no time! 
+Immediately playable. Incredibly inspiring. Surprisingly simple. 
+Features Highlights
+
+* Powerful Orchestration Tools: Draw from a rich library of expertly curated orchestral instruments and arrangements. 
+* 30 Inspirational Presets: Everything you need so you can explore symphonic worlds with ease and joy. 
+* User-Friendly Interface: Designed by real composers for both beginners and experienced composers. 
+* Versatile Applications: Ideal for film, TV, game scoring, and music production. 
+* Free Access: Begin your orchestral journey at no cost.\
+"""
+
+[the-pulse-elements]
+vendor = "sonuscore" 
+name = "The Pulse Elements" 
+categories = ["vsti.drums","vsti.synthesizer"] 
+requires = [["native-instruments-kontakt-player","8.7.1"]] 
+size = 1030 
+url = "https://www.sonuscore.com/shop/the-pulse-elements/"
+demo = "https://soundcloud.com/sonuscore/last-sunrise-jonas-schusselin-the-pulse-elements-demo-1?in=sonuscore/sets/the-pulse-elements-demos"
+price = 0 
+nks = true
+description = """\
+Bring your ideas to life with THE PULSE ELEMENTS, a free cinematic synth-based instrument designed for professional composers. Add rhythm, motion and beats to your cues with a refined engine that makes a single note feel alive. 
+Built on the same engine as THE PULSE, refined for speed and clarity, THE PULSE ELEMENTS includes: 
+
+* Main engine NKI for expressive synth motion and rhythmic design 
+* 8 Sessions: 3 Cinematic, 3 Modern Genre, 2 Ensemble 
+* Pre-built Kits that match each Session for instant results 
+* A curated sound pool drawn from the full library 
+* Full compatibility with the free Kontakt Player 
+
+It is everything you need to add cinematic rhythm without breaking your flow.\
+"""
