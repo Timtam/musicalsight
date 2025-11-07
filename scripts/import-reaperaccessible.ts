@@ -13,6 +13,7 @@ const IGNORED_PRODUCTS: [string, string][] = [
     ["cinesamples", "cineperc-pro"],
     ["cinesamples", "continuum-guitars-2"],
     ["cinesamples", "keyboard-in-blue"],
+    ["cinesamples", "piano-in-blue"],
 ]
 
 const downloadSource = async () => {

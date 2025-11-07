@@ -5211,14 +5211,18 @@ Experience O: Forbes Pipe Organ sampled from the renowned Harold Miossi Hall, at
 """
 
 [piano-in-blue]
-vendor = "cinesamples"
-name = "Piano In Blue"
-size = 10_160
-requires = [ [ "native-instruments-kontakt-player", "6.6.1" ] ]
+vendor = "sonicsmiths" 
+name = "Piano In Blue" 
+categories = ["vsti.keys"] 
+requires = [["native-instruments-kontakt-player","6.6.1"]] 
+size = 10160 
+url = "https://sonicsmiths.com/products/piano-in-blue"
+demo = "https://www.youtube.com/watch?v=yaHZZMYU-DY"
+price = 69.95 
 nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Piano%20In%20Blue.mp3"
-description = "Piano In Blue captures the historic sound of the Steinway D Concert Grand piano used at Columbia Records for Miles Davis’ “Kind Of Blue” and Glenn Gould’s “Goldberg Variations,” featuring 8 velocity layers, chromatically sampled, 3 microphone positions (Close/Vintage, Mid, Far), separate processing paths “Tape” and “Direct in”, Neve 8078 console, and over 9300 samples."
-url = "https://store.cinesamples.com/products/piano-in-blue"
+description = """\
+Piano In Blue captures the historic sound of the Steinway D Concert Grand piano used at Columbia Records for Miles Davis’ “Kind Of Blue” and Glenn Gould’s “Goldberg Variations,” featuring 8 velocity layers, chromatically sampled, 3 microphone positions (Close/Vintage, Mid, Far), separate processing paths “Tape” and “Direct in”, Neve 8078 console, and over 9300 samples.\
+"""
 
 [rio-grooves]
 vendor = "cinesamples"
@@ -26539,4 +26543,36 @@ Built on the same engine as THE PULSE, refined for speed and clarity, THE PULSE 
 * Full compatibility with the free Kontakt Player 
 
 It is everything you need to add cinematic rhythm without breaking your flow.\
+"""
+
+[m-tron-pro]
+vendor = "gforce-software" 
+name = "M-Tron Pro" 
+categories = ["vsti.synthesizer"] 
+url = "https://www.gforcesoftware.com/products/m-tron-pro-iv/"
+demo = "https://www.youtube.com/watch?v=pJLuQyUa5JI"
+price = 149.99 
+nks = "NKS is provided by third-party products (see links section)"
+description = """\
+GForce‘s M-Tron Pro IV delves into the iconic Mellotron M400, a tape-based keyboard famous for its use in recordings by renowned artists like The Beatles, Led Zeppelin, Radiohead, Oasis, Trent Reznor, Trentemøller, AIR, Nils Frahm, and many others. Its distinct sounds are widely utilised in genres such as progressive rock and indie rock but also lo-fi and hip hop. 
+M-Tron Pro has gained significant acclaim as the finest software emulation of the Mellotron, appreciated both by top producers and avid Mellotron enthusiasts. Boasting an extensive 3.5GB sound library, including over 200 tape banks, it provides a wealth of sonic possibilities. The newly enhanced browser simplifies the exploration of this vast library, making M-Tron Pro IV an unparalleled source of inspiration. With its redesigned interface, GForce‘s M-Tron Pro enables effortless and efficient sound customisation, allowing you to shape the sounds according to your creative ideas.\
+"""
+os = ["windows","mac_intel","mac_arm"] 
+[m-tron-pro.additional_links]
+"NKS Snapshots" = "https://freelancesoundlabs.com/product/id:3914/downloads/gforce-software/nks-library-gforce-m-tron-pro-iv/"
+
+[glade]
+vendor = "audio-imperia" 
+name = "Glade"
+categories = ["vsti.ethnic","vsti.percussion","vsti.strings","vsti.vocal","vsti.woodwinds"] 
+requires = [["native-instruments-kontakt-player","7.10.9"]] 
+size = 12507 
+url = "https://www.audioimperia.com/product/glade/"
+demo = "https://www.youtube.com/watch?v=JRvAuuULTjs"
+price = 0 
+nks = true
+description = """\
+Glade is a fully featured, professionally recorded instrument available free of charge to composers who want to start writing music today. It fuses world color with symphonic craft into a playable toolkit for expression. 
+Use macros to sculpt color and define contour, then drop into the instrument patches when you need a precise workflow. Layer strings, winds, voices, and organic percussion to discover new harmonies and timbres. 
+It is lightweight to load, mix-ready out of the box, and works in the free Kontakt Player. Glade moves sketches to finished ideas in minutes and feels at home in film cues, trailers, games, pop toplines, and electronic soundscapes. Traditional when you need it, adventurous when you want it.\
 """
