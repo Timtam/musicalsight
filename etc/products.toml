@@ -5197,50 +5197,46 @@ nks = true
 description = "Deep Cinematic Percussion Expansion Drums Of War II enhances the percussive palette with intense, soundtrack-ready percussion instruments. Expanding Cinesamples' Drums Of War product line and setting the pace for the future. With the original Drums Of War I library focusing on capturing a huge sound, embodied in cinematic textures, Cinesamples wanted to create a follow-up with specific instrumentation and production techniques to provide a new way of working. They recorded individual percussion instruments, and created Ensemble patches by double, triple, and quadruple-tracking."
 
 [o-forbes-pipe-organ]
-vendor = "cinesamples" 
-name = "O - Forbes Pipe Organ" 
-categories = ["vsti.keys"] 
-requires = [["native-instruments-kontakt-player","6.6.0"]] 
-size = 12840 
+vendor = "cinesamples"
+name = "O - Forbes Pipe Organ"
+categories = [ "vsti.keys" ]
+requires = [ [ "native-instruments-kontakt-player", "6.6.0" ] ]
+size = 12_840
 url = "https://store.cinesamples.com/products/o-forbes-pipe-organ"
 demo = "https://www.youtube.com/watch?v=uuKVe6QzUM0"
+price = 149
+nks = true
+description = "Experience O: Forbes Pipe Organ sampled from the renowned Harold Miossi Hall, at the Performing Arts Center in San Luis Obispo. This VST pipe organ brings a fresh approach and modern capabilities to a classic instrument. With O, you do not need to be a trained organist to reproduce the classic sound of a pipe organ. O sets itself apart with sonic and design flexibility, providing ready-made traditional and modern pipe combinations as well as sound design capabilities that deliver big in modern scoring situations. Experience the joy of this meticulously recorded Organ sample library!"
+
+[piano-in-blue]
+vendor = "sonicsmiths"
+name = "Piano In Blue"
+categories = [ "vsti.keys" ]
+requires = [ [ "native-instruments-kontakt-player", "6.6.1" ] ]
+size = 10_160
+url = "https://sonicsmiths.com/products/piano-in-blue"
+demo = "https://www.youtube.com/watch?v=yaHZZMYU-DY"
+price = 69.95
+nks = true
+description = "Piano In Blue captures the historic sound of the Steinway D Concert Grand piano used at Columbia Records for Miles Davis’ “Kind Of Blue” and Glenn Gould’s “Goldberg Variations,” featuring 8 velocity layers, chromatically sampled, 3 microphone positions (Close/Vintage, Mid, Far), separate processing paths “Tape” and “Direct in”, Neve 8078 console, and over 9300 samples."
+
+[rio-grooves]
+vendor = "metasonica" 
+name = "Rio Grooves" 
+categories = ["vsti.ethnic","vsti.percussion"] 
+requires = [["native-instruments-kontakt-player","6.8.1"]] 
+size = 1080 
+url = "https://metasonica.net/rio-grooves/"
+demo = "https://www.youtube.com/watch?v=NHu8Idfx_a4"
 price = 149 
 nks = true
 description = """\
-Experience O: Forbes Pipe Organ sampled from the renowned Harold Miossi Hall, at the Performing Arts Center in San Luis Obispo. This VST pipe organ brings a fresh approach and modern capabilities to a classic instrument. With O, you do not need to be a trained organist to reproduce the classic sound of a pipe organ. O sets itself apart with sonic and design flexibility, providing ready-made traditional and modern pipe combinations as well as sound design capabilities that deliver big in modern scoring situations. Experience the joy of this meticulously recorded Organ sample library!\
+The most essential collection of Brazilian rhythms ever made, played by the finest musicians, with state of the art recording and mixing. 
+For the first time such an intuitive and versatile take on Brazilian percussion is offered to producers, composers and musicians around the world. 
+Rio Grooves features an unparalleled level of flexibility regarding multi-microphone perspective balancing, seamless synchronization with your music and preset MIDI files, all presented in a straightforward interface. 
+Bring the fresh and exquisite feel and syncopation of the rhythms in this collection to your music ! 
+“Rio Grooves (…) is an infectious blend of authentic instruments and human feel. None of the performances are overcooked, making them a delight to blend with other loops, arrange as is or cherry-pick from to breathe life wherever it’s needed.“\
 """
-
-[piano-in-blue]
-vendor = "sonicsmiths" 
-name = "Piano In Blue" 
-categories = ["vsti.keys"] 
-requires = [["native-instruments-kontakt-player","6.6.1"]] 
-size = 10160 
-url = "https://sonicsmiths.com/products/piano-in-blue"
-demo = "https://www.youtube.com/watch?v=yaHZZMYU-DY"
-price = 69.95 
-nks = true
-description = """\
-Piano In Blue captures the historic sound of the Steinway D Concert Grand piano used at Columbia Records for Miles Davis’ “Kind Of Blue” and Glenn Gould’s “Goldberg Variations,” featuring 8 velocity layers, chromatically sampled, 3 microphone positions (Close/Vintage, Mid, Far), separate processing paths “Tape” and “Direct in”, Neve 8078 console, and over 9300 samples.\
-"""
-
-[rio-grooves]
-vendor = "cinesamples"
-name = "Rio Grooves"
-size = 1_080
-requires = [ [ "native-instruments-kontakt-player", "5.5.0" ] ]
-nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Rio%20Grooves.mp3"
-description = """
-Rio Grooves is one of the latest CineSamples libraries and is dedicated to Brazilian percussion:
-Presented in Kontakt format, this brand-new library was produced by renowned producers/composers Victor Pozas and Roberto Schilling.
-Recorded in Rio de Janeiro with Brazil’s top musicians, Rio Grooves covers the essence of authentic Brazilian percussion grooves.
-A total of 17 different instruments are included:
-Agogô, Ganza, Surdo, Apito, Palmas, Tambourin, Atabaque, Pandeiro, Tantan, Berimbau, Reco-reco, Triangulo, Caixa, Repinique, Xequerê, Cuica, and Rocar.
-All grooves are fully tempo-syncable with your favorite DAW, and an Offset function allows you to change the feel of the groove by adjusting its start point with a simple knob.
-Each instrument also includes 3 different mic positions (Close, Overhead, and Room) that you can mix to taste.
-You will also find around 100 grooves in MIDI file format that you can simply drag & drop into your project to instantly enrich your musical creations."""
-url = "https://metasonica.net/rio-grooves/"
 
 [sew-what]
 vendor = "cinesamples"
@@ -26500,16 +26496,16 @@ description = "Suite based on the 20‑watt Imperial MKII combo with Rhythm and 
 url = "https://neuraldsp.com/plugins/tone-king-imperial-mkii"
 
 [the-orchestra-elements]
-vendor = "sonuscore" 
-name = "The Orchestra Elements" 
-categories = ["vsti.brass","vsti.strings","vsti.woodwinds"] 
-requires = [["native-instruments-kontakt-player","6.7.1"]] 
-size = 4010 
+vendor = "sonuscore"
+name = "The Orchestra Elements"
+categories = [ "vsti.brass", "vsti.strings", "vsti.woodwinds" ]
+requires = [ [ "native-instruments-kontakt-player", "6.7.1" ] ]
+size = 4_010
 url = "https://www.sonuscore.com/shop/the-orchestra-elements/"
 demo = "https://soundcloud.com/sonuscore/invincible-tilman-sillescu-the-orchestra-elements-demo"
-price = 0 
+price = 0
 nks = true
-description = """\
+description = """
 Experience the essence of THE ORCHESTRA, trusted by top composers for film, TV, and games, now available for free with THE ORCHESTRA ELEMENTS. 
 THE ORCHESTRA ELEMENTS is your free fast track to orchestral composing. It comes with a carefully selected curation of instruments from THE ORCHESTRA and is powered by our groundbreaking ensemble-engine. Beginners take your very first orchestral steps and create amazing music in no time! 
 Immediately playable. Incredibly inspiring. Surprisingly simple. 
@@ -26519,20 +26515,19 @@ Features Highlights
 * 30 Inspirational Presets: Everything you need so you can explore symphonic worlds with ease and joy. 
 * User-Friendly Interface: Designed by real composers for both beginners and experienced composers. 
 * Versatile Applications: Ideal for film, TV, game scoring, and music production. 
-* Free Access: Begin your orchestral journey at no cost.\
-"""
+* Free Access: Begin your orchestral journey at no cost."""
 
 [the-pulse-elements]
-vendor = "sonuscore" 
-name = "The Pulse Elements" 
-categories = ["vsti.drums","vsti.synthesizer"] 
-requires = [["native-instruments-kontakt-player","8.7.1"]] 
-size = 1030 
+vendor = "sonuscore"
+name = "The Pulse Elements"
+categories = [ "vsti.drums", "vsti.synthesizer" ]
+requires = [ [ "native-instruments-kontakt-player", "8.7.1" ] ]
+size = 1_030
 url = "https://www.sonuscore.com/shop/the-pulse-elements/"
 demo = "https://soundcloud.com/sonuscore/last-sunrise-jonas-schusselin-the-pulse-elements-demo-1?in=sonuscore/sets/the-pulse-elements-demos"
-price = 0 
+price = 0
 nks = true
-description = """\
+description = """
 Bring your ideas to life with THE PULSE ELEMENTS, a free cinematic synth-based instrument designed for professional composers. Add rhythm, motion and beats to your cues with a refined engine that makes a single note feel alive. 
 Built on the same engine as THE PULSE, refined for speed and clarity, THE PULSE ELEMENTS includes: 
 
@@ -26542,37 +26537,492 @@ Built on the same engine as THE PULSE, refined for speed and clarity, THE PULSE 
 * A curated sound pool drawn from the full library 
 * Full compatibility with the free Kontakt Player 
 
-It is everything you need to add cinematic rhythm without breaking your flow.\
-"""
+It is everything you need to add cinematic rhythm without breaking your flow."""
 
 [m-tron-pro]
-vendor = "gforce-software" 
-name = "M-Tron Pro" 
-categories = ["vsti.synthesizer"] 
+vendor = "gforce-software"
+name = "M-Tron Pro"
+categories = [ "vsti.synthesizer" ]
 url = "https://www.gforcesoftware.com/products/m-tron-pro-iv/"
 demo = "https://www.youtube.com/watch?v=pJLuQyUa5JI"
-price = 149.99 
+price = 149.99
 nks = "NKS is provided by third-party products (see links section)"
-description = """\
+description = """
 GForce‘s M-Tron Pro IV delves into the iconic Mellotron M400, a tape-based keyboard famous for its use in recordings by renowned artists like The Beatles, Led Zeppelin, Radiohead, Oasis, Trent Reznor, Trentemøller, AIR, Nils Frahm, and many others. Its distinct sounds are widely utilised in genres such as progressive rock and indie rock but also lo-fi and hip hop. 
-M-Tron Pro has gained significant acclaim as the finest software emulation of the Mellotron, appreciated both by top producers and avid Mellotron enthusiasts. Boasting an extensive 3.5GB sound library, including over 200 tape banks, it provides a wealth of sonic possibilities. The newly enhanced browser simplifies the exploration of this vast library, making M-Tron Pro IV an unparalleled source of inspiration. With its redesigned interface, GForce‘s M-Tron Pro enables effortless and efficient sound customisation, allowing you to shape the sounds according to your creative ideas.\
-"""
-os = ["windows","mac_intel","mac_arm"] 
-[m-tron-pro.additional_links]
-"NKS Snapshots" = "https://freelancesoundlabs.com/product/id:3914/downloads/gforce-software/nks-library-gforce-m-tron-pro-iv/"
+M-Tron Pro has gained significant acclaim as the finest software emulation of the Mellotron, appreciated both by top producers and avid Mellotron enthusiasts. Boasting an extensive 3.5GB sound library, including over 200 tape banks, it provides a wealth of sonic possibilities. The newly enhanced browser simplifies the exploration of this vast library, making M-Tron Pro IV an unparalleled source of inspiration. With its redesigned interface, GForce‘s M-Tron Pro enables effortless and efficient sound customisation, allowing you to shape the sounds according to your creative ideas."""
+os = [ "windows", "mac_intel", "mac_arm" ]
+
+  [m-tron-pro.additional_links]
+  "NKS Snapshots" = "https://freelancesoundlabs.com/product/id:3914/downloads/gforce-software/nks-library-gforce-m-tron-pro-iv/"
 
 [glade]
-vendor = "audio-imperia" 
+vendor = "audio-imperia"
 name = "Glade"
-categories = ["vsti.ethnic","vsti.percussion","vsti.strings","vsti.vocal","vsti.woodwinds"] 
-requires = [["native-instruments-kontakt-player","7.10.9"]] 
-size = 12507 
+categories = [
+  "vsti.ethnic",
+  "vsti.percussion",
+  "vsti.strings",
+  "vsti.vocal",
+  "vsti.woodwinds"
+]
+requires = [ [ "native-instruments-kontakt-player", "7.10.9" ] ]
+size = 12_507
 url = "https://www.audioimperia.com/product/glade/"
 demo = "https://www.youtube.com/watch?v=JRvAuuULTjs"
-price = 0 
+price = 0
 nks = true
-description = """\
+description = """
 Glade is a fully featured, professionally recorded instrument available free of charge to composers who want to start writing music today. It fuses world color with symphonic craft into a playable toolkit for expression. 
 Use macros to sculpt color and define contour, then drop into the instrument patches when you need a precise workflow. Layer strings, winds, voices, and organic percussion to discover new harmonies and timbres. 
-It is lightweight to load, mix-ready out of the box, and works in the free Kontakt Player. Glade moves sketches to finished ideas in minutes and feels at home in film cues, trailers, games, pop toplines, and electronic soundscapes. Traditional when you need it, adventurous when you want it.\
-"""
+It is lightweight to load, mix-ready out of the box, and works in the free Kontakt Player. Glade moves sketches to finished ideas in minutes and feels at home in film cues, trailers, games, pop toplines, and electronic soundscapes. Traditional when you need it, adventurous when you want it."""
+
+[piano-in-blue-2]
+vendor = "cinesamples"
+name = "Piano In Blue"
+size = 10_160
+requires = [ [ "native-instruments-kontakt-player", "6.6.1" ] ]
+nks = true
+demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Piano%20In%20Blue.mp3"
+description = "Piano In Blue captures the historic sound of the Steinway D Concert Grand piano used at Columbia Records for Miles Davis’ “Kind Of Blue” and Glenn Gould’s “Goldberg Variations,” featuring 8 velocity layers, chromatically sampled, 3 microphone positions (Close/Vintage, Mid, Far), separate processing paths “Tape” and “Direct in”, Neve 8078 console, and over 9300 samples."
+url = "https://store.cinesamples.com/products/piano-in-blue"
+
+[axxess]
+vendor = "gforce-software"
+name = "Axxess"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20Axxess.mp3"
+description = "Software synthesizer inspired by the 1975 ARP Axxe, expanded with X‑Modifiers for deep modulation. It ships with 350+ presets and an efficient browser for fast workflow. Includes arpeggiator, 16‑step sequencer, and built‑in distortion, analog delay, and reverb. Poly, mono, and unison modes with wide stereo spread and a Vintage control for analog character. Fully scalable interface and comprehensive MIDI control."
+url = "https://www.gforcesoftware.com/products/axxess/"
+
+  [axxess.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/axxess"
+
+[dmx]
+vendor = "gforce-software"
+name = "DMX"
+size = 367
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20DMX.mp3"
+description = "Virtual drum machine developed with Oberheim, honoring the classic DMX/DX with 288 authentic sounds. Per‑track controls include solo, mute, delay/reverb sends, pitch, decay, pan, and gain. Master FX chain adds SEM‑style filter, distortion, and compressor, plus multi‑output support since v1.1. Includes 60+ kits and a MIDI files pack for classic and modern grooves. Fully scalable UI and preset browser."
+url = "https://www.gforcesoftware.com/products/dmx/"
+
+  [dmx.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/dmx"
+
+[halogen-fm]
+vendor = "gforce-software"
+name = "Halogen FM"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20Halogen%20FM.mp3"
+description = "Four‑operator FM synthesizer built for fast exploration, powered by the Halogen Spark core with instant patch generation. Macro controls for timbre, envelopes, modulation, and FX, plus full access to each operator. Ships with 320+ designer presets and an advanced browser. Scalable UI with poly‑aftertouch and poly‑pitchbend support. Dedicated reverb and mono/poly modes for evolving textures or punchy plucks."
+url = "https://www.gforcesoftware.com/products/halogen-fm/"
+
+  [halogen-fm.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/halogenfm"
+
+[icondrum]
+vendor = "gforce-software"
+name = "IconDrum"
+size = 5_230
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20IconDrum.mp3"
+description = "Virtual drum machine inspired by the LinnDrum, featuring 12 tracks and 100 authentic sounds. Per‑channel control over delay/reverb sends, pitch, decay, pan, and gain. Three‑slot master FX chain with distortion, multi‑mode filter, compressor, EQ, bitcrusher, gate, and phaser. Includes 70+ kits and MIDI files, with a fully scalable interface. Separate outputs and a preset browser streamline workflow."
+url = "https://www.gforcesoftware.com/products/icondrum/"
+
+  [icondrum.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/bassstation"
+
+[imposcar2]
+vendor = "gforce-software"
+name = "Imposcar2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20Imposcar2.mp3"
+description = "Software emulation of the OSCar combining additive and subtractive synthesis with two oscillators and nine filter modes. The library includes 1000+ patches created by notable musicians and programmers. Mono, Duo, and Poly modes with unison, note panning, and an arpeggiator. Built-in chorus and stereo delay with velocity and aftertouch response. Three GUI sizes and an effect version are included for flexible use."
+url = "https://www.gforcesoftware.com/products/sofiaoefladkn/"
+
+  [imposcar2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/imposcar"
+
+[imposcar3]
+vendor = "gforce-software"
+name = "Imposcar3"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20Imposcar3.mp3"
+description = "Modern evolution of the OSCar with fully editable wavetable oscillators and a user LFO. Includes 1800+ presets with new patches and a powerful browser. Nine filter modes with parallel options, Matrix reverb, and four programmable macros. Mono, unison, and poly‑unison modes with wide stereo and impOSCar2 patch compatibility. Fully scalable interface with aftertouch support."
+url = "https://www.gforcesoftware.com/products/imposcar3/"
+
+  [imposcar3.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/imposcar"
+
+[m-tron-pro-complete-expansion-pack-bundle]
+vendor = "gforce-software"
+name = "M-Tron Pro Complete Expansion Pack Bundle"
+size = 15_000
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Complete%20Expansion%20Bundle.mp3"
+description = "Bundle combining M‑Tron Pro IV with a collection of expansions, offering hundreds of tape banks and thousands of presets. Covers Mellotron, Chamberlin, Orchestron, and Optigan tones alongside artist packs. Ideal for vintage textures, choral pads, strings, and optical rhythms. Runs both as a plug‑in and as a standalone application. Includes an advanced browser and the modern M‑Tron Pro IV feature set."
+url = "https://www.gforcesoftware.com/products/m-tron-pro-complete/"
+
+  [m-tron-pro-complete-expansion-pack-bundle.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-alex-ball]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Alex Ball"
+size = 464
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Alex%20Ball.mp3"
+description = "Expansion for M‑Tron Pro by Alex Ball, featuring 27 tape banks and over 150 patches. Includes diverse sources prepared for tape playback: basses, guitars, keyboards, strings, and voices. Great for retro, cinematic, and electronic pop colors. Requires a registered M‑Tron Pro installation. Integrates directly with the M‑Tron Pro browser."
+url = "https://www.gforcesoftware.com/products/alex-ball-artist-expansion-pack/"
+
+  [m-tron-pro-expansion-pack-alex-ball.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-chambertron]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Chambertron"
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Chambertron.mp3"
+description = "Expansion for M‑Tron Pro inspired by Chamberlin instruments, respecting the historic 35‑note and 8‑second constraints. Offers 40+ tape banks and hundreds of patches. Ideal for vintage and cinematic tones across strings, voices, and keyboards. Delivered via direct download in your account after purchase. Requires M‑Tron Pro."
+url = "https://www.gforcesoftware.com/products/chambertron/"
+
+  [m-tron-pro-expansion-pack-chambertron.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-optitron]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Optitron"
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Optitron.mp3"
+description = "Expansion for M‑Tron Pro sourced from the Optigan, offering 25 rhythms, sound effects, and a handful of lead sounds. Contains 30 new tape banks and over 150 patches. Targets lo‑fi, kitsch, and psychedelic textures. Delivered via direct download in your account after purchase. Requires M‑Tron Pro."
+url = "https://www.gforcesoftware.com/products/optitron/"
+
+  [m-tron-pro-expansion-pack-optitron.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-orchestron]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - OrchesTron"
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20OrchesTron.mp3"
+description = "Expansion for M‑Tron Pro focused on Orchestron sounds, an optical playback instrument from the 1970s. Adds tape banks centered on single‑instrument tones across the keyboard. Ideal for vintage and experimental colors. Delivered via direct download in your user account after purchase. Requires M‑Tron Pro."
+url = "https://www.gforcesoftware.com/products/orchestron/"
+
+  [m-tron-pro-expansion-pack-orchestron.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-streetly-m300]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Streetly M300"
+size = 437
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Streetly%20M300.mp3"
+description = "Expansion pack for M‑Tron Pro sourced from original EMI master tapes of the M300. It delivers 17 carefully curated M300 lead sounds and over 100 M‑Tron Pro patches. Each tape bank features 35 individually sampled notes to retain the original character. Perfect for retro textures, dramatic strings, and period organs from the late 1960s and early 1970s."
+url = "https://www.gforcesoftware.com/products/the-streetly-tapes-m3000-for-m-tron-pro/"
+
+  [m-tron-pro-expansion-pack-streetly-m300.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-streetly-sfx]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Streetly SFX"
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/There%20is%20no%20demo%20for%20this%20plugin.mp3"
+description = "Sound effects library for M‑Tron Pro based on the original MKII SFX console. The pack provides 1,260 effects across 36 tape banks covering aircraft, crowds, bells, telephones, and weather. Each bank features 35 notes for full keyboard playability. Ideal for post‑production, experimental textures, and tape‑style transitions."
+url = "https://www.gforcesoftware.com/products/the-streetly-tapes-sfx-console-for-m-tron-pro/"
+
+  [m-tron-pro-expansion-pack-streetly-sfx.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-streetly-tapes-vol-1]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Streetly Tapes Vol 1"
+size = 625
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Streetly%20Tapes%20Vol%201.mp3"
+description = "First Streetly expansion for M‑Tron Pro curated from original EMI tape archives. Includes 24 tape banks and hundreds of patches from noted contributors. Sources span choirs, strings, flutes, church organ, and assorted melodic instruments with 35 notes per bank. Designed to deliver classic Mellotron color for prog rock, vintage pop, and cinematic atmospheres."
+url = "https://www.gforcesoftware.com/products/the-streetly-tapes-vol-1-for-m-tron-pro/"
+
+  [m-tron-pro-expansion-pack-streetly-tapes-vol-1.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-streetly-tapes-vol-2]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Streetly Tapes Vol 2"
+size = 600
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Streetly%20Tapes%20Vol%202.mp3"
+description = "Second Streetly volume for M‑Tron Pro derived from original master tapes. Delivers 24 banks and 100+ patches from contributors including Jem Godfrey, Dave Spiers, and Tony Durkin. Emphasizes orchestral, wind, and keyboard timbres with 35 notes per bank. Ideal for expanding a Mellotron arsenal with complementary, authentic colors."
+url = "https://www.gforcesoftware.com/products/the-streetly-tapes-vol-2-for-m-tron-pro/"
+
+  [m-tron-pro-expansion-pack-streetly-tapes-vol-2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-streetly-tapes-vol-3]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Streetly Tapes Vol 3"
+size = 700
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Streetly%20Tapes%20Vol%203.mp3"
+description = "Third Streetly volume for M‑Tron Pro featuring 26 banks from EMI masters. Includes 150+ patches with contributions from Nick Magnus and Matt Berry. Covers strings, voices, and keyboard textures with signature tape grain, 35 notes per bank. Suited to progressive arrangements, psychedelic moods, and vintage textures."
+url = "https://www.gforcesoftware.com/products/the-streetly-tapes-vol-3-for-m-tron-pro/"
+
+  [m-tron-pro-expansion-pack-streetly-tapes-vol-3.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-streetly-tapes-vol-4]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Streetly Tapes Vol 4"
+size = 664
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Streetly%20Tapes%20Vol%204.mp3"
+description = "Fourth Streetly volume for M‑Tron Pro with 26 meticulously assembled banks from UK masters. Includes hundreds of patches by noted Tron aficionados. Features curiosities like “Sad Strings” inversions for unusual colors. Perfect for nuanced vintage arrangements and grainy orchestral layers."
+url = "https://www.gforcesoftware.com/products/the-streetly-tapes-vol-4-for-m-tron-pro/"
+
+  [m-tron-pro-expansion-pack-streetly-tapes-vol-4.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-streetly-tapes-vol-5]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Streetly Tapes Vol 5"
+size = 631
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Streetly%20Tapes%20Vol%205.mp3"
+description = "Fifth Streetly volume for M‑Tron Pro with 24 banks and over 150 patches. Iconic timbres, vintage keyboards, and historic effects captured from original tapes. Each bank spans 35 notes for full keyboard range. Suitable for retro signatures, cinematic intros, and psychedelic atmospheres."
+url = "https://www.gforcesoftware.com/products/the-streetly-tapes-vol-5/"
+
+  [m-tron-pro-expansion-pack-streetly-tapes-vol-5.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-expansion-pack-streetly-tapes-vol-6]
+vendor = "gforce-software"
+name = "M-Tron Pro Expansion Pack - Streetly Tapes Vol 6"
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Streetly%20Tapes%20Vol%206.mp3"
+description = "Sixth Streetly volume for M‑Tron Pro featuring previously unreleased material including the “Chaos Tapes.” The concept layers disparate takes of the same instrument to create unstable, lively textures. Includes 24 banks and 150+ patches with 35 notes per bank. Excellent for organic layers, grainy drones, and experimental colors."
+url = "https://www.gforcesoftware.com/products/the-streetly-tapes-vol-6/"
+
+  [m-tron-pro-expansion-pack-streetly-tapes-vol-6.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-factory]
+vendor = "gforce-software"
+name = "M-Tron Pro Factory"
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Factory.mp3"
+description = "Factory library of M‑Tron Pro IV inspired by the Mellotron M400, with 200+ banks and an extensive preset collection. Adds tape controls including wow and flutter, an amp simulator, a new ensemble, and a matrix reverb. Dual A/B layers, extended keyboard, and powerful preset and tape browsers. Built to capture the signature tape sound for prog rock, pop, and film music."
+url = "https://www.gforcesoftware.com/products/m-tron-pro-iv/"
+
+  [m-tron-pro-factory.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpro"
+
+[m-tron-pro-iv-expansion-pack-hainbach]
+vendor = "gforce-software"
+name = "M-Tron Pro IV Expansion Pack - Hainbach"
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20IV%20Expansion%20Pack%20-%20Hainbach.mp3"
+description = "Expansion for M-Tron Pro IV created with Hainbach. Delivers experimental sources, tape textures, and unique harmonic elements. Ideal for grainy layers, drones, and unconventional sound design. Integrates directly with the M-Tron Pro IV browser."
+url = "https://www.gforcesoftware.com/products/hainbach-artist-expansion/"
+
+  [m-tron-pro-iv-expansion-pack-hainbach.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronproiv"
+
+[m-tron-pro-iv-expansion-pack-optitron]
+vendor = "gforce-software"
+name = "M-Tron Pro IV Expansion Pack - Optitron"
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20Expansion%20Pack%20-%20Optitron.mp3"
+description = "Expansion for M-Tron Pro IV sourced from the Optigan. Includes optical rhythms, effects, and a handful of lo-fi lead sounds. Suitable for psychedelic textures and retro motifs. Each bank is sampled across 35 notes."
+url = "https://www.gforcesoftware.com/products/optitron/"
+
+  [m-tron-pro-iv-expansion-pack-optitron.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronproiv"
+
+[m-tron-pro-iv-expansion-pack-streetly-tapes-violins-and-vox]
+vendor = "gforce-software"
+name = "M-Tron Pro IV Expansion Pack - Streetly Tapes Violins and Vox"
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20M-Tron%20Pro%20IV%20Expansion%20Pack%20-%20Streetly%20Tapes%20Violins%20and%20Vox.mp3"
+description = "Streetly expansion for M-Tron Pro IV focused on violins and voices. Delivers choral layers and expressive strings with tape grain. Ideal for cinematic pads and retro colors. Each bank contains 35 notes."
+url = "https://www.gforcesoftware.com/products/the-streetly-tapes-violins-vox/"
+
+  [m-tron-pro-iv-expansion-pack-streetly-tapes-violins-and-vox.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronproiv"
+
+[m-tron-pro-mkii]
+vendor = "gforce-software"
+name = "M-Tron Pro MKII"
+requires = [ "gforce-software-m-tron-pro" ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/There%20is%20no%20demo%20for%20this%20plugin.mp3"
+description = "M-Tron Pro MKII instrument recreating dual A/B banks and the MKII rhythm console. Offers simultaneous layers, tape transitions, and motor controls. Ideal for retro orchestral textures and tape-based rhythm patterns. Features a scalable interface and performance-focused workflow."
+url = "https://www.gforcesoftware.com/products/m-tron-mkii/"
+
+  [m-tron-pro-mkii.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/mtronpromkii"
+
+[minimonsta2]
+vendor = "gforce-software"
+name = "Minimonsta2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20Minimonsta2.mp3"
+description = "Monophonic synthesizer inspired by the analog classic with an expanded X-Modifiers engine. Adds an arpeggiator, built-in effects, and macros for fast modulation. Modernized preset library and scalable interface. Great for powerful basses, expressive leads, and analog textures."
+url = "https://www.gforcesoftware.com/products/minimonsta2/"
+
+  [minimonsta2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/minimonsta2"
+
+[novation-bass-station]
+vendor = "gforce-software"
+name = "Novation Bass Station"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20Novation%20Bass%20Station.mp3"
+description = "Software emulation of the Novation Bass Station focused on punchy analog bass. Includes oscillators, a resonant filter, and straightforward modulation. Particularly suited to acid sequences, deep basses, and aggressive leads. Simple interface with direct access to essential controls."
+url = "https://www.gforcesoftware.com/products/novation-bass-station/"
+
+  [novation-bass-station.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/bassstation"
+
+[ob-1]
+vendor = "gforce-software"
+name = "OB-1"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20OB-1.mp3"
+description = "Synthesizer inspired by the Oberheim OB-1, combining analog character with modern extensions. Features oscillators, filter, envelopes, and expanded modulation routings. Adds built-in effects and contemporary performance modes. Ideal for thick leads, vintage basses, and percussive sequences."
+url = "https://www.gforcesoftware.com/products/ob-1/"
+
+  [ob-1.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/ob-1"
+
+[ob-e]
+vendor = "gforce-software"
+name = "OB-E"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20OB-E.mp3"
+description = "Eight-voice polyphonic synthesizer inspired by the Oberheim SEM with modular-style routing. Enables massive stacks, cross-modulation, and evolving sequences. Includes built-in effects, an arpeggiator, and an extended preset browser. Designed for wide pads, cinematic textures, and sequenced motifs."
+url = "https://www.gforcesoftware.com/products/ob-e/"
+
+  [ob-e.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/ob-e"
+
+[ob-ez]
+vendor = "gforce-software"
+name = "OB-EZ"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20OB-EZ.mp3"
+description = "Streamlined synthesizer derived from OB-E, designed for fast workflow. Delivers ready-to-play Oberheim sounds with accessible core controls. Includes built-in effects and an arpeggiator for instant patterns. Ideal for wide pads, classic leads, and retro textures."
+url = "https://www.gforcesoftware.com/products/ob-ez/"
+
+  [ob-ez.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/ob-ez"
+
+[ob-x]
+vendor = "gforce-software"
+name = "OB-X"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20OB-X.mp3"
+description = "Official OB-X emulation developed with Oberheim. Polyphonic architecture, filters, and modulation faithful to the original character. Adds modern functions, built-in effects, and expanded preset management. Perfect for synth strings, massive brass, and expressive leads."
+url = "https://www.gforcesoftware.com/products/ob-x/"
+
+  [ob-x.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/obx"
+
+[oddity2]
+vendor = "gforce-software"
+name = "Oddity2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20Oddity2.mp3"
+description = "Modern take on the ARP Odyssey with duophonic modes and extended sound shaping. Two oscillators, multiple filters, and advanced modulation for aggressive or silky tones. Includes built-in effects and an arpeggiator. Suited to punchy basses, cutting leads, and special effects."
+url = "https://www.gforcesoftware.com/products/oddity2/"
+
+  [oddity2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/oddity2"
+
+[oddity3]
+vendor = "gforce-software"
+name = "Oddity3"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20Oddity3.mp3"
+description = "Third-generation Oddity inspired by the ARP Odyssey, featuring a scalable interface and X-Modifiers. Adds enhanced effects, an arpeggiator/sequencer, and an extensive preset library. Responds to aftertouch and modern controllers. Ideal for analog basses, expressive leads, and experimental textures."
+url = "https://www.gforcesoftware.com/products/oddity3/"
+
+  [oddity3.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/oddity3"
+
+[sem]
+vendor = "gforce-software"
+name = "SEM"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20SEM.mp3"
+description = "Emulation of the Oberheim SEM module with a multi-mode filter and pronounced analog character. Provides expanded modulation and built-in effects for a modern workflow. Great for round basses, silky leads, and retro sequences. Features a clear, scalable interface."
+url = "https://www.gforcesoftware.com/products/sem/"
+
+  [sem.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/sem"
+
+[tvs-pro]
+vendor = "gforce-software"
+name = "TVS Pro"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20TVS%20Pro.mp3"
+description = "Instrument inspired by the Two Voice Pro, combining two SEM voices with built-in sequencers. Enables thick layers, cross-modulation, and analog patterns. Includes built-in effects and extended performance control. Aimed at vintage textures and polyrhythmic sequences."
+
+  [tvs-pro.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/tvspro"
+
+[virtual-string-machine]
+vendor = "gforce-software"
+name = "Virtual String Machine"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20Virtual%20String%20Machine.mp3"
+description = "Instrument dedicated to 70s/80s string machines, sampling iconic models. Offers layering, built-in effects, and a preset browser. Ideal for wide pads, synthetic choirs, and retro disco colors. Designed for cinematic arrangements and vintage pop."
+url = "https://www.gforcesoftware.com/products/virtual-string-machine/"
+
+  [virtual-string-machine.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/vsm"
+
+[vsm-iv]
+vendor = "gforce-software"
+name = "VSM IV"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/GForce%20Software%20-%20VSM%20IV.mp3"
+description = "Fourth-generation Virtual String Machine with a modernized interface and expanded engine. Covers a wide range of historic string machines with improved layering and effects. Includes a powerful browser and detailed controls. Perfect for orchestral pads, synthetic choirs, and cinematic textures."
+url = "https://www.gforcesoftware.com/products/vsm-iv/"
+
+  [vsm-iv.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/vsmiv"

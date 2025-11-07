@@ -14,6 +14,7 @@ const IGNORED_PRODUCTS: [string, string][] = [
     ["cinesamples", "continuum-guitars-2"],
     ["cinesamples", "keyboard-in-blue"],
     ["cinesamples", "piano-in-blue"],
+    ["cinesamples", "rio-grooves"],
 ]
 
 const downloadSource = async () => {
@@ -63,6 +64,12 @@ const parseRequirement = (
             break
         case "Sforzando":
             requirement = "plogue-sforzando"
+            break
+        case "M-Tron Pro":
+            requirement = "gforce-software-m-tron-pro"
+            break
+        case "M-Tron Pro IV":
+            requirement = "gforce-software-m-tron-pro"
             break
         default:
             throw new Error(`unknown requirement ${req}`)
