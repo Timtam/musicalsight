@@ -14,7 +14,7 @@ const IGNORED_PRODUCTS: [string, string][] = [
     ["cinesamples", "continuum-guitars-2"],
     ["cinesamples", "keyboard-in-blue"],
     ["cinesamples", "piano-in-blue"],
-    ["cinesamples", "rio-grooves"],
+    ["cinesamples", "rio-grooves-2"],
 ]
 
 const downloadSource = async () => {

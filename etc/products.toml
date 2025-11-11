@@ -5240,13 +5240,16 @@ Bring the fresh and exquisite feel and syncopation of the rhythms in this collec
 
 [sew-what]
 vendor = "cinesamples"
-name = "Sew What"
-size = 698
-requires = [ [ "native-instruments-kontakt", "5.6.8" ] ]
-nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Sew%20What.mp3"
-description = "Sew What is a unique percussion library for Kontakt, featuring sounds from sewing-related items like sewing machines, knitting needles, buttons, fabrics, and scissors. Each item has been carefully recorded to provide an original and rhythmic sonic palette."
+name = "Sew What" 
+categories = ["vsti.percussion"] 
+requires = [["native-instruments-kontakt","5.6.8"]] 
+size = 698 
 url = "https://store.cinesamples.com/products/sew-what"
+demo = "https://www.youtube.com/watch?v=rHCfdgYbVDQ"
+price = 79 
+description = """\
+Sew What is a unique percussion library for Kontakt, featuring sounds from sewing-related items like sewing machines, knitting needles, buttons, fabrics, and scissors. Each item has been carefully recorded to provide an original and rhythmic sonic palette.\
+"""
 
 [soundscapes]
 vendor = "cinesamples"
