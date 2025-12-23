@@ -843,3 +843,15 @@ url = "https://www.gforcesoftware.com/"
 [sonicsmiths]
 name = "Sonicsmiths"
 url = "https://sonicsmiths.com/"
+
+[digital-suburban]
+name = "Digital Suburban"
+url = ""
+
+[ik-multimedia]
+name = "IK Multimedia"
+url = ""
+
+[initial-audio]
+name = "Initial Audio"
+url = ""

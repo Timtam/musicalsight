@@ -5221,35 +5221,32 @@ nks = true
 description = "Piano In Blue captures the historic sound of the Steinway D Concert Grand piano used at Columbia Records for Miles Davis’ “Kind Of Blue” and Glenn Gould’s “Goldberg Variations,” featuring 8 velocity layers, chromatically sampled, 3 microphone positions (Close/Vintage, Mid, Far), separate processing paths “Tape” and “Direct in”, Neve 8078 console, and over 9300 samples."
 
 [rio-grooves]
-vendor = "metasonica" 
-name = "Rio Grooves" 
-categories = ["vsti.ethnic","vsti.percussion"] 
-requires = [["native-instruments-kontakt-player","6.8.1"]] 
-size = 1080 
+vendor = "metasonica"
+name = "Rio Grooves"
+categories = [ "vsti.ethnic", "vsti.percussion" ]
+requires = [ [ "native-instruments-kontakt-player", "6.8.1" ] ]
+size = 1_080
 url = "https://metasonica.net/rio-grooves/"
 demo = "https://www.youtube.com/watch?v=NHu8Idfx_a4"
-price = 149 
+price = 149
 nks = true
-description = """\
+description = """
 The most essential collection of Brazilian rhythms ever made, played by the finest musicians, with state of the art recording and mixing. 
 For the first time such an intuitive and versatile take on Brazilian percussion is offered to producers, composers and musicians around the world. 
 Rio Grooves features an unparalleled level of flexibility regarding multi-microphone perspective balancing, seamless synchronization with your music and preset MIDI files, all presented in a straightforward interface. 
 Bring the fresh and exquisite feel and syncopation of the rhythms in this collection to your music ! 
-“Rio Grooves (…) is an infectious blend of authentic instruments and human feel. None of the performances are overcooked, making them a delight to blend with other loops, arrange as is or cherry-pick from to breathe life wherever it’s needed.“\
-"""
+“Rio Grooves (…) is an infectious blend of authentic instruments and human feel. None of the performances are overcooked, making them a delight to blend with other loops, arrange as is or cherry-pick from to breathe life wherever it’s needed.“"""
 
 [sew-what]
 vendor = "cinesamples"
-name = "Sew What" 
-categories = ["vsti.percussion"] 
-requires = [["native-instruments-kontakt","5.6.8"]] 
-size = 698 
+name = "Sew What"
+categories = [ "vsti.percussion" ]
+requires = [ [ "native-instruments-kontakt", "5.6.8" ] ]
+size = 698
 url = "https://store.cinesamples.com/products/sew-what"
 demo = "https://www.youtube.com/watch?v=rHCfdgYbVDQ"
-price = 79 
-description = """\
-Sew What is a unique percussion library for Kontakt, featuring sounds from sewing-related items like sewing machines, knitting needles, buttons, fabrics, and scissors. Each item has been carefully recorded to provide an original and rhythmic sonic palette.\
-"""
+price = 79
+description = "Sew What is a unique percussion library for Kontakt, featuring sounds from sewing-related items like sewing machines, knitting needles, buttons, fabrics, and scissors. Each item has been carefully recorded to provide an original and rhythmic sonic palette."
 
 [soundscapes]
 vendor = "cinesamples"
@@ -5257,7 +5254,9 @@ name = "Soundscapes"
 size = 1_330
 requires = [ [ "native-instruments-kontakt-player", "6.2.2" ] ]
 nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Soundscapes.mp3"
+demo = "https://www.youtube.com/watch?v=qQ90XyR7pF8"
+categories = ["vsti.sound-design","vsti.synthesizer"] 
+price = 149 
 description = """
 Soundscapes opens up an entirely new sonic palette of tonal and atonal sound design through granular synthesis. Full of interesting textures, it incorporates samples from violinist Michael Levine. A departure from our usual symphonic style, Soundscapes is a welcome contrast and a unique partner to our CineSymphony range.
 Engine: 
@@ -14934,7 +14933,8 @@ contains = [
   "fracture-sounds-blueprint-textural-viola",
   "fracture-sounds-blueprint-thumb-piano",
   "fracture-sounds-blueprint-brass-ensemble",
-  "fracture-sounds-blueprint-clavinet"
+  "fracture-sounds-blueprint-clavinet",
+  "fracture-sounds-blueprint-dream-zither"
 ]
 url = "https://fracturesounds.com/product/blueprint-collection/"
 price = 0
@@ -27029,3 +27029,429 @@ url = "https://www.gforcesoftware.com/products/vsm-iv/"
 
   [vsm-iv.additional_links]
   "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/vsmiv"
+
+[blueprint-dream-zither]
+vendor = "fracture-sounds"
+name = "Blueprint: Dream Zither"
+categories = [ "vsti.strings" ]
+requires = [ [ "native-instruments-kontakt-player", "8" ] ]
+size = 486
+url = "https://fracturesounds.com/product/blueprint-dream-zither"
+demo = "https://soundcloud.com/fracture-sounds/ancient-enchantment-ben-chrisman-dream-zither?in=fracture-sounds/sets/dream-zither-demos"
+price = 0
+nks = true
+description = """
+Blueprint: Dream Zither is a small, harp-like instrument recorded in close stereo and mapped across a playable range of four octaves. Alongside the natural instrument is an additional Atmosphere Layer, plus a set of creative controls for detailed sound shaping, including our innovation first introduced in Compendium: Eldenvale, the Glissando Controller. 
+The Glissando Controller allows for fluid, expressive glissandi that make the instrument even more playable and inspiring. Simply hold down the notes you wish to gliss, then use a MIDI slider or controller to adjust the speed and direction of the glide. This feature offers a taste of the folk-inspired instruments found in Compendium: Eldenvale, bringing that same organic expressiveness to Blueprint: Dream Zither."""
+
+[dexed]
+vendor = "digital-suburban"
+name = "Dexed"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Digital%20Suburban%20-%20Dexed.mp3"
+description = "Dexed is an FM synthesizer closely modeled on the Yamaha DX7 and also functions as a DX7 MIDI cartridge librarian. It provides full editing of the six operators, algorithms, and envelopes to recreate classic FM tones. A standalone application is available in addition to plug‑in formats for integration in DAWs. Recent releases add a scalable UI, SCL/KBM microtuning, and initial MPE support. Well suited for electronic music, ambient textures, pop productions, and scoring that call for precise and expressive FM sounds."
+url = "https://asb2m10.github.io/dexed/"
+
+  [dexed.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/dexed"
+
+[hammond-b-3x]
+vendor = "ik-multimedia"
+name = "Hammond B-3X"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/IK%20Multimedia%20-%20Hammond%20B-3X.mp3"
+description = "Hammond B-3X is an official virtual organ created with Hammond and Suzuki to faithfully capture the B‑3 with a modeled Leslie. It provides deep control of tonewheels, key click, leakage, percussion, and chorus/vibrato. The signal chain includes the official Leslie with multiple amps and cabinets, a parallel guitar amp stage, and a stompbox pedalboard. It runs both standalone and as VST2/VST3 plug-ins on Windows. Suited to gospel, rock, jazz, and soul, it delivers an expressive drawbar‑organ experience."
+url = "https://www.ikmultimedia.com/products/hammondb3x/"
+
+  [hammond-b-3x.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/hammond"
+
+[philharmonik-2]
+vendor = "ik-multimedia"
+name = "Philharmonik 2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/IK%20Multimedia%20-%20Philharmonik%202.mp3"
+description = "Comprehensive orchestral library powered by the SampleTank engine, covering strings, woodwinds, brass, and percussion with extensive articulations. The recordings deliver a classic symphonic aesthetic suited to film, TV, and orchestral pop. Instruments include legato, trills, and dynamic layers for natural phrasing. The interface streamlines section combinations and detailed editing to build realistic arrangements."
+url = "https://www.ikmultimedia.com/products/philharmonik2/"
+
+  [philharmonik-2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/philharmonik2"
+
+[sampletank-4-factory]
+vendor = "ik-multimedia"
+name = "SampleTank 4 Factory"
+size = 128_000
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/IK%20Multimedia%20-%20SampleTank%204%20Factory.mp3"
+description = "Sample-based workstation with a fast browser, integrated effects, and optimized playback engines. The Factory content spans pianos, keyboards, guitars, basses, drums, strings, brass, vocals, and percussion. Built-in Players (arpeggiator, strummer, phraser, loops) turn presets into rhythmic performances. Ideal for composition across genres, live use, and quick sketching."
+url = "https://www.ikmultimedia.com/products/sampletank4/"
+
+  [sampletank-4-factory.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/sampletank4"
+
+[sampletank-4-max-expansions]
+vendor = "ik-multimedia"
+name = "SampleTank 4 MAX Expansions"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/There%20is%20no%20demo%20for%20this%20plugin.mp3"
+description = "Expansion pack collection for SampleTank 4 covering many styles and categories to extend the factory palette. Libraries integrate in the same engine with effects, mixer, and Players."
+url = "https://www.ikmultimedia.com/products/sampletank4/"
+
+  [sampletank-4-max-expansions.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/sampletank4"
+
+[sampletank-4-max-factory]
+vendor = "ik-multimedia"
+name = "SampleTank 4 MAX Factory"
+size = 640_000
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/There%20is%20no%20demo%20for%20this%20plugin.mp3"
+description = "SampleTank 4 MAX factory content aggregating a very large multi‑category collection. Includes pianos, keyboards, guitars, drums, percussion, strings, brass, synths, and vocals with mix‑ready presets. Designed for fast composition, live use, and all‑genre production."
+url = "https://www.ikmultimedia.com/products/sampletank4/"
+
+  [sampletank-4-max-factory.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/sampletank4"
+
+[sampletank-4-max-full-bundle]
+vendor = "ik-multimedia"
+name = "SampleTank 4 MAX Full Bundle"
+size = 640_000
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/There%20is%20no%20demo%20for%20this%20plugin.mp3"
+description = "Complete SampleTank 4 MAX bundle including the engine and 36 libraries with over 8,000 instruments. Broad coverage of styles and instrument families, with built‑in Players, effects, and mixer. Suitable for composition, sound design, and stage use."
+url = "https://www.ikmultimedia.com/products/sampletank4/"
+
+  [sampletank-4-max-full-bundle.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/sampletank4"
+
+[sampletank-4-max-syntronik]
+vendor = "ik-multimedia"
+name = "SampleTank 4 MAX Syntronik"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/There%20is%20no%20demo%20for%20this%20plugin.mp3"
+description = "Syntronik selection integrated in the SampleTank 4 MAX ecosystem, offering tones inspired by classic analog synthesizers. Ready‑to‑play sounds for basses, leads, pads, and textures, usable within the SampleTank engine."
+url = "https://www.ikmultimedia.com/products/syntronik2/"
+
+  [sampletank-4-max-syntronik.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/sampletank4"
+
+[sampletron-2]
+vendor = "ik-multimedia"
+name = "SampleTron 2"
+size = 10_000
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/IK%20Multimedia%20-%20SampleTron%202.mp3"
+description = "Tape‑based instrument inspired by Mellotrons and other vintage sample players, featuring tape modeling and a collection of classic sounds. Stack up to three tracks with dedicated filters, envelopes, and effects. Ideal for lo‑fi textures, cinematic cues, and retro keyboards."
+url = "https://www.ikmultimedia.com/products/sampletron2/"
+
+  [sampletron-2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/sampletron2"
+
+[syntronik-2]
+vendor = "ik-multimedia"
+name = "Syntronik 2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/IK%20Multimedia%20-%20Syntronik%202.mp3"
+description = "Collection of sampled and modeled synths covering analog classics with modeled filters and a modulation matrix. Offers hundreds of ready‑to‑play presets for basses, leads, pads, and complex textures. Suited to electronic production, pop, and scoring."
+url = "https://www.ikmultimedia.com/products/syntronik2/"
+
+  [syntronik-2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/syntronik2"
+
+[syntronik-2-max]
+vendor = "ik-multimedia"
+name = "Syntronik 2 MAX"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/IK%20Multimedia%20-%20Syntronik%202%20MAX.mp3"
+description = "Expanded edition of Syntronik 2 with more instruments, content, and presets to cover a wide spectrum of analog‑style tones."
+url = "https://www.ikmultimedia.com/products/syntronik2/"
+
+  [syntronik-2-max.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/syntronik2"
+
+[808-studio-2]
+vendor = "initial-audio"
+name = "808 Studio 2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Initial%20Audio%20-%20808%20Studio%202.mp3"
+description = "Bass‑focused synthesizer for creating 808 and sub bass, featuring a sample oscillator, sub oscillator, and two additional oscillators. Two modulation envelopes and two LFOs with drag‑and‑drop assignment enable flexible shaping. Built‑in effect rack includes distortion, compressor, 3‑band EQ, chorus, and filter. Includes an internal sequencer and a resizable interface optimized for Hip‑Hop and Trap production."
+url = "https://initialaudio.com/808-studio-2-bass-synthesizer/"
+
+  [808-studio-2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/808studio"
+
+[heat-up-3]
+vendor = "initial-audio"
+name = "Heat Up 3"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Initial%20Audio%20-%20Heat%20Up%203.mp3"
+description = "Rompler‑style workstation built on a large multisampled library with 1,500 factory instruments and an integrated sequencer. Provides twelve high‑quality effects and expression tools for more natural performance. Supports VST3, AU, and AAX and includes a standalone application for use without a DAW. Expandable via official sound libraries that cover a broad range of modern genres."
+url = "https://initialaudio.com/heatup3-virtual-instrument-plugin/"
+
+  [heat-up-3.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/heatup3"
+
+[sektor]
+vendor = "initial-audio"
+name = "Sektor"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Initial%20Audio%20-%20Sektor.mp3"
+description = "Polyphonic wavetable synthesizer focused on flexibility with drag‑and‑drop modulation routing. Includes a multisample engine from Heat Up 3 to blend rompler content with synthesis. Two effect racks provide reverb, delay, distortion, chorus, phaser, trance gate, compressor, and a 4‑band EQ. Designed for huge sounds while remaining light on system resources."
+url = "https://initialaudio.com/sektor-wavetable-synthesizer/"
+
+  [sektor.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/sektor"
+
+[korg-collection-arp-2600]
+vendor = "korg"
+name = "Korg Collection - ARP 2600"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/There%20is%20no%20demo%20for%20this%20plugin.mp3"
+description = "Software emulation of the semi‑modular ARP 2600 using Korg’s CMT technology. Adds a polyphonic mode, arpeggiator, and effects compared to the original hardware. Designed to recreate classic tones while integrating with modern DAWs. Well suited for experimental sound design, aggressive bass, and analog textures."
+url = "https://www.korg.com/us/products/software/kc_arp_2600/"
+
+  [korg-collection-arp-2600.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-arp-odyssey]
+vendor = "korg"
+name = "Korg Collection - Arp Odyssey"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20Arp%20Odyssey.mp3"
+description = "Software version of the duophonic ARP ODYSSEY with all three filter revisions and the DRIVE function. Adds a polyphonic mode up to 16 voices, a programmable arpeggiator, and built‑in effects. Modern interface while preserving the behavior of the classic instrument. Ideal for cutting leads, expressive bass, and retro effects."
+url = "https://www.korg.com/us/products/software/kc_arpodyssey/"
+
+  [korg-collection-arp-odyssey.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-electribe-r]
+vendor = "korg"
+name = "Korg Collection - Electribe-R"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20Electribe-R.mp3"
+description = "Plugin based on the ELECTRIBE‑R with nine parts, fifteen effects, and motion sequencing. Enables immediate groove programming with per‑step effect targeting. Expands the effects section over the original unit, including compressor, distortion, and Valve Force. Suited to electronic, techno, and dance rhythm production."
+url = "https://www.korg.com/us/products/software/kc_electribe_r/"
+
+  [korg-collection-electribe-r.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-ep-1]
+vendor = "korg"
+name = "Korg Collection - EP-1"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20EP-1.mp3"
+description = "Electric piano engine from Korg workstations, covering several classic models. Offers tone and amp controls to tailor the response to performance. Suitable for expressive keyboard parts in pop, soul, and fusion contexts. Provides clean vintage textures or lightly driven tones."
+url = "https://www.korg.com/us/products/software/kc_ep-1/"
+
+  [korg-collection-ep-1.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-legacycell]
+vendor = "korg"
+name = "Korg Collection - LegacyCell"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20LegacyCell.mp3"
+description = "Instrument that combines the MS‑20 and Polysix engines with MDE‑X effects in a single instance. Enables layered performances and complex routings from the Legacy Collection era. Distributed via KORG ID for users who own MS‑20, Polysix, and MDE‑X. Geared toward layered analog textures and hybrid combinations."
+url = "https://support.korguser.net/hc/en-us/articles/360000897383-Where-can-I-download-LegacyCell"
+
+  [korg-collection-legacycell.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-m1-v2]
+vendor = "korg"
+name = "Korg Collection - M1 V2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20M1%20V2.mp3"
+description = "Modernized software version of the M1 workstation including around 3,300 programs with expansion cards. Features a high‑resolution resizable interface and an improved sound browser. Complete reproduction of the AI synthesis system with classic master effects. Ideal for iconic pianos, digital pads, and signature ’90s sounds."
+url = "https://www.korg.com/us/products/software/kc_m1/"
+
+  [korg-collection-m1-v2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-microkorg]
+vendor = "korg"
+name = "Korg Collection - microKORG"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20MicroKORG.mp3"
+description = "Software recreation of the microKORG with analog‑modeling synthesis, vocoder, and arpeggiator. Reproduces the oscillator, filter, and amp sections along with the effects section. Delivers the compact, versatile tones of the original synthesizer. Suitable for retro leads, electronic basses, and vocoded textures."
+url = "https://www.korg.com/us/products/software/kc_microkorg/"
+
+  [korg-collection-microkorg.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-minikorg-700s]
+vendor = "korg"
+name = "Korg Collection - miniKORG 700S"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20MiniKORG%20700S.mp3"
+description = "Faithful software recreation of the miniKORG 700S with dual‑VCO architecture and distinctive analog character. Adds polyphony, an arpeggiator, and built‑in effects for modern production. Features a resizable interface and program browser for quick sound access. Well suited to retro leads, thick basses, and vintage textures emblematic of 1970s Korg synths."
+url = "https://www.korg.com/us/products/software/kc_minikorg_700s/"
+
+  [korg-collection-minikorg-700s.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-modwave-native]
+vendor = "korg"
+name = "Korg Collection - Modwave Native"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20Modwave%20Native.mp3"
+description = "Software counterpart to the modwave focused on wavetable synthesis with Motion Sequencing 2.0 and Kaoss Physics. Seamlessly exchanges programs with the hardware for DAW production and stage performance. Includes an arpeggiator, a powerful sequencer, and studio‑quality effects. Designed for evolving pads, intricate rhythmic textures, and contemporary sound design."
+url = "https://www.korg.com/caen/products/software/modwave_native/"
+
+  [korg-collection-modwave-native.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/modwave"
+
+[korg-collection-monopoly-v2]
+vendor = "korg"
+name = "Korg Collection - Mono/Poly V2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20MonoPoly%20V2.mp3"
+description = "Recreation of the four‑VCO Mono/Poly with mono, unison, and extended polyphony modes. CMT models analog circuits for authentic filter sweeps and modulation behavior. Adds a high‑resolution interface and an improved sound browser. Excellent for vintage basses, aggressive leads, and modulated effects."
+url = "https://www.korg.com/us/products/software/kc_monopoly/"
+
+  [korg-collection-monopoly-v2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-ms-20-v2]
+vendor = "korg"
+name = "Korg Collection - MS-20 V2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20MS-20%20V2.mp3"
+description = "Emulation of the semi‑modular MS‑20 with its iconic patch panel and self‑oscillating filters. Provides 32‑voice polyphony, up to 16‑voice unison, and two new multi‑effects. High‑resolution interface and program browser support modern workflows. Ideal for acidic basses, cutting leads, and modular‑style experiments without patch cables."
+url = "https://www.korg.com/us/products/software/kc_ms_20/"
+
+  [korg-collection-ms-20-v2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-multipoly-native]
+vendor = "korg"
+name = "Korg Collection - Multi/poly Native"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/There%20is%20no%20demo%20for%20this%20plugin.mp3"
+description = "Software version of the multi/poly with next‑generation analog modeling and virtual voice cards. Four oscillators per program, multiple modeled filters, and Motion Sequencing 2.0. Shares sounds with the hardware and includes high‑quality onboard effects. Built for rich layers, expressive analog tones, and evolving textures."
+url = "https://www.korg.com/caen/products/software/multipoly_native/"
+
+  [korg-collection-multipoly-native.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/multipoly"
+
+[korg-collection-opsix-native]
+vendor = "korg"
+name = "Korg Collection - Opsix Native"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20Opsix%20Native.mp3"
+description = "Software version of opsix focused on Altered FM with six operators and an extensive modulation matrix. Includes polyphonic motion sequencing and built‑in effects. Exchanges programs with the hardware via the Librarian. Well suited to metallic bells, digital basses, evolving pads, and complex textures."
+url = "https://www.korg.com/caen/products/software/opsix_native/"
+
+  [korg-collection-opsix-native.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/opsix"
+
+[korg-collection-polysix-v2]
+vendor = "korg"
+name = "Korg Collection - Polysix V2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20Polysix%20V2.mp3"
+description = "Software recreation of the Polysix with warm analog character, chorus/ensemble, and arpeggiator. Modernized interface, extended polyphony, and an efficient sound browser. Built‑in effects enhance pads, basses, and leads. Perfect for retro colors, synth strings, and wide pads."
+url = "https://www.korg.com/us/products/software/kc_polysix/"
+
+  [korg-collection-polysix-v2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-prophecy]
+vendor = "korg"
+name = "Korg Collection - Prophecy"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20Prophecy.mp3"
+description = "Iconic physical‑modeling Prophecy with MOSS oscillators and expressive control. Numerous oscillator models, filters, and effects cover a wide sonic palette. Interface optimized for performance and deep editing. Suited to monophonic leads, articulated tones, and experimental textures inspired by the original hardware."
+url = "https://www.korg.com/us/products/software/kc_prophecy/"
+
+  [korg-collection-prophecy.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-triton-extreme]
+vendor = "korg"
+name = "Korg Collection - TRITON Extreme"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20TRITON%20Extreme.mp3"
+description = "Software workstation based on the HI engine with a large PCM library and combinations. Includes multiple effects, arpeggiators, and insert/send processing mirroring the original unit. Resizable interface and browser provide fast access to iconic 2000s sounds. Ideal for pop, dance, and media production requiring ready‑to‑use presets."
+url = "https://www.korg.com/us/products/software/kc_triton/"
+
+  [korg-collection-triton-extreme.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/triton"
+
+[korg-collection-triton]
+vendor = "korg"
+name = "Korg Collection - TRITON"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20TRITON.mp3"
+description = "Software version of the TRITON reproducing the HI system and its extensive catalog of programs and combis. Adds a high‑resolution interface, modern polyphony, and expanded effects management. Provides key 2000s sounds from pianos to pads and digital leads. Suitable for full arrangements and composition across styles."
+url = "https://www.korg.com/us/products/software/kc_triton/"
+
+  [korg-collection-triton.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/triton"
+
+[korg-collection-vox-super-continental]
+vendor = "korg"
+name = "Korg Collection - VOX Super Continental"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20VOX%20Super%20Continental.mp3"
+description = "Detailed software recreation of the VOX Super Continental organ, modeled component‑by‑component to capture the germanium‑transistor oscillators and multi‑contact key behavior. The engine provides drawbars, the rare percussion section, and an integrated effects chain with amp, cabinet, and rotary speaker models. A sound browser, MIDI modulation matrix, and Smooth Sound Transitions streamline live use and production. Perfect for rock, pop, garage, and ska with vintage bite that cuts through the mix. Runs as a modern plug‑in or standalone with full automation support."
+url = "https://www.korg.com/us/products/software/kc_vox_super_continental/"
+
+  [korg-collection-vox-super-continental.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
+
+[korg-collection-wavestate-native]
+vendor = "korg"
+name = "Korg Collection - Wavestate Native"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20Wavestate%20Native.mp3"
+description = "Software counterpart to the hardware wavestate with Wave Sequencing 2.0, multiple Layers, Vector control, and modeled MS‑20/Polysix filters. Seamlessly exchange sounds between hardware and software for studio production and stage performance. Offers high polyphony, four Layers, simultaneous effects, and Smooth Sound Transitions. Extensive modulation, randomization tools, and Set Lists support organized workflows. Works as a modern plug‑in and runs standalone as well."
+url = "https://www.korg.com/caen/products/software/wavestate_native/"
+
+  [korg-collection-wavestate-native.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/wavestate"
+
+[korg-collection-wavestation-v2]
+vendor = "korg"
+name = "Korg Collection - Wavestation V2"
+requires = [ ]
+nks = "NKS is provided by third-party products (see links section)"
+demo = "https://reaperaccessible.fr/catalog/demos/Korg%20Collection%20-%20Wavestation%20V2.mp3"
+description = "Software recreation of the WAVESTATION with full wave sequencing and Vector synthesis. Includes around 1,500 programs, 700+ waveforms, and a modern sound browser. The high‑resolution interface and random sequence engine make it easy to craft evolving pads and rhythmic textures. Suited to electronic music, cinematic atmospheres, and complex harmonic layers. Operates as a modern plug‑in and standalone for live use."
+url = "https://www.korg.com/us/products/software/kc_wavestation/"
+
+  [korg-collection-wavestation-v2.additional_links]
+  "NKS Snapshots" = "https://www.freelancesoundlabs.com/nks/korg"
