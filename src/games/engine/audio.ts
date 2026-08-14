@@ -386,6 +386,12 @@ export interface AudioRig {
     loadTrack(url: string, offsetFraction: number): Promise<void>
     /** Resumes the already loaded track without reloading or reseeking. */
     ensurePlaying(): Promise<void>
+    /**
+     * Jumps to another passage of the track that is already loaded. Leaves
+     * the output muted; the caller restores the level with setRoundTrimDb,
+     * which it does at the start of every round anyway.
+     */
+    seekTo(offsetFraction: number): Promise<void>
     /** Fades out and pauses. Used when a session ends. */
     stopTrack(): void
     setVolumeDb(db: number): void
@@ -525,6 +531,24 @@ export function createRig(ctx: AudioContext): AudioRig {
             playToken += 1
 
             if (element.paused && element.src !== "") await element.play()
+        },
+
+        async seekTo(offsetFraction: number) {
+            if (!Number.isFinite(element.duration) || element.duration <= 0)
+                return
+
+            // A jump to another passage changes the material just as much as
+            // a new track does, so the running spectrum average is stale from
+            // here on and anything derived from it must not be cached yet.
+            probe.markSourceChange()
+
+            // Muted across the jump: seeking a playing element steps the
+            // signal, which would click.
+            ramp(trim.gain, 0, ctx, 0.02)
+
+            await new Promise<void>((resolve) => window.setTimeout(resolve, 40))
+
+            element.currentTime = element.duration * offsetFraction
         },
 
         stopTrack() {

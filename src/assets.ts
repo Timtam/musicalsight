@@ -7,59 +7,50 @@ const CREDITS_LDSM =
 const CREDITS_ONDROSIK =
     "Music by Ondrosik, available at https://audio.com/ondrosik"
 
+/**
+ * The file name is written once and the bundled URL derives from it, so the
+ * two can never drift apart. `file` is what links a track to its entry in
+ * the generated track-profiles.json; Vite hashes `url` in production, which
+ * makes it useless as a key.
+ *
+ * To add a track: drop the file into tracks/, add a line here, and run the
+ * build once so its spectral profile is measured.
+ */
+function track(file: string, title: string, credits: string): Asset {
+    return {
+        file,
+        title,
+        credits,
+        url: new URL(`../tracks/${file}`, import.meta.url).href,
+    }
+}
+
 export default [
-    {
-        url: new URL(
-            "../tracks/Jean-Philippe Rykiel - Ode to Vangelis.opus",
-            import.meta.url,
-        ).href,
-        credits: CREDITS_JPR,
-        title: "Ode to Vangelis",
-    } satisfies Asset,
-    {
-        url: new URL(
-            "../tracks/Leo Da Slowly Movin - Bolando.opus",
-            import.meta.url,
-        ).href,
-        credits: CREDITS_LDSM,
-        title: "Bolando",
-    } satisfies Asset,
-    {
-        url: new URL(
-            "../tracks/Leo Da Slowly Movin - Chimes Too I.opus",
-            import.meta.url,
-        ).href,
-        credits: CREDITS_LDSM,
-        title: "Chimes Too I",
-    } satisfies Asset,
-    {
-        url: new URL(
-            "../tracks/Leo Da Slowly Movin - Switch Up Reverted.opus",
-            import.meta.url,
-        ).href,
-        credits: CREDITS_LDSM,
-        title: "Switch Up Reverted",
-    } satisfies Asset,
-    {
-        url: new URL(
-            "../tracks/Ondrosik - Dobrú noc Má milá.opus",
-            import.meta.url,
-        ).href,
-        credits: CREDITS_ONDROSIK,
-        title: "Dobrú noc Má milá",
-    } satisfies Asset,
-    {
-        url: new URL("../tracks/Ondrosik - Fairitale.opus", import.meta.url)
-            .href,
-        credits: CREDITS_ONDROSIK,
-        title: "Fairitale",
-    } satisfies Asset,
-    {
-        url: new URL(
-            "../tracks/Ondrosik - Procrastination.opus",
-            import.meta.url,
-        ).href,
-        credits: CREDITS_ONDROSIK,
-        title: "Procrastination",
-    } satisfies Asset,
+    track(
+        "Jean-Philippe Rykiel - Ode to Vangelis.opus",
+        "Ode to Vangelis",
+        CREDITS_JPR,
+    ),
+    track("Leo Da Slowly Movin - Bolando.opus", "Bolando", CREDITS_LDSM),
+    track(
+        "Leo Da Slowly Movin - Chimes Too I.opus",
+        "Chimes Too I",
+        CREDITS_LDSM,
+    ),
+    track(
+        "Leo Da Slowly Movin - Switch Up Reverted.opus",
+        "Switch Up Reverted",
+        CREDITS_LDSM,
+    ),
+    track(
+        "Ondrosik - Dobrú noc Má milá.opus",
+        "Dobrú noc Má milá",
+        CREDITS_ONDROSIK,
+    ),
+    track("Ondrosik - Fairitale.opus", "Fairitale", CREDITS_ONDROSIK),
+    track(
+        "Ondrosik - Procrastination.opus",
+        "Procrastination",
+        CREDITS_ONDROSIK,
+    ),
 ]

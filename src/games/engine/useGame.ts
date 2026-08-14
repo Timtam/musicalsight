@@ -585,10 +585,13 @@ export function useGame<P, S>(
         audioRef.current = spec.buildAudio(rig, round)
 
         // Drawn once per round rather than per switch, otherwise it is
-        // audible as wobble while comparing the two variants.
+        // audible as wobble while comparing the two variants. Applied after
+        // the passage is in place, because seeking mutes the trim.
         const jitter = spec.levelJitterDb ?? DEFAULT_JITTER_DB
-
-        rig.setRoundTrimDb(jitter === 0 ? 0 : (Math.random() * 2 - 1) * jitter)
+        const applyTrim = () =>
+            rig.setRoundTrimDb(
+                jitter === 0 ? 0 : (Math.random() * 2 - 1) * jitter,
+            )
 
         // Loading is asynchronous and the session can end while it is still
         // running. The generation counter alone does not catch that: ending
@@ -631,17 +634,26 @@ export function useGame<P, S>(
             dispatch({ type: "audioError", message: AUDIO_ERROR })
         }
 
-        // The same track carries over between rounds, but it may be paused
-        // because the previous session ended, so resuming is not optional.
-        if (round.track.url === loadedUrlRef.current) {
-            rig.ensurePlaying().then(beginCountIn).catch(onAudioFailure)
-        } else {
-            loadedUrlRef.current = round.track.url
+        // A held track still has to jump to this round's passage. The round
+        // picks a passage that actually contains the target frequency, so
+        // skipping the seek would play a stretch that may not contain it at
+        // all — which is the whole thing the profiles exist to prevent.
+        const prepare = async () => {
+            if (round.track.url === loadedUrlRef.current) {
+                // It may be paused because the previous session ended, so
+                // resuming is not optional.
+                await rig.ensurePlaying()
+                await rig.seekTo(round.trackOffsetFraction)
+            } else {
+                loadedUrlRef.current = round.track.url
+                await rig.loadTrack(round.track.url, round.trackOffsetFraction)
+            }
 
-            rig.loadTrack(round.track.url, round.trackOffsetFraction)
-                .then(beginCountIn)
-                .catch(onAudioFailure)
+            applyTrim()
+            beginCountIn()
         }
+
+        void prepare().catch(onAudioFailure)
 
         return () => {
             if (generation !== generationRef.current) return

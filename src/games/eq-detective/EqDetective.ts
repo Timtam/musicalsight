@@ -14,6 +14,7 @@ import {
     qFromBandwidth,
     speakHz,
 } from "../engine/grid"
+import { usablePassages } from "../engine/profile"
 import type {
     Answer,
     GameAudio,
@@ -70,6 +71,8 @@ export interface EqConfig {
     trackHoldRounds: number
     trackStartEarliestFraction: number
     trackStartLatestFraction: number
+    emptyBandThresholdDb: number
+    quietPassageThresholdDb: number
     streakBonusPoints: number
     streakBonusCap: number
     defaultSettings: EqSettings
@@ -131,6 +134,28 @@ export const EQ_CONFIG: EqConfig = {
      */
     trackStartEarliestFraction: 0.05,
     trackStartLatestFraction: 0.65,
+
+    /**
+     * How far below a passage's median band a frequency band may sit and
+     * still count as present, in decibels.
+     *
+     * Boosting a band the music does not contain changes nothing audible,
+     * and the round becomes solvable only by elimination. Measured across
+     * the bundled tracks, treble bands swing by up to 28 dB between
+     * passages of the same track, and even 100 Hz drops by 30 dB in
+     * places — so this is judged per passage, from the profiles built by
+     * scripts/build-track-profiles.ts.
+     *
+     * Lower (more negative) allows quieter bands as answers and makes the
+     * game harder; raise it towards -10 if rounds still feel unfair.
+     */
+    emptyBandThresholdDb: -18,
+
+    /**
+     * Passages quieter than this relative to the rest of the track are
+     * skipped entirely, so a round never starts in a fade or a gap.
+     */
+    quietPassageThresholdDb: -15,
 
     /** Extra points per answer in a run of correct answers. */
     streakBonusPoints: 25,
@@ -244,8 +269,6 @@ function makeRound(context: MakeRoundContext<EqSettings>): Round<EqParams> {
         level.highestAnswerHz,
     )
     const pool = grid.filter((point) => point.answerable)
-    const target = context.rng.pick(pool)
-    const q = qFromBandwidth(1 / stepsPerOctave, target.hz, context.sampleRate)
     const magnitude = depthById(context.settings.depth).gainDb
 
     const boost =
@@ -262,18 +285,49 @@ function makeRound(context: MakeRoundContext<EqSettings>): Round<EqParams> {
             others.length === 0)
     const track = keepTrack ? context.previousTrack! : context.rng.pick(others)
 
+    // Frequency first, passage second. Picking the passage first and then
+    // filtering would skew the frequencies towards whatever bands happen to
+    // be common; this way every band the track can carry stays equally
+    // likely, and only the stretch of music adapts.
+    const passages = usablePassages(track.file, grid, stepsPerOctave, {
+        thresholdDb: EQ_CONFIG.emptyBandThresholdDb,
+        minLevelDb: EQ_CONFIG.quietPassageThresholdDb,
+        earliestFraction: EQ_CONFIG.trackStartEarliestFraction,
+        latestFraction: EQ_CONFIG.trackStartLatestFraction,
+    })
+
+    let target = pool[0]
+    let offsetFraction =
+        EQ_CONFIG.trackStartEarliestFraction +
+        context.rng.next() *
+            (EQ_CONFIG.trackStartLatestFraction -
+                EQ_CONFIG.trackStartEarliestFraction)
+
+    if (passages.length === 0) {
+        // No profile for this track — a newly added file, or a checkout
+        // without ffmpeg. Fall back to the old behaviour rather than break.
+        target = context.rng.pick(pool)
+    } else {
+        const viable = [
+            ...new Set(passages.flatMap((passage) => passage.gridIndices)),
+        ]
+        const chosen = context.rng.pick(viable)
+        const withTarget = passages.filter((passage) =>
+            passage.gridIndices.includes(chosen),
+        )
+
+        target = pool.find((point) => point.index === chosen) ?? pool[0]
+        offsetFraction = context.rng.pick(withTarget).at
+    }
+
+    const q = qFromBandwidth(1 / stepsPerOctave, target.hz, context.sampleRate)
     const first = grid[0]
     const last = grid[grid.length - 1]
-    const startSpan =
-        EQ_CONFIG.trackStartLatestFraction -
-        EQ_CONFIG.trackStartEarliestFraction
 
     return {
         key: `r${context.roundIndex}`,
         track,
-        trackOffsetFraction:
-            EQ_CONFIG.trackStartEarliestFraction +
-            context.rng.next() * startSpan,
+        trackOffsetFraction: offsetFraction,
         variants: [
             { id: "flat", label: "Original" },
             {

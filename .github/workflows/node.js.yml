@@ -30,6 +30,13 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
 
+            # Needed by scripts/build-track-profiles.ts, which decodes every
+            # training track to measure which frequencies it actually
+            # contains. Without ffmpeg the profiles come out empty and the
+            # games fall back to asking about bands that may not be there.
+            - name: Install ffmpeg
+              run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
             - name: Install dependencies
               run: npm install
 

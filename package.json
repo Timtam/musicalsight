@@ -44,10 +44,11 @@
     },
     "scripts": {
         "import": "npx tsx --tsconfig ./tsconfig.scripts.json scripts/import-reaperaccessible.ts",
+        "build-data": "npx tsx --tsconfig ./tsconfig.scripts.json scripts/build-catalog.ts && npx tsx --tsconfig ./tsconfig.scripts.json scripts/build-track-profiles.ts",
         "start": "vite",
-        "prestart": "npx tsx --tsconfig ./tsconfig.scripts.json scripts/build-catalog.ts",
+        "prestart": "npm run build-data",
         "build": "vite build",
-        "prebuild": "npx tsx --tsconfig ./tsconfig.scripts.json scripts/build-catalog.ts",
+        "prebuild": "npm run build-data",
         "serve": "vite preview"
     },
     "eslintConfig": {
