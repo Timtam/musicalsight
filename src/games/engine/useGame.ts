@@ -33,8 +33,7 @@ const VOLUME_KEY = "gameVolumeDb"
 const DEFAULT_VOLUME_DB = -6
 
 const AUDIO_ERROR =
-    "Audio could not be started. Check your output device, then press " +
-    "Start training again."
+    "Audio could not be started. Check your output device, then try again."
 
 export interface GameState<P> {
     phase: Phase
@@ -387,6 +386,17 @@ export function createGameReducer<P, S>(
             }
 
             case "submit": {
+                // The shell keeps the answers selectable during the count-in
+                // so the player can pre-select, which makes reaching for the
+                // submit button the natural next move. Saying why it is too
+                // early beats a button that silently does nothing.
+                if (state.phase === "countIn")
+                    return announce(
+                        state,
+                        "Available after the count-in.",
+                        true,
+                    )
+
                 // Reentrancy guard. Two fast activations of the button would
                 // otherwise start two evaluations; aria-disabled alone does
                 // not help, because it only takes effect after the re-render.

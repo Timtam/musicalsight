@@ -109,7 +109,9 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
               : "Submit answer"
 
     function onPrimary() {
-        if (phase === "question") api.submit()
+        // countIn goes through submit as well, so the reducer can say why it
+        // is too early rather than leaving the activation unanswered.
+        if (phase === "question" || phase === "countIn") api.submit()
         else if (phase === "feedback") api.advance()
         else if (phase === "over") void api.start()
     }
@@ -121,9 +123,24 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
     // what the radio groups and buttons already do.
     return (
         <>
-            {!inGame && (
-                <Button onClick={() => void api.start()}>Start training</Button>
-            )}
+            {/*
+                Never unmounted, even though it is unreachable behind the
+                dialog anyway. react-bootstrap restores focus on close to
+                whatever was focused before opening — and a real activation
+                focuses this button, so unmounting it leaves restoreFocus
+                with a detached node, focus lands on document.body, and the
+                virtual cursor is thrown back to the top of the page without
+                a word. That is the exact wandering the dialog exists to
+                prevent, at the one moment it hurts most.
+            */}
+            <Button
+                aria-disabled={inGame || undefined}
+                onClick={() => {
+                    if (!inGame) void api.start()
+                }}
+            >
+                Start training
+            </Button>
 
             <Modal
                 show={inGame}
@@ -307,9 +324,22 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
                                 )}
                             </dl>
 
+                            {/*
+                                Opened in a new tab: following an attribution
+                                link in the same tab would leave the app and
+                                destroy the session, and going back reloads
+                                the page at round zero.
+                            */}
                             <p>
                                 Track: {round.track.title}.{" "}
-                                <Linkify>{round.track.credits}</Linkify>
+                                <Linkify
+                                    options={{
+                                        target: "_blank",
+                                        rel: "noopener noreferrer",
+                                    }}
+                                >
+                                    {round.track.credits}
+                                </Linkify>
                             </p>
                         </>
                     )}
@@ -336,6 +366,11 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
                     </Button>
                     {phase !== "idle" && phase !== "over" && (
                         <Button onClick={api.quit}>End training</Button>
+                    )}
+                    {state.error !== null && (
+                        <Button onClick={() => void api.start()}>
+                            Try again
+                        </Button>
                     )}
                     {(phase === "over" || state.error !== null) && (
                         <Button onClick={api.dismiss}>Close</Button>

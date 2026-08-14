@@ -133,7 +133,17 @@ export default function Announcer({ children }: { children: ReactNode }) {
     }, [])
 
     const [armSeq, setArmSeq] = useState(0)
-    const arm = useCallback(() => setArmSeq((n) => n + 1), [])
+
+    // The gate closes SYNCHRONOUSLY. Only scheduling the re-render would
+    // leave ready.current true for the rest of the current effect flush —
+    // and the opening announcement of a session is sent in exactly that
+    // flush, one effect after the regions mount. It would then be written
+    // into a span that was inserted in the same task, which is precisely the
+    // condition under which most screen readers swallow a message.
+    const arm = useCallback(() => {
+        ready.current = false
+        setArmSeq((n) => n + 1)
+    }, [])
 
     // The accessibility API needs a moment to register the regions before the
     // first write, otherwise it is not observed at all. This re-arms whenever
