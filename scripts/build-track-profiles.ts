@@ -64,6 +64,17 @@ export interface TrackWindow {
 
 export interface TrackProfile {
     durationSeconds: number
+    /**
+     * Integrated loudness per EBU R128, from ffmpeg's ebur128 filter.
+     *
+     * The bundled tracks span 8.4 dB, so without this the level jumps
+     * audibly whenever the game moves to another track — unpleasant on
+     * headphones and it makes the volume setting useless between rounds.
+     * This is the one thing LUFS is genuinely the right tool for here: it
+     * says nothing about which frequencies a passage contains, which is
+     * what the band data above is for.
+     */
+    lufs: number | null
     windows: TrackWindow[]
 }
 
@@ -197,6 +208,36 @@ function decode(file: string): Promise<Float32Array> {
     })
 }
 
+/** Integrated loudness in LUFS, or null when ffmpeg cannot report it. */
+function measureLoudness(file: string): Promise<number | null> {
+    return new Promise((resolve) => {
+        const child = spawn(
+            "ffmpeg",
+            [
+                "-nostdin",
+                "-i",
+                file,
+                "-af",
+                "ebur128=framelog=quiet",
+                "-f",
+                "null",
+                "-",
+            ],
+            { stdio: ["ignore", "ignore", "pipe"] },
+        )
+
+        let stderr = ""
+
+        child.stderr.on("data", (chunk: Buffer) => (stderr += chunk.toString()))
+        child.on("error", () => resolve(null))
+        child.on("close", () => {
+            const match = stderr.match(/I:\s*(-?\d+(?:\.\d+)?)\s*LUFS/)
+
+            resolve(match ? Number(match[1]) : null)
+        })
+    })
+}
+
 function bandEdges(): { lo: number; hi: number }[] {
     const edges: { lo: number; hi: number }[] = []
     const halfStep = Math.pow(2, 1 / (2 * BANDS_PER_OCTAVE))
@@ -244,7 +285,10 @@ function bandBins(edges: { lo: number; hi: number }[]): number[][] {
     })
 }
 
-function profileTrack(samples: Float32Array): TrackProfile {
+function profileTrack(
+    samples: Float32Array,
+    lufs: number | null,
+): TrackProfile {
     const hann = hannWindow(FFT_SIZE)
     const edges = bandEdges()
     const bins = bandBins(edges)
@@ -308,6 +352,7 @@ function profileTrack(samples: Float32Array): TrackProfile {
 
     return {
         durationSeconds: Math.round(duration),
+        lufs,
         windows: raw.map((w) => {
             // Relative to this window's own median band, so the numbers say
             // nothing about mastering level and everything about balance.
@@ -356,10 +401,13 @@ async function main() {
                 continue
             }
 
-            profiles.tracks[file] = profileTrack(samples)
+            const lufs = await measureLoudness(full)
+
+            profiles.tracks[file] = profileTrack(samples, lufs)
             console.log(
                 `[track-profiles] ${file}: ` +
-                    `${profiles.tracks[file].windows.length} windows`,
+                    `${profiles.tracks[file].windows.length} windows, ` +
+                    `${lufs === null ? "loudness unknown" : `${lufs} LUFS`}`,
             )
         } catch (error) {
             // Deliberately not fatal: a developer without ffmpeg should still

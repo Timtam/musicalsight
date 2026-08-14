@@ -396,6 +396,8 @@ export interface AudioRig {
     stopTrack(): void
     setVolumeDb(db: number): void
     setRoundTrimDb(db: number): void
+    /** Per-track loudness match, so switching tracks is not a level jump. */
+    setTrackGainDb(db: number): void
     duck(on: boolean): void
     earcon(kind: EarconKind, at?: number): void
     scheduleCountIn(seconds: number): void
@@ -428,19 +430,22 @@ export function createRig(ctx: AudioContext): AudioRig {
     // silence — every game would go quiet with no error at all.
 
     const media = ctx.createMediaElementSource(element)
+    // Kept separate from trim, which carries the per-round jitter and gets
+    // muted across a seek — the two must not overwrite each other.
+    const trackGain = new GainNode(ctx, { gain: 1 })
     const probe = createProbe(ctx)
     const trim = new GainNode(ctx, { gain: 1 })
     const duckGain = new GainNode(ctx, { gain: 1 })
     const master = new GainNode(ctx, { gain: dbToGain(DEFAULT_VOLUME_DB) })
     const cues = new GainNode(ctx, { gain: 1 })
 
-    // element -> media -> probe -> [game chain] -> trim -> duck -> master
+    // element -> media -> trackGain -> probe -> [game chain] -> trim -> duck -> master
     // cues -----------------------------------------------------^
     //
     // The volume control sits AFTER the game chain, unlike the previous
     // implementation, where it sat before the boost and could do nothing
     // about clipping. Earcons bypass both the game chain and the ducker.
-    media.connect(probe.node)
+    media.connect(trackGain).connect(probe.node)
     trim.connect(duckGain).connect(master).connect(ctx.destination)
     cues.connect(master)
 
@@ -569,6 +574,10 @@ export function createRig(ctx: AudioContext): AudioRig {
             glide(master.gain, safe <= -60 ? 0 : dbToGain(safe), ctx)
         },
 
+        setTrackGainDb(db: number) {
+            glide(trackGain.gain, dbToGain(Number.isFinite(db) ? db : 0), ctx)
+        },
+
         setRoundTrimDb(db: number) {
             glide(trim.gain, dbToGain(Number.isFinite(db) ? db : 0), ctx)
         },
@@ -596,6 +605,7 @@ export function createRig(ctx: AudioContext): AudioRig {
             element.load()
 
             media.disconnect()
+            trackGain.disconnect()
             probe.node.disconnect()
             trim.disconnect()
             duckGain.disconnect()

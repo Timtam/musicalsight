@@ -12,6 +12,7 @@ import { useAnnouncer } from "../../components/game/Announcer"
 import type Asset from "../../entities/Asset"
 import { createRig, getAudioContext, unlockAudio, type AudioRig } from "./audio"
 import { createRng, randomSeed } from "./grid"
+import { trackGainDb } from "./profile"
 import type {
     Answer,
     EngineSettings,
@@ -639,6 +640,9 @@ export function useGame<P, S>(
         // skipping the seek would play a stretch that may not contain it at
         // all — which is the whole thing the profiles exist to prevent.
         const prepare = async () => {
+            // Applied before playback so a track change is not a level jump.
+            rig.setTrackGainDb(trackGainDb(round.track.file))
+
             if (round.track.url === loadedUrlRef.current) {
                 // It may be paused because the previous session ended, so
                 // resuming is not optional.

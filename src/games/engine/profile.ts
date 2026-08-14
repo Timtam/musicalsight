@@ -36,8 +36,44 @@ const DATA = profiles as {
     windowSeconds: number
     tracks: Record<
         string,
-        { durationSeconds: number; windows: ProfileWindow[] }
+        {
+            durationSeconds: number
+            lufs: number | null
+            windows: ProfileWindow[]
+        }
     >
+}
+
+/**
+ * The quietest track sets the reference, so every adjustment is an
+ * attenuation. Normalising upwards could push a track into clipping once a
+ * game adds a boost of up to 12 dB on top of it, and there is no limiter in
+ * the chain.
+ */
+const REFERENCE_LUFS = (() => {
+    const measured = Object.values(DATA.tracks)
+        .map((track) => track.lufs)
+        .filter((value): value is number => typeof value === "number")
+
+    return measured.length > 0 ? Math.min(...measured) : null
+})()
+
+/**
+ * How much to attenuate a track so all tracks play at the same perceived
+ * loudness. Returns 0 when the loudness was never measured.
+ *
+ * The bundled tracks span 8.4 dB of integrated loudness, so without this the
+ * level jumps audibly every time the game moves to another track — which on
+ * headphones is unpleasant and makes the volume setting useless between
+ * rounds. It says nothing about which frequencies are present; that is what
+ * usablePassages is for.
+ */
+export function trackGainDb(file: string): number {
+    const lufs = DATA.tracks[file]?.lufs
+
+    if (typeof lufs !== "number" || REFERENCE_LUFS === null) return 0
+
+    return Math.min(0, REFERENCE_LUFS - lufs)
 }
 
 export interface PassageQuery {
