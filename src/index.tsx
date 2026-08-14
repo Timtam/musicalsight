@@ -1,14 +1,14 @@
+import { HelmetProvider } from "@dr.pogodin/react-helmet"
 import "bootstrap/dist/css/bootstrap.min.css"
 import React from "react"
 import ReactDOM from "react-dom/client"
-import { HelmetProvider } from "@dr.pogodin/react-helmet"
-import { RouterProvider, createHashRouter } from "react-router-dom"
+import { Navigate, RouterProvider, createHashRouter } from "react-router-dom"
 import "reflect-metadata"
 import App from "./App"
 import "./index.css"
 import Chord from "./pages/chord/Chord"
 import Chords from "./pages/chords/Chords"
-import FrequencyIdentifier from "./pages/frequency-identifier/FrequencyIdentifier"
+import EqDetective from "./pages/eq-detective/EqDetective"
 import Home from "./pages/home/Home"
 import Imprint from "./pages/imprint/Imprint"
 import NotFound from "./pages/not-found/NotFound"
@@ -52,7 +52,12 @@ const router = createHashRouter([
                 path: "/",
             },
             {
-                element: <FrequencyIdentifier />,
+                element: <EqDetective />,
+                path: "/eq-detective",
+            },
+            {
+                // Keeps existing bookmarks out of the not-found page.
+                element: <Navigate to="/eq-detective" replace />,
                 path: "/frequency-identifier",
             },
             {

@@ -36,11 +36,8 @@ function Navigation() {
                             </NavDropdown>
                             <NavDropdown title="Ear Training">
                                 <NavDropdown.Item as="div">
-                                    <Nav.Link
-                                        as={Link}
-                                        to="/frequency-identifier"
-                                    >
-                                        Frequency Identifier (WIP)
+                                    <Nav.Link as={Link} to="/eq-detective">
+                                        EQ Detective
                                     </Nav.Link>
                                 </NavDropdown.Item>
                             </NavDropdown>
