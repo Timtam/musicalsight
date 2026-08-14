@@ -539,7 +539,8 @@ export function createEqDetective(): GameSpec<EqParams, EqSettings> {
                 return `${prefix}Training finished. No answers given.`
 
             return (
-                `${prefix}Training finished after ${rounds} rounds. ` +
+                `${prefix}Training finished after ${rounds} ` +
+                `${rounds === 1 ? "round" : "rounds"}. ` +
                 `${correct} correct, ${percent} percent. ` +
                 `Score ${score}. Best streak ${bestStreak}.`
             )

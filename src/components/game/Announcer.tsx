@@ -37,6 +37,20 @@ interface Channel {
 
 const EMPTY: Channel = { text: "", seq: 0 }
 
+/** What <LiveRegions> needs from the provider. Not part of the public API. */
+interface RegionsState {
+    polite: Channel
+    assertive: Channel
+    /** Re-arms the startup buffer when the regions move in the DOM. */
+    arm(): void
+}
+
+const RegionsContext = createContext<RegionsState>({
+    polite: EMPTY,
+    assertive: EMPTY,
+    arm: () => undefined,
+})
+
 /**
  * How long a message stays in the DOM before it is wiped.
  *
@@ -48,15 +62,18 @@ const EMPTY: Channel = { text: "", seq: 0 }
  */
 const CLEAR_AFTER_MS = 1000
 
+/** Grace period before the first write after the regions are mounted. */
+const READY_DELAY_MS = 150
+
 /**
- * Mounts the two live regions once, for the whole app, at the very end of
- * the document.
+ * Holds the announcement state for the whole app. The regions themselves are
+ * rendered by <LiveRegions>, which the game places inside its dialog.
  *
- * Both containers must already sit in the DOM, empty, before the first
- * message arrives: inserting a container together with its content makes
- * most screen readers swallow that first message. They therefore must never
- * be rendered conditionally — but "before" means earlier in time, not
- * earlier in the document, so they belong last, out of the reading path.
+ * A region container must sit in the DOM, empty, before the first message
+ * arrives: inserting a container together with its content makes most screen
+ * readers swallow that first message. Since the regions now move with the
+ * dialog, that grace period is re-armed on every mount and messages sent
+ * during it are buffered rather than lost.
  *
  * Their text is wiped a second after each announcement. A live region is a
  * loudspeaker, not a log: the durable copy of anything worth re-reading
@@ -115,9 +132,17 @@ export default function Announcer({ children }: { children: ReactNode }) {
         }
     }, [])
 
-    // The accessibility API needs a moment to register the regions before
-    // the first write, otherwise it is not observed at all.
+    const [armSeq, setArmSeq] = useState(0)
+    const arm = useCallback(() => setArmSeq((n) => n + 1), [])
+
+    // The accessibility API needs a moment to register the regions before the
+    // first write, otherwise it is not observed at all. This re-arms whenever
+    // the regions are mounted somewhere new — moving them into the game
+    // dialog is, as far as the accessibility tree is concerned, the same as
+    // creating them for the first time.
     useEffect(() => {
+        ready.current = false
+
         const timer = window.setTimeout(() => {
             ready.current = true
 
@@ -125,10 +150,15 @@ export default function Announcer({ children }: { children: ReactNode }) {
             pending.current = []
 
             for (const message of queued) emit(message.text, message.politeness)
-        }, 150)
+        }, READY_DELAY_MS)
 
         return () => window.clearTimeout(timer)
-    }, [emit])
+    }, [emit, armSeq])
+
+    const regions = useMemo<RegionsState>(
+        () => ({ polite, assertive, arm }),
+        [polite, assertive, arm],
+    )
 
     const api = useMemo<AnnouncerApi>(
         () => ({
@@ -154,14 +184,35 @@ export default function Announcer({ children }: { children: ReactNode }) {
 
     return (
         <AnnouncerContext.Provider value={api}>
-            {children}
-            {/*
-                Rendered AFTER the page, not before it. The rule that a live
-                region must exist before its first message is about time, not
-                about document order — but document order is what the virtual
-                cursor walks. Placed first, these two sit ahead of the h1, so
-                every jump to the top of the page runs into them.
+            <RegionsContext.Provider value={regions}>
+                {children}
+            </RegionsContext.Provider>
+        </AnnouncerContext.Provider>
+    )
+}
 
+/**
+ * The two live regions themselves, rendered wherever announcements have to
+ * arrive.
+ *
+ * They must sit INSIDE the game dialog while it is open. react-bootstrap
+ * puts `aria-modal="true"` on the dialog, which tells assistive technology
+ * to treat everything outside it as inert — a live region out there is not
+ * reliably observed, and the game would go silent exactly when it matters.
+ *
+ * Render at most one of these at a time; two would announce everything
+ * twice.
+ */
+export function LiveRegions() {
+    const { polite, assertive, arm } = useContext(RegionsContext)
+
+    useEffect(() => {
+        arm()
+    }, [arm])
+
+    return (
+        <>
+            {/*
                 The changing React key replaces the text node and therefore
                 forces a re-announcement even when the text is identical.
                 Without it, two wrong answers in a row produce the same
@@ -187,6 +238,6 @@ export default function Announcer({ children }: { children: ReactNode }) {
             >
                 <span key={assertive.seq}>{assertive.text}</span>
             </div>
-        </AnnouncerContext.Provider>
+        </>
     )
 }

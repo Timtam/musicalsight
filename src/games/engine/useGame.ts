@@ -85,6 +85,7 @@ type Action =
     | { type: "advance" }
     | { type: "audioError"; message: string }
     | { type: "quit" }
+    | { type: "dismiss" }
 
 export interface GameApi<P> {
     state: GameState<P>
@@ -96,6 +97,8 @@ export interface GameApi<P> {
     advance(): void
     repeat(): void
     quit(): void
+    /** Leaves the finished session and closes the game dialog. */
+    dismiss(): void
     volumeDb: number
     setVolumeDb(db: number): void
 }
@@ -486,6 +489,22 @@ export function createGameReducer<P, S>(
                 return state.phase === "idle" || state.phase === "over"
                     ? state
                     : finish(state, "user")
+
+            case "dismiss": {
+                // Only from a finished session or an audio error, so a
+                // stray dismiss cannot throw away a round in progress.
+                if (state.phase !== "over" && state.error === null) return state
+
+                // The counters carry over, so the live regions and the focus
+                // effect keep seeing strictly rising sequence numbers.
+                return {
+                    ...initialState(spec, settings),
+                    rng: state.rng,
+                    sessionSeq: state.sessionSeq,
+                    announcement: state.announcement,
+                    focus: state.focus,
+                }
+            }
         }
     }
 }
@@ -769,6 +788,7 @@ export function useGame<P, S>(
         advance: useCallback(() => dispatch({ type: "advance" }), []),
         repeat: useCallback(() => announcer.repeat(), [announcer]),
         quit: useCallback(() => dispatch({ type: "quit" }), []),
+        dismiss: useCallback(() => dispatch({ type: "dismiss" }), []),
         volumeDb,
         setVolumeDb: setStoredVolume,
     }
