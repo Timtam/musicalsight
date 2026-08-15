@@ -18,6 +18,7 @@ import Notes from "./pages/notes/Notes"
 import PrivacyPolicy from "./pages/privacy-policy/PrivacyPolicy"
 import Scale from "./pages/scale/Scale"
 import Scales from "./pages/scales/Scales"
+import StereoField from "./pages/stereo-field/StereoField"
 
 const router = createHashRouter([
     {
@@ -76,6 +77,10 @@ const router = createHashRouter([
             {
                 element: <Note />,
                 path: "/notes/:note",
+            },
+            {
+                element: <StereoField />,
+                path: "/stereo-field",
             },
             {
                 element: <PrivacyPolicy />,

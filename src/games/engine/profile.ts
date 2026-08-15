@@ -25,6 +25,8 @@ interface ProfileWindow {
     at: number
     levelDb: number
     bands: number[]
+    /** Side over mid energy. Absent in profiles built before version 2. */
+    sideRatio?: number
 }
 
 const DATA = profiles as {
@@ -198,6 +200,39 @@ export function loudPassages(
                 window.at >= query.earliestFraction &&
                 window.at <= query.latestFraction &&
                 window.levelDb >= query.minLevelDb,
+        )
+        .map((window) => window.at)
+}
+
+/**
+ * Every passage that is loud enough AND carries a real stereo image.
+ *
+ * The width question needs side signal the way a boost needs the band to be
+ * present: a stretch that is already close to mono has nothing to narrow, and
+ * every answer sounds the same. Measured across the bundled tracks, 47 of 157
+ * passages sit below a side-to-mid ratio of 0.02 — three of the seven tracks
+ * are near-mono for most of their length — so this is not a rare edge case,
+ * it is nearly a third of the material.
+ *
+ * Profiles built before version 2 carry no sideRatio. Those windows are
+ * treated as unusable rather than assumed fine, so a stale profile makes the
+ * caller fall back loudly instead of quietly serving unfair rounds.
+ */
+export function stereoPassages(
+    file: string,
+    query: Omit<PassageQuery, "thresholdDb"> & { minSideRatio: number },
+): number[] {
+    const profile = DATA.tracks[file]
+
+    if (!profile) return []
+
+    return profile.windows
+        .filter(
+            (window) =>
+                window.at >= query.earliestFraction &&
+                window.at <= query.latestFraction &&
+                window.levelDb >= query.minLevelDb &&
+                (window.sideRatio ?? 0) >= query.minSideRatio,
         )
         .map((window) => window.at)
 }

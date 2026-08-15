@@ -45,6 +45,11 @@ function Navigation() {
                                         Gain Trainer
                                     </Nav.Link>
                                 </NavDropdown.Item>
+                                <NavDropdown.Item as="div">
+                                    <Nav.Link as={Link} to="/stereo-field">
+                                        Stereo Field
+                                    </Nav.Link>
+                                </NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Item>
                                 <Nav.Link as={Link} to="/catalog" active>

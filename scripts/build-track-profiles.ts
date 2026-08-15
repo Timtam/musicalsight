@@ -60,6 +60,17 @@ export interface TrackWindow {
     levelDb: number
     /** Per band, in decibels relative to this window's median band. */
     bands: number[]
+    /**
+     * Side energy over mid energy in this window, as a plain ratio.
+     *
+     * What the stereo games need and the bands cannot tell them: whether
+     * this stretch of music has a stereo image at all. Measured across the
+     * bundled tracks it runs from 0.008 to 0.78 — three of the seven sit
+     * near 0.015 for most of their length, which is close enough to mono
+     * that narrowing the image changes nothing anyone could hear. Asking
+     * "how wide is this" there is a coin toss.
+     */
+    sideRatio: number
 }
 
 export interface TrackProfile {
@@ -208,6 +219,94 @@ function decode(file: string): Promise<Float32Array> {
     })
 }
 
+/**
+ * Decodes to interleaved stereo float32 PCM.
+ *
+ * A second pass rather than a stereo-aware rewrite of the first: everything
+ * the band analysis does wants mono, and the only thing missing is one number
+ * per window. ffmpeg already runs twice per track for the loudness pass, so
+ * this changes the shape of the build, not its cost.
+ */
+function decodeStereo(file: string): Promise<Float32Array> {
+    return new Promise((resolve, reject) => {
+        const child = spawn(
+            "ffmpeg",
+            [
+                "-v",
+                "error",
+                "-i",
+                file,
+                "-ac",
+                "2",
+                "-ar",
+                String(SAMPLE_RATE),
+                "-f",
+                "f32le",
+                "-",
+            ],
+            { stdio: ["ignore", "pipe", "pipe"] },
+        )
+
+        const chunks: Buffer[] = []
+        let stderr = ""
+
+        child.stdout.on("data", (chunk: Buffer) => chunks.push(chunk))
+        child.stderr.on("data", (chunk: Buffer) => (stderr += chunk.toString()))
+        child.on("error", reject)
+        child.on("close", (code) => {
+            if (code !== 0) {
+                reject(new Error(stderr.trim() || `ffmpeg exited with ${code}`))
+                return
+            }
+
+            const merged = Buffer.concat(chunks)
+
+            resolve(
+                new Float32Array(
+                    merged.buffer,
+                    merged.byteOffset,
+                    Math.floor(merged.byteLength / 4),
+                ),
+            )
+        })
+    })
+}
+
+/**
+ * Side over mid energy per window, on the same window grid as the band
+ * analysis so the two line up index for index.
+ *
+ * A file that decodes to a single channel, or a window with no signal at all,
+ * reports 0 — which reads as "no stereo image here" and is exactly right.
+ */
+function sideRatios(stereo: Float32Array, monoLength: number): number[] {
+    const windowLength = WINDOW_SECONDS * SAMPLE_RATE
+    const ratios: number[] = []
+
+    for (
+        let start = 0;
+        start + windowLength <= monoLength;
+        start += windowLength
+    ) {
+        let midEnergy = 0
+        let sideEnergy = 0
+
+        for (let i = start; i < start + windowLength; i++) {
+            const left = stereo[i * 2] ?? 0
+            const right = stereo[i * 2 + 1] ?? 0
+            const mid = (left + right) / 2
+            const side = (left - right) / 2
+
+            midEnergy += mid * mid
+            sideEnergy += side * side
+        }
+
+        ratios.push(midEnergy > 0 ? sideEnergy / midEnergy : 0)
+    }
+
+    return ratios
+}
+
 /** Integrated loudness in LUFS, or null when ffmpeg cannot report it. */
 function measureLoudness(file: string): Promise<number | null> {
     return new Promise((resolve) => {
@@ -288,6 +387,7 @@ function bandBins(edges: { lo: number; hi: number }[]): number[][] {
 function profileTrack(
     samples: Float32Array,
     lufs: number | null,
+    sides: number[],
 ): TrackProfile {
     const hann = hannWindow(FFT_SIZE)
     const edges = bandEdges()
@@ -353,7 +453,7 @@ function profileTrack(
     return {
         durationSeconds: Math.round(duration),
         lufs,
-        windows: raw.map((w) => {
+        windows: raw.map((w, i) => {
             // Relative to this window's own median band, so the numbers say
             // nothing about mastering level and everything about balance.
             const reference = median(w.bands)
@@ -362,6 +462,7 @@ function profileTrack(
                 at: +w.at.toFixed(4),
                 levelDb: toDb(w.total, medianTotal),
                 bands: w.bands.map((value) => toDb(value, reference)),
+                sideRatio: +(sides[i] ?? 0).toFixed(4),
             }
         }),
     }
@@ -369,7 +470,7 @@ function profileTrack(
 
 async function main() {
     const profiles: TrackProfiles = {
-        version: 1,
+        version: 2,
         anchorHz: ANCHOR_HZ,
         bandsPerOctave: BANDS_PER_OCTAVE,
         firstBand: FIRST_BAND,
@@ -402,12 +503,18 @@ async function main() {
             }
 
             const lufs = await measureLoudness(full)
+            const sides = sideRatios(await decodeStereo(full), samples.length)
 
-            profiles.tracks[file] = profileTrack(samples, lufs)
+            profiles.tracks[file] = profileTrack(samples, lufs, sides)
             console.log(
                 `[track-profiles] ${file}: ` +
                     `${profiles.tracks[file].windows.length} windows, ` +
-                    `${lufs === null ? "loudness unknown" : `${lufs} LUFS`}`,
+                    `${lufs === null ? "loudness unknown" : `${lufs} LUFS`}, ` +
+                    `${
+                        profiles.tracks[file].windows.filter(
+                            (w) => w.sideRatio >= 0.02,
+                        ).length
+                    } with a stereo image`,
             )
         } catch (error) {
             // Deliberately not fatal: a developer without ffmpeg should still
