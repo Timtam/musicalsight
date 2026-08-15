@@ -175,12 +175,12 @@ url = ""
 
 [cinesamples]
 name = "CineSamples"
-url = ""
+url = "https://cinesamples.com/"
 aaf = true
 
 [crypto-cipher]
 name = "Crypto Cipher"
-url = ""
+url = "https://cryptocipher.in/"
 
 [cymatic-form]
 name = "Cymatic Form"

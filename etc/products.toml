@@ -5282,84 +5282,70 @@ url = "https://store.cinesamples.com/products/soundscapes"
 
 [viola-da-gamba]
 vendor = "cinesamples"
-name = "Viola da Gamba"
+name = "Viola Da Gamba"
+categories = [ "vsti.strings" ]
 size = 4_370
 requires = [ [ "native-instruments-kontakt-player", "6.6.1" ] ]
 nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Viola%20da%20Gamba.mp3"
+demo = "https://www.youtube.com/watch?v=KhLtcyhob38"
+price = 149
 description = """
-CineSamples lifts the veil on a newcomer and it turns out to be a rather atypical instrument: a viola da gamba.
-His fretted bowed instrument has 6 strings and appeared for the record for the first time in Spain in the 15th century.
-The viola da gamba was a very popular instrument during the Renaissance and Baroque periods.
-Once again CineSamples has pulled out all the stops to deliver impeccable quality to this product. Recorded at the MGM studios in Los Angeles, the latter is available in Kontakt format.
-Many articulations are proposed as well as a True Legato mode in order to offer the most realistic rendering possible.
-The editor has gone so far as to transcribe the changes in direction of the bow and even offers the possibility of synchronizing it to the tempo of your project.
-The "Infinite Bow" function will allow you to obtain a prolonged sustain which will not necessarily be natural, but which can find its full meaning on particularly slow tempi."""
+Cinesamples World Series: Viola da Gamba, recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles.
+This unique Renaissance bowed string delivers a rich timbre suitable for a wide variety of film, TV, game, and media scoring. Now encoded for the free Kontakt Player 6.6.1+ and Komplete Kontrol plugin with NKS integration, this instrument is available for music creators everywhere."""
 url = "https://store.cinesamples.com/products/viola-da-gamba"
 
 [voices-of-war-men-of-the-north]
 vendor = "cinesamples"
 name = "Voices of War - Men of the North"
-size = 3_580
+categories = [ "vsti.vocal" ]
+size = 3_680
 requires = [ [ "native-instruments-kontakt-player", "5.6.8" ] ]
 nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Voices%20of%20War%20-%20Men%20of%20the%20North.mp3"
+demo = "https://www.youtube.com/watch?v=IDSRLDD9p8w"
+price = 199
 description = """
-These low voices recorded by CineSamples come straight from the North into your cinematic compositions in Kontakt.
-Voices of War - Men of the North is a new collection for Kontakt and the free Kontakt Player, recorded at the MGM Scoring Stage in Los Angeles. For this project, CineSamples collaborated with a linguist specialized in Old Scandinavian, the language spoken by the Vikings, to obtain authentic phrases that do not resemble the pseudo-Latin used by many vocal libraries. The vocabulary is mainly drawn from themes of war, nature, and deities.
-Men of the North is based on a baritone choir but with a wide enough range to span from almost diphonic (Tuva-style) singing to falsetto. The singers were arranged in a semicircle around a Neumann KU100 dummy head, which was used for recording.
-The collection includes:  
-• « Oo" and "Ah" monophonic legato and sustains  
-• Vowel morphings  
-• Whispered words  
-• Growls  
-• Fourths, fifths, and unison legato incantations  
-• A phrase builder for constructing your own phrases  
-Depending on the patch, you can select from multiple mixes (Tight, Dragonborne, Head, and Full Spectrum) and additional controls to generate drones and soundscapes. CineSamples also encourages you to make use of the modulation and expression wheels on your keyboard."""
+Voices of War - Men of the North is a low-voiced male choir sample library that covers all things "Vikings." This top choir VST plugin features a wide collection of ambiance, atmosphere, drone, pad, legato, word-building, and texture patches recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles.
+This Viking Sound has become very popular in media and video games and Voices of War will quickly become your favorite choir VST plugin for Kontakt."""
 url = "https://store.cinesamples.com/products/voices-of-war-men-of-the-north"
 
 [voxos]
 vendor = "cinesamples"
-name = "Voxos"
-size = 35_000
+name = "VOXOS Epic Choirs"
+categories = [ "vsti.vocal" ]
+size = 26_970
 requires = [ [ "native-instruments-kontakt-player", "5.6.8" ] ]
 nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20Voxos.mp3"
+demo = "https://www.youtube.com/watch?v=WnYiS65S7lA"
+price = 499
 description = """
-VOXOS: Epic Virtual Choirs is CineSamples' professional virtual choir instrument, featuring a full epic choir, a boys' choir, soloists, an innovative phrase builder, and one of the most realistic and powerful legato engines on the market.
-Powered by the industry-leading Kontakt 5 Player engine, VOXOS includes world-renowned choirs and soloists with over 15 years of experience recording countless films, trailers, video games, and Hollywood concert performances.
-Recorded at the legendary Bastyr Chapel with its magnificent acoustics, the choirs were captured with multiple microphone positions in 5.1 surround resolution at 24-bit / 48 kHz. The result is a pristine and unique tone.
-VOXOS contains:  
-• Over 35,000 samples  
-• More than 500 choir effects, including risers, clusters, screams, and more"""
+VOXOS is an epic symphonic choir VST plugin featuring solo and ensemble legato voices with a one-of-a-kind phrase builder. This top choir sample library featuring a full choir, boys choirs, and soloists, will quickly become your favorite choir VST plugin for Kontakt.
+Our adaptive true legato creates fluid voices giving your composition a full sound. In scoring projects for games, film, or TV, this choir sample library becomes a staple giving your composition that added hyper-realism. From an adult choir to a children choir this sample library is a must for any composer and remains one of the best choir sample libraries available!"""
 url = "https://store.cinesamples.com/products/voxos-epic-choirs"
 
 [world-series-dulcimer-and-zither]
 vendor = "cinesamples"
-name = "World Series - Dulcimer and Zither"
+name = "Dulcimer And Zither"
+categories = [ "vsti.ethnic", "vsti.strings" ]
 size = 6_740
 requires = [ [ "native-instruments-kontakt-player", "6.6.1" ] ]
 nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20World%20Series%20-%20Dulcimer%20and%20Zither.mp3"
+demo = "https://www.youtube.com/watch?v=xlOYxIaiPrQ"
+price = 149
 description = """
-CineSamples is proud to present our new series of libraries - The WORLD SERIES!
-The first installment features the Dulcimer and Zither family, a favorite instrumental color of composers throughout the ages and across the world.
-Recorded at the legendary Firehouse Recording Studios in Los Angeles and mixed by renowned engineer Tim Starnes, the Dulcimer & Zither library will add brilliance and stunning color to any scoring palette.
-The CineSamples WORLD SERIES: Dulcimer & Zither is unmatched in sound and flexibility due to the choice of instruments and recording techniques.
-The library was designed by composers, for composers, with input from top film music professionals throughout its development.
-The library was meticulously recorded and produced by Tim Starnes, one of the most experienced and respected music editors in the world. His work includes collaborations with many of Hollywood’s A-list composers, and he has contributed to productions such as King Kong (2005), The Lord of the Rings II & III (2002, 2003), The Aviator (2004), The Departed (2006), Remember Me (2010), Twilight: Eclipse (2010), Hugo (2011), and Extremely Loud and Incredibly Close (2011).
-After previous successful collaborations such as Drums of War, CineSamples is proud to once again have him as the recording engineer for this library.
-The Recording Space:
-The Firehouse Recording Studios used for Dulcimer & Zither carry an equally impressive pedigree, having hosted the recording of countless film scores, television shows, and industry legends such as Aretha Franklin, Chick Corea, Herbie Hancock, and Randy Newman."""
-url = "https://www.bestservice.com/en/dulcimer__zither.html"
+Dulcimer and Zither have been used by composers throughout the ages and around the globe to add stunning brilliance and color to scoring palettes. Recorded at the famous Firehouse Recording Studios in Los Angeles, this library captures the true essence of these beautiful instruments.
+This library includes four different varieties of plucked and hammered string timbres, with two types of Dulcimer (Hammered and Felt), a Zither, and a rare instrument called a Ukelin.
+Now compatible with the free Kontakt Player 6.6.1+ and Komplete Kontrol plugins!"""
+url = "https://store.cinesamples.com/products/dulcimer-and-zither"
 
 [solo-tabla-tarang]
 vendor = "crypto-cipher"
-name = "Solo Tabla Tarang"
+name = "Solo Tabla"
+categories = [ "vsti.ethnic", "vsti.percussion" ]
 size = 2_110
 requires = [ [ "native-instruments-kontakt", "5.3.1" ] ]
 nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/Crypto%20Cipher%20-%20Solo%20Tabla%20Tarang.mp3"
+demo = "https://soundcloud.com/crypto-cipher/sets/solo-tabla-crypto-cipher"
+price = 79
 description = "Solo Tabla is a playable multi-sampled Kontakt instrument with two mic positions and advanced scripting. The user can control each sound as well as each drum. Tabla is the main rhythm instrument in Indian Classical music and almost all genres of Indian music from Gazals / Bhajans / Pop Songs / fusion to electronic music these days. Many electronic artists are also using tabla in various forms. Tabla Notation or Tabla Bol is a language and it has a meaning. Many artists have shown how tabla can speak like humans. We worked on this instrument for months, studying as well as planning out the way so that modern music composers understand and use the tabla in better ways. We have prepared 8 videos explaining Crypto Cipher’s Solo Tabla. These videos cover interviews of artists and many techniques/tutorials of Tabla, which will help modern music composers to arrange Tabla patterns via MIDI."
 url = "https://cryptocipher.in/product/solo-tabla/"
 
@@ -5372,6 +5358,21 @@ nks = false
 demo = "https://reaperaccessible.fr/catalog/demos/Crypto%20Cipher%20-%20Swarmandal.mp3"
 description = "The Swarmandal library is a virtual instrument designed to faithfully replicate the traditional accompaniment of Hindustani classical singing. It allows for realistic playing of raga phrases (melodic themes) on a keyboard, providing an immersive experience."
 url = "https://cryptocipher.in/product/swarmandal/"
+
+[tabla-tarang]
+vendor = "crypto-cipher"
+name = "Tabla Tarang"
+categories = [ "vsti.ethnic", "vsti.percussion" ]
+size = 2_930
+requires = [ [ "native-instruments-kontakt", "5.4.2" ] ]
+nks = false
+demo = "https://soundcloud.com/crypto-cipher/sets/tabla-tarang-indian-ancient"
+price = 79
+description = """
+There are many Tuned Percussion Instruments available in the market. We can say market is quite saturated but here is the extinct art of India "Tabla Tarang". Most of the people in India have heard about this instrument but have not seen any performance happening live. Sadly, Authentic playing is no more seen.
+Recreating this art was adventurous and fun. We teamed up with tabla artist and tabla makers and discussed the plan and finally we have sampled 13 tabla drums not with just the magical black ink spot sound but also the two other tuned sounds "Ta" and "Tin", which are produced by hitting at the rim/chanti and middle portion/maidan of tabla drum.
+We recreated this instrument for Modern music composers and recorded almost 15,000 samples with three mic types (Ribbon, Dynamic, Condensor). Also with the powerful scripted technology we pushed the capability of the instrument to next level. We have legato and drum articulation section which will help composers to play the instrument in more advance ways."""
+url = "https://cryptocipher.in/product/tabla-tarang/"
 
 [acousmatic-engine]
 vendor = "cymatic-form"
