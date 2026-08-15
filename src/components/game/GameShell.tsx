@@ -99,7 +99,9 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
     }, [state.focus.seq])
 
     // A measuring round is submitted by its own button, so the usual primary
-    // control has nothing to do while the question is open.
+    // control has nothing to do while the question is open. It stays mounted
+    // and merely goes aria-disabled — see the button itself for why removing
+    // it is not an option.
     const capturing = round?.steps.some((s) => s.capture) === true
 
     const answered =
@@ -176,9 +178,43 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
                     */}
                     {state.error && <p>{state.error}</p>}
 
+                    {/*
+                        Same reasoning as the error above: plain text, not a
+                        live region, because the reducer already spoke it.
+
+                        It has to stay on screen. The live region clears
+                        itself a second after speaking, and for a calibration
+                        run this paragraph IS the result — the measured
+                        average, its spread and the recommendation exist
+                        nowhere else. The score line below cannot carry them:
+                        it is hidden on measuring rounds precisely because
+                        points are meaningless there.
+                    */}
+                    {phase === "over" && state.summaryText !== "" && (
+                        <>
+                            <h4>Result</h4>
+                            <p>{state.summaryText}</p>
+                        </>
+                    )}
+
                     {round !== null && (
                         <>
                             {/*
+                                The playing surface, gone once the session is
+                                over. The round object survives into the "over"
+                                phase — the score line and "Last round" still
+                                read from it — but every control in here is
+                                dead by then: the audio is stopped, so the
+                                variant toggle switches nothing, and the
+                                question has already been answered and
+                                reported. Leaving it up put a standing
+                                instruction ("Press as soon as you notice a
+                                change…") on the results screen, where there
+                                is nothing left to press.
+                            */}
+                            {phase !== "over" && (
+                                <>
+                                    {/*
                                 Two variants are an on/off state, so they get
                                 a single checkbox: unchecked is the untouched
                                 reference, checked is the processed version.
@@ -198,64 +234,67 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
                                 which is more use than a control that silently
                                 does nothing.
                             */}
-                            {round.variants.length < 2 ? null : round.variants
-                                  .length === 2 ? (
-                                <Form.Check
-                                    type="checkbox"
-                                    id="game-variant-toggle"
-                                    label={round.variants[1].label}
-                                    aria-disabled={
-                                        (phase === "countIn" &&
-                                            round.variants[1]
-                                                .lockedDuringCountIn ===
-                                                true) ||
-                                        undefined
-                                    }
-                                    checked={
-                                        state.activeVariantId ===
-                                        round.variants[1].id
-                                    }
-                                    onChange={() =>
-                                        api.audition(
-                                            state.activeVariantId ===
+                                    {round.variants.length < 2 ? null : round
+                                          .variants.length === 2 ? (
+                                        <Form.Check
+                                            type="checkbox"
+                                            id="game-variant-toggle"
+                                            label={round.variants[1].label}
+                                            aria-disabled={
+                                                (phase === "countIn" &&
+                                                    round.variants[1]
+                                                        .lockedDuringCountIn ===
+                                                        true) ||
+                                                undefined
+                                            }
+                                            checked={
+                                                state.activeVariantId ===
                                                 round.variants[1].id
-                                                ? round.variants[0].id
-                                                : round.variants[1].id,
-                                        )
-                                    }
-                                />
-                            ) : (
-                                <fieldset>
-                                    <legend>What you hear</legend>
-                                    {round.variants.map((variant) => {
-                                        const locked =
-                                            phase === "countIn" &&
-                                            variant.lockedDuringCountIn === true
-
-                                        return (
-                                            <Form.Check
-                                                key={variant.id}
-                                                type="radio"
-                                                name="game-variant"
-                                                id={`game-variant-${variant.id}`}
-                                                label={variant.label}
-                                                aria-disabled={
-                                                    locked || undefined
-                                                }
-                                                checked={
+                                            }
+                                            onChange={() =>
+                                                api.audition(
                                                     state.activeVariantId ===
-                                                    variant.id
-                                                }
-                                                onChange={() =>
-                                                    api.audition(variant.id)
-                                                }
-                                            />
-                                        )
-                                    })}
-                                </fieldset>
-                            )}
+                                                        round.variants[1].id
+                                                        ? round.variants[0].id
+                                                        : round.variants[1].id,
+                                                )
+                                            }
+                                        />
+                                    ) : (
+                                        <fieldset>
+                                            <legend>What you hear</legend>
+                                            {round.variants.map((variant) => {
+                                                const locked =
+                                                    phase === "countIn" &&
+                                                    variant.lockedDuringCountIn ===
+                                                        true
 
-                            {/*
+                                                return (
+                                                    <Form.Check
+                                                        key={variant.id}
+                                                        type="radio"
+                                                        name="game-variant"
+                                                        id={`game-variant-${variant.id}`}
+                                                        label={variant.label}
+                                                        aria-disabled={
+                                                            locked || undefined
+                                                        }
+                                                        checked={
+                                                            state.activeVariantId ===
+                                                            variant.id
+                                                        }
+                                                        onChange={() =>
+                                                            api.audition(
+                                                                variant.id,
+                                                            )
+                                                        }
+                                                    />
+                                                )
+                                            })}
+                                        </fieldset>
+                                    )}
+
+                                    {/*
                         The answers stay fully navigable during the count-in
                         — only aria-disabled, never disabled, which would
                         remove them from the tab order and from the screen
@@ -263,69 +302,89 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
                         period from dead time into the most useful window of
                         the round: the user learns the list and pre-selects.
                     */}
-                            {round.steps.map((step) =>
-                                step.capture ? (
-                                    // A measuring step: one button, pressed
-                                    // the moment something is perceived. The
-                                    // instant IS the answer, so there is
-                                    // nothing to select and nothing to submit
-                                    // afterwards.
-                                    <div key={step.id}>
-                                        <p>{step.prompt}</p>
-                                        {step.help && (
-                                            <p
-                                                id={`help-${step.id}`}
-                                                className="visually-hidden"
-                                            >
-                                                {step.help}
-                                            </p>
-                                        )}
-                                        <Button
-                                            id={`game-capture-${step.id}`}
-                                            aria-describedby={
-                                                step.help
-                                                    ? `help-${step.id}`
-                                                    : undefined
-                                            }
-                                            aria-disabled={
-                                                phase !== "question" ||
-                                                undefined
-                                            }
-                                            onClick={() => {
-                                                if (phase === "question")
-                                                    api.capture()
-                                            }}
-                                        >
-                                            {step.capture.buttonLabel}
-                                        </Button>
-                                    </div>
-                                ) : (
-                                    <AnswerFieldset
-                                        key={step.id}
-                                        step={step}
-                                        selected={state.draft[step.id]}
-                                        locked={
-                                            phase !== "question" &&
-                                            phase !== "countIn"
-                                        }
-                                        onPick={api.pick}
-                                    />
-                                ),
+                                    {round.steps.map((step) =>
+                                        step.capture ? (
+                                            // A measuring step: one button, pressed
+                                            // the moment something is perceived. The
+                                            // instant IS the answer, so there is
+                                            // nothing to select and nothing to submit
+                                            // afterwards.
+                                            <div key={step.id}>
+                                                <p>{step.prompt}</p>
+                                                {step.help && (
+                                                    <p
+                                                        id={`help-${step.id}`}
+                                                        className="visually-hidden"
+                                                    >
+                                                        {step.help}
+                                                    </p>
+                                                )}
+                                                <Button
+                                                    id={`game-capture-${step.id}`}
+                                                    aria-describedby={
+                                                        step.help
+                                                            ? `help-${step.id}`
+                                                            : undefined
+                                                    }
+                                                    aria-disabled={
+                                                        phase !== "question" ||
+                                                        undefined
+                                                    }
+                                                    onClick={() => {
+                                                        if (
+                                                            phase === "question"
+                                                        )
+                                                            api.capture()
+                                                    }}
+                                                >
+                                                    {step.capture.buttonLabel}
+                                                </Button>
+                                            </div>
+                                        ) : (
+                                            <AnswerFieldset
+                                                key={step.id}
+                                                step={step}
+                                                selected={state.draft[step.id]}
+                                                locked={
+                                                    phase !== "question" &&
+                                                    phase !== "countIn"
+                                                }
+                                                onPick={api.pick}
+                                            />
+                                        ),
+                                    )}
+                                </>
                             )}
 
-                            {!(capturing && phase === "question") && (
-                                <Button
-                                    id="game-primary"
-                                    aria-disabled={
-                                        phase === "countIn" ||
-                                        (phase === "question" && !answered) ||
-                                        undefined
-                                    }
-                                    onClick={onPrimary}
-                                >
-                                    {primaryLabel}
-                                </Button>
-                            )}
+                            {/*
+                                Never unmounted, for the same reason as the
+                                Start button above. On a measuring round this
+                                control has nothing to do once the question
+                                opens — but hiding it there unmounted the very
+                                node that had just been activated to get here,
+                                because "Next round" IS this button. Focus fell
+                                to document.body and the virtual cursor was
+                                thrown out of the dialog, silently, at the
+                                start of every round from the second on.
+
+                                So it stays and goes aria-disabled instead.
+                                Activating it anyway is answered by the reducer
+                                with a spoken pointer to the capture button,
+                                rather than the "Choose an answer first" that a
+                                measuring round has no way to satisfy.
+                            */}
+                            <Button
+                                id="game-primary"
+                                aria-disabled={
+                                    phase === "countIn" ||
+                                    (phase === "question" &&
+                                        (capturing || !answered)) ||
+                                    undefined
+                                }
+                                onClick={onPrimary}
+                            >
+                                {primaryLabel}
+                            </Button>
 
                             <h4>Last round</h4>
                             <p>{state.lastRoundText || "No answers yet."}</p>

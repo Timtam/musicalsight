@@ -74,6 +74,12 @@ export interface GameState<P> {
     timeRemaining: number | null
     /** Statically readable under the "Last round" heading. */
     lastRoundText: string
+    /**
+     * The closing sentence, kept so it can be READ as well as heard. The live
+     * region speaks it once and then clears; a run whose whole point is a
+     * measurement must leave that measurement on screen to go back to.
+     */
+    summaryText: string
     announcement: { text: string; urgent: boolean; seq: number }
     /** Focus is data, not an imperative side effect. */
     focus: { target: "round" | "summary"; seq: number }
@@ -144,6 +150,7 @@ function initialState<P, S>(
         sessionEndsAt: null,
         timeRemaining: timed ? settings.timeAttackSeconds : null,
         lastRoundText: "",
+        summaryText: "",
         announcement: { text: "", urgent: false, seq: 0 },
         focus: { target: "round", seq: 0 },
         error: null,
@@ -350,6 +357,11 @@ export function createGameReducer<P, S>(
                 sessionEndsAt: null,
                 roundEndsAt: null,
                 countInRemaining: 0,
+                // Deliberately `summary`, not `text`: the "no lives left"
+                // prefix is the previous round's verdict, which already has
+                // its own place under "Last round" and would be duplicated
+                // on screen.
+                summaryText: summary,
                 focus: { target: "summary", seq: state.focus.seq + 1 },
             },
             text,
@@ -515,6 +527,19 @@ export function createGameReducer<P, S>(
                 // not help, because it only takes effect after the re-render.
                 if (state.phase !== "question" || state.round === null)
                     return state
+
+                // A measuring round has nothing to choose: the answer is the
+                // instant its own button is pressed. Sending the player back
+                // to a list of options that does not exist would be worse
+                // than saying nothing, so name the button that does work.
+                const capture = state.round.steps.find((s) => s.capture)
+
+                if (capture)
+                    return announce(
+                        state,
+                        `Use the ${capture.capture!.buttonLabel} button.`,
+                        true,
+                    )
 
                 if (Object.keys(state.draft).length < state.round.steps.length)
                     return announce(state, "Choose an answer first.", true)

@@ -714,9 +714,19 @@ function judge(round: Round<EqParams>, given: Answer) {
 /**
  * Turns a calibration run into one spoken paragraph and a recommendation.
  *
- * The median is used rather than the mean: a single lapse of attention
- * produces one huge reading, and a mean would let that one trial decide the
- * recommendation.
+ * Two different statistics, on purpose:
+ *
+ * The number the player HEARS is the mean, because that is the number they
+ * asked for and the one they can check against their own memory of the run.
+ *
+ * The number that picks the RECOMMENDATION is the median, because a single
+ * lapse of attention produces one reading pinned at maxDb — with four or five
+ * trials that one outlier moves the mean by two decibels and would decide the
+ * recommendation on its own.
+ *
+ * The spread is spoken alongside the mean so the outlier stays visible rather
+ * than being averaged into invisibility; "from 2.1 to 12" reads very
+ * differently from "from 2.1 to 4.4" even when the mean is the same.
  *
  * The recommendation covers the DEPTH only. Detection and identification are
  * different skills, and nothing measured here says whether the player can
@@ -729,7 +739,18 @@ function summariseCalibration(
 ): string {
     const sorted = [...measured].sort((a, b) => a - b)
     const median = sorted[Math.floor(sorted.length / 2)]
-    const rounded = Math.round(median * 10) / 10
+
+    const dp = (n: number) => Math.round(n * 10) / 10
+    const mean = dp(measured.reduce((a, b) => a + b, 0) / measured.length)
+    const low = dp(sorted[0])
+    const high = dp(sorted[sorted.length - 1])
+
+    // Counted, not assumed equal to `rounds`: catch trials and presses made
+    // before the ramp had moved produce no reading, so the number of trials
+    // behind the average is almost always smaller than the rounds played.
+    const n = measured.length
+    const spread =
+        low === high ? "" : ` Your readings ran from ${low} to ${high}.`
 
     // Catch trials are the ones with no measured value and no correct flag:
     // a press when nothing was happening.
@@ -752,10 +773,8 @@ function summariseCalibration(
     return (
         `Calibration finished after ${rounds} ` +
         `${rounds === 1 ? "round" : "rounds"}. ` +
-        // "typically", not "on average": this is the median, and calling a
-        // median an average would be a small lie in a sentence whose whole
-        // job is to be trusted.
-        `You typically noticed a change at about ${rounded} decibels. ` +
+        `Across ${n} measured ${n === 1 ? "round" : "rounds"} you noticed ` +
+        `the change at ${mean} decibels on average.${spread} ` +
         `Try "${pick.label}" at ${pick.gainDb} decibels to start with.` +
         ` This measures whether you hear a change, not whether you can name ` +
         `the band, so pick the level yourself.${warning}`
