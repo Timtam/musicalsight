@@ -71,7 +71,14 @@ export interface StereoConfig {
  * ══════════════════════════════════════════════════════════════════════════
  */
 export const STEREO_CONFIG: StereoConfig = {
-    /** Seconds of unchanged music before the image moves. */
+    /**
+     * Seconds before the change is revealed.
+     *
+     * Not "seconds of unchanged music": in a position round the fold to mono
+     * is already in place during the count-in, so what the player hears is a
+     * centred point from the very first second. Only where that point sits
+     * changes afterwards.
+     */
     countInSeconds: 4,
 
     /** Wrong answers allowed in practice mode before the session ends. */
@@ -125,13 +132,13 @@ export const STEREO_CONFIG: StereoConfig = {
             id: "position",
             label: "Position",
             description:
-                "the music is collapsed to a point and moved somewhere between hard left and hard right",
+                "the music plays as a single point throughout, and moves from the centre to somewhere between hard left and hard right",
         },
         {
             id: "width",
             label: "Width",
             description:
-                "the music keeps its place but the stereo image is squeezed towards the middle",
+                "the music keeps its own stereo image, and that image is squeezed towards the middle",
         },
     ],
 
@@ -530,6 +537,12 @@ function buildAudio(rig: AudioRig, round: Round<StereoParams>): GameAudio {
          * The fold to mono is not a simplification, it is the question. A
          * finished stereo mix is already spread across the field, so "where
          * is it" has no answer until it is collapsed to a point.
+         *
+         * It is CONSTANT, not part of the change: both variants run through
+         * it and so does the count-in, so the player hears a centred point
+         * from the first second and only its place moves. Making the fold
+         * part of the reveal would put a second, much louder difference on
+         * top of the one being asked about.
          *
          * It also makes the panner safe. StereoPannerNode is constant power
          * for a MONO input — the spec's mono path is cos/sin — but with a

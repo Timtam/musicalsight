@@ -71,12 +71,17 @@ export default function StereoField() {
                     <Card.Text>
                         You hear a few seconds of music, then the same music
                         with its stereo image changed. Switch between the two as
-                        often as you like, then say what happened. Ask about the
-                        position and the music is collapsed to a single point
-                        and moved between hard left and hard right; ask about
-                        the width and it keeps its place while the image is
-                        squeezed towards the middle. A wrong answer tells you by
-                        how much you missed.
+                        often as you like, then say what happened. A wrong
+                        answer tells you by how much you missed.
+                    </Card.Text>
+                    <Card.Text>
+                        In a position round the music is collapsed to a single
+                        point the whole time, the opening seconds included — it
+                        starts centred, and the only thing that changes is where
+                        that point sits, anywhere between hard left and hard
+                        right. In a width round nothing is collapsed: the music
+                        keeps its own stereo image, and that image is squeezed
+                        towards the middle.
                     </Card.Text>
                 </Card.Body>
             </Card>
