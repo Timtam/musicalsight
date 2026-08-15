@@ -184,15 +184,15 @@ url = "https://cryptocipher.in/"
 
 [cymatic-form]
 name = "Cymatic Form"
-url = ""
+url = "https://www.cymaticform.com/"
 
 [echo-sound-works]
 name = "Echo Sound Works"
-url = ""
+url = "https://www.echosoundworks.com/"
 
 [embertone]
 name = "Embertone"
-url = ""
+url = "https://embertone.com/"
 aaf = true
 
 [emergence-audio]
@@ -746,7 +746,7 @@ url = ""
 
 [lindell-plugin-alliance]
 name = "Lindell - Plugin Alliance"
-url = ""
+url = "https://www.plugin-alliance.com/collections/lindell-audio"
 
 [looptrotter-plugin-alliance]
 name = "Looptrotter - Plugin Alliance"

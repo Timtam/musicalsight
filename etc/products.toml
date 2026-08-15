@@ -1,13 +1,35 @@
 [69]
 vendor = "lindell-plugin-alliance"
-name = "69"
+name = "69 Series"
+categories = [ "fx.dynamics", "fx.eq" ]
+size = 337
 requires = [ ]
 nks = false
+os = [ "windows", "mac_intel", "mac_arm" ]
+demo = "https://www.youtube.com/watch?v=SK-Nb64yKIY"
+price = 175
 description = """
-Helios 69‑style channel strip.
-• Preamp, EQ, and dynamics with rock character.
-• Delivers rich mids and smooth highs.
-• Well suited to electric sources."""
+**Warm, Rich, and Punchy: The Sound of Classic Rock**
+
+Helios Type 69 consoles are known for their smooth and harmonic sound, heard on legendary records by the likes of Led Zeppelin, Jimi Hendrix, David Bowie, the Who, Black Sabbath, Pink Floyd, AC/DC, and Bob Marley. Lindell's 69 Channel Strip faithfully recaptures this classic tone in plugin form.
+
+**Timelessly Classic EQ on Every Channel**
+
+The Lindell emulation features the Pre-EQ-69 module which is a 3-band active bell filter loved for musical-sounding boosts and cuts that can add presence and air without harshness and fullness to lows without excessive rumble.
+
+**Includes HUGE-Sounding FET Compression**
+
+Used on some of the most iconic drum sounds in history, the powerful F760 Compressor/Limiters were part of what made the Helios line so alluring. With its distinctive sound and variable attack, release, and ratio, the F760 is often considered a fun and flexible alternative to the 1176.
+
+**Features**
+
+* Authentic Helios Type 69 Emulation: Captures the rich, musical character of the classic Helios Type 69 console
+* Helios F760 Compressor/Limiter: Includes the versatile FET compressor/limiter, offering a wide range of transparent to aggressive compression
+* Pre-EQ-69: Provides the full-bodied warmth and natural presence of the iconic Helios preamp and EQ
+* Passive 69: Recreates the smooth, musical response of the classic passive equalizer
+* Intuitive Interface: The user-friendly interface makes it easy to dial in your perfect sound, while the resizable window adapts to your workflow
+
+*The Lindell 69 Series Console is not endorsed or licensed by Helios Electronics Ltd. The use of the Helios name is for identification and reference purposes only.*"""
 url = "https://www.plugin-alliance.com/products/69-series"
 
 [1990-studio-grand-piano]
@@ -47,7 +69,7 @@ The Adagio series was recorded in a beautiful church environment and contains th
 [aura-guitars]
 vendor = "8dio"
 name = "Aura Guitars"
-categories = [ "vsti.guitar" ]
+categories = [ "vsti.bass", "vsti.guitar" ]
 requires = [ [ "native-instruments-kontakt", "5" ] ]
 url = "https://8dio.com/products/aura-guitars-for-kontakt-vst-au-aax"
 size = 8_330
@@ -560,29 +582,32 @@ The Epic Dhol Ensemble was recorded at 10 velocity layers with 10 round robins. 
 [infinite-brass]
 vendor = "aaron-venture"
 name = "Infinite Brass"
+categories = [ "vsti.brass" ]
 size = 14_000
-requires = [ [ "native-instruments-kontakt", "5.7.1" ] ]
+requires = [ [ "native-instruments-kontakt", "5.7.0" ] ]
 nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/Aaron%20Venture%20-%20Infinite%20Brass.mp3"
+demo = "https://www.youtube.com/watch?v=sG4ax_I1iWs"
+price = 449
 description = """
-Infinite Brass is a collection of next-gen virtual brass instruments that let you play any line exactly as it sounds in your head — right on your keyboard with no keyswitching — and render your performance authentically with a fantastic, clean, modern sound in one of 3 different spaces.  
-Build your own ensembles with 29 individual instruments and 13 different mutes.  
-Whether you prefer a more centered sound for concert works or a wide sound for film scoring, 58 positions allow you to create any layout you desire.  
-Infinite Brass comes with 3 standard spaces: the warm Mozarteum, the bombastic Bersa Hall, and the dry Studio.  
-The ambiance is generated in real-time through convolution using bespoke impulse responses unique to each position and room.  
-Phase-aligned samples result in no perceived cross-fades between the layers — the response is smooth, musical, and realistic.  
-Infinite Brass boasts some of the widest brass instrument ranges on the market and a consistent dynamic range from ppp to fff for all instruments.  
-All instruments have playable vibrato, flutter, and growl — even all three simultaneously.  
-Infinite Brass was chromatically sampled at 48 kHz / 24-bit.  
-Despite all these features, these instruments are among the lightest you will ever use, totaling 14.0 GB with only ~50 MB of RAM used per instrument.  
-Features:
-• 29 individual instruments  
-• 13 different mutes  
-• 58 seating positions  
-• 3 standard spaces (Mozarteum, Bersa Hall, Dry Studio)  
-• Chromatic sampling at 48 kHz / 24-bit  
-• Consistent dynamic range from ppp to fff  
-• Playable vibrato, flutter, and growl (simultaneously)"""
+**Welcome to the Next Generation**
+
+Infinite Brass is a collection of next-gen virtual brass instruments that let you play any line exactly as it sounds in your head — right on your keyboard with no keyswitching — and render your performance authentically with a fantastic, clean, modern sound in one of 3 different spaces.
+
+Build your own ensembles with 29 individual instruments and 13 different mutes. Whether you prefer a more centered sound for concert works or a wide sound for film scoring, 58 positions allow you to create any layout you desire. Infinite Brass comes with 3 standard spaces: the warm Mozarteum, the bombastic Bersa Hall, and the dry Studio. The ambiance is generated in real-time through convolution using bespoke impulse responses unique to each position and room, so the ambiance is always 100% reflecting the performance. Phase-aligned samples result in no perceived cross-fades between the layers; the response is smooth, musical, and sounds like the real thing.
+
+Infinite Brass boasts some of the widest brass instrument ranges on the market and a consistent dynamic range from ppp to fff for all instruments. All instruments have playable vibrato, flutter, and growl, even all three at the same time.
+
+Infinite Brass was chromatically sampled at 48 kHz/24-bit. In spite of all the listed features, these instruments are some of the lightest you'll ever use, totaling 14.0 GB with only ~50 MB of RAM used per instrument.
+
+**Features**
+
+* 29 individual instruments
+* 13 different mutes
+* 58 seating positions
+* 3 standard spaces (Mozarteum, Bersa Hall, Dry Studio)
+* Chromatic sampling at 48 kHz/24-bit
+* Consistent dynamic range from ppp to fff
+* Playable vibrato, flutter, and growl (simultaneously)"""
 url = "https://www.aaronventure.com/infinite-brass"
 
 [surge-xt]
@@ -745,7 +770,7 @@ size = 4_280
 demo = "https://www.youtube.com/watch?v=veKm2O0WvBQ"
 url = "https://www.ariasounds.com/lss-solo-double-bass.html"
 price = 69
-categories = [ "vsti.strings" ]
+categories = [ "vsti.bass", "vsti.strings" ]
 requires = [ [ "native-instruments-kontakt", "4" ] ]
 description = """
 The "Solo Double Bass" is the fourth and final installment in our "LSS Solo Strings" Sample Library Bundle, complete with the same fantastic features as the rest of the LSS Solo Strings...\r\r
@@ -4243,6 +4268,7 @@ vendor = "big-werks"
 name = "The Morpheus"
 categories = [
   "vsti.ambient",
+  "vsti.bass",
   "vsti.guitar",
   "vsti.strings",
   "vsti.synthesizer",
@@ -4946,7 +4972,7 @@ url = "https://store.cinesamples.com/products/tina-guo"
 demo = "https://www.youtube.com/watch?v=k6X8MzD7RS8"
 price = 299
 nks = true
-description = "An expansive arsenal of innovative sound design and composition tools brought to life through a collection of expressive electric and erhu performances. The Acoustic Cello Legato patches, recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, includes Cinesamples' CineStrings Solo Legato engine and Infinite Bow feature. For owners of Kontakt (Full and Player) 6.7.1 or higher."
+description = "An expansive arsenal of innovative sound design and composition tools brought to life through a collection of expressive electric and erhu performances. The Acoustic Cello Legato patches, recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles, includes Cinesamples' CineStrings Solo Legato engine and Infinite Bow feature. For owners of Kontakt (Full and Player) 6.7.1 or higher."
 
 [artist-series-tina-guo-vol-2]
 vendor = "cinesamples"
@@ -4958,7 +4984,7 @@ url = "https://store.cinesamples.com/products/tina-guo-vol-2"
 demo = "https://www.youtube.com/watch?v=BKNL8xk0po8"
 price = 149
 nks = true
-description = "Tina Guo vol. 2 is a valuable expansion of the original Tina Guo Acoustic Cello Legato library utilizing the same unique seamless legato recording and programming techniques. The legato in vol. 2 allows for more agile melodic passages and additional articulations including spiccato, marcato, harmonics, sul ponticello, and vibrato pizzicato. Combining vol. 2 with the original library provides a complete combination of Tina's solo acoustic cello. Tina Guo vol 2 is recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles."
+description = "Tina Guo vol. 2 is a valuable expansion of the original Tina Guo Acoustic Cello Legato library utilizing the same unique seamless legato recording and programming techniques. The legato in vol. 2 allows for more agile melodic passages and additional articulations including spiccato, marcato, harmonics, sul ponticello, and vibrato pizzicato. Combining vol. 2 with the original library provides a complete combination of Tina's solo acoustic cello. Tina Guo vol 2 is recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles."
 
 [cinebrass-descant-horn]
 vendor = "cinesamples"
@@ -4970,7 +4996,7 @@ url = "https://store.cinesamples.com/products/cinebrass-descant-horn"
 demo = "https://www.youtube.com/watch?v=04H6ea8cKwI"
 price = 149
 nks = true
-description = "A perfect partner to CineBrass Core and Pro, CineBrass Descant Horn expands the range of the Horn section. Pro horn players often pull out this instrument for delicate higher passages and it's great for soaring solos. Like CineBrass Core and Pro, CineBrass Descant Horn was recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles."
+description = "A perfect partner to CineBrass Core and Pro, CineBrass Descant Horn expands the range of the Horn section. Pro horn players often pull out this instrument for delicate higher passages and it's great for soaring solos. Like CineBrass Core and Pro, CineBrass Descant Horn was recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles."
 
 [cinebrass-horns-of-the-deep]
 vendor = "cinesamples"
@@ -4994,7 +5020,7 @@ url = "https://store.cinesamples.com/products/cinebrass-pro"
 demo = "https://www.youtube.com/watch?v=PQ6fj2ENDrU"
 price = 399
 nks = true
-description = "CineBrass PRO is the expansion to the popular CineBrass Core library. CineBrass PRO is a completely separate and unique library comprised of entirely new orchestral brass sample content, using the first-call Los Angeles musicians at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, mixed by Dennis Sands. Our CineBrass CORE library, released in June 2011, covers the essentials of the orchestral brass section, and functions as a solid foundation in our composing templates. But what about all the other things brass can do? We asked you, the film music community, what you wanted to see in an expansion. The result is CineBrass PRO."
+description = "CineBrass PRO is the expansion to the popular CineBrass Core library. CineBrass PRO is a completely separate and unique library comprised of entirely new orchestral brass sample content, using the first-call Los Angeles musicians at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles, mixed by Dennis Sands. Our CineBrass CORE library, released in June 2011, covers the essentials of the orchestral brass section, and functions as a solid foundation in our composing templates. But what about all the other things brass can do? We asked you, the film music community, what you wanted to see in an expansion. The result is CineBrass PRO."
 
 [cinebrass-sonore]
 vendor = "cinesamples"
@@ -5090,7 +5116,7 @@ url = "https://store.cinesamples.com/products/cinestrings-solo"
 demo = "https://www.youtube.com/watch?v=DY1SRrs7E5Q"
 price = 399
 nks = true
-description = "CineStrings Solo is a gorgeous solo strings library recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles. With an industry first Adaptive True Legato engine, this orchestral solo strings library is unparalleled in sound and playability. Experience solo violin, solo viola, solo cello and bass giving you all the tools to create moving sections of music to score any scene. These cinematic solo strings deliver and is part of the CineStrings Bundle."
+description = "CineStrings Solo is a gorgeous solo strings library recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles. With an industry first Adaptive True Legato engine, this orchestral solo strings library is unparalleled in sound and playability. Experience solo violin, solo viola, solo cello and bass giving you all the tools to create moving sections of music to score any scene. These cinematic solo strings deliver and is part of the CineStrings Bundle."
 
 [cinesymphony-lite]
 vendor = "cinesamples"
@@ -5114,7 +5140,7 @@ url = "https://store.cinesamples.com/products/cinewinds-core"
 demo = "https://reaperaccessible.fr/catalog/demos/CineSamples%20-%20CineWinds%20CORE.mp3"
 price = 399
 nks = true
-description = "Cinesamples is proud to present CineWinds CORE Library, a next-generation orchestral woodwinds library recorded in the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, and mixed by master engineer Dennis Sands (The Avengers, The Shawshank Redemption, Back to the Future, Forrest Gump, American Beauty). This is the real Hollywood Woodwinds sound. The CineWinds CORE Library covers the essentials of the orchestral woodwinds section, and as always, we focus on simplicity and unparalleled recording quality. Each instrument has been meticulously sampled to cover the nuance and detail of these while maintaining ease of use for the composer. CineWinds CORE Library provides a strong foundation of expressive woodwinds for our composing templates. Enjoy this 1st volume in our CineWinds lineup of products, covering all the woodwind instruments in the orchestra including ethnic woodwinds."
+description = "Cinesamples is proud to present CineWinds CORE Library, a next-generation orchestral woodwinds library recorded in the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles, and mixed by master engineer Dennis Sands (The Avengers, The Shawshank Redemption, Back to the Future, Forrest Gump, American Beauty). This is the real Hollywood Woodwinds sound. The CineWinds CORE Library covers the essentials of the orchestral woodwinds section, and as always, we focus on simplicity and unparalleled recording quality. Each instrument has been meticulously sampled to cover the nuance and detail of these while maintaining ease of use for the composer. CineWinds CORE Library provides a strong foundation of expressive woodwinds for our composing templates. Enjoy this 1st volume in our CineWinds lineup of products, covering all the woodwind instruments in the orchestra including ethnic woodwinds."
 
 [cinewinds-monster-low-winds]
 vendor = "cinesamples"
@@ -5126,7 +5152,7 @@ url = "https://store.cinesamples.com/products/cinewinds-monster-low-winds"
 demo = "https://www.youtube.com/watch?v=fvsRJPlslWk"
 price = 99
 nks = true
-description = "Enjoy another addition to our woodwinds orchestra. CineWinds Monster Low Winds is a super beefy low woodwind ensemble of bassoons, contrabassoons, bass clarinets, and contrabass clarinets recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles. As part of our woodwind orchestra, CineWinds Monster Low Winds is the real Hollywood Woodwinds sound and will make a perfect trio with CineWinds Core and CineWinds Pro. This woodwinds VST plugin will quickly become a favorite in your composition workflow."
+description = "Enjoy another addition to our woodwinds orchestra. CineWinds Monster Low Winds is a super beefy low woodwind ensemble of bassoons, contrabassoons, bass clarinets, and contrabass clarinets recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles. As part of our woodwind orchestra, CineWinds Monster Low Winds is the real Hollywood Woodwinds sound and will make a perfect trio with CineWinds Core and CineWinds Pro. This woodwinds VST plugin will quickly become a favorite in your composition workflow."
 
 [cinewinds-pro]
 vendor = "cinesamples"
@@ -5138,7 +5164,7 @@ url = "https://store.cinesamples.com/products/cinewinds-pro"
 demo = "https://www.youtube.com/watch?v=AZcJ_8haF3M"
 price = 399
 nks = true
-description = "CineWinds PRO is the expansion to the next-generation orchestral woodwinds library, CineWinds CORE. Recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, CineWinds PRO expansion fills out the remainder of the woodwind instruments in the orchestra and also offers an eclectic choice of ethnic, renaissance, and period wind instruments most often used in film scoring. From the lowest woodwind in the orchestra to the highest, this is the real Hollywood Woodwinds sound. Together with CineWinds Core, this Woodwind VST bundle will become your best woodwind sample library taking center stage in your composition template."
+description = "CineWinds PRO is the expansion to the next-generation orchestral woodwinds library, CineWinds CORE. Recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles, CineWinds PRO expansion fills out the remainder of the woodwind instruments in the orchestra and also offers an eclectic choice of ethnic, renaissance, and period wind instruments most often used in film scoring. From the lowest woodwind in the orchestra to the highest, this is the real Hollywood Woodwinds sound. Together with CineWinds Core, this Woodwind VST bundle will become your best woodwind sample library taking center stage in your composition template."
 
 [continuum-guitars]
 vendor = "metasonica"
@@ -5290,7 +5316,8 @@ nks = true
 demo = "https://www.youtube.com/watch?v=KhLtcyhob38"
 price = 149
 description = """
-Cinesamples World Series: Viola da Gamba, recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles.
+Cinesamples World Series: Viola da Gamba, recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles.
+
 This unique Renaissance bowed string delivers a rich timbre suitable for a wide variety of film, TV, game, and media scoring. Now encoded for the free Kontakt Player 6.6.1+ and Komplete Kontrol plugin with NKS integration, this instrument is available for music creators everywhere."""
 url = "https://store.cinesamples.com/products/viola-da-gamba"
 
@@ -5304,7 +5331,8 @@ nks = true
 demo = "https://www.youtube.com/watch?v=IDSRLDD9p8w"
 price = 199
 description = """
-Voices of War - Men of the North is a low-voiced male choir sample library that covers all things "Vikings." This top choir VST plugin features a wide collection of ambiance, atmosphere, drone, pad, legato, word-building, and texture patches recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles.
+Voices of War - Men of the North is a low-voiced male choir sample library that covers all things "Vikings." This top choir VST plugin features a wide collection of ambiance, atmosphere, drone, pad, legato, word-building, and texture patches recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles.
+
 This Viking Sound has become very popular in media and video games and Voices of War will quickly become your favorite choir VST plugin for Kontakt."""
 url = "https://store.cinesamples.com/products/voices-of-war-men-of-the-north"
 
@@ -5319,6 +5347,7 @@ demo = "https://www.youtube.com/watch?v=WnYiS65S7lA"
 price = 499
 description = """
 VOXOS is an epic symphonic choir VST plugin featuring solo and ensemble legato voices with a one-of-a-kind phrase builder. This top choir sample library featuring a full choir, boys choirs, and soloists, will quickly become your favorite choir VST plugin for Kontakt.
+
 Our adaptive true legato creates fluid voices giving your composition a full sound. In scoring projects for games, film, or TV, this choir sample library becomes a staple giving your composition that added hyper-realism. From an adult choir to a children choir this sample library is a must for any composer and remains one of the best choir sample libraries available!"""
 url = "https://store.cinesamples.com/products/voxos-epic-choirs"
 
@@ -5333,7 +5362,9 @@ demo = "https://www.youtube.com/watch?v=xlOYxIaiPrQ"
 price = 149
 description = """
 Dulcimer and Zither have been used by composers throughout the ages and around the globe to add stunning brilliance and color to scoring palettes. Recorded at the famous Firehouse Recording Studios in Los Angeles, this library captures the true essence of these beautiful instruments.
+
 This library includes four different varieties of plucked and hammered string timbres, with two types of Dulcimer (Hammered and Felt), a Zither, and a rare instrument called a Ukelin.
+
 Now compatible with the free Kontakt Player 6.6.1+ and Komplete Kontrol plugins!"""
 url = "https://store.cinesamples.com/products/dulcimer-and-zither"
 
@@ -5352,11 +5383,24 @@ url = "https://cryptocipher.in/product/solo-tabla/"
 [swarmandal]
 vendor = "crypto-cipher"
 name = "Swarmandal"
+categories = [ "vsti.ethnic", "vsti.strings" ]
 size = 1_720
 requires = [ [ "native-instruments-kontakt", "5.4.2" ] ]
 nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/Crypto%20Cipher%20-%20Swarmandal.mp3"
-description = "The Swarmandal library is a virtual instrument designed to faithfully replicate the traditional accompaniment of Hindustani classical singing. It allows for realistic playing of raga phrases (melodic themes) on a keyboard, providing an immersive experience."
+demo = "https://soundcloud.com/crypto-cipher/sets/swarmandal-demos-crypto-cipher"
+price = 69
+description = """
+The name Swarmandal combines swara (notes) and mandal (group), which represents the ability to produce a group of notes. This instrument is used as an accompanying instrument for vocal Hindustani classical music. It is also known by the name of Sur-mandal.
+
+The Beatles' 1967 single "Strawberry Fields Forever" features a swarmandal, played by George Harrison, as does "Within You Without You", from the band's Sgt. Pepper's Lonely Hearts Club Band album.
+
+Main purpose of Swarmandal Library is to have the ability to produce "raga pakad" phrases (melodic theme of raga) on the keyboard in a realistic way, and the ability to play swarmandal chromatically on keyboard which is not possible with real instrument.
+
+With this library you can map your own raga phrase in mapping zone to create a swarmandal effect and also use the playing range to play your melody. 30 Raga Presets are included within the library along with quick basic notes on each raga.
+
+The library was recorded with plectrum and thumb, all the strings were plucked in specific way which is very similar to "Sarod" plucking style creating a rounded stable sound. Overall instrument sounds really emotional due to the careful plucking style.
+
+We have included extra features like legato, velocity sensitive choke, each note micro tuning controls and unison pluck/finger articulation with detuning effect in the instrument. Instrument comes with two mic position and some basic effect section."""
 url = "https://cryptocipher.in/product/swarmandal/"
 
 [tabla-tarang]
@@ -5370,81 +5414,215 @@ demo = "https://soundcloud.com/crypto-cipher/sets/tabla-tarang-indian-ancient"
 price = 79
 description = """
 There are many Tuned Percussion Instruments available in the market. We can say market is quite saturated but here is the extinct art of India "Tabla Tarang". Most of the people in India have heard about this instrument but have not seen any performance happening live. Sadly, Authentic playing is no more seen.
+
 Recreating this art was adventurous and fun. We teamed up with tabla artist and tabla makers and discussed the plan and finally we have sampled 13 tabla drums not with just the magical black ink spot sound but also the two other tuned sounds "Ta" and "Tin", which are produced by hitting at the rim/chanti and middle portion/maidan of tabla drum.
+
 We recreated this instrument for Modern music composers and recorded almost 15,000 samples with three mic types (Ribbon, Dynamic, Condensor). Also with the powerful scripted technology we pushed the capability of the instrument to next level. We have legato and drum articulation section which will help composers to play the instrument in more advance ways."""
 url = "https://cryptocipher.in/product/tabla-tarang/"
 
 [acousmatic-engine]
 vendor = "cymatic-form"
 name = "Acousmatic Engine"
+categories = [ "vsti.ambient", "vsti.sound-design", "vsti.synthesizer" ]
 size = 1_130
 requires = [ [ "native-instruments-kontakt-player", "5.8.1" ] ]
 nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/Cymatic%20Form%20-%20Acousmatic%20Engine.mp3"
-description = "Acousmatic Engine is a unique Kontakt library of conceptual samples combined with multi‑dimensional synthesis, forming imaginative and playable instruments from the creator of Native Instruments Kinetic Metal and Kinetic Toys. Probing the realms of Sci‑Fi Noir, Lovecraftian Horror and Steampunk sound worlds, with 500 surreal and thematic Kontakt Instruments. Acousmatic Engine provides characteristic sound inspiration, with instruments ranging from the unique yet traditional to the completely unimagined, possessing unique sonic lusters and advanced sound design to enliven film, game and music compositions across genres."
+demo = "https://www.youtube.com/watch?v=P34T5i1rpFU"
+price = 99
+description = """
+Introducing Acousmatic Engine, a unique Kontakt library of conceptual samples combined with multi-dimensional synthesis forming imaginative and playable instruments; from the creator of Native Instruments Kinetic Metal and Kinetic Toys.
+
+Probing the realms of Sci-Fi Noir, Lovecraftian Horror and Steampunk sound worlds with 500 surreal and thematic Kontakt Instruments, Acousmatic Engine provides characteristic sound inspiration with instruments ranging from the unique yet traditional to the completely unimagined, possessing unique sonic lusters and advanced sound design. Get ready to explore a deep collection of otherworldly sounds that will enliven film, game and music compositions across genres.
+
+**Warp Into Otherworldly Sonic Dimensions**
+
+* 3 sound pack themes inspired by Lovecraftian Horror, Sci-fi Noir and Steampunk genres.
+* 500 unique instruments; each with 3 editable/warpable variations.
+* Expert and Performance Modes for flexible levels of usability.
+* Grain and resonance engines for powerful manipulation of sample material.
+* Powerful dynamic control and deep levels of creative sound design features to explore and build your own sound worlds."""
 url = "https://www.cymaticform.com/acousmatic-engine"
+
+[dieselpunk-expansion]
+vendor = "cymatic-form"
+name = "Dieselpunk Expansion"
+categories = [ "vsti.percussion", "vsti.sound-design" ]
+requires = [ [ "cymatic-form-acousmatic-engine" ], [ "native-instruments-kontakt", "5.8.1" ] ]
+nks = true
+demo = "https://soundcloud.com/cymaticform/sets/dieselpunk-expansion-audio-playthrough"
+price = 30
+description = """
+Inject your soundscape with 125 new percussive, mechanical, and textured sounds designed to push the boundaries of the 500 Acousmatic Engine presets you already know and love. Gritty, raw, and industrial at heart, Dieselpunk brings the spirit of retro-futurism to the sonic world of Acousmatic Engine — seamlessly integrating with its rich timbral palette.
+
+The Dieselpunk Expansion explores three distinctive sonic themes:
+
+* **Impacts** — Thunderous hits and crashing textures that demand attention.
+* **Friction** — Scrapes, grinds, and the resistance of surfaces under strain.
+* **Machines** — Arpeggiated pulses, sequenced rhythms, and kinetic patterns, animated through the Warp Wheel.
+
+Unleash a new era of mechanical motion and cinematic tension.
+
+*Please note: this expansion pack requires the full version of Kontakt (5.8.1 and above).*"""
+url = "https://www.cymaticform.com/dieselpunk-expansion"
 
 [evoxa]
 vendor = "echo-sound-works"
-name = "Evoxa"
+name = "EVOXA"
+categories = [ "vsti.vocal" ]
 size = 888
 requires = [ [ "native-instruments-kontakt", "5.5.1" ] ]
 nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/Echo%20Sound%20Works%20-%20Evoxa.mp3"
-description = "Evoxa is a multi-genre vocal chops engine for Kontakt. It comes loaded with 200 patches and near limitless possibilities geared for genres like Future Bass, Trap, House and more. It features 4 voicing modes, a time stretch knob, ADSR controls, glide settings, reverb controls, and a unison engine. You can import your own samples and it works in any DAW. Requires the full version of Kontakt 5.5.1 or higher."
+demo = "https://www.youtube.com/watch?v=RDKD-MLqSBI"
+price = 29
+description = """
+EVOXA is a multi genre vocal chops engine for NI KONTAKT. It comes loaded with 200 patches and near limitless possibilities geared for genres like EDM, Future Bass, Trap, and House.
+
+Vocal chops engine for Kontakt — easily make vocal chops for Future Bass, Trap, House and more.
+
+* 200 Vocal Chop Presets
+* Custom GUI with simple, yet effective controls
+* Organized Into Genres
+* 4 Voicing Modes
+* Time Stretch Knob
+* ADSR Controls
+* Glide Settings
+* Reverb Controls
+* Unison Engine
+* Custom Kontakt Script
+* Custom Interface
+* Concert Pitch Tuning
+* Import Your Own Samples
+* Works In Any DAW"""
 url = "https://www.echosoundworks.com/evoxa"
 
 [loft-piano]
 vendor = "echo-sound-works"
-name = "Loft Piano"
-size = 1_860
+name = "The Loft Piano"
+categories = [ "vsti.keys" ]
+size = 1_410
 requires = [ [ "native-instruments-kontakt", "6.5.2" ] ]
 nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/Echo%20Sound%20Works%20-%20Loft%20Piano.mp3"
+demo = "https://www.youtube.com/watch?v=0tgs-2GjQWg"
+price = 35
 description = """
-The Loft Piano is an exquisitely sampled upright piano — sampled in, you guessed it, a loft. It is a perfect Kontakt piano for a wide range of genres. We love using it for bedroom pop (Billie Eilish vibes) as well as Future Bass, House, Hip Hop, and of course, film scoring.
-We wanted to create a piano that was both a character piano and a studio piano. Most piano plugins or Kontakt piano libraries are either one or the other. Character pianos often only work in a limited range of songs, while more versatile pianos can sound bland and boring. The Loft Piano for Kontakt can be either.
-It comes with 5 Snapshots for Kontakt so you can easily access 5 distinct and unique versions of the piano. We also created a soft patch as a bonus to the main sound.
-We used two large diaphragm condenser microphones (Neumann U 87) and two pencil condensers to capture the source recordings. Over 1,500 samples."""
+The Loft Piano is an upright grand piano library for Native Instruments Kontakt. It's a perfect hybrid sound, part studio piano and part character piano.
+
+**Your New Go To Character Piano.** You might have 114 piano plugins/libraries, but we guarantee you don't have one like this. Our primary focus was to create genre specific and unique piano sounds that will make your music more memorable and unique. This is the first Character Piano designed specifically for Pop, EDM, Hip Hop, and other main stream genres in mind.
+
+**The Foundation:** The Loft Piano is built on a meticulously multi-sampled Upright Grand Piano sampled in a loft. We used 4 microphones to capture the sound and recorded individual key noise, hammer noise, and string resonance. The main sample set is 3x round robin, which results in a very natural, rich, playable sound.
+
+**The Sounds:** The Loft Piano comes with incredibly unique piano sounds. We made these by processing, resampling and processing the main sample set over and over."""
 url = "https://www.echosoundworks.com/loft-piano"
 
 [sub-zero-808]
 vendor = "echo-sound-works"
 name = "Sub Zero 808"
+categories = [ "vsti.bass", "vsti.drums" ]
 size = 385
 requires = [ [ "native-instruments-kontakt", "5.7.3" ] ]
 nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/Echo%20Sound%20Works%20-%20Sub%20Zero%20808.mp3"
+demo = "https://www.youtube.com/watch?v=YiCDKjJLixg"
+price = 19
 description = """
-The perfect basses start here... 808 and sub bass for Kontakt!
-Finding the perfect 808 can be tricky, but no longer. We created Sub Zero 808 because we, as producers, wanted a better and faster way to make 808s. In total, we created over 200 presets for this library, and only the best of the best.
-All the controls you need in a simple interface.
-Overview of 3 types of presets:  
-• 808s - These are your classic 808s, heavy and rhythm-defining as you would normally expect in a library like Sub Zero 808.  
-• No Kicks - Each 808 comes with a "No Kick" version which is perfect when your track already has a kick you like.  
-• Clean Subs - Sometimes you just need a simple yet full sub bass, which is why we created this category. Ideal for various EDM genres.
-Each preset is configured and ready for your bassline. We give you the freedom to work with these 808s however you want. Almost every patch will sustain indefinitely if you need it: just turn the sustain knob and hold the note.
-Sub Zero 808 does all the work for you so you can focus on what you do best: making music. The 808s are unique and constantly evolving. The trending 808s of 2020 look nothing like what everyone aimed for in 2017. That’s why we add new presets to Sub Zero 808 for free every year."""
+Perfect Low End Starts Here. 808 & Sub Bass library for Kontakt.
+
+Finding the perfect 808 can be hard, but not anymore. We made Sub Zero 808 because we as producers, wanted a better, faster way of laying down our 808's.
+
+We made over 200 presets in total for this library, but only kept the best of the best. We threw away any that didn't make the cut.
+
+All of the control you need in one simple interface.
+
+Sub Zero 808 is loaded with 150 Presets that are immediately useable. Sub Zero 808 will work for Any Genre of Music: Hip Hop, Trap, RnB, EDM, Pop. Sub Zero 808 was designed to be Easy To Use, so you can focus on making music.
+
+**3 types of presets:**
+
+* 808s — These are your classic, heavy hitting, beat defining 808's you'd come to expect in a library like Sub Zero 808.
+* No Kicks — Each 808 has an accompanying "No Kick" version which is perfect for when your track already has a kick that you like.
+* Clean Subs — Sometimes you just need a simple, yet full sounding sub bass and that's why we made these. Perfect for multiple genres of EDM."""
 url = "https://www.echosoundworks.com/sub-zero-808-new"
 
 [x-grand-piano]
 vendor = "echo-sound-works"
 name = "X Grand Piano"
+categories = [ "vsti.keys" ]
 size = 717
 requires = [ [ "native-instruments-kontakt", "6.0.0" ] ]
 nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/Echo%20Sound%20Works%20-%20X%20Grand%20Piano.mp3"
-description = "The X Grand Piano is a Kontakt-based piano library designed for modern producers of genres like Pop, Hip Hop, and EDM. Sampled with over 1,000 high-quality samples, it delivers a production-ready sound. Its custom GUI allows easy control over the sound, with adjustments for brightness, hammer and overtone volume, and stereo image."
+demo = "https://soundcloud.com/echosoundworks/esw-x-grand-kontakt-piano"
+price = 14
+description = """
+**Concept**
+
+We know what you're thinking. Another piano? There are probably more piano sample libraries out there than any other type of library, but there's none quite like the X Grand.
+
+We had two goals in mind when we set out to create the X Grand:
+
+1. Make a piano tailor-made in both sound and function for modern producers who make genres like Pop, Hip Hop, Indie Pop, Future Bass, House and more. Every piano we came across that was marketed for "Pop" sounded like it was made in the 1990's and was going to be prominently featured on a Backstreet Boys reunion album.
+2. Strip away any unneeded controls and features that lead to a lack of productivity because of constant, never-ending tweaking.
+
+We all have those piano libraries that give you control over things like lid thumps, seat creaks, pianist finger nail length (okay maybe not that last one, but you get the point).
+
+We made 3 versions of the GUI and script with various controls and had a team of beta testers try out each version. In the end we combined the 1st and 3rd iterations of the instrument.
+
+**Controls**
+
+* **Space Knob** — This is a convolution reverb that is fairly subtle. It doesn't wash out the sound like so many piano reverbs do.
+* **Tone Control** — This is a simple control that lets you darken the timbre of the piano. The piano is not overly bright to start with, but there are some instances where you would want a darker, more muffled sound. It's a cross between closing the lid on a grand piano and a subtle filter.
+* **Hammer** — This knob controls the volume of the dedicated hammer samples. This is a powerful yet simple tool that can make the piano sound more indie and less polished.
+* **Overtones** — If you don't know what sympathetic resonance is, we won't bore you on the specifics, but basically when you play a real piano, hitting one note slightly vibrates the notes next to it. It makes the sound thicker and more lifelike. You can control the volume of these overtones with a simple knob.
+* **Stereo** — This control makes it incredibly easy to get the X Grand to fit into your track by adjusting the stereo image of the sound. At 0% it's in mono, and at 100% it's in total stereo.
+
+**Features**
+
+* Incredible production ready sound
+* Custom GUI with simple, yet effective controls
+* Over 1,000 samples make up the entire sound"""
 url = "https://www.echosoundworks.com/x-grand-piano"
 
 [blakus-cello]
 vendor = "embertone"
 name = "Blakus Cello"
+categories = [ "vsti.strings" ]
 size = 3_370
 requires = [ [ "native-instruments-kontakt-player", "5.3.1" ] ]
 nks = false
-demo = "https://reaperaccessible.fr/catalog/demos/Embertone%20-%20Blakus%20Cello.mp3"
-description = "Blakus Cello is a collaboration with Australian composer/cellist Blake Robinson. This library offers a wide range of expressions: expressive sustains, punchy attacks, pizzicatos, tremolos, as well as carefully prepared models for sul ponticello and con sordino with scripted legato. It includes true legato samples, dynamic morphing, physically modeled vibrato, adaptive legato, adaptive staccatos, and an ensemble mode to create a virtual string section."
+demo = "https://www.youtube.com/watch?v=inkcek1bFJw"
+price = 99
+description = """
+Cello is one of our favorite instruments in the orchestra. It has an unbelievably wide emotional range, from sinister and biting to sweet and lyrical. When we embarked on making the Blakus Cello (a collaboration with Blake Robinson, Australian composer/cellist extraordinaire) we created a massive set of samples: expressive sustains, visceral harsh attacks, pizzicatos, tremolos… along with a carefully prepared model for sul ponticello and con sordino with scripted legato. This cello will add an expressive edge to your music, and hopefully, add a bit of joy to your music-making life!
+
+**Standout Features**
+
+* **True Legato Samples** — We recorded transitions to-and-from each note for three Legato styles. When you play connected lines, you hear real transition performances – without crossfading into sustain samples.
+* **Dynamics Morphing** — Seamlessly morph between real dynamic layers. All samples are phase-locked so they can blend in-and-out of each other without problematic crossfade issues.
+* **Physically Modeled Vibrato** — Vibrato scripting is modeled off real vibrato source-recordings, allowing independent control over vibrato intensity and speed – displayed across an X/Y grid.
+* **Adaptive Legato** — All Intimate Strings instruments wield our innovative Adaptive Legato feature, which adjusts legato transition speed in response to your performance, offering performative action that had never been achievable before.
+* **Adaptive Shorts** — Perform longer or shorter Staccato notes in realtime based on key velocity or MIDI control. This works extremely well for creating Spiccato, tackling agile passages, or for playing longer accented notes.
+* **Ensemble Mode** — Create your own virtual string section via the Ensemble builder. Stack up to 8 players, change their seating position, and tweak other humanization parameters such as intonation and timing for realistic (and fun) effects.
+* **Improved Efficiency** — Enjoy the benefits of some crucial updates to our script and programming. You'll notice improvements focusing on RAM efficiency and MIDI CC handling.
+* **Looped Sustains** — Samples are looped to allow continuous re-bowing while you hold down the note.
+
+**Content**
+
+* 3 Legato Types: Bow, Slur, Portamento
+* 3 Attack Types: Soft, Normal, Accent
+* 3 Tone Styles: Sordino, Sul Pont, Sul Tasto
+* Tremolo: 2 Dynamics
+* Staccato: 3 Dynamics, 8 RR
+* Pizzicato: 4 Dynamics (+Snap Pizz), 8 RR
+* Natural Release Samples
+
+**Specs**
+
+* 3.6 GB installed (16-bit) / 6.23 GB (24-bit)
+* 44.1 kHz / 16+24-bit / Stereo+Mono
+* 5,500+ samples
+* Product fulfilment via Continuata Connect
+* Requires (free) Kontakt Player 5.3.1 or later
+* Mac & Windows compatible
+* Watermarked to each user for security
+
+Blakus Cello also comes with a custom preset for TouchOSC, a modular touch control surface for sending and receiving Open Sound Control and MIDI messages over Wi-Fi."""
 url = "https://embertone.com/instruments/blakus-cello/"
 
 [friedlander-violin]
@@ -14675,7 +14853,7 @@ Lunaris 2 makes it easy to mix and match sound sources for instantly gratifying 
 [blueprint-bass-guitar]
 vendor = "fracture-sounds"
 name = "Blueprint: Bass Guitar"
-categories = [ "vsti.guitar" ]
+categories = [ "vsti.bass", "vsti.guitar" ]
 size = 306
 url = "https://fracturesounds.com/product/blueprint-bass-guitar/"
 demo = "https://youtu.be/EdduoK56ok0"
@@ -15102,7 +15280,7 @@ url = "https://store.cinesamples.com/products/cineperc"
 demo = "https://www.youtube.com/watch?v=XBqikgJYHNM"
 price = 699
 nks = true
-description = "Complete Orchestral Percussion Library - CinePerc, recorded at the legendary MGM Scoring Scoring Stage at Sony Pictures Studios in Los Angeles, is a powerhouse complete orchestral percussion library. This cinematic percussion library spans orchestral, auxiliary, ethnic, woods, and metal instruments and provides a one-stop solution for your entire percussion needs. An easy-to-use, top cinematic percussion VST for orchestral and trailer music production."
+description = "Complete Orchestral Percussion Library - CinePerc, recorded at the legendary MGM Scoring Stage at Sony Pictures Studios in Los Angeles, is a powerhouse complete orchestral percussion library. This cinematic percussion library spans orchestral, auxiliary, ethnic, woods, and metal instruments and provides a one-stop solution for your entire percussion needs. An easy-to-use, top cinematic percussion VST for orchestral and trailer music production."
 
 [blueprint-brass-ensemble]
 vendor = "fracture-sounds"

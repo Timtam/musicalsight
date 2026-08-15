@@ -16,6 +16,9 @@ name = "Strings"
 [vsti.guitar]
 name = "Guitar"
 
+[vsti.bass]
+name = "Bass"
+
 [vsti.synthesizer]
 name = "Synthesizer"
 
