@@ -46,7 +46,23 @@ export interface Step {
     prompt: string
     /** Extra sentence, wired up via aria-describedby, visually hidden. */
     help?: string
+    /** Empty when the step captures a moment instead of a choice. */
     options: Option[]
+    /**
+     * Answered by pressing one button at the moment something is perceived,
+     * rather than by choosing from a list.
+     *
+     * This is the third interaction shape, after "pick a frequency" and
+     * "which of these". The second one needed no engine support at all —
+     * Option.auditions carried it as pure data. This one does: the answer is
+     * a measured instant rather than an option id, and the surface is a
+     * single button rather than a radio group. Still pure data, still only
+     * the shell branches on it, but it earns its own field.
+     */
+    capture?: {
+        /** Shown and spoken on the button, e.g. "I hear a change". */
+        buttonLabel: string
+    }
 }
 
 export interface Round<P> {
@@ -60,6 +76,12 @@ export interface Round<P> {
     revealVariantId: string
     /** Length 1 for most games, 3 for Filter Expert. */
     steps: Step[]
+    /**
+     * Seconds the player has once the question opens, after which the round
+     * submits itself. Only for measuring rounds; leave unset and the round
+     * waits for an answer.
+     */
+    answerSeconds?: number
     correct: Answer
     /** Passed through to buildAudio and judge with full type safety. */
     params: P
@@ -72,6 +94,12 @@ export interface Verdict {
     points: number
     /** The exact sentence the screen reader will speak. */
     speech: string
+    /**
+     * What a measuring round measured, in whatever unit that round deals in.
+     * Left unset by rounds that judge rather than measure. summarise() sees
+     * the whole run and can aggregate these.
+     */
+    value?: number
 }
 
 export interface MakeRoundContext<S> {
@@ -163,7 +191,9 @@ export interface GameSpec<P, S> {
         correct: number
         score: number
         bestStreak: number
-        reason: "user" | "lives" | "time"
+        reason: "user" | "lives" | "time" | "rounds"
+        /** Every verdict of the run, oldest first. */
+        verdicts: readonly Verdict[]
     }): string
 }
 
@@ -171,6 +201,17 @@ export interface EngineSettings<S> {
     level: number
     /** Null means practice mode. */
     timeAttackSeconds: number | null
+    /**
+     * Ends the session after this many answers. Null means unlimited, which
+     * is what a practice run wants; a measurement wants a fixed number of
+     * trials.
+     */
+    maxRounds: number | null
+    /**
+     * False switches the lives system off. A measurement has no wrong
+     * answers to lose a life over.
+     */
+    livesEnabled: boolean
     seed: number
     game: S
 }

@@ -18,7 +18,9 @@ export default function EqDetective() {
     const [settings, setSettings] = useState<EqSettings>(
         EQ_CONFIG.defaultSettings,
     )
-    const [timed, setTimed] = useState(false)
+    const [session, setSession] = useState<"practice" | "timed" | "calibrate">(
+        "practice",
+    )
     const [seed] = useState(randomSeed)
 
     // A level may rule out time attack, so the choice cannot simply be
@@ -26,17 +28,24 @@ export default function EqDetective() {
     const timeAttackAllowed =
         EQ_CONFIG.levels.find((option) => option.id === level)
             ?.supportsTimeAttack !== false
-    const timeAttack = timed && timeAttackAllowed
+    const timeAttack = session === "timed" && timeAttackAllowed
+    const calibrating = session === "calibrate"
+    const calibrationRounds =
+        EQ_CONFIG.calibration.trials + EQ_CONFIG.calibration.catchTrials
 
     const spec = useMemo(() => createEqDetective(), [])
     const engineSettings = useMemo(
         () => ({
             level,
             timeAttackSeconds: timeAttack ? EQ_CONFIG.timeAttackSeconds : null,
+            // A measurement runs a fixed number of trials and has no wrong
+            // answers to lose a life over.
+            maxRounds: calibrating ? calibrationRounds : null,
+            livesEnabled: !calibrating,
             seed,
-            game: settings,
+            game: { ...settings, calibrate: calibrating },
         }),
-        [level, timeAttack, settings, seed],
+        [level, timeAttack, calibrating, calibrationRounds, settings, seed],
     )
 
     const api = useGame(spec, engineSettings, Assets)
@@ -49,8 +58,12 @@ export default function EqDetective() {
 
     const heading =
         api.state.phase === "over"
-            ? "Training finished"
-            : "EQ Detective training"
+            ? calibrating
+                ? "Calibration finished"
+                : "Training finished"
+            : calibrating
+              ? "EQ Detective calibration"
+              : "EQ Detective training"
 
     return (
         <>
@@ -134,9 +147,9 @@ export default function EqDetective() {
                     id="eqd-session-practice"
                     label={`Practice — ${EQ_CONFIG.lives} lives, no time limit`}
                     aria-disabled={running || undefined}
-                    checked={!timeAttack}
+                    checked={session === "practice"}
                     onChange={() => {
-                        if (!running) setTimed(false)
+                        if (!running) setSession("practice")
                     }}
                 />
                 <Form.Check
@@ -151,10 +164,30 @@ export default function EqDetective() {
                     aria-disabled={running || !timeAttackAllowed || undefined}
                     checked={timeAttack}
                     onChange={() => {
-                        if (!running && timeAttackAllowed) setTimed(true)
+                        if (!running && timeAttackAllowed) setSession("timed")
+                    }}
+                />
+                <Form.Check
+                    type="radio"
+                    name="eqd-session"
+                    id="eqd-session-calibrate"
+                    label={`Calibration — ${calibrationRounds} rounds, finds a good starting depth for you`}
+                    aria-disabled={running || undefined}
+                    checked={calibrating}
+                    onChange={() => {
+                        if (!running) setSession("calibrate")
                     }}
                 />
             </fieldset>
+
+            {calibrating && (
+                <p>
+                    Calibration ignores the level and the depth above. The music
+                    starts unchanged and one band drifts away from flat very
+                    slowly; press the button the moment you notice. Some rounds
+                    change nothing at all.
+                </p>
+            )}
 
             <GameShell api={api} heading={heading} />
         </>

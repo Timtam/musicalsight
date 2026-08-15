@@ -98,6 +98,10 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
         anchor.current?.focus()
     }, [state.focus.seq])
 
+    // A measuring round is submitted by its own button, so the usual primary
+    // control has nothing to do while the question is open.
+    const capturing = round?.steps.some((s) => s.capture) === true
+
     const answered =
         round !== null && Object.keys(state.draft).length >= round.steps.length
 
@@ -194,7 +198,8 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
                                 which is more use than a control that silently
                                 does nothing.
                             */}
-                            {round.variants.length === 2 ? (
+                            {round.variants.length < 2 ? null : round.variants
+                                  .length === 2 ? (
                                 <Form.Check
                                     type="checkbox"
                                     id="game-variant-toggle"
@@ -258,30 +263,69 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
                         period from dead time into the most useful window of
                         the round: the user learns the list and pre-selects.
                     */}
-                            {round.steps.map((step) => (
-                                <AnswerFieldset
-                                    key={step.id}
-                                    step={step}
-                                    selected={state.draft[step.id]}
-                                    locked={
-                                        phase !== "question" &&
-                                        phase !== "countIn"
-                                    }
-                                    onPick={api.pick}
-                                />
-                            ))}
+                            {round.steps.map((step) =>
+                                step.capture ? (
+                                    // A measuring step: one button, pressed
+                                    // the moment something is perceived. The
+                                    // instant IS the answer, so there is
+                                    // nothing to select and nothing to submit
+                                    // afterwards.
+                                    <div key={step.id}>
+                                        <p>{step.prompt}</p>
+                                        {step.help && (
+                                            <p
+                                                id={`help-${step.id}`}
+                                                className="visually-hidden"
+                                            >
+                                                {step.help}
+                                            </p>
+                                        )}
+                                        <Button
+                                            id={`game-capture-${step.id}`}
+                                            aria-describedby={
+                                                step.help
+                                                    ? `help-${step.id}`
+                                                    : undefined
+                                            }
+                                            aria-disabled={
+                                                phase !== "question" ||
+                                                undefined
+                                            }
+                                            onClick={() => {
+                                                if (phase === "question")
+                                                    api.capture()
+                                            }}
+                                        >
+                                            {step.capture.buttonLabel}
+                                        </Button>
+                                    </div>
+                                ) : (
+                                    <AnswerFieldset
+                                        key={step.id}
+                                        step={step}
+                                        selected={state.draft[step.id]}
+                                        locked={
+                                            phase !== "question" &&
+                                            phase !== "countIn"
+                                        }
+                                        onPick={api.pick}
+                                    />
+                                ),
+                            )}
 
-                            <Button
-                                id="game-primary"
-                                aria-disabled={
-                                    phase === "countIn" ||
-                                    (phase === "question" && !answered) ||
-                                    undefined
-                                }
-                                onClick={onPrimary}
-                            >
-                                {primaryLabel}
-                            </Button>
+                            {!(capturing && phase === "question") && (
+                                <Button
+                                    id="game-primary"
+                                    aria-disabled={
+                                        phase === "countIn" ||
+                                        (phase === "question" && !answered) ||
+                                        undefined
+                                    }
+                                    onClick={onPrimary}
+                                >
+                                    {primaryLabel}
+                                </Button>
+                            )}
 
                             <h4>Last round</h4>
                             <p>{state.lastRoundText || "No answers yet."}</p>
@@ -290,8 +334,12 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
                             <dl aria-labelledby="game-status">
                                 <dt>Round</dt>
                                 <dd>{state.roundIndex + 1}</dd>
-                                <dt>Score</dt>
-                                <dd>{state.score}</dd>
+                                {!capturing && (
+                                    <>
+                                        <dt>Score</dt>
+                                        <dd>{state.score}</dd>
+                                    </>
+                                )}
                                 {state.lives >= 0 && (
                                     <>
                                         <dt>Lives</dt>
@@ -300,8 +348,12 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
                                         </dd>
                                     </>
                                 )}
-                                <dt>Streak</dt>
-                                <dd>{state.streak}</dd>
+                                {!capturing && (
+                                    <>
+                                        <dt>Streak</dt>
+                                        <dd>{state.streak}</dd>
+                                    </>
+                                )}
                                 {state.countInRemaining > 0 && (
                                     <>
                                         <dt>Count-in</dt>

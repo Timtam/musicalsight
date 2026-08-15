@@ -30,6 +30,14 @@ export type EqDepth = "easy" | "medium" | "hard"
 export interface EqSettings {
     mode: EqMode
     depth: EqDepth
+    /**
+     * Calibration replaces the guessing game with a measurement: the filter
+     * moves away from flat very slowly and the player presses a button the
+     * moment they notice. Ten of those give a rough idea of how large a
+     * change they need, which is exactly the setting a newcomer otherwise
+     * has to guess.
+     */
+    calibrate: boolean
 }
 
 /** One difficulty level. Add, remove or reorder these freely. */
@@ -76,6 +84,15 @@ export interface EqConfig {
     streakBonusPoints: number
     streakBonusCap: number
     defaultSettings: EqSettings
+    calibration: {
+        trials: number
+        catchTrials: number
+        dbPerSecond: number
+        maxDb: number
+        preRollMinSeconds: number
+        preRollMaxSeconds: number
+        graceSeconds: number
+    }
     modes: EqModeOption[]
     depths: EqDepthOption[]
     levels: EqLevel[]
@@ -163,7 +180,34 @@ export const EQ_CONFIG: EqConfig = {
     streakBonusCap: 4,
 
     /** What the settings page starts out with. */
-    defaultSettings: { mode: "mixed", depth: "medium" },
+    defaultSettings: { mode: "mixed", depth: "medium", calibrate: false },
+
+    /**
+     * The calibration run. It measures how big a change the player needs
+     * before they notice it, and recommends a depth from that.
+     *
+     * Two honest limits, both of which shape the wording of the result:
+     *
+     * 1. Reaction time inflates every reading. At 1 dB per second a 400 ms
+     *    reaction adds 0.4 dB, which is not nothing when thresholds sit
+     *    around 2 to 3 dB. Correcting for it properly would need a separate
+     *    reaction test; instead the result is phrased as "you noticed it at
+     *    about X", never as a hearing threshold.
+     * 2. It measures DETECTION, not IDENTIFICATION. Someone who spots a 2 dB
+     *    change may still be hopeless at naming the band. So it recommends a
+     *    depth and deliberately says nothing about the level.
+     */
+    calibration: {
+        trials: 8,
+        /** Trials with no change at all, mixed in among the real ones. */
+        catchTrials: 2,
+        dbPerSecond: 1,
+        maxDb: 12,
+        preRollMinSeconds: 2,
+        preRollMaxSeconds: 5,
+        /** Grace after the ramp tops out before the round gives up. */
+        graceSeconds: 3,
+    },
 
     modes: [
         { id: "mixed", label: "Boost or cut, at random" },
@@ -250,6 +294,16 @@ export interface EqParams {
     q: number
     stepsPerOctave: number
     points: number
+    /** Set on calibration rounds; absent on ordinary guessing rounds. */
+    ramp?: {
+        /** Silent lead-in after the count-in, so the start is unguessable. */
+        preRollSeconds: number
+        dbPerSecond: number
+        /** The ramp stops here; a player who hears nothing gets this value. */
+        maxDb: number
+        /** A trial where nothing happens at all, to catch trigger fingers. */
+        isCatch: boolean
+    }
 }
 
 function levelById(id: number): EqLevel {
@@ -329,6 +383,67 @@ function makeRound(context: MakeRoundContext<EqSettings>): Round<EqParams> {
     const q = qFromBandwidth(1 / stepsPerOctave, target.hz, context.sampleRate)
     const first = grid[0]
     const last = grid[grid.length - 1]
+
+    if (context.settings.calibrate) {
+        const c = EQ_CONFIG.calibration
+
+        // The catch trials sit at fixed positions in the run rather than
+        // being drawn at random, so every player gets the same number of
+        // them and the result stays comparable between runs.
+        const isCatch =
+            (context.roundIndex + 1) %
+                Math.max(
+                    2,
+                    Math.round(
+                        (c.trials + c.catchTrials) / Math.max(1, c.catchTrials),
+                    ),
+                ) ===
+            0
+
+        const preRoll =
+            c.preRollMinSeconds +
+            context.rng.next() * (c.preRollMaxSeconds - c.preRollMinSeconds)
+
+        return {
+            key: `r${context.roundIndex}`,
+            track,
+            trackOffsetFraction: offsetFraction,
+            // One variant only: there is nothing to compare against, the
+            // change creeps in on its own.
+            variants: [{ id: "flat", label: "The music" }],
+            revealVariantId: "flat",
+            answerSeconds: preRoll + c.maxDb / c.dbPerSecond + c.graceSeconds,
+            steps: [
+                {
+                    id: "moment",
+                    prompt: "Press as soon as you notice a change",
+                    help:
+                        `The sound starts unchanged. Somewhere in the next ` +
+                        `few seconds a frequency band may begin to move, very ` +
+                        `slowly. Press the button the moment you notice it. ` +
+                        `Some rounds change nothing at all, so do not press ` +
+                        `unless you really hear it.`,
+                    options: [],
+                    capture: { buttonLabel: "I hear a change" },
+                },
+            ],
+            correct: {},
+            params: {
+                gridIndex: target.index,
+                hz: target.hz,
+                gainDb: boost ? c.maxDb : -c.maxDb,
+                q,
+                stepsPerOctave,
+                points: 0,
+                ramp: {
+                    preRollSeconds: preRoll,
+                    dbPerSecond: c.dbPerSecond,
+                    maxDb: c.maxDb,
+                    isCatch,
+                },
+            },
+        }
+    }
 
     return {
         key: `r${context.roundIndex}`,
@@ -447,8 +562,28 @@ function buildAudio(rig: AudioRig, round: Round<EqParams>): GameAudio {
         return value
     }
 
+    const rampSpec = round.params.ramp
+
     return {
         setVariant(variantId: string, at: number) {
+            // A calibration round has a single variant, and reaching it is
+            // the cue to start the slow ramp rather than to switch anything.
+            // Loudness compensation stays off here: it is computed for the
+            // FINAL gain, and applying it up front would make the very thing
+            // being measured audible from the first second.
+            if (rampSpec) {
+                if (rampSpec.isCatch) return
+
+                const seconds = rampSpec.maxDb / rampSpec.dbPerSecond
+                const start = at + rampSpec.preRollSeconds
+
+                filter.gain.cancelScheduledValues(at)
+                filter.gain.setValueAtTime(0, at)
+                filter.gain.setValueAtTime(0, start)
+                filter.gain.linearRampToValueAtTime(gainDb, start + seconds)
+                return
+            }
+
             const on = variantId !== "flat"
 
             glide(filter.gain, on ? gainDb : 0, ctx, at)
@@ -491,7 +626,70 @@ function buildAudio(rig: AudioRig, round: Round<EqParams>): GameAudio {
     }
 }
 
+/**
+ * A calibration trial. The answer is the instant the button was pressed,
+ * in seconds since the question opened; everything before the pre-roll is
+ * still flat, so the decibels are what the ramp had reached by then.
+ *
+ * Deliberately phrased as "you noticed it at about X" rather than as a
+ * hearing threshold: the reading carries the player's reaction time, roughly
+ * 0.3 to 0.5 dB at one decibel per second.
+ */
+function judgeRamp(round: Round<EqParams>, given: Answer) {
+    const ramp = round.params.ramp!
+    const pressed = given.moment !== undefined
+    const elapsed = pressed ? Number(given.moment) : Number.NaN
+
+    if (ramp.isCatch)
+        return {
+            correct: !pressed,
+            perStep: { moment: !pressed },
+            points: 0,
+            speech: pressed
+                ? "Nothing changed in that one — no harm done, but do not press unless you hear it."
+                : "Nothing changed in that one, and you did not press. Good.",
+        }
+
+    if (!pressed || !Number.isFinite(elapsed))
+        return {
+            correct: false,
+            perStep: { moment: false },
+            points: 0,
+            speech: `No change noticed, all the way up to ${ramp.maxDb} decibels.`,
+            value: ramp.maxDb,
+        }
+
+    const db = Math.max(
+        0,
+        Math.min(
+            ramp.maxDb,
+            (elapsed - ramp.preRollSeconds) * ramp.dbPerSecond,
+        ),
+    )
+    const rounded = Math.round(db * 10) / 10
+
+    // Pressing before the ramp has moved at all is a guess, not a detection,
+    // and must not drag the average down.
+    if (db <= 0)
+        return {
+            correct: false,
+            perStep: { moment: false },
+            points: 0,
+            speech: "That was before anything had changed, so it does not count.",
+        }
+
+    return {
+        correct: true,
+        perStep: { moment: true },
+        points: 0,
+        speech: `You noticed it at about ${rounded} decibels.`,
+        value: db,
+    }
+}
+
 function judge(round: Round<EqParams>, given: Answer) {
+    if (round.params.ramp) return judgeRamp(round, given)
+
     const chosen = given.frequency
     const correct = chosen === round.correct.frequency
 
@@ -513,6 +711,57 @@ function judge(round: Round<EqParams>, given: Answer) {
     }
 }
 
+/**
+ * Turns a calibration run into one spoken paragraph and a recommendation.
+ *
+ * The median is used rather than the mean: a single lapse of attention
+ * produces one huge reading, and a mean would let that one trial decide the
+ * recommendation.
+ *
+ * The recommendation covers the DEPTH only. Detection and identification are
+ * different skills, and nothing measured here says whether the player can
+ * name the band once they hear it — so the level stays their choice.
+ */
+function summariseCalibration(
+    measured: number[],
+    verdicts: readonly { correct: boolean; value?: number }[],
+    rounds: number,
+): string {
+    const sorted = [...measured].sort((a, b) => a - b)
+    const median = sorted[Math.floor(sorted.length / 2)]
+    const rounded = Math.round(median * 10) / 10
+
+    // Catch trials are the ones with no measured value and no correct flag:
+    // a press when nothing was happening.
+    const falseAlarms = verdicts.filter(
+        (v) => v.value === undefined && !v.correct,
+    ).length
+
+    const pick =
+        median <= 3
+            ? EQ_CONFIG.depths[EQ_CONFIG.depths.length - 1]
+            : median <= 6
+              ? EQ_CONFIG.depths[1]
+              : EQ_CONFIG.depths[0]
+
+    const warning =
+        falseAlarms >= 2
+            ? ` You pressed ${falseAlarms} times when nothing was happening, so take this as a rough guide only and run it again when you can listen closely.`
+            : ""
+
+    return (
+        `Calibration finished after ${rounds} ` +
+        `${rounds === 1 ? "round" : "rounds"}. ` +
+        // "typically", not "on average": this is the median, and calling a
+        // median an average would be a small lie in a sentence whose whole
+        // job is to be trusted.
+        `You typically noticed a change at about ${rounded} decibels. ` +
+        `Try "${pick.label}" at ${pick.gainDb} decibels to start with.` +
+        ` This measures whether you hear a change, not whether you can name ` +
+        `the band, so pick the level yourself.${warning}`
+    )
+}
+
 export function createEqDetective(): GameSpec<EqParams, EqSettings> {
     return {
         id: "eq-detective",
@@ -527,7 +776,14 @@ export function createEqDetective(): GameSpec<EqParams, EqSettings> {
         makeRound,
         buildAudio,
         judge,
-        summarise({ rounds, correct, score, bestStreak, reason }) {
+        summarise({ rounds, correct, score, bestStreak, reason, verdicts }) {
+            const measured = verdicts
+                .map((v) => v.value)
+                .filter((v): v is number => typeof v === "number")
+
+            if (measured.length > 0)
+                return summariseCalibration(measured, verdicts, rounds)
+
             const percent =
                 rounds === 0 ? 0 : Math.round((correct / rounds) * 100)
 

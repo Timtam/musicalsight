@@ -64,6 +64,12 @@ export interface GameState<P> {
     /** Absolute audio clock times. Nothing is ever decremented. */
     countInEndsAt: number | null
     countInRemaining: number
+    /** Audio-clock time at which the current question opened. */
+    questionOpenedAt: number | null
+    /** Audio-clock deadline for the current round, for timed measurements. */
+    roundEndsAt: number | null
+    /** Every verdict of the run, oldest first. Handed to summarise(). */
+    history: Verdict[]
     sessionEndsAt: number | null
     timeRemaining: number | null
     /** Statically readable under the "Last round" heading. */
@@ -81,6 +87,7 @@ type Action =
     | { type: "audition"; variantId: string }
     | { type: "pick"; stepId: string; optionId: string }
     | { type: "submit" }
+    | { type: "capture"; at: number }
     | { type: "advance" }
     | { type: "audioError"; message: string }
     | { type: "quit" }
@@ -93,6 +100,8 @@ export interface GameApi<P> {
     audition(variantId: string): void
     pick(stepId: string, optionId: string): void
     submit(): void
+    /** Records the instant something was perceived, for measuring rounds. */
+    capture(): void
     advance(): void
     repeat(): void
     quit(): void
@@ -108,6 +117,7 @@ function initialState<P, S>(
 ): GameState<P> {
     const timed = settings.timeAttackSeconds !== null
     const maxLives = spec.lives ?? DEFAULT_LIVES
+    const lives = timed || settings.livesEnabled === false ? -1 : maxLives
 
     return {
         phase: "idle",
@@ -119,7 +129,7 @@ function initialState<P, S>(
         auditions: 0,
         draft: {},
         verdict: null,
-        lives: timed ? -1 : maxLives,
+        lives,
         maxLives,
         score: 0,
         streak: 0,
@@ -128,6 +138,9 @@ function initialState<P, S>(
         answeredCount: 0,
         countInEndsAt: null,
         countInRemaining: 0,
+        questionOpenedAt: null,
+        roundEndsAt: null,
+        history: [],
         sessionEndsAt: null,
         timeRemaining: timed ? settings.timeAttackSeconds : null,
         lastRoundText: "",
@@ -191,6 +204,8 @@ export function createGameReducer<P, S>(
             phase: wantsCountIn ? "countIn" : "question",
             countInEndsAt: null,
             countInRemaining: wantsCountIn ? countInSeconds : 0,
+            questionOpenedAt: null,
+            roundEndsAt: null,
             activeVariantId: wantsCountIn
                 ? round.variants[0].id
                 : round.revealVariantId,
@@ -207,6 +222,13 @@ export function createGameReducer<P, S>(
             phase: "question",
             countInEndsAt: null,
             countInRemaining: 0,
+            questionOpenedAt: at,
+            // A measuring round has to end by itself: someone who never hears
+            // the change would otherwise sit there indefinitely.
+            roundEndsAt:
+                round.answerSeconds === undefined
+                    ? null
+                    : at + round.answerSeconds,
             activeVariantId: round.revealVariantId,
             // The session clock starts when the first question opens, so
             // the count-in never eats into the 60 seconds.
@@ -219,9 +241,88 @@ export function createGameReducer<P, S>(
         return announce(opened, round.steps[0].prompt, false)
     }
 
+    /**
+     * Scores the drafted answer and moves on. Reached both from the submit
+     * button and from the clock, when a measuring round runs out of time.
+     */
+    function submit(state: GameState<P>): GameState<P> {
+        const round = state.round
+
+        if (round === null) return state
+
+        const verdict = spec.judge(round, state.draft)
+
+        // A round worth no points earns no streak bonus either. Measuring
+        // rounds score nothing by design, and a bonus would invent a score
+        // out of nowhere.
+        const bonus =
+            verdict.correct && verdict.points > 0
+                ? Math.min(state.streak, spec.streakBonusCap ?? 4) *
+                  (spec.streakBonusPoints ?? 25)
+                : 0
+        const gained = verdict.correct ? verdict.points + bonus : 0
+        const streak = verdict.correct ? state.streak + 1 : 0
+        const lives =
+            state.lives >= 0 && !verdict.correct ? state.lives - 1 : state.lives
+
+        const scored: GameState<P> = {
+            ...state,
+            verdict,
+            lives,
+            roundEndsAt: null,
+            score: state.score + gained,
+            streak,
+            bestStreak: Math.max(state.bestStreak, streak),
+            correctCount: state.correctCount + (verdict.correct ? 1 : 0),
+            answeredCount: state.answeredCount + 1,
+            history: [...state.history, verdict],
+            lastRoundText: `Round ${state.roundIndex + 1}. ${verdict.speech}`,
+        }
+
+        if (lives === 0) return finish(scored, "lives")
+
+        if (
+            settings.maxRounds !== null &&
+            scored.answeredCount >= settings.maxRounds
+        )
+            return finish(scored, "rounds")
+
+        if (timed) {
+            // No spoken verdict: a sentence costs about three of the sixty
+            // seconds. The earcon carries the result, and the text stays
+            // readable under "Last round".
+            //
+            // The verdict has to be carried across the round change by hand.
+            // beginRound resets it to null, and the earcon effect keys on the
+            // verdict's identity — reset to null it would compare null with
+            // null, never re-run, and the player would get no feedback at all
+            // for a whole session. spec.judge returns a fresh object per
+            // answer, so the effect fires exactly once per answer.
+            return { ...beginRound(scored, scored.roundIndex + 1), verdict }
+        }
+
+        // A measuring round reports what it measured and nothing else — a
+        // running score and a life count would be noise in a calibration.
+        if (verdict.value !== undefined)
+            return announce(
+                { ...scored, phase: "feedback" },
+                scored.lastRoundText,
+                true,
+            )
+
+        const livesText =
+            lives >= 0 ? ` ${lives} of ${state.maxLives} lives left.` : ""
+
+        return announce(
+            { ...scored, phase: "feedback" },
+            `${scored.lastRoundText} Score ${scored.score}.${livesText}`,
+            true,
+        )
+    }
+
     function finish(
         state: GameState<P>,
-        reason: "user" | "lives" | "time",
+        reason: "user" | "lives" | "time" | "rounds",
     ): GameState<P> {
         const summary = spec.summarise({
             level: settings.level,
@@ -230,6 +331,7 @@ export function createGameReducer<P, S>(
             score: state.score,
             bestStreak: state.bestStreak,
             reason,
+            verdicts: state.history,
         })
 
         // When the last life goes, the verdict for that final answer has not
@@ -246,6 +348,7 @@ export function createGameReducer<P, S>(
                 phase: "over",
                 countInEndsAt: null,
                 sessionEndsAt: null,
+                roundEndsAt: null,
                 countInRemaining: 0,
                 focus: { target: "summary", seq: state.focus.seq + 1 },
             },
@@ -317,6 +420,16 @@ export function createGameReducer<P, S>(
 
                     if (left <= 0) return finish(next, "time")
                 }
+
+                // A measuring round that nobody answered submits itself, so
+                // "I heard nothing" is a real, recorded outcome rather than a
+                // session that hangs.
+                if (
+                    next.phase === "question" &&
+                    next.roundEndsAt !== null &&
+                    action.at >= next.roundEndsAt
+                )
+                    return submit(next)
 
                 return next
             }
@@ -403,66 +516,32 @@ export function createGameReducer<P, S>(
                 if (state.phase !== "question" || state.round === null)
                     return state
 
-                const round = state.round
-
-                if (Object.keys(state.draft).length < round.steps.length)
+                if (Object.keys(state.draft).length < state.round.steps.length)
                     return announce(state, "Choose an answer first.", true)
 
-                const verdict = spec.judge(round, state.draft)
-                const bonus = verdict.correct
-                    ? Math.min(state.streak, spec.streakBonusCap ?? 4) *
-                      (spec.streakBonusPoints ?? 25)
-                    : 0
-                const gained = verdict.correct ? verdict.points + bonus : 0
-                const streak = verdict.correct ? state.streak + 1 : 0
-                const lives =
-                    state.lives >= 0 && !verdict.correct
-                        ? state.lives - 1
-                        : state.lives
+                return submit(state)
+            }
 
-                const scored: GameState<P> = {
+            case "capture": {
+                if (state.phase !== "question" || state.round === null)
+                    return state
+
+                const step = state.round.steps.find((s) => s.capture)
+
+                if (!step || state.questionOpenedAt === null) return state
+
+                // The answer is the instant, expressed as seconds since the
+                // question opened. judge() turns that into whatever the game
+                // measures; the engine stays unaware of the unit.
+                return submit({
                     ...state,
-                    verdict,
-                    lives,
-                    score: state.score + gained,
-                    streak,
-                    bestStreak: Math.max(state.bestStreak, streak),
-                    correctCount:
-                        state.correctCount + (verdict.correct ? 1 : 0),
-                    answeredCount: state.answeredCount + 1,
-                    lastRoundText: `Round ${state.roundIndex + 1}. ${verdict.speech}`,
-                }
-
-                if (lives === 0) return finish(scored, "lives")
-
-                if (timed) {
-                    // No spoken verdict: a sentence costs about three of the
-                    // sixty seconds. The earcon carries the result, and the
-                    // text stays readable under "Last round".
-                    //
-                    // The verdict has to be carried across the round change
-                    // by hand. beginRound resets it to null, and the earcon
-                    // effect keys on the verdict's identity — reset to null
-                    // it would compare null with null, never re-run, and the
-                    // player would get no feedback at all for a whole
-                    // session. spec.judge returns a fresh object per answer,
-                    // so the effect fires exactly once per answer.
-                    return {
-                        ...beginRound(scored, scored.roundIndex + 1),
-                        verdict,
-                    }
-                }
-
-                const livesText =
-                    lives >= 0
-                        ? ` ${lives} of ${state.maxLives} lives left.`
-                        : ""
-
-                return announce(
-                    { ...scored, phase: "feedback" },
-                    `${scored.lastRoundText} Score ${scored.score}.${livesText}`,
-                    true,
-                )
+                    draft: {
+                        ...state.draft,
+                        [step.id]: String(
+                            Math.max(0, action.at - state.questionOpenedAt),
+                        ),
+                    },
+                })
             }
 
             case "advance": {
@@ -795,6 +874,11 @@ export function useGame<P, S>(
             [],
         ),
         submit: useCallback(() => dispatch({ type: "submit" }), []),
+        capture: useCallback(() => {
+            const rig = rigRef.current
+
+            if (rig) dispatch({ type: "capture", at: rig.now() })
+        }, []),
         advance: useCallback(() => dispatch({ type: "advance" }), []),
         repeat: useCallback(() => announcer.repeat(), [announcer]),
         quit: useCallback(() => dispatch({ type: "quit" }), []),
