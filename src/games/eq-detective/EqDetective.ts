@@ -25,7 +25,7 @@ import type {
 } from "../engine/types"
 
 export type EqMode = "boost" | "cut" | "mixed"
-export type EqDepth = "gentle" | "normal" | "hard"
+export type EqDepth = "easy" | "medium" | "hard"
 
 export interface EqSettings {
     mode: EqMode
@@ -163,7 +163,7 @@ export const EQ_CONFIG: EqConfig = {
     streakBonusCap: 4,
 
     /** What the settings page starts out with. */
-    defaultSettings: { mode: "mixed", depth: "normal" },
+    defaultSettings: { mode: "mixed", depth: "medium" },
 
     modes: [
         { id: "mixed", label: "Boost or cut, at random" },
@@ -174,11 +174,17 @@ export const EQ_CONFIG: EqConfig = {
     /**
      * Fewer decibels means a subtler change and a harder game. Below about
      * 3 dB it becomes very hard on real music.
+     *
+     * The labels name the DIFFICULTY, not the size of the filter move, and
+     * they have to agree in direction with the number the settings page
+     * appends. An earlier wording ran "Gentle — 12 decibels", where the word
+     * suggested a small change while the number was the largest on offer —
+     * the two pointed opposite ways and a tester read it as a mistake.
      */
     depths: [
-        { id: "gentle", label: "Gentle", gainDb: 12 },
-        { id: "normal", label: "Normal", gainDb: 8 },
-        { id: "hard", label: "Hard", gainDb: 5 },
+        { id: "easy", label: "Easy to hear", gainDb: 12 },
+        { id: "medium", label: "Harder to hear", gainDb: 8 },
+        { id: "hard", label: "Hardest to hear", gainDb: 5 },
     ],
 
     levels: [

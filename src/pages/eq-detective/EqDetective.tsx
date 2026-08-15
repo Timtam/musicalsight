@@ -108,7 +108,7 @@ export default function EqDetective() {
             </fieldset>
 
             <fieldset>
-                <legend>How obvious it is</legend>
+                <legend>How hard it is to hear</legend>
                 {EQ_CONFIG.depths.map((option) => (
                     <Form.Check
                         key={option.id}
