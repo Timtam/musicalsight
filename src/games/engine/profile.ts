@@ -172,6 +172,36 @@ export function usablePassages(
     return passages
 }
 
+/**
+ * Every passage of a track that is loud enough to judge, as start fractions.
+ *
+ * The band-level half of usablePassages does not apply to every game: a level
+ * change, a pan move or a compressor is broadband, so there is no band that
+ * has to be present. What still applies is the level gate — a 3 dB change in a
+ * fade or a gap between phrases is not quiet, it is inaudible, and the round
+ * is then unanswerable for a reason the player cannot hear.
+ *
+ * Same contract as usablePassages: empty means no profile, and the caller has
+ * to fall back rather than break.
+ */
+export function loudPassages(
+    file: string,
+    query: Omit<PassageQuery, "thresholdDb">,
+): number[] {
+    const profile = DATA.tracks[file]
+
+    if (!profile) return []
+
+    return profile.windows
+        .filter(
+            (window) =>
+                window.at >= query.earliestFraction &&
+                window.at <= query.latestFraction &&
+                window.levelDb >= query.minLevelDb,
+        )
+        .map((window) => window.at)
+}
+
 /** True when any profile data was built at all. */
 export function hasProfiles(): boolean {
     return Object.keys(DATA.tracks).length > 0

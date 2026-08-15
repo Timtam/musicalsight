@@ -40,6 +40,11 @@ function Navigation() {
                                         EQ Detective
                                     </Nav.Link>
                                 </NavDropdown.Item>
+                                <NavDropdown.Item as="div">
+                                    <Nav.Link as={Link} to="/gain-trainer">
+                                        Gain Trainer
+                                    </Nav.Link>
+                                </NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Item>
                                 <Nav.Link as={Link} to="/catalog" active>
