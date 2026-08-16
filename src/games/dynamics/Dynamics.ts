@@ -87,9 +87,10 @@ export const COMP_CONFIG: CompConfig = {
     /**
      * Seconds before the answer becomes available.
      *
-     * Longer than the other games on purpose: the makeup gains are measured
-     * during this window, and a compressor needs a few seconds of real music
-     * before its average says anything.
+     * Longer than the other games on purpose. The loudness match is measured
+     * during this window, and it has to be finished early rather than merely
+     * by the end: in a "which one" round the answers ARE the listening
+     * control, and they can be reached while the count-in is still running.
      */
     countInSeconds: 6,
 
@@ -228,23 +229,29 @@ const TEARDOWN_SECONDS = 0.03
 /** How long the outgoing chain stays connected so its fade can finish. */
 const TEARDOWN_MS = 80
 
-/** Analyser window for the per-variant level measurement. */
-const LEVEL_FFT = 2048
+/**
+ * Analyser window for the per-variant level measurement.
+ *
+ * The largest the node allows, and worth it: 32768 samples is 0.68 s of audio
+ * per read, where the 2048 this started with was 43 ms — shorter than the
+ * compressor's own release, so each reading depended on which drum hit it
+ * happened to land on. A bigger window means the match is both steadier and
+ * ready sooner, which matters because the answers double as the listening
+ * control and can be reached during the count-in.
+ */
+const LEVEL_FFT = 32768
 
 /** How often the per-variant level is sampled while the count-in runs. */
-const SAMPLE_MS = 100
+const SAMPLE_MS = 150
 
 /**
  * Readings to collect before the makeup gains are set.
  *
- * One analyser window is 2048 samples, about 43 ms — far too short to
- * characterise a compressor whose release alone is 50 ms, and the answer
- * would then depend on exactly which drum hit the window happened to land
- * on. Twenty readings spread over two seconds average that away, and the
- * count-in is six seconds long precisely so they fit before anything is
- * audible.
+ * Ten readings at 150 ms covers about two and a half seconds of music with
+ * overlap, and lands the match roughly 1.5 s into a 6 s count-in — before a
+ * player who reaches straight for the answers can hear an unmatched chain.
  */
-const MIN_SAMPLES = 40
+const MIN_SAMPLES = 10
 
 /**
  * How far the whole game sits below everything else.
@@ -261,6 +268,13 @@ export interface CompParams {
     ask: CompAsk
     /** One per variant, in the same order as round.variants. 1 is untouched. */
     ratios: number[]
+    /**
+     * Which LABEL carries the compression — Sound A is 0, B is 1, C is 2.
+     *
+     * Not a position in `ratios`: that array follows the variants order,
+     * which is shuffled so an untouched sound leads the count-in.
+     */
+    compressedIndex: number
     thresholdDb: number
     attackSeconds: number
     releaseSeconds: number
@@ -390,6 +404,7 @@ function makeRound(context: MakeRoundContext<CompSettings>): Round<CompParams> {
             params: {
                 ask,
                 ratios: [1, answerRatio],
+                compressedIndex: 1,
                 thresholdDb: shared.thresholdDb,
                 attackSeconds: shared.attackSeconds,
                 releaseSeconds: shared.releaseSeconds,
@@ -402,33 +417,55 @@ function makeRound(context: MakeRoundContext<CompSettings>): Round<CompParams> {
 
     const count = Math.max(2, COMP_CONFIG.variantsInWhichRound)
     const compressedIndex = context.rng.int(count)
-    const ratios = Array.from({ length: count }, (_, i) =>
-        i === compressedIndex ? level.ratio : 1,
-    )
+    const labels = Array.from({ length: count }, (_, i) => i)
+
+    /**
+     * The order of the VARIANTS array, which is not the order of the labels.
+     *
+     * The engine plays `variants[0]` through the count-in, so whatever sits
+     * at the front is what the player hears before the question opens. Left
+     * as A, B, C that means one round in three opens on the compressed sound
+     * — and opens on it before the loudness match has been measured, which is
+     * the one moment it is at its natural level.
+     *
+     * So an untouched one always leads. Putting the compressed one anywhere
+     * but the front is not an option either: "Sound A is never the answer"
+     * would be the whole game. The labels therefore stay where they were
+     * drawn, and only the array is reordered around them.
+     *
+     * Nothing leaks. Both untouched variants are the same chain at ratio 1
+     * and therefore bit-identical, so "this one matches what I heard during
+     * the count-in" is true of both of them — which is the task, not a
+     * shortcut through it.
+     */
+    const lead = context.rng.pick(labels.filter((i) => i !== compressedIndex))
+    const order = [lead, ...labels.filter((i) => i !== lead)]
 
     return {
         key: shared.key,
         track,
         trackOffsetFraction: offsetFraction,
-        variants: Array.from({ length: count }, (_, i) => ({
+        variants: order.map((i) => ({
             id: variantId(i),
             label: variantLabel(i),
         })),
-        // Reaching the question starts on the first sound rather than on the
-        // answer, so the reveal gives nothing away.
-        revealVariantId: variantId(0),
+        // Stays on the untouched sound the count-in established, so opening
+        // the question is not itself an event.
+        revealVariantId: variantId(lead),
         steps: [
             {
                 id: "which",
-                prompt: "Which sound was compressed?",
+                prompt: "Listen, then say which sound was compressed",
                 help:
                     `${count} sounds, all the same music. One of them went ` +
                     `through a ${speakRatio(level.ratio)} compressor at ` +
-                    `${level.thresholdDb} decibels; the others are untouched. ` +
-                    `They are matched for loudness, so listen for the ` +
-                    `transients and for the room coming up between them, not ` +
-                    `for the level. Choosing an answer plays it.`,
-                options: Array.from({ length: count }, (_, i) => ({
+                    `${level.thresholdDb} decibels; the others are untouched, ` +
+                    `and so is the music you heard during the count-in. ` +
+                    `Choosing a sound plays it, so listen your way through ` +
+                    `them and leave the one you mean selected. They are ` +
+                    `matched for loudness, so listen for the transients and ` +
+                    `for the room coming up between them, not for the level.`,
+                options: labels.map((i) => ({
                     id: variantId(i),
                     label: variantLabel(i),
                     // The third interaction shape the engine provides, and the
@@ -441,7 +478,11 @@ function makeRound(context: MakeRoundContext<CompSettings>): Round<CompParams> {
         correct: { which: variantId(compressedIndex) },
         params: {
             ask,
-            ratios,
+            // In VARIANTS order, because buildAudio pairs these with the
+            // chains one to one and the shell finds a chain by its position
+            // in round.variants.
+            ratios: order.map((i) => (i === compressedIndex ? level.ratio : 1)),
+            compressedIndex,
             thresholdDb: shared.thresholdDb,
             attackSeconds: shared.attackSeconds,
             releaseSeconds: shared.releaseSeconds,
@@ -684,8 +725,7 @@ function judge(round: Round<CompParams>, given: Answer): Verdict {
     }
 
     const correct = given.which === round.correct.which
-    const answerIndex = ratios.findIndex((ratio) => ratio !== 1)
-    const answer = variantLabel(Math.max(0, answerIndex))
+    const answer = variantLabel(round.params.compressedIndex)
 
     return {
         correct,

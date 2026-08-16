@@ -104,6 +104,27 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
     // it is not an option.
     const capturing = round?.steps.some((s) => s.capture) === true
 
+    /**
+     * Whether the answers already switch playback on their own.
+     *
+     * When they do — "which of these three is compressed", where every option
+     * carries Option.auditions — the audition control below would be a second
+     * copy of the same list, one to listen with and one to answer with. In
+     * browse mode that is two identical radio groups to walk past, and the
+     * distinction between them is invisible until you have used both.
+     *
+     * Derived rather than flagged, because the redundancy IS this condition:
+     * a control that offers nothing the answers do not already offer.
+     */
+    const answersAudition =
+        round !== null &&
+        round.variants.length > 0 &&
+        round.variants.every((variant) =>
+            round.steps.some((step) =>
+                step.options.some((option) => option.auditions === variant.id),
+            ),
+        )
+
     const answered =
         round !== null && Object.keys(state.draft).length >= round.steps.length
 
@@ -233,8 +254,13 @@ export default function GameShell<P>({ api, heading }: GameShellProps<P>) {
                                 with a spoken "Available after the count-in",
                                 which is more use than a control that silently
                                 does nothing.
+
+                                And nothing at all when the answers already
+                                switch playback themselves — see
+                                answersAudition above.
                             */}
-                                    {round.variants.length < 2 ? null : round
+                                    {answersAudition ||
+                                    round.variants.length < 2 ? null : round
                                           .variants.length === 2 ? (
                                         <Form.Check
                                             type="checkbox"
