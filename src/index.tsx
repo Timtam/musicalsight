@@ -8,6 +8,7 @@ import App from "./App"
 import "./index.css"
 import Chord from "./pages/chord/Chord"
 import Chords from "./pages/chords/Chords"
+import Dynamics from "./pages/dynamics/Dynamics"
 import EqDetective from "./pages/eq-detective/EqDetective"
 import GainTrainer from "./pages/gain-trainer/GainTrainer"
 import Home from "./pages/home/Home"
@@ -61,6 +62,10 @@ const router = createHashRouter([
                 // Keeps existing bookmarks out of the not-found page.
                 element: <Navigate to="/eq-detective" replace />,
                 path: "/frequency-identifier",
+            },
+            {
+                element: <Dynamics />,
+                path: "/dynamics",
             },
             {
                 element: <GainTrainer />,
