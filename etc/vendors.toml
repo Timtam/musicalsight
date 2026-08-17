@@ -855,3 +855,7 @@ url = ""
 [initial-audio]
 name = "Initial Audio"
 url = ""
+
+[tg-studios]
+name = "TG Studios"
+url = "https://tgstudios.app/"

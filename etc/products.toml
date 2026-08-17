@@ -5625,6 +5625,68 @@ Cello is one of our favorite instruments in the orchestra. It has an unbelievabl
 Blakus Cello also comes with a custom preset for TouchOSC, a modular touch control surface for sending and receiving Open Sound Control and MIDI messages over Wi-Fi."""
 url = "https://embertone.com/instruments/blakus-cello/"
 
+[tg-spaces]
+vendor = "tg-studios"
+name = "TG Spaces"
+categories = [ "fx.reverb" ]
+size = 3
+requires = [ ]
+nks = false
+os = [ "windows", "mac_intel", "mac_arm" ]
+demo = "https://tgstudios.app/assets/demo/cathedral-stereo.mp3"
+price = 0
+description = """
+A convolution reverb for Windows and macOS with 190 places in it, and controls a blind engineer can read.
+
+Put it on a track, pick a space, and your sound is in that space. A bedroom, a cathedral, an open field, a drive-through speaker. Then move around inside it.
+
+**The rooms are built, not recorded**
+
+Most reverbs of this kind ship recordings of real halls. This one ships a room-acoustics model — walls, materials, distances, the top end air swallows over a long throw — and builds each response as you ask for it. So "room size" builds a bigger room instead of stretching a recording, and "distance" moves you instead of fading a recording in. Every space in here is original work. Nothing sampled or licensed.
+
+**What is in it**
+
+190 spaces, grouped so they are quick to move through by ear:
+
+* **Rooms**, 26 — bedroom, kitchen, tiled bathroom, hallway, stairwell, basement, garage, empty apartment.
+* **Studio**, 15 — vocal booth, drum room, live room, echo chamber, scoring stage.
+* **Venues**, 23 — jazz club, small theatre, concert hall, opera house, stone church, cathedral, arena, stadium.
+* **Large indoor**, 25 — gymnasium, swimming pool hall, train station, airport terminal, aircraft hangar, underground car park.
+* **Enclosed**, 20 — car interior, bus, airplane cabin, elevator, phone booth, shipping container, cardboard box.
+* **Outdoor**, 21 — open field, forest clearing, canyon, city street, narrow alley, courtyard, under a bridge, road tunnel.
+* **Through a speaker**, 48 — a PA in a bar, a TV across the living room, a laptop speaker, an intercom, a drive-through, a megaphone, a telephone earpiece. Not a room around the sound, but a device playing it.
+* **Unusual**, 12 — cave, cistern, grain silo, bell tower, anechoic chamber.
+
+**A binaural mode.** On headphones, with a modelled head: a source straight ahead sits centre, and turning the listener moves it around you with real interaural timing and head shadow. Speakers mode uses a mono-safe stereo pair instead, so a mix made with it will not collapse when summed.
+
+**What it runs in**
+
+* **Windows, 64-bit** — VST3, built and tested in Reaper.
+* **macOS 10.13 or later** — VST3 for Reaper, and an Audio Unit for Logic Pro, GarageBand and MainStage. Both universal binaries: native on Apple silicon and Intel, no Rosetta.
+
+The Audio Unit passes auval, Apple's own validation tool, with no errors and no warnings. It is a standard VST3, so it should also load in Cubase, Nuendo, Studio One, Ableton Live, FL Studio, Bitwig, Cakewalk and Waveform — untested there. Pro Tools would need AAX, which is further off.
+
+**Honest about the rough edge**
+
+A few of the largest spaces — the airport terminal and the stone church in particular — ring longer than their real-world counterparts do. Loudness is not matched across the library either, so moving between a small room and a cathedral needs a level trim.
+
+Free for anything you make, commercial work included, with no attribution and no royalties."""
+accessibility_description = """
+Every control is a named parameter that speaks its value in words. In Reaper with OSARA, pressing P and arrowing through the parameters reads out, for example, "Space, Rooms colon Bedroom", "Room info, 4.0 by 3.6 by 2.5 metres, 0.33 second decay", "Distance, 12.4 m, inside the critical distance", "Listener angle, facing the source".
+
+* **Room info reads out the specification of the space you are in** — its dimensions and how long it actually rings — without playing anything.
+* **Distance is in real metres** for the room you are actually in, rather than a percentage to translate.
+* **Zero degrees means facing the source** in all 190 rooms, so there is no arbitrary compass direction to learn first.
+* **Category and Space in category** move through the library a group at a time instead of arrowing past everything.
+* **All 190 spaces are presets**, so they appear in Reaper's preset dropdown as well as in the parameter list.
+* **There is no custom plugin window**, deliberately — a drawn interface would look better and work worse.
+
+Reaper with OSARA is where the manufacturer states this works properly today. Whether the parameters are read out in other hosts depends on the DAW and is untested, and the manufacturer's own accessibility statement lists JAWS and Narrator as untested."""
+url = "https://tgstudios.app/spaces/"
+
+  [tg-spaces.additional_links]
+  "Hear it in your browser" = "https://tgstudios.app/spaces-demo/"
+
 [friedlander-violin]
 vendor = "embertone"
 name = "Friedlander Violin"
