@@ -658,7 +658,7 @@ url = ""
 
 [wavelet-audio]
 name = "Wavelet Audio"
-url = ""
+url = "https://wavelet-audio.com/"
 
 [waves]
 name = "Waves"
@@ -859,3 +859,7 @@ url = ""
 [tg-studios]
 name = "TG Studios"
 url = "https://tgstudios.app/"
+
+[srm-sounds]
+name = "SRM Sounds"
+url = "https://srmsounds.com/"

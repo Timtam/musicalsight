@@ -14397,34 +14397,6 @@ Taurus MK1 patches (including 3 x round robin)\r
 bass pedal presets and starting points using the instrument's Raw Oscillator\r
 page"""
 
-[wavelet-audio-groth]
-vendor = "wave-alchemy"
-name = "Wavelet Audio - Groth"
-size = 10_600
-requires = [ [ "native-instruments-kontakt", "6.2.2" ] ]
-nks = true
-demo = "https://www.youtube.com/watch?v=483pLXN4ncA"
-description = """
-\r
-EPIC SOUNDS\r
-Wavelet Audio is a\r
-production studio run by musicians, developers, producers and sound designers,\r
-who create innovative software for modern composers. The remarkable quality of\r
-their products is due to their extensive experience in programming and\r
-developing digital products.\r
-Groth's sound is based on\r
-the rich and varied traditions of folk music. It evokes the atmosphere of\r
-Scandinavian deities, ancient traditions, burial mounds and wild forests frozen\r
-by frost. From epic Viking-style sounds to dark, menacing atmospheres, Groth\r
-has everything you need to bring an exceptional level of depth to your\r
-contemporary cinematic productions.\r
- Melody, drums,\r
-atmospheres and strings inspired by ancient mythology\r
- 61 instruments for\r
-modern image sound, plus construction kits and sound effects\r
- Pre-programmed patches\r
-containing real legato, several round robins and dynamic layers"""
-
 [pedal-style-guitare]
 vendor = "wavelore"
 name = "Pedal Style guitare"
@@ -21742,14 +21714,113 @@ url = "https://www.vir2.com/instruments/mojo-2-horn-section/"
 [groth]
 vendor = "wavelet-audio"
 name = "Groth"
-size = 10_600
+categories = [ "vsti.ethnic", "vsti.percussion", "vsti.vocal" ]
+size = 14_700
 requires = [ [ "native-instruments-kontakt-player", "6.2.2" ] ]
 nks = true
-demo = "https://reaperaccessible.fr/catalog/demos/Wavelet%20Audio%20-%20Groth.mp3"
+demo = "https://www.youtube.com/watch?v=483pLXN4ncA"
+price = 259
 description = """
-GROTH provides modern cinematic folk instruments inspired by dark ages and mythology. It combines meticulously sampled classical instruments with passionately recorded folk and traditional instruments like tagelharpa, buben drums, Tibetan kangling, and war horns.
-The library includes organic sound designs, Construction Kits, and is ready to use with no external plugins needed."""
+GROTH provides everything you need to create contemporary cinematic music inspired by the Dark Ages and mythology, modern vikings folk music, any kind of epic or dark post-horror music. It will help you to add depth and a vast and unique atmosphere to your productions. This NKS library is not limited to ancient pagan folk music – it's at the crossroads of cinematic, modern folk and post-horror.
+
+**Modern Vikings Atmosphere**
+
+Meticulously sampled classical instruments meet passionately recorded folk and traditional instruments in an epic library. The sounds were recorded and played in collaboration with professional musicians, sound designers and engineers. This toolbox offers a vast breadth of instruments and alternative techniques: from fully sampled northern tagelharpa and brutal buben drum to cold Tibetan kangling and self-built war horns. GROTH also delivers a huge number of organic sound designs for instant access. The Construction Kits help you get inspired while saving time with ready-to-use elements, structures and tricks from experienced composers. There is no need for third-party tools or plugins — all instruments are mixed, fully compatible, and ready to use.
+
+Curating, sourcing, booking and recording the many instruments and musicians for this project was a worthy challenge. The characteristics of each deeply rooted instrument require a special and unique approach. Countless hours have been spent over the past two and a half years integrating these extraordinary instruments into our boldest and most inspiring toolbox.
+
+**Features**
+
+* 70 detailed programmed instruments
+* True legato
+* Multiple round robins
+* Multiple dynamic layers
+* Bonus Construction Kits and Foley sounds
+* 24-bit / 48 kHz lossless NCW format
+* Snapshots
+
+**Made for Kontakt Player**
+
+This library is licensed for use in the free Kontakt Player. It can be used in Kontakt Player or the full retail version of Kontakt. It requires online registration through the Native Instruments Native Access system. This library is also fully compatible with Komplete Kontrol and all NKS Standard hardware and software by Native Instruments."""
 url = "https://wavelet-audio.com/groth/"
+
+  [groth.additional_links]
+  "User Manual (PDF)" = "https://wavelet-audio.com/wp-content/uploads/2021/09/User-Manual.pdf"
+
+[runa-elder-scoring-strings]
+vendor = "wavelet-audio"
+name = "Runa: Elder Scoring Strings"
+categories = [ "vsti.strings", "vsti.ethnic" ]
+size = 3_500
+requires = [ [ "native-instruments-kontakt-player", "8.1.0" ] ]
+nks = true
+demo = "https://www.youtube.com/watch?v=AqzTILr6yaY"
+price = 199
+description = """
+RUNA is designed to easily add a distinctive and rich scoring strings to your mix, helping it stand out with its unique sound and features. It fits well in many genres from cinematic and trailer music to horror and folk. We carefully sampled the traditional ethnic instrument Kobyz and brought its character into the modern world. And it works!
+
+**Features**
+
+* The unbelievably deeply sampled flagoulets (harmonics) that make all the difference
+* Flexible sequencer with presets and MIDI drag and drop function
+* Rhythm Engine
+* The FX Rack transforms this horsehair string instrument into a Kontakt strings that sounds like a whole new breed
+* 8 articulations: Sustain (Legato and Poly), Staccato, Spiccato, Harm Short, Pizzicato, Ricochet, Tremolo, Crescendo
+* 4 legato types
+* Multiple round robins
+* Multiple dynamic layers
+* Flexible microphone settings, with delay function
+* 24-bit / 48 kHz lossless NCW format
+* Sequencer and FX Rack presets
+* Snapshots
+* 4 color themes
+* Multi-genre scoring strings
+
+**Made for Kontakt Player**
+
+This library is licensed for use in the free Kontakt Player. It can be used in Kontakt Player or the full retail version of Kontakt. It requires online registration through the Native Instruments Native Access system. This library is also fully compatible with Komplete Kontrol and all NKS Standard hardware and software by Native Instruments."""
+url = "https://wavelet-audio.com/runa-elder-scoring-strings/"
+
+  [runa-elder-scoring-strings.additional_links]
+  "User Manual (PDF)" = "https://af5e13ac-d529-4c6f-a22a-051adfecaaca.selstorage.ru/Runa%20Elder%20Scoring%20Strings%20Manual.pdf"
+
+[runa-free-edition]
+vendor = "wavelet-audio"
+name = "Runa: Free Edition"
+categories = [ "vsti.strings", "vsti.ethnic" ]
+size = 2_810
+requires = [ [ "native-instruments-kontakt-player", "8.1.0" ] ]
+nks = true
+demo = "https://www.youtube.com/watch?v=zVs4MWm-UPM"
+price = 0
+description = """
+**Ancient Voices for Modern Stories**
+
+Runa: Free Edition lets you try out the instrument before choosing the full version. Hear the sound and use it in your own mix to decide if the full version of Runa is right for you. Runa: Free Edition will make your mix stand out with its unique character and strings that sound different.
+
+The free version of RUNA includes two of the most important articulations, a collection of carefully designed snapshots, and plenty of useful features. It is not just a limited demo but a fully playable instrument that captures the atmosphere of the original. The full version builds on this foundation by offering additional articulations, more snapshots, deeper controls, and several advanced features that are unavailable in the free strings edition.
+
+**Features**
+
+* 2 articulations
+* 4 legato types
+* 8 round-robins
+* 3 dynamic layers
+* 24-bit / 48 kHz lossless NCW format
+* 20 snapshots
+* Original engine
+
+**Color themes**
+
+Choose a color theme that best matches the atmosphere of your project. You can choose from Regular, Future Violet, Mystic White, or Brutal Red. Changing a snapshot also transforms the visual style of Runa, giving each sound its own distinct atmosphere.
+
+**Made for Kontakt Player**
+
+This library is licensed for use in the free Kontakt Player. It can be used in Kontakt Player or the full retail version of Kontakt. It requires online registration through the Native Instruments Native Access system. This library is also fully compatible with Komplete Kontrol and all NKS Standard hardware and software by Native Instruments."""
+url = "https://wavelet-audio.com/runa-free/"
+
+  [runa-free-edition.additional_links]
+  "User Manual (PDF)" = "https://wavelet-audio.com/wp-content/uploads/2026/07/RUNA-FREE-MANUAL-ENG.pdf"
 
 [bass-fingers]
 vendor = "waves"
@@ -26782,6 +26853,103 @@ Built on the same engine as THE PULSE, refined for speed and clarity, THE PULSE 
 * Full compatibility with the free Kontakt Player 
 
 It is everything you need to add cinematic rhythm without breaking your flow."""
+
+[lux-orchestral-strings-elements]
+vendor = "sonuscore"
+name = "LUX Orchestral Strings Elements"
+categories = [ "vsti.strings" ]
+requires = [ [ "native-instruments-kontakt-player", "7.10.9" ] ]
+nks = true
+demo = "https://www.youtube.com/watch?v=V8tyUHUdlW4"
+price = 0
+description = """
+**Free Orchestral Strings Instrument for Film, TV and Game Composers**
+
+Since its launch, LUX Orchestral Strings has quickly become a go-to for film and TV composers, finding its way into the templates of some of the biggest names working in the industry today.
+
+LUX Orchestral Strings Elements gives you a free way in. The core string sections, the same recordings, and enough to start writing real cues. Try it in your own sessions and hear what it can do. When it comes to auditioning a library, the only demo that really matters is your own cue.
+
+**What is included**
+
+* **All five string sections** — 1st Violins, 2nd Violins, Violas, Celli, and Basses. Write for a full orchestral string body, not isolated patches.
+* **Four core articulations** — Sustain, Spiccato, Tremolo, and Sul Ponticello Tremolo. Enough to cover melodic writing, rhythmic passages, and tension textures from the start.
+* **The same recordings as LUX Orchestral Strings** — Elements uses the identical sample source and cinematic mix as the flagship version. What you hear here is what LUX sounds like.
+* **1st Violin legato demo** — a one-octave legato passage, to show you the phrasing and transitions before you expand to the full range in the paid tiers."""
+url = "https://www.sonuscore.com/shop/lux-orchestral-strings-elements/"
+
+[lux-orchestral-strings-essentials]
+vendor = "sonuscore"
+name = "LUX Orchestral Strings Essentials"
+categories = [ "vsti.strings" ]
+size = 9_400
+requires = [ [ "native-instruments-kontakt-player", "7.10.9" ] ]
+nks = true
+demo = "https://www.youtube.com/watch?v=d4G_mVrhmrI"
+price = 199
+description = """
+Professional orchestral strings for composers who score every day.
+
+If you score for a living, you already know what you need from a string library. It has to sound genuinely professional in the mix, cover the range of scenarios you actually run into across your working week, and be a tool that earns a permanent place in your template.
+
+LUX Orchestral Strings Essentials is built around exactly that brief. A 70-piece symphonic string ensemble, recorded on a large scoring stage, with the full articulation palette professional string writing calls for. The same recording, the same room, and the same cinematic mix that sit behind LUX Orchestral Strings, now available in a focused toolkit.
+
+**Key features**
+
+* **70-piece symphonic string ensemble** — recorded on a Hollywood-scale scoring stage for unmatched depth and realism.
+* **Recorded with 48 microphones**
+* **Seamless Articulation Transitioning (S.A.T.)** — change articulations mid-note for the most natural performance.
+* **Morphing articulations** — morph between articulations fluidly for lifelike performance.
+* **Natural string change legato** — captures the authentic flow and nuance of real string players.
+* **Comprehensive articulations and techniques** — from lyrical legato to swarm textures and powerful articulation combinations.
+* **Engineered by Peter Fuchs** — award-winning film mixer, using top-tier DPA, Neumann and Schoeps microphones."""
+url = "https://www.sonuscore.com/shop/lux-orchestral-strings-essentials/"
+
+[lux-orchestral-strings]
+vendor = "sonuscore"
+name = "LUX Orchestral Strings"
+categories = [ "vsti.strings" ]
+size = 76_000
+requires = [ [ "native-instruments-kontakt-player", "7.10.9" ] ]
+nks = true
+demo = "https://www.youtube.com/watch?v=V8tyUHUdlW4"
+price = 499
+description = """
+LUX Orchestral Strings is unlike any product we have ever made. From the very beginning we set out to create something that felt as close as possible to standing on the scoring stage. Our most ambitious library to date, designed so that composers can be even more ambitious with their music.
+
+LUX Orchestral Strings is not just another string library. It is a 70-piece symphonic string ensemble, recorded on a large scoring stage with unprecedented realism, warmth and scale. It puts you right in the room with the orchestra.
+
+LUX Orchestral Strings was crafted by composers for composers with a professional workflow in mind.
+
+**Key features**
+
+* **70-piece symphonic string ensemble** — recorded on a Hollywood-scale scoring stage for unmatched depth and realism.
+* **48 microphones, 4 positions** — including exclusive Bleed Mics for true orchestral resonance.
+* **Seamless Articulation Transitioning (S.A.T.)** — change articulations mid-note for the most natural performance.
+* **Morphing articulations** — morph between articulations fluidly for lifelike performance.
+* **Composer-crafted ensembles** — instant inspiration from pre-designed ensembles.
+* **Key switch articulation sets** for every musical context."""
+url = "https://www.sonuscore.com/shop/lux-orchestral-strings/"
+
+[dark-mode]
+vendor = "srm-sounds"
+name = "Dark Mode"
+categories = [ "vsti.keys" ]
+size = 570
+requires = [ [ "native-instruments-kontakt-player", "6.8.0" ] ]
+nks = true
+demo = "https://www.youtube.com/watch?v=TJAR8eyxNXc"
+price = 0
+description = """
+An alternative piano colour, recessed and unobtrusive. Based on the original open piano recordings of Max Richter's Steinway Concert Grand, and processed via a curated chain of filters and EQs, the result is an already soft piano taken to the extreme — full of warmth and character, yet with very little brightness; it's a transparent sound designed to sit underneath.
+
+**Recording notes**
+
+* A dark, stripped-back version of the open instrument from Max Richter Piano.
+* Single mix featuring a blend of primarily vintage and modern ribbons.
+* Processed through Pultec EQ.
+
+Downloaded through Native Access, and authorised with the serial sent to your email."""
+url = "https://srmsounds.com/products/dark-mode"
 
 [m-tron-pro]
 vendor = "gforce-software"
