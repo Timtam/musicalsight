@@ -5,6 +5,7 @@ import { forgetProfile, registerProfile } from "./profile"
 import {
     allUserTracks,
     deleteUserTrack,
+    renameUserTrack,
     summarise,
     toAsset,
     type TrackSummary,
@@ -52,6 +53,7 @@ export interface TrackLibrary {
     /** False only while the first read of IndexedDB is in flight. */
     ready: boolean
     remove(id: string): Promise<void>
+    rename(id: string, title: string): Promise<void>
     refresh(): void
 }
 
@@ -105,11 +107,25 @@ export function useTrackLibrary(): TrackLibrary {
         announceChange()
     }, [])
 
+    const rename = useCallback(async (id: string, title: string) => {
+        await renameUserTrack(id, title)
+
+        // The asset carries the title the games read out, so it has to go
+        // and be rebuilt — but the object URL must survive, because a game
+        // may be playing this very track right now.
+        const asset = ASSETS.get(id)
+
+        if (asset) ASSETS.set(id, { ...asset, title: title.trim() })
+
+        announceChange()
+    }, [])
+
     return {
         tracks: [...Assets, ...own.map(assetFor)],
         own: own.map(summarise),
         ready,
         remove,
+        rename,
         refresh: announceChange,
     }
 }

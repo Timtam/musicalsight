@@ -1,5 +1,11 @@
 import Asset from "../../entities/Asset"
-import { SAMPLE_RATE, WINDOW_SECONDS, type TrackProfile } from "./profiler"
+import {
+    PROFILE_VERSION,
+    profileChannels,
+    SAMPLE_RATE,
+    WINDOW_SECONDS,
+    type TrackProfile,
+} from "./profiler"
 import type { ProfileRequest, ProfileResponse } from "./profiler.worker"
 
 /**
@@ -14,8 +20,26 @@ import type { ProfileRequest, ProfileResponse } from "./profiler.worker"
  */
 
 const DB_NAME = "eardojo-tracks"
-const DB_VERSION = 1
 const STORE = "tracks"
+
+/**
+ * The IndexedDB schema version. Bump it and add a case to `migrate`.
+ *
+ * This is the SHAPE of the store — its name, its key, its indexes. It is not
+ * the shape of a profile, which changes far more often and is versioned
+ * separately; see `profileVersion` on the record.
+ */
+const DB_VERSION = 1
+
+/**
+ * The largest file that will be accepted.
+ *
+ * Not arbitrary: decodeAudioData has no streaming form, so the whole track
+ * becomes float32 in memory at once — roughly 11 MB per stereo minute at
+ * 48 kHz, whatever the file's own compression. 150 MB of input is already a
+ * very long recording, and refusing it with a reason beats a tab that dies.
+ */
+const MAX_FILE_BYTES = 150 * 1e6
 
 export interface UserTrack {
     id: string
@@ -26,6 +50,22 @@ export interface UserTrack {
     /** Bytes as chosen, so playback uses the original encoding. */
     blob: Blob
     profile: TrackProfile
+    /**
+     * Which profiler produced `profile`.
+     *
+     * This is the field that makes the store survive the future. The games
+     * will want measurements this profiler does not take yet — a different
+     * loudness figure, finer bands, something nobody has thought of — and
+     * when that happens every stored profile is suddenly a profile of the
+     * wrong thing, silently.
+     *
+     * Keeping the audio is what makes that recoverable: a stale profile is
+     * not lost data, it is a recomputation. `allUserTracks` re-measures
+     * anything below PROFILE_VERSION from the blob it already has and writes
+     * the result back, so a player who returns after an update finds their
+     * tracks measured the new way without doing anything.
+     */
+    profileVersion: number
     addedAt: number
 }
 
@@ -42,20 +82,42 @@ export interface TrackSummary {
     addedAt: number
 }
 
+/**
+ * Schema migrations, applied in order from whatever version is on disk.
+ *
+ * Deliberately a fallthrough switch rather than "create it if missing": a
+ * browser can be two or five versions behind, and each step has to run. A
+ * record's own contents are not migrated here — IndexedDB stores whole
+ * objects and a field added tomorrow is simply absent on yesterday's records,
+ * which the reader handles.
+ */
+function migrate(db: IDBDatabase, from: number): void {
+    /* eslint-disable no-fallthrough */
+    switch (from) {
+        case 0:
+            db.createObjectStore(STORE, { keyPath: "id" })
+        // case 1: the next change goes here, with no break above it.
+    }
+}
+
 function open(): Promise<IDBDatabase> {
     return new Promise((resolve, reject) => {
         const request = indexedDB.open(DB_NAME, DB_VERSION)
 
-        request.onupgradeneeded = () => {
-            const db = request.result
-
-            if (!db.objectStoreNames.contains(STORE))
-                db.createObjectStore(STORE, { keyPath: "id" })
+        request.onupgradeneeded = (event) => {
+            migrate(request.result, event.oldVersion)
         }
 
         request.onsuccess = () => resolve(request.result)
         request.onerror = () =>
             reject(request.error ?? new Error("IndexedDB refused to open"))
+        request.onblocked = () =>
+            reject(
+                new Error(
+                    "Another tab has this database open on an older version. " +
+                        "Close the other tabs and reload.",
+                ),
+            )
     })
 }
 
@@ -79,10 +141,68 @@ function run<T>(
     )
 }
 
-export function allUserTracks(): Promise<UserTrack[]> {
-    return run<UserTrack[]>("readonly", (store) => store.getAll()).then(
-        (tracks) => tracks.sort((a, b) => a.addedAt - b.addedAt),
+/**
+ * Every stored track, brought up to the current profiler on the way out.
+ *
+ * A track whose profile predates the running PROFILE_VERSION is measured
+ * again from the audio it was stored with, and the fresh profile is written
+ * back so the work happens once rather than on every visit. If that fails —
+ * a codec the browser has since dropped, a quota that is now full — the old
+ * profile is handed over anyway: a slightly stale measurement still plays,
+ * and refusing to return the track would lose it for good.
+ */
+export async function allUserTracks(): Promise<UserTrack[]> {
+    const stored = await run<UserTrack[]>("readonly", (store) => store.getAll())
+
+    const tracks = stored.sort((a, b) => a.addedAt - b.addedAt)
+    const fresh: UserTrack[] = []
+
+    for (const track of tracks) {
+        if ((track.profileVersion ?? 0) >= PROFILE_VERSION) {
+            fresh.push(track)
+            continue
+        }
+
+        try {
+            const buffer = await decode(await track.blob.arrayBuffer())
+            const updated: UserTrack = {
+                ...track,
+                profile: profileChannels(
+                    buffer.getChannelData(0),
+                    buffer.numberOfChannels > 1
+                        ? buffer.getChannelData(1)
+                        : null,
+                    buffer.sampleRate,
+                ),
+                profileVersion: PROFILE_VERSION,
+            }
+
+            await run("readwrite", (store) => store.put(updated))
+            fresh.push(updated)
+        } catch {
+            fresh.push(track)
+        }
+    }
+
+    return fresh
+}
+
+/** Renames a stored track. The profile and the audio are untouched. */
+export async function renameUserTrack(
+    id: string,
+    title: string,
+): Promise<void> {
+    const trimmed = title.trim()
+
+    if (trimmed === "") throw new Error("A track needs a name.")
+
+    const track = await run<UserTrack | undefined>("readonly", (store) =>
+        store.get(id),
     )
+
+    if (!track) throw new Error("That track is no longer here.")
+
+    await run("readwrite", (store) => store.put({ ...track, title: trimmed }))
 }
 
 export function deleteUserTrack(id: string): Promise<void> {
@@ -137,7 +257,11 @@ async function decode(bytes: ArrayBuffer): Promise<AudioBuffer> {
     return await ctx.decodeAudioData(bytes)
 }
 
-function analyse(buffer: AudioBuffer): Promise<TrackProfile> {
+function analyse(
+    left: ArrayBuffer,
+    right: ArrayBuffer | null,
+    sampleRate: number,
+): Promise<TrackProfile> {
     return new Promise((resolve, reject) => {
         const worker = new Worker(
             new URL("./profiler.worker.ts", import.meta.url),
@@ -156,21 +280,13 @@ function analyse(buffer: AudioBuffer): Promise<TrackProfile> {
             reject(new Error(event.message || "the analysis worker failed"))
         }
 
-        // Copied rather than referenced, because getChannelData hands back a
-        // view onto the AudioBuffer and a transfer would detach it.
-        const left = new Float32Array(buffer.getChannelData(0)).buffer
-        const right =
-            buffer.numberOfChannels > 1
-                ? new Float32Array(buffer.getChannelData(1)).buffer
-                : null
-
-        const request: ProfileRequest = {
-            left,
-            right,
-            sampleRate: buffer.sampleRate,
-        }
-
-        worker.postMessage(request, right ? [left, right] : [left])
+        // Transferred, not copied: the main thread gives up these buffers
+        // entirely, so the audio exists in one place rather than two while
+        // the analysis runs.
+        worker.postMessage(
+            { left, right, sampleRate } satisfies ProfileRequest,
+            right ? [left, right] : [left],
+        )
     })
 }
 
@@ -197,16 +313,23 @@ export async function addUserTrack(
     file: File,
     onStage?: (stage: "decoding" | "analysing" | "saving") => void,
 ): Promise<UserTrack> {
-    const bytes = await file.arrayBuffer()
+    if (file.size > MAX_FILE_BYTES)
+        throw new Error(
+            `That file is ${Math.round(file.size / 1e6)} MB. The limit is ` +
+                `${Math.round(MAX_FILE_BYTES / 1e6)} MB, because the whole ` +
+                `track has to be decoded into memory at once to measure it.`,
+        )
 
     onStage?.("decoding")
 
-    let buffer: AudioBuffer
+    let buffer: AudioBuffer | null
 
     try {
-        // decodeAudioData detaches the buffer it is given, and the same bytes
-        // are still needed for the Blob, so it gets a copy.
-        buffer = await decode(bytes.slice(0))
+        // The File is kept as the stored blob, so the bytes are read once and
+        // handed straight to the decoder, which detaches them. Reading them
+        // into a variable and copying for the Blob held the file three times
+        // over for no reason.
+        buffer = await decode(await file.arrayBuffer())
     } catch {
         throw new Error(
             "The browser could not decode that file. MP3, WAV, FLAC, M4A and " +
@@ -214,12 +337,27 @@ export async function addUserTrack(
         )
     }
 
-    if (buffer.duration < WINDOW_SECONDS)
-        throw new TrackTooShortError(buffer.duration)
+    if (buffer.duration < WINDOW_SECONDS) {
+        const seconds = buffer.duration
+
+        buffer = null
+        throw new TrackTooShortError(seconds)
+    }
 
     onStage?.("analysing")
 
-    const profile = await analyse(buffer)
+    // Copied out and the AudioBuffer dropped before the worker starts, so the
+    // decoded audio is not held twice while the analysis runs.
+    const sampleRate = buffer.sampleRate
+    const left = new Float32Array(buffer.getChannelData(0)).buffer
+    const right =
+        buffer.numberOfChannels > 1
+            ? new Float32Array(buffer.getChannelData(1)).buffer
+            : null
+
+    buffer = null
+
+    const profile = await analyse(left, right, sampleRate)
 
     onStage?.("saving")
 
@@ -229,15 +367,28 @@ export async function addUserTrack(
 
     const track: UserTrack = {
         id,
+        profileVersion: PROFILE_VERSION,
         file: `user:${id}`,
         title: file.name.replace(/\.[^.]+$/, ""),
         credits: "Your own file, stored in this browser only.",
-        blob: new Blob([bytes], { type: file.type || "audio/*" }),
+        // The File itself: already a Blob, already the original encoding.
+        blob: file,
         profile,
         addedAt: Date.now(),
     }
 
-    await run("readwrite", (store) => store.put(track))
+    try {
+        await run("readwrite", (store) => store.put(track))
+    } catch (error) {
+        const name = (error as DOMException)?.name
+
+        throw new Error(
+            name === "QuotaExceededError"
+                ? "There is no room left in this browser's storage for that " +
+                  "track. Remove one you no longer need and try again."
+                : `That track could not be saved: ${(error as Error).message}`,
+        )
+    }
 
     return track
 }

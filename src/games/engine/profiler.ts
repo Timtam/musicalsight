@@ -208,66 +208,87 @@ export function integratedLoudness(
 ): number | null {
     if (channels.length === 0 || channels[0].length === 0) return null
 
-    // K-weighting: a high shelf for the head, then a high-pass. Coefficients
-    // are the BS.1770 ones for 48 kHz.
-    const biquad = (
-        x: Float32Array | Float64Array,
-        b: readonly number[],
-        a: readonly number[],
-    ): Float64Array => {
-        const y = new Float64Array(x.length)
-        let x1 = 0
-        let x2 = 0
-        let y1 = 0
-        let y2 = 0
-
-        for (let i = 0; i < x.length; i++) {
-            const v =
-                b[0] * x[i] + b[1] * x1 + b[2] * x2 - a[1] * y1 - a[2] * y2
-
-            x2 = x1
-            x1 = x[i]
-            y2 = y1
-            y1 = v
-            y[i] = v
-        }
-
-        return y
-    }
-
-    const weighted = channels.map((channel) =>
-        biquad(
-            biquad(
-                channel,
-                [1.53512485958697, -2.69169618940638, 1.19839281085285],
-                [1, -1.69065929318241, 0.73248077421585],
-            ),
-            [1, -2, 1],
-            [1, -1.99004745483398, 0.99007225036621],
-        ),
-    )
-
     const block = Math.round(0.4 * sampleRate)
     const hop = Math.round(0.1 * sampleRate)
 
-    if (weighted[0].length < block) return null
+    if (channels[0].length < block) return null
+
+    // The 400 ms blocks overlap by 75 %, and 400 is exactly four times 100, so
+    // a block is four consecutive hops. Summing each hop once and adding four
+    // of them is the same arithmetic as summing every block from scratch —
+    // and it means the K-weighted signal never has to exist all at once.
+    //
+    // That matters more than it sounds. Materialising it cost two Float64
+    // arrays per channel, one per filter stage: for a five minute stereo
+    // track, half a gigabyte that this function used to allocate and throw
+    // away. Now it holds one number per tenth of a second.
+    const hops = Math.floor(channels[0].length / hop)
+
+    if (hops < 4) return null
+
+    const partial = new Float64Array(hops)
+
+    for (const channel of channels) {
+        // Both stages of the K-weighting run in the same pass, sample by
+        // sample: a high shelf for the head, then a high-pass.
+        let a1 = 0
+        let a2 = 0
+        let b1 = 0
+        let b2 = 0
+        let c1 = 0
+        let c2 = 0
+        let d1 = 0
+        let d2 = 0
+
+        for (let h = 0; h < hops; h++) {
+            let sum = 0
+            const from = h * hop
+            const to = from + hop
+
+            for (let i = from; i < to; i++) {
+                const x = channel[i]
+
+                // Stage one: shelf.
+                const y =
+                    1.53512485958697 * x +
+                    -2.69169618940638 * a1 +
+                    1.19839281085285 * a2 -
+                    -1.69065929318241 * b1 -
+                    0.73248077421585 * b2
+
+                a2 = a1
+                a1 = x
+                b2 = b1
+                b1 = y
+
+                // Stage two: high-pass, fed straight from the shelf output.
+                const z =
+                    1 * y +
+                    -2 * c1 +
+                    1 * c2 -
+                    -1.99004745483398 * d1 -
+                    0.99007225036621 * d2
+
+                c2 = c1
+                c1 = y
+                d2 = d1
+                d1 = z
+
+                sum += z * z
+            }
+
+            partial[h] += sum
+        }
+    }
 
     // Mean square per block, NOT loudness — see the note above.
     const energies: number[] = []
 
-    for (let start = 0; start + block <= weighted[0].length; start += hop) {
-        let z = 0
-
-        for (const channel of weighted) {
-            let sum = 0
-
-            for (let i = start; i < start + block; i++)
-                sum += channel[i] * channel[i]
-
-            z += sum / block
-        }
-
-        energies.push(z)
+    for (let h = 0; h + 4 <= hops; h++) {
+        energies.push(
+            (partial[h] + partial[h + 1] + partial[h + 2] + partial[h + 3]) /
+                block,
+        )
     }
 
     const toLufs = (z: number) =>
@@ -328,25 +349,24 @@ export function sideRatios(
 }
 
 /**
- * The mono sum the band analysis runs on.
+ * The mono sum the band analysis runs on, one sample at a time.
  *
  * `(L + R) / 2`, and the convention matters: ffmpeg's own `-ac 1` downmix is
  * 3.010 dB — exactly the square root of two — louder than this. It makes no
  * difference to anything stored here, because `bands`, `levelDb` and
  * `sideRatio` are all relative quantities, but it would to anything absolute.
- * So both callers go through this function rather than each rolling their own.
+ * So both callers go through this rather than each rolling their own.
+ *
+ * Per sample rather than per track on purpose: summing the whole thing into a
+ * new array cost another copy of the audio, and the only place it is ever
+ * read is one window of the FFT loop.
  */
-export function toMono(
+export function monoAt(
     left: Float32Array,
     right: Float32Array | null,
-): Float32Array {
-    if (!right) return left
-
-    const mono = new Float32Array(left.length)
-
-    for (let i = 0; i < left.length; i++) mono[i] = (left[i] + right[i]) / 2
-
-    return mono
+    i: number,
+): number {
+    return right ? (left[i] + right[i]) / 2 : left[i]
 }
 
 /** The whole per-window analysis, given already decoded 48 kHz audio. */
@@ -355,13 +375,15 @@ export function profileChannels(
     right: Float32Array | null,
     sampleRate: number = SAMPLE_RATE,
 ): TrackProfile {
-    const mono = toMono(left, right)
-    const sides = sideRatios(left, right, mono.length, sampleRate)
+    // NOT `frames`: the window loop below uses that name for its FFT frame
+    // counter, and shadowing it here made `at` divide by 11.
+    const sampleCount = left.length
+    const sides = sideRatios(left, right, sampleCount, sampleRate)
 
     const hann = hannWindow(FFT_SIZE)
     const bins = bandBins()
     const windowLength = WINDOW_SECONDS * sampleRate
-    const duration = mono.length / sampleRate
+    const duration = sampleCount / sampleRate
 
     const raw: { at: number; total: number; bands: number[] }[] = []
     const spectrum = new Float64Array(FFT_SIZE / 2)
@@ -370,7 +392,7 @@ export function profileChannels(
 
     for (
         let start = 0;
-        start + windowLength <= mono.length;
+        start + windowLength <= sampleCount;
         start += windowLength
     ) {
         spectrum.fill(0)
@@ -388,7 +410,7 @@ export function profileChannels(
             offset += hop
         ) {
             for (let i = 0; i < FFT_SIZE; i++) {
-                re[i] = mono[offset + i] * hann[i]
+                re[i] = monoAt(left, right, offset + i) * hann[i]
                 im[i] = 0
             }
 
@@ -412,7 +434,7 @@ export function profileChannels(
         })
 
         raw.push({
-            at: start / mono.length,
+            at: start / sampleCount,
             total: bands.reduce((sum, value) => sum + value, 0),
             bands,
         })

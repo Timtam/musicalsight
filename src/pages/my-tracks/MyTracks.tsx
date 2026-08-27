@@ -25,6 +25,8 @@ function formatSize(bytes: number): string {
 
 export default function MyTracks() {
     const library = useTrackLibrary()
+    const [editing, setEditing] = useState<string | null>(null)
+    const [draft, setDraft] = useState("")
     const inputId = useId()
     const input = useRef<HTMLInputElement>(null)
     const [busy, setBusy] = useState(false)
@@ -145,19 +147,80 @@ export default function MyTracks() {
                 <ul>
                     {library.own.map((track) => (
                         <li key={track.id}>
-                            {track.title} —{" "}
-                            {formatDuration(track.durationSeconds)},{" "}
-                            {formatSize(track.bytes)},{" "}
-                            {track.stereoWindows === 0
-                                ? "no stereo image, so it is skipped in stereo width rounds"
-                                : `${track.stereoWindows} of ${track.windows} passages carry a stereo image`}
-                            .{" "}
-                            <Button
-                                variant="link"
-                                onClick={() => void library.remove(track.id)}
-                            >
-                                Remove {track.title}
-                            </Button>
+                            {editing === track.id ? (
+                                // A real form, so Enter submits the way it
+                                // does everywhere else and the control is not
+                                // a text box that mysteriously needs a button.
+                                <form
+                                    onSubmit={(event) => {
+                                        event.preventDefault()
+                                        library
+                                            .rename(track.id, draft)
+                                            .then(() => {
+                                                setStatus(
+                                                    `Renamed to ${draft.trim()}.`,
+                                                )
+                                                setEditing(null)
+                                            })
+                                            .catch((e: Error) =>
+                                                setError(e.message),
+                                            )
+                                    }}
+                                >
+                                    <Form.Label htmlFor={`rename-${track.id}`}>
+                                        New name for {track.title}
+                                    </Form.Label>
+                                    <Form.Control
+                                        id={`rename-${track.id}`}
+                                        value={draft}
+                                        autoFocus
+                                        onChange={(event) =>
+                                            setDraft(event.currentTarget.value)
+                                        }
+                                    />
+                                    <Button type="submit">Save name</Button>
+                                    <Button
+                                        type="button"
+                                        variant="link"
+                                        onClick={() => setEditing(null)}
+                                    >
+                                        Cancel renaming
+                                    </Button>
+                                </form>
+                            ) : (
+                                <>
+                                    {track.title} —{" "}
+                                    {formatDuration(track.durationSeconds)},{" "}
+                                    {formatSize(track.bytes)},{" "}
+                                    {track.stereoWindows === 0
+                                        ? "no stereo image, so it is skipped in stereo width rounds"
+                                        : `${track.stereoWindows} of ${track.windows} passages carry a stereo image`}
+                                    .{" "}
+                                    <Button
+                                        variant="link"
+                                        onClick={() => {
+                                            setDraft(track.title)
+                                            setEditing(track.id)
+                                        }}
+                                    >
+                                        Rename {track.title}
+                                    </Button>{" "}
+                                    <Button
+                                        variant="link"
+                                        onClick={() =>
+                                            void library
+                                                .remove(track.id)
+                                                .then(() =>
+                                                    setStatus(
+                                                        `Removed ${track.title}.`,
+                                                    ),
+                                                )
+                                        }
+                                    >
+                                        Remove {track.title}
+                                    </Button>
+                                </>
+                            )}
                         </li>
                     ))}
                 </ul>
