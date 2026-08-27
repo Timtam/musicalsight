@@ -46,19 +46,53 @@ const DATA = profiles as {
     >
 }
 
+type Profile = {
+    durationSeconds: number
+    lufs: number | null
+    windows: ProfileWindow[]
+}
+
+/**
+ * Profiles measured in this browser, for the player's own material.
+ *
+ * An overlay rather than a merge, so the bundled data stays exactly what the
+ * build produced and a user track can be forgotten by removing one entry.
+ * Everything below looks here first, which is what lets the games treat both
+ * kinds of track identically — the only difference is where the numbers were
+ * computed, and they are computed by the same code either way.
+ */
+const OVERLAY = new Map<string, Profile>()
+
+export function registerProfile(file: string, profile: Profile): void {
+    OVERLAY.set(file, profile)
+}
+
+export function forgetProfile(file: string): void {
+    OVERLAY.delete(file)
+}
+
+function profileOf(file: string): Profile | undefined {
+    return OVERLAY.get(file) ?? DATA.tracks[file]
+}
+
 /**
  * The quietest track sets the reference, so every adjustment is an
  * attenuation. Normalising upwards could push a track into clipping once a
  * game adds a boost of up to 12 dB on top of it, and there is no limiter in
  * the chain.
+ *
+ * Recomputed on every call rather than fixed at import: a player who adds a
+ * quieter track of their own moves the reference for everything, and a stale
+ * one would leave that track louder than the rest by exactly the amount this
+ * exists to remove.
  */
-const REFERENCE_LUFS = (() => {
-    const measured = Object.values(DATA.tracks)
+function referenceLufs(): number | null {
+    const measured = [...Object.values(DATA.tracks), ...OVERLAY.values()]
         .map((track) => track.lufs)
         .filter((value): value is number => typeof value === "number")
 
     return measured.length > 0 ? Math.min(...measured) : null
-})()
+}
 
 /**
  * How much to attenuate a track so all tracks play at the same perceived
@@ -71,11 +105,12 @@ const REFERENCE_LUFS = (() => {
  * usablePassages is for.
  */
 export function trackGainDb(file: string): number {
-    const lufs = DATA.tracks[file]?.lufs
+    const lufs = profileOf(file)?.lufs
+    const reference = referenceLufs()
 
-    if (typeof lufs !== "number" || REFERENCE_LUFS === null) return 0
+    if (typeof lufs !== "number" || reference === null) return 0
 
-    return Math.min(0, REFERENCE_LUFS - lufs)
+    return Math.min(0, reference - lufs)
 }
 
 export interface PassageQuery {
@@ -137,7 +172,7 @@ export function usablePassages(
     stepsPerOctave: number,
     query: PassageQuery,
 ): Passage[] {
-    const profile = DATA.tracks[file]
+    const profile = profileOf(file)
 
     if (!profile) return []
 
@@ -190,7 +225,7 @@ export function loudPassages(
     file: string,
     query: Omit<PassageQuery, "thresholdDb">,
 ): number[] {
-    const profile = DATA.tracks[file]
+    const profile = profileOf(file)
 
     if (!profile) return []
 
@@ -222,7 +257,7 @@ export function stereoPassages(
     file: string,
     query: Omit<PassageQuery, "thresholdDb"> & { minSideRatio: number },
 ): number[] {
-    const profile = DATA.tracks[file]
+    const profile = profileOf(file)
 
     if (!profile) return []
 
@@ -239,5 +274,5 @@ export function stereoPassages(
 
 /** True when any profile data was built at all. */
 export function hasProfiles(): boolean {
-    return Object.keys(DATA.tracks).length > 0
+    return Object.keys(DATA.tracks).length > 0 || OVERLAY.size > 0
 }

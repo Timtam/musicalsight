@@ -13,6 +13,7 @@ import EqDetective from "./pages/eq-detective/EqDetective"
 import GainTrainer from "./pages/gain-trainer/GainTrainer"
 import Home from "./pages/home/Home"
 import Imprint from "./pages/imprint/Imprint"
+import MyTracks from "./pages/my-tracks/MyTracks"
 import NotFound from "./pages/not-found/NotFound"
 import Note from "./pages/note/Note"
 import Notes from "./pages/notes/Notes"
@@ -74,6 +75,10 @@ const router = createHashRouter([
             {
                 element: <Imprint />,
                 path: "/imprint",
+            },
+            {
+                element: <MyTracks />,
+                path: "/my-tracks",
             },
             {
                 element: <Notes />,

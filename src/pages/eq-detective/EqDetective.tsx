@@ -1,12 +1,12 @@
 import { useMemo, useState } from "react"
 import Card from "react-bootstrap/Card"
 import Form from "react-bootstrap/Form"
-import Assets from "../../assets"
 import FA from "../../components/FocusAnchor"
 import GameShell from "../../components/game/GameShell"
 import Head from "../../components/Head"
 import { randomSeed } from "../../games/engine/grid"
 import { useGame } from "../../games/engine/useGame"
+import { useTrackLibrary } from "../../games/engine/useTrackLibrary"
 import {
     createEqDetective,
     EQ_CONFIG,
@@ -48,7 +48,9 @@ export default function EqDetective() {
         [level, timeAttack, calibrating, calibrationRounds, settings, seed],
     )
 
-    const api = useGame(spec, engineSettings, Assets)
+    // Bundled music plus anything the player has added in this browser.
+    const library = useTrackLibrary()
+    const api = useGame(spec, engineSettings, library.tracks)
 
     // Settings are snapshotted when start() runs, so changes during a
     // session take effect in the next one. Hence aria-disabled with an

@@ -55,6 +55,12 @@ function Navigation() {
                                         Dynamics
                                     </Nav.Link>
                                 </NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item as="div">
+                                    <Nav.Link as={Link} to="/my-tracks">
+                                        My tracks
+                                    </Nav.Link>
+                                </NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Item>
                                 <Nav.Link as={Link} to="/catalog" active>

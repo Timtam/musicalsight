@@ -8,9 +8,15 @@
  * swing by up to 28 dB between passages of the SAME track — so a per-track
  * average is not enough, and this profiles every passage separately.
  *
- * Run through ffmpeg, which must be on PATH. Without it the script writes an
- * empty profile and warns; the games then fall back to their previous
- * behaviour of allowing every band.
+ * The analysis itself lives in src/games/engine/profiler.ts, shared with the
+ * browser so a player's own material is measured by exactly the same code.
+ * All this script adds is decoding, which is the one step Node cannot do the
+ * way a browser can: ffmpeg here, decodeAudioData there. The two were checked
+ * against each other and agree bit for bit.
+ *
+ * ffmpeg must be on PATH. Without it the script writes an empty profile and
+ * warns; the games then fall back to their previous behaviour of allowing
+ * every band.
  *
  * Output is generated, gitignored and rebuilt by prestart/prebuild, exactly
  * like src/catalog.json.
@@ -18,76 +24,22 @@
 import { spawn } from "child_process"
 import fs from "fs/promises"
 import path from "path"
+import {
+    ANCHOR_HZ,
+    BANDS_PER_OCTAVE,
+    FIRST_BAND,
+    LAST_BAND,
+    PROFILE_VERSION,
+    profileChannels,
+    SAMPLE_RATE,
+    WINDOW_SECONDS,
+    type TrackProfile,
+} from "../src/games/engine/profiler"
 
 const TRACKS_DIR = "./tracks"
 const OUTPUT = "./src/track-profiles.json"
 
-/**
- * Anchored on 100 Hz like the game's answer grid, so a game band at
- * 100 * 2^(k / stepsPerOctave) always covers a whole number of profile
- * bands: 12 at one option per octave, 6 at two, 4 at three, 3 at four.
- * No interpolation anywhere.
- */
-const ANCHOR_HZ = 100
-const BANDS_PER_OCTAVE = 12
-const FIRST_BAND = -15 // ~42 Hz
-const LAST_BAND = 87 // ~15.2 kHz
-
-const SAMPLE_RATE = 48000
-const WINDOW_SECONDS = 8
-
-/**
- * Large on purpose. The bin spacing is sampleRate / FFT_SIZE, and a twelfth
- * octave band at 100 Hz is only 5.8 Hz wide — at 4096 points the spacing is
- * 11.7 Hz and not a single bin lands inside it, so the whole bass range
- * measures as empty. At 32768 the spacing is 1.5 Hz and the narrowest band
- * the games can ask about holds several bins.
- */
-const FFT_SIZE = 32768
-
-/** Spectra averaged per window. More than this buys no accuracy. */
-const FRAMES_PER_WINDOW = 12
-
-const FLOOR_DB = -80
-const CEILING_DB = 40
-
 const AUDIO_EXTENSIONS = [".opus", ".ogg", ".mp3", ".flac", ".wav", ".m4a"]
-
-export interface TrackWindow {
-    /** Where the window starts, as a fraction of the track duration. */
-    at: number
-    /** Window loudness relative to the track's median window, in decibels. */
-    levelDb: number
-    /** Per band, in decibels relative to this window's median band. */
-    bands: number[]
-    /**
-     * Side energy over mid energy in this window, as a plain ratio.
-     *
-     * What the stereo games need and the bands cannot tell them: whether
-     * this stretch of music has a stereo image at all. Measured across the
-     * bundled tracks it runs from 0.008 to 0.78 — three of the seven sit
-     * near 0.015 for most of their length, which is close enough to mono
-     * that narrowing the image changes nothing anyone could hear. Asking
-     * "how wide is this" there is a coin toss.
-     */
-    sideRatio: number
-}
-
-export interface TrackProfile {
-    durationSeconds: number
-    /**
-     * Integrated loudness per EBU R128, from ffmpeg's ebur128 filter.
-     *
-     * The bundled tracks span 8.4 dB, so without this the level jumps
-     * audibly whenever the game moves to another track — unpleasant on
-     * headphones and it makes the volume setting useless between rounds.
-     * This is the one thing LUFS is genuinely the right tool for here: it
-     * says nothing about which frequencies a passage contains, which is
-     * what the band data above is for.
-     */
-    lufs: number | null
-    windows: TrackWindow[]
-}
 
 export interface TrackProfiles {
     version: number
@@ -100,134 +52,15 @@ export interface TrackProfiles {
     tracks: Record<string, TrackProfile>
 }
 
-/** In-place iterative radix-2 FFT. */
-function fft(re: Float64Array, im: Float64Array): void {
-    const n = re.length
-
-    for (let i = 1, j = 0; i < n; i++) {
-        let bit = n >> 1
-
-        for (; j & bit; bit >>= 1) j ^= bit
-        j ^= bit
-
-        if (i < j) {
-            const tr = re[i]
-            re[i] = re[j]
-            re[j] = tr
-
-            const ti = im[i]
-            im[i] = im[j]
-            im[j] = ti
-        }
-    }
-
-    for (let len = 2; len <= n; len <<= 1) {
-        const angle = (-2 * Math.PI) / len
-        const wr = Math.cos(angle)
-        const wi = Math.sin(angle)
-
-        for (let i = 0; i < n; i += len) {
-            let cr = 1
-            let ci = 0
-
-            for (let k = 0; k < len / 2; k++) {
-                const a = i + k
-                const b = a + len / 2
-                const vr = re[b] * cr - im[b] * ci
-                const vi = re[b] * ci + im[b] * cr
-
-                re[b] = re[a] - vr
-                im[b] = im[a] - vi
-                re[a] += vr
-                im[a] += vi
-
-                const nr = cr * wr - ci * wi
-                ci = cr * wi + ci * wr
-                cr = nr
-            }
-        }
-    }
-}
-
-function hannWindow(size: number): Float64Array {
-    const w = new Float64Array(size)
-
-    for (let i = 0; i < size; i++) {
-        w[i] = 0.5 - 0.5 * Math.cos((2 * Math.PI * i) / (size - 1))
-    }
-
-    return w
-}
-
-function median(values: number[]): number {
-    const sorted = [...values].sort((a, b) => a - b)
-
-    return sorted[Math.floor(sorted.length / 2)] ?? 0
-}
-
-function toDb(value: number, reference: number): number {
-    if (value <= 0 || reference <= 0) return FLOOR_DB
-
-    const db = 10 * Math.log10(value / reference)
-
-    return Math.max(FLOOR_DB, Math.min(CEILING_DB, Math.round(db)))
-}
-
-/** Decodes to mono float32 PCM. Rejects if ffmpeg is missing or fails. */
-function decode(file: string): Promise<Float32Array> {
-    return new Promise((resolve, reject) => {
-        const child = spawn(
-            "ffmpeg",
-            [
-                "-v",
-                "error",
-                "-i",
-                file,
-                "-ac",
-                "1",
-                "-ar",
-                String(SAMPLE_RATE),
-                "-f",
-                "f32le",
-                "-",
-            ],
-            { stdio: ["ignore", "pipe", "pipe"] },
-        )
-
-        const chunks: Buffer[] = []
-        let stderr = ""
-
-        child.stdout.on("data", (chunk: Buffer) => chunks.push(chunk))
-        child.stderr.on("data", (chunk: Buffer) => (stderr += chunk.toString()))
-        child.on("error", reject)
-        child.on("close", (code) => {
-            if (code !== 0) {
-                reject(new Error(stderr.trim() || `ffmpeg exited with ${code}`))
-                return
-            }
-
-            const merged = Buffer.concat(chunks)
-
-            resolve(
-                new Float32Array(
-                    merged.buffer,
-                    merged.byteOffset,
-                    Math.floor(merged.byteLength / 4),
-                ),
-            )
-        })
-    })
-}
-
 /**
- * Decodes to interleaved stereo float32 PCM.
+ * Decodes to de-interleaved float32 channels at the profiler's sample rate.
  *
- * A second pass rather than a stereo-aware rewrite of the first: everything
- * the band analysis does wants mono, and the only thing missing is one number
- * per window. ffmpeg already runs twice per track for the loudness pass, so
- * this changes the shape of the build, not its cost.
+ * Deliberately NOT `-ac 1`: that downmix is 3.010 dB louder than (L + R) / 2,
+ * and the mono sum is the profiler's business rather than ffmpeg's. Asking
+ * for stereo also gets the side information the stereo games need, in one
+ * pass instead of the two this used to make.
  */
-function decodeStereo(file: string): Promise<Float32Array> {
+function decode(file: string): Promise<Float32Array[]> {
     return new Promise((resolve, reject) => {
         const child = spawn(
             "ffmpeg",
@@ -260,217 +93,28 @@ function decodeStereo(file: string): Promise<Float32Array> {
             }
 
             const merged = Buffer.concat(chunks)
-
-            resolve(
-                new Float32Array(
-                    merged.buffer,
-                    merged.byteOffset,
-                    Math.floor(merged.byteLength / 4),
-                ),
+            const interleaved = new Float32Array(
+                merged.buffer,
+                merged.byteOffset,
+                Math.floor(merged.byteLength / 4),
             )
-        })
-    })
-}
+            const frames = Math.floor(interleaved.length / 2)
+            const left = new Float32Array(frames)
+            const right = new Float32Array(frames)
 
-/**
- * Side over mid energy per window, on the same window grid as the band
- * analysis so the two line up index for index.
- *
- * A file that decodes to a single channel, or a window with no signal at all,
- * reports 0 — which reads as "no stereo image here" and is exactly right.
- */
-function sideRatios(stereo: Float32Array, monoLength: number): number[] {
-    const windowLength = WINDOW_SECONDS * SAMPLE_RATE
-    const ratios: number[] = []
-
-    for (
-        let start = 0;
-        start + windowLength <= monoLength;
-        start += windowLength
-    ) {
-        let midEnergy = 0
-        let sideEnergy = 0
-
-        for (let i = start; i < start + windowLength; i++) {
-            const left = stereo[i * 2] ?? 0
-            const right = stereo[i * 2 + 1] ?? 0
-            const mid = (left + right) / 2
-            const side = (left - right) / 2
-
-            midEnergy += mid * mid
-            sideEnergy += side * side
-        }
-
-        ratios.push(midEnergy > 0 ? sideEnergy / midEnergy : 0)
-    }
-
-    return ratios
-}
-
-/** Integrated loudness in LUFS, or null when ffmpeg cannot report it. */
-function measureLoudness(file: string): Promise<number | null> {
-    return new Promise((resolve) => {
-        const child = spawn(
-            "ffmpeg",
-            [
-                "-nostdin",
-                "-i",
-                file,
-                "-af",
-                "ebur128=framelog=quiet",
-                "-f",
-                "null",
-                "-",
-            ],
-            { stdio: ["ignore", "ignore", "pipe"] },
-        )
-
-        let stderr = ""
-
-        child.stderr.on("data", (chunk: Buffer) => (stderr += chunk.toString()))
-        child.on("error", () => resolve(null))
-        child.on("close", () => {
-            const match = stderr.match(/I:\s*(-?\d+(?:\.\d+)?)\s*LUFS/)
-
-            resolve(match ? Number(match[1]) : null)
-        })
-    })
-}
-
-function bandEdges(): { lo: number; hi: number }[] {
-    const edges: { lo: number; hi: number }[] = []
-    const halfStep = Math.pow(2, 1 / (2 * BANDS_PER_OCTAVE))
-
-    for (let n = FIRST_BAND; n <= LAST_BAND; n++) {
-        const centre = ANCHOR_HZ * Math.pow(2, n / BANDS_PER_OCTAVE)
-
-        edges.push({ lo: centre / halfStep, hi: centre * halfStep })
-    }
-
-    return edges
-}
-
-/**
- * The bins that make up each band, resolved once.
- *
- * A band narrower than the bin spacing would otherwise contain nothing and
- * measure as silent, so such a band falls back to its single nearest bin.
- * That is an approximation, but a defensible one — and vastly better than
- * reporting an empty band, which would make the games avoid a frequency
- * that is in fact perfectly audible.
- */
-function bandBins(edges: { lo: number; hi: number }[]): number[][] {
-    const binHz = (k: number) => (k * SAMPLE_RATE) / FFT_SIZE
-    const lastBin = FFT_SIZE / 2 - 1
-
-    return edges.map(({ lo, hi }) => {
-        const bins: number[] = []
-        const from = Math.max(1, Math.ceil(lo / binHz(1)))
-        const to = Math.min(lastBin, Math.floor(hi / binHz(1)))
-
-        for (let k = from; k <= to; k++) {
-            if (binHz(k) >= lo && binHz(k) < hi) bins.push(k)
-        }
-
-        if (bins.length > 0) return bins
-
-        const centre = Math.sqrt(lo * hi)
-        const nearest = Math.max(
-            1,
-            Math.min(lastBin, Math.round(centre / binHz(1))),
-        )
-
-        return [nearest]
-    })
-}
-
-function profileTrack(
-    samples: Float32Array,
-    lufs: number | null,
-    sides: number[],
-): TrackProfile {
-    const hann = hannWindow(FFT_SIZE)
-    const edges = bandEdges()
-    const bins = bandBins(edges)
-    const windowLength = WINDOW_SECONDS * SAMPLE_RATE
-    const duration = samples.length / SAMPLE_RATE
-
-    const raw: { at: number; total: number; bands: number[] }[] = []
-
-    const spectrum = new Float64Array(FFT_SIZE / 2)
-    const re = new Float64Array(FFT_SIZE)
-    const im = new Float64Array(FFT_SIZE)
-
-    for (
-        let start = 0;
-        start + windowLength <= samples.length;
-        start += windowLength
-    ) {
-        spectrum.fill(0)
-
-        const hop = Math.max(
-            FFT_SIZE,
-            Math.floor((windowLength - FFT_SIZE) / FRAMES_PER_WINDOW),
-        )
-
-        let frames = 0
-
-        for (
-            let offset = start;
-            offset + FFT_SIZE <= start + windowLength;
-            offset += hop
-        ) {
-            for (let i = 0; i < FFT_SIZE; i++) {
-                re[i] = samples[offset + i] * hann[i]
-                im[i] = 0
+            for (let i = 0; i < frames; i++) {
+                left[i] = interleaved[i * 2]
+                right[i] = interleaved[i * 2 + 1]
             }
 
-            fft(re, im)
-
-            for (let k = 1; k < FFT_SIZE / 2; k++) {
-                spectrum[k] += re[k] * re[k] + im[k] * im[k]
-            }
-
-            frames++
-        }
-
-        if (frames === 0) continue
-
-        const bands = bins.map((group) => {
-            let sum = 0
-
-            for (const k of group) sum += spectrum[k]
-
-            return sum / frames
+            resolve([left, right])
         })
-        const total = bands.reduce((sum, value) => sum + value, 0)
-
-        raw.push({ at: start / samples.length, total, bands })
-    }
-
-    const medianTotal = median(raw.map((w) => w.total))
-
-    return {
-        durationSeconds: Math.round(duration),
-        lufs,
-        windows: raw.map((w, i) => {
-            // Relative to this window's own median band, so the numbers say
-            // nothing about mastering level and everything about balance.
-            const reference = median(w.bands)
-
-            return {
-                at: +w.at.toFixed(4),
-                levelDb: toDb(w.total, medianTotal),
-                bands: w.bands.map((value) => toDb(value, reference)),
-                sideRatio: +(sides[i] ?? 0).toFixed(4),
-            }
-        }),
-    }
+    })
 }
 
 async function main() {
     const profiles: TrackProfiles = {
-        version: 2,
+        version: PROFILE_VERSION,
         anchorHz: ANCHOR_HZ,
         bandsPerOctave: BANDS_PER_OCTAVE,
         firstBand: FIRST_BAND,
@@ -495,25 +139,23 @@ async function main() {
         const full = path.join(TRACKS_DIR, file)
 
         try {
-            const samples = await decode(full)
+            const [left, right] = await decode(full)
 
-            if (samples.length < WINDOW_SECONDS * SAMPLE_RATE) {
+            if (left.length < WINDOW_SECONDS * SAMPLE_RATE) {
                 console.warn(`[track-profiles] ${file} is too short, skipping`)
                 continue
             }
 
-            const lufs = await measureLoudness(full)
-            const sides = sideRatios(await decodeStereo(full), samples.length)
+            const profile = profileChannels(left, right)
 
-            profiles.tracks[file] = profileTrack(samples, lufs, sides)
+            profiles.tracks[file] = profile
             console.log(
                 `[track-profiles] ${file}: ` +
-                    `${profiles.tracks[file].windows.length} windows, ` +
-                    `${lufs === null ? "loudness unknown" : `${lufs} LUFS`}, ` +
+                    `${profile.windows.length} windows, ` +
+                    `${profile.lufs === null ? "loudness unknown" : `${profile.lufs} LUFS`}, ` +
                     `${
-                        profiles.tracks[file].windows.filter(
-                            (w) => w.sideRatio >= 0.02,
-                        ).length
+                        profile.windows.filter((w) => w.sideRatio >= 0.02)
+                            .length
                     } with a stereo image`,
             )
         } catch (error) {
@@ -522,31 +164,17 @@ async function main() {
             // "every band allowed", which is the behaviour from before this
             // existed.
             console.warn(
-                `[track-profiles] could not profile ${file}: ` +
-                    `${(error as Error).message}`,
+                `[track-profiles] ${file} could not be measured: ` +
+                    `${(error as Error).message.split("\n")[0]}`,
             )
         }
     }
 
     await fs.writeFile(OUTPUT, JSON.stringify(profiles), { encoding: "utf-8" })
-
-    if (files.length > 0 && Object.keys(profiles.tracks).length === 0) {
-        const message =
-            "[track-profiles] there are tracks but none could be profiled — " +
-            "is ffmpeg on PATH, and did Git LFS fetch the audio?"
-
-        // Locally this is only a warning, so a contributor without ffmpeg can
-        // still run the site; the games fall back to allowing every band. In
-        // CI it has to be fatal, because the alternative is silently
-        // deploying a game that asks about frequencies which are not there.
-        if (process.env.CI) {
-            console.error(message)
-            process.exitCode = 1
-            return
-        }
-
-        console.warn(message)
-    }
+    console.log(
+        `[track-profiles] wrote ${OUTPUT} with ` +
+            `${Object.keys(profiles.tracks).length} tracks`,
+    )
 }
 
 main()
